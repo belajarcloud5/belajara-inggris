@@ -1,0 +1,9 @@
+services:
+  web:
+    image: nginx:alpine
+    container_name: english7-web
+    ports:
+      - "127.0.0.1:8085:80"
+    volumes:
+      - ./site:/usr/share/nginx/html:ro
+    restart: unless-stopped
