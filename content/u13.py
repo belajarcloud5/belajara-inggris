@@ -95,7 +95,7 @@ UNIT = dict(
       "Keputusan mendadak → will."),
   order("Susun kalimat: \"Aku tidak akan terlambat.\"", "I won't be late.",
         "Subjek + won't + kata kerja dasar (be)."),
-  order("Susun pertanyaan: \"Apakah kamu akan belajar nanti malam?\"", "Are you going to study tonight?",
+  order("Susun pertanyaan: \"Apakah kamu akan belajar nanti malam? (going to)\"", "Are you going to study tonight?",
         "Are + you + going to + kata kerja dasar?"),
   mcq("Jawaban singkat yang benar untuk \"Will you help me?\" (ya) adalah...",
       ["Yes, I will.", "Yes, I do.", "Yes, I am.", "Yes, I going."], 0,
