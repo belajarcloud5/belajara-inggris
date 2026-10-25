@@ -66,11 +66,12 @@ def main():
         if entry["ready"]:
             d = load(p).UNIT
             assert d["id"] == u["id"], f"{p}: id tidak cocok"
-            xp = os.path.join(ROOT, "content", f"{u['id']}_extra.py")
-            if os.path.isfile(xp):  # bank soal tambahan
-                x = load(xp).EXTRA
-                d["practice"] = dedupe(u["id"], "practice", d["practice"] + x.get("practice", []))
-                d["quiz"] = dedupe(u["id"], "quiz", d["quiz"] + x.get("quiz", []))
+            for suffix, var in (("extra", "EXTRA"), ("more", "MORE")):  # bank soal tambahan
+                xp = os.path.join(ROOT, "content", f"{u['id']}_{suffix}.py")
+                if os.path.isfile(xp):
+                    x = getattr(load(xp), var)
+                    d["practice"] = dedupe(u["id"], "practice", d["practice"] + x.get("practice", []))
+                    d["quiz"] = dedupe(u["id"], "quiz", d["quiz"] + x.get("quiz", []))
             for kind in ("practice", "quiz"):
                 for i, q in enumerate(d[kind]):
                     check_q(u["id"], kind, i, q)

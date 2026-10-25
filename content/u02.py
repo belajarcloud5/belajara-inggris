@@ -126,7 +126,7 @@ UNIT = dict(
   mcq("Pilih kalimat yang benar.",
       ["My parents is kind.", "My parents am kind.", "My parents are kind.", "My parents be kind."], 2,
       "Parents = lebih dari satu (= they), jadi pakai are."),
-  order("Susun kalimat: \"Dia bukan kakakku.\"", "She is not my sister.",
+  order("Susun kalimat: \"Dia (perempuan) bukan kakakku.\"", "She is not my sister.",
         "Negatif to be: subjek + is + not + ..."),
   order("Susun pertanyaan: \"Apakah mereka temanmu?\"", "Are they your friends?",
         "Pertanyaan: Are/Is dipindah ke depan."),
