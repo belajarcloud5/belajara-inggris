@@ -27,3 +27,6 @@ Format teks: `**tebal**`, `*miring*`, `~~coret~~`, dan `[[kata Inggris]]` (bisa 
 
 ## Unit Kelas 9
 1 Once Upon a Time (narrative, past continuous) · 2 Report Text · 3 Made in Indonesia (passive voice) · 4 If ..., Then ... (conditional 1) · 5 Have You Ever ...? (present perfect) · 6 Giving Opinions · 7 Short Presentations · 8 Exam Review (rangkuman dan latihan campuran)
+
+## Bank soal
+Setiap unit punya bank soal yang lebih besar dari yang ditampilkan: tiap sesi Latihan mengambil 16 soal acak dan tiap Kuis 10 soal acak, jadi mengulang selalu memberi soal berbeda. Total bank saat ini: 934 soal latihan dan 569 soal kuis (1503). Soal dasar ada di `content/uNN.py`, soal tambahan di `content/uNN_extra.py` (duplikat persis dibuang otomatis oleh `build.py`).

@@ -15,6 +15,28 @@ def load(path):
     return m
 
 
+def qkey(q):
+    t = q["type"]
+    if t == "fill":
+        return ("fill", q["id"], q["q"])
+    if t == "order":
+        return ("order", q["answer"].lower())
+    if t == "match":
+        return ("match", tuple(sorted(p[0] for p in q["pairs"])))
+    return (t, q["q"], tuple(sorted(q["options"])))
+
+
+def dedupe(uid, kind, qs):
+    seen, out = set(), []
+    for q in qs:
+        k = qkey(q)
+        if k in seen:
+            print(f"  duplikat dibuang: {uid}.{kind}: {str(k[1])[:50]}")
+            continue
+        seen.add(k); out.append(q)
+    return out
+
+
 def check_q(uid, kind, i, q):
     where = f"{uid}.{kind}[{i}]"
     t = q.get("type")
@@ -44,6 +66,11 @@ def main():
         if entry["ready"]:
             d = load(p).UNIT
             assert d["id"] == u["id"], f"{p}: id tidak cocok"
+            xp = os.path.join(ROOT, "content", f"{u['id']}_extra.py")
+            if os.path.isfile(xp):  # bank soal tambahan
+                x = load(xp).EXTRA
+                d["practice"] = dedupe(u["id"], "practice", d["practice"] + x.get("practice", []))
+                d["quiz"] = dedupe(u["id"], "quiz", d["quiz"] + x.get("quiz", []))
             for kind in ("practice", "quiz"):
                 for i, q in enumerate(d[kind]):
                     check_q(u["id"], kind, i, q)

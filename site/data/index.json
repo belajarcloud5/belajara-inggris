@@ -8,8 +8,8 @@
   "emoji": "👋",
   "ringkas": "Greetings, nama, umur, asal, kabar, dan mengeja nama",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 33,
+  "quiz_n": 22
  },
  {
   "id": "u02",
@@ -20,8 +20,8 @@
   "emoji": "👨‍👩‍👧",
   "ringkas": "Anggota keluarga, kata ganti, dan to be (am/is/are)",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 34,
+  "quiz_n": 22
  },
  {
   "id": "u03",
@@ -32,8 +32,8 @@
   "emoji": "🕒",
   "ringkas": "Angka, menyebut jam, hari, bulan, dan tanggal",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 36,
+  "quiz_n": 22
  },
  {
   "id": "u04",
@@ -44,8 +44,8 @@
   "emoji": "🌅",
   "ringkas": "Simple present tense dan kata keterangan frekuensi",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 34,
+  "quiz_n": 22
  },
  {
   "id": "u05",
@@ -56,8 +56,8 @@
   "emoji": "🏫",
   "ringkas": "this/that, there is/are, dan preposisi tempat",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 35,
+  "quiz_n": 22
  },
  {
   "id": "u06",
@@ -68,8 +68,8 @@
   "emoji": "🧑‍🎨",
   "ringkas": "Kata sifat, urutan kata, dan descriptive text sederhana",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 36,
+  "quiz_n": 22
  },
  {
   "id": "u07",
@@ -80,8 +80,8 @@
   "emoji": "⚽",
   "ringkas": "can/can't dan like + kata kerja-ing",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 36,
+  "quiz_n": 22
  },
  {
   "id": "u08",
@@ -92,8 +92,8 @@
   "emoji": "🍜",
   "ringkas": "Countable/uncountable, some/any, dan memesan makanan",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 38,
+  "quiz_n": 22
  },
  {
   "id": "u09",
@@ -104,8 +104,8 @@
   "emoji": "🗺️",
   "ringkas": "Tempat umum, kalimat perintah, dan memberi petunjuk arah",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 36,
+  "quiz_n": 22
  },
  {
   "id": "u10",
@@ -116,8 +116,8 @@
   "emoji": "⏪",
   "ringkas": "Simple past tense, kata kerja tidak beraturan, dan recount text",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 37,
+  "quiz_n": 22
  },
  {
   "id": "u11",
@@ -128,8 +128,8 @@
   "emoji": "🏃",
   "ringkas": "Present continuous tense dan perbedaannya dengan simple present",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 36,
+  "quiz_n": 22
  },
  {
   "id": "u12",
@@ -140,8 +140,8 @@
   "emoji": "⚖️",
   "ringkas": "Comparative dan superlative: taller, the tallest, more beautiful",
   "ready": true,
-  "practice_n": 15,
-  "quiz_n": 10
+  "practice_n": 35,
+  "quiz_n": 22
  },
  {
   "id": "u13",
@@ -152,8 +152,8 @@
   "emoji": "🔮",
   "ringkas": "will dan be going to, rencana liburan, dan prediksi",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 36,
+  "quiz_n": 22
  },
  {
   "id": "u14",
@@ -164,8 +164,8 @@
   "emoji": "👩‍🍳",
   "ringkas": "Cara membuat sesuatu: bahan, alat, langkah, dan kata urutan",
   "ready": true,
-  "practice_n": 15,
-  "quiz_n": 10
+  "practice_n": 35,
+  "quiz_n": 22
  },
  {
   "id": "u15",
@@ -176,8 +176,8 @@
   "emoji": "🏞️",
   "ringkas": "Mendeskripsikan tempat, hewan, dan benda dalam teks",
   "ready": true,
-  "practice_n": 15,
-  "quiz_n": 10
+  "practice_n": 35,
+  "quiz_n": 22
  },
  {
   "id": "u16",
@@ -188,8 +188,8 @@
   "emoji": "📣",
   "ringkas": "Membaca dan menulis pengumuman, mengundang, menerima, dan menolak",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 35,
+  "quiz_n": 22
  },
  {
   "id": "u17",
@@ -200,8 +200,8 @@
   "emoji": "🚦",
   "ringkas": "Modal verbs: must, mustn't, should, may, have to",
   "ready": true,
-  "practice_n": 15,
-  "quiz_n": 10
+  "practice_n": 36,
+  "quiz_n": 22
  },
  {
   "id": "u18",
@@ -212,8 +212,8 @@
   "emoji": "🤒",
   "ringkas": "Keluhan sakit, memberi saran, dan menulis surat atau email",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 37,
+  "quiz_n": 21
  },
  {
   "id": "u19",
@@ -224,8 +224,8 @@
   "emoji": "📖",
   "ringkas": "Past continuous dan cerita",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 36,
+  "quiz_n": 22
  },
  {
   "id": "u20",
@@ -236,8 +236,8 @@
   "emoji": "🦁",
   "ringkas": "Mengklasifikasikan dan melaporkan fakta umum",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 36,
+  "quiz_n": 22
  },
  {
   "id": "u21",
@@ -248,8 +248,8 @@
   "emoji": "🏭",
   "ringkas": "Pengenalan kalimat pasif",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 37,
+  "quiz_n": 22
  },
  {
   "id": "u22",
@@ -260,8 +260,8 @@
   "emoji": "🌧️",
   "ringkas": "Conditional type 1",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 37,
+  "quiz_n": 22
  },
  {
   "id": "u23",
@@ -272,8 +272,8 @@
   "emoji": "🧳",
   "ringkas": "Pengalaman dan kejadian sampai sekarang",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 36,
+  "quiz_n": 21
  },
  {
   "id": "u24",
@@ -284,8 +284,8 @@
   "emoji": "💬",
   "ringkas": "Menyatakan pendapat, setuju, dan tidak setuju",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 37,
+  "quiz_n": 21
  },
  {
   "id": "u25",
@@ -296,8 +296,8 @@
   "emoji": "🎤",
   "ringkas": "Menyusun dan menyampaikan presentasi singkat",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 36,
+  "quiz_n": 22
  },
  {
   "id": "u26",
@@ -308,7 +308,7 @@
   "emoji": "🎓",
   "ringkas": "Rangkuman dan latihan campuran",
   "ready": true,
-  "practice_n": 16,
-  "quiz_n": 10
+  "practice_n": 39,
+  "quiz_n": 22
  }
 ]

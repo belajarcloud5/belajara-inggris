@@ -169,7 +169,9 @@ function blockHtml(b) {
 function runner(pane, d, mode) {
   const isQuiz = mode === 'quiz';
   const src = isQuiz ? d.quiz : d.practice;
-  let qs = isQuiz ? shuffle(src) : src.slice();
+  const N = isQuiz ? 10 : 16;                       // jumlah soal tiap sesi, diambil acak dari bank soal
+  const pick = () => shuffle(src).slice(0, Math.min(N, src.length));
+  let qs = pick();
   let i = 0, score = 0, wrong = [];
 
   function show() {
@@ -209,7 +211,7 @@ function runner(pane, d, mode) {
         <button class="btn" id="again">🔁 Ulangi</button>
         <a class="btn" href="#/unit/${d.id}/${isQuiz ? 'practice' : 'quiz'}">${isQuiz ? '✏️ Latihan' : '🏆 Ke kuis'}</a>
         <a class="btn ghost" href="#/">🏠 Beranda</a></div></div>${review ? `<div class="card review">${review}</div>` : ''}`;
-    $('#again').addEventListener('click', () => { qs = isQuiz ? shuffle(src) : src.slice(); i = 0; score = 0; wrong = []; show(); });
+    $('#again').addEventListener('click', () => { qs = pick(); i = 0; score = 0; wrong = []; show(); });
     // perbarui lencana total
     getJSON('data/index.json').then(ix => { $('#total').textContent = `⭐ ${totalStars()} / ${ix.filter(u => u.ready).length * 3}`; });
   }
