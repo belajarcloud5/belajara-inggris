@@ -15,21 +15,61 @@ const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { c
 const norm = s => String(s).toLowerCase().replace(/[’‘`]/g, "'").replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ').trim();
 const stripTags = s => String(s).replace(/\[\[|\]\]|\*\*/g, '');
 
-// ---------- suara (bawaan browser) ----------
-let voice = null;
+// ---------- suara (bawaan browser; bisa dipilih, disimpan) ----------
 const hasTTS = 'speechSynthesis' in window;
-function pickVoice() {
-  const vs = speechSynthesis.getVoices();
-  voice = vs.find(v => /^en[-_]US/i.test(v.lang)) || vs.find(v => /^en/i.test(v.lang)) || null;
+const VKEY = 'english7.voice';
+const vset = { name: '', rate: 0.85, pitch: 1 };
+try { Object.assign(vset, JSON.parse(localStorage.getItem(VKEY)) || {}); } catch (e) { /* diabaikan */ }
+const saveVoice = () => { try { localStorage.setItem(VKEY, JSON.stringify(vset)); } catch (e) { /* diabaikan */ } };
+const FEMALE = /(zira|samantha|jenny|aria|susan|hazel|female|woman|karen|victoria|moira|tessa|fiona|libby|sonia|joanna|salli|ivy|kendra|kimberly|emma|amy|allison|ava|nicky|serena|kate|sara|google us english)/i;
+const MALE = /(david|mark|george|james|daniel|(?<!fe)male|fred|alex|ryan|guy|brian|thomas|oliver|rishi|junior|eric|christopher)/i;
+const enVoices = () => hasTTS ? speechSynthesis.getVoices().filter(v => /^en/i.test(v.lang)) : [];
+function scoreVoice(v) {
+  let sc = 0;
+  if (FEMALE.test(v.name)) sc += 10;
+  if (MALE.test(v.name)) sc -= 10;
+  if (/^en[-_]US/i.test(v.lang)) sc += 3;
+  if (/natural|online/i.test(v.name)) sc += 2;
+  return sc;
 }
-if (hasTTS) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
+function currentVoice() {
+  const vs = enVoices();
+  if (!vs.length) return null;
+  if (vset.name) { const f = vs.find(v => v.name === vset.name); if (f) return f; }
+  return vs.slice().sort((a, b) => scoreVoice(b) - scoreVoice(a))[0];   // utamakan suara perempuan bila ada
+}
 function speak(text) {
   if (!hasTTS) return;
   speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text);
-  u.lang = 'en-US'; u.rate = 0.85;
-  if (voice) u.voice = voice;
+  u.lang = 'en-US'; u.rate = vset.rate; u.pitch = vset.pitch;
+  const v = currentVoice();
+  if (v) { u.voice = v; u.lang = v.lang; }
   speechSynthesis.speak(u);
+}
+function initVoicePanel() {
+  const btn = $('#vbtn'), panel = $('#vpanel');
+  if (!btn || !panel) return;
+  if (!hasTTS) { btn.hidden = true; return; }
+  function render() {
+    const vs = enVoices(), cur = currentVoice();
+    const sel = vs.length
+      ? `<label>Pilih suara<select id="vsel">${vs.map(v => `<option value="${esc(v.name)}" ${cur && cur.name === v.name ? 'selected' : ''}>${esc(v.name)} (${esc(v.lang)})</option>`).join('')}</select></label>`
+      : '<p class="hint">Belum ada suara bahasa Inggris di perangkat ini. Pasang suara bahasa Inggris di pengaturan sistem, atau coba browser lain (misalnya Microsoft Edge).</p>';
+    panel.innerHTML = `<h3>🔊 Pengaturan suara</h3>${sel}
+      <label>Kecepatan: <b id="vrv">${vset.rate}</b><input id="vrate" type="range" min="0.5" max="1.2" step="0.05" value="${vset.rate}"></label>
+      <label>Nada: <b id="vpv">${vset.pitch}</b><input id="vpitch" type="range" min="0.8" max="1.8" step="0.05" value="${vset.pitch}"></label>
+      <div class="row"><button class="btn small" id="vtest">🔊 Tes suara</button><button class="btn ghost small" id="vreset">Atur ulang</button></div>
+      <p class="hint">Mau suara perempuan? Pilih suara yang namanya perempuan (mis. Zira, Aria, Jenny, Samantha, atau "Google US English"). Kalau hanya ada suara laki-laki, naikkan <b>Nada</b> ke 1.4 sampai 1.6 supaya terdengar lebih tinggi. Di Microsoft Edge ada banyak suara perempuan yang natural.</p>`;
+    const sv = $('#vsel', panel);
+    if (sv) sv.addEventListener('change', () => { vset.name = sv.value; saveVoice(); speak('Hello! Nice to meet you.'); });
+    $('#vrate', panel).addEventListener('input', e => { vset.rate = +e.target.value; $('#vrv', panel).textContent = vset.rate; saveVoice(); });
+    $('#vpitch', panel).addEventListener('input', e => { vset.pitch = +e.target.value; $('#vpv', panel).textContent = vset.pitch; saveVoice(); });
+    $('#vtest', panel).addEventListener('click', () => speak('Hello! My name is Rani. Nice to meet you.'));
+    $('#vreset', panel).addEventListener('click', () => { vset.name = ''; vset.rate = 0.85; vset.pitch = 1; saveVoice(); render(); });
+  }
+  btn.addEventListener('click', () => { panel.hidden = !panel.hidden; if (!panel.hidden) render(); });
+  speechSynthesis.onvoiceschanged = () => { if (!panel.hidden) render(); };
 }
 document.addEventListener('click', e => {
   const el = e.target.closest('[data-say]');
@@ -38,6 +78,8 @@ document.addEventListener('click', e => {
 document.addEventListener('keydown', e => {
   if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('.en[data-say]')) { e.preventDefault(); speak(e.target.dataset.say); }
 });
+
+initVoicePanel();
 
 // ---------- kemajuan (tersimpan di browser) ----------
 const KEY = 'english7.v1';

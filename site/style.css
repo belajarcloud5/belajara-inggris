@@ -149,3 +149,9 @@ input.blank.bad{border-color:var(--bad);background:var(--bad-soft)}
 .kelas{margin-top:26px}
 .kh{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:0 0 12px;font-size:1.4rem}
 .kinfo{font-size:.85rem;font-weight:800;background:var(--warn-soft);color:var(--warn);padding:3px 12px;border-radius:999px}
+
+.hright{display:flex;align-items:center;gap:10px}
+.vpanel{max-width:760px;margin:12px auto 0}
+.vpanel label{display:block;font-weight:700;margin:10px 0}
+.vpanel select,.vpanel input[type=range]{display:block;width:100%;margin-top:6px;font:inherit}
+.vpanel[hidden]{display:none}
