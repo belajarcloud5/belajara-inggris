@@ -26,6 +26,21 @@ def qkey(q):
     return (t, q["q"], tuple(sorted(q["options"])))
 
 
+def qid(q):
+    """Kunci pendek yang stabil untuk melacak soal (dipakai fitur 'Ulangi yang salah')."""
+    import hashlib
+    t = q["type"]
+    if t == "fill":
+        raw = ["fill", q["id"], q["q"], sorted(q["answers"])]
+    elif t == "order":
+        raw = ["order", q["q"], q["answer"]]
+    elif t == "match":
+        raw = ["match", q["q"], sorted(map(list, q["pairs"]))]
+    else:
+        raw = [t, q["q"], q.get("say", ""), sorted(q["options"]), q["options"][q["answer"]]]
+    return hashlib.md5(json.dumps(raw, ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:8]
+
+
 def dedupe(uid, kind, qs):
     seen, out = set(), []
     for q in qs:
@@ -59,6 +74,7 @@ def check_q(uid, kind, i, q):
 def main():
     units = load(os.path.join(ROOT, "content", "units.py")).UNITS
     index = []
+    kamus = []
     for u in units:
         entry = {k: u[k] for k in ("id", "kelas", "no", "judul", "title", "emoji", "ringkas")}
         p = os.path.join(ROOT, "content", f"{u['id']}.py")
@@ -76,11 +92,27 @@ def main():
                 for i, q in enumerate(d[kind]):
                     check_q(u["id"], kind, i, q)
             assert len(d["quiz"]) >= 8, f"{u['id']}: kuis minimal 8 soal"
+            for kind in ("practice", "quiz"):
+                for q in d[kind]:
+                    q["k"] = qid(q)
+            for blk in d["lesson"]:
+                if blk.get("t") == "vocab":
+                    for it in blk["items"]:
+                        if it.get("id"):
+                            kamus.append({"en": it["en"], "id": it["id"], "ex": it.get("ex", ""), "u": u["id"], "no": u["no"], "kelas": u["kelas"]})
             d = {**entry, **{k: d[k] for k in ("goals", "lesson", "practice", "quiz")}}
             json.dump(d, open(os.path.join(OUT, f"{u['id']}.json"), "w"), ensure_ascii=False, separators=(",", ":"))
             entry["practice_n"], entry["quiz_n"] = len(d["practice"]), len(d["quiz"])
         index.append(entry)
     json.dump(index, open(os.path.join(OUT, "index.json"), "w"), ensure_ascii=False, indent=1)
+    seen, out = set(), []
+    for it in kamus:  # buang kata kembar, simpan kemunculan pertama
+        key = it["en"].lower()
+        if key not in seen:
+            seen.add(key); out.append(it)
+    out.sort(key=lambda x: x["en"].lower())
+    json.dump(out, open(os.path.join(OUT, "kamus.json"), "w"), ensure_ascii=False, separators=(",", ":"))
+    print(f"kamus: {len(out)} kata")
     print(f"{sum(e['ready'] for e in index)}/{len(index)} unit siap")
 
 

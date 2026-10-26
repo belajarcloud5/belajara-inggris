@@ -86,6 +86,7 @@ const KEY = 'english7.v1';
 function loadProg() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
 let prog = loadProg();
 prog.units = prog.units || {};
+prog.wrong = prog.wrong || {};   // kunci soal -> id unit, untuk fitur 'Ulangi yang salah'
 function saveProg() { try { localStorage.setItem(KEY, JSON.stringify(prog)); } catch (e) { /* diabaikan */ } }
 const U = id => (prog.units[id] = prog.units[id] || { learned: false, practice: 0, quiz: 0, stars: 0 });
 const starsFor = pct => pct >= 90 ? 3 : pct >= 70 ? 2 : pct >= 50 ? 1 : 0;
@@ -112,6 +113,8 @@ async function route() {
   try {
     const index = await getJSON('data/index.json');
     $('#total').textContent = `⭐ ${totalStars()} / ${index.filter(u => u.ready).length * 3}`;
+    if (page === 'kamus') return renderKamus(await getJSON('data/kamus.json'));
+    if (page === 'ulang') return renderRetry(index);
     if (page === 'unit' && id) {
       const meta = index.find(u => u.id === id && u.ready);
       if (meta) return renderUnit(await getJSON(`data/${id}.json`), tab || 'learn', index);
@@ -146,7 +149,46 @@ function renderHome(index) {
       <h1>Hi! Ayo belajar bahasa Inggris 🎉</h1>
       <p>Pilih satu unit. Setiap unit punya <b>Belajar</b>, <b>Latihan</b>, dan <b>Kuis</b>. Kumpulkan bintang ⭐ sebanyak mungkin!</p>
       <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${max}" aria-valuenow="${got}"><i style="width:${Math.round(100 * got / max)}%"></i></div>
-    </section>${sections}`;
+    </section>${wrongCount() ? `<div class="card retry"><b>🔁 ${wrongCount()} soal perlu diulang</b> <a class="btn small" href="#/ulang">Ulangi yang salah</a></div>` : ''}${sections}`;
+}
+
+// ---------- kamus ----------
+function renderKamus(words) {
+  app.innerHTML = `<a class="crumb" href="#/">← Semua unit</a><h1>📖 Kamus Kecil</h1>
+    <p class="lead">${words.length} kata dari semua unit. Klik kata untuk mendengarnya.</p>
+    <div class="row"><input class="blank" id="kq" type="search" placeholder="Cari kata Inggris atau artinya…" aria-label="Cari kata"></div>
+    <div id="klist"></div>`;
+  const list = $('#klist'), q = $('#kq');
+  function draw() {
+    const t = norm(q.value);
+    const hit = t ? words.filter(w => norm(w.en).includes(t) || norm(w.id).includes(t)) : words;
+    list.innerHTML = hit.length
+      ? `<div class="vgrid">${hit.map(w => `<button class="vcard" data-say="${esc(stripTags(w.en))}"><span class="v-en">${esc(w.en)}</span><span class="v-id">${esc(w.id)}</span>${w.ex ? `<span class="v-ex">${esc(w.ex)}</span>` : ''}<span class="v-ex">Unit ${w.no} · Kelas ${w.kelas}</span></button>`).join('')}</div>`
+      : '<p class="hint">Kata tidak ditemukan.</p>';
+  }
+  q.addEventListener('input', draw);
+  draw();
+}
+
+// ---------- ulangi yang salah ----------
+const wrongCount = () => Object.keys(prog.wrong).length;
+async function renderRetry() {
+  const ids = [...new Set(Object.values(prog.wrong))];
+  const pool = [];
+  for (const id of ids) {
+    const d = await getJSON(`data/${id}.json`);
+    for (const q of d.practice.concat(d.quiz)) if (q.k && prog.wrong[q.k]) pool.push(q);
+  }
+  const seen = new Set(), qs = pool.filter(q => !seen.has(q.k) && seen.add(q.k));
+  const live = new Set(qs.map(q => q.k));
+  for (const k of Object.keys(prog.wrong)) if (!live.has(k)) delete prog.wrong[k];   // soal yang sudah tidak ada
+  saveProg();
+  if (!qs.length) {
+    app.innerHTML = `<a class="crumb" href="#/">← Semua unit</a><div class="card result"><div class="big">🌟</div><h2>Tidak ada soal yang perlu diulang</h2><p>Semua jawabanmu sudah benar. Lanjutkan belajar ya!</p></div>`;
+    return;
+  }
+  app.innerHTML = `<a class="crumb" href="#/">← Semua unit</a><h1>🔁 Ulangi yang salah</h1><p class="lead">${qs.length} soal yang pernah salah. Jawab benar untuk menghapusnya dari daftar.</p><div id="pane"></div>`;
+  runner($('#pane'), { id: 'ulang', practice: qs, quiz: [] }, 'practice');
 }
 
 // ---------- unit ----------
@@ -211,7 +253,8 @@ function blockHtml(b) {
 function runner(pane, d, mode) {
   const isQuiz = mode === 'quiz';
   const src = isQuiz ? d.quiz : d.practice;
-  const N = isQuiz ? 10 : 16;                       // jumlah soal tiap sesi, diambil acak dari bank soal
+  const retry = d.id === 'ulang';
+  const N = retry ? 10 : isQuiz ? 10 : 16;                       // jumlah soal tiap sesi, diambil acak dari bank soal
   const pick = () => shuffle(src).slice(0, Math.min(N, src.length));
   let qs = pick();
   let i = 0, score = 0, wrong = [];
@@ -224,6 +267,7 @@ function runner(pane, d, mode) {
       <div class="card"><div id="qbox"></div><div id="fb"></div></div>`;
     renderQ(q, $('#qbox'), (ok, shown) => {
       if (ok) score++; else wrong.push({ q, shown });
+      if (q.k) { if (ok) delete prog.wrong[q.k]; else prog.wrong[q.k] = d.id; saveProg(); }
       const last = i === qs.length - 1;
       $('#fb').innerHTML = `<div class="fb ${ok ? 'ok' : 'bad'}"><b class="h">${ok ? '✅ Benar! Hebat!' : '❌ Belum tepat'}</b>${ok ? '' : `<div>Jawaban yang benar: <b>${esc(correctText(q))}</b></div>`}<div>${fmt(q.exp)}</div></div>
         <div class="nextrow"><button class="btn" id="next">${last ? 'Lihat hasil' : 'Lanjut →'}</button></div>`;
@@ -234,9 +278,11 @@ function runner(pane, d, mode) {
 
   function finish() {
     const pct = Math.round(100 * score / qs.length);
-    const p = U(d.id);
+    const p = retry ? {} : U(d.id);
     let extra = '';
-    if (isQuiz) {
+    if (retry) {
+      extra = `<p>${pct >= 70 ? 'Hebat! Soal yang benar sudah dihapus dari daftar ulangan 🎉' : 'Terus coba, soal yang masih salah akan muncul lagi 💪'}</p>`;
+    } else if (isQuiz) {
       const st = starsFor(pct);
       p.quiz = Math.max(p.quiz || 0, pct); p.stars = Math.max(p.stars || 0, starsFor(p.quiz));
       saveProg();
@@ -249,11 +295,11 @@ function runner(pane, d, mode) {
     const review = wrong.length ? `<h3>Yang perlu diulang:</h3><ol class="review">${wrong.map(w => `<li>${fmt(w.q.q || w.q.say || '')}<br>Jawaban benar: <b>${esc(correctText(w.q))}</b></li>`).join('')}</ol>` : '';
     pane.innerHTML = `<div class="card result"><div class="big">${pct >= 70 ? '🎉' : '💪'}</div><h2>${score} dari ${qs.length} benar (${pct}%)</h2>${extra}
       <div class="row" style="justify-content:center;margin-top:12px">
-        <a class="btn ghost" href="#/unit/${d.id}/learn">📖 Baca lagi</a>
+        ${retry ? '' : `<a class="btn ghost" href="#/unit/${d.id}/learn">📖 Baca lagi</a>`}
         <button class="btn" id="again">🔁 Ulangi</button>
-        <a class="btn" href="#/unit/${d.id}/${isQuiz ? 'practice' : 'quiz'}">${isQuiz ? '✏️ Latihan' : '🏆 Ke kuis'}</a>
+        ${retry ? '' : `<a class="btn" href="#/unit/${d.id}/${isQuiz ? 'practice' : 'quiz'}">${isQuiz ? '✏️ Latihan' : '🏆 Ke kuis'}</a>`}
         <a class="btn ghost" href="#/">🏠 Beranda</a></div></div>${review ? `<div class="card review">${review}</div>` : ''}`;
-    $('#again').addEventListener('click', () => { qs = pick(); i = 0; score = 0; wrong = []; show(); });
+    $('#again').addEventListener('click', () => { if (retry) return renderRetry(); qs = pick(); i = 0; score = 0; wrong = []; show(); });
     // perbarui lencana total
     getJSON('data/index.json').then(ix => { $('#total').textContent = `⭐ ${totalStars()} / ${ix.filter(u => u.ready).length * 3}`; });
   }

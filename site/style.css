@@ -155,3 +155,4 @@ input.blank.bad{border-color:var(--bad);background:var(--bad-soft)}
 .vpanel label{display:block;font-weight:700;margin:10px 0}
 .vpanel select,.vpanel input[type=range]{display:block;width:100%;margin-top:6px;font:inherit}
 .vpanel[hidden]{display:none}
+.retry{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px}
