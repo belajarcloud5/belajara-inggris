@@ -310,5 +310,215 @@
   "ready": true,
   "practice_n": 92,
   "quiz_n": 58
+ },
+ {
+  "id": "u27",
+  "kelas": 10,
+  "no": 1,
+  "judul": "Perkenalan Diri dan Orang Lain",
+  "title": "Getting to Know Each Other",
+  "emoji": "🙋",
+  "ringkas": "Self-introduction, simple present, dan present continuous",
+  "ready": false
+ },
+ {
+  "id": "u28",
+  "kelas": 10,
+  "no": 2,
+  "judul": "Teks Deskriptif",
+  "title": "Descriptive Text",
+  "emoji": "🖼️",
+  "ringkas": "Mendeskripsikan orang, tempat, dan benda secara rinci",
+  "ready": false
+ },
+ {
+  "id": "u29",
+  "kelas": 10,
+  "no": 3,
+  "judul": "Teks Recount",
+  "title": "Recount Text",
+  "emoji": "📔",
+  "ringkas": "Menceritakan pengalaman dengan past tense",
+  "ready": false
+ },
+ {
+  "id": "u30",
+  "kelas": 10,
+  "no": 4,
+  "judul": "Teks Prosedur",
+  "title": "Procedure Text",
+  "emoji": "🧾",
+  "ringkas": "Instruksi langkah demi langkah dan kalimat perintah",
+  "ready": false
+ },
+ {
+  "id": "u31",
+  "kelas": 10,
+  "no": 5,
+  "judul": "Teks Narasi",
+  "title": "Narrative Text",
+  "emoji": "🏰",
+  "ringkas": "Struktur cerita, past tense, dan urutan kejadian",
+  "ready": false
+ },
+ {
+  "id": "u32",
+  "kelas": 10,
+  "no": 6,
+  "judul": "Pengumuman dan Undangan",
+  "title": "Announcements and Invitations",
+  "emoji": "📣",
+  "ringkas": "Teks fungsional pendek: pengumuman, undangan, dan pesan",
+  "ready": false
+ },
+ {
+  "id": "u33",
+  "kelas": 10,
+  "no": 7,
+  "judul": "Membaca Teks Pendek",
+  "title": "Reading Short Texts",
+  "emoji": "📰",
+  "ringkas": "Strategi membaca: ide pokok, informasi rinci, dan kosakata",
+  "ready": false
+ },
+ {
+  "id": "u34",
+  "kelas": 10,
+  "no": 8,
+  "judul": "Rangkuman Kelas 10",
+  "title": "Review Kelas 10",
+  "emoji": "🎓",
+  "ringkas": "Latihan campuran semua materi kelas 10",
+  "ready": false
+ },
+ {
+  "id": "u35",
+  "kelas": 11,
+  "no": 1,
+  "judul": "Berpendapat dan Berargumen",
+  "title": "Giving Opinions and Arguing",
+  "emoji": "🗣️",
+  "ringkas": "Ungkapan pendapat, setuju, dan tidak setuju",
+  "ready": false
+ },
+ {
+  "id": "u36",
+  "kelas": 11,
+  "no": 2,
+  "judul": "Eksposisi Analitis",
+  "title": "Analytical Exposition",
+  "emoji": "📊",
+  "ringkas": "Thesis, argumen, dan penegasan ulang",
+  "ready": false
+ },
+ {
+  "id": "u37",
+  "kelas": 11,
+  "no": 3,
+  "judul": "Eksposisi Hortatori",
+  "title": "Hortatory Exposition",
+  "emoji": "📢",
+  "ringkas": "Mengajak dan menyarankan dengan alasan",
+  "ready": false
+ },
+ {
+  "id": "u38",
+  "kelas": 11,
+  "no": 4,
+  "judul": "Teks Eksplanasi",
+  "title": "Explanation Text",
+  "emoji": "⚙️",
+  "ringkas": "Menjelaskan proses alam dan sosial",
+  "ready": false
+ },
+ {
+  "id": "u39",
+  "kelas": 11,
+  "no": 5,
+  "judul": "Teks Berita",
+  "title": "News Item",
+  "emoji": "🗞️",
+  "ringkas": "Struktur berita: newsworthy event dan background",
+  "ready": false
+ },
+ {
+  "id": "u40",
+  "kelas": 11,
+  "no": 6,
+  "judul": "Surat Lamaran dan CV",
+  "title": "Application Letter and CV",
+  "emoji": "💼",
+  "ringkas": "Menulis surat lamaran dan riwayat hidup",
+  "ready": false
+ },
+ {
+  "id": "u41",
+  "kelas": 11,
+  "no": 7,
+  "judul": "Rangkuman Kelas 11",
+  "title": "Review Kelas 11",
+  "emoji": "🎓",
+  "ringkas": "Latihan campuran semua materi kelas 11",
+  "ready": false
+ },
+ {
+  "id": "u42",
+  "kelas": 12,
+  "no": 1,
+  "judul": "Kalimat Pengandaian",
+  "title": "Conditional Sentences",
+  "emoji": "🔀",
+  "ringkas": "Conditional type 1, 2, dan 3",
+  "ready": false
+ },
+ {
+  "id": "u43",
+  "kelas": 12,
+  "no": 2,
+  "judul": "Kalimat Pasif dan Tidak Langsung",
+  "title": "Passive Voice and Reported Speech",
+  "emoji": "🔁",
+  "ringkas": "Pasif di berbagai tenses dan reported speech",
+  "ready": false
+ },
+ {
+  "id": "u44",
+  "kelas": 12,
+  "no": 3,
+  "judul": "Wawancara Kerja",
+  "title": "Job Interview",
+  "emoji": "🤝",
+  "ringkas": "Ungkapan dan percakapan untuk wawancara",
+  "ready": false
+ },
+ {
+  "id": "u45",
+  "kelas": 12,
+  "no": 4,
+  "judul": "Membaca untuk Ujian",
+  "title": "Reading for Exams",
+  "emoji": "📖",
+  "ringkas": "Strategi soal bacaan: main idea, inference, dan reference",
+  "ready": false
+ },
+ {
+  "id": "u46",
+  "kelas": 12,
+  "no": 5,
+  "judul": "Tata Bahasa untuk Ujian",
+  "title": "Grammar for Exams",
+  "emoji": "✍️",
+  "ringkas": "Pola soal tata bahasa dan kesalahan umum",
+  "ready": false
+ },
+ {
+  "id": "u47",
+  "kelas": 12,
+  "no": 6,
+  "judul": "Persiapan Akhir",
+  "title": "Final Review",
+  "emoji": "🏁",
+  "ringkas": "Latihan campuran semua materi sampai kelas 12",
+  "ready": false
  }
 ]

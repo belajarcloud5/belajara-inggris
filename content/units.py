@@ -1,4 +1,4 @@
-# Daftar 9 unit kelas 7 (urutan = urutan belajar). Unit yang file isinya belum ada tampil "segera hadir".
+# Daftar unit kelas 7-12 (urutan = urutan belajar). Unit yang file isinya belum ada tampil "segera hadir".
 UNITS = [
  dict(kelas=7, id="u01", no=1, emoji="👋", title="Hello!", judul="Menyapa dan Memperkenalkan Diri",
       ringkas="Greetings, nama, umur, asal, kabar, dan mengeja nama"),
@@ -55,4 +55,52 @@ UNITS = [
       ringkas="Menyusun dan menyampaikan presentasi singkat"),
  dict(kelas=9, id="u26", no=8, emoji="🎓", title="Exam Review", judul="Persiapan Ujian",
       ringkas="Rangkuman dan latihan campuran"),
+
+ # ---------------- Kelas 10 (segera hadir) ----------------
+ dict(kelas=10, id="u27", no=1, emoji="🙋", title="Getting to Know Each Other", judul="Perkenalan Diri dan Orang Lain",
+      ringkas="Self-introduction, simple present, dan present continuous"),
+ dict(kelas=10, id="u28", no=2, emoji="🖼️", title="Descriptive Text", judul="Teks Deskriptif",
+      ringkas="Mendeskripsikan orang, tempat, dan benda secara rinci"),
+ dict(kelas=10, id="u29", no=3, emoji="📔", title="Recount Text", judul="Teks Recount",
+      ringkas="Menceritakan pengalaman dengan past tense"),
+ dict(kelas=10, id="u30", no=4, emoji="🧾", title="Procedure Text", judul="Teks Prosedur",
+      ringkas="Instruksi langkah demi langkah dan kalimat perintah"),
+ dict(kelas=10, id="u31", no=5, emoji="🏰", title="Narrative Text", judul="Teks Narasi",
+      ringkas="Struktur cerita, past tense, dan urutan kejadian"),
+ dict(kelas=10, id="u32", no=6, emoji="📣", title="Announcements and Invitations", judul="Pengumuman dan Undangan",
+      ringkas="Teks fungsional pendek: pengumuman, undangan, dan pesan"),
+ dict(kelas=10, id="u33", no=7, emoji="📰", title="Reading Short Texts", judul="Membaca Teks Pendek",
+      ringkas="Strategi membaca: ide pokok, informasi rinci, dan kosakata"),
+ dict(kelas=10, id="u34", no=8, emoji="🎓", title="Review Kelas 10", judul="Rangkuman Kelas 10",
+      ringkas="Latihan campuran semua materi kelas 10"),
+
+ # ---------------- Kelas 11 (segera hadir) ----------------
+ dict(kelas=11, id="u35", no=1, emoji="🗣️", title="Giving Opinions and Arguing", judul="Berpendapat dan Berargumen",
+      ringkas="Ungkapan pendapat, setuju, dan tidak setuju"),
+ dict(kelas=11, id="u36", no=2, emoji="📊", title="Analytical Exposition", judul="Eksposisi Analitis",
+      ringkas="Thesis, argumen, dan penegasan ulang"),
+ dict(kelas=11, id="u37", no=3, emoji="📢", title="Hortatory Exposition", judul="Eksposisi Hortatori",
+      ringkas="Mengajak dan menyarankan dengan alasan"),
+ dict(kelas=11, id="u38", no=4, emoji="⚙️", title="Explanation Text", judul="Teks Eksplanasi",
+      ringkas="Menjelaskan proses alam dan sosial"),
+ dict(kelas=11, id="u39", no=5, emoji="🗞️", title="News Item", judul="Teks Berita",
+      ringkas="Struktur berita: newsworthy event dan background"),
+ dict(kelas=11, id="u40", no=6, emoji="💼", title="Application Letter and CV", judul="Surat Lamaran dan CV",
+      ringkas="Menulis surat lamaran dan riwayat hidup"),
+ dict(kelas=11, id="u41", no=7, emoji="🎓", title="Review Kelas 11", judul="Rangkuman Kelas 11",
+      ringkas="Latihan campuran semua materi kelas 11"),
+
+ # ---------------- Kelas 12 (segera hadir) ----------------
+ dict(kelas=12, id="u42", no=1, emoji="🔀", title="Conditional Sentences", judul="Kalimat Pengandaian",
+      ringkas="Conditional type 1, 2, dan 3"),
+ dict(kelas=12, id="u43", no=2, emoji="🔁", title="Passive Voice and Reported Speech", judul="Kalimat Pasif dan Tidak Langsung",
+      ringkas="Pasif di berbagai tenses dan reported speech"),
+ dict(kelas=12, id="u44", no=3, emoji="🤝", title="Job Interview", judul="Wawancara Kerja",
+      ringkas="Ungkapan dan percakapan untuk wawancara"),
+ dict(kelas=12, id="u45", no=4, emoji="📖", title="Reading for Exams", judul="Membaca untuk Ujian",
+      ringkas="Strategi soal bacaan: main idea, inference, dan reference"),
+ dict(kelas=12, id="u46", no=5, emoji="✍️", title="Grammar for Exams", judul="Tata Bahasa untuk Ujian",
+      ringkas="Pola soal tata bahasa dan kesalahan umum"),
+ dict(kelas=12, id="u47", no=6, emoji="🏁", title="Final Review", judul="Persiapan Akhir",
+      ringkas="Latihan campuran semua materi sampai kelas 12"),
 ]

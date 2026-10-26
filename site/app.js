@@ -137,6 +137,7 @@ async function route() {
   try {
     const index = await getJSON('data/index.json');
     $('#total').textContent = `⭐ ${totalStars()} / ${index.filter(u => u.ready).length * 3}`;
+    if (page === 'kelas') return renderHome(index, id);
     if (page === 'kamus') return renderKamus(await getJSON('data/kamus.json'));
     if (page === 'ulang') return renderRetry(index);
     if (page === 'unit' && id) {
@@ -157,17 +158,21 @@ function unitCard(u) {
   return `<a class="ucard" href="#/unit/${u.id}/learn"><span class="no">UNIT ${u.no}</span><span class="em">${u.emoji}</span><span class="t">${esc(u.title)}</span><span class="j">${esc(u.judul)}</span><span class="j">${esc(u.ringkas)}</span>${starHtml(p.stars || 0)}${badge}</a>`;
 }
 
-function renderHome(index) {
+function renderHome(index, pickKelas) {
   const ready = index.filter(u => u.ready);
   const got = totalStars(), max = ready.length * 3 || 1;
   const kelasList = [...new Set(index.map(u => u.kelas))].sort((x, y) => x - y);
-  const sections = kelasList.map(k => {
-    const us = index.filter(u => u.kelas === k);
-    const r = us.filter(u => u.ready);
-    const g = r.reduce((a, u) => a + (U(u.id).stars || 0), 0);
-    const info = r.length ? `⭐ ${g} / ${r.length * 3}` : 'Segera hadir';
-    return `<section class="kelas"><h2 class="kh">Kelas ${k} <span class="kinfo">${info}</span></h2><div class="grid">${us.map(unitCard).join('')}</div></section>`;
-  }).join('');
+  let kelas = +pickKelas || +prog.kelas;
+  if (!kelasList.includes(kelas)) kelas = (ready[0] || index[0]).kelas;
+  if (prog.kelas !== kelas) { prog.kelas = kelas; saveProg(); }
+  const stat = k => {
+    const r = index.filter(u => u.kelas === k && u.ready);
+    return r.length ? `⭐ ${r.reduce((a, u) => a + (U(u.id).stars || 0), 0)}/${r.length * 3}` : 'segera';
+  };
+  const tabs = `<nav class="ktabs" aria-label="Pilih kelas">${kelasList.map(k =>
+    `<a class="${k === kelas ? 'on' : ''}" href="#/kelas/${k}" ${k === kelas ? 'aria-current="page"' : ''}><b>Kelas ${k}</b><small>${stat(k)}</small></a>`).join('')}</nav>`;
+  const us = index.filter(u => u.kelas === kelas);
+  const sections = `${tabs}<section class="kelas"><div class="grid">${us.map(unitCard).join('')}</div>${us.some(u => u.ready) ? '' : '<p class="hint">Materi kelas ini sedang disiapkan. Sementara itu, belajar dulu dari kelas lain ya 😊</p>'}</section>`;
   app.innerHTML = `
     <section class="hero">
       <h1>Hi! Ayo belajar bahasa Inggris 🎉</h1>
