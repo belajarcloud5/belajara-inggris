@@ -38,12 +38,23 @@ function currentVoice() {
   if (vset.name) { const f = vs.find(v => v.name === vset.name); if (f) return f; }
   return vs.slice().sort((a, b) => scoreVoice(b) - scoreVoice(a))[0];   // utamakan suara perempuan bila ada
 }
-function speak(text) {
+// jenis kelamin pembicara dialog -> suara perempuan / laki-laki
+const GENDER = { dina: 'f', rani: 'f', mother: 'f', budi: 'm', tom: 'm' };
+const genderOf = name => GENDER[String(name).toLowerCase()] || '';
+function maleVoice() {
+  const vs = enVoices().filter(v => MALE.test(v.name) && !FEMALE.test(v.name));
+  return vs.sort((a, b) => scoreVoice(a) - scoreVoice(b) || (/^en[-_]US/i.test(b.lang) - /^en[-_]US/i.test(a.lang)))[0] || null;
+}
+function speak(text, gender) {
   if (!hasTTS) return;
   speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text);
   u.lang = 'en-US'; u.rate = vset.rate; u.pitch = vset.pitch;
-  const v = currentVoice();
+  let v = currentVoice();
+  if (gender === 'm') {
+    const m = maleVoice();
+    if (m) { v = m; u.pitch = 1; } else u.pitch = 0.7;          // tidak ada suara laki-laki: turunkan nada
+  } else if (gender === 'f' && v && MALE.test(v.name) && !FEMALE.test(v.name)) u.pitch = Math.max(vset.pitch, 1.5);
   if (v) { u.voice = v; u.lang = v.lang; }
   speechSynthesis.speak(u);
 }
@@ -73,10 +84,10 @@ function initVoicePanel() {
 }
 document.addEventListener('click', e => {
   const el = e.target.closest('[data-say]');
-  if (el) speak(el.dataset.say);
+  if (el) speak(el.dataset.say, el.dataset.g);
 });
 document.addEventListener('keydown', e => {
-  if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('.en[data-say]')) { e.preventDefault(); speak(e.target.dataset.say); }
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('.en[data-say]')) { e.preventDefault(); speak(e.target.dataset.say, e.target.dataset.g); }
 });
 
 initVoicePanel();
@@ -231,7 +242,7 @@ function blockHtml(b) {
       const names = [...new Set(b.lines.map(l => l.who))];
       return `<div class="card dialog"><div class="dhead"><h3 style="margin:0">${esc(b.title)}</h3><button class="btn ghost small toggle">Tampilkan terjemahan</button></div>${b.lines.map(l => {
         const right = names.indexOf(l.who) % 2 === 1;
-        return `<div class="bubble ${right ? 'r' : ''}"><div class="avatar">${esc(l.who[0])}</div><div class="msg" data-say="${esc(l.en)}"><div class="who">${esc(l.who)}</div><div class="e">${esc(l.en)}</div><div class="tr">${esc(l.id)}</div></div></div>`;
+        return `<div class="bubble ${right ? 'r' : ''}"><div class="avatar">${esc(l.who[0])}</div><div class="msg" data-say="${esc(l.en)}" data-g="${genderOf(l.who)}"><div class="who">${esc(l.who)}</div><div class="e">${esc(l.en)}</div><div class="tr">${esc(l.id)}</div></div></div>`;
       }).join('')}</div>`;
     }
     case 'grammar': {
