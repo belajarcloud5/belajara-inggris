@@ -61,13 +61,17 @@ function speak(text, gender) {
 function initVoicePanel() {
   const btn = $('#vbtn'), panel = $('#vpanel');
   if (!btn || !panel) return;
-  if (!hasTTS) { btn.hidden = true; return; }
   function render() {
+    if (!hasTTS) {
+      panel.innerHTML = `<h3>🔊 Pengaturan suara</h3><p><b>Browser ini tidak mendukung suara bawaan.</b> Tombol 🔊 tidak akan berbunyi di sini.</p>
+        <p class="hint">Coba buka situs ini di browser lain di perangkat ini (Chrome, Puffin TV Browser, atau Microsoft Edge). Atau pakai HP/laptop untuk bagian yang butuh suara.</p>`;
+      return;
+    }
     const vs = enVoices(), cur = currentVoice();
     const sel = vs.length
       ? `<label>Pilih suara<select id="vsel">${vs.map(v => `<option value="${esc(v.name)}" ${cur && cur.name === v.name ? 'selected' : ''}>${esc(v.name)} (${esc(v.lang)})</option>`).join('')}</select></label>`
       : '<p class="hint">Belum ada suara bahasa Inggris di perangkat ini. Pasang suara bahasa Inggris di pengaturan sistem, atau coba browser lain (misalnya Microsoft Edge).</p>';
-    panel.innerHTML = `<h3>🔊 Pengaturan suara</h3>${sel}
+    panel.innerHTML = `<h3>🔊 Pengaturan suara</h3><p class="hint" id="vstat">Suara bahasa Inggris terdeteksi: <b>${vs.length}</b></p>${sel}
       <label>Kecepatan: <b id="vrv">${vset.rate}</b><input id="vrate" type="range" min="0.5" max="1.2" step="0.05" value="${vset.rate}"></label>
       <label>Nada: <b id="vpv">${vset.pitch}</b><input id="vpitch" type="range" min="0.8" max="1.8" step="0.05" value="${vset.pitch}"></label>
       <div class="row"><button class="btn small" id="vtest">🔊 Tes suara</button><button class="btn ghost small" id="vreset">Atur ulang</button></div>
@@ -76,11 +80,20 @@ function initVoicePanel() {
     if (sv) sv.addEventListener('change', () => { vset.name = sv.value; saveVoice(); speak('Hello! Nice to meet you.'); });
     $('#vrate', panel).addEventListener('input', e => { vset.rate = +e.target.value; $('#vrv', panel).textContent = vset.rate; saveVoice(); });
     $('#vpitch', panel).addEventListener('input', e => { vset.pitch = +e.target.value; $('#vpv', panel).textContent = vset.pitch; saveVoice(); });
-    $('#vtest', panel).addEventListener('click', () => speak('Hello! My name is Rani. Nice to meet you.'));
+    $('#vtest', panel).addEventListener('click', () => {
+      const st = $('#vstat', panel); st.textContent = 'Memutar…';
+      const u = new SpeechSynthesisUtterance('Hello! My name is Rani. Nice to meet you.');
+      u.lang = 'en-US'; u.rate = vset.rate; u.pitch = vset.pitch;
+      const v = currentVoice(); if (v) { u.voice = v; u.lang = v.lang; }
+      u.onstart = () => { st.textContent = 'Suara berjalan ✅. Kalau tidak terdengar, naikkan volume TV.'; };
+      u.onerror = e => { st.textContent = 'Gagal memutar suara (' + (e.error || 'tidak diketahui') + '). Pasang suara bahasa Inggris di pengaturan TV.'; };
+      speechSynthesis.cancel(); speechSynthesis.speak(u);
+      setTimeout(() => { if (st.textContent === 'Memutar…') st.textContent = 'Tidak ada respons dari mesin suara browser ini ❌'; }, 3000);
+    });
     $('#vreset', panel).addEventListener('click', () => { vset.name = ''; vset.rate = 0.85; vset.pitch = 1; saveVoice(); render(); });
   }
   btn.addEventListener('click', () => { panel.hidden = !panel.hidden; if (!panel.hidden) render(); });
-  speechSynthesis.onvoiceschanged = () => { if (!panel.hidden) render(); };
+  if (hasTTS) speechSynthesis.onvoiceschanged = () => { if (!panel.hidden) render(); };
 }
 document.addEventListener('click', e => {
   const el = e.target.closest('[data-say]');
