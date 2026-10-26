@@ -343,7 +343,9 @@
   "title": "Recount Text",
   "emoji": "📔",
   "ringkas": "Menceritakan pengalaman dengan past tense",
-  "ready": false
+  "ready": true,
+  "practice_n": 46,
+  "quiz_n": 24
  },
  {
   "id": "u30",
