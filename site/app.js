@@ -39,7 +39,7 @@ function currentVoice() {
   return vs.slice().sort((a, b) => scoreVoice(b) - scoreVoice(a))[0];   // utamakan suara perempuan bila ada
 }
 // jenis kelamin pembicara dialog -> suara perempuan / laki-laki
-const GENDER = { dina: 'f', rani: 'f', mother: 'f', budi: 'm', tom: 'm' };
+const GENDER = { dina: 'f', rani: 'f', mother: 'f', budi: 'm', tom: 'm', 'mr. adi': 'm', 'ms. sari': 'f' };
 const genderOf = name => GENDER[String(name).toLowerCase()] || '';
 function maleVoice() {
   const vs = enVoices().filter(v => MALE.test(v.name) && !FEMALE.test(v.name));

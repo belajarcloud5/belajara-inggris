@@ -319,7 +319,9 @@
   "title": "Getting to Know Each Other",
   "emoji": "🙋",
   "ringkas": "Self-introduction, simple present, dan present continuous",
-  "ready": false
+  "ready": true,
+  "practice_n": 45,
+  "quiz_n": 25
  },
  {
   "id": "u28",
