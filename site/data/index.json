@@ -367,7 +367,9 @@
   "title": "Narrative Text",
   "emoji": "🏰",
   "ringkas": "Struktur cerita, past tense, dan urutan kejadian",
-  "ready": false
+  "ready": true,
+  "practice_n": 44,
+  "quiz_n": 24
  },
  {
   "id": "u32",
