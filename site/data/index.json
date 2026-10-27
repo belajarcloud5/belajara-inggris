@@ -379,7 +379,9 @@
   "title": "Announcements and Invitations",
   "emoji": "📣",
   "ringkas": "Teks fungsional pendek: pengumuman, undangan, dan pesan",
-  "ready": false
+  "ready": true,
+  "practice_n": 45,
+  "quiz_n": 24
  },
  {
   "id": "u33",
