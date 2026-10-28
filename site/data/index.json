@@ -643,7 +643,9 @@
   "title": "Meetings",
   "emoji": "🗣️",
   "ringkas": "Agenda, berpendapat, menyela dengan sopan, dan notulen",
-  "ready": false
+  "ready": true,
+  "practice_n": 52,
+  "quiz_n": 24
  },
  {
   "id": "u55",
