@@ -583,7 +583,9 @@
   "title": "Office Life and Job Roles",
   "emoji": "🏢",
   "ringkas": "Divisi, jabatan, tugas harian, dan jadwal kerja",
-  "ready": false
+  "ready": true,
+  "practice_n": 49,
+  "quiz_n": 24
  },
  {
   "id": "u50",
@@ -593,7 +595,9 @@
   "title": "Polite Requests and Offers",
   "emoji": "🙏",
   "ringkas": "Could/would/may, meminta tolong, menolak dengan sopan",
-  "ready": false
+  "ready": true,
+  "practice_n": 50,
+  "quiz_n": 24
  },
  {
   "id": "u51",
