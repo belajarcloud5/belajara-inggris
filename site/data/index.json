@@ -631,7 +631,9 @@
   "title": "Scheduling and Appointments",
   "emoji": "📅",
   "ringkas": "Membuat, mengubah, membatalkan janji, dan tenggat waktu",
-  "ready": false
+  "ready": true,
+  "practice_n": 52,
+  "quiz_n": 24
  },
  {
   "id": "u54",
