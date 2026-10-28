@@ -619,7 +619,9 @@
   "title": "Phone Calls and Voicemail",
   "emoji": "📞",
   "ringkas": "Menerima, menyambungkan, mengeja, dan meninggalkan pesan",
-  "ready": false
+  "ready": true,
+  "practice_n": 50,
+  "quiz_n": 24
  },
  {
   "id": "u53",
