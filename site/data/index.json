@@ -499,7 +499,9 @@
   "title": "Conditional Sentences",
   "emoji": "🔀",
   "ringkas": "Conditional type 1, 2, dan 3",
-  "ready": false
+  "ready": true,
+  "practice_n": 52,
+  "quiz_n": 24
  },
  {
   "id": "u43",
