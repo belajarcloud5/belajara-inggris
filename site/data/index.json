@@ -535,7 +535,9 @@
   "title": "Reading for Exams",
   "emoji": "📖",
   "ringkas": "Strategi soal bacaan: main idea, inference, dan reference",
-  "ready": false
+  "ready": true,
+  "practice_n": 53,
+  "quiz_n": 24
  },
  {
   "id": "u46",
