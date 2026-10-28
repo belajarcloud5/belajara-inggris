@@ -427,7 +427,9 @@
   "title": "Analytical Exposition",
   "emoji": "📊",
   "ringkas": "Thesis, argumen, dan penegasan ulang",
-  "ready": false
+  "ready": true,
+  "practice_n": 46,
+  "quiz_n": 24
  },
  {
   "id": "u37",
