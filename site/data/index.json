@@ -511,7 +511,9 @@
   "title": "Passive Voice and Reported Speech",
   "emoji": "🔁",
   "ringkas": "Pasif di berbagai tenses dan reported speech",
-  "ready": false
+  "ready": true,
+  "practice_n": 53,
+  "quiz_n": 24
  },
  {
   "id": "u44",
