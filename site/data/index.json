@@ -487,7 +487,9 @@
   "title": "Review Kelas 11",
   "emoji": "🎓",
   "ringkas": "Latihan campuran semua materi kelas 11",
-  "ready": false
+  "ready": true,
+  "practice_n": 53,
+  "quiz_n": 24
  },
  {
   "id": "u42",
