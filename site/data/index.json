@@ -715,7 +715,9 @@
   "title": "Business Travel",
   "emoji": "✈️",
   "ringkas": "Bandara, hotel, transportasi, dan menjamu rekan",
-  "ready": false
+  "ready": true,
+  "practice_n": 53,
+  "quiz_n": 24
  },
  {
   "id": "u61",
