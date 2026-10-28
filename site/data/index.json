@@ -679,7 +679,9 @@
   "title": "Customer Service and Complaints",
   "emoji": "🎧",
   "ringkas": "Menangani keluhan, meminta maaf, menawarkan solusi",
-  "ready": false
+  "ready": true,
+  "practice_n": 52,
+  "quiz_n": 24
  },
  {
   "id": "u58",
