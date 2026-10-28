@@ -607,7 +607,9 @@
   "title": "Professional Emails",
   "emoji": "📧",
   "ringkas": "Subjek, salam, isi, penutup, lampiran, dan singkatan umum",
-  "ready": false
+  "ready": true,
+  "practice_n": 51,
+  "quiz_n": 24
  },
  {
   "id": "u52",
