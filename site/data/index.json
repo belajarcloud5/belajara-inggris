@@ -463,7 +463,9 @@
   "title": "News Item",
   "emoji": "🗞️",
   "ringkas": "Struktur berita: newsworthy event dan background",
-  "ready": false
+  "ready": true,
+  "practice_n": 48,
+  "quiz_n": 24
  },
  {
   "id": "u40",
