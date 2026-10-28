@@ -667,7 +667,9 @@
   "title": "Presentations",
   "emoji": "🎤",
   "ringkas": "Membuka, transisi, menjelaskan slide, dan tanya jawab",
-  "ready": false
+  "ready": true,
+  "practice_n": 52,
+  "quiz_n": 24
  },
  {
   "id": "u57",
