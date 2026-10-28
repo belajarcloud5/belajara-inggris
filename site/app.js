@@ -137,7 +137,7 @@ async function route() {
   try {
     const index = await getJSON('data/index.json');
     $('#total').textContent = `⭐ ${totalStars()} / ${index.filter(u => u.ready).length * 3}`;
-    if (page === 'kelas') return renderHome(index, id);
+    if (page === 'kelas') return renderKelas(index, id);
     if (page === 'kamus') return renderKamus(await getJSON('data/kamus.json'));
     if (page === 'ulang') return renderRetry(index);
     if (page === 'unit' && id) {
@@ -158,32 +158,62 @@ function unitCard(u) {
   return `<a class="ucard" href="#/unit/${u.id}/learn"><span class="no">UNIT ${u.no}</span><span class="em">${u.emoji}</span><span class="t">${esc(u.title)}</span><span class="j">${esc(u.judul)}</span><span class="j">${esc(u.ringkas)}</span>${starHtml(p.stars || 0)}${badge}</a>`;
 }
 
-function renderHome(index, pickKelas) {
+// Level di dashboard. Kelas 7-12 diambil dari index.json; level 'kerja' aktif otomatis
+// begitu ada unit dengan kelas: "kerja" di index.json.
+const LEVELS = [
+  ...[7, 8, 9, 10, 11, 12].map(k => ({ key: String(k), title: `Kelas ${k}`, emoji: ['🎒', '📘', '🧭', '🚀', '🎯', '🎓'][k - 7], sub: k <= 9 ? 'SMP' : 'SMA', desc: ['Sapaan, keluarga, angka dan jam, hobi, makanan, dan arah', 'Lampau, sedang terjadi, perbandingan, rencana, dan surat', 'Narrative, report, passive, conditional, dan persiapan ujian', 'Perkenalan, teks deskriptif, recount, prosedur, dan narasi', 'Eksposisi, berita, surat lamaran, dan CV', 'Pengandaian, pasif, wawancara kerja, dan persiapan ujian'][k - 7] })),
+  { key: 'kerja', title: 'Pekerja / Formal', emoji: '💼', sub: 'DEWASA', desc: 'Bahasa Inggris untuk kantor, email, rapat, dan wawancara' },
+];
+
+function levelStat(index, key) {
+  const us = index.filter(u => String(u.kelas) === key), r = us.filter(u => u.ready);
+  const stars = r.reduce((a, u) => a + (U(u.id).stars || 0), 0);
+  const done = r.filter(u => U(u.id).quiz >= 50).length;
+  return { us, ready: r.length, stars, max: r.length * 3, done };
+}
+
+function levelCard(index, lv) {
+  const st = levelStat(index, lv.key);
+  const head = `<span class="lsub">${lv.sub}</span><span class="em">${lv.emoji}</span><span class="t">${esc(lv.title)}</span><span class="j">${esc(lv.desc)}</span>`;
+  if (!st.ready) return `<div class="ucard lcard soon">${head}<span class="badge">Segera hadir 🔒</span></div>`;
+  const pct = Math.round(100 * st.stars / st.max);
+  const last = String(prog.kelas) === lv.key ? '<span class="badge last">Terakhir dibuka</span>' : '';
+  return `<a class="ucard lcard" href="#/kelas/${lv.key}" aria-label="${esc(lv.title)}: ${st.done} dari ${st.ready} unit selesai">${head}
+    <span class="lprog"><i style="width:${pct}%"></i></span>
+    <span class="j">${st.done}/${st.ready} unit selesai · ⭐ ${st.stars}/${st.max}</span>${last}</a>`;
+}
+
+function renderHome(index) {
   const ready = index.filter(u => u.ready);
   const got = totalStars(), max = ready.length * 3 || 1;
-  const kelasList = [...new Set(index.map(u => u.kelas))].sort((x, y) => x - y);
-  let kelas = +pickKelas || +prog.kelas;
-  if (!kelasList.includes(kelas)) kelas = (ready[0] || index[0]).kelas;
-  if (prog.kelas !== kelas) { prog.kelas = kelas; saveProg(); }
-  const stat = k => {
-    const r = index.filter(u => u.kelas === k && u.ready);
-    return r.length ? `⭐ ${r.reduce((a, u) => a + (U(u.id).stars || 0), 0)}/${r.length * 3}` : 'segera';
-  };
-  const tabs = `<nav class="ktabs" aria-label="Pilih kelas">${kelasList.map(k =>
-    `<a class="${k === kelas ? 'on' : ''}" href="#/kelas/${k}" ${k === kelas ? 'aria-current="page"' : ''}><b>Kelas ${k}</b><small>${stat(k)}</small></a>`).join('')}</nav>`;
-  const us = index.filter(u => u.kelas === kelas);
-  const sections = `${tabs}<section class="kelas"><div class="grid">${us.map(unitCard).join('')}</div>${us.some(u => u.ready) ? '' : '<p class="hint">Materi kelas ini sedang disiapkan. Sementara itu, belajar dulu dari kelas lain ya 😊</p>'}</section>`;
   app.innerHTML = `
     <section class="hero">
       <h1>Hi! Ayo belajar bahasa Inggris 🎉</h1>
-      <p>Pilih satu unit. Setiap unit punya <b>Belajar</b>, <b>Latihan</b>, dan <b>Kuis</b>. Kumpulkan bintang ⭐ sebanyak mungkin!</p>
+      <p>Pilih levelmu, lalu pilih unit. Setiap unit punya <b>Belajar</b>, <b>Latihan</b>, dan <b>Kuis</b>. Kumpulkan bintang ⭐ sebanyak mungkin!</p>
       <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${max}" aria-valuenow="${got}"><i style="width:${Math.round(100 * got / max)}%"></i></div>
-    </section>${wrongCount() ? `<div class="card retry"><b>🔁 ${wrongCount()} soal perlu diulang</b> <a class="btn small" href="#/ulang">Ulangi yang salah</a></div>` : ''}${sections}`;
+    </section>${wrongCount() ? `<div class="card retry"><b>🔁 ${wrongCount()} soal perlu diulang</b> <a class="btn small" href="#/ulang">Ulangi yang salah</a></div>` : ''}
+    <h2 class="sec">Pilih level</h2>
+    <div class="grid lgrid">${LEVELS.map(lv => levelCard(index, lv)).join('')}</div>`;
+}
+
+function renderKelas(index, key) {
+  const lv = LEVELS.find(l => l.key === key);
+  const st = lv && levelStat(index, key);
+  if (!lv || !st.ready) return renderHome(index);
+  if (String(prog.kelas) !== key) { prog.kelas = key; saveProg(); }
+  const i = LEVELS.findIndex(l => l.key === key);
+  const nb = (l, txt) => l && levelStat(index, l.key).ready ? `<a class="btn ghost small" href="#/kelas/${l.key}">${txt}</a>` : '<span></span>';
+  app.innerHTML = `
+    <a class="crumb" href="#/">← Semua level</a>
+    <h1>${lv.emoji} ${esc(lv.title)}</h1>
+    <p class="lead">${lv.sub} · ${st.done}/${st.ready} unit selesai · ⭐ ${st.stars}/${st.max}</p>
+    <section class="kelas"><div class="grid">${st.us.map(unitCard).join('')}</div></section>
+    <div class="row lnav">${nb(LEVELS[i - 1], '← ' + (LEVELS[i - 1] || {}).title)}${nb(LEVELS[i + 1], (LEVELS[i + 1] || {}).title + ' →')}</div>`;
 }
 
 // ---------- kamus ----------
 function renderKamus(words) {
-  app.innerHTML = `<a class="crumb" href="#/">← Semua unit</a><h1>📖 Kamus Kecil</h1>
+  app.innerHTML = `<a class="crumb" href="#/">← Beranda</a><h1>📖 Kamus Kecil</h1>
     <p class="lead">${words.length} kata dari semua unit. Klik kata untuk mendengarnya.</p>
     <div class="row"><input class="blank" id="kq" type="search" placeholder="Cari kata Inggris atau artinya…" aria-label="Cari kata"></div>
     <div id="klist"></div>`;
@@ -213,10 +243,10 @@ async function renderRetry() {
   for (const k of Object.keys(prog.wrong)) if (!live.has(k)) delete prog.wrong[k];   // soal yang sudah tidak ada
   saveProg();
   if (!qs.length) {
-    app.innerHTML = `<a class="crumb" href="#/">← Semua unit</a><div class="card result"><div class="big">🌟</div><h2>Tidak ada soal yang perlu diulang</h2><p>Semua jawabanmu sudah benar. Lanjutkan belajar ya!</p></div>`;
+    app.innerHTML = `<a class="crumb" href="#/">← Beranda</a><div class="card result"><div class="big">🌟</div><h2>Tidak ada soal yang perlu diulang</h2><p>Semua jawabanmu sudah benar. Lanjutkan belajar ya!</p></div>`;
     return;
   }
-  app.innerHTML = `<a class="crumb" href="#/">← Semua unit</a><h1>🔁 Ulangi yang salah</h1><p class="lead">${qs.length} soal yang pernah salah. Jawab benar untuk menghapusnya dari daftar.</p><div id="pane"></div>`;
+  app.innerHTML = `<a class="crumb" href="#/">← Beranda</a><h1>🔁 Ulangi yang salah</h1><p class="lead">${qs.length} soal yang pernah salah. Jawab benar untuk menghapusnya dari daftar.</p><div id="pane"></div>`;
   runner($('#pane'), { id: 'ulang', practice: qs, quiz: [] }, 'practice');
 }
 
@@ -224,7 +254,7 @@ async function renderRetry() {
 function renderUnit(d, tab, index) {
   const tabs = [['learn', '📖 Belajar'], ['practice', '✏️ Latihan'], ['quiz', '🏆 Kuis']];
   app.innerHTML = `
-    <a class="crumb" href="#/">← Semua unit</a>
+    <a class="crumb" href="#/kelas/${d.kelas}">← Kelas ${d.kelas}</a>
     <h1>${d.emoji} Unit ${d.no}: ${esc(d.title)}</h1>
     <p class="lead">Kelas ${d.kelas} · ${esc(d.judul)}</p>
     <nav class="tabs">${tabs.map(([k, l]) => `<a class="${tab === k ? 'on' : ''}" href="#/unit/${d.id}/${k}">${l}</a>`).join('')}</nav>
