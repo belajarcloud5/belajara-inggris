@@ -547,7 +547,9 @@
   "title": "Grammar for Exams",
   "emoji": "✍️",
   "ringkas": "Pola soal tata bahasa dan kesalahan umum",
-  "ready": false
+  "ready": true,
+  "practice_n": 56,
+  "quiz_n": 24
  },
  {
   "id": "u47",
