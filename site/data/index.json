@@ -415,7 +415,9 @@
   "title": "Giving Opinions and Arguing",
   "emoji": "🗣️",
   "ringkas": "Ungkapan pendapat, setuju, dan tidak setuju",
-  "ready": false
+  "ready": true,
+  "practice_n": 47,
+  "quiz_n": 24
  },
  {
   "id": "u36",
