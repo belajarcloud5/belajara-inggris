@@ -439,7 +439,9 @@
   "title": "Hortatory Exposition",
   "emoji": "📢",
   "ringkas": "Mengajak dan menyarankan dengan alasan",
-  "ready": false
+  "ready": true,
+  "practice_n": 47,
+  "quiz_n": 24
  },
  {
   "id": "u38",
