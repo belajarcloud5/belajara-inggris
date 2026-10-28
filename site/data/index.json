@@ -727,6 +727,8 @@
   "title": "Review Level Pekerja",
   "emoji": "🎓",
   "ringkas": "Latihan campuran semua materi level pekerja",
-  "ready": false
+  "ready": true,
+  "practice_n": 56,
+  "quiz_n": 24
  }
 ]
