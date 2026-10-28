@@ -475,7 +475,9 @@
   "title": "Application Letter and CV",
   "emoji": "💼",
   "ringkas": "Menulis surat lamaran dan riwayat hidup",
-  "ready": false
+  "ready": true,
+  "practice_n": 49,
+  "quiz_n": 24
  },
  {
   "id": "u41",
