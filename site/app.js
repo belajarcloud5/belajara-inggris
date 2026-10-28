@@ -150,6 +150,8 @@ async function route() {
   }
 }
 
+const kelasName = k => k === 'kerja' ? 'Level Pekerja' : `Kelas ${k}`;
+
 // ---------- beranda ----------
 function unitCard(u) {
   if (!u.ready) return `<div class="ucard soon"><span class="no">UNIT ${u.no}</span><span class="em">${u.emoji}</span><span class="t">${esc(u.title)}</span><span class="j">${esc(u.judul)}</span><span class="badge">Segera hadir 🔒</span></div>`;
@@ -222,7 +224,7 @@ function renderKamus(words) {
     const t = norm(q.value);
     const hit = t ? words.filter(w => norm(w.en).includes(t) || norm(w.id).includes(t)) : words;
     list.innerHTML = hit.length
-      ? `<div class="vgrid">${hit.map(w => `<button class="vcard" data-say="${esc(stripTags(w.en))}"><span class="v-en">${esc(w.en)}</span><span class="v-id">${esc(w.id)}</span>${w.ex ? `<span class="v-ex">${esc(w.ex)}</span>` : ''}<span class="v-ex">Unit ${w.no} · Kelas ${w.kelas}</span></button>`).join('')}</div>`
+      ? `<div class="vgrid">${hit.map(w => `<button class="vcard" data-say="${esc(stripTags(w.en))}"><span class="v-en">${esc(w.en)}</span><span class="v-id">${esc(w.id)}</span>${w.ex ? `<span class="v-ex">${esc(w.ex)}</span>` : ''}<span class="v-ex">Unit ${w.no} · ${kelasName(w.kelas)}</span></button>`).join('')}</div>`
       : '<p class="hint">Kata tidak ditemukan.</p>';
   }
   q.addEventListener('input', draw);
@@ -254,9 +256,9 @@ async function renderRetry() {
 function renderUnit(d, tab, index) {
   const tabs = [['learn', '📖 Belajar'], ['practice', '✏️ Latihan'], ['quiz', '🏆 Kuis']];
   app.innerHTML = `
-    <a class="crumb" href="#/kelas/${d.kelas}">← Kelas ${d.kelas}</a>
+    <a class="crumb" href="#/kelas/${d.kelas}">← ${kelasName(d.kelas)}</a>
     <h1>${d.emoji} Unit ${d.no}: ${esc(d.title)}</h1>
-    <p class="lead">Kelas ${d.kelas} · ${esc(d.judul)}</p>
+    <p class="lead">${kelasName(d.kelas)} · ${esc(d.judul)}</p>
     <nav class="tabs">${tabs.map(([k, l]) => `<a class="${tab === k ? 'on' : ''}" href="#/unit/${d.id}/${k}">${l}</a>`).join('')}</nav>
     <div id="pane"></div>`;
   const pane = $('#pane');

@@ -562,5 +562,147 @@
   "ready": true,
   "practice_n": 65,
   "quiz_n": 24
+ },
+ {
+  "id": "u48",
+  "kelas": "kerja",
+  "no": 1,
+  "judul": "Perkenalan dan Obrolan Ringan di Kantor",
+  "title": "Workplace Introductions and Small Talk",
+  "emoji": "🤝",
+  "ringkas": "Memperkenalkan diri dan jabatan, small talk, menyambut tamu",
+  "ready": true,
+  "practice_n": 54,
+  "quiz_n": 24
+ },
+ {
+  "id": "u49",
+  "kelas": "kerja",
+  "no": 2,
+  "judul": "Kehidupan Kantor dan Jabatan",
+  "title": "Office Life and Job Roles",
+  "emoji": "🏢",
+  "ringkas": "Divisi, jabatan, tugas harian, dan jadwal kerja",
+  "ready": false
+ },
+ {
+  "id": "u50",
+  "kelas": "kerja",
+  "no": 3,
+  "judul": "Permintaan dan Tawaran yang Sopan",
+  "title": "Polite Requests and Offers",
+  "emoji": "🙏",
+  "ringkas": "Could/would/may, meminta tolong, menolak dengan sopan",
+  "ready": false
+ },
+ {
+  "id": "u51",
+  "kelas": "kerja",
+  "no": 4,
+  "judul": "Email Profesional",
+  "title": "Professional Emails",
+  "emoji": "📧",
+  "ringkas": "Subjek, salam, isi, penutup, lampiran, dan singkatan umum",
+  "ready": false
+ },
+ {
+  "id": "u52",
+  "kelas": "kerja",
+  "no": 5,
+  "judul": "Telepon dan Pesan Suara",
+  "title": "Phone Calls and Voicemail",
+  "emoji": "📞",
+  "ringkas": "Menerima, menyambungkan, mengeja, dan meninggalkan pesan",
+  "ready": false
+ },
+ {
+  "id": "u53",
+  "kelas": "kerja",
+  "no": 6,
+  "judul": "Penjadwalan dan Janji Temu",
+  "title": "Scheduling and Appointments",
+  "emoji": "📅",
+  "ringkas": "Membuat, mengubah, membatalkan janji, dan tenggat waktu",
+  "ready": false
+ },
+ {
+  "id": "u54",
+  "kelas": "kerja",
+  "no": 7,
+  "judul": "Rapat",
+  "title": "Meetings",
+  "emoji": "🗣️",
+  "ringkas": "Agenda, berpendapat, menyela dengan sopan, dan notulen",
+  "ready": false
+ },
+ {
+  "id": "u55",
+  "kelas": "kerja",
+  "no": 8,
+  "judul": "Laporan dan Data",
+  "title": "Reports and Data",
+  "emoji": "📈",
+  "ringkas": "Angka, persen, tren naik-turun, dan membaca grafik",
+  "ready": false
+ },
+ {
+  "id": "u56",
+  "kelas": "kerja",
+  "no": 9,
+  "judul": "Presentasi",
+  "title": "Presentations",
+  "emoji": "🎤",
+  "ringkas": "Membuka, transisi, menjelaskan slide, dan tanya jawab",
+  "ready": false
+ },
+ {
+  "id": "u57",
+  "kelas": "kerja",
+  "no": 10,
+  "judul": "Layanan Pelanggan dan Keluhan",
+  "title": "Customer Service and Complaints",
+  "emoji": "🎧",
+  "ringkas": "Menangani keluhan, meminta maaf, menawarkan solusi",
+  "ready": false
+ },
+ {
+  "id": "u58",
+  "kelas": "kerja",
+  "no": 11,
+  "judul": "Pemecahan Masalah dan Laporan Status",
+  "title": "Problem Solving and Status Updates",
+  "emoji": "🛠️",
+  "ringkas": "Melaporkan masalah, progres, kendala, dan langkah berikutnya",
+  "ready": false
+ },
+ {
+  "id": "u59",
+  "kelas": "kerja",
+  "no": 12,
+  "judul": "Masukan dan Pengembangan Karier",
+  "title": "Feedback and Career Growth",
+  "emoji": "🌱",
+  "ringkas": "Memberi dan menerima masukan, evaluasi, dan target",
+  "ready": false
+ },
+ {
+  "id": "u60",
+  "kelas": "kerja",
+  "no": 13,
+  "judul": "Perjalanan Dinas",
+  "title": "Business Travel",
+  "emoji": "✈️",
+  "ringkas": "Bandara, hotel, transportasi, dan menjamu rekan",
+  "ready": false
+ },
+ {
+  "id": "u61",
+  "kelas": "kerja",
+  "no": 14,
+  "judul": "Rangkuman Level Pekerja",
+  "title": "Review Level Pekerja",
+  "emoji": "🎓",
+  "ringkas": "Latihan campuran semua materi level pekerja",
+  "ready": false
  }
 ]
