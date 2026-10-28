@@ -559,6 +559,8 @@
   "title": "Final Review",
   "emoji": "🏁",
   "ringkas": "Latihan campuran semua materi sampai kelas 12",
-  "ready": false
+  "ready": true,
+  "practice_n": 65,
+  "quiz_n": 24
  }
 ]
