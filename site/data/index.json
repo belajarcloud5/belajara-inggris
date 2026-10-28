@@ -403,7 +403,9 @@
   "title": "Review Kelas 10",
   "emoji": "🎓",
   "ringkas": "Latihan campuran semua materi kelas 10",
-  "ready": false
+  "ready": true,
+  "practice_n": 45,
+  "quiz_n": 24
  },
  {
   "id": "u35",
