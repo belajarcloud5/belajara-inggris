@@ -391,7 +391,9 @@
   "title": "Reading Short Texts",
   "emoji": "📰",
   "ringkas": "Strategi membaca: ide pokok, informasi rinci, dan kosakata",
-  "ready": false
+  "ready": true,
+  "practice_n": 45,
+  "quiz_n": 24
  },
  {
   "id": "u34",
