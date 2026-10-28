@@ -523,7 +523,9 @@
   "title": "Job Interview",
   "emoji": "🤝",
   "ringkas": "Ungkapan dan percakapan untuk wawancara",
-  "ready": false
+  "ready": true,
+  "practice_n": 51,
+  "quiz_n": 24
  },
  {
   "id": "u45",
