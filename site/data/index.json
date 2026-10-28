@@ -655,7 +655,9 @@
   "title": "Reports and Data",
   "emoji": "📈",
   "ringkas": "Angka, persen, tren naik-turun, dan membaca grafik",
-  "ready": false
+  "ready": true,
+  "practice_n": 53,
+  "quiz_n": 24
  },
  {
   "id": "u56",
