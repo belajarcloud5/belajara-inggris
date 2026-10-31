@@ -86,3 +86,5 @@ Cerita bacaan **berfokus articles** (`content/uNN_read6.py`, `READ6`, bacaan ke-
 ## Preposisi gerak (to, into, through)
 - **Materi** lewat `content/uNN_lessonx.py`: unit 9 (to, into, out of, from, towards, onto; tanpa to pada go home, enter, reach; arrive at vs in; lalu through, across, along, past, over, under, around), unit 30 (into, to, through, over dalam instruksi: pour into, add to, cut into), unit 31 (preposisi gerak dalam cerita), dan unit 46 (jebakan ujian: go home, enter, arrive at/in, get on/off vs get in/out of).
 - **Soal latihan**: `content/uNN_mov.py` (`MOV`, suffix `mov`) di unit 9, 14, 30, 31, dan 46, 63 soal.
+
+Cerita bacaan **preposisi gerak** (`content/uNN_read7.py`, `READ7`, bacaan ke-8 per unit) ada di semua 61 unit: percakapan dengan to, from, into, out of, through, across, along, past, over, under, around, up, down, towards, serta pola tanpa to (go home) dan get on/off. Total bacaan 488 dengan 3.050 pertanyaan. Catatan: audit bias panjang opsi dan pengecekan jawaban ganda untuk cerita ini belum dijalankan.
