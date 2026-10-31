@@ -6,6 +6,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(ROOT, "content"))
 OUT = os.path.join(ROOT, "site", "data")
 os.makedirs(OUT, exist_ok=True)
+from helpers import fill  # noqa: E402
 
 
 def load(path):
@@ -114,6 +115,40 @@ def enrich_exp(q):
     q["exp"] = out
 
 
+
+BE_DO_HAVE = {"am", "is", "are", "was", "were", "be", "been", "being", "do", "does", "did", "have", "has", "had", "don't", "doesn't", "didn't", "isn't", "aren't", "wasn't", "weren't"}
+PREP = {"to", "for", "by", "on", "in", "at", "of", "with", "from", "into", "about", "since"}
+
+
+def to_fill(q):
+    """Ubah pilihan ganda 'Lengkapi ___' yang jawabannya tunggal menjadi soal isian ketik. None bila rawan ambigu."""
+    if q["type"] != "mcq" or q["q"].count("___") != 1 or " – " in q["q"]:
+        return None
+    m = re.search(r'"([^"]*___[^"]*)"', q["q"])
+    if not m:
+        return None
+    a = q["options"][q["answer"]]
+    others = [o for i, o in enumerate(q["options"]) if i != q["answer"]]
+    words = [x.lower() for x in q["options"]]
+    if len(a.split()) > 3 or not re.fullmatch(r"[A-Za-z' ]+", a):
+        return None
+    closed = all(x in BE_DO_HAVE for x in words) or all(x in PREP for x in words)
+    stem = a.split()[-1].lower()[:3]
+    par = re.search(r"\(([^)]+)\)\s*$", q["q"])
+    # bentuk kata kerja hanya bila kata dasarnya disebut di kurung, mis. "(easy)" -> easier; kalau tidak, ada sinonim lain
+    inflect = bool(par) and len(stem) == 3 and par.group(1).strip().lower()[:3] == stem and sum(o.split()[-1].lower().startswith(stem) for o in others) >= 2
+    if not (closed or inflect):
+        return None
+    sent = m.group(1) + (f" ({par.group(1)})" if par else "")
+    hint = " / ".join(w[0] + (" " + " ".join("_" * (len(w) - 1)) if len(w) > 1 else "") for w in a.split())
+    answers = [a]
+    if a.lower().endswith("n't") and len(a.split()) == 1:  # aren't = are not
+        answers.append(a[:-3] + " not" if a.lower() != "can't" else "cannot")
+    f = fill("", sent, answers, hint, q["exp"])
+    f["g"] = q["k"]
+    return f
+
+
 def check_q(uid, kind, i, q):
     where = f"{uid}.{kind}[{i}]"
     t = q.get("type")
@@ -137,6 +172,7 @@ def main():
     units = load(os.path.join(ROOT, "content", "units.py")).UNITS
     index = []
     kamus = []
+    n_conv = 0
     for u in units:
         entry = {k: u[k] for k in ("id", "kelas", "no", "judul", "title", "emoji", "ringkas")}
         p = os.path.join(ROOT, "content", f"{u['id']}.py")
@@ -158,6 +194,14 @@ def main():
                 for q in d[kind]:
                     q["k"] = qid(q)
                     enrich_exp(q)
+                nf = [x for x in (to_fill(q) for q in d[kind] if q["type"] == "mcq") if x]
+                for x in nf:
+                    x["k"] = qid(x)
+                for q in d[kind]:
+                    if any(x["g"] == q["k"] for x in nf):
+                        q["g"] = q["k"]
+                d[kind] = dedupe(u["id"], kind, d[kind] + nf)
+                n_conv += len(nf)
             for blk in d["lesson"]:
                 if blk.get("t") == "vocab":
                     for it in blk["items"]:
@@ -175,7 +219,7 @@ def main():
             seen.add(key); out.append(it)
     out.sort(key=lambda x: x["en"].lower())
     json.dump(out, open(os.path.join(OUT, "kamus.json"), "w"), ensure_ascii=False, separators=(",", ":"))
-    print(f"kamus: {len(out)} kata")
+    print(f"kamus: {len(out)} kata; soal isian hasil konversi: {n_conv}")
     print(f"{sum(e['ready'] for e in index)}/{len(index)} unit siap")
 
 

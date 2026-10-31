@@ -317,7 +317,8 @@ function runner(pane, d, mode) {
   const src = isQuiz ? d.quiz : d.practice;
   const retry = d.id === 'ulang';
   const N = retry ? 10 : isQuiz ? 50 : 50;                       // jumlah soal tiap sesi, diambil acak dari bank soal
-  const pick = () => shuffle(src).slice(0, Math.min(N, src.length));
+  // soal yang diturunkan dari satu soal (pilihan ganda dan isian) berbagi `g`; ambil salah satu saja per sesi
+  const pick = () => { const seen = new Set(); return shuffle(src).filter(q => !q.g || (!seen.has(q.g) && seen.add(q.g))).slice(0, N); };
   let qs = pick();
   let i = 0, score = 0, wrong = [];
 
