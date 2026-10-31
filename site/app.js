@@ -468,11 +468,25 @@ function qMatch(q, box, finish) {
 (() => {
   const b = document.getElementById('totop');
   if (!b) return;
+  let anim = 0;
   const upd = () => b.classList.toggle('show', window.scrollY > 400);
   window.addEventListener('scroll', upd, { passive: true });
+  const stop = () => { cancelAnimationFrame(anim); anim = 0; b.classList.remove('going'); };
+  ['wheel', 'touchstart', 'keydown'].forEach(ev => window.addEventListener(ev, () => anim && stop(), { passive: true }));
   b.addEventListener('click', () => {
-    const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    window.scrollTo({ top: 0, behavior: calm ? 'auto' : 'smooth' });
+    stop();
+    const from = window.scrollY;
+    if (from <= 0) return;
+    const dur = Math.min(900, 350 + from / 6);               // makin jauh makin lama, maksimal 0,9 detik
+    const t0 = performance.now();
+    const ease = t => 1 - Math.pow(1 - t, 3);                // melambat di akhir
+    b.classList.add('going');
+    const step = now => {
+      const t = Math.min(1, (now - t0) / dur);
+      window.scrollTo(0, from * (1 - ease(t)));
+      if (t < 1) anim = requestAnimationFrame(step); else stop();
+    };
+    anim = requestAnimationFrame(step);
   });
   upd();
 })();
