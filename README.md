@@ -1,6 +1,6 @@
 # Let's Learn English!
 
-Web belajar bahasa Inggris interaktif dari SMP sampai dunia kerja. Ada **61 unit** yang dibagi menjadi tujuh level: Kelas 7, 8, 9, 10, 11, 12, dan **Pekerja / Formal**. Beranda berupa kartu level; klik satu kartu untuk melihat unit-unitnya. Setiap unit berisi **Belajar**, **Latihan** (50 soal acak), dan **Kuis** (20 soal acak, bintang 1-3).
+Web belajar bahasa Inggris interaktif dari SMP sampai dunia kerja. Ada **61 unit** yang dibagi menjadi tujuh level: Kelas 7, 8, 9, 10, 11, 12, dan **Pekerja / Formal**. Beranda berupa kartu level; klik satu kartu untuk melihat unit-unitnya. Setiap unit berisi **Belajar**, **Latihan** (50 soal acak), dan **Kuis** (10 soal acak, bintang 1-3).
 
 Situs: https://belajarcloud5.github.io/belajara-inggris/
 
@@ -49,6 +49,6 @@ Menambah level baru: tambahkan unit dengan `kelas="nama-level"` di `content/unit
 Topik dan susunan unit adalah rancangan sendiri, bukan kurikulum resmi. Soal dibuat sendiri dan belum ditinjau guru.
 
 ## Bank soal
-Setiap unit punya bank soal yang lebih besar dari yang ditampilkan: tiap sesi Latihan mengambil 50 soal acak dan tiap Kuis 20 soal acak, jadi mengulang selalu memberi soal berbeda. Total bank saat ini: 4978 soal latihan dan 3029 soal kuis (8007 soal).
+Setiap unit punya bank soal yang lebih besar dari yang ditampilkan: tiap sesi Latihan mengambil 50 soal acak dan tiap Kuis 10 soal acak, jadi mengulang selalu memberi soal berbeda. Total bank saat ini: 4978 soal latihan dan 3029 soal kuis (8007 soal).
 
 Soal dasar ada di `content/uNN.py` dan soal tambahan di `content/uNN_extra.py`. Unit Kelas 10-12 dan Pekerja punya satu ronde tambahan `content/uNN_more.py` (sekitar 25 soal). Unit Kelas 7-9 punya tiga ronde tambahan: `content/uNN_more.py` (soal bacaan, mencari kalimat salah, melengkapi dialog, terjemahan), `content/uNN_plus.py` (situasi, ejaan, kata tanya, melengkapi kalimat), dan `content/uNN_ext.py` (benar/salah dari teks, memperbaiki kesalahan, sinonim dan antonim, bunyi mirip). Duplikat persis dibuang otomatis oleh `build.py`.
