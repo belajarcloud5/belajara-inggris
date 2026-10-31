@@ -49,6 +49,6 @@ Menambah level baru: tambahkan unit dengan `kelas="nama-level"` di `content/unit
 Topik dan susunan unit adalah rancangan sendiri, bukan kurikulum resmi. Soal dibuat sendiri dan belum ditinjau guru.
 
 ## Bank soal
-Setiap unit punya bank soal yang lebih besar dari yang ditampilkan: tiap sesi Latihan mengambil 50 soal acak dan tiap Kuis 50 soal acak, jadi mengulang selalu memberi soal berbeda. Total bank saat ini: 5468 soal latihan dan 4282 soal kuis (9750 soal).
+Setiap unit punya bank soal yang lebih besar dari yang ditampilkan: tiap sesi Latihan mengambil 50 soal acak dan tiap Kuis 50 soal acak, jadi mengulang selalu memberi soal berbeda. Total bank saat ini: 6444 soal latihan dan 4282 soal kuis (10726 soal).
 
 Soal dasar ada di `content/uNN.py` dan soal tambahan di `content/uNN_extra.py`. Unit Kelas 10-12 dan Pekerja punya satu ronde tambahan `content/uNN_more.py` (sekitar 25 soal). Unit Kelas 7-9 punya tiga ronde tambahan: `content/uNN_more.py` (soal bacaan, mencari kalimat salah, melengkapi dialog, terjemahan), `content/uNN_plus.py` (situasi, ejaan, kata tanya, melengkapi kalimat), dan `content/uNN_ext.py` (benar/salah dari teks, memperbaiki kesalahan, sinonim dan antonim, bunyi mirip). Duplikat persis dibuang otomatis oleh `build.py`.
