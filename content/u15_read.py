@@ -1,0 +1,55 @@
+READ = [{'id': 'Gajah adalah hewan darat terbesar. Gajah punya belalai panjang, dua telinga besar, dan kulit abu-abu yang tebal.\n'
+        'Gajah hidup di hutan dan savana di Afrika dan Asia. Mereka makan rumput, daun, dan buah. Seekor gajah bisa makan lebih dari seratus kilo '
+        'makanan sehari. Gajah sangat cerdas, dan mereka hidup berkelompok.',
+  'qs': [{'answer': 0,
+          'exp': 'Teks: "thick grey skin."',
+          'options': ['Grey', 'Brown', 'Black', 'White'],
+          'q': "What color is an elephant's skin?",
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "forests and savannas".',
+          'options': ['In forests and savannas', 'In the sea', 'In deserts only', 'In cold mountains'],
+          'q': 'Where do elephants live?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "grass, leaves, and fruit."',
+          'options': ['Grass, leaves, and fruit', 'Meat', 'Fish', 'Insects'],
+          'q': 'What do elephants eat?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "they live in groups."',
+          'options': ['In groups', 'Alone', 'In pairs only', 'In water'],
+          'q': 'How do elephants live?',
+          'type': 'mcq'}],
+  'text': 'The elephant is the biggest land animal. It has a long trunk, two large ears, and thick grey skin.\n'
+          'Elephants live in forests and savannas in Africa and Asia. They eat grass, leaves, and fruit. An elephant can eat more than one hundred '
+          'kilos of food a day. Elephants are very smart, and they live in groups.',
+  'title': 'The Elephant'},
+ {'id': 'Raja Ampat adalah gugusan pulau di Papua. Tempat ini terkenal dengan lautnya yang biru jernih dan ikan-ikan berwarna-warni. Banyak '
+        'wisatawan ke sana untuk menyelam.\n'
+        'Pulau-pulaunya hijau, tenang, dan bersih. Tidak ada pusat perbelanjaan besar, hanya penginapan kecil. Untuk ke sana, pengunjung harus naik '
+        'pesawat lalu naik perahu.',
+  'qs': [{'answer': 0,
+          'exp': 'Teks: "famous for its clear blue sea and colorful fish."',
+          'options': ['Its clear blue sea and colorful fish', 'Its tall buildings', 'Its big markets', 'Its snow'],
+          'q': 'What is Raja Ampat famous for?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "go there to dive."',
+          'options': ['To dive', 'To ski', 'To shop', 'To climb mountains'],
+          'q': 'Why do tourists go there?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "only small homestays."',
+          'options': ['In small homestays', 'In big shopping centers', 'In tall hotels', 'In tents only'],
+          'q': 'Where can visitors stay?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "take a plane and then a boat."',
+          'options': ['By plane and then boat', 'By train', 'By car only', 'By bus'],
+          'q': 'How do visitors get there?',
+          'type': 'mcq'}],
+  'text': 'Raja Ampat is a group of islands in Papua. It is famous for its clear blue sea and colorful fish. Many tourists go there to dive.\n'
+          'The islands are green, quiet, and clean. There are no big shopping centers, only small homestays. To get there, visitors must take a '
+          'plane and then a boat.',
+  'title': 'Raja Ampat'}]

@@ -189,6 +189,14 @@ def main():
             for kind in ("practice", "quiz"):
                 for i, q in enumerate(d[kind]):
                     check_q(u["id"], kind, i, q)
+            rp = os.path.join(ROOT, "content", f"{u['id']}_read.py")
+            d["read"] = load(rp).READ if os.path.isfile(rp) else []
+            for pi, ps in enumerate(d["read"]):
+                assert ps.get("title") and ps.get("text") and ps.get("id"), f"{u['id']}.read[{pi}]: judul/teks/terjemahan kosong"
+                assert 3 <= len(ps["qs"]) <= 6, f"{u['id']}.read[{pi}]: butuh 3 sampai 6 pertanyaan"
+                for qi, q in enumerate(ps["qs"]):
+                    assert q["type"] == "mcq", f"{u['id']}.read[{pi}][{qi}]: hanya mcq"
+                    check_q(u["id"], f"read{pi}", qi, q)
             assert len(d["quiz"]) >= 8, f"{u['id']}: kuis minimal 8 soal"
             for kind in ("practice", "quiz"):
                 for q in d[kind]:
@@ -207,9 +215,10 @@ def main():
                     for it in blk["items"]:
                         if it.get("id"):
                             kamus.append({"en": it["en"], "id": it["id"], "ex": it.get("ex", ""), "u": u["id"], "no": u["no"], "kelas": u["kelas"]})
-            d = {**entry, **{k: d[k] for k in ("goals", "lesson", "practice", "quiz")}}
+            d = {**entry, **{k: d[k] for k in ("goals", "lesson", "practice", "quiz", "read")}}
             json.dump(d, open(os.path.join(OUT, f"{u['id']}.json"), "w"), ensure_ascii=False, separators=(",", ":"))
             entry["practice_n"], entry["quiz_n"] = len(d["practice"]), len(d["quiz"])
+            entry["read_n"] = len(d["read"])
         index.append(entry)
     json.dump(index, open(os.path.join(OUT, "index.json"), "w"), ensure_ascii=False, indent=1)
     seen, out = set(), []

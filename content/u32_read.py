@@ -1,0 +1,55 @@
+READ = [{'id': 'PMI dan OSIS SMA Bakti Luhur mengundang semua siswa dan guru untuk mengikuti kegiatan donor darah.\n'
+        'Tanggal: Sabtu, 18 November. Waktu: 08.00 sampai 12.00. Tempat: Aula sekolah. Syarat: berusia 17 tahun ke atas, sehat, dan berat badan '
+        'minimal 45 kilogram. Mohon sarapan dahulu sebelum mendonor. Pendaftaran tersedia di ruang OSIS sampai hari Jumat. Untuk informasi lebih '
+        'lanjut, hubungi Rina di 0812-3456-7890.',
+  'qs': [{'answer': 0,
+          'exp': 'Teks: "Place: School hall."',
+          'options': ['In the school hall', 'In the library', 'At a hospital', 'At the PMI office'],
+          'q': 'Where will the event take place?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "aged 17 or above, healthy".',
+          'options': ['People aged 17 or above who are healthy', 'Anyone at all', 'Only teachers', 'Children under 15'],
+          'q': 'Who can donate blood?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "Please eat breakfast before donating."',
+          'options': ['Eat breakfast', 'Drink coffee', 'Exercise', 'Sleep all day'],
+          'q': 'What should donors do before donating?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "until Friday."',
+          'options': ['Until Friday', 'Until Saturday', 'Until Monday', 'Until next month'],
+          'q': 'Until when can people register?',
+          'type': 'mcq'}],
+  'text': 'PMI and OSIS SMA Bakti Luhur invite all students and teachers to join a blood donation event.\n'
+          'Date: Saturday, 18 November. Time: 08.00 until 12.00. Place: School hall. Requirements: aged 17 or above, healthy, and weighing at least '
+          '45 kilograms. Please eat breakfast before donating. Registration is available at the student council room until Friday. For more '
+          'information, contact Rina at 0812-3456-7890.',
+  'title': 'Notice: Blood Donation'},
+ {'id': 'Hai Maya, ini Dian. Maaf aku tidak bisa menemuimu di perpustakaan sore ini. Ibuku memintaku mengantar adik laki-lakiku ke dokter.\n'
+        'Bisakah kamu memberikan catatan matematika kepada Rizal? Dia akan mengambilnya pukul lima. Nanti malam aku akan meneleponmu. Terima kasih!',
+  'qs': [{'answer': 0,
+          'exp': 'Teks: "take my little brother to the doctor."',
+          'options': ['She took her brother to the doctor.', 'She was sick.', 'She forgot.', 'She went shopping.'],
+          'q': "Why couldn't Dian meet Maya?",
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "give the math notes to Rizal."',
+          'options': ['Give the math notes to Rizal', 'Call the doctor', 'Go to the library', 'Visit her house'],
+          'q': 'What does Dian ask Maya to do?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "He will pick them up at five."',
+          'options': ['At five', 'At noon', 'At night', 'At eight'],
+          'q': 'When will Rizal pick up the notes?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "I will call you tonight."',
+          'options': ['Tonight', 'Tomorrow morning', 'This afternoon', 'Next week'],
+          'q': 'When will Dian call Maya?',
+          'type': 'mcq'}],
+  'text': 'Hi Maya, this is Dian. I am sorry I could not meet you at the library this afternoon. My mother asked me to take my little brother to the '
+          'doctor.\n'
+          'Could you please give the math notes to Rizal? He will pick them up at five. I will call you tonight. Thanks!',
+  'title': 'A Message'}]

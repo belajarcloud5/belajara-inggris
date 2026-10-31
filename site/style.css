@@ -178,3 +178,7 @@ input.blank.bad{border-color:var(--bad);background:var(--bad-soft)}
 .totop span{display:block}
 .totop.going span{animation:totopUp .6s ease-in infinite}
 @keyframes totopUp{0%{transform:translateY(8px);opacity:0}40%{opacity:1}100%{transform:translateY(-10px);opacity:0}}
+
+.passage p{font-size:1.05rem;line-height:1.7;margin:.5em 0}
+.passage .tr-box{margin-top:10px;padding:10px 14px;border-radius:14px;background:var(--brand-soft);color:var(--ink)}
+.passage .tr-box p{font-size:.95rem}

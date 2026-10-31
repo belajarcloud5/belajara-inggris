@@ -1,0 +1,58 @@
+READ = [{'id': 'Dina: Permisi, Pak Adi. Bisakah Bapak meluangkan beberapa menit? Saya ingin bertanya tentang laporan anggaran.\n'
+        'Pak Adi: Tentu. Apa yang ingin kamu ketahui?\n'
+        'Dina: Apakah Bapak keberatan memeriksa angka di halaman tiga? Saya khawatir saya tidak yakin dengan totalnya. Pak Adi: Tentu. Bisakah kamu '
+        'mengirim filenya lewat email? Dina: Baik, saya kirim sekarang. Terima kasih banyak.',
+  'qs': [{'answer': 0,
+          'exp': 'Dina: "ask about the budget report."',
+          'options': ['The budget report', 'Her holiday', 'A new job', 'The lunch menu'],
+          'q': 'What does Dina want to ask about?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Dina: "figures on page three".',
+          'options': ['Page three', 'Page one', 'Page ten', 'Page five'],
+          'q': 'Which page has the figures to check?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Dina: "I\'m not sure about the total."',
+          'options': ['The total', 'The date', 'The title', 'The font'],
+          'q': 'What is Dina unsure about?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Mr. Adi: "Could you send me the file by email?"',
+          'options': ['Send him the file by email', 'Print the report', 'Call him tonight', 'Visit his house'],
+          'q': 'What does Mr. Adi ask Dina to do?',
+          'type': 'mcq'}],
+  'text': "Dina: Excuse me, Mr. Adi. Could you spare a few minutes? I'd like to ask about the budget report.\n"
+          'Mr. Adi: Of course. What would you like to know?\n'
+          "Dina: Would you mind checking the figures on page three? I'm afraid I'm not sure about the total. Mr. Adi: Certainly. Could you send me "
+          "the file by email? Dina: Sure, I'll send it right away. Thank you so much.",
+  'title': 'Asking Politely'},
+ {'id': 'Hai Rizal, terima kasih telah mengundang saya mengikuti pelatihan akhir pekan. Saya sangat menghargainya. Sayangnya, saya tidak dapat hadir '
+        'karena ada acara keluarga pada hari Sabtu.\n'
+        'Mungkinkah saya menerima materinya lewat email? Saya senang membacanya di rumah. Saya juga akan senang mengikuti sesi berikutnya, jika ada. '
+        'Terima kasih atas pengertiannya. Salam, Tika',
+  'qs': [{'answer': 0,
+          'exp': 'Teks: "I have a family event on Saturday."',
+          'options': ['She has a family event.', 'She is sick.', 'She is on holiday.', 'She dislikes training.'],
+          'q': "Why can't Tika attend the training?",
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "receive the materials by email".',
+          'options': ['The training materials by email', 'A different date', 'Free lunch', 'A certificate'],
+          'q': 'What does Tika ask for?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "I would also be glad to join the next session".',
+          'options': ['She would be glad to join.', 'She will refuse.', 'She is angry.', "She doesn't care."],
+          'q': 'How does Tika feel about the next session?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Ucapan terima kasih, alasan, dan alternatif.',
+          'options': ['It thanks, explains, and offers an alternative.', 'It is very short.', 'It is angry.', 'It uses slang.'],
+          'q': 'Why is this email polite?',
+          'type': 'mcq'}],
+  'text': "Hi Rizal, thank you for inviting me to join the weekend training. I really appreciate it. Unfortunately, I won't be able to attend "
+          'because I have a family event on Saturday.\n'
+          "Would it be possible to receive the materials by email? I'd be happy to read them at home. I would also be glad to join the next session, "
+          'if there is one. Thank you for your understanding. Best regards, Tika',
+  'title': 'Declining Politely'}]

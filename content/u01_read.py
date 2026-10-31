@@ -1,0 +1,55 @@
+READ = [{'id': 'Halo! Namaku Rani. Aku berumur dua belas tahun. Aku berasal dari Bandung, tetapi sekarang tinggal di Jakarta.\n'
+        'Aku siswa di SMP Harapan. Sahabatku adalah Dina. Dia berumur tiga belas tahun. Kami mengucapkan "Selamat pagi" kepada guru kami setiap '
+        'hari.',
+  'qs': [{'answer': 0,
+          'exp': 'Teks: "I am twelve years old."',
+          'options': ['She is twelve.', 'She is thirteen.', 'She is eleven.', 'She is fourteen.'],
+          'q': 'How old is Rani?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "I am from Bandung."',
+          'options': ['Bandung', 'Jakarta', 'Surabaya', 'Medan'],
+          'q': 'Where is Rani from?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "My best friend is Dina."',
+          'options': ["Rani's best friend", "Rani's teacher", "Rani's sister", "Rani's mother"],
+          'q': 'Who is Dina?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "We say \'Good morning\' to our teacher every day."',
+          'options': ['Good morning', 'Good night', 'Goodbye', 'See you later'],
+          'q': 'What do the girls say to their teacher every day?',
+          'type': 'mcq'}],
+  'text': 'Hello! My name is Rani. I am twelve years old. I am from Bandung, but I live in Jakarta now.\n'
+          'I am a student at SMP Harapan. My best friend is Dina. She is thirteen. We say "Good morning" to our teacher every day.',
+  'title': 'Meeting Rani'},
+ {'id': 'Budi: Selamat sore, Ani. Apa kabar?\n'
+        'Ani: Aku baik, terima kasih. Dan kamu?\n'
+        'Budi: Aku baik. Senang bertemu denganmu. Apakah ini tasmu?\n'
+        'Ani: Bukan. Itu tas Siti. Selamat tinggal, Budi! Sampai jumpa besok.',
+  'qs': [{'answer': 0,
+          'exp': 'Budi berkata "Good afternoon".',
+          'options': ['In the afternoon', 'In the morning', 'At night', 'In the evening'],
+          'q': 'When does the chat happen?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Ani: "It\'s Siti\'s bag."',
+          'options': ["Siti's", "Ani's", "Budi's", "Dina's"],
+          'q': 'Whose bag is it?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Ani: "I\'m fine, thank you."',
+          'options': ['She is fine.', 'She is sick.', 'She is angry.', 'She is sleepy.'],
+          'q': 'How is Ani?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Ani: "See you tomorrow."',
+          'options': ['Tomorrow', 'Today', 'Next week', 'Tonight'],
+          'q': 'When will they meet again?',
+          'type': 'mcq'}],
+  'text': 'Budi: Good afternoon, Ani. How are you?\n'
+          "Ani: I'm fine, thank you. And you?\n"
+          "Budi: I'm well. Nice to meet you. Is this your bag?\n"
+          "Ani: No, it isn't. It's Siti's bag. Goodbye, Budi! See you tomorrow.",
+  'title': 'A Short Chat'}]

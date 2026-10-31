@@ -1,0 +1,58 @@
+READ = [{'id': 'Hai Tom, saya ingin menjadwalkan rapat untuk membahas proyek baru. Apakah kamu senggang Selasa pagi? Saya kosong pukul 10.00, tetapi saya '
+        'khawatir ada janji lain pukul 11.30.\n'
+        'Hai Sam, Selasa pagi tidak bisa buat saya karena saya akan berada di lokasi klien. Bagaimana kalau Rabu pukul 14.00? Saya senggang '
+        'sepanjang sore. Hai Tom, Rabu pukul 14.00 cocok untuk saya. Saya akan kirim undangan kalender dan memesan Ruang Rapat B.',
+  'qs': [{'answer': 0,
+          'exp': 'Teks: "discuss the new project."',
+          'options': ['The new project', 'A holiday', 'A birthday', 'A complaint'],
+          'q': 'What is the meeting about?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Tom: "I\'ll be at a client site."',
+          'options': ['He will be at a client site.', 'He is sick.', 'He is on leave.', 'He has a class.'],
+          'q': "Why can't Tom meet on Tuesday morning?",
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Sam: "Wednesday at 2.00 works for me."',
+          'options': ['Wednesday at 2.00 p.m.', 'Tuesday at 10.00', 'Tuesday at 11.30', 'Thursday at 9.00'],
+          'q': 'When do they agree to meet?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "send a calendar invitation and book Meeting Room B."',
+          'options': ['Send a calendar invitation and book a room', 'Cancel the meeting', 'Call the client', 'Write a report'],
+          'q': 'What will Sam do next?',
+          'type': 'mcq'}],
+  'text': "Hi Tom, I'd like to schedule a meeting to discuss the new project. Are you free on Tuesday morning? I have a gap at 10.00, but I'm afraid "
+          'I have another appointment at 11.30.\n'
+          "Hi Sam, Tuesday morning doesn't work for me because I'll be at a client site. How about Wednesday at 2.00 p.m.? I'm free all afternoon. "
+          "Hi Tom, Wednesday at 2.00 works for me. I'll send a calendar invitation and book Meeting Room B.",
+  'title': 'Fixing a Meeting Time'},
+ {'id': 'Yth. Ibu Lestari, saya menulis untuk memberitahukan bahwa Dr. Wijaya ada operasi darurat besok, sehingga janji Ibu pukul 09.00 harus '
+        'dijadwalkan ulang. Kami mohon maaf atas ketidaknyamanannya.\n'
+        'Kami dapat menawarkan Kamis pukul 10.00 atau Jumat pukul 08.30. Mohon beri tahu kami mana yang cocok untuk Ibu. Jika tidak ada yang sesuai, '
+        'silakan hubungi resepsionis kami dan kami akan mencari jadwal lain.',
+  'qs': [{'answer': 0,
+          'exp': 'Teks: "Dr. Wijaya has an emergency surgery tomorrow".',
+          'options': ['The doctor has an emergency surgery.', 'The patient is sick.', 'The clinic is closed.', 'It is a holiday.'],
+          'q': 'Why must the appointment be rescheduled?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "your appointment at 9.00 a.m."',
+          'options': ['9.00 a.m.', '10.00 a.m.', '8.30 a.m.', '2.00 p.m.'],
+          'q': 'What was the original time?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "Thursday at 10.00 a.m. or Friday at 8.30 a.m."',
+          'options': ['Thursday 10.00 or Friday 8.30', 'Monday or Tuesday', 'Wednesday 9.00', 'Saturday 10.00'],
+          'q': 'Which options are offered?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "call our reception desk".',
+          'options': ['Call the reception desk', 'Ignore the email', 'Visit another doctor', 'Wait a month'],
+          'q': 'What should Ms. Lestari do if neither time suits her?',
+          'type': 'mcq'}],
+  'text': 'Dear Ms. Lestari, I am writing to inform you that Dr. Wijaya has an emergency surgery tomorrow, so your appointment at 9.00 a.m. must be '
+          'rescheduled. We sincerely apologize for the inconvenience.\n'
+          'We can offer you Thursday at 10.00 a.m. or Friday at 8.30 a.m. Please let us know which one suits you. If neither time is convenient, '
+          'please call our reception desk and we will find another slot.',
+  'title': 'Rescheduling an Appointment'}]

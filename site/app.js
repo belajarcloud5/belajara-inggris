@@ -132,7 +132,7 @@ async function getJSON(path) {
 window.addEventListener('hashchange', route);
 route();
 async function route() {
-  const [, page, id, tab] = location.hash.slice(1).split('/');
+  const [, page, id, tab, idx] = location.hash.slice(1).split('/');
   window.scrollTo(0, 0);
   try {
     const index = await getJSON('data/index.json');
@@ -142,7 +142,7 @@ async function route() {
     if (page === 'ulang') return renderRetry(index);
     if (page === 'unit' && id) {
       const meta = index.find(u => u.id === id && u.ready);
-      if (meta) return renderUnit(await getJSON(`data/${id}.json`), tab || 'learn', index);
+      if (meta) return renderUnit(await getJSON(`data/${id}.json`), tab || 'learn', index, idx);
     }
     renderHome(index);
   } catch (e) {
@@ -254,8 +254,9 @@ async function renderRetry() {
 }
 
 // ---------- unit ----------
-function renderUnit(d, tab, index) {
+function renderUnit(d, tab, index, idx) {
   const tabs = [['learn', '📖 Belajar'], ['practice', '✏️ Latihan'], ['quiz', '🏆 Kuis']];
+  if (d.read && d.read.length) tabs.splice(2, 0, ['read', '📚 Bacaan']);
   app.innerHTML = `
     <a class="crumb" href="#/kelas/${d.kelas}">← ${kelasName(d.kelas)}</a>
     <h1>${d.emoji} Unit ${d.no}: ${esc(d.title)}</h1>
@@ -265,6 +266,7 @@ function renderUnit(d, tab, index) {
   const pane = $('#pane');
   if (tab === 'practice') return runner(pane, d, 'practice');
   if (tab === 'quiz') return runner(pane, d, 'quiz');
+  if (tab === 'read' && d.read && d.read.length) return renderRead(pane, d, idx);
   renderLesson(pane, d);
 }
 
@@ -365,6 +367,48 @@ function runner(pane, d, mode) {
     $('#again').addEventListener('click', () => { if (retry) return renderRetry(); qs = pick(); i = 0; score = 0; wrong = []; show(); });
     // perbarui lencana total
     getJSON('data/index.json').then(ix => { $('#total').textContent = `⭐ ${totalStars()} / ${ix.filter(u => u.ready).length * 3}`; });
+  }
+  show();
+}
+
+// ---------- bacaan: teks pendek + beberapa pertanyaan ----------
+function renderRead(pane, d, idx) {
+  const rs = (U(d.id).reads = U(d.id).reads || {});
+  const n = +idx;
+  if (!(n >= 0 && n < d.read.length)) {
+    pane.innerHTML = `<p class="lead">Baca teks pendek, lalu jawab pertanyaannya. Klik 🔊 untuk mendengarkan, dan buka terjemahan bila perlu.</p>
+      <div class="grid">${d.read.map((p, i) => `<a class="ucard" href="#/unit/${d.id}/read/${i}"><span class="no">BACAAN ${i + 1}</span><span class="t">${esc(p.title)}</span><span class="j">${p.qs.length} pertanyaan</span><span class="badge ${rs[i] >= 70 ? 'done' : ''}">${rs[i] == null ? 'Belum dicoba' : 'Terbaik ' + rs[i] + '%'}</span></a>`).join('')}</div>`;
+    return;
+  }
+  const ps = d.read[n];
+  const qs = shuffle(ps.qs);
+  let i = 0, score = 0, wrong = [];
+  const textHtml = `<div class="card passage"><div class="dhead"><h3 style="margin:0">${esc(ps.title)}</h3><span><button class="btn ghost small" data-say="${esc(ps.text.replace(/\n+/g, ' '))}">🔊 Dengarkan</button> <button class="btn ghost small" id="trtog">Tampilkan terjemahan</button></span></div>
+    ${ps.text.split('\n').map(x => `<p>${esc(x)}</p>`).join('')}<div class="tr-box" id="trbox" hidden>${ps.id.split('\n').map(x => `<p>${esc(x)}</p>`).join('')}</div></div>`;
+  function show() {
+    if (i >= qs.length) return finish();
+    const q = qs[i];
+    pane.innerHTML = `<a class="crumb" href="#/unit/${d.id}/read">← Semua bacaan</a>${textHtml}
+      <div class="qhead"><span class="qno">📚 Pertanyaan ${i + 1}/${qs.length}</span><div class="pbar"><i style="width:${Math.round(100 * i / qs.length)}%"></i></div></div>
+      <div class="card"><div id="qbox"></div><div id="fb"></div></div>`;
+    $('#trtog').addEventListener('click', e => { const b = $('#trbox'); b.hidden = !b.hidden; e.target.textContent = b.hidden ? 'Tampilkan terjemahan' : 'Sembunyikan terjemahan'; });
+    renderQ(q, $('#qbox'), ok => {
+      if (ok) score++; else wrong.push(q);
+      const last = i === qs.length - 1;
+      $('#fb').innerHTML = `<div class="fb ${ok ? 'ok' : 'bad'}"><b class="h">${ok ? '✅ Benar! Hebat!' : '❌ Belum tepat'}</b>${ok ? '' : `<div>Jawaban yang benar: <b>${esc(correctText(q))}</b></div>`}<div>${fmt(q.exp)}</div></div>
+        <div class="nextrow"><button class="btn" id="next">${last ? 'Lihat hasil' : 'Lanjut →'}</button></div>`;
+      const nb = $('#next'); nb.focus(); nb.addEventListener('click', () => { i++; show(); });
+    });
+  }
+  function finish() {
+    const pct = Math.round(100 * score / qs.length);
+    rs[n] = Math.max(rs[n] == null ? 0 : rs[n], pct); saveProg();
+    const nxt = n + 1 < d.read.length ? `<a class="btn" href="#/unit/${d.id}/read/${n + 1}">Bacaan berikutnya →</a>` : '';
+    pane.innerHTML = `<div class="card result"><div class="big">${pct >= 70 ? '🎉' : '💪'}</div><h2>${score} dari ${qs.length} benar (${pct}%)</h2>
+      <p>${pct >= 70 ? 'Mantap! Kamu memahami bacaan ini 👍' : 'Baca teksnya sekali lagi, lalu coba lagi 💪'}</p>
+      <div class="row" style="justify-content:center;margin-top:12px"><button class="btn ghost" id="again">🔁 Ulangi</button>${nxt}<a class="btn ghost" href="#/unit/${d.id}/read">📚 Semua bacaan</a></div></div>
+      ${wrong.length ? `<div class="card review"><h3>Yang perlu diulang:</h3><ol class="review">${wrong.map(q => `<li>${fmt(q.q)}<br>Jawaban benar: <b>${esc(correctText(q))}</b></li>`).join('')}</ol></div>` : ''}`;
+    $('#again').addEventListener('click', () => renderRead(pane, d, String(n)));
   }
   show();
 }
