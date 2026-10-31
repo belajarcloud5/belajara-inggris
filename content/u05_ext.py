@@ -61,7 +61,7 @@ EXT = dict(
       ["student", "teacher", "classroom", "desk"], 0,
       "pupil = student."),
   mcq("Kata yang tidak sama kelompoknya adalah...",
-      ["canteen", "library", "laboratory", "pencil"], 0,
+      ["pencil", "canteen", "library", "laboratory"], 0,
       "pencil = alat tulis."),
   listen("Dengarkan kata ini. Mana yang diucapkan?", "book",
          ["book", "back", "beak", "boot"], 0,

@@ -17,7 +17,7 @@ R4 = dict(practice=mk([
  ("Sinonim \"forbid\":","prohibit","allow","permit","let","syn."),
  ("Antonim \"safe\":","dangerous","secure","calm","clean","ant."),
  ("Antonim \"obey\":","disobey","follow","listen","accept","ant."),
- ("Sinonim \"advice\" (verb: ...):","suggest","order","forbid","refuse","syn."),
+ ("Sinonim \"advise\":","suggest","order","forbid","refuse","syn."),
  ("Antonim \"polite\":","rude","kind","soft","calm","ant."),
  ("Antonim \"careful\":","careless","slow","quiet","ready","ant."),
  ("Sinonim \"rule\":","regulation","habit","hobby","game","syn."),

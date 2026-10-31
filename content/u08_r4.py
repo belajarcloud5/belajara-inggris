@@ -13,8 +13,8 @@ R4 = dict(practice=mk([
  ("Lengkapi: \"I don't eat ___ meat.\"","any","a","an","many","complete."),
  ("Lengkapi: \"This soup tastes ___.\" (enak)","delicious","deliciously","delight","deliciousness","complete."),
 ]), quiz=mk([
- ("Antonim \"sweet\":","bitter","sour","spicy","salty","ant."),
- ("Antonim \"hot\" (suhu):","cold","warm","cool","mild","ant."),
+ ("Antonim \"sweet\":","bitter","sugary","juicy","tasty","ant."),
+ ("Antonim \"hot\" (suhu):","cold","warm","wet","mild","ant."),
  ("Antonim \"hungry\":","full","thirsty","tired","sleepy","ant."),
  ("Antonim \"fresh\":","stale","new","clean","cool","ant."),
  ("Sinonim \"tasty\":","delicious","bitter","plain","bad","syn."),

@@ -18,7 +18,7 @@ R4 = dict(practice=mk([
  ("Sinonim \"assist\":","help","block","delay","harm","syn."),
  ("Antonim \"polite\":","rude","kind","soft","calm","ant."),
  ("Sinonim \"kindly\":","please","angrily","slowly","quickly","syn."),
- ("Antonim \"offer\":","refuse","give","suggest","provide","ant."),
+ ("Antonim \"offer\":","withdraw","give","suggest","provide","ant."),
  ("Sinonim \"gladly\":","happily","sadly","rarely","hardly","syn."),
  ("Antonim \"borrow\":","lend","take","get","keep","ant."),
 ]))

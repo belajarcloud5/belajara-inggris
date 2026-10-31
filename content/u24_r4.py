@@ -13,7 +13,7 @@ R4 = dict(practice=mk([
  ("Lengkapi: \"I think we ___ recycle more.\"","should","did","were","had","complete."),
  ("Lengkapi: \"What's your ___ on this?\" (pandangan)","view","viewing","viewed","views","complete."),
 ]), quiz=mk([
- ("Sinonim \"agree\":","accept","refuse","deny","argue","syn."),
+ ("Sinonim \"agree\":","consent","refuse","deny","argue","syn."),
  ("Antonim \"agree\":","disagree","accept","approve","allow","ant."),
  ("Sinonim \"opinion\":","view","fact","rule","proof","syn."),
  ("Antonim \"fact\":","opinion","truth","reality","proof","ant."),

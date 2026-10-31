@@ -14,7 +14,7 @@ R4 = dict(practice=mk([
  ("Lengkapi: \"Thank you for ___ PT Maju.\" (menelepon)","calling","call","called","calls","complete."),
 ]), quiz=mk([
  ("Sinonim \"dial\":","call","answer","hang","drop","syn."),
- ("Antonim \"answer\" (telepon):","hang up","pick up","respond","reply","ant."),
+ ("Antonim \"pick up\" (telepon):","hang up","answer","respond","reply","ant."),
  ("Sinonim \"message\":","note","joke","gift","game","syn."),
  ("Antonim \"incoming\":","outgoing","coming","entering","arriving","ant."),
  ("Sinonim \"available\":","free","busy","absent","away","syn."),

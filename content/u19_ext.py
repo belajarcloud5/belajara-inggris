@@ -61,7 +61,7 @@ EXT = dict(
       ["smart", "slow", "silly", "sad"], 0,
       "clever = smart."),
   mcq("Kata yang tidak sama kelompoknya adalah...",
-      ["suddenly", "finally", "then", "greedy"], 0,
+      ["greedy", "suddenly", "finally", "then"], 0,
       "greedy = sifat."),
   listen("Dengarkan kata ini. Mana yang diucapkan?", "moral",
          ["moral", "mural", "mortal", "morale"], 0,

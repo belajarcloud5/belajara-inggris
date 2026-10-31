@@ -18,7 +18,7 @@ R4 = dict(practice=mk([
  ("Sinonim \"passage\":","text","word","letter","page","syn."),
  ("Sinonim \"purpose\":","aim","name","size","color","syn."),
  ("Antonim \"fiction\":","non-fiction","story","novel","tale","ant."),
- ("Antonim \"skip\":","read carefully","jump","pass","miss","ant."),
+ ("Antonim \"skim\":","read carefully","jump","pass","miss","ant."),
  ("Sinonim \"locate\":","find","lose","hide","forget","syn."),
  ("Sinonim \"detail\":","specific information","title","author","cover","syn."),
 ]))

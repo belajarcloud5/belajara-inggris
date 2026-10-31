@@ -61,7 +61,7 @@ EXT = dict(
       ["favorite activity", "homework", "job", "school"], 0,
       "hobby = favorite activity."),
   mcq("Kata yang tidak sama kelompoknya adalah...",
-      ["football", "badminton", "basketball", "reading"], 0,
+      ["reading", "football", "badminton", "basketball"], 0,
       "reading bukan olahraga bola/raket."),
   listen("Dengarkan kata ini. Mana yang diucapkan?", "cook",
          ["cook", "kick", "cake", "cool"], 0,

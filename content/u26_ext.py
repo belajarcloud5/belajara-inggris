@@ -61,7 +61,7 @@ EXT = dict(
       ["very big", "very small", "very old", "very fast"], 0,
       "huge."),
   mcq("Kata yang tidak sama kelompoknya adalah...",
-      ["narrative", "recount", "report", "yesterday"], 0,
+      ["yesterday", "narrative", "recount", "report"], 0,
       "yesterday = waktu."),
   listen("Dengarkan kata ini. Mana yang diucapkan?", "weak",
          ["weak", "week", "wick", "wake"], 0,
