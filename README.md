@@ -58,3 +58,7 @@ Tiap unit punya tab 📚 Bacaan: 2 teks pendek (cerita, dialog, pengumuman, emai
 
 ## Dikte
 Setiap unit punya 12 soal dikte (8 di latihan, 4 di kuis) di `content/uNN_dict.py`: pemain mendengar satu kalimat (tombol 🔊 dan 🐢 pelan), lalu mengetiknya. Huruf besar dan tanda baca tidak dinilai, bentuk singkat dan lengkap dianggap sama (I'm = I am), dan tanda hubung sama dengan spasi. Kalimat tidak memuat angka (ditulis dengan huruf). Bila browser tidak mendukung suara, kalimat ditampilkan untuk disalin. Total bank: 15280 soal, termasuk 732 dikte.
+
+## Susun kalimat dan percakapan
+- **Susun kalimat**: tiap unit mendapat 10 soal tambahan di `content/uNN_ord.py` (helper `qk.mko`). Sebagian soal punya kata pengecoh (kata yang tidak dipakai); `alts` memuat susunan alternatif yang juga benar.
+- **Percakapan (balas dengan mengetik)**: tiap unit punya 8 soal tipe `reply` di `content/uNN_rep.py` (helper `qk.mkr`). Pemain membaca atau mendengar dialog, lalu mengetik balasan sesuai maksud yang diminta. Balasan dianggap benar bila (1) hampir sama dengan salah satu jawaban contoh (salah ketik kecil dimaafkan, I'm = I am), atau (2) kalimat lengkap yang memuat satu kata kunci dari tiap kelompok `keys`. Balasan yang mengandung "not/never/no" ditolak kecuali maksudnya memang negatif. Jawaban contoh selalu ditampilkan setelah mengecek. Saat menulis soal baru, kata kunci harus spesifik topik (bukan kata umum seperti is/have), dan diuji dengan skrip silang (setiap jawaban contoh tidak boleh diterima soal lain).

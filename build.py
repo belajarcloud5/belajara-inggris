@@ -26,6 +26,8 @@ def qkey(q):
         return ("match", tuple(sorted(p[0] for p in q["pairs"])))
     if t == "dictate":
         return ("dictate", q["answer"].lower())
+    if t == "reply":
+        return ("reply", q["turns"][-1][1].lower(), q["id"].lower())
     return (t, q["q"], tuple(sorted(q["options"])))
 
 
@@ -39,6 +41,8 @@ def qid(q):
         raw = ["order", q["q"], q["answer"]]
     elif t == "dictate":
         raw = ["dictate", q["say"], q["answer"]]
+    elif t == "reply":
+        raw = ["reply", q["turns"], q["id"], sorted(q["answers"])]
     elif t == "match":
         raw = ["match", q["q"], sorted(map(list, q["pairs"]))]
     else:
@@ -156,7 +160,7 @@ def to_fill(q):
 def check_q(uid, kind, i, q):
     where = f"{uid}.{kind}[{i}]"
     t = q.get("type")
-    assert t in ("mcq", "listen", "fill", "order", "match", "dictate"), f"{where}: tipe tidak dikenal {t}"
+    assert t in ("mcq", "listen", "fill", "order", "match", "dictate", "reply"), f"{where}: tipe tidak dikenal {t}"
     assert q.get("exp"), f"{where}: penjelasan (exp) kosong"
     if t in ("mcq", "listen"):
         assert len(q["options"]) >= 3 and 0 <= q["answer"] < len(q["options"]), f"{where}: opsi/answer salah"
@@ -167,6 +171,10 @@ def check_q(uid, kind, i, q):
         assert "___" in q["q"] and q["answers"], f"{where}: fill butuh ___ dan answers"
     elif t == "order":
         assert len(q["answer"].split()) >= 3, f"{where}: kalimat terlalu pendek"
+    elif t == "reply":
+        assert q.get("turns") and q["turns"][-1][0] != "You" and q.get("id") and q.get("scene"), f"{where}: reply butuh scene, turns (terakhir lawan bicara), id"
+        assert len(q["answers"]) >= 3 or q.get("keys"), f"{where}: reply butuh >=3 jawaban contoh atau kata kunci"
+        assert all(len(a.split()) >= 2 for a in q["answers"]), f"{where}: jawaban contoh min. 2 kata"
     elif t == "dictate":
         assert q.get("say") and len(q["answer"].split()) >= 3, f"{where}: dikte butuh 'say' dan kalimat min. 3 kata"
         assert not any(ch.isdigit() for ch in q["answer"]), f"{where}: dikte tanpa angka (tulis dengan huruf)"
@@ -187,7 +195,7 @@ def main():
         if entry["ready"]:
             d = load(p).UNIT
             assert d["id"] == u["id"], f"{p}: id tidak cocok"
-            for suffix, var in (("extra", "EXTRA"), ("more", "MORE"), ("plus", "PLUS"), ("ext", "EXT"), ("quiz", "QUIZ"), ("bank", "BANK"), ("q2", "Q2"), ("p2", "P2"), ("r3", "R3"), ("r4", "R4"), ("f5", "F5"), ("dict", "D")):  # bank soal tambahan
+            for suffix, var in (("extra", "EXTRA"), ("more", "MORE"), ("plus", "PLUS"), ("ext", "EXT"), ("quiz", "QUIZ"), ("bank", "BANK"), ("q2", "Q2"), ("p2", "P2"), ("r3", "R3"), ("r4", "R4"), ("f5", "F5"), ("dict", "D"), ("ord", "ORD"), ("rep", "REP")):  # bank soal tambahan
                 xp = os.path.join(ROOT, "content", f"{u['id']}_{suffix}.py")
                 if os.path.isfile(xp):
                     x = getattr(load(xp), var)

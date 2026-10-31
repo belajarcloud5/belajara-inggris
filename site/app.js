@@ -41,7 +41,7 @@ function currentVoice() {
   return vs.slice().sort((a, b) => scoreVoice(b) - scoreVoice(a))[0];   // utamakan suara perempuan bila ada
 }
 // jenis kelamin pembicara dialog -> suara perempuan / laki-laki
-const GENDER = { dina: 'f', rani: 'f', mother: 'f', budi: 'm', tom: 'm', 'mr. adi': 'm', 'ms. sari': 'f' };
+const GENDER = { dina: 'f', rani: 'f', mother: 'f', budi: 'm', tom: 'm', 'mr. adi': 'm', 'ms. sari': 'f', ani: 'f', siti: 'f', maya: 'f', rina: 'f', lisa: 'f', anna: 'f', sarah: 'f', dewi: 'f', tika: 'f', salma: 'f', laura: 'f', 'mrs. hartono': 'f', 'ms. lestari': 'f', arif: 'm', kevin: 'm', rizal: 'm', anton: 'm', andi: 'm', doni: 'm', dika: 'm', ryan: 'm', ben: 'm', sam: 'm', father: 'm', 'mr. hadi': 'm', 'dr. wijaya': 'm' };
 const genderOf = name => GENDER[String(name).toLowerCase()] || '';
 function maleVoice() {
   const vs = enVoices().filter(v => MALE.test(v.name) && !FEMALE.test(v.name));
@@ -422,6 +422,7 @@ function correctText(q) {
     case 'fill': return q.answers[0];
     case 'order': return q.answer;
     case 'dictate': return q.answer;
+    case 'reply': return q.answers.slice(0, 3).join('  /  ');
     case 'match': return q.pairs.map(([a, b]) => `${a} = ${b}`).join(' · ');
   }
   return '';
@@ -434,6 +435,7 @@ function renderQ(q, box, done) {
   if (q.type === 'order') return qOrder(q, box, finish);
   if (q.type === 'match') return qMatch(q, box, finish);
   if (q.type === 'dictate') return qDictate(q, box, finish);
+  if (q.type === 'reply') return qReply(q, box, finish);
 }
 
 function qMcq(q, box, finish) {
@@ -458,6 +460,45 @@ function qFill(q, box, finish) {
   const check = () => {
     const v = inp.value; if (!norm(v)) { inp.focus(); return; }
     const ok = q.answers.some(a => norm(a) === norm(v));
+    inp.disabled = true; btn.disabled = true; inp.classList.add(ok ? 'ok' : 'bad');
+    finish(ok, v);
+  };
+  btn.addEventListener('click', check);
+  inp.addEventListener('keydown', e => { if (e.key === 'Enter') check(); });
+}
+
+// jarak edit antar kata, untuk memaafkan salah ketik kecil
+function lev(a, b) {
+  const m = a.length, n = b.length; let prev = Array.from({ length: n + 1 }, (_, j) => j);
+  for (let i = 1; i <= m; i++) { const cur = [i]; for (let j = 1; j <= n; j++) cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)); prev = cur; }
+  return prev[n];
+}
+// balasan benar bila (1) hampir sama dengan salah satu jawaban contoh, atau (2) kalimat lengkap yang memuat kata kunci tiap kelompok
+function gradeReply(v, q) {
+  const e = expand(v);
+  if (q.answers.some(a => { const x = expand(a); return e === x || lev(e, x) <= Math.max(1, Math.floor(x.length * 0.08)); })) return true;
+  if (!q.keys) return false;
+  const padded = ' ' + e + ' ';
+  const wantsNeg = q.keys.some(g => g.some(w => /^(not|cannot|never|no)$/.test(w)));
+  if (!wantsNeg && /\b(not|never|no|cannot)\b/.test(e)) return false;   // "I am not fine" bukan balasan untuk 'baik-baik saja'
+  return e.split(' ').length >= (q.min || 3) && q.keys.every(g => g.some(w => padded.includes(' ' + w + ' ')));
+}
+function qReply(q, box, finish) {
+  const bub = ([who, text], i) => {
+    const mine = who === 'You';
+    return `<div class="bubble ${mine ? 'r' : ''}"><div class="avatar">${esc(who[0])}</div><div class="msg" data-say="${esc(text)}" data-g="${genderOf(who)}"><div class="who">${esc(who)}</div><div class="e">${esc(text)}</div></div></div>`;
+  };
+  box.innerHTML = `<div class="qtext">💬 ${esc(q.scene)}</div><div class="dialog-q">${q.turns.map(bub).join('')}</div>
+    <div class="hint">Balas dengan bahasa Inggris: <b>${esc(q.id)}</b></div>
+    <div class="row"><input class="blank reply" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Balasanmu" placeholder="Ketik balasanmu…"><button class="btn" id="chk">Cek</button></div>
+    <div class="hint">Tulis kalimat lengkap. Banyak balasan bisa benar; contoh jawaban muncul setelah kamu mengecek.</div>`;
+  const inp = $('input', box), btn = $('#chk', box);
+  const last = q.turns[q.turns.length - 1];
+  if (hasTTS) setTimeout(() => speak(last[1], genderOf(last[0])), 250);
+  inp.focus();
+  const check = () => {
+    const v = inp.value; if (!norm(v)) { inp.focus(); return; }
+    const ok = gradeReply(v, q);
     inp.disabled = true; btn.disabled = true; inp.classList.add(ok ? 'ok' : 'bad');
     finish(ok, v);
   };
@@ -507,7 +548,7 @@ function qOrder(q, box, finish) {
   clr.addEventListener('click', () => { if (locked) return; ans = []; bank.forEach(b => b.used = false); draw(); });
   chk.addEventListener('click', () => {
     locked = true; const text = ans.map(x => x.w).join(' ');
-    const ok = norm(text) === norm(q.answer);
+    const ok = [q.answer].concat(q.alts || []).some(x => norm(text) === norm(x));
     aEl.style.borderColor = ok ? 'var(--ok)' : 'var(--bad)'; draw(); clr.disabled = true; finish(ok, text);
   });
   draw();
