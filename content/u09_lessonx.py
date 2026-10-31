@@ -1,0 +1,15 @@
+LESSONX = [
+ dict(t="grammar", title="6. on, in, at untuk letak, jalan, dan kendaraan",
+  text="Saat menjelaskan letak dan perjalanan, pilihan on, in, at ikut aturan berikut:",
+  table=[["Ungkapan", "Preposisi", "Contoh"],
+         ["kiri, kanan, jalan", "**on** the left / on the right / on Jalan Merdeka", "[[The bank is on the left.]]"],
+         ["titik tertentu", "**at** the corner / at the traffic light / at the bus stop", "[[Turn right at the traffic light.]]"],
+         ["tengah, dalam kota", "**in** the middle / in the city / in the park", "[[The market is in the middle of the town.]]"],
+         ["mobil, taksi (ruang kecil)", "**in** a car / in a taxi", "[[She is in a taxi.]]"],
+         ["bus, kereta, pesawat, sepeda", "**on** a bus / on a train / on a plane / on a bike", "[[He is on the bus.]]"],
+         ["cara bepergian", "**by** bus / by car / **on foot**", "[[I go to school by bus.]] / [[We go on foot.]]"]],
+  examples=[dict(en="[[Turn left at the corner. The post office is on your right.]]", id="Belok kiri di tikungan. Kantor pos ada di sebelah kananmu."),
+            dict(en="[[I go to school by bike, but my sister goes on foot.]]", id="Aku ke sekolah naik sepeda, tetapi kakakku berjalan kaki.")]),
+ dict(t="warn", title="by bus atau on the bus?",
+  text="**by bus / by car / by train** dipakai untuk cara bepergian, tanpa a atau the: [[I go by bus.]] Untuk posisi kita memakai **on the bus** atau **in the car**: [[I am on the bus.]] Dan katakan **on foot**, bukan ~~by foot~~."),
+]

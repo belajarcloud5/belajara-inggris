@@ -72,3 +72,7 @@ Cerita fokus tenses **ke-3** ada di `content/uNN_read4.py` (`READ4`, bacaan ke-5
 
 ## Suara
 Tombol 🔊 pada bacaan berdialog membacakan tiap pembicara dengan suara sesuai namanya: nama perempuan (Dina, Rani, Ana, Mother, Mom, dan lainnya) memakai suara perempuan, nama laki-laki (Tom, Budi, Mr. Adi, Dad, dan lainnya) memakai suara laki-laki. Daftar nama ada di `GENDER` di `site/app.js`; peran tanpa jenis kelamin (Customer, Receptionist, dan sejenisnya, daftar `ROLES`) diberi suara berlawanan dengan lawan bicaranya. Narasi orang pertama ("My name is Arif") mengikuti nama. Bila perangkat hanya punya satu jenis suara, nada dinaikkan atau diturunkan. Nama tokoh baru harus ditambahkan ke `GENDER`.
+
+## Preposisi on, in, at
+- **Materi**: `at, on, in` untuk waktu ada di unit 3, diulang di unit 46 dan 53. Ditambah tiga blok lewat `content/uNN_lessonx.py` (disisipkan `build.py` setelah blok grammar terakhir): unit 4 (bagian hari dan pengecualian: in the morning, at night, on Sunday morning, tanpa preposisi setelah every/next/last), unit 5 (at, in, on untuk tempat: at school, in the classroom, on the second floor), dan unit 9 (letak, jalan, dan kendaraan: on the left, at the corner, on foot, by bus vs on the bus).
+- **Cerita ke-4** (`content/uNN_read5.py`, `READ5`, bacaan ke-6 per unit): percakapan dengan fokus preposisi sesuai topik unit (on, in, at, from, to, by, for, since, until, into, dan preposisi tetap seperti good at, interested in, responsible for). Total bacaan 366 dengan 2.196 pertanyaan.

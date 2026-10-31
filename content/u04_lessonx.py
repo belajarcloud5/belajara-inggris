@@ -1,0 +1,16 @@
+LESSONX = [
+ dict(t="grammar", title="7. at, on, in untuk bagian hari dan pengecualian",
+  text="Kamu sudah tahu at (jam), on (hari), dan in (bulan, tahun). Untuk **bagian hari** ada aturan khusus yang harus dihafal:",
+  table=[["Ungkapan", "Preposisi", "Contoh"],
+         ["**in** the morning / afternoon / evening", "in", "[[I study in the evening.]]"],
+         ["**at** night", "at (pengecualian!)", "[[I sleep at night.]]"],
+         ["**at** noon / at midnight", "at", "[[We have lunch at noon.]]"],
+         ["**on** Monday morning / on Friday night", "on (hari + bagian hari)", "[[I jog on Sunday morning.]]"],
+         ["**on** weekdays / **on** weekends", "on", "[[I go to school on weekdays.]]"],
+         ["every / next / last / this / tomorrow / yesterday", "tanpa preposisi", "[[I play football every Sunday.]]"]],
+  examples=[dict(en="[[She studies in the afternoon and sleeps at night.]]", id="Dia belajar di sore hari dan tidur pada malam hari."),
+            dict(en="[[We visit my grandmother on Sunday morning.]]", id="Kami mengunjungi nenekku pada Minggu pagi."),
+            dict(en="[[I wake up early every day.]]", id="Aku bangun pagi setiap hari. (tanpa preposisi)")]),
+ dict(t="warn", title="Salah yang sering terjadi",
+  text="Katakan **at night**, bukan ~~in the night~~. Katakan **in the morning**, bukan ~~at the morning~~. Setelah **every, next, last, this, tomorrow, yesterday** jangan tambah on/in/at: **next Monday**, bukan ~~on next Monday~~."),
+]

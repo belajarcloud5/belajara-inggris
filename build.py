@@ -195,6 +195,10 @@ def main():
         if entry["ready"]:
             d = load(p).UNIT
             assert d["id"] == u["id"], f"{p}: id tidak cocok"
+            lxp = os.path.join(ROOT, "content", f"{u['id']}_lessonx.py")
+            if os.path.isfile(lxp):  # blok materi tambahan, disisipkan setelah blok grammar terakhir
+                gi = max(i for i, b in enumerate(d["lesson"]) if b.get("t") == "grammar")
+                d["lesson"][gi + 1:gi + 1] = load(lxp).LESSONX
             for suffix, var in (("extra", "EXTRA"), ("more", "MORE"), ("plus", "PLUS"), ("ext", "EXT"), ("quiz", "QUIZ"), ("bank", "BANK"), ("q2", "Q2"), ("p2", "P2"), ("r3", "R3"), ("r4", "R4"), ("f5", "F5"), ("dict", "D"), ("ord", "ORD"), ("rep", "REP")):  # bank soal tambahan
                 xp = os.path.join(ROOT, "content", f"{u['id']}_{suffix}.py")
                 if os.path.isfile(xp):
@@ -215,6 +219,9 @@ def main():
             rp4 = os.path.join(ROOT, "content", f"{u['id']}_read4.py")
             if os.path.isfile(rp4):  # cerita fokus tenses ke-3 (percakapan antar tokoh)
                 d["read"] = d["read"] + load(rp4).READ4
+            rp5 = os.path.join(ROOT, "content", f"{u['id']}_read5.py")
+            if os.path.isfile(rp5):  # cerita ke-4: fokus preposisi on, in, at
+                d["read"] = d["read"] + load(rp5).READ5
             for pi, ps in enumerate(d["read"]):
                 assert ps.get("title") and ps.get("text") and ps.get("id"), f"{u['id']}.read[{pi}]: judul/teks/terjemahan kosong"
                 assert 3 <= len(ps["qs"]) <= 8, f"{u['id']}.read[{pi}]: butuh 3 sampai 8 pertanyaan"
