@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"Rain ___ when clouds become heavy.\"","falls","fall","fell","falling","falls."),
+ ("\"Water vapor ___ into clouds.\"","condenses","condense","condensed","condensing","condenses."),
+ ("\"Earthquakes are ___ by moving plates.\"","caused","cause","causing","causes","passive."),
+ ("\"The heat makes the water ___.\"","evaporate","evaporates","evaporated","evaporating","make + V1."),
+ ("\"This leads ___ flooding.\"","to","at","in","on","lead to."),
+ ("\"As a consequence\" =","akibatnya","sebelumnya","misalnya","pertama","consequence."),
+ ("\"Subsequently\" =","selanjutnya","sebelumnya","misalnya","tetapi","subsequently."),
+ ("\"Eventually\" =","akhirnya","segera","jarang","dulu","eventually."),
+ ("\"Result in\" =","mengakibatkan","berasal dari","menolak","membeli","result in."),
+ ("\"Result from\" =","diakibatkan oleh","mengakibatkan","menolak","menjual","result from."),
+ ("\"Lava\" =","lahar/lava","abu","batu","air","lava."),
+ ("\"Magma\" =","magma","lahar di luar","air tanah","pasir","magma."),
+ ("\"Crust\" =","kerak bumi","inti bumi","udara","laut","crust."),
+ ("\"Tide\" =","pasang surut","ombak besar","angin","arus sungai","tide."),
+]), quiz=mk([
+ ("\"Hurricane\" =","angin topan","gempa","longsor","kabut","hurricane."),
+ ("\"Drought\" =","kekeringan","banjir","badai","salju","drought."),
+ ("\"Avalanche\" =","longsoran salju","gempa","banjir","petir","avalanche."),
+ ("\"Atmosphere\" =","atmosfer","laut","hutan","gua","atmosphere."),
+ ("\"Gravity\" =","gravitasi","magnet","listrik","panas","gravity."),
+ ("\"Oxygen\" =","oksigen","karbon","hidrogen","nitrogen","oxygen."),
+ ("\"Solar system\" =","tata surya","sistem listrik","sistem sekolah","sistem air","solar."),
+ ("\"Orbit\" =","mengorbit","menguap","membeku","meletus","orbit."),
+]))

@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"Neither the teacher nor the students ___ present.\"","were","was","is","be","nearest subject."),
+ ("\"The number of students ___ increasing.\"","is","are","were","be","the number of."),
+ ("\"A number of students ___ absent.\"","are","is","was","be","a number of."),
+ ("\"He as well as his friends ___ coming.\"","is","are","were","be","as well as."),
+ ("\"Mathematics ___ my favorite subject.\"","is","are","were","be","singular."),
+ ("\"The police ___ investigating.\"","are","is","was","be","plural."),
+ ("\"She's ___ honest girl.\"","an","a","the","some","an honest."),
+ ("\"I saw ___ elephant at the zoo.\"","an","a","the","some","an elephant."),
+ ("\"___ moon goes around the earth.\"","The","A","An","Some","unique."),
+ ("\"I have ___ idea.\" (tidak ada)","no","not","none","any no","no idea."),
+ ("\"It's ___ useful tool.\"","a","an","the","some","useful /ju/."),
+ ("\"I'd like ___ advice.\"","some","an","a","many","uncountable."),
+ ("\"Between you and ___\"","me","I","my","mine","after preposition."),
+ ("\"Each of the boys ___ a bag.\"","has","have","are","were","each."),
+]), quiz=mk([
+ ("\"Context clue\" =","petunjuk konteks","petunjuk jalan","peta","kamus","context."),
+ ("\"Prefix\" =","awalan","akhiran","kata dasar","tanda baca","prefix."),
+ ("\"Suffix\" =","akhiran","awalan","kata dasar","tanda baca","suffix."),
+ ("\"Un-\" pada \"unhappy\" =","tidak","sangat","lagi","sebelum","un-."),
+ ("\"Re-\" pada \"rewrite\" =","lagi","tidak","sebelum","sangat","re-."),
+ ("\"-less\" pada \"careless\" =","tanpa","penuh","lagi","sangat","less."),
+ ("\"-ful\" pada \"helpful\" =","penuh","tanpa","lagi","tidak","ful."),
+ ("\"Proofread\" =","membaca ulang untuk koreksi","menulis","menghapus","menyalin","proofread."),
+]))

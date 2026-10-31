@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"I'd like to start ___ a short video.\"","with","by to","on","for","start with."),
+ ("\"Let me walk you ___ the results.\"","through","in","at","by","walk through."),
+ ("\"This slide gives an overview ___ our plan.\"","of","at","for","to","overview of."),
+ ("\"Feel free to interrupt me ___ any time.\"","at","on","in","by","at any time."),
+ ("\"I'll take questions ___ the end.\"","at","on","in","by","at the end."),
+ ("\"Let's look at the figures in more detail.\" =","Mari lihat angka lebih rinci.","Mari hapus angka.","Mari lupakan angka.","Mari hitung ulang saja.","detail."),
+ ("\"The key point here is ...\" =","Poin pentingnya di sini adalah ...","Kunci pintu di sini","Titik di sini","Poin terakhir","key."),
+ ("\"To put it another way\" =","dengan kata lain","pada akhirnya","sebagai contoh","pertama","another way."),
+ ("\"In other words\" =","dengan kata lain","akibatnya","misalnya","tetapi","in other words."),
+ ("\"Let me give you an example.\" =","Izinkan saya beri contoh.","Izinkan saya pergi.","Saya hapus contoh.","Saya lupa.","example."),
+ ("\"As I mentioned earlier\" =","seperti yang saya sebutkan tadi","seperti yang Anda duga","setelah ini","sebelum Anda","mentioned."),
+ ("\"That covers ...\" =","Itu mencakup ...","Itu menutupi ...","Itu menolak ...","Itu hilang ...","covers."),
+ ("\"I'd like to hand over to ...\" =","Saya serahkan kepada ...","Saya ambil dari ...","Saya tolak ...","Saya lupa ...","hand over."),
+ ("\"Does that make sense?\" =","Apakah itu masuk akal?","Apakah itu rasa?","Apakah itu perasaan?","Apakah itu uang?","sense."),
+]), quiz=mk([
+ ("\"Speaker\" =","pembicara","pendengar","tamu","penonton","speaker."),
+ ("\"Podium\" =","podium","kursi","meja","tangga","podium."),
+ ("\"Microphone\" =","mikrofon","kamera","speaker","layar","microphone."),
+ ("\"Projector\" =","proyektor","kamera","speaker","layar","projector."),
+ ("\"Screen\" =","layar","kabel","kursi","meja","screen."),
+ ("\"Laser pointer\" =","penunjuk laser","senter","lampu","pulpen","laser."),
+ ("\"Keynote\" =","pidato utama","catatan kecil","nada kunci","kunci","keynote."),
+ ("\"Demonstration\" =","demonstrasi/peragaan","penolakan","hadiah","jadwal","demo."),
+]))

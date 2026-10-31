@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"English ___ in many countries.\" (speak)","is spoken","speaks","spoke","speaking","passive."),
+ ("\"The house ___ painted next week.\"","will be","is","was","has","future passive."),
+ ("\"The thieves ___ by the police yesterday.\" (arrest)","were arrested","arrested","are arrest","was arrest","plural."),
+ ("\"This phone ___ made in Japan.\"","was","were","are","be","singular past."),
+ ("\"All the tickets ___ sold.\"","have been","has been","is been","was been","have been."),
+ ("\"The bridge is being ___.\" (build)","built","build","building","builds","being + V3."),
+ ("\"She asked, 'Are you ready?'\" →","She asked if I was ready.","She asked are you ready.","She asked if am I ready.","She said I ready.","reported."),
+ ("\"He said, 'I will help.'\" →","He said he would help.","He said he will help.","He said I would help.","He says he helped.","will → would."),
+ ("\"'Don't be late,' said Mom.\" →","Mom told me not to be late.","Mom told me don't late.","Mom said me not late.","Mom asked not late.","imperative."),
+ ("\"'Where is the station?' he asked.\" →","He asked where the station was.","He asked where was the station.","He asked where the station is.","He said where the station.","wh-question."),
+ ("\"Agent\" dalam pasif =","pelaku","objek","waktu","tempat","agent."),
+ ("\"by + agent\" boleh dihilangkan bila...","pelaku tidak penting","selalu","tak pernah","pelaku anak-anak","by."),
+ ("\"Direct speech\" =","kalimat langsung","kalimat tak langsung","kalimat tanya","kalimat seru","direct."),
+ ("\"Indirect speech\" =","kalimat tak langsung","kalimat langsung","kalimat perintah","kalimat pasif","indirect."),
+]), quiz=mk([
+ ("\"Be + V3\" adalah rumus...","pasif","aktif","kondisional","perintah","passive."),
+ ("\"Suggest\" =","menyarankan","melarang","menolak","menutup","suggest."),
+ ("\"Advise\" =","menasihati","menolak","memarahi","menutup","advise."),
+ ("\"Warn\" =","memperingatkan","memuji","menjual","membuka","warn."),
+ ("\"Promise\" =","berjanji","bertanya","menolak","menjual","promise."),
+ ("\"Admit\" =","mengakui","menyangkal","menolak","menjual","admit."),
+ ("\"Deny\" =","menyangkal","mengakui","menerima","menjual","deny."),
+ ("\"Complain\" =","mengeluh","memuji","menjual","membuka","complain."),
+]))

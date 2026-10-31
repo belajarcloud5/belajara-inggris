@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"If you mix red and blue, you ___ purple.\"","get","would get","got","will have got","Type 0."),
+ ("\"If I ___ more time, I would read more.\"","had","have","will have","would have","Type 2."),
+ ("\"If he hadn't been late, he ___ the bus.\"","would have caught","would catch","will catch","caught","Type 3."),
+ ("\"What would you do if you ___ a million?\"","won","win","will win","had won","Type 2."),
+ ("\"I will call you if I ___ time.\"","have","had","will have","would have","Type 1."),
+ ("\"If she ___ here, she would help.\"","were","is","be","been","Type 2."),
+ ("\"Unless it ___, we will go out.\"","rains","doesn't rain","will rain","rained","unless + positive."),
+ ("\"I wish I ___ speak French.\"","could","can","will","would be","wish + could."),
+ ("\"If only I had studied!\" menyatakan...","penyesalan","rencana","perintah","fakta","if only."),
+ ("\"Supposing\" =","seandainya","tentu","walaupun","karena","supposing."),
+ ("\"Otherwise\" dalam: \"Hurry; otherwise you'll be late.\" =","jika tidak","oleh karena itu","misalnya","pertama","otherwise."),
+ ("\"Had she studied, she would have passed.\" =","If she had studied, she would have passed.","If she studies, she passes.","If she studied, she passed.","She had studied.","inversion."),
+ ("\"Were I you, I'd go.\" =","If I were you, I'd go.","If I am you, I go.","Where I was you.","When I you go.","inversion."),
+ ("\"Even if\" =","bahkan jika","karena","sehingga","setelah","even if."),
+]), quiz=mk([
+ ("\"Condition\" =","syarat/kondisi","hasil","hadiah","tempat","condition."),
+ ("\"Result\" =","hasil","syarat","tempat","waktu","result."),
+ ("\"Probable\" =","mungkin terjadi","mustahil","pasti tidak","tidak tahu","probable."),
+ ("\"Hypothetical\" =","hipotetis/pengandaian","nyata","pasti","lama","hypothetical."),
+ ("\"Regret\" =","penyesalan","rencana","harapan","kemenangan","regret."),
+ ("\"Imaginary\" =","khayalan","nyata","penting","mahal","imaginary."),
+ ("\"Fortunately\" =","untungnya","sayangnya","jarang","selalu","fortunately."),
+ ("\"Unfortunately\" =","sayangnya","untungnya","selalu","jarang","unfortunately."),
+]))

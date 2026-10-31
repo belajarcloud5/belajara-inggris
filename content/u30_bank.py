@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"___ your hands before cooking.\"","Wash","Washes","Washing","Washed","imperative."),
+ ("\"___ the lid carefully.\"","Open","Opens","Opening","Opened","imperative."),
+ ("\"___ run in the hall.\"","Don't","Doesn't","Not","Aren't","Don't + V1."),
+ ("\"Cut the apple ___ small pieces.\"","into","on","at","by","into."),
+ ("\"Put the bread ___ the plate.\"","on","in front","at","for","on."),
+ ("\"Wait ___ the water is hot.\"","until","because","but","or","until."),
+ ("\"Mix the sugar ___ the eggs.\"","with","by","for","of","mix with."),
+ ("\"Be careful ___ the knife.\"","with","at","in","to","careful with."),
+ ("Langkah pertama biasanya diawali kata:","First","Finally","Lastly","In conclusion","First."),
+ ("Judul prosedur yang tepat:","How to Make Fried Rice","My Fried Rice Story","Fried Rice is Delicious","Once Upon a Fried Rice","procedure title."),
+ ("\"Steps\" artinya...","langkah-langkah","bahan","hasil","tempat","steps."),
+ ("\"Materials\" artinya...","bahan","langkah","kesimpulan","juru masak","materials."),
+ ("\"Then\" artinya...","kemudian","sebelum","tetapi","atau","then."),
+ ("\"Before\" artinya...","sebelum","sesudah","selama","sampai","before."),
+]), quiz=mk([
+ ("\"Slice\" =","mengiris","mengaduk","mencuci","menuang","slice."),
+ ("\"Chop\" =","mencincang","menyajikan","memanggang","mendidihkan","chop."),
+ ("\"Bake\" =","memanggang","merebus","menggoreng","membeku","bake."),
+ ("\"Pour\" =","menuang","mengaduk","mengupas","memotong","pour."),
+ ("\"Spoon\" =","sendok","pisau","garpu","piring","spoon."),
+ ("\"Knife\" =","pisau","sendok","gelas","panci","knife."),
+ ("\"Pan\" =","wajan","gelas","sendok","mangkuk","pan."),
+ ("\"Bowl\" =","mangkuk","piring","pisau","kompor","bowl."),
+]))

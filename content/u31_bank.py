@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"The queen ___ a crown.\"","wore","wear","worn","wears","wore."),
+ ("\"The boy ___ the river and ran home.\" (cross)","crossed","cross","crosses","crossing","past."),
+ ("\"The king was angry ___ the thief.\"","with","for","at to","of","angry with."),
+ ("\"She was crying when her mother ___.\"","came","comes","was come","coming","came."),
+ ("\"While they ___ walking, they heard a noise.\"","were","was","are","is","were."),
+ ("\"The old man ___ a magic stick.\" (have)","had","has","have","having","had."),
+ ("Tokoh utama disebut...","protagonist","antagonist","narrator","audience","protagonist."),
+ ("Tokoh jahat disebut...","antagonist","protagonist","hero","reader","antagonist."),
+ ("\"Plot\" artinya...","alur","tokoh","latar","judul","plot."),
+ ("\"Character\" artinya...","tokoh","alur","latar","judul","character."),
+ ("\"Moral\" artinya...","pesan moral","alur","tokoh","latar","moral."),
+ ("\"Magician\" artinya...","pesulap","petani","prajurit","raja","magician."),
+ ("\"The end of the story\" artinya...","akhir cerita","awal cerita","tokoh cerita","judul cerita","end."),
+ ("Kata penutup dongeng:","They lived happily ever after.","Mix well.","Dear Sir.","Press the button.","ending."),
+]), quiz=mk([
+ ("\"Dragon\" =","naga","singa","serigala","harimau","dragon."),
+ ("\"Fairy\" =","peri","penyihir","raksasa","kurcaci","fairy."),
+ ("\"Sword\" =","pedang","tongkat","panah","perisai","sword."),
+ ("\"Poor\" =","miskin","kaya","pintar","kuat","poor."),
+ ("\"Rich\" =","kaya","miskin","malas","lemah","rich."),
+ ("\"Cruel\" =","kejam","baik","lucu","pemalu","cruel."),
+ ("\"Brave\" lawannya:","coward","hero","strong","kind","brave."),
+ ("\"Forest\" =","hutan","gurun","laut","kota","forest."),
+]))

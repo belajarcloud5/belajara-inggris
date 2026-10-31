@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"We've run ___ a problem.\"","into","at","by","over to","run into."),
+ ("\"We're trying to figure ___ the cause.\"","out","up","off","in","figure out."),
+ ("\"We need to sort ___ this issue.\"","out","in","at","on","sort out."),
+ ("\"The system has gone ___.\" (mati)","down","up","over","into","go down."),
+ ("\"It's back ___ now.\" (berfungsi)","up and running","going away","off","out","up and running."),
+ ("\"We've hit a roadblock.\" =","Kami menemui hambatan.","Kami sampai di jalan.","Kami menang.","Kami libur.","roadblock."),
+ ("\"We're making good progress.\" =","Kemajuan kami baik.","Kami mundur.","Kami berhenti.","Kami libur.","progress."),
+ ("\"We're slightly behind schedule.\" =","Kami sedikit terlambat dari jadwal.","Kami lebih cepat.","Kami tepat waktu.","Kami batal.","behind."),
+ ("\"We expect to finish by Friday.\" =","Kami perkirakan selesai Jumat.","Kami baru mulai Jumat.","Kami batal Jumat.","Kami libur Jumat.","expect."),
+ ("\"Could you keep me in the loop?\" =","Bisakah Anda terus mengabari saya?","Bisakah Anda membuat lingkaran?","Bisakah Anda diam?","Bisakah Anda pergi?","loop."),
+ ("\"Temporary fix\" =","perbaikan sementara","perbaikan permanen","perbaikan mahal","perbaikan gagal","temporary."),
+ ("\"Permanent solution\" =","solusi permanen","solusi sementara","solusi murah","solusi gagal","permanent."),
+ ("\"Impact\" =","dampak","penyebab","solusi","jadwal","impact."),
+ ("\"Risk\" =","risiko","hadiah","jadwal","biaya","risk."),
+]), quiz=mk([
+ ("\"Bug\" (software) =","kesalahan program","serangga saja","fitur","kabel","bug."),
+ ("\"Crash\" =","mogok/tabrakan","menyala","menyimpan","mengunduh","crash."),
+ ("\"Restart\" =","memulai ulang","mematikan selamanya","menghapus","membeli","restart."),
+ ("\"Backup\" =","cadangan","hapusan","unduhan","kiriman","backup."),
+ ("\"Outage\" =","gangguan layanan","pemasangan","pembaruan","pembayaran","outage."),
+ ("\"Patch\" =","tambalan/pembaruan perbaikan","tas","kain","kabel","patch."),
+ ("\"Deploy\" =","meluncurkan/menerapkan","menghapus","menunda","menolak","deploy."),
+ ("\"Rollback\" =","mengembalikan ke versi sebelumnya","maju","menghapus","menunda","rollback."),
+]))

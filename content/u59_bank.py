@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"I'd like to get your feedback ___ my work.\"","on","at","for","to","feedback on."),
+ ("\"You've made great progress ___ the past year.\"","over","at","by","to","over."),
+ ("\"I'm aiming ___ a leadership role.\"","for","at to","on","of","aim for."),
+ ("\"You might want to work ___ your time management.\"","on","at","in","to","work on."),
+ ("\"I'd appreciate your guidance.\" =","Saya menghargai bimbingan Anda.","Saya menolak bimbingan.","Saya lupa bimbingan.","Saya jual bimbingan.","guidance."),
+ ("\"Constructive feedback\" =","masukan membangun","masukan merusak","masukan lucu","masukan palsu","constructive."),
+ ("\"You exceeded expectations.\" =","Anda melampaui harapan.","Anda mengecewakan.","Anda terlambat.","Anda pergi.","exceeded."),
+ ("\"Falls short of\" =","kurang dari","melebihi","sama dengan","jauh di atas","short."),
+ ("\"Strengths and weaknesses\" =","kekuatan dan kelemahan","hadiah dan hukuman","jam dan hari","uang dan waktu","S&W."),
+ ("\"Set a goal\" =","menetapkan tujuan","menolak tujuan","melupakan","menjual","set."),
+ ("\"Career development\" =","pengembangan karier","penurunan karier","pemecatan","cuti","development."),
+ ("\"Mentoring\" =","pembimbingan","penghukuman","pemecatan","pembayaran","mentoring."),
+ ("\"Upskilling\" =","meningkatkan keterampilan","menurunkan gaji","mengurangi tugas","menunda","upskilling."),
+ ("\"Step up\" =","mengambil tanggung jawab lebih","naik tangga","mundur","berhenti","step up."),
+]), quiz=mk([
+ ("\"Ambition\" =","ambisi","ketakutan","kemalasan","kemarahan","ambition."),
+ ("\"Potential\" =","potensi","masalah","utang","hadiah","potential."),
+ ("\"Growth\" =","pertumbuhan","penurunan","kegagalan","pembayaran","growth."),
+ ("\"Achievement\" =","pencapaian","kegagalan","hukuman","tugas","achievement."),
+ ("\"Recognition\" =","pengakuan","penolakan","hukuman","pajak","recognition."),
+ ("\"Motivation\" =","motivasi","kemarahan","hukuman","tugas","motivation."),
+ ("\"Appraisal\" =","penilaian","pembayaran","hukuman","tugas","appraisal."),
+ ("\"Workshop\" =","lokakarya","bengkel kerja saja","rapat","ujian","workshop."),
+]))

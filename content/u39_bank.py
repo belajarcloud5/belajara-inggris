@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"A bus ___ into a river on Monday.\"","fell","falls","fallen","was fall","fell."),
+ ("\"Passengers were ___ to safety.\"","rescued","rescue","rescuing","rescues","passive."),
+ ("\"The mayor ___ the new park yesterday.\"","opened","open","opens","opening","past."),
+ ("\"Hundreds of people ___ evacuated.\"","were","was","is","be","plural."),
+ ("\"Thousands attended the concert.\" =","Ribuan orang menghadiri konser.","Ribuan orang menolak konser.","Seribu konser.","Konser itu kecil.","attended."),
+ ("\"Officials said ...\" =","pejabat mengatakan ...","pejabat bertanya ...","pejabat pergi ...","pejabat lupa ...","officials."),
+ ("\"The cause remains unknown.\" =","Penyebabnya masih belum diketahui.","Penyebabnya jelas.","Penyebabnya hilang.","Penyebabnya mudah.","unknown."),
+ ("Kalimat lead berita yang baik:","A fire destroyed a market in Bogor on Tuesday.","I like markets.","Markets are good.","Go to the market.","lead."),
+ ("\"Casualties\" =","korban jiwa/luka","penonton","pemain","penjual","casualties."),
+ ("\"Evacuate\" =","mengungsikan","membangun","menjual","membeli","evacuate."),
+ ("\"Emergency\" =","darurat","santai","libur","pesta","emergency."),
+ ("\"Authorities\" =","pihak berwenang","turis","pedagang","siswa","authorities."),
+ ("\"Statement\" =","pernyataan","pertanyaan","perintah","pesta","statement."),
+ ("\"Breaking news\" =","berita terkini","berita lama","berita bohong","berita lucu","breaking."),
+]), quiz=mk([
+ ("\"Journalist\" =","jurnalis","polisi","hakim","guru","journalist."),
+ ("\"Editor\" =","editor","pembaca","saksi","pelaku","editor."),
+ ("\"Article\" =","artikel","hadiah","poster","lagu","article."),
+ ("\"Source\" =","sumber","hadiah","judul","gambar","source."),
+ ("\"Quote\" =","kutipan","tanya","judul","iklan","quote."),
+ ("\"Headline\" =","judul berita","isi","foto","penulis","headline."),
+ ("\"Publish\" =","menerbitkan","menghapus","membaca","menolak","publish."),
+ ("\"Newspaper\" =","koran","majalah","buku","kamus","newspaper."),
+]))

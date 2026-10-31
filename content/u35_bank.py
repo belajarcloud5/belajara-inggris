@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("Ungkapan setuju kuat:","I couldn't agree more.","I doubt it.","Not at all.","That's wrong.","agree."),
+ ("Ungkapan ragu:","I'm not sure about that.","Absolutely!","Exactly!","Definitely!","doubt."),
+ ("Ungkapan tidak setuju sopan:","I'm afraid I don't agree.","You're silly.","Shut up.","No way, idiot.","polite."),
+ ("\"As far as I'm concerned\" =","menurut saya","sejauh mata memandang","karena saya","tanpa saya","concerned."),
+ ("\"To be honest\" =","jujur saja","untuk jadi jujur","tidak jujur","sebelum jujur","honest."),
+ ("\"It seems to me that ...\" =","bagi saya tampaknya ...","itu tampak aneh","saya tidak melihat","saya setuju","seems."),
+ ("\"Some people argue that ...\" =","beberapa orang berpendapat ...","semua orang setuju","tak seorang pun","saya berdebat","argue."),
+ ("\"On the contrary\" =","sebaliknya","oleh karena itu","misalnya","pertama","contrary."),
+ ("\"Even though\" =","meskipun","karena","sehingga","kemudian","even though."),
+ ("\"In spite of\" diikuti...","kata benda/V-ing","klausa lengkap","kata kerja dasar","kata seru","in spite of."),
+ ("Kalimat benar:","I think school should start later.","I think that school start later.","I thinking school start later.","I thinks school should start later.","think."),
+ ("Kalimat benar:","Not everyone agrees with this idea.","Not everyone agree with this idea.","Everyone not agrees.","Not everyone agreeing.","agree."),
+ ("\"Convincing\" =","meyakinkan","membingungkan","membosankan","menakutkan","convincing."),
+ ("\"Persuade\" =","membujuk","melarang","menolak","menunda","persuade."),
+]), quiz=mk([
+ ("\"Perspective\" =","sudut pandang","gambar","peta","jarak","perspective."),
+ ("\"Biased\" =","berat sebelah","adil","jujur","pintar","biased."),
+ ("\"Fair\" =","adil","curang","kasar","sempit","fair."),
+ ("\"Reason\" =","alasan","hasil","hadiah","jawaban","reason."),
+ ("\"Claim\" =","klaim","hadiah","perintah","tanya","claim."),
+ ("\"Counterargument\" =","bantahan","dukungan","kesimpulan","pembuka","counter."),
+ ("\"Rebut\" =","membantah","mendukung","menunda","menerima","rebut."),
+ ("\"Compromise\" =","kompromi","pertengkaran","kemenangan","kekalahan","compromise."),
+]))

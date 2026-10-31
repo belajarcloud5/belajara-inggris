@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"I am writing in response ___ your email.\"","to","for","at","of","in response to."),
+ ("\"Thank you for getting back ___ me.\"","to","at","for","of","get back to."),
+ ("\"I would like to follow ___ on our meeting.\"","up","on","out","off","follow up."),
+ ("\"Please let me know ___ you have any questions.\"","if","that","what","who","if."),
+ ("\"I'll keep you ___.\" (kabari)","posted","post","posting","posts","keep posted."),
+ ("\"Looking forward to meeting you\" ditulis di...","penutup","subjek","salam pembuka","lampiran","closing."),
+ ("\"To whom it may concern,\" dipakai bila...","tidak tahu penerima","tahu penerima","menulis ke teman","menulis puisi","concern."),
+ ("\"Per our conversation\" =","sesuai percakapan kita","per orang","per bulan","per hari","per."),
+ ("\"At your earliest convenience\" =","secepatnya sesuai kesempatan Anda","sangat lambat","tidak perlu","besok pagi saja","convenience."),
+ ("\"Kindly note that ...\" =","Mohon diketahui bahwa ...","Mohon lupakan ...","Mohon tanggapi ...","Mohon hapus ...","kindly."),
+ ("\"Unfortunately, we are unable to ...\" =","Sayangnya, kami tidak dapat ...","Untungnya, kami dapat ...","Kami senang ...","Kami lupa ...","unfortunately."),
+ ("\"Apologies for the confusion.\" =","Mohon maaf atas kebingungannya.","Terima kasih atas bantuannya.","Selamat atas kesuksesan.","Sampai jumpa.","confusion."),
+ ("\"Noted, thank you.\" =","Dicatat, terima kasih.","Dihapus.","Ditolak.","Ditunda.","noted."),
+ ("\"Cc'd\" =","ditembuskan","dihapus","ditolak","dicetak","cc."),
+]), quiz=mk([
+ ("\"Spam\" =","surel sampah","surel penting","surel baru","surel balasan","spam."),
+ ("\"Delete\" =","menghapus","menyimpan","membalas","meneruskan","delete."),
+ ("\"Archive\" =","mengarsipkan","menghapus","mencetak","membalas","archive."),
+ ("\"Password\" =","kata sandi","nama","alamat","nomor","password."),
+ ("\"Username\" =","nama pengguna","kata sandi","alamat","nomor","username."),
+ ("\"Download\" =","mengunduh","mengunggah","menghapus","mencetak","download."),
+ ("\"Upload\" =","mengunggah","mengunduh","menghapus","mencetak","upload."),
+ ("\"Draft\" =","konsep","kiriman","sampah","balasan","draft."),
+]))

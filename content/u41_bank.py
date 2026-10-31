@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"If I ___ you, I would study.\"","were","am","be","was being","were."),
+ ("\"The thief ___ by the police.\" (catch, lampau)","was caught","caught","is catch","catch","passive."),
+ ("\"Not only is she smart, ___ she is kind.\"","but also","and also","or","so","not only but also."),
+ ("\"The faster you drive, ___ dangerous it is.\"","the more","more","the most","most","the more."),
+ ("\"Hardly had he arrived ___ it rained.\"","when","than","that","as","hardly when."),
+ ("\"Such a nice day!\" =","Hari yang indah!","Hari yang buruk!","Hari ini libur!","Hari ini hujan!","such."),
+ ("\"Whereas\" =","sedangkan","karena","jika","sehingga","whereas."),
+ ("\"Consequently\" =","akibatnya","misalnya","pertama","tetapi","consequently."),
+ ("\"Moreover\" =","lagi pula","namun","jadi","misalnya","moreover."),
+ ("Teks dengan struktur goal-materials-steps:","procedure","explanation","news","narrative","procedure."),
+ ("Teks dengan struktur orientation-complication-resolution:","narrative","recount","report","procedure","narrative."),
+ ("Teks dengan struktur thesis-arguments-recommendation:","hortatory exposition","analytical exposition","news","explanation","hortatory."),
+ ("Teks dengan struktur thesis-arguments-reiteration:","analytical exposition","hortatory","narrative","recount","analytical."),
+ ("Teks dengan struktur general statement-sequenced explanation:","explanation","narrative","recount","procedure","explanation."),
+]), quiz=mk([
+ ("\"Evaluate\" =","menilai","menghapus","menolak","menjual","evaluate."),
+ ("\"Analyze\" =","menganalisis","menjual","menghapus","menyalin","analyze."),
+ ("\"Compare\" =","membandingkan","menghitung","menulis","menjual","compare."),
+ ("\"Contrast\" =","membedakan/kontras","menyamakan","menghapus","menunda","contrast."),
+ ("\"Define\" =","mendefinisikan","menghapus","menolak","menjual","define."),
+ ("\"Summarize\" =","meringkas","memperpanjang","menyalin","mengulang","summarize."),
+ ("\"Illustrate\" =","menggambarkan/memberi contoh","menolak","menghapus","menjual","illustrate."),
+ ("\"Justify\" =","membenarkan dengan alasan","menolak","menghapus","menunda","justify."),
+]))

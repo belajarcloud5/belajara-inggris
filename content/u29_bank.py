@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"Last month, we ___ a trip to Bandung.\"","took","take","taken","takes","took."),
+ ("\"I ___ a lot of photos.\"","took","taked","taken","take","took."),
+ ("\"They ___ happy yesterday.\"","were","was","are","be","they → were."),
+ ("\"He ___ very tired.\"","was","were","is","are","he → was."),
+ ("\"The weather ___ nice.\"","was","were","is","be","was."),
+ ("\"We didn't ___ any money.\"","spend","spent","spending","spends","did not + V1."),
+ ("\"___ she call you last night?\"","Did","Does","Do","Was","Did."),
+ ("Kata \"meanwhile\" artinya...","sementara itu","akhirnya","dahulu","besok","meanwhile."),
+ ("Kata \"afterward\" artinya...","setelahnya","sebelumnya","selalu","jarang","afterward."),
+ ("Kalimat recount yang benar:","I visited my uncle during the holiday.","I visit my uncle during holiday yesterday.","I am visiting uncle last holiday.","I will visited my uncle.","past."),
+ ("Penutup recount yang wajar:","It was a memorable day.","Mix the flour.","Dear Sir,","Once upon a time.","reorientation."),
+ ("\"Memorable\" =","berkesan","membosankan","mahal","jauh","memorable."),
+ ("\"On Sunday morning\" menunjukkan...","waktu","tempat","cara","alasan","time."),
+ ("\"At the zoo\" menunjukkan...","tempat","waktu","cara","alasan","place."),
+]), quiz=mk([
+ ("Lampau \"drink\":","drank","drinked","drunk","drinks","drank."),
+ ("Lampau \"run\":","ran","runned","running","runs","ran."),
+ ("Lampau \"sit\":","sat","sitted","sit","sits","sat."),
+ ("Lampau \"meet\":","met","meeted","meat","meets","met."),
+ ("Lampau \"leave\":","left","leaved","lefted","leaves","left."),
+ ("Lampau \"make\":","made","maked","make","makes","made."),
+ ("Lampau \"come\":","came","comed","come","comes","came."),
+ ("Lampau \"do\":","did","doed","done","does","did."),
+]))

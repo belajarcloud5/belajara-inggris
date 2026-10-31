@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"I am writing ___ apply for the post.\"","to","for","at","of","to apply."),
+ ("\"I would be ___ if you could consider me.\"","grateful","grateful to","gratefully","gratitude","grateful."),
+ ("\"I look forward ___ hearing from you.\"","to","for","at","of","look forward to."),
+ ("\"Please find my CV ___.\"","attached","attach","attaching","attaches","attached."),
+ ("\"I am available ___ an interview.\"","for","to","at","by","available for."),
+ ("\"I graduated ___ SMK Negeri 2.\"","from","at to","for","in","graduate from."),
+ ("\"I have a certificate ___ computer skills.\"","in","at","on","by","certificate in."),
+ ("\"Yours faithfully\" dipakai bila...","tidak tahu nama penerima","tahu nama penerima","menulis ke teman","menulis puisi","faithfully."),
+ ("\"Yours sincerely\" dipakai bila...","tahu nama penerima","tidak tahu nama","menulis ke kucing","menulis lagu","sincerely."),
+ ("\"Reference\" =","pemberi rekomendasi","hadiah","alamat","gaji","reference."),
+ ("\"Objective\" di CV =","tujuan karier","hobi","umur","nama","objective."),
+ ("\"Work history\" =","riwayat kerja","riwayat sakit","riwayat sekolah","riwayat keluarga","history."),
+ ("\"Achievement\" =","prestasi","masalah","hukuman","jadwal","achievement."),
+ ("\"Competent\" =","cakap","malas","lambat","bodoh","competent."),
+]), quiz=mk([
+ ("\"Applicant\" =","pelamar","pewawancara","atasan","pelanggan","applicant."),
+ ("\"Employer\" =","pemberi kerja","pelamar","pelanggan","tamu","employer."),
+ ("\"Hire\" =","mempekerjakan","memecat","menolak","menunda","hire."),
+ ("\"Probation\" =","masa percobaan","liburan","pensiun","sekolah","probation."),
+ ("\"Trainee\" =","peserta pelatihan","bos","tamu","penjual","trainee."),
+ ("\"Overtime\" =","lembur","libur","magang","cuti","overtime."),
+ ("\"Shift\" =","giliran kerja","gaji","cuti","bonus","shift."),
+ ("\"Resignation letter\" =","surat pengunduran diri","surat lamaran","surat cinta","surat undangan","resignation."),
+]))

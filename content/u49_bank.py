@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"I'm responsible ___ the monthly report.\"","for","at","in","to","responsible for."),
+ ("\"She is in charge ___ the finance team.\"","of","at","for","to","in charge of."),
+ ("\"He works ___ a project manager.\"","as","like","for as","at","as + job."),
+ ("\"The printer is out ___ ink.\"","of","from","at","off","out of."),
+ ("\"Please ask the IT department ___ help.\"","for","at","to","of","ask for."),
+ ("\"Our team consists ___ five people.\"","of","in","at","to","consist of."),
+ ("\"I'll be on leave ___ Monday to Wednesday.\"","from","since","at","by","from ... to."),
+ ("\"I work flexible hours.\" =","Saya bekerja dengan jam fleksibel.","Saya tidak bekerja.","Saya bekerja malam saja.","Saya bekerja sebentar.","flexible."),
+ ("\"Remote work\" =","kerja jarak jauh","kerja lembur","kerja sambilan","kerja paksa","remote."),
+ ("\"Work from home\" =","bekerja dari rumah","bekerja di kantor","bekerja di pabrik","bekerja di luar negeri","WFH."),
+ ("\"Open-plan office\" =","kantor ruang terbuka","kantor tertutup","kantor kecil","kantor virtual","open-plan."),
+ ("\"Break room\" =","ruang istirahat","ruang rapat","ruang server","gudang","break."),
+ ("\"Supplies\" =","perlengkapan","pelanggan","gaji","jadwal","supplies."),
+ ("\"Stationery\" =","alat tulis","alat berat","alat dapur","alat musik","stationery."),
+]), quiz=mk([
+ ("\"Cabinet\" =","lemari arsip","kursi","meja","lampu","cabinet."),
+ ("\"Desk\" =","meja kerja","kursi","papan","lampu","desk."),
+ ("\"Stapler\" =","stapler","gunting","penggaris","lem","stapler."),
+ ("\"Memo\" =","memo","kontrak","laporan panjang","iklan","memo."),
+ ("\"Filing\" =","pengarsipan","pembayaran","pengiriman","pembelian","filing."),
+ ("\"Payroll\" =","penggajian","pajak","cuti","pelatihan","payroll."),
+ ("\"Recruit\" =","merekrut","memecat","menolak","menunda","recruit."),
+ ("\"Retire\" =","pensiun","masuk kerja","dipromosikan","magang","retire."),
+]))

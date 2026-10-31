@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"I ___ English since 2020.\"","have studied","studied","study","am study","since."),
+ ("\"She ___ the book yesterday.\"","read","reads","is read","has reading","past."),
+ ("\"The cake ___ by my mother.\" (bake, lampau)","was baked","baked","is bake","bake","passive."),
+ ("\"He is ___ than me.\" (young)","younger","youngest","more young","young","comparative."),
+ ("\"Bandung is not ___ big as Jakarta.\"","as","so","than","more","as ... as."),
+ ("\"Tom runs ___ than Ali.\" (fast)","faster","fastest","more fast","fast","comparative."),
+ ("\"There isn't ___ milk.\"","any","some","many","a","any."),
+ ("\"I have ___ friends.\" (banyak)","many","much","a little","any","many."),
+ ("\"How ___ is it?\" (harga)","much","many","long","far","much."),
+ ("Teks yang terdiri dari goal-materials-steps:","procedure","recount","narrative","news","procedure."),
+ ("Teks yang terdiri dari orientation-events-reorientation:","recount","procedure","descriptive","report","recount."),
+ ("\"Describe\" artinya...","menggambarkan","menghapus","menolak","menjual","describe."),
+ ("\"Recount\" artinya...","menceritakan kembali","menghitung","menjual","memotong","recount."),
+ ("\"Review\" artinya...","mengulang/meninjau","menghapus","melupakan","menutup","review."),
+]), quiz=mk([
+ ("\"Between\" =","di antara","di atas","di bawah","di belakang","between."),
+ ("\"Behind\" =","di belakang","di depan","di antara","di dekat","behind."),
+ ("\"Opposite\" =","berseberangan","bersebelahan","di atas","di dalam","opposite."),
+ ("\"Next to\" =","di sebelah","di seberang","di belakang","di bawah","next to."),
+ ("\"Straight\" =","lurus","belok","mundur","berhenti","straight."),
+ ("\"Turn left\" =","belok kiri","belok kanan","lurus","mundur","turn left."),
+ ("\"Crossroad\" =","perempatan","jembatan","terowongan","gang","crossroad."),
+ ("\"Traffic light\" =","lampu lalu lintas","lampu jalan","lampu tidur","lampu belajar","traffic."),
+]))

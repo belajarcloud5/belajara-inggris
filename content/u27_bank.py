@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"My sister ___ in a bank.\"","works","work","working","are work","she → works."),
+ ("\"We ___ not late today.\"","are","is","am","do","we → are."),
+ ("\"___ he like tea?\"","Does","Do","Is","Are","he → Does."),
+ ("\"I ___ my homework at night.\"","do","does","doing","is do","I → do."),
+ ("\"Dina and Rani ___ friends.\"","are","is","am","be","plural → are."),
+ ("\"What ___ you doing?\"","are","is","do","does","are + V-ing."),
+ ("Jawaban untuk \"Where are you from?\"","I'm from Bali.","I'm fine.","I'm fifteen.","I'm a student.","from."),
+ ("Jawaban untuk \"How are you?\"","I'm fine, thanks.","I'm Dina.","I'm from Solo.","I'm 15.","How are you."),
+ ("\"Be quiet\" artinya...","diamlah","datanglah","makanlah","tidurlah","quiet."),
+ ("Kalimat benar:","They don't live here.","They doesn't live here.","They not live here.","They don't lives here.","don't."),
+ ("Kalimat benar:","Is your mother a teacher?","Does your mother a teacher?","Are your mother teacher?","Your mother is a teacher?","Is."),
+ ("\"Neighbour\" artinya...","tetangga","teman","guru","saudara","neighbour."),
+ ("\"Classmate\" artinya...","teman sekelas","guru","kepala sekolah","tetangga","classmate."),
+ ("\"Every morning\" menandakan...","kebiasaan","sedang terjadi","masa lalu","masa depan","every."),
+]), quiz=mk([
+ ("\"Singer\" =","penyanyi","penari","pelukis","petani","singer."),
+ ("\"Born\" dalam \"I was born in 2010\" =","lahir","besar","pindah","sekolah","born."),
+ ("\"Single\" dalam konteks status =","lajang","menikah","kembar","tua","single."),
+ ("\"Be polite\" =","bersikap sopan","bersikap kasar","diam","pergi","polite."),
+ ("\"Hello, I'm Tom.\" adalah...","perkenalan diri","perpisahan","permintaan maaf","pertanyaan","intro."),
+ ("\"Pardon me?\" =","Maaf, bisa diulang?","Terima kasih","Selamat pagi","Sampai jumpa","pardon."),
+ ("\"Same here\" =","Saya juga","Saya tidak","Di sini","Sama sekali tidak","same."),
+ ("\"Take care\" =","jaga diri","ambil peduli","hati-hati bensin","pergilah","take care."),
+]))

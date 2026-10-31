@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"I'm calling ___ the job advertisement.\"","about","at","to","with","about."),
+ ("\"Could you put me ___ to the sales department?\"","through","on","in","at","put through."),
+ ("\"I'll transfer you to ...\" =","Saya akan menyambungkan Anda ke ...","Saya menutup telepon","Saya menolak Anda","Saya menelepon Anda","transfer."),
+ ("\"Can you hold for a moment?\" =","Bisakah Anda menunggu sebentar?","Bisakah Anda menutup?","Bisakah Anda bicara?","Bisakah Anda menelepon?","hold."),
+ ("\"This is a bad time.\" =","Ini waktu yang kurang tepat.","Ini waktu yang bagus.","Ini hari libur.","Ini sudah pagi.","bad time."),
+ ("\"I'll ring you back.\" =","Saya akan menelepon balik.","Saya akan memukul bel.","Saya akan menutup.","Saya akan datang.","ring."),
+ ("\"Let me read that back to you.\" =","Biar saya bacakan kembali.","Biar saya pergi.","Biar saya tulis.","Biar saya lupa.","read back."),
+ ("\"Could you speak up a little?\" =","Bisakah bicara lebih keras?","Bisakah bicara pelan?","Bisakah diam?","Bisakah menulis?","speak up."),
+ ("\"Sorry, you're breaking up.\" =","Maaf, suara Anda putus-putus.","Maaf, Anda putus cinta.","Maaf, Anda jelas.","Maaf, Anda marah.","breaking up."),
+ ("\"Please leave your name and number after the tone.\" =","Tinggalkan nama dan nomor setelah nada.","Hapus nama.","Bayar sekarang.","Datang segera.","tone."),
+ ("\"I'm returning a missed call.\" =","Saya membalas panggilan tak terjawab.","Saya menolak telepon.","Saya salah sambung.","Saya menelepon polisi.","returning."),
+ ("\"Is this a convenient time to talk?\" =","Apakah sekarang waktu yang tepat bicara?","Apakah ini toko?","Apakah Anda di rumah?","Apakah Anda marah?","convenient."),
+ ("\"Could I speak to someone in charge?\" =","Bisakah saya bicara dengan penanggung jawab?","Bisakah saya bicara sendiri?","Bisakah saya pulang?","Bisakah saya menjual?","in charge."),
+ ("\"Please hold; all lines are busy.\" =","Mohon tunggu; semua saluran sibuk.","Mohon bicara.","Mohon tutup.","Mohon datang.","busy."),
+]), quiz=mk([
+ ("\"Dial tone\" =","nada sambung","nada sibuk","nada dering","nada pesan","dial."),
+ ("\"Ring\" (telepon) =","berdering","menutup","menjawab","menunggu","ring."),
+ ("\"Receiver\" =","gagang telepon","kabel","bel","layar","receiver."),
+ ("\"Landline\" =","telepon rumah/kabel","ponsel","radio","televisi","landline."),
+ ("\"Mobile\" =","ponsel","telepon rumah","radio","komputer","mobile."),
+ ("\"Signal\" =","sinyal","suara","gambar","harga","signal."),
+ ("\"Battery\" =","baterai","kabel","layar","kartu","battery."),
+ ("\"Charge\" (ponsel) =","mengisi daya","membuang","membeli","menjual","charge."),
+]))

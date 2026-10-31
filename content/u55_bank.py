@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"Sales rose ___ 20 percent.\"","by","at","to by","for","rise by."),
+ ("\"Sales rose ___ 100 to 120.\"","from","by","at","for","from ... to."),
+ ("\"The figure reached a peak ___ 500.\"","of","at by","on","to","peak of."),
+ ("\"Costs fell ___ a low of 80.\"","to","by","at","for","fell to."),
+ ("\"There was a slight rise.\" =","Ada kenaikan kecil.","Ada penurunan besar.","Tidak berubah.","Naik tajam.","slight."),
+ ("\"A dramatic increase\" =","kenaikan drastis","kenaikan kecil","penurunan","stabil","dramatic."),
+ ("\"Steady growth\" =","pertumbuhan stabil","penurunan","pertumbuhan tiba-tiba","tidak ada","steady."),
+ ("\"Year-on-year\" =","dari tahun ke tahun","bulan ke bulan","hari ke hari","tidak ada","YoY."),
+ ("\"Double\" (naik) =","menjadi dua kali lipat","menjadi setengah","tetap","hilang","double."),
+ ("\"Halve\" =","menjadi setengah","menjadi dua kali","tetap","hilang","halve."),
+ ("\"Overall\" =","secara keseluruhan","sebagian","jarang","kadang","overall."),
+ ("\"In contrast\" =","sebaliknya","oleh karena itu","misalnya","pertama","contrast."),
+ ("\"Margin\" =","margin","gaji","utang","pajak","margin."),
+ ("\"Forecast\" =","perkiraan","laporan lama","hasil","hadiah","forecast."),
+]), quiz=mk([
+ ("\"Statistic\" =","statistik","kisah","peta","puisi","statistic."),
+ ("\"Survey\" =","survei","berita","cerita","lagu","survey."),
+ ("\"Respondent\" =","responden","peneliti","pembaca","penonton","respondent."),
+ ("\"Data\" =","data","gambar","suara","kisah","data."),
+ ("\"Analysis\" =","analisis","hadiah","jadwal","harga","analysis."),
+ ("\"Findings\" =","temuan","hadiah","hukuman","pertanyaan","findings."),
+ ("\"Recommend\" =","merekomendasikan","melarang","menolak","menghapus","recommend."),
+ ("\"Accurate\" =","akurat","salah","lambat","mahal","accurate."),
+]))

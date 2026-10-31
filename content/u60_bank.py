@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"My flight leaves ___ 6 a.m.\"","at","on","in","by","at."),
+ ("\"I'm flying ___ Jakarta to Singapore.\"","from","at","on","by","from ... to."),
+ ("\"Please keep your boarding pass ___ hand.\"","at","on","in","by","at hand."),
+ ("\"Is breakfast included ___ the price?\"","in","at","on","by","included in."),
+ ("\"I'd like a room ___ a view.\"","with","for","at","by","with."),
+ ("\"How far is the hotel ___ the airport?\"","from","at","on","by","from."),
+ ("\"Do I need a visa ___ this country?\"","for","at","on","by","visa for."),
+ ("\"The shuttle runs every 20 minutes.\" =","Antar-jemput berjalan tiap 20 menit.","Antar-jemput sekali 20 hari.","Antar-jemput berhenti.","Antar-jemput batal.","shuttle."),
+ ("\"Jet lag\" =","kelelahan akibat beda zona waktu","pesawat jet","terlambat","tiket murah","jet lag."),
+ ("\"Direct flight\" =","penerbangan langsung","penerbangan transit","penerbangan batal","penerbangan penuh","direct."),
+ ("\"One-way ticket\" =","tiket sekali jalan","tiket pulang pergi","tiket batal","tiket gratis","one-way."),
+ ("\"Round-trip ticket\" =","tiket pulang pergi","tiket sekali jalan","tiket batal","tiket gratis","round-trip."),
+ ("\"Per diem\" =","uang harian dinas","uang bulanan","uang tahunan","uang pensiun","per diem."),
+ ("\"Travel insurance\" =","asuransi perjalanan","tiket perjalanan","visa","paspor","insurance."),
+]), quiz=mk([
+ ("\"Terminal\" =","terminal","gerbang","bagasi","tiket","terminal."),
+ ("\"Runway\" =","landasan pacu","jalan tol","gerbang","lorong","runway."),
+ ("\"Cabin crew\" =","awak kabin","pilot","penumpang","satpam","cabin."),
+ ("\"Seat belt\" =","sabuk pengaman","kursi","bantal","selimut","seat belt."),
+ ("\"Aisle seat\" =","kursi lorong","kursi jendela","kursi depan","kursi belakang","aisle."),
+ ("\"Window seat\" =","kursi jendela","kursi lorong","kursi tengah","kursi pilot","window."),
+ ("\"Lost luggage\" =","bagasi hilang","bagasi baru","bagasi berat","bagasi penuh","lost."),
+ ("\"Currency\" =","mata uang","cuaca","bahasa","budaya","currency."),
+]))

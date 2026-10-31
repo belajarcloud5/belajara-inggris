@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"By the time I arrived, the film ___.\"","had started","started","starts","has start","past perfect."),
+ ("\"I have been studying for two hours\" menekankan...","durasi","hasil","waktu lampau jauh","rencana","continuous."),
+ ("\"She is the woman ___ car was stolen.\"","whose","who","which","whom","whose."),
+ ("\"This is the place ___ we met.\"","where","who","whose","which","where."),
+ ("\"I don't know ___ he lives.\"","where","where does","where did","that","indirect question."),
+ ("\"Could you tell me what time ___?\"","it is","is it","does it","it was is","indirect question."),
+ ("\"He denied ___ the window.\"","breaking","to break","break","broke","deny + V-ing."),
+ ("\"She promised ___ on time.\"","to come","coming","come","came","promise to."),
+ ("\"I'm used to ___ early.\"","getting up","get up","got up","gets up","used to + V-ing."),
+ ("\"I used to ___ football.\"","play","playing","played","plays","used to + V1."),
+ ("\"Not until noon ___ he arrive.\"","did","do","does","was","inversion."),
+ ("\"Little did she know.\" =","Dia sama sekali tidak tahu.","Dia tahu sedikit.","Dia tahu semua.","Dia kecil.","inversion."),
+ ("\"Despite the rain\" diikuti...","kata benda","klausa lengkap","kata kerja dasar","kata seru","despite."),
+ ("\"In case of fire\" =","bila terjadi kebakaran","di dalam api","tanpa api","setelah api","in case of."),
+]), quiz=mk([
+ ("\"Gerund\" =","kata kerja + -ing sebagai benda","kata sifat","kata depan","kata hubung","gerund."),
+ ("\"Infinitive\" =","to + V1","V-ing","V3","V2","infinitive."),
+ ("\"Clause\" =","klausa","kata","huruf","paragraf","clause."),
+ ("\"Subject\" =","subjek","objek","predikat","keterangan","subject."),
+ ("\"Object\" =","objek","subjek","predikat","penghubung","object."),
+ ("\"Preposition\" =","kata depan","kata sifat","kata kerja","kata benda","preposition."),
+ ("\"Conjunction\" =","kata hubung","kata sifat","kata kerja","kata benda","conjunction."),
+ ("\"Article\" (tata bahasa) =","kata sandang","artikel berita","pasal","paragraf","article."),
+]))

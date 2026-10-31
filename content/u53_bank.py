@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"Let's meet ___ Monday.\"","on","in","at","by","on + hari."),
+ ("\"The meeting is ___ 10 a.m.\"","at","on","in","by","at + jam."),
+ ("\"I'll be out of the office ___ Tuesday.\"","until","since","for","at","until."),
+ ("\"Can we push the meeting ___ an hour?\"","back","away","off to","out","push back."),
+ ("\"Can we move it ___ to 2 p.m.?\"","forward","afterward","downward","outward","move forward."),
+ ("\"I can squeeze you in at 4.\" =","Saya bisa menyelipkan Anda pukul 4.","Saya meremas Anda.","Saya menolak pukul 4.","Saya libur pukul 4.","squeeze in."),
+ ("\"I'm swamped this week.\" =","Saya sangat sibuk minggu ini.","Saya senggang.","Saya sakit.","Saya libur.","swamped."),
+ ("\"I'm tied up until noon.\" =","Saya sibuk sampai siang.","Saya bebas.","Saya pulang.","Saya sakit.","tied up."),
+ ("\"Does that suit you?\" =","Apakah itu cocok bagi Anda?","Apakah itu jas Anda?","Apakah itu mahal?","Apakah itu baru?","suit."),
+ ("\"Pencil you in\" =","mencatat sementara","menggambar Anda","menghapus Anda","menolak Anda","pencil."),
+ ("\"Calendar invite\" =","undangan kalender","kalender dinding","tiket","surat cinta","invite."),
+ ("\"Recurring meeting\" =","rapat berulang","rapat batal","rapat besar","rapat satu kali","recurring."),
+ ("\"Time zone difference\" =","perbedaan zona waktu","perbedaan harga","perbedaan umur","perbedaan jarak","time zone."),
+ ("\"Walk-in\" =","tanpa janji temu","dengan janji temu","dibatalkan","penuh","walk-in."),
+]), quiz=mk([
+ ("\"Weekday\" =","hari kerja","akhir pekan","hari libur","hari raya","weekday."),
+ ("\"Weekend\" =","akhir pekan","hari kerja","hari raya","bulan depan","weekend."),
+ ("\"Biweekly\" =","dua mingguan","mingguan","bulanan","tahunan","biweekly."),
+ ("\"Monthly\" =","bulanan","mingguan","tahunan","harian","monthly."),
+ ("\"Annual\" =","tahunan","bulanan","harian","mingguan","annual."),
+ ("\"Overdue\" =","lewat tenggat","tepat waktu","lebih awal","dibatalkan","overdue."),
+ ("\"Punctual\" =","tepat waktu","terlambat","malas","sibuk","punctual."),
+ ("\"In advance\" =","sebelumnya","sesudahnya","tidak","lama","in advance."),
+]))

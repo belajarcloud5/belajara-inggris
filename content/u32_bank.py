@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"The concert ___ on Saturday evening.\"","will be held","held will","will held","is hold","will be held."),
+ ("\"Please ___ early.\"","arrive","arrives","arrived","arriving","Please + V1."),
+ ("\"The shop will be closed ___ Sunday.\"","on","in","at","by","on."),
+ ("\"The party is ___ 7 p.m.\"","at","on","in","from","at."),
+ ("\"The event is open ___ everyone.\"","to","for at","with","by","open to."),
+ ("\"We are pleased ___ invite you.\"","to","for","at","of","pleased to."),
+ ("\"Don't forget ___ your ID card.\"","to bring","bringing","brought","bring","forget to."),
+ ("Pengumuman yang jelas memuat:","what, when, where","hanya nama","hanya harga","hanya gambar","5W."),
+ ("\"Admission\" artinya...","tiket masuk","tiket pulang","denda","hadiah","admission."),
+ ("\"Free of charge\" artinya...","gratis","mahal","diskon","denda","free."),
+ ("\"Registration\" artinya...","pendaftaran","pembatalan","pembayaran","penutupan","registration."),
+ ("\"Deadline for registration\" artinya...","batas akhir pendaftaran","awal pendaftaran","hadiah pendaftaran","tempat pendaftaran","deadline."),
+ ("\"Winner\" artinya...","pemenang","peserta","juri","penonton","winner."),
+ ("\"Competition\" artinya...","perlombaan","pertemuan","pesta","ujian","competition."),
+]), quiz=mk([
+ ("\"Contest\" =","lomba","hadiah","tiket","jadwal","contest."),
+ ("\"Prize\" =","hadiah","denda","tiket","jadwal","prize."),
+ ("\"Participant\" =","peserta","juri","penonton","panitia","participant."),
+ ("\"Committee\" =","panitia","peserta","penonton","juri","committee."),
+ ("\"Ceremony\" =","upacara","pesta","lomba","ujian","ceremony."),
+ ("\"Graduation\" =","kelulusan","pendaftaran","libur","ujian","graduation."),
+ ("\"Anniversary\" =","hari jadi","hari libur","hari ujian","hari kerja","anniversary."),
+ ("\"Celebrate\" =","merayakan","membatalkan","menunda","menolak","celebrate."),
+]))

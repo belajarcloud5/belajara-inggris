@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"Would you be so kind as to ...?\" tingkat kesopanan:","sangat sopan","kasar","netral","biasa","kind."),
+ ("\"I was wondering if you could help me.\" =","Saya ingin tahu apakah Anda bisa membantu.","Saya heran dengan Anda.","Saya membantu Anda.","Saya menolak.","wondering."),
+ ("\"Would it be possible to ...?\" =","Mungkinkah untuk ...?","Apakah itu mustahil?","Saya mau ...","Kami tidak bisa ...","possible."),
+ ("\"Do you need a hand?\" =","Butuh bantuan?","Butuh tangan palsu?","Mau bersalaman?","Mau pergi?","hand."),
+ ("\"Help yourself.\" =","Silakan ambil sendiri.","Tolong dirimu.","Bantu saya.","Jangan ambil.","help yourself."),
+ ("\"After you.\" =","Silakan duluan.","Setelah Anda pergi.","Ikuti saya.","Tunggu saya.","after you."),
+ ("\"That would be great, thanks.\" =","Itu bagus sekali, terima kasih.","Itu buruk.","Tidak, terima kasih.","Mungkin nanti.","great."),
+ ("\"No, that's okay, thank you.\" =","Tidak usah, terima kasih.","Ya, tolong.","Saya marah.","Pergi.","okay."),
+ ("\"Could I trouble you for ...?\" =","Bolehkah saya merepotkan Anda untuk ...?","Saya mengganggu Anda","Anda dalam masalah","Saya menolak","trouble."),
+ ("\"I'd be happy to.\" =","Dengan senang hati.","Saya sedih.","Saya tidak mau.","Saya lupa.","happy."),
+ ("\"Sorry, I'm tied up right now.\" =","Maaf, saya sedang sibuk.","Maaf, saya terikat tali.","Maaf, saya bebas.","Maaf, saya pulang.","tied up."),
+ ("\"Hold the door, please.\" =","Tolong tahan pintunya.","Tolong tutup pintunya.","Tolong kunci pintu.","Tolong ketuk pintu.","hold."),
+ ("\"Make yourself at home.\" =","Anggap saja rumah sendiri.","Pulanglah.","Bangun rumah.","Pindah rumah.","home."),
+ ("\"Feel free to ...\" =","Silakan ...","Jangan ...","Harus ...","Dilarang ...","feel free."),
+]), quiz=mk([
+ ("\"Favor\" =","bantuan/kebaikan","hadiah","tugas","denda","favor."),
+ ("\"Assist\" =","membantu","menghalangi","menolak","menjual","assist."),
+ ("\"Assistance\" =","bantuan","penolakan","hadiah","tugas","assistance."),
+ ("\"Request\" =","permintaan","jawaban","hadiah","laporan","request."),
+ ("\"Offer\" =","tawaran","permintaan","penolakan","laporan","offer."),
+ ("\"Decline\" =","menolak sopan","menerima","menunda","menjual","decline."),
+ ("\"Courteous\" =","sopan","kasar","malas","lambat","courteous."),
+ ("\"Polite\" lawannya:","rude","kind","gentle","calm","polite."),
+]))

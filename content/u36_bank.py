@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"Students ___ wear uniforms.\" (opini: sebaiknya)","should","did","were","had","should."),
+ ("\"Uniforms ___ equality among students.\"","promote","promotes","promoting","promoted","plural → promote."),
+ ("\"One reason is ___ uniforms save money.\"","that","what","where","who","that-clause."),
+ ("\"Another argument is that ...\" =","argumen lain adalah ...","argumen terakhir","tidak ada argumen","argumen salah","another."),
+ ("\"To begin with\" =","untuk memulai","untuk menutup","sebaliknya","akibatnya","begin."),
+ ("\"Last but not least\" =","terakhir namun penting","pertama","kesimpulan","contoh","last."),
+ ("\"On balance\" =","secara keseluruhan","di atas timbangan","tanpa alasan","sebaliknya","balance."),
+ ("\"It is widely believed that ...\" =","banyak yang meyakini bahwa ...","tak ada yang percaya","saya ragu","hari ini","widely."),
+ ("\"Studies have shown\" =","penelitian telah menunjukkan","studi telah hilang","siswa telah belajar","kita telah menyerah","studies."),
+ ("Kalimat tesis yang baik:","Homework should be limited.","I got homework.","Do your homework.","Homework yesterday.","thesis."),
+ ("Kalimat reiteration yang baik:","Therefore, homework should be limited.","Dear Sir,","Once upon a time,","Mix the flour.","reiteration."),
+ ("\"Consequence\" =","akibat","penyebab","contoh","tujuan","consequence."),
+ ("\"Convince\" =","meyakinkan","membingungkan","menunda","menjual","convince."),
+ ("\"Critical thinking\" =","berpikir kritis","berpikir marah","berpikir lambat","berpikir pendek","critical."),
+]), quiz=mk([
+ ("\"Technology\" =","teknologi","tradisi","transportasi","terapi","technology."),
+ ("\"Social media\" =","media sosial","koran","radio","televisi","social."),
+ ("\"Addiction\" =","kecanduan","kebiasaan baik","hadiah","hobi","addiction."),
+ ("\"Distract\" =","mengalihkan perhatian","fokus","mendukung","menolong","distract."),
+ ("\"Concentrate\" =","berkonsentrasi","mengalihkan","menolak","menunda","concentrate."),
+ ("\"Waste of time\" =","buang-buang waktu","hemat waktu","waktu luang","tepat waktu","waste."),
+ ("\"Opportunity\" =","kesempatan","masalah","hambatan","biaya","opportunity."),
+ ("\"Awareness\" =","kesadaran","kemarahan","kebiasaan","keinginan","awareness."),
+]))

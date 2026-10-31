@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"I'd like to raise a point.\" =","Saya ingin mengemukakan satu hal.","Saya ingin naik.","Saya ingin pulang.","Saya ingin makan.","raise."),
+ ("\"Let me just add that ...\" =","Izinkan saya menambahkan bahwa ...","Izinkan saya pergi","Saya lupa","Saya hapus","add."),
+ ("\"Could you elaborate on that?\" =","Bisakah Anda menjelaskan lebih rinci?","Bisakah Anda diam?","Bisakah Anda pergi?","Bisakah Anda menulis?","elaborate."),
+ ("\"Let's take a vote.\" =","Mari kita voting.","Mari kita pulang.","Mari kita istirahat.","Mari kita makan.","vote."),
+ ("\"The motion is carried.\" =","Usul disetujui.","Usul ditolak.","Usul ditunda.","Usul dibawa pulang.","carried."),
+ ("\"Let's park this issue.\" =","Mari kita tunda isu ini.","Mari kita parkir mobil.","Mari kita selesaikan.","Mari kita hapus.","park."),
+ ("\"We're running out of time.\" =","Waktu kita hampir habis.","Kita berlari.","Kita punya banyak waktu.","Kita terlambat.","running out."),
+ ("\"Let's stick to the agenda.\" =","Mari patuhi agenda.","Mari lem agenda.","Mari abaikan agenda.","Mari ubah agenda.","stick."),
+ ("\"Can we circle back to this later?\" =","Bisakah kita kembali ke ini nanti?","Bisakah kita berputar?","Bisakah kita hapus?","Bisakah kita pulang?","circle back."),
+ ("\"I second that.\" =","Saya mendukung itu.","Saya menolak itu.","Saya kedua.","Saya lupa.","second."),
+ ("\"Floor is yours.\" =","Silakan Anda bicara.","Lantai Anda.","Pergilah.","Diamlah.","floor."),
+ ("\"Let's get everyone's input.\" =","Mari kita tampung masukan semua.","Mari kita hapus.","Mari kita pulang.","Mari kita makan.","input."),
+ ("\"Key takeaway\" =","poin penting","makanan bawa pulang","barang bawaan","kesimpulan palsu","takeaway."),
+ ("\"Next steps\" =","langkah berikutnya","langkah mundur","langkah kaki","tangga","next steps."),
+]), quiz=mk([
+ ("\"Proposal\" =","usulan","penolakan","jawaban","laporan","proposal."),
+ ("\"Objective\" =","tujuan","masalah","jawaban","hadiah","objective."),
+ ("\"Outcome\" =","hasil","awal","masalah","biaya","outcome."),
+ ("\"Consensus\" =","kesepakatan bersama","pertengkaran","kemenangan","kekalahan","consensus."),
+ ("\"Stakeholder\" =","pemangku kepentingan","pemilik toko","pencuri","penjaga","stakeholder."),
+ ("\"Delegate\" =","mendelegasikan","menolak","menghapus","menunda","delegate."),
+ ("\"Milestone\" =","tonggak pencapaian","batu besar","batas akhir","hadiah","milestone."),
+ ("\"Resolution\" =","keputusan/resolusi","pertanyaan","jawaban","penundaan","resolution."),
+]))

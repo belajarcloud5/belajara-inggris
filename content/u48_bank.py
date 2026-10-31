@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"I'm in charge ___ the sales team.\"","of","at","in","to","in charge of."),
+ ("\"I've been with the company ___ three years.\"","for","since","ago","from","for."),
+ ("\"It's my first week ___.\"","here","there is","at here","in there","here."),
+ ("\"Could you show me around?\" =","Bisakah Anda mengajak saya berkeliling?","Bisakah Anda mengantar pulang?","Bisakah Anda menjual?","Bisakah Anda menolak?","show around."),
+ ("\"Where's the restroom?\" menanyakan...","toilet","kantin","lift","parkir","restroom."),
+ ("\"I'll be working with you on this project.\" =","Saya akan bekerja bersama Anda.","Saya akan keluar.","Saya akan menjual proyek.","Saya menolak proyek.","working with."),
+ ("\"How's work going?\" =","Bagaimana pekerjaannya?","Siapa bosnya?","Kapan pulang?","Berapa gajinya?","going."),
+ ("\"Busy as usual.\" =","Sibuk seperti biasa.","Santai sekali.","Libur.","Baru mulai.","usual."),
+ ("\"Let's grab lunch.\" =","Ayo makan siang.","Ayo rapat.","Ayo pulang.","Ayo lembur.","grab."),
+ ("\"Catch up\" =","berbagi kabar","mengejar bus","menangkap bola","menyerah","catch up."),
+ ("\"Welcome aboard!\" =","Selamat bergabung!","Selamat tinggal!","Selamat tidur!","Selamat makan!","aboard."),
+ ("\"I report directly to the CEO.\" =","Saya melapor langsung kepada CEO.","Saya CEO.","Saya memecat CEO.","Saya bertemu CEO.","report."),
+ ("\"Small talk\" yang tepat di lift:","It's quite hot today, isn't it?","What's your salary?","Why are you single?","How old are you?","safe."),
+ ("\"Pleasure working with you.\" =","Senang bekerja dengan Anda.","Saya benci bekerja.","Saya pensiun.","Anda dipecat.","pleasure."),
+]), quiz=mk([
+ ("\"Headquarters\" =","kantor pusat","cabang","gudang","toko","headquarters."),
+ ("\"Client\" =","klien","kolega","tetangga","guru","client."),
+ ("\"Partner\" =","mitra","musuh","tamu","anak","partner."),
+ ("\"Board of directors\" =","dewan direksi","papan tulis","meja rapat","kartu nama","board."),
+ ("\"Founder\" =","pendiri","pelanggan","tamu","magang","founder."),
+ ("\"Ex-colleague\" =","mantan rekan kerja","rekan baru","atasan","klien","ex."),
+ ("\"Freelancer\" =","pekerja lepas","pegawai tetap","magang","pemilik","freelancer."),
+ ("\"Permanent\" =","tetap","sementara","baru","lama","permanent."),
+]))

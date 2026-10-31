@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"I am good ___ working with people.\"","at","on","in","to","good at."),
+ ("\"I'm passionate ___ teaching.\"","about","at","on","for to","passionate about."),
+ ("\"I have been working here ___ 2021.\"","since","for","ago","during","since."),
+ ("\"Why did you leave your last job?\" jawaban sopan:","I wanted new challenges.","My boss was awful.","I hated it.","Nobody liked me.","tactful."),
+ ("\"Where do you see yourself in five years?\" menanyakan...","rencana karier","alamat","umur","hobi","five years."),
+ ("\"What motivates you?\" menanyakan...","motivasi","gaji","umur","alamat","motivates."),
+ ("\"Describe a challenge you faced.\" meminta...","contoh pengalaman","uang","izin","nomor telepon","challenge."),
+ ("\"I handled it by staying calm.\" tense:","simple past","present perfect","future","present","handled."),
+ ("\"Team-oriented\" =","mengutamakan kerja tim","egois","pemalu","lambat","team."),
+ ("\"Detail-oriented\" =","teliti","ceroboh","pemalas","pemarah","detail."),
+ ("\"Deadline-driven\" =","fokus pada tenggat","suka libur","suka tidur","pelupa","deadline."),
+ ("\"I'm flexible with working hours.\" =","Jam kerja saya fleksibel.","Saya tidak mau bekerja.","Saya menolak jam kerja.","Saya lembur selamanya.","flexible."),
+ ("\"Sincerely interested\" =","benar-benar tertarik","tidak tertarik","bosan","marah","sincerely."),
+ ("\"Follow-up email\" setelah wawancara =","email lanjutan/terima kasih","email spam","email marah","email palsu","follow-up."),
+]), quiz=mk([
+ ("\"Candidate\" =","kandidat","atasan","tamu","tetangga","candidate."),
+ ("\"Hiring manager\" =","manajer perekrutan","manajer keuangan","manajer toko","manajer gudang","hiring."),
+ ("\"Job offer\" =","tawaran kerja","tawaran makan","tawaran liburan","tawaran sewa","offer."),
+ ("\"Accept\" =","menerima","menolak","menunda","menjual","accept."),
+ ("\"Decline\" =","menolak (sopan)","menerima","menunda","menjual","decline."),
+ ("\"Negotiate\" =","bernegosiasi","bertengkar","berlari","berhenti","negotiate."),
+ ("\"Benefits\" (kerja) =","tunjangan","hukuman","tugas","jam","benefits."),
+ ("\"Starting date\" =","tanggal mulai","tanggal lahir","tanggal libur","tanggal gaji","starting."),
+]))

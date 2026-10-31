@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"The elephant has a long ___.\"","trunk","wing","fin","shell","trunk = belalai."),
+ ("\"Birds have ___.\"","wings","fins","horns","gills","wings."),
+ ("\"Fish live in ___.\"","water","trees","sand","caves only","water."),
+ ("\"The tiger is a ___ animal.\"","wild","pet","domestic","tiny","wild."),
+ ("\"My mother is kind. She is very ___.\"","generous","selfish","rude","lazy","kind."),
+ ("\"The soup is hot. It is not ___.\"","cold","spicy","salty","sweet","hot >< cold."),
+ ("\"The cat is ___ the box.\"","in","at","by","to","in."),
+ ("\"She wears a ___ dress.\" (merah)","red","read","rad","rid","red."),
+ ("Kata sifat untuk benda yang sangat kecil:","tiny","huge","giant","heavy","tiny."),
+ ("Kalimat deskriptif:","The lake is calm and clear.","Go to the lake.","I went to the lake.","Will you go to the lake?","descriptive."),
+ ("\"Has\" dipakai dengan...","she","they","we","you","has."),
+ ("Kata \"beautiful\" adalah...","adjective","noun","verb","adverb","adjective."),
+ ("\"A pair of eyes\" artinya...","sepasang mata","satu mata","tiga mata","mata buta","pair."),
+ ("\"Its fur is soft.\" 'Its' =","miliknya (benda/hewan)","milik mereka","milik kami","milik saya","its."),
+]), quiz=mk([
+ ("\"Wings\" =","sayap","kaki","ekor","sirip","wings."),
+ ("\"Tail\" =","ekor","telinga","tanduk","paruh","tail."),
+ ("\"Beak\" =","paruh","bulu","kuku","taring","beak."),
+ ("\"Fur\" =","bulu hewan","kulit","kuku","tanduk","fur."),
+ ("\"Peaceful\" =","damai","bising","ramai","gelap","peaceful."),
+ ("\"Crowded\" =","padat","sepi","bersih","luas","crowded."),
+ ("\"Dusty\" =","berdebu","bersih","basah","harum","dusty."),
+ ("\"Fragrant\" =","harum","busuk","pahit","kasar","fragrant."),
+]))

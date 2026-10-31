@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"I'm sorry to hear ___ the problem.\"","about","at","to","of in","hear about."),
+ ("\"We'll look ___ it immediately.\"","into","at to","on","for","look into."),
+ ("\"I'd like to make a complaint ___ the service.\"","about","for","at","to","complain about."),
+ ("\"Your satisfaction is our priority.\" =","Kepuasan Anda prioritas kami.","Kami puas.","Kami sibuk.","Kami libur.","satisfaction."),
+ ("\"We'll do our best to resolve it.\" =","Kami akan berusaha menyelesaikannya.","Kami lupa.","Kami menolak.","Kami pulang.","resolve."),
+ ("\"I assure you that ...\" =","Saya jamin bahwa ...","Saya takut bahwa ...","Saya lupa bahwa ...","Saya minta bahwa ...","assure."),
+ ("\"We value your feedback.\" =","Kami menghargai masukan Anda.","Kami menjual masukan.","Kami menolak masukan.","Kami lupa masukan.","value."),
+ ("\"Please accept our sincere apologies.\" =","Mohon terima permintaan maaf tulus kami.","Mohon bayar.","Mohon pergi.","Mohon tunggu.","sincere."),
+ ("\"Out of stock\" =","stok habis","stok banyak","stok baru","stok murah","stock."),
+ ("\"Back-order\" =","pesanan tertunda menunggu stok","pesanan batal","pesanan cepat","pesanan gratis","back-order."),
+ ("\"Terms and conditions\" =","syarat dan ketentuan","tanggal dan waktu","harga dan diskon","nama dan alamat","terms."),
+ ("\"Return policy\" =","kebijakan pengembalian","kebijakan harga","kebijakan gaji","kebijakan libur","return."),
+ ("\"Overcharged\" =","ditagih berlebih","ditagih kurang","dibayar","gratis","overcharged."),
+ ("\"Faulty\" =","cacat/rusak","bagus","baru","murah","faulty."),
+]), quiz=mk([
+ ("\"Hotline\" =","saluran bantuan","saluran air","jalan raya","kabel","hotline."),
+ ("\"Helpdesk\" =","meja bantuan","meja makan","meja rapat","meja tulis","helpdesk."),
+ ("\"Support ticket\" =","tiket dukungan","tiket konser","tiket pesawat","tiket parkir","ticket."),
+ ("\"Resolution time\" =","waktu penyelesaian","waktu istirahat","waktu libur","waktu makan","resolution."),
+ ("\"Satisfaction\" =","kepuasan","kekecewaan","kemarahan","kebosanan","satisfaction."),
+ ("\"Loyal customer\" =","pelanggan setia","pelanggan baru","pelanggan marah","pelanggan palsu","loyal."),
+ ("\"Discount\" =","diskon","pajak","denda","bonus","discount."),
+ ("\"Voucher\" =","voucer/kupon","kartu nama","faktur","tiket","voucher."),
+]))

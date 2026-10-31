@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"Wash your hands.\" adalah teks...","instruksi","narasi","berita","puisi","instruction."),
+ ("\"Keep quiet\" di perpustakaan adalah...","aturan","iklan","dongeng","berita","rule."),
+ ("\"Lost: a black wallet\" adalah...","pengumuman kehilangan","iklan makanan","puisi","cerita","lost."),
+ ("\"Found: a blue umbrella\" artinya...","ditemukan payung biru","hilang payung biru","dijual payung","disewa payung","found."),
+ ("\"Open daily 8–5\" artinya...","buka setiap hari 8–5","tutup setiap hari","buka Minggu saja","buka malam","daily."),
+ ("\"Closed on holidays\" artinya...","tutup pada hari libur","buka pada hari libur","buka 24 jam","gratis","closed."),
+ ("\"Fragile\" pada paket artinya...","mudah pecah","berat","basah","mahal","fragile."),
+ ("\"Handle with care\" artinya...","tangani dengan hati-hati","lempar","jatuhkan","jual","care."),
+ ("\"Keep dry\" artinya...","jaga tetap kering","basahi","panaskan","buka","dry."),
+ ("\"Out of order\" artinya...","rusak/tidak berfungsi","rapi","baru","gratis","out of order."),
+ ("\"Staff only\" artinya...","khusus karyawan","khusus tamu","gratis","umum","staff."),
+ ("\"Wait here\" artinya...","tunggu di sini","pergi dari sini","masuk","keluar","wait."),
+ ("\"Mind the gap\" artinya...","waspadai celah","tutup pintu","nyalakan lampu","antri","gap."),
+ ("\"Fasten your seatbelt\" artinya...","kenakan sabuk pengaman","buka pintu","matikan mesin","parkir","seatbelt."),
+]), quiz=mk([
+ ("\"Entrance\" =","pintu masuk","pintu keluar","lift","tangga","entrance."),
+ ("\"Emergency exit\" =","pintu darurat","toilet","lift","kantin","emergency."),
+ ("\"Information\" =","informasi","hiburan","makanan","kamar","information."),
+ ("\"Reception\" =","resepsi/penerimaan","dapur","parkir","gudang","reception."),
+ ("\"Ticket office\" =","loket tiket","toilet","kantin","parkir","ticket."),
+ ("\"Cashier\" =","kasir","satpam","sopir","guru","cashier."),
+ ("\"Push\" =","dorong","tarik","buka","tutup","push."),
+ ("\"Slippery\" =","licin","kering","panas","tajam","slippery."),
+]))

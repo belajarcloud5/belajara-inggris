@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"The word 'they' in line 2 refers to ...\" meminta...","rujukan kata ganti","sinonim","tujuan penulis","judul","reference."),
+ ("Pilihan jawaban dengan \"all\" atau \"none\" biasanya...","terlalu ekstrem","pasti benar","pasti salah","tak penting","extreme."),
+ ("\"The passage is mainly about ...\" menanyakan...","gagasan utama","tahun terbit","penulis","jumlah kata","mainly."),
+ ("\"It can be inferred that ...\" menanyakan...","kesimpulan tersirat","fakta tersurat","judul","tanggal","inferred."),
+ ("\"According to the passage ...\" menanyakan...","informasi tersurat","pendapat sendiri","dugaan","tebakan","according."),
+ ("\"Which statement is NOT true?\" mencari...","pernyataan salah","pernyataan benar","semua benar","judul","NOT."),
+ ("\"The author mentions ... to show ...\" menanyakan...","tujuan penulis","umur penulis","tahun","tempat","mentions."),
+ ("\"Paraphrase\" =","menyatakan ulang dengan kata lain","menyalin persis","menghapus","menerjemah","paraphrase."),
+ ("\"Context\" =","konteks","isi","akhir","judul","context."),
+ ("\"Passage\" =","bacaan","kalimat","kata","huruf","passage."),
+ ("\"Tone: sarcastic\" =","nada menyindir","nada gembira","nada sedih","nada formal","sarcastic."),
+ ("\"Tone: optimistic\" =","nada optimis","nada pesimis","nada marah","nada bosan","optimistic."),
+ ("\"Tone: critical\" =","nada kritis","nada memuji","nada lucu","nada tenang","critical."),
+ ("\"Objective\" (sikap penulis) =","objektif","subjektif","marah","sedih","objective."),
+]), quiz=mk([
+ ("\"Imply\" =","menyiratkan","menyatakan jelas","menghapus","melarang","imply."),
+ ("\"Assume\" =","berasumsi","memastikan","menolak","menghapus","assume."),
+ ("\"Argue\" =","berargumen","menyetujui","menolak","menutup","argue."),
+ ("\"Emphasize\" =","menekankan","mengabaikan","menghapus","menunda","emphasize."),
+ ("\"Contradict\" =","bertentangan dengan","mendukung","mengulang","menutup","contradict."),
+ ("\"Illustrate\" =","menggambarkan/mencontohkan","menghapus","menolak","menunda","illustrate."),
+ ("\"Criticize\" =","mengkritik","memuji","menghapus","menunda","criticize."),
+ ("\"Conclude\" =","menyimpulkan","membuka","memulai","menolak","conclude."),
+]))

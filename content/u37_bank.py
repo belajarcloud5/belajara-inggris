@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"We urge everyone to ___ plastic bags.\"","avoid","avoids","avoiding","avoided","urge to V1."),
+ ("\"It is high time we ___ action.\"","took","take","taking","takes","high time + V2."),
+ ("\"Schools ought to ___ recycling.\"","teach","teaches","teaching","taught","ought to + V1."),
+ ("\"Let's join the clean-up!\" adalah...","ajakan","larangan","pertanyaan","laporan","let's."),
+ ("\"We urge ...\" =","kami mengimbau ...","kami menolak ...","kami lupa ...","kami jual ...","urge."),
+ ("\"It is time to act.\" =","Saatnya bertindak.","Waktunya tidur.","Waktunya makan.","Waktunya pulang.","time."),
+ ("\"If we don't act now, ...\" menyatakan...","peringatan","pujian","salam","terima kasih","warning."),
+ ("\"Otherwise\" =","jika tidak","oleh karena itu","selain itu","pertama","otherwise."),
+ ("\"Seriously\" =","dengan serius","dengan lucu","dengan santai","jarang","seriously."),
+ ("\"Take responsibility\" =","bertanggung jawab","lari dari tugas","menyalahkan","menolak","responsibility."),
+ ("\"Community\" =","komunitas","pemerintah","pasar","kantor","community."),
+ ("\"Volunteer\" =","sukarelawan","pegawai","pembeli","penjual","volunteer."),
+ ("\"Donate\" =","menyumbang","menjual","membeli","meminjam","donate."),
+ ("\"Preserve\" =","melestarikan","menghancurkan","menjual","membuang","preserve."),
+]), quiz=mk([
+ ("\"Endangered\" =","terancam punah","terkenal","besar","cepat","endangered."),
+ ("\"Extinct\" =","punah","hidup","muda","liar","extinct."),
+ ("\"Deforestation\" =","penggundulan hutan","penghijauan","pertanian","pariwisata","deforestation."),
+ ("\"Global warming\" =","pemanasan global","musim dingin","hujan","angin","global."),
+ ("\"Renewable energy\" =","energi terbarukan","energi habis","energi mahal","energi lama","renewable."),
+ ("\"Pollute\" =","mencemari","membersihkan","menanam","menjual","pollute."),
+ ("\"Conserve\" =","menghemat/melestarikan","menghabiskan","merusak","menjual","conserve."),
+ ("\"Sustainable\" =","berkelanjutan","sementara","mahal","berbahaya","sustainable."),
+]))

@@ -1,0 +1,26 @@
+from qk import mk
+BANK = dict(practice=mk([
+ ("\"Would you mind ___ the report?\"","sending","send","to send","sent","mind + V-ing."),
+ ("\"I look forward to ___ you next week.\"","seeing","see","saw","seen","to + V-ing."),
+ ("\"Thank you for your prompt ___.\"","reply","replying","replied","replies","noun."),
+ ("\"Sales ___ by 12% last quarter.\"","rose","rise","risen","rising","past."),
+ ("\"The meeting has been moved ___ Thursday.\"","to","at","in","by","moved to."),
+ ("\"We apologize ___ the delay.\"","for","at","to","of","apologize for."),
+ ("\"I'm calling to ___ my appointment.\"","confirm","confirms","confirmed","confirming","to V1."),
+ ("\"Please find the invoice ___.\"","attached","attach","attaching","attaches","attached."),
+ ("\"Let me know ___ you need anything.\"","if","that","who","what","if."),
+ ("\"We are on ___ to meet the deadline.\"","track","road","way out","line","on track."),
+ ("\"Thank you for your ___ during the presentation.\"","attention","attend","attentive","attending","attention."),
+ ("\"Could you speak ___ slowly, please?\"","more","most","much more","many","comparative."),
+ ("\"She was ___ to the manager last year.\" (promote)","promoted","promote","promoting","promotes","passive."),
+ ("\"We'd like to ___ a business trip to Medan.\"","arrange","arranging","arranged","arranges","like to V1."),
+]), quiz=mk([
+ ("\"Quotation\" (harga) =","penawaran harga","kutipan buku","pesanan","faktur","quotation."),
+ ("\"Purchase order\" =","pesanan pembelian","faktur","struk","brosur","PO."),
+ ("\"Supplier\" =","pemasok","pelanggan","karyawan","tamu","supplier."),
+ ("\"Shipment\" =","pengiriman barang","pembayaran","pembelian","penjualan","shipment."),
+ ("\"Tax\" =","pajak","bonus","gaji","diskon","tax."),
+ ("\"Contract\" =","kontrak","kartu","jadwal","tiket","contract."),
+ ("\"Negotiation\" =","negosiasi","pertengkaran","penolakan","liburan","negotiation."),
+ ("\"Agreement\" =","persetujuan","penolakan","pertengkaran","jadwal","agreement."),
+]))
