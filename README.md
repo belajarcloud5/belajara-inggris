@@ -76,3 +76,7 @@ Tombol 🔊 pada bacaan berdialog membacakan tiap pembicara dengan suara sesuai 
 ## Preposisi on, in, at
 - **Materi**: `at, on, in` untuk waktu ada di unit 3, diulang di unit 46 dan 53. Ditambah tiga blok lewat `content/uNN_lessonx.py` (disisipkan `build.py` setelah blok grammar terakhir): unit 4 (bagian hari dan pengecualian: in the morning, at night, on Sunday morning, tanpa preposisi setelah every/next/last), unit 5 (at, in, on untuk tempat: at school, in the classroom, on the second floor), dan unit 9 (letak, jalan, dan kendaraan: on the left, at the corner, on foot, by bus vs on the bus).
 - **Cerita ke-4** (`content/uNN_read5.py`, `READ5`, bacaan ke-6 per unit): percakapan dengan fokus preposisi sesuai topik unit (on, in, at, from, to, by, for, since, until, into, dan preposisi tetap seperti good at, interested in, responsible for). Total bacaan 366 dengan 2.196 pertanyaan.
+
+## Articles (a, an, the)
+- **Materi** lewat `content/uNN_lessonx.py`: unit 5 (inti: a/an dari bunyi, the untuk benda tertentu, tanpa article, a lalu the), unit 8 (makanan dan waktu makan tanpa article), unit 9 (the untuk tempat vs kegiatan: go to school, at home), unit 12 (the untuk superlatif, urutan, benda unik), unit 20 (article untuk menyebut satu jenis di report text), unit 31 (a lalu the dalam cerita), dan unit 46 (ringkasan dan jebakan ujian: profesi, per, What a, nama sungai dan negara, bahasa dan olahraga).
+- **Soal latihan**: `content/uNN_art.py` (`ART`, suffix `art`) di unit yang sama, 87 soal (pilihan ganda, isian, susun kalimat).

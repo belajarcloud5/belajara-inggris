@@ -12,4 +12,15 @@ LESSONX = [
             dict(en="[[I go to school by bike, but my sister goes on foot.]]", id="Aku ke sekolah naik sepeda, tetapi kakakku berjalan kaki.")]),
  dict(t="warn", title="by bus atau on the bus?",
   text="**by bus / by car / by train** dipakai untuk cara bepergian, tanpa a atau the: [[I go by bus.]] Untuk posisi kita memakai **on the bus** atau **in the car**: [[I am on the bus.]] Dan katakan **on foot**, bukan ~~by foot~~."),
+
+ dict(t="grammar", title="7. the dan tanpa the untuk tempat",
+  text="Tempat umum di kota biasanya memakai **the** karena yang dimaksud tempat tertentu. Tetapi beberapa tempat tidak memakai the jika yang disebut adalah **kegiatannya**.",
+  table=[["Pola", "Contoh", "Artinya"],
+         ["**the** + tempat tertentu", "[[The bank is next to the post office.]]", "Bank dan kantor pos yang dimaksud jelas"],
+         ["**tanpa the** (kegiatan)", "[[I go to school by bus.]]", "pergi bersekolah"],
+         ["**the** (gedungnya)", "[[I go to the school to meet the principal.]]", "pergi ke gedung sekolah"],
+         ["**tanpa the**", "[[She is at home.]] / [[He is in hospital.]]", "di rumah / sedang dirawat (in hospital: Inggris Britania; Amerika: in the hospital)"],
+         ["**tanpa the**", "[[Go home.]] / [[go to bed]]", "pulang / pergi tidur"]],
+  examples=[dict(en="[[Excuse me, where is the station?]]", id="Permisi, di mana stasiunnya?"),
+            dict(en="[[My mother is at home. My father is at the market.]]", id="Ibuku di rumah. Ayahku di pasar.")]),
 ]
