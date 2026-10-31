@@ -463,3 +463,16 @@ function qMatch(q, box, finish) {
   }));
 }
 })();
+
+// ---------- tombol kembali ke atas ----------
+(() => {
+  const b = document.getElementById('totop');
+  if (!b) return;
+  const upd = () => b.classList.toggle('show', window.scrollY > 400);
+  window.addEventListener('scroll', upd, { passive: true });
+  b.addEventListener('click', () => {
+    const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: calm ? 'auto' : 'smooth' });
+  });
+  upd();
+})();

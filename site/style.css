@@ -169,3 +169,8 @@ input.blank.bad{border-color:var(--bad);background:var(--bad-soft)}
 .lprog{display:block;height:10px;background:var(--line);border-radius:999px;overflow:hidden;margin-top:auto}
 .lprog i{display:block;height:100%;background:var(--ok);border-radius:999px}
 .lnav{justify-content:space-between;margin-top:24px}
+
+.totop{position:fixed;right:16px;bottom:16px;width:48px;height:48px;border-radius:50%;border:0;background:var(--brand);color:var(--brand-ink);font-size:1.4rem;font-weight:800;line-height:1;cursor:pointer;box-shadow:var(--shadow);opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .2s,transform .2s,visibility .2s;z-index:50}
+.totop.show{opacity:1;visibility:visible;transform:none}
+.totop:focus-visible{outline:3px solid var(--tip);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.totop{transition:none}}
