@@ -53,7 +53,10 @@ READ = [{'id': 'Banyak pelajar bahasa Inggris membuat kesalahan yang sama berula
           'type': 'mcq'},
          {'answer': 0,
           'exp': 'Teks: "they feel calmer and more confident."',
-          'options': ['They feel calmer and more confident.', 'They feel tired.', 'They study longer.', 'They skip class.'],
+          'options': ['They feel calmer and more confident.',
+                      'They feel tired because they study much longer.',
+                      'They study longer, so they have little free time.',
+                      'They skip class because they feel too confident.'],
           'q': 'What is the result of good time management?',
           'type': 'mcq'}],
   'text': 'Students who manage their time well usually achieve better results, even though they do not necessarily study longer. The key is to set '

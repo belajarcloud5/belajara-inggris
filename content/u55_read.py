@@ -48,7 +48,10 @@ READ = [{'id': 'Penjualan naik stabil pada semester pertama tahun ini. Pada Janu
           'type': 'mcq'},
          {'answer': 0,
           'exp': 'Teks: "adding two more staff members during peak hours."',
-          'options': ['Adding two more staff during peak hours', 'Closing Branch D', 'Lowering prices', 'Moving Branch D'],
+          'options': ['Adding two more staff during peak hours',
+                      'Closing Branch D and moving the staff away',
+                      'Lowering prices at all four of the branches',
+                      'Moving Branch D to a new and bigger building'],
           'q': 'What is recommended?',
           'type': 'mcq'}],
   'text': 'This bar chart shows customer satisfaction at four branches. Branch A scored the highest at 92 percent, followed by Branch C at 85 '

@@ -19,7 +19,10 @@ READ = [{'id': 'Dokter: Selamat pagi. Ada keluhan apa?\n'
           'type': 'mcq'},
          {'answer': 0,
           'exp': 'Doctor: "Come back if you don\'t feel better in three days."',
-          'options': ["If he doesn't feel better in three days", 'Tomorrow', 'Next month', 'Never'],
+          'options': ["If he doesn't feel better in three days",
+                      'If he gets a fever again tomorrow morning',
+                      'When the medicine is finished next month',
+                      'He does not need to come back at all'],
           'q': 'When should Budi come back?',
           'type': 'mcq'}],
   'text': "Doctor: Good morning. What's the matter?\n"
