@@ -234,11 +234,12 @@ function renderKamus(words) {
 // ---------- ulangi yang salah ----------
 const wrongCount = () => Object.keys(prog.wrong).length;
 async function renderRetry() {
-  const ids = [...new Set(Object.values(prog.wrong))];
+  const ids = [...new Set(Object.values(prog.wrong))].filter(id => id !== 'ulang');   // 'ulang' = sisa data dari bug lama
+  for (const k of Object.keys(prog.wrong)) if (prog.wrong[k] === 'ulang') delete prog.wrong[k];
   const pool = [];
   for (const id of ids) {
     const d = await getJSON(`data/${id}.json`);
-    for (const q of d.practice.concat(d.quiz)) if (q.k && prog.wrong[q.k]) pool.push(q);
+    for (const q of d.practice.concat(d.quiz)) if (q.k && prog.wrong[q.k] === id) pool.push({ ...q, unit: id });
   }
   const seen = new Set(), qs = pool.filter(q => !seen.has(q.k) && seen.add(q.k));
   const live = new Set(qs.map(q => q.k));
@@ -328,7 +329,7 @@ function runner(pane, d, mode) {
       <div class="card"><div id="qbox"></div><div id="fb"></div></div>`;
     renderQ(q, $('#qbox'), (ok, shown) => {
       if (ok) score++; else wrong.push({ q, shown });
-      if (q.k) { if (ok) delete prog.wrong[q.k]; else prog.wrong[q.k] = d.id; saveProg(); }
+      if (q.k) { if (ok) delete prog.wrong[q.k]; else prog.wrong[q.k] = q.unit || d.id; saveProg(); }
       const last = i === qs.length - 1;
       $('#fb').innerHTML = `<div class="fb ${ok ? 'ok' : 'bad'}"><b class="h">${ok ? '✅ Benar! Hebat!' : '❌ Belum tepat'}</b>${ok ? '' : `<div>Jawaban yang benar: <b>${esc(correctText(q))}</b></div>`}<div>${fmt(q.exp)}</div></div>
         <div class="nextrow"><button class="btn" id="next">${last ? 'Lihat hasil' : 'Lanjut →'}</button></div>`;

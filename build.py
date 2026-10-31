@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Bangun site/data/*.json dari content/*.py (hanya stdlib). Pakai: python3 build.py"""
-import importlib.util, json, os, sys
+import importlib.util, json, os, re, sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(ROOT, "content"))
@@ -52,6 +52,68 @@ def dedupe(uid, kind, qs):
     return out
 
 
+
+GENERIC = {"word.", "complete.", "tr.", "ant.", "fix.", "odd.", "syn.", "dialog.", "situation.", "Sopan.", "form.", "past."}
+TYPE_RULE = {
+    "Type 1.": "Conditional type 1: if + present simple, ... will + kata kerja dasar.",
+    "Type 2.": "Conditional type 2: if + past simple, ... would + kata kerja dasar.",
+    "Type 3.": "Conditional type 3: if + past perfect, ... would have + V3.",
+    "past.": "Kejadian sudah selesai, jadi memakai past simple.",
+}
+
+
+def answer_text(q):
+    t = q["type"]
+    if t in ("mcq", "listen"):
+        return q["options"][q["answer"]]
+    if t == "fill":
+        return q["answers"][0]
+    if t == "order":
+        return q["answer"]
+    return None
+
+
+def enrich_exp(q):
+    """Penjelasan yang terlalu pendek ('word.', 'fix.', ...) diganti penjelasan yang memuat jawaban/kalimat lengkapnya."""
+    e = q["exp"].strip()
+    if len(e) > 12:
+        return
+    a = answer_text(q)
+    if not a:
+        return
+    qs = q.get("q", "")
+    m = re.search(r'"([^"]+)"', qs)
+    w = m.group(1) if m else ""
+    lengkap = None
+    dot = "" if a[-1] in ".?!" else "."
+    if "___" in qs and q["type"] in ("mcq", "listen", "fill"):
+        mm = re.search(r'"([^"]*___[^"]*)"', qs)
+        if mm and " – " not in qs:
+            lengkap = mm.group(1).replace("___", a)
+    if e == "word." and w:
+        out = f'"{w}" dalam bahasa Inggris: **{a}**{dot}'
+    elif e == "tr.":
+        out = f"Terjemahan yang tepat: **{a}**{dot}"
+    elif e == "ant." and w:
+        out = f'Antonim (lawan kata) "{w}" adalah **{a}**{dot}'
+    elif e == "syn." and w:
+        out = f'Sinonim (kata yang artinya hampir sama) "{w}" adalah **{a}**{dot}'
+    elif e == "form." and w:
+        out = f'Bentuk yang benar dari "{w}": **{a}**{dot}'
+    elif e == "fix." and w and w != a:
+        out = f"Salah: ~~{w}~~ → Benar: **{a}**{dot}"
+    elif e == "dialog.":
+        out = f"Balasan yang wajar untuk pertanyaan itu: **{a}**{dot}"
+    elif e == "odd." and re.search(r"bukan|tidak sama|kecuali|ganjil|SALAH", qs) and q["type"] == "mcq":
+        lain = " / ".join(o for i, o in enumerate(q["options"]) if i != q["answer"])
+        out = f"Yang berbeda: **{a}**{dot} Pilihan lain ({lain}) satu kelompok."
+    elif lengkap:
+        out = (TYPE_RULE.get(e, e) + " " if e in TYPE_RULE else (e + " " if e not in GENERIC else "")) + f"Kalimat lengkap: **{lengkap}**"
+    else:
+        out = (TYPE_RULE[e] + " " if e in TYPE_RULE else (e + " " if e not in GENERIC else "")) + f"Jawaban yang tepat: **{a}**{dot}"
+    q["exp"] = out
+
+
 def check_q(uid, kind, i, q):
     where = f"{uid}.{kind}[{i}]"
     t = q.get("type")
@@ -95,6 +157,7 @@ def main():
             for kind in ("practice", "quiz"):
                 for q in d[kind]:
                     q["k"] = qid(q)
+                    enrich_exp(q)
             for blk in d["lesson"]:
                 if blk.get("t") == "vocab":
                     for it in blk["items"]:
