@@ -206,11 +206,14 @@ def main():
                     check_q(u["id"], kind, i, q)
             rp = os.path.join(ROOT, "content", f"{u['id']}_read.py")
             d["read"] = load(rp).READ if os.path.isfile(rp) else []
+            rp2 = os.path.join(ROOT, "content", f"{u['id']}_read2.py")
+            if os.path.isfile(rp2):  # cerita tambahan dengan soal beragam (fokus tenses)
+                d["read"] = d["read"] + load(rp2).READ2
             for pi, ps in enumerate(d["read"]):
                 assert ps.get("title") and ps.get("text") and ps.get("id"), f"{u['id']}.read[{pi}]: judul/teks/terjemahan kosong"
-                assert 3 <= len(ps["qs"]) <= 6, f"{u['id']}.read[{pi}]: butuh 3 sampai 6 pertanyaan"
+                assert 3 <= len(ps["qs"]) <= 8, f"{u['id']}.read[{pi}]: butuh 3 sampai 8 pertanyaan"
                 for qi, q in enumerate(ps["qs"]):
-                    assert q["type"] == "mcq", f"{u['id']}.read[{pi}][{qi}]: hanya mcq"
+                    assert q["type"] in ("mcq", "fill", "order", "match"), f"{u['id']}.read[{pi}][{qi}]: tipe {q['type']} tidak didukung di bacaan"
                     check_q(u["id"], f"read{pi}", qi, q)
             assert len(d["quiz"]) >= 8, f"{u['id']}: kuis minimal 8 soal"
             for kind in ("practice", "quiz"):

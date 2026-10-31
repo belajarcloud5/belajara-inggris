@@ -1,0 +1,51 @@
+READ2 = [{'focus': 'Present perfect dan simple past untuk pengalaman',
+  'id': 'Rizky punya wawancara besok untuk pekerjaan desainer junior. Dia sudah mempersiapkan diri dengan baik. Dia sudah membaca tentang perusahaan '
+        'itu dan sudah berlatih pertanyaan umum bersama kakaknya.\n'
+        'Kemarin, dia memperbarui CV-nya dan menambahkan proyek yang dia selesaikan tahun lalu. Dia akan memberi tahu pewawancara bahwa dia sudah '
+        'mengerjakan lima proyek sejak 2022, dan bahwa dia belajar banyak keterampilan dari proyek-proyek itu. Dia gugup, tetapi dia yakin persiapan '
+        'yang baik membuat kesan yang baik.',
+  'qs': [{'answer': 0,
+          'exp': 'Teks: "a junior designer job".',
+          'options': ['Junior designer', 'Manager of a design department', 'Teacher at a primary school', 'Driver for a delivery company'],
+          'q': 'What job is Rizky applying for?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "Yesterday, he updated his CV".',
+          'options': ['He updated his CV.', 'He had the interview.', 'He moved house.', 'He quit his job.'],
+          'q': 'What did Rizky do yesterday?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Present perfect + since → pengalaman sampai sekarang.',
+          'options': ['He wants to show his experience up to now.',
+                      'He is telling a story that ended long ago.',
+                      'He is planning what he will do next year.',
+                      'He is giving an order to the interviewer.'],
+          'q': 'Why does Rizky say "he has worked on five projects since 2022"?',
+          'type': 'mcq'},
+         {'exp': 'Kosakata wawancara.',
+          'pairs': [['strength', 'kelebihan'], ['weakness', 'kelemahan'], ['experience', 'pengalaman'], ['salary', 'gaji']],
+          'q': 'Pasangkan istilah wawancara dengan artinya:',
+          'type': 'match'},
+         {'answers': ['has read'],
+          'exp': 'He + has + V3.',
+          'hint': 'h _ _ / r _ _ _',
+          'id': 'Lengkapi dengan present perfect:',
+          'q': 'Rizky ___ (read) about the company.',
+          'type': 'fill'},
+         {'answers': ['updated'],
+          'exp': 'Yesterday → simple past.',
+          'hint': 'u _ _ _ _ _ _',
+          'id': 'Lengkapi dengan simple past:',
+          'q': 'Yesterday, he ___ (update) his CV.',
+          'type': 'fill'},
+         {'answer': 'He has prepared well.',
+          'exp': 'has + V3.',
+          'extra': ['prepare'],
+          'q': 'Susun kalimat dari cerita: "Dia sudah mempersiapkan diri dengan baik."',
+          'type': 'order'}],
+  'text': 'Rizky has an interview tomorrow for a junior designer job. He has prepared well. He has read about the company and has practised common '
+          'questions with his sister.\n'
+          'Yesterday, he updated his CV and added a project that he completed last year. He will tell the interviewer that he has worked on five '
+          'projects since 2022, and that he learned many skills from them. He is nervous, but he believes that good preparation makes a good '
+          'impression.',
+  'title': 'Preparing for an Interview'}]

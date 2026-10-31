@@ -380,13 +380,13 @@ function renderRead(pane, d, idx) {
   const n = +idx;
   if (!(n >= 0 && n < d.read.length)) {
     pane.innerHTML = `<p class="lead">Baca teks pendek, lalu jawab pertanyaannya. Klik 🔊 untuk mendengarkan, dan buka terjemahan bila perlu.</p>
-      <div class="grid">${d.read.map((p, i) => `<a class="ucard" href="#/unit/${d.id}/read/${i}"><span class="no">BACAAN ${i + 1}</span><span class="t">${esc(p.title)}</span><span class="j">${p.qs.length} pertanyaan</span><span class="badge ${rs[i] >= 70 ? 'done' : ''}">${rs[i] == null ? 'Belum dicoba' : 'Terbaik ' + rs[i] + '%'}</span></a>`).join('')}</div>`;
+      <div class="grid">${d.read.map((p, i) => `<a class="ucard" href="#/unit/${d.id}/read/${i}"><span class="no">BACAAN ${i + 1}</span><span class="t">${esc(p.title)}</span>${p.focus ? `<span class="j">🕐 Fokus: ${esc(p.focus)}</span>` : ''}<span class="j">${p.qs.length} pertanyaan${p.qs.some(q => q.type !== 'mcq') ? ' · beragam' : ''}</span><span class="badge ${rs[i] >= 70 ? 'done' : ''}">${rs[i] == null ? 'Belum dicoba' : 'Terbaik ' + rs[i] + '%'}</span></a>`).join('')}</div>`;
     return;
   }
   const ps = d.read[n];
   const qs = shuffle(ps.qs);
   let i = 0, score = 0, wrong = [];
-  const textHtml = `<div class="card passage"><div class="dhead"><h3 style="margin:0">${esc(ps.title)}</h3><span><button class="btn ghost small" data-say="${esc(ps.text.replace(/\n+/g, ' '))}">🔊 Dengarkan</button> <button class="btn ghost small" id="trtog">Tampilkan terjemahan</button></span></div>
+  const textHtml = `<div class="card passage"><div class="dhead"><div><h3 style="margin:0">${esc(ps.title)}</h3>${ps.focus ? `<small class="hint">🕐 Fokus tenses: ${esc(ps.focus)}</small>` : ''}</div><span><button class="btn ghost small" data-say="${esc(ps.text.replace(/\n+/g, ' '))}">🔊 Dengarkan</button> <button class="btn ghost small" id="trtog">Tampilkan terjemahan</button></span></div>
     ${ps.text.split('\n').map(x => `<p>${esc(x)}</p>`).join('')}<div class="tr-box" id="trbox" hidden>${ps.id.split('\n').map(x => `<p>${esc(x)}</p>`).join('')}</div></div>`;
   function show() {
     if (i >= qs.length) return finish();
