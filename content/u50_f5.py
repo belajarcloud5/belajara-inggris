@@ -1,0 +1,18 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Bisakah Anda membantu saya?', '___ you help me, please? (bisakah)', 'Could/Can', 'Could you...?'),
+ ('Apakah Anda keberatan jika saya membuka jendela?', 'Would you ___ if I opened the window? (keberatan)', 'mind', 'Would you mind if...'),
+ ('Bolehkah saya meminjam pulpen Anda?', '___ I borrow your pen? (bolehkah)', 'May', 'May I...?'),
+ ('Apakah ada yang bisa saya bantu?', 'Is there anything I can ___ for you? (lakukan)', 'do', 'anything I can do.'),
+ ('Dengan senang hati.', 'With ___. (senang hati)', 'pleasure', 'With pleasure.'),
+ ('Maaf, saya tidak bisa membantu hari ini.', "I'm afraid I ___ help today. (tidak bisa)", "can't/cannot", "I'm afraid I can't."),
+ ('Saya akan sangat berterima kasih jika Anda dapat mengirimnya.',
+  'I would be ___ if you could send it. (berterima kasih)',
+  'grateful',
+  'grateful.'),
+ ('Mohon tunggu sebentar.', 'Please ___ a moment. (tunggu)', 'wait', 'Please wait.'),
+ ('Maukah Anda bergabung dengan kami?', 'Would you ___ to join us? (mau)', 'like', 'Would you like to.'),
+ ('Silakan ambil kopi.', 'Please ___ yourself to some coffee. (ambil sendiri)', 'help', 'help yourself.')]), quiz=mkf([('Tidak masalah.', 'No ___. (masalah)', 'problem', 'No problem.'),
+ ('Terima kasih atas bantuan Anda.', 'Thank you for your ___. (bantuan)', 'help/assistance', 'help.'),
+ ('Bisakah Anda mengulanginya?', 'Could you ___ that, please? (mengulangi)', 'repeat', 'repeat.'),
+ ('Saya khawatir saya sedang sibuk.', "I'm afraid I'm ___. (sibuk)", 'busy', 'busy.'),
+ ('Maaf mengganggu.', 'Sorry to ___ you. (mengganggu)', 'bother/disturb', 'bother.')]))

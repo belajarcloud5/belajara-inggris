@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Aku bisa berenang.', 'I ___ swim. (bisa)', 'can', 'can = bisa.'),
+ ('Dia tidak bisa menyanyi.', 'She ___ sing. (tidak bisa)', "can't/cannot", "can't = tidak bisa."),
+ ('Bisakah kamu bermain gitar?', '___ you play the guitar?', 'Can', 'Pertanyaan: Can you ...?'),
+ ('Ya, aku bisa.', 'Yes, I ___.', 'can', 'Jawaban singkat: Yes, I can.'),
+ ('Tidak, aku tidak bisa.', 'No, I ___.', "can't", "No, I can't."),
+ ('Aku suka membaca buku.', 'I like ___ books. (membaca)', 'reading', 'like + V-ing.'),
+ ('Dia suka menggambar.', 'She likes ___. (menggambar)', 'drawing', 'like + V-ing.'),
+ ('Kami suka bermain sepak bola.', 'We like ___ football. (bermain)', 'playing', 'like + V-ing.'),
+ ('Hobiku memasak.', 'My hobby is ___. (memasak)', 'cooking', 'hobby + V-ing.'),
+ ('Dia suka berenang.', 'He likes ___. (berenang)', 'swimming', 'swim → swimming (huruf m ganda).')]), quiz=mkf([('Burung bisa terbang.', 'Birds ___ fly.', 'can', 'can untuk kemampuan.'),
+ ('Ikan tidak bisa berjalan.', 'Fish ___ walk.', "can't/cannot", "can't = tidak bisa."),
+ ('Hobimu apa?', 'What is your ___?', 'hobby', 'hobby = hobi.'),
+ ('Aku tidak suka berlari.', "I don't like ___. (berlari)", 'running', 'run → running.'),
+ ('Dia bisa menari dengan baik.', 'She can dance ___. (dengan baik)', 'well', 'well = dengan baik.')]))

@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Aku akan membantumu.', 'I ___ help you. (akan)', 'will', 'will + kata kerja dasar.'),
+ ('Besok akan hujan.', 'It ___ rain tomorrow.', 'will', 'Prediksi: will.'),
+ ('Dia tidak akan datang.', 'She ___ come. (tidak akan)', "won't/will not", "will not = won't."),
+ ('Kami akan pergi ke Bali.', 'We are ___ to go to Bali.', 'going', 'be going to = rencana.'),
+ ('Aku akan belajar nanti malam.', 'I am going ___ study tonight.', 'to', 'going to + kata kerja dasar.'),
+ ('Dia akan membeli sepatu baru.', 'He is going to ___ new shoes. (membeli)', 'buy', 'going to + V1.'),
+ ('Apakah kamu akan datang?', '___ you come to the party?', 'Will', 'Will you ...?'),
+ ('Apakah dia akan pergi?', 'Is she ___ to go?', 'going', 'Is she going to ...?'),
+ ('Minggu depan kami akan berlibur.', 'We are going to have a holiday ___ week. (depan)', 'next', 'next week = minggu depan.'),
+ ('Aku akan menelepon besok.', 'I will call you ___. (besok)', 'tomorrow', 'tomorrow = besok.')]), quiz=mkf([('Mereka tidak akan terlambat.', 'They are not ___ to be late.', 'going', 'are not going to.'),
+ ('Mungkin akan cerah besok.', 'It will be ___ tomorrow. (cerah)', 'sunny', 'sunny = cerah.'),
+ ('Nanti aku antar kamu.', 'I ___ take you home. (akan, janji spontan)', 'will', 'Keputusan spontan → will.'),
+ ('Aku akan jadi dokter.', 'I am going to be a ___. (dokter)', 'doctor', 'doctor = dokter.'),
+ ('Tahun depan aku akan berumur tiga belas.', 'I will be thirteen ___ year.', 'next', 'next year = tahun depan.')]))

@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Kue itu dibuat oleh Ibu.', 'The cake is ___ by Mom. (dibuat)', 'made', 'be + V3: made.'),
+ ('Batik dibuat di Indonesia.', 'Batik ___ made in Indonesia.', 'is', 'Tunggal → is made.'),
+ ('Mobil-mobil itu diproduksi di pabrik.', 'The cars ___ made in a factory.', 'are', 'Jamak → are made.'),
+ ('Rumah itu dibangun pada tahun 1990.', 'The house ___ built in 1990.', 'was', 'Lampau tunggal → was built.'),
+ ('Surat-surat itu ditulis kemarin.', 'The letters ___ written yesterday.', 'were', 'Lampau jamak → were written.'),
+ ('Pintunya dibuka oleh penjaga.', 'The door was ___ by the guard. (dibuka)', 'opened', 'be + V3: opened.'),
+ ('Bahasa Inggris dipakai di banyak negara.', 'English ___ used in many countries.', 'is', 'is used.'),
+ ('Nasi dimakan setiap hari.', 'Rice is ___ every day. (dimakan)', 'eaten', 'eat → eaten.'),
+ ('Jendela itu dipecahkan oleh anak-anak.', 'The window was ___ by the boys. (dipecahkan)', 'broken', 'break → broken.'),
+ ('Lukisan itu dilukis oleh Raden Saleh.', 'The painting was ___ by Raden Saleh. (dilukis)', 'painted', 'paint → painted.')]), quiz=mkf([('Mereka diundang ke pesta.', 'They were ___ to the party. (diundang)', 'invited', 'be + V3: invited.'),
+ ('PR dikerjakan oleh siswa.', 'The homework is ___ by the students. (dikerjakan)', 'done', 'do → done.'),
+ ('Pesan itu dikirim kemarin.', 'The message was ___ yesterday. (dikirim)', 'sent', 'send → sent.'),
+ ('Kopi ditanam di Sumatra.', 'Coffee is ___ in Sumatra. (ditanam)', 'grown', 'grow → grown.'),
+ ('Kue itu tidak dimakan.', 'The cake was not ___. (dimakan)', 'eaten', 'was not + V3.')]))

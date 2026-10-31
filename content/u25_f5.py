@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Selamat pagi semuanya.', 'Good morning, ___. (semuanya)', 'everyone/everybody', 'everyone = semuanya.'),
+ ('Hari ini saya akan berbicara tentang sampah.', 'Today I am going to talk ___ trash.', 'about', 'talk about.'),
+ ('Pertama, saya akan menjelaskan masalahnya.', '___, I will explain the problem. (pertama)', 'First', 'First = pertama.'),
+ ('Kedua, saya akan memberi solusi.', '___, I will give a solution. (kedua)', 'Second', 'Second = kedua.'),
+ ('Sebagai penutup, mari kita jaga lingkungan.', "___ conclusion, let's protect the environment.", 'In', 'In conclusion.'),
+ ('Terima kasih atas perhatian Anda.', 'Thank you for your ___. (perhatian)', 'attention', 'attention = perhatian.'),
+ ('Ada pertanyaan?', 'Any ___? (pertanyaan)', 'questions', 'questions = pertanyaan.'),
+ ('Tujuan presentasi ini adalah memberi informasi.', 'The ___ of this presentation is to inform. (tujuan)', 'purpose', 'purpose = tujuan.'),
+ ('Lihat gambar ini.', '___ at this picture. (lihat)', 'Look', 'Look at.'),
+ ('Seperti yang kalian lihat pada grafik.', 'As you can ___ in the graph. (lihat)', 'see', 'As you can see.')]), quiz=mkf([('Saya akan menyampaikan tiga poin.', 'I will ___ three points. (menyampaikan)', 'give/present/share', 'give three points.'),
+ ('Mari kita mulai.', "Let's ___. (mulai)", 'begin/start', "Let's begin."),
+ ('Poin penting berikutnya adalah biaya.', 'The next important ___ is cost. (poin)', 'point', 'point = poin.'),
+ ('Saya ingin memperkenalkan diri.', 'Let me ___ myself. (memperkenalkan)', 'introduce', 'introduce = memperkenalkan.'),
+ ('Itu saja dari saya.', "That's all ___ me.", 'from', "That's all from me.")]))

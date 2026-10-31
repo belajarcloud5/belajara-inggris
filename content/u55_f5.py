@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Penjualan naik 10 persen.', 'Sales ___ by 10 percent. (naik)', 'rose/increased/went up', 'rose.'),
+ ('Biaya turun sedikit.', 'Costs ___ slightly. (turun)', 'fell/dropped/decreased', 'fell.'),
+ ('Angka itu tetap stabil.', 'The figure ___ stable. (tetap)', 'remained/stayed', 'remained.'),
+ ('Grafik menunjukkan tren positif.', 'The chart shows a positive ___. (tren)', 'trend', 'trend.'),
+ ('Pendapatan mencapai puncaknya di bulan Juni.', 'Revenue ___ in June. (mencapai puncak)', 'peaked', 'peaked.'),
+ ('Rata-rata nilainya 75.', 'The ___ is 75. (rata-rata)', 'average/mean', 'average.'),
+ ('Totalnya 120 unit.', 'The ___ is 120 units. (jumlah keseluruhan)', 'total', 'total.'),
+ ('Laba meningkat tajam.', 'Profit increased ___. (tajam)', 'sharply', 'sharply.'),
+ ('Kuartal pertama lebih baik daripada kuartal kedua.', 'The first ___ was better than the second. (kuartal)', 'quarter', 'quarter.'),
+ ('Laporan itu berdasarkan data tahun lalu.', "The report is based ___ last year's data.", 'on', 'based on.')]), quiz=mkf([('Persentase pelanggan naik.', 'The ___ of customers rose. (persentase)', 'percentage', 'percentage.'),
+ ('Hasilnya sesuai target.', 'The result is ___ target. (sesuai)', 'on', 'on target.'),
+ ('Garis ini menunjukkan penurunan.', 'This line shows a ___. (penurunan)', 'decline/decrease/drop', 'decline.'),
+ ('Mari kita bandingkan angka-angkanya.', "Let's ___ the figures. (bandingkan)", 'compare', 'compare.'),
+ ('Sumber data kami adalah survei.', 'Our data ___ is a survey. (sumber)', 'source', 'source.')]))

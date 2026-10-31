@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Subjek: Permintaan rapat.', '___: Meeting request. (subjek)', 'Subject', 'Subject.'),
+ ('Yth. Bapak Adi,', '___ Mr. Adi,', 'Dear', 'Dear.'),
+ ('Saya menulis sehubungan dengan pesanan kami.', 'I am writing ___ our order. (sehubungan dengan)', 'regarding/about', 'regarding.'),
+ ('Terlampir adalah faktur.', 'Please find the invoice ___. (terlampir)', 'attached', 'attached.'),
+ ('Mohon tinjau dokumen ini.', 'Please ___ this document. (tinjau)', 'review', 'review.'),
+ ('Terima kasih atas email Anda.', 'Thank you for your ___. (surat elektronik)', 'email', 'email.'),
+ ('Saya menantikan balasan Anda.', 'I look forward to ___ from you. (mendengar)', 'hearing', 'look forward to + V-ing.'),
+ ('Hormat saya,', 'Best ___, (salam)', 'regards', 'Best regards.'),
+ ('Mohon konfirmasi.', 'Please ___ receipt. (konfirmasi)', 'confirm', 'confirm.'),
+ ('Maaf atas keterlambatan balasan saya.', 'Sorry for the ___ in replying. (keterlambatan)', 'delay', 'delay.')]), quiz=mkf([('Teruskan email ini ke tim.', 'Please ___ this email to the team. (teruskan)', 'forward', 'forward.'),
+ ('Tembusan: Dina.', '___: Dina. (CC, tembusan)', 'CC/Cc', 'CC = tembusan.'),
+ ('Secepat mungkin.', 'ASAP stands for as soon as ___. (mungkin)', 'possible', 'as soon as possible.'),
+ ('Mohon maaf atas ketidaknyamanan.', 'We apologize for any ___. (ketidaknyamanan)', 'inconvenience', 'inconvenience.'),
+ ('Beri tahu saya jika ada pertanyaan.', 'Let me ___ if you have questions. (tahu)', 'know', 'let me know.')]))

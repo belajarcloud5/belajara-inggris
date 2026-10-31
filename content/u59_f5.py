@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Terima kasih atas masukan Anda.', 'Thank you for your ___. (masukan)', 'feedback', 'feedback.'),
+ ('Saya akan berusaha memperbaikinya.', "I'll work ___ that. (pada)", 'on', 'work on.'),
+ ('Kinerja Anda sangat baik.', 'Your ___ is excellent. (kinerja)', 'performance', 'performance.'),
+ ('Evaluasi dilakukan setiap tahun.', 'The ___ is done every year. (penilaian)', 'evaluation/appraisal/review', 'evaluation.'),
+ ('Target kami naik tahun depan.', 'Our ___ goes up next year. (sasaran)', 'target/goal', 'target.'),
+ ('Saya ingin mengembangkan keterampilan saya.', 'I want to develop my ___. (keterampilan)', 'skills', 'skills.'),
+ ('Kritik yang membangun itu berguna.', '___ criticism is useful. (membangun)', 'Constructive', 'constructive.'),
+ ('Bisakah Anda memberi contoh?', 'Could you give me an ___? (contoh)', 'example', 'example.'),
+ ('Saya ingin naik jabatan.', "I'd like to get a ___. (promosi)", 'promotion', 'promotion.'),
+ ('Pembimbing saya membantu saya.', 'My ___ helps me. (pembimbing)', 'mentor', 'mentor.')]), quiz=mkf([('Pelatihan itu membantu karier saya.', 'The training helps my ___. (karier)', 'career', 'career.'),
+ ('Saya perlu meningkatkan komunikasi.', 'I need to ___ my communication. (meningkatkan)', 'improve', 'improve.'),
+ ('Anda telah berkembang pesat.', 'You have ___ a lot. (berkembang)', 'grown/improved', 'grown.'),
+ ('Saya menghargai kritik itu.', 'I appreciate the ___. (kritik)', 'criticism', 'criticism.'),
+ ('Apa tujuan karier Anda?', 'What are your career ___? (tujuan)', 'goals', 'goals.')]))

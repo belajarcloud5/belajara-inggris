@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Kami sedang mengerjakan perbaikan.', 'We are working on a ___. (perbaikan)', 'fix', 'fix.'),
+ ('Proyek terlambat dua hari.', 'The project is two days behind ___. (jadwal)', 'schedule', 'behind schedule.'),
+ ('Kami menemukan penyebab masalahnya.', 'We found the ___ of the problem. (penyebab)', 'cause', 'cause.'),
+ ('Kendala utamanya adalah anggaran.', 'The main ___ is the budget. (kendala)', 'obstacle/constraint/issue', 'obstacle.'),
+ ('Langkah berikutnya adalah menguji.', 'The next ___ is testing. (langkah)', 'step', 'next step.'),
+ ('Statusnya sedang berjalan.', 'The status is in ___. (berjalan)', 'progress', 'in progress.'),
+ ('Semua sudah selesai.', 'Everything is ___. (selesai)', 'done/complete/finished', 'done.'),
+ ('Kami butuh dukungan tambahan.', 'We need extra ___. (dukungan)', 'support', 'support.'),
+ ('Saya akan memberi kabar besok.', "I'll give you an ___ tomorrow. (kabar terbaru)", 'update', 'update.'),
+ ('Masalahnya sudah teratasi.', 'The problem has been ___. (diselesaikan)', 'solved/resolved/fixed', 'resolved.')]), quiz=mkf([('Kami berisiko terlambat.', 'We are at ___ of delay. (risiko)', 'risk', 'at risk.'),
+ ('Saya perlu bantuan untuk memecahkan ini.', 'I need help to ___ this. (memecahkan)', 'solve', 'solve.'),
+ ('Kita perlu rencana cadangan.', 'We need a backup ___. (rencana)', 'plan', 'plan.'),
+ ('Siapa yang bertanggung jawab?', 'Who is ___? (penanggung jawab)', 'responsible', 'responsible.'),
+ ('Kami sudah memenuhi target.', 'We have ___ the target. (mencapai)', 'met/reached/achieved', 'met.')]))

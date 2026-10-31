@@ -1,0 +1,18 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Dahulu kala, ada seorang petani miskin.', 'Once upon a time, there ___ a poor farmer.', 'was', 'was.'),
+ ('Suatu hari, dia menemukan telur emas.', 'One day, he ___ a golden egg. (menemukan)', 'found', 'find → found.'),
+ ('Penyihir itu menghilang.', 'The witch ___. (menghilang)', 'disappeared', 'disappear → disappeared.'),
+ ('Pangeran menyelamatkan putri.', 'The prince ___ the princess. (menyelamatkan)', 'saved/rescued', 'saved = menyelamatkan.'),
+ ('Naga itu sangat ganas.', 'The dragon was very ___. (ganas)', 'fierce', 'fierce = ganas.'),
+ ('Masalah dalam cerita disebut konflik.',
+  'The problem in a story is called the ___. (konflik)',
+  'conflict/complication',
+  'conflict = masalah cerita.'),
+ ('Akhir cerita disebut resolusi.', 'The end of a story is the ___. (resolusi)', 'resolution', 'resolution.'),
+ ('Awal cerita disebut orientasi.', 'The beginning is the ___. (orientasi)', 'orientation', 'orientation.'),
+ ('Anak itu berlari pulang.', 'The boy ___ home. (berlari)', 'ran', 'run → ran.'),
+ ('Dia berteriak minta tolong.', 'She ___ for help. (berteriak)', 'shouted/screamed', 'shouted = berteriak.')]), quiz=mkf([('Hujan turun deras ketika ia sampai.', 'It was raining ___ when he arrived. (deras)', 'heavily/hard', 'heavily = deras.'),
+ ('Mereka hidup bahagia.', 'They lived ___. (bahagia)', 'happily', 'happily.'),
+ ('Pesan moral cerita ini adalah kejujuran.', 'The ___ of the story is honesty. (pelajaran hidup dari cerita)', 'moral', 'moral.'),
+ ('Kancil menipu buaya.', 'The mouse deer ___ the crocodile. (menipu)', 'tricked/fooled', 'tricked = menipu.'),
+ ('Sang raja memerintah dengan adil.', 'The king ruled ___. (adil)', 'fairly/justly', 'fairly = adil.')]))

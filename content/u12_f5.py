@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Gedung ini lebih tinggi daripada rumah itu.', 'This building is ___ than that house. (tinggi)', 'taller', 'tall → taller.'),
+ ('Kucing lebih kecil daripada anjing.', 'A cat is ___ than a dog. (kecil)', 'smaller', 'small → smaller.'),
+ ('Hari ini lebih panas daripada kemarin.', 'Today is ___ than yesterday. (panas)', 'hotter', 'hot → hotter.'),
+ ('Dia lebih cantik daripada kakaknya.', 'She is ___ beautiful than her sister.', 'more', 'beautiful → more beautiful.'),
+ ('Buku ini lebih mahal.', 'This book is ___ expensive. (lebih)', 'more', 'expensive → more expensive.'),
+ ('Dia anak yang paling tinggi di kelas.', 'He is the ___ boy in the class. (tinggi)', 'tallest', 'tall → the tallest.'),
+ ('Gunung itu paling tinggi.', 'That is the ___ mountain. (tinggi)', 'highest', 'high → the highest.'),
+ ('Ini hari terbaik dalam hidupku.', 'This is the ___ day of my life. (baik)', 'best', 'good → better → the best.'),
+ ('Nilainya lebih baik daripada nilaiku.', 'His score is ___ than mine. (baik)', 'better', 'good → better.'),
+ ('Itu mobil yang paling mahal.', 'That is the ___ expensive car.', 'most', 'expensive → the most expensive.')]), quiz=mkf([('Sungai ini lebih panjang daripada itu.', 'This river is ___ than that one. (panjang)', 'longer', 'long → longer.'),
+ ('Dia sama tinggi denganku.', 'She is as ___ as me. (tinggi)', 'tall', 'as + adjective + as.'),
+ ('Cuaca hari ini lebih buruk.', 'The weather today is ___. (lebih buruk)', 'worse', 'bad → worse.'),
+ ('Tas ini lebih murah daripada tas itu.', 'This bag is ___ than that one. (murah)', 'cheaper', 'cheap → cheaper.'),
+ ('Dia anak paling pandai.', 'She is the ___ student. (pandai/cerdas, smart)', 'smartest', 'smart → the smartest.')]))

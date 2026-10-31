@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Aku sakit kepala.', 'I have a ___. (sakit kepala)', 'headache', 'headache = sakit kepala.'),
+ ('Dia sakit perut.', 'He has a ___. (sakit perut)', 'stomachache', 'stomachache = sakit perut.'),
+ ('Aku demam.', 'I have a ___. (demam)', 'fever', 'fever = demam.'),
+ ('Kamu sebaiknya pergi ke dokter.', 'You should see a ___. (dokter)', 'doctor', 'doctor = dokter.'),
+ ('Minumlah obat ini.', '___ this medicine. (minum obat)', 'Take', 'take medicine = minum obat.'),
+ ('Istirahatlah yang cukup.', 'Get enough ___. (istirahat)', 'rest', 'rest = istirahat.'),
+ ('Semoga cepat sembuh.', 'Get ___ soon! (sembuh)', 'well', 'Get well soon!'),
+ ('Aku batuk dan pilek.', 'I have a cough and a ___. (pilek)', 'cold', 'cold = pilek.'),
+ ('Dear Rani,', '___ Rani, (Yth.)', 'Dear', 'Dear = pembuka surat.'),
+ ('Salam hangat,', '___ regards, (hangat)', 'Warm/Best/Kind', 'Warm regards = salam hangat.')]), quiz=mkf([('Aku menulis untuk mengundangmu.', 'I am ___ to invite you. (menulis)', 'writing', 'I am writing to ...'),
+ ('Terima kasih atas suratmu.', 'Thank you for your ___. (surat)', 'letter', 'letter = surat.'),
+ ('Sampai jumpa lagi.', 'I hope to ___ you soon. (melihat)', 'see', 'I hope to see you.'),
+ ('Tolong balas emailku.', 'Please ___ to my email. (membalas)', 'reply', 'reply = membalas.'),
+ ('Teman,', 'Your ___, Budi (sahabatmu)', 'friend', 'Your friend = penutup informal.')]))

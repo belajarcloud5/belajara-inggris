@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Penerbangan saya ke Singapura pukul delapan.', 'My ___ to Singapore is at eight. (penerbangan)', 'flight', 'flight.'),
+ ('Saya perlu check-in di bandara.', 'I need to check ___ at the airport.', 'in', 'check in.'),
+ ('Boleh saya lihat paspor Anda?', 'May I see your ___? (paspor)', 'passport', 'passport.'),
+ ('Saya ingin memesan kamar.', "I'd like to ___ a room. (memesan)", 'book/reserve', 'book.'),
+ ('Kamar untuk dua malam.', 'A room for two ___. (malam)', 'nights', 'nights.'),
+ ('Apakah sarapan sudah termasuk?', 'Is breakfast ___? (termasuk)', 'included', 'included.'),
+ ('Pukul berapa check-out?', 'What time is ___? (waktu keluar dari hotel)', 'check-out/checkout', 'check-out.'),
+ ('Saya perlu taksi ke bandara.', 'I need a ___ to the airport.', 'taxi', 'taxi.'),
+ ('Penerbangan kami tertunda.', 'Our flight is ___. (tertunda)', 'delayed', 'delayed.'),
+ ('Pesawat mendarat pukul lima.', 'The plane ___ at five. (mendarat)', 'lands', 'lands.')]), quiz=mkf([('Selamat datang di Jakarta.', '___ to Jakarta.', 'Welcome', 'Welcome to.'),
+ ('Saya akan menjemput Anda di bandara.', "I'll ___ you up at the airport. (jemput)", 'pick', 'pick up.'),
+ ('Mari saya antar makan malam.', 'Let me take you out for ___. (makan malam)', 'dinner', 'dinner.'),
+ ('Itu perjalanan dinas.', 'It is a business ___. (perjalanan)', 'trip', 'business trip.'),
+ ('Bagasi saya hilang.', 'My ___ is missing. (bagasi)', 'luggage/baggage', 'luggage.')]))

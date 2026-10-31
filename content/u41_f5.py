@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Menurutku, kita harus berolahraga.', 'In my ___, we must exercise. (pendapat)', 'opinion', 'opinion.'),
+ ('Tesis berada di paragraf pertama.', 'The ___ is in the first paragraph.', 'thesis', 'thesis.'),
+ ('Marilah kita menjaga bumi.', '___ protect the earth. (marilah kita)', "Let's", "Let's + V1."),
+ ('Air menguap karena panas.', 'Water ___ because of heat. (menguap)', 'evaporates', 'evaporates.'),
+ ('Kebakaran terjadi tadi malam.', 'A fire ___ place last night. (terjadi)', 'took', 'took place.'),
+ ('Saya melamar posisi guru.', 'I am applying ___ the teacher position.', 'for', 'apply for.'),
+ ('Terlampir CV saya.', 'My CV is ___. (terlampir)', 'attached', 'attached.'),
+ ('Selain itu, olahraga menyehatkan.', '___, exercise is healthy. (selain itu)', 'Besides/Moreover', 'Besides.'),
+ ('Kita sebaiknya hemat listrik.', 'We ___ save electricity. (sebaiknya)', 'should', 'should.'),
+ ('Dua orang terluka.', 'Two people were ___. (terluka)', 'injured', 'injured.')]), quiz=mkf([('Singkatnya, itu bermanfaat.', 'In ___, it is useful. (singkatnya)', 'short', 'In short.'),
+ ('Itu penyebab banjir.', 'That is the ___ of the flood. (penyebab)', 'cause', 'cause.'),
+ ('Saya menyarankan agar kamu belajar.', 'I ___ that you study. (menyarankan)', 'suggest', 'suggest.'),
+ ('Banyak ahli setuju.', 'Many ___ agree. (ahli)', 'experts', 'experts.'),
+ ('Saya berpengalaman.', 'I am ___. (berpengalaman)', 'experienced', 'experienced.')]))

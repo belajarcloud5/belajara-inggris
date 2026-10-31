@@ -1,0 +1,18 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Selamat pagi, PT Maju Jaya. Ada yang bisa saya bantu?',
+  'Good morning, Maju Jaya. How can I ___ you? (membantu)',
+  'help',
+  'How can I help you?'),
+ ('Siapa yang menelepon?', "May I ask who's ___? (menelepon)", 'calling', "who's calling."),
+ ('Mohon tunggu, saya sambungkan.', "Please hold, I'll put you ___. (sambungkan)", 'through', 'put you through.'),
+ ('Dia sedang tidak di tempat.', 'He is not ___ right now. (di tempat)', 'available/in', 'not available.'),
+ ('Bisakah saya meninggalkan pesan?', 'Can I leave a ___? (pesan)', 'message', 'leave a message.'),
+ ('Bisakah Anda mengeja nama Anda?', 'Could you ___ your name? (eja)', 'spell', 'spell.'),
+ ('Saya akan menelepon balik nanti.', 'I will call you ___ later. (balik)', 'back', 'call back.'),
+ ('Bicaranya kurang jelas.', "I can't hear you ___. (dengan jelas)", 'clearly', 'clearly.'),
+ ('Sinyal buruk.', 'The ___ is bad. (sinyal)', 'signal', 'signal.'),
+ ('Saya akan menyampaikan pesan Anda.', "I'll ___ your message. (menyampaikan)", 'pass on/give/take', 'pass on.')]), quiz=mkf([('Nomor yang Anda tuju sedang sibuk.', 'The line is ___. (sibuk)', 'busy', 'busy.'),
+ ('Bisakah Anda berbicara lebih pelan?', 'Could you speak more ___? (pelan)', 'slowly', 'slowly.'),
+ ('Ini dari Rani.', 'This is Rani ___ Finance. (dari)', 'from', 'from.'),
+ ('Silakan tinggalkan pesan setelah nada.', 'Please leave a message after the ___. (nada)', 'tone/beep', 'tone.'),
+ ('Terima kasih telah menelepon.', 'Thank you for ___. (menelepon)', 'calling', 'for calling.')]))

@@ -1,0 +1,18 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Aku sedang tidur ketika telepon berdering.', 'I ___ sleeping when the phone rang.', 'was', 'I + was + V-ing.'),
+ ('Mereka sedang bermain ketika hujan turun.', 'They ___ playing when it started to rain.', 'were', 'They + were + V-ing.'),
+ ('Dia sedang membaca ketika aku masuk.', 'She ___ reading when I came in.', 'was', 'She + was + V-ing.'),
+ ('Kami sedang makan ketika listrik mati.', 'We ___ eating when the lights went out.', 'were', 'We + were + V-ing.'),
+ ('Ketika aku sedang berjalan, aku melihat seekor ular.', 'While I was ___, I saw a snake. (berjalan)', 'walking', 'was + V-ing.'),
+ ('Sementara ibu memasak, ayah membaca koran.',
+  '___ Mother was cooking, Father read the newspaper. (sementara)',
+  'While',
+  'While + past continuous.'),
+ ('Dahulu kala, hiduplah seorang raja.', '___ upon a time, there was a king.', 'Once', 'Once upon a time.'),
+ ('Mereka hidup bahagia selamanya.', 'They lived happily ever ___.', 'after', 'happily ever after.'),
+ ('Pada suatu hari, ia menemukan sebuah gua.', 'One day, he ___ a cave. (menemukan)', 'found', 'find → found.'),
+ ('Serigala itu sangat jahat.', 'The wolf was very ___. (jahat)', 'bad/evil/wicked', 'bad/evil = jahat.')]), quiz=mkf([('Putri itu cantik dan baik hati.', 'The princess was beautiful and ___. (baik hati)', 'kind', 'kind = baik hati.'),
+ ('Kami tidak sedang belajar ketika guru masuk.', 'We ___ studying when the teacher came in.', "weren't/were not", 'were not + V-ing.'),
+ ('Apakah dia sedang menangis ketika kamu masuk?', '___ she crying when you came in?', 'Was', 'Was she + V-ing?'),
+ ('Pahlawan ceritanya adalah seorang anak laki-laki.', 'The main ___ of the story is a boy. (tokoh)', 'character', 'character = tokoh.'),
+ ('Cerita itu terjadi di sebuah desa.', 'The ___ of the story is a village. (latar tempat)', 'setting', 'setting = latar.')]))

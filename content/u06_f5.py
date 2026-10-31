@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Dia gadis yang tinggi.', 'She is a ___ girl. (tinggi)', 'tall', 'tall = tinggi.'),
+ ('Rambutnya panjang.', 'She has ___ hair. (panjang)', 'long', 'long = panjang.'),
+ ('Dia punya mata cokelat.', 'He has ___ eyes. (cokelat)', 'brown', 'brown = cokelat.'),
+ ('Kucingku kecil dan lucu.', 'My cat is small and ___. (lucu, menggemaskan)', 'cute', 'cute = lucu/imut.'),
+ ('Gajah itu besar.', 'The elephant is ___. (besar)', 'big', 'big = besar.'),
+ ('Tas ini berat.', 'This bag is ___. (berat)', 'heavy', 'heavy = berat.'),
+ ('Kotak itu ringan.', 'That box is ___. (ringan)', 'light', 'light = ringan.'),
+ ('Kakakku pendek.', 'My brother is ___. (pendek, tinggi badan)', 'short', 'short = pendek.'),
+ ('Bunga itu cantik.', 'The flower is ___. (cantik)', 'beautiful', 'beautiful = cantik.'),
+ ('Rumah kami baru.', 'Our house is ___. (baru)', 'new', 'new = baru.')]), quiz=mkf([('Aku punya tas merah besar.', 'I have a ___ red bag. (besar)', 'big', 'Urutan: ukuran sebelum warna.'),
+ ('Dia punya kucing putih kecil.', 'She has a ___ white cat. (kecil)', 'small', 'Urutan: ukuran + warna.'),
+ ('Rambutnya hitam.', 'His hair ___ black.', 'is', 'hair satu kesatuan → is.'),
+ ('Matanya besar dan bulat.', 'Her eyes ___ big and round.', 'are', 'eyes jamak → are.'),
+ ('Pria itu baik hati.', 'The man is ___. (baik hati)', 'kind', 'kind = baik hati.')]))

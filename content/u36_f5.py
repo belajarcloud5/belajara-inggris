@@ -1,0 +1,18 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Pernyataan utama disebut tesis.', 'The main statement is called the ___. (tesis)', 'thesis', 'thesis.'),
+ ('Argumen mendukung tesis.', 'Arguments ___ the thesis. (mendukung)', 'support', 'support.'),
+ ('Penegasan ulang berada di akhir.', 'The ___ comes at the end. (penegasan ulang)', 'reiteration/conclusion', 'reiteration.'),
+ ('Saya berpendapat bahwa seragam sekolah perlu.',
+  'I ___ that school uniforms are necessary. (berpendapat)',
+  'argue/believe',
+  'argue that.'),
+ ('Pertama, seragam menumbuhkan kesetaraan.', '___, uniforms build equality. (pertama)', 'Firstly/First', 'Firstly.'),
+ ('Kedua, seragam menghemat biaya.', '___, uniforms save money. (kedua)', 'Secondly/Second', 'Secondly.'),
+ ('Oleh karena itu, seragam sebaiknya dipertahankan.', '___, uniforms should be kept.', 'Therefore/Thus', 'Therefore.'),
+ ('Penelitian menunjukkan hal ini.', 'Research ___ this. (menunjukkan)', 'shows', 'shows.'),
+ ('Data mendukung argumen itu.', 'The ___ support the argument. (angka dan fakta)', 'data/facts', 'data.'),
+ ('Singkatnya, kebiasaan membaca bermanfaat.', 'In ___, reading habits are useful. (singkatnya)', 'short/brief', 'In short.')]), quiz=mkf([('Kesimpulannya, teknologi membantu kita.', 'In ___, technology helps us. (kesimpulan)', 'conclusion', 'In conclusion.'),
+ ('Banyak ahli menyatakan hal ini penting.', 'Many ___ say this is important. (ahli)', 'experts', 'experts.'),
+ ('Hal itu terbukti benar.', 'It has been ___ true. (terbukti)', 'proven', 'proven.'),
+ ('Sehingga, siswa lebih fokus.', '___ students are more focused. (sehingga)', 'So/Thus', 'So.'),
+ ('Alasan lainnya adalah kesehatan.', 'Another ___ is health. (alasan)', 'reason', 'reason.')]))

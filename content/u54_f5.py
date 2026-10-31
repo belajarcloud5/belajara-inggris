@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Agenda rapat hari ini ada tiga.', "There are three items on today's ___. (daftar acara rapat)", 'agenda', 'agenda.'),
+ ('Mari kita mulai rapatnya.', "Let's get ___. (mulai)", 'started', 'get started.'),
+ ('Saya ingin menambahkan sesuatu.', "I'd like to ___ something. (menambahkan)", 'add', 'add.'),
+ ('Maaf menyela, boleh saya bertanya?', 'Sorry to ___, may I ask something? (menyela)', 'interrupt', 'interrupt.'),
+ ('Saya sepakat dengan Anda.', 'I ___ with you. (sepakat)', 'agree', 'agree.'),
+ ('Saya kurang setuju dengan poin itu.', "I'm not sure I ___ with that point. (setuju)", 'agree', 'agree.'),
+ ('Mari kita lanjut ke poin berikutnya.', "Let's move ___ to the next point. (lanjut)", 'on', 'move on.'),
+ ('Siapa yang mencatat notulen?', 'Who is taking the ___? (notulen)', 'minutes', 'minutes.'),
+ ('Kita perlu membuat keputusan.', 'We need to make a ___. (keputusan)', 'decision', 'decision.'),
+ ('Tindak lanjutnya apa?', 'What are the next ___? (langkah)', 'steps', 'next steps.')]), quiz=mkf([('Mari kita ringkas.', 'Let me ___ up. (ringkas)', 'sum', 'sum up.'),
+ ('Rapat ditutup pukul empat.', 'The meeting ___ at four. (ditutup/berakhir)', 'ends/finished/closed', 'ends.'),
+ ('Itu poin yang bagus.', "That's a good ___. (poin)", 'point', 'point.'),
+ ('Kita kehabisan waktu.', 'We are running out of ___. (waktu)', 'time', 'time.'),
+ ('Apa pendapat Anda tentang usulan ini?', 'What do you ___ of this proposal? (pikir)', 'think', 'think of.')]))

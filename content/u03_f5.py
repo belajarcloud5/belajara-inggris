@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Angka dua belas.', 'The number ___ comes after eleven. (12)', 'twelve', '12 = twelve.'),
+ ('Angka lima belas.', 'Five plus ten is ___. (15)', 'fifteen', '15 = fifteen.'),
+ ('Dua puluh.', 'Ten plus ten is ___. (20)', 'twenty', '20 = twenty.'),
+ ('Sembilan puluh.', 'The number 90 is ___.', 'ninety', '90 = ninety.'),
+ ('Seratus.', 'The number 100 is one ___.', 'hundred', 'one hundred.'),
+ ('Sekarang pukul tujuh.', 'It is seven ___. (tepat)', "o'clock", "o'clock = tepat pada jam itu."),
+ ('Sekarang pukul tujuh lewat tiga puluh.', 'It is half ___ seven.', 'past', 'half past seven = 7.30.'),
+ ('Sekarang pukul lima lewat lima belas.', 'It is a ___ past five.', 'quarter', 'a quarter past = lewat 15 menit.'),
+ ('Hari setelah Senin.', 'The day after Monday is ___.', 'Tuesday', 'Monday, Tuesday, Wednesday.'),
+ ('Hari sebelum Sabtu.', 'The day before Saturday is ___.', 'Friday', 'Friday = Jumat.')]), quiz=mkf([('Bulan pertama dalam setahun.', 'The first month of the year is ___.', 'January', 'January = Januari.'),
+ ('Bulan setelah Juli.', 'The month after July is ___.', 'August', 'August = Agustus.'),
+ ('Ulang tahunku pada bulan Maret.', 'My birthday is ___ March.', 'in', 'in + bulan.'),
+ ('Pelajaran dimulai pada hari Senin.', 'The class starts ___ Monday.', 'on', 'on + hari.'),
+ ('Kami bangun pukul enam.', "We get up ___ six o'clock.", 'at', 'at + jam.')]))

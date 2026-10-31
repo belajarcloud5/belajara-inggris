@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Saya bekerja di bagian pemasaran.', 'I work in the ___ department. (pemasaran)', 'marketing', 'marketing.'),
+ ('Departemen SDM mengurus karyawan.', 'The ___ department takes care of staff. (SDM, singkatan)', 'HR', 'HR.'),
+ ('Manajer memimpin tim.', 'The manager ___ the team. (memimpin)', 'leads', 'leads.'),
+ ('Saya melapor kepada direktur.', 'I ___ to the director. (melapor)', 'report', 'report to.'),
+ ('Jam kerja kami pukul sembilan sampai lima.', 'Our working ___ are nine to five. (jam)', 'hours', 'working hours.'),
+ ('Rapat tim setiap hari Senin.', 'We have a team meeting every ___.', 'Monday', 'Monday.'),
+ ('Tolong kirim laporan sebelum tenggat.', 'Please send the report before the ___. (tenggat)', 'deadline', 'deadline.'),
+ ('Saya sedang cuti minggu depan.', "I'm on ___ next week. (cuti)", 'leave', 'on leave.'),
+ ('Meja saya ada di bilik kerja itu.', 'My desk is in that ___. (bilik kerja)', 'cubicle', 'cubicle.'),
+ ('Dia asisten administrasi.', 'She is an administrative ___. (asisten)', 'assistant', 'assistant.')]), quiz=mkf([('Karyawan baru mulai hari ini.', 'A new ___ starts today. (karyawan)', 'employee', 'employee.'),
+ ('Saya lembur kemarin.', 'I worked ___ yesterday. (lembur)', 'overtime', 'overtime.'),
+ ('Bagian keuangan menangani anggaran.', 'The finance team handles the ___. (anggaran)', 'budget', 'budget.'),
+ ('Saya datang lebih awal untuk menyiapkan rapat.', 'I came in ___ to prepare for the meeting. (lebih awal)', 'early', 'early.'),
+ ('Atasan saya sedang rapat.', 'My ___ is in a meeting. (atasan)', 'boss/supervisor/manager', 'boss.')]))

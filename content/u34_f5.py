@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Dia bermain gitar setiap sore.', 'He ___ the guitar every afternoon. (bermain)', 'plays', 'He → plays.'),
+ ('Kemarin kami mengunjungi neneknya.', 'Yesterday we ___ her grandmother. (mengunjungi)', 'visited', 'visited.'),
+ ('Mereka sedang memasak sekarang.', 'They are ___ now. (memasak)', 'cooking', 'are + V-ing.'),
+ ('Kue itu dipanggang oleh Ibu.', 'The cake was ___ by Mom. (dipanggang)', 'baked', 'was + V3.'),
+ ('Nyalakan lampu.', 'Turn ___ the light. (hidup)', 'on', 'turn on.'),
+ ('Pertama, cuci sayurannya.', '___, wash the vegetables. (pertama)', 'First', 'First.'),
+ ('Dahulu kala, ada seorang raja.', 'Once ___ a time, there was a king.', 'upon', 'Once upon a time.'),
+ ('Dia punya rambut ikal.', 'She has ___ hair. (ikal)', 'curly', 'curly = ikal.'),
+ ('Kami tiba tepat waktu.', 'We arrived ___ time.', 'on', 'on time.'),
+ ('Pengumuman: acara dimulai pukul tiga.', "The event starts ___ three o'clock.", 'at', 'at + jam.')]), quiz=mkf([('Aku sudah menyelesaikan tugasku.', 'I have ___ my task. (menyelesaikan)', 'finished/completed', 'have + V3.'),
+ ('Jika kamu belajar, kamu akan berhasil.', 'If you study, you ___ succeed.', 'will', 'will.'),
+ ('Dia tidak suka sayur.', 'She ___ like vegetables.', "doesn't/does not", "doesn't."),
+ ('Pesan moral dari cerita itu penting.', 'The ___ of the story is important. (pelajaran hidup dari cerita)', 'moral', 'moral.'),
+ ('Sungai itu lebih panjang daripada jalan.', 'The river is ___ than the road. (panjang)', 'longer', 'long → longer.')]))

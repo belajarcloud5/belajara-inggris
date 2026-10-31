@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Marilah kita menjaga kebersihan.', "Let's ___ our environment clean. (menjaga)", 'keep', 'keep ... clean.'),
+ ('Kita seharusnya mengurangi sampah plastik.', 'We ___ reduce plastic waste. (seharusnya)', 'should/ought to', 'should.'),
+ ('Sebaiknya kita menanam pohon.', 'We ___ to plant trees. (sebaiknya)', 'ought', 'ought to.'),
+ ('Kita harus segera bertindak.', 'We must act ___. (segera)', 'now/immediately/soon', 'act now.'),
+ ('Saya menyarankan agar kita berhemat air.', 'I ___ that we save water. (menyarankan)', 'suggest/recommend', 'suggest.'),
+ ('Pemerintah harus membuat aturan.', 'The government ___ make rules. (harus)', 'must/should', 'must.'),
+ ('Daur ulang membantu bumi.', '___ helps the earth. (daur ulang)', 'Recycling', 'recycling.'),
+ ('Sampah menyebabkan banjir.', 'Garbage ___ floods. (menyebabkan)', 'causes', 'causes.'),
+ ('Mari ikut serta!', "Let's take ___! (ikut serta)", 'part', 'take part.'),
+ ('Oleh karena itu, kita perlu bertindak sekarang.', 'We ___ to act now. (perlu)', 'need', 'need to.')]), quiz=mkf([('Jangan buang sampah sembarangan.', "Don't ___ litter. (membuang)", 'throw', 'throw litter.'),
+ ('Kita sebaiknya berjalan kaki ke sekolah.', 'We ___ walk to school. (sebaiknya)', 'should', 'should.'),
+ ('Selamatkan hutan kita.', '___ our forests. (selamatkan)', 'Save/Protect', 'Save.'),
+ ('Polusi udara berbahaya bagi kesehatan.', 'Air pollution is ___ to health. (berbahaya)', 'harmful/dangerous/bad', 'harmful.'),
+ ('Harapan kita, bumi menjadi lebih hijau.', 'We hope the earth will be ___. (lebih hijau)', 'greener', 'green → greener.')]))

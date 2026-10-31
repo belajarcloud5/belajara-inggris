@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Saya melamar posisi akuntan.', 'I am applying ___ the position of accountant.', 'for', 'apply for.'),
+ ('Saya melihat iklan Anda di koran.', 'I saw your ___ in the newspaper. (iklan)', 'advertisement/ad', 'advertisement.'),
+ ('Terlampir CV saya.', 'My CV is ___. (terlampir)', 'attached', 'attached.'),
+ ('Saya lulusan Universitas Indonesia.', 'I am a ___ of Universitas Indonesia. (lulusan)', 'graduate', 'graduate.'),
+ ('Saya berpengalaman dalam penjualan.', 'I am ___ in sales. (berpengalaman)', 'experienced', 'experienced.'),
+ ('Saya bisa bekerja dalam tim.', 'I can work in a ___. (tim)', 'team', 'team.'),
+ ('Saya bersedia bekerja lembur.', 'I am ___ to work overtime. (bersedia)', 'willing', 'willing.'),
+ ('Saya berharap dapat wawancara.', 'I hope to have an ___. (wawancara)', 'interview', 'interview.'),
+ ('Hormat saya,', 'Yours ___, (hormat)', 'sincerely/faithfully', 'Yours sincerely.'),
+ ('Kepada Yth. Manajer Personalia', 'Dear ___ Manager, (Bapak/Ibu)', 'HR/Personnel', 'HR Manager.')]), quiz=mkf([('Riwayat hidup disebut curriculum vitae.', 'CV stands for curriculum ___. (riwayat hidup)', 'vitae', 'curriculum vitae.'),
+ ('Pendidikan terakhir saya adalah S1.', "My last ___ is a bachelor's degree. (pendidikan)", 'education', 'education.'),
+ ('Keahlian saya adalah komputer.', 'My ___ are computer skills. (keahlian, bukan abilities)', 'skills', 'skills.'),
+ ('Terima kasih atas perhatian Bapak.', 'Thank you for your ___. (perhatian)', 'attention/consideration', 'attention.'),
+ ('Saya tertarik dengan lowongan ini.', 'I am ___ in this vacancy. (tertarik)', 'interested', 'interested in.')]))

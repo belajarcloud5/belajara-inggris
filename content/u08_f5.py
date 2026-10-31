@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Aku ingin segelas air.', 'I want a ___ of water. (gelas)', 'glass', 'a glass of water.'),
+ ('Aku mau secangkir teh.', "I'd like a ___ of tea. (cangkir)", 'cup', 'a cup of tea.'),
+ ('Satu potong roti.', 'A ___ of bread. (potong)', 'slice/piece', 'a slice of bread.'),
+ ('Aku makan nasi setiap hari.', 'I eat ___ every day. (nasi)', 'rice', 'rice = nasi.'),
+ ('Apakah ada susu di kulkas?', 'Is there ___ milk in the fridge?', 'any', 'Pertanyaan → any.'),
+ ('Ada sedikit gula.', 'There is ___ sugar. (sedikit)', 'some', 'Kalimat positif → some.'),
+ ('Tidak ada telur di rumah.', "There aren't ___ eggs at home.", 'any', 'Negatif → any.'),
+ ('Aku mau dua apel.', 'I want two ___. (apel)', 'apples', 'Dua → jamak.'),
+ ('Aku minum air putih setiap pagi.', 'I drink ___ every morning. (air putih)', 'water', 'water = air.'),
+ ('Aku haus.', 'I am ___. (haus)', 'thirsty', 'thirsty = haus.')]), quiz=mkf([('Aku lapar.', 'I am ___. (lapar)', 'hungry', 'hungry = lapar.'),
+ ('Rasanya manis.', 'It tastes ___. (manis)', 'sweet', 'sweet = manis.'),
+ ('Ada berapa telur?', 'How ___ eggs are there?', 'many', 'Countable → how many.'),
+ ('Ada berapa banyak air?', 'How ___ water is there?', 'much', 'Uncountable → how much.'),
+ ('Boleh saya pesan satu nasi goreng?', 'Can I ___ one fried rice? (memesan)', 'order', 'order = memesan.')]))

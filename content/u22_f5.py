@@ -1,0 +1,18 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Jika hujan, kami akan tinggal di rumah.', 'If it rains, we ___ stay at home.', 'will', 'If + present, will + V1.'),
+ ('Jika kamu belajar, kamu akan lulus.', 'If you study, you ___ pass.', 'will', 'If + present, will + V1.'),
+ ('Jika dia datang, aku akan senang.', 'If she ___, I will be happy. (datang)', 'comes', 'If + she → comes.'),
+ ('Jika kamu tidak berlatih, kamu akan kalah.', "If you don't practice, you ___ lose.", 'will', 'will + V1.'),
+ ('Aku akan menelepon jika aku punya waktu.', 'I will call you if I ___ time. (punya)', 'have', 'If + I → have.'),
+ ('Jika cuaca bagus, kami akan pergi ke pantai.', 'If the weather ___ good, we will go to the beach.', 'is', 'If + present: is.'),
+ ('Jika kamu memanaskan es, es akan mencair.', 'If you heat ice, it ___. (mencair)', 'melts', 'Fakta: if + present, present.'),
+ ('Jika kamu tidak makan, kamu akan lapar.', "If you don't eat, you will be ___. (lapar)", 'hungry', 'hungry = lapar.'),
+ ('Kami akan terlambat jika tidak bergegas.', 'We will be late ___ we hurry. (jika tidak)', 'unless', 'unless = jika tidak.'),
+ ('Jika dia sibuk, dia tidak akan datang.', 'If he is busy, he ___ come. (tidak akan)', "won't/will not", "won't = will not.")]), quiz=mkf([('Jika Ibu pulang, kami akan makan malam.', 'If Mom ___ home, we will have dinner. (pulang)', 'comes', 'If + Mom → comes.'),
+ ('Jika kamu menekan tombol ini, lampu menyala.',
+  'If you press this button, the light ___ on. (menyala)',
+  'goes/comes/turns',
+  'goes/comes/turns on.'),
+ ('Apa yang akan kamu lakukan jika turun hujan?', 'What will you do if it ___? (hujan)', 'rains', 'If + it → rains.'),
+ ('Aku tidak akan pergi kecuali kamu pergi.', "I won't go ___ you go. (kecuali)", 'unless', 'unless = kecuali/jika tidak.'),
+ ('Jika kamu rajin, kamu akan sukses.', 'If you are diligent, you will ___ successful.', 'be', 'will be + adjective.')]))

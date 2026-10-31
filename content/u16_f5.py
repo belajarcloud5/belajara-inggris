@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Kami mengundangmu ke pesta ulang tahunku.', 'We ___ you to my birthday party. (mengundang)', 'invite', 'invite = mengundang.'),
+ ('Pesta akan diadakan hari Sabtu.', 'The party will be ___ Saturday.', 'on', 'on + hari.'),
+ ('Pesta dimulai pukul empat sore.', 'The party starts ___ 4 p.m.', 'at', 'at + jam.'),
+ ('Tempatnya di rumahku.', 'The ___ is my house. (tempat)', 'place/venue', 'venue/place = tempat.'),
+ ('Aku akan datang.', 'I ___ come. (akan, menerima undangan)', 'will', 'I will come.'),
+ ('Maaf, aku tidak bisa datang.', 'Sorry, I ___ come. (tidak bisa)', "can't/cannot", "can't = tidak bisa."),
+ ('Terima kasih atas undanganmu.', 'Thank you for your ___. (undangan)', 'invitation', 'invitation = undangan.'),
+ ('Harap datang tepat waktu.', 'Please come on ___. (waktu)', 'time', 'on time = tepat waktu.'),
+ ('Semua siswa harus memakai seragam.', 'All students ___ wear uniforms. (harus)', 'must', 'must = harus.'),
+ ('Pengumuman: perpustakaan tutup hari ini.', 'The library is ___ today. (tutup)', 'closed', 'closed = tutup.')]), quiz=mkf([('Rapat dimulai pukul sembilan pagi.', 'The meeting ___ at nine a.m. (dimulai)', 'starts/begins', 'starts = dimulai.'),
+ ('Mohon bawa bukumu.', 'Please ___ your book. (bawa)', 'bring', 'bring = membawa.'),
+ ('Kamu diundang.', 'You are ___. (diundang)', 'invited', 'be + V3.'),
+ ('Acara ini gratis.', 'The event is ___. (gratis)', 'free', 'free = gratis.'),
+ ('Balas segera.', 'Please ___ soon. (balas, RSVP)', 'reply/respond', 'reply = membalas.')]))

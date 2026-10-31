@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Air menguap karena panas matahari.', "Water ___ because of the sun's heat. (menguap)", 'evaporates', 'evaporate.'),
+ ('Uap air berubah menjadi awan.', 'Water vapor ___ into clouds. (berubah)', 'turns/changes', 'turns into.'),
+ ('Hujan turun dari awan.', 'Rain ___ from the clouds. (turun)', 'falls', 'falls.'),
+ ('Pertama, matahari memanaskan laut.', '___, the sun heats the sea.', 'First/Firstly', 'First.'),
+ ('Kemudian, uap naik ke udara.', '___, the vapor rises. (kemudian)', 'Then/Next', 'Then.'),
+ ('Akibatnya, awan terbentuk.', 'As a ___, clouds form. (akibat)', 'result', 'As a result.'),
+ ('Proses ini disebut siklus air.', 'This process is called the water ___. (siklus)', 'cycle', 'water cycle.'),
+ ('Gempa bumi terjadi karena pergeseran lempeng.', 'Earthquakes happen ___ plates move. (karena)', 'because', 'because.'),
+ ('Gunung berapi meletus.', 'The volcano ___. (meletus)', 'erupts', 'erupts.'),
+ ('Tanaman membuat makanan lewat fotosintesis.', 'Plants make food through ___.', 'photosynthesis', 'photosynthesis.')]), quiz=mkf([('Kemudian, lava mengalir ke bawah.', 'The lava ___ down. (mengalir)', 'flows', 'flows.'),
+ ('Hal ini terjadi berulang-ulang.', 'This process happens again and ___.', 'again', 'again and again.'),
+ ('Es mencair ketika suhu naik.', 'Ice ___ when the temperature rises. (mencair)', 'melts', 'melts.'),
+ ('Akhirnya, air kembali ke laut.', '___, the water returns to the sea.', 'Finally', 'Finally.'),
+ ('Penyebab banjir adalah hujan deras.', 'The ___ of floods is heavy rain. (penyebab)', 'cause', 'cause.')]))

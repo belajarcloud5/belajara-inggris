@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Pertama, siapkan bahan-bahannya.', 'First, ___ the ingredients. (siapkan)', 'prepare', 'prepare = menyiapkan.'),
+ ('Kedua, kupas kentangnya.', 'Second, ___ the potatoes. (kupas)', 'peel', 'peel = mengupas.'),
+ ('Lalu, goreng sampai kecokelatan.', 'Then, ___ it until brown. (goreng)', 'fry', 'fry = menggoreng.'),
+ ('Jangan terlalu lama.', '___ cook it too long.', "Don't", "Don't + V1."),
+ ('Tunggu lima menit.', '___ for five minutes. (tunggu)', 'Wait', 'Wait = tunggu.'),
+ ('Hidupkan komputer.', '___ on the computer. (hidupkan)', 'Turn', 'Turn on.'),
+ ('Matikan lampu.', 'Turn ___ the light. (mati)', 'off', 'turn off = mematikan.'),
+ ('Tekan tombol hijau.', '___ the green button. (tekan)', 'Press', 'press = menekan.'),
+ ('Masukkan kartu ke dalam mesin.', '___ the card into the machine. (masukkan)', 'Insert/Put', 'insert = memasukkan.'),
+ ('Periksa hasilnya.', '___ the result. (periksa)', 'Check', 'check = memeriksa.')]), quiz=mkf([('Prosedur punya tujuan, bahan, dan langkah.', 'A procedure text has a goal, materials, and ___. (langkah)', 'steps', 'steps = langkah.'),
+ ('Aduk perlahan.', 'Stir ___. (perlahan)', 'slowly', 'slowly = perlahan.'),
+ ('Setelah matang, angkat dan sajikan.', 'When it is ___, serve it. (matang)', 'cooked/ready', 'cooked = matang.'),
+ ('Cuci tangan dengan sabun.', 'Wash your hands with ___. (sabun)', 'soap', 'soap = sabun.'),
+ ('Terakhir, simpan di kulkas.', '___, keep it in the fridge. (terakhir)', 'Finally/Lastly', 'Finally = terakhir.')]))

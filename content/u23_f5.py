@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Aku sudah pernah ke Bali.', 'I ___ been to Bali.', 'have', 'I + have + V3.'),
+ ('Dia sudah makan.', 'She ___ eaten.', 'has', 'She + has + V3.'),
+ ('Aku belum pernah naik pesawat.', 'I have ___ flown in a plane. (belum pernah)', 'never', 'never = belum pernah.'),
+ ('Apakah kamu pernah melihat gajah?', 'Have you ___ seen an elephant? (pernah)', 'ever', 'ever = pernah (pertanyaan).'),
+ ('Kami sudah selesai mengerjakan PR.', 'We have ___ finished our homework. (sudah)', 'already', 'already = sudah.'),
+ ('Dia belum tiba.', "He hasn't arrived ___. (belum)", 'yet', 'yet = belum.'),
+ ('Aku tinggal di sini sejak 2020.', 'I have lived here ___ 2020.', 'since', 'since + titik waktu.'),
+ ('Dia bekerja di sini selama tiga tahun.', 'She has worked here ___ three years.', 'for', 'for + lama waktu.'),
+ ('Aku sudah melihat film itu.', 'I have ___ that film. (melihat)', 'seen', 'see → seen.'),
+ ('Kami sudah pergi ke Jakarta.', 'We have ___ to Jakarta. (pergi, sudah kembali)', 'been', 'have been to = pernah ke.')]), quiz=mkf([('Dia sudah menulis tiga buku.', 'He has ___ three books. (menulis)', 'written', 'write → written.'),
+ ('Mereka sudah memenangkan lomba.', 'They have ___ the contest. (memenangkan)', 'won', 'win → won.'),
+ ('Apakah kamu sudah makan siang?', 'Have you had lunch ___? (belum/sudah)', 'yet', 'yet dalam pertanyaan.'),
+ ('Aku belum pernah makan sushi.', 'I have never ___ sushi. (makan)', 'eaten', 'eat → eaten.'),
+ ('Dia belum mengerjakan tugasnya.', 'She ___ done her task. (belum)', "hasn't/has not", 'has not + V3.')]))

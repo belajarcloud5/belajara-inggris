@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Kemarin aku pergi ke pasar.', 'Yesterday I ___ to the market. (pergi)', 'went', 'go → went (tidak beraturan).'),
+ ('Dia makan nasi goreng tadi pagi.', 'She ___ fried rice this morning. (makan)', 'ate', 'eat → ate.'),
+ ('Kami melihat seekor kucing di jalan semalam.', 'We ___ a cat on the road last night. (melihat)', 'saw', 'see → saw.'),
+ ('Aku membeli buku baru.', 'I ___ a new book. (membeli)', 'bought', 'buy → bought.'),
+ ('Dia menulis surat untuk neneknya.', 'He ___ a letter to his grandmother. (menulis)', 'wrote', 'write → wrote.'),
+ ('Mereka bermain bola minggu lalu.', 'They ___ football last week. (bermain)', 'played', 'play → played.'),
+ ('Aku belajar semalam.', 'I ___ last night. (belajar)', 'studied', 'study → studied.'),
+ ('Dia tidak pergi ke sekolah kemarin.', 'She ___ go to school yesterday.', "didn't/did not", "didn't + kata kerja dasar."),
+ ('Apakah kamu menelepon Ibu?', '___ you call Mom?', 'Did', 'Pertanyaan lampau → Did.'),
+ ('Kami tiba pukul delapan.', 'We ___ at eight. (tiba)', 'arrived', 'arrive → arrived.')]), quiz=mkf([('Dia mengendarai sepeda ke sekolah.', 'He ___ a bike to school. (mengendarai)', 'rode', 'ride → rode.'),
+ ('Aku mengambil foto di pantai.', 'I ___ photos at the beach. (mengambil)', 'took', 'take → took.'),
+ ('Kami berenang di sungai.', 'We ___ in the river. (berenang)', 'swam', 'swim → swam.'),
+ ('Liburan kami menyenangkan.', 'Our holiday ___ fun.', 'was', 'holiday satu → was.'),
+ ('Mereka ada di rumah kemarin.', 'They ___ at home yesterday.', 'were', 'They → were.')]))

@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Ayahku seorang guru.', 'My ___ is a teacher. (ayah)', 'father/dad', 'father = ayah.'),
+ ('Ibuku sangat baik.', 'My ___ is very kind. (ibu)', 'mother/mom', 'mother = ibu.'),
+ ('Dia saudara laki-lakiku.', 'He is my ___. (saudara laki-laki)', 'brother', 'brother = saudara laki-laki.'),
+ ('Dia saudara perempuanku.', 'She is my ___. (saudara perempuan)', 'sister', 'sister = saudara perempuan.'),
+ ('Kakek dan nenekku tinggal di desa.', 'My ___ live in a village. (kakek dan nenek)', 'grandparents', 'grandparents = kakek dan nenek.'),
+ ('Dia adalah pamanku.', 'He is my ___. (paman)', 'uncle', 'uncle = paman.'),
+ ('Bibiku seorang dokter.', 'My ___ is a doctor. (bibi)', 'aunt', 'aunt = bibi.'),
+ ('Dia teman sekelasku.', 'She is my ___. (teman sekelas)', 'classmate', 'classmate = teman sekelas.'),
+ ('Mereka adalah orang tuaku.', 'They ___ my parents.', 'are', 'They + are.'),
+ ('Kami bersaudara.', 'We ___ brothers.', 'are', 'We + are.')]), quiz=mkf([('Ini adikku; namanya Dina.', 'This is my sister. ___ name is Dina.', 'her', 'Perempuan → her.'),
+ ('Itu kakakku; namanya Budi.', 'That is my brother. ___ name is Budi.', 'his', 'Laki-laki → his.'),
+ ('Rumah kami besar.', '___ house is big.', 'our', 'our = milik kami.'),
+ ('Aku punya dua adik.', 'I have two ___. (adik-adik)', 'siblings/brothers/sisters', 'Siblings = saudara kandung.'),
+ ('Apakah dia sepupumu?', 'Is he your ___? (sepupu)', 'cousin', 'cousin = sepupu.')]))

@@ -1,0 +1,18 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Menurut pendapat saya, olahraga itu penting.', '___ my opinion, sport is important.', 'In', 'In my opinion.'),
+ ('Saya yakin bahwa belajar kelompok membantu.', 'I strongly ___ that group study helps. (yakin)', 'believe', 'believe that.'),
+ ('Saya sependapat dengan Anda.', 'I ___ with you. (sependapat)', 'agree', 'agree with.'),
+ ('Saya tidak sependapat dengan pernyataan itu.', 'I ___ with that statement. (tidak sependapat)', 'disagree', 'disagree with.'),
+ ('Itu poin yang bagus, tetapi saya punya pandangan lain.', "That's a good point, ___ I have another view. (tetapi)", 'but', 'but.'),
+ ('Sebaliknya, banyak orang menolak ide itu.', 'On the ___, many people reject the idea. (sebaliknya)', 'contrary', 'On the contrary.'),
+ ('Di satu sisi, ponsel berguna.', 'On the one ___, phones are useful.', 'hand', 'On the one hand.'),
+ ('Di sisi lain, ponsel mengganggu.', 'On the other ___, they distract us.', 'hand', 'On the other hand.'),
+ ('Sebagai contoh, internet mempermudah belajar.',
+  'For ___, the internet makes learning easier. (contoh)',
+  'example/instance',
+  'For example.'),
+ ('Selain itu, kita juga perlu istirahat.', '___, we also need rest. (selain itu)', 'Besides/Moreover/Furthermore', 'Besides/Moreover.')]), quiz=mkf([('Karena itu, kita harus berhati-hati.', '___, we must be careful. (oleh karena itu)', 'Therefore', 'Therefore.'),
+ ('Argumen itu kuat.', 'That is a strong ___. (argumen)', 'argument', 'argument.'),
+ ('Bisakah Anda menjelaskan alasannya?', 'Could you explain your ___? (alasan)', 'reasons/reason', 'reasons.'),
+ ('Saya kurang yakin.', "I'm not quite ___. (yakin)", 'sure/convinced', 'not quite sure.'),
+ ('Anda ada benarnya.', 'You have a ___. (poin)', 'point', 'You have a point.')]))

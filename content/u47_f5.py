@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Dia biasanya pergi ke sekolah naik bus.', 'She usually ___ to school by bus. (pergi)', 'goes', 'goes.'),
+ ('Mereka sedang bermain bola.', 'They are ___ football.', 'playing', 'are + V-ing.'),
+ ('Aku sudah selesai mengerjakan PR.', 'I have ___ my homework. (selesai)', 'finished', 'have + V3.'),
+ ('Kemarin dia tidak masuk sekolah.', 'She ___ come to school yesterday.', "didn't/did not", "didn't."),
+ ('Jika kamu belajar, kamu akan lulus.', 'If you study, you ___ pass.', 'will', 'Type 1.'),
+ ('Andai aku punya waktu, aku akan membantumu.', 'If I ___ time, I would help you.', 'had', 'Type 2.'),
+ ('Rumah itu dibangun pada 1990.', 'The house ___ built in 1990.', 'was', 'was + V3.'),
+ ('Dia berkata bahwa dia lapar.', 'He said that he ___ hungry.', 'was', 'Reported speech.'),
+ ('Aku tertarik pada sains.', 'I am interested ___ science.', 'in', 'interested in.'),
+ ('Saya melamar posisi kasir.', 'I am applying ___ the position of cashier.', 'for', 'apply for.')]), quiz=mkf([('Dahulu kala, ada seorang pangeran.', 'Once upon a time, there ___ a prince.', 'was', 'was.'),
+ ('Tuangkan air ke dalam gelas.', 'Pour the water ___ the glass.', 'into', 'into.'),
+ ('Menurutku, ini ide yang bagus.', '___ my opinion, this is a good idea.', 'In', 'In my opinion.'),
+ ('Dia lebih pintar daripada kakaknya.', 'She is ___ than her brother. (pintar)', 'smarter', 'smart → smarter.'),
+ ('Kita sebaiknya menjaga lingkungan.', 'We ___ protect the environment. (sebaiknya)', 'should', 'should.')]))

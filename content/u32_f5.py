@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Pengumuman: besok sekolah libur.', 'Notice: School ___ closed tomorrow.', 'will be', 'will be closed.'),
+ ('Kami mengundang Anda untuk hadir.', 'We cordially ___ you to attend. (mengundang)', 'invite', 'invite = mengundang.'),
+ ('Acara dimulai pukul sembilan pagi.', 'The event ___ at 9 a.m. (dimulai)', 'starts/begins', 'starts.'),
+ ('Tempat: aula sekolah.', 'Venue: the school ___. (aula)', 'hall', 'hall = aula.'),
+ ('Harap datang tepat waktu.', 'Please arrive ___ time.', 'on', 'on time.'),
+ ('Konfirmasikan kehadiran Anda.', 'Please ___ your attendance. (konfirmasi)', 'confirm', 'confirm.'),
+ ('Siswa wajib memakai seragam.', 'Students are ___ to wear uniforms. (wajib)', 'required', 'be required to.'),
+ ('Pesan: Ibu pergi ke pasar.', 'Message: Mom ___ to the market. (pergi)', 'went', 'went.'),
+ ('Tolong bilang ke Dina bahwa rapat ditunda.', 'Please tell Dina that the meeting is ___. (ditunda)', 'postponed', 'postponed.'),
+ ('Perpustakaan buka dari jam delapan sampai empat.', 'The library is open ___ eight to four.', 'from', 'from ... to.')]), quiz=mkf([('Kegiatan ini terbuka untuk umum.', 'The activity is open to the ___. (umum)', 'public', 'open to the public.'),
+ ('Harap bawa kartu pelajar.', 'Please ___ your student card. (bawa)', 'bring', 'bring.'),
+ ('Hormat kami, panitia.', 'Yours ___, the committee.', 'sincerely/faithfully', 'Yours sincerely.'),
+ ('Kami mohon maaf atas ketidaknyamanan ini.', 'We ___ for the inconvenience. (mohon maaf)', 'apologize/apologise', 'apologize.'),
+ ('Mohon balas sebelum Jumat.', 'Please reply ___ Friday. (sebelum)', 'before/by', 'before = sebelum.')]))

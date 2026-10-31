@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Dia punya rambut hitam yang panjang.', 'She has long, ___ hair. (hitam)', 'black', 'black = hitam.'),
+ ('Matanya bulat dan cokelat.', 'His eyes are round and ___. (cokelat)', 'brown', 'brown = cokelat.'),
+ ('Candi itu sangat megah.', 'The temple is very ___. (megah)', 'magnificent/grand', 'magnificent = megah.'),
+ ('Pantainya berpasir putih.', 'The beach has ___ sand. (putih)', 'white', 'white = putih.'),
+ ('Kamarku rapi dan bersih.', 'My room is neat and ___. (bersih)', 'clean', 'clean = bersih.'),
+ ('Orang itu ramah.', 'The man is ___. (ramah)', 'friendly', 'friendly = ramah.'),
+ ('Gadis itu pemalu.', 'The girl is ___. (pemalu)', 'shy', 'shy = pemalu.'),
+ ('Rumah itu dikelilingi pohon.', 'The house is ___ by trees. (dikelilingi)', 'surrounded', 'surrounded = dikelilingi.'),
+ ('Tasnya terbuat dari kulit.', 'The bag is made ___ leather.', 'of', 'made of = terbuat dari.'),
+ ('Kain ini terasa halus.', 'This cloth feels ___. (halus)', 'smooth', 'smooth = halus.')]), quiz=mkf([('Dia mengenakan baju biru.', 'She is ___ a blue dress. (mengenakan)', 'wearing', 'wearing = mengenakan.'),
+ ('Paragraf pertama menyebut identifikasi.', 'The first part is the ___. (identifikasi)', 'identification', 'identification.'),
+ ('Gedung itu berbentuk persegi.', 'The building is ___ in shape. (persegi)', 'square', 'square = persegi.'),
+ ('Dia berbadan tinggi dan kurus.', 'He is tall and ___. (kurus)', 'thin/slim', 'thin = kurus.'),
+ ('Wajahnya manis dan lembut.', 'She has a sweet, ___ face. (lembut)', 'gentle/soft', 'gentle = lembut.')]))

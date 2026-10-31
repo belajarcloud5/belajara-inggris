@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Menurutku, ini ide yang bagus.', '___ my opinion, this is a good idea.', 'In', 'In my opinion.'),
+ ('Menurut saya, kita sebaiknya belajar.', 'I think we ___ study. (sebaiknya)', 'should', 'should = sebaiknya.'),
+ ('Aku setuju denganmu.', 'I ___ with you. (setuju)', 'agree', 'agree with.'),
+ ('Aku tidak setuju.', 'I ___ agree.', "don't/do not", "don't agree."),
+ ('Kamu benar.', 'You are ___. (benar)', 'right', 'right = benar.'),
+ ('Aku rasa tidak.', "I don't think ___. (begitu)", 'so', "I don't think so."),
+ ('Itu ide yang bagus.', "That's a good ___. (ide)", 'idea', 'idea = ide.'),
+ ('Aku punya pendapat yang berbeda.', 'I have a ___ opinion. (berbeda)', 'different', 'different = berbeda.'),
+ ('Mengapa kamu berpikir begitu?', '___ do you think so? (mengapa)', 'Why', 'Why = mengapa.'),
+ ('Karena itu bermanfaat.', '___ it is useful. (karena)', 'Because', 'Because = karena.')]), quiz=mkf([('Di satu sisi, itu murah.', 'On the one ___, it is cheap. (sisi)', 'hand', 'On the one hand.'),
+ ('Namun, itu tidak tahan lama.', "___, it doesn't last long. (namun)", 'However', 'However = namun.'),
+ ('Aku sependapat dengan Dina.', 'I agree ___ Dina.', 'with', 'agree with.'),
+ ('Aku kurang yakin.', "I'm not ___. (yakin)", 'sure', 'sure = yakin.'),
+ ('Menurutku sih, lebih baik naik bus.', 'I ___ it is better to take a bus. (berpikir)', 'think/believe', 'I think ...')]))

@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Singa hidup di savana.', 'Lions ___ in the savanna. (hidup)', 'live', 'Jamak → live.'),
+ ('Gajah punya belalai yang panjang.', 'An elephant ___ a long trunk. (punya)', 'has', 'Tunggal → has.'),
+ ('Burung punya sayap.', 'Birds ___ wings. (punya)', 'have', 'Jamak → have.'),
+ ('Harimau makan daging.', 'Tigers eat ___. (daging)', 'meat', 'meat = daging.'),
+ ('Kuda bisa berlari cepat.', 'Horses can run ___. (cepat)', 'fast', 'fast = cepat.'),
+ ('Ikan hidup di air.', 'Fish live in ___. (air)', 'water', 'water = air.'),
+ ('Candi itu sangat tua.', 'The temple is very ___. (tua)', 'old', 'old = tua.'),
+ ('Pantai itu bersih dan indah.', 'The beach is clean and ___. (indah)', 'beautiful', 'beautiful = indah.'),
+ ('Taman ini luas.', 'This park is ___. (luas)', 'large/wide/big', 'large = luas.'),
+ ('Rumah itu punya tiga kamar tidur.', 'The house ___ three bedrooms. (punya)', 'has', 'Tunggal → has.')]), quiz=mkf([('Bulu kelinci itu lembut.', "The rabbit's fur is ___. (lembut)", 'soft', 'soft = lembut.'),
+ ('Ular tidak punya kaki.', 'Snakes ___ no legs. (punya)', 'have', 'Jamak → have.'),
+ ('Kota ini ramai.', 'This city is ___. (ramai/padat)', 'crowded/busy', 'crowded = ramai.'),
+ ('Gunung itu menjulang tinggi.', 'The mountain is very ___. (tinggi)', 'high/tall', 'high = tinggi (gunung).'),
+ ('Hewan pemakan tumbuhan.', 'A cow eats ___. (rumput)', 'grass', 'grass = rumput.')]))

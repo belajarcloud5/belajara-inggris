@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Perkenalkan, nama saya Budi.', 'Let me ___ myself. My name is Budi. (memperkenalkan)', 'introduce', 'introduce myself.'),
+ ('Saya tinggal di Surabaya.', 'I ___ in Surabaya. (tinggal)', 'live', 'I → live.'),
+ ('Ayahku bekerja sebagai sopir.', 'My father ___ as a driver. (bekerja)', 'works', 'He → works.'),
+ ('Dia tidak suka makanan pedas.', 'She ___ like spicy food.', "doesn't/does not", "She → doesn't."),
+ ('Apa pekerjaanmu?', 'What do you ___? (pekerjaan, melakukan)', 'do', 'What do you do?'),
+ ('Aku sedang belajar bahasa Inggris sekarang.', 'I am ___ English now. (belajar)', 'studying/learning', 'am + V-ing.'),
+ ('Hobiku adalah bermain gitar.', 'My ___ is playing the guitar. (hobi)', 'hobby', 'hobby = hobi.'),
+ ('Aku bersekolah di SMA Negeri 1.', 'I ___ SMA Negeri 1. (bersekolah di)', 'attend/go to', 'attend = bersekolah di.'),
+ ('Cita-citaku menjadi dokter.', 'My ___ is to become a doctor. (cita-cita)', 'dream/ambition/goal', 'ambition/dream = cita-cita.'),
+ ('Kami berasal dari keluarga kecil.', 'We come ___ a small family.', 'from', 'come from.')]), quiz=mkf([('Apakah dia tinggal di sini?', '___ she live here?', 'Does', 'She → Does.'),
+ ('Dia sedang menunggu bus.', 'He is ___ for the bus. (menunggu)', 'waiting', 'is + V-ing.'),
+ ('Aku biasanya bangun pukul lima.', 'I ___ get up at five. (biasanya)', 'usually', 'usually = biasanya.'),
+ ('Senang berkenalan denganmu.', "It's nice to ___ you. (bertemu)", 'meet', 'meet = bertemu.'),
+ ('Sampai jumpa minggu depan.', 'See you ___ week. (depan)', 'next', 'next week.')]))

@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Dia sudah tinggal di sini sejak 2019.', 'She has lived here ___ 2019.', 'since', 'since.'),
+ ('Aku tertarik pada musik.', 'I am interested ___ music.', 'in', 'interested in.'),
+ ('Dia takut pada ular.', 'She is afraid ___ snakes.', 'of', 'afraid of.'),
+ ('Dia pandai berbahasa Inggris.', 'He is good ___ English.', 'at', 'good at.'),
+ ('Setiap siswa harus membawa buku.', 'Each student ___ bring a book. (harus, tunggal)', 'must', 'must + V1.'),
+ ('Semua siswa membawa buku mereka.', 'All students ___ their books. (membawa)', 'bring/carry', 'All + jamak.'),
+ ('Salah satu dari mereka sangat pandai.', 'One of them ___ very clever.', 'is', 'One of → is.'),
+ ('Mobil itu lebih mahal daripada sepeda motor.', 'The car is more expensive ___ the motorbike.', 'than', 'comparative + than.'),
+ ('Dia datang meskipun hujan.', 'She came ___ the rain. (meskipun)', 'despite', 'despite + noun.'),
+ ('Aku sudah menunggu selama dua jam.', 'I have been waiting ___ two hours.', 'for', 'for.')]), quiz=mkf([('Bukunya milik siapa?', '___ book is this? (milik siapa)', 'Whose', 'Whose = milik siapa.'),
+ ('Dia berlari cepat.', 'He runs ___. (dengan cepat, kata keterangan)', 'fast', 'fast (adverb).'),
+ ('Dia belajar dengan giat.', 'He studies ___. (giat)', 'hard', 'hard (adverb).'),
+ ('Kurang dari sepuluh orang hadir.', '___ than ten people came. (kurang)', 'Fewer', 'fewer + jamak.'),
+ ('Aku bosan dengan film ini.', 'I am bored ___ this film.', 'with', 'bored with.')]))

@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Ide utama paragraf ini adalah polusi.', 'The ___ idea of this paragraph is pollution. (utama)', 'main', 'main idea.'),
+ ('Kata "they" merujuk pada siswa.', 'The word "they" ___ to the students. (merujuk)', 'refers', 'refers to.'),
+ ('Dari teks kita bisa menyimpulkan bahwa dia lelah.', 'We can ___ that he is tired. (menyimpulkan)', 'infer/conclude', 'infer.'),
+ ('Kata "huge" artinya sangat besar.', 'The word "huge" means very ___. (besar)', 'big/large', 'huge = very big.'),
+ ('Tujuan teks ini untuk membujuk.', 'The purpose of the text is to ___. (membujuk)', 'persuade', 'persuade.'),
+ ('Tujuan teks ini untuk memberi informasi.', 'The text aims to ___. (menginformasikan)', 'inform', 'inform.'),
+ ('Informasi itu dinyatakan secara tersurat.', 'The information is ___ stated. (secara eksplisit)', 'explicitly', 'explicitly.'),
+ ('Penulis menggunakan contoh untuk mendukung ide.', 'The writer uses ___ to support the idea. (contoh)', 'examples', 'examples.'),
+ ('Judul yang cocok untuk teks itu...', 'A suitable ___ for the text is ... (judul)', 'title', 'title.'),
+ ('Paragraf kedua menjelaskan penyebab.', 'The second paragraph explains the ___. (penyebab)', 'causes/cause', 'causes.')]), quiz=mkf([('Pilih pernyataan yang sesuai dengan teks.', 'Choose the statement that ___ the text. (sesuai)', 'matches/fits', 'matches.'),
+ ('Nada penulis adalah serius.', "The writer's ___ is serious. (nada)", 'tone', 'tone.'),
+ ('Pernyataan itu tidak disebut dalam teks.', 'The statement is not ___ in the text. (disebut)', 'mentioned', 'mentioned.'),
+ ('Kata ganti "it" mengacu pada kota.', '"It" ___ to the city. (mengacu)', 'refers', 'refers to.'),
+ ('Kalimat pendukung menjelaskan ide pokok.', 'A ___ sentence explains the main idea. (pendukung)', 'supporting', 'supporting.')]))

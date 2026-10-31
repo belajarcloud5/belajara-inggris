@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Saya bekerja di bagian keuangan.', 'I work in the ___ department. (keuangan)', 'finance', 'finance.'),
+ ('Bisakah Anda membantu saya?', '___ you help me, please?', 'Could/Can', 'Could you.'),
+ ('Terlampir adalah laporan.', 'The report is ___. (terlampir)', 'attached', 'attached.'),
+ ('Mari kita lanjut ke slide berikutnya.', "Let's move on to the ___ slide. (berikutnya)", 'next', 'next.'),
+ ('Saya akan menelepon balik nanti.', "I'll call you ___ later. (balik)", 'back', 'call back.'),
+ ('Rapat diundur ke Kamis.', 'The meeting was ___ to Thursday. (diundur)', 'postponed', 'postponed.'),
+ ('Penjualan naik lima persen.', 'Sales ___ by five percent. (naik)', 'rose/increased', 'rose.'),
+ ('Mohon maaf atas ketidaknyamanan.', 'We apologize for the ___. (ketidaknyamanan)', 'inconvenience', 'inconvenience.'),
+ ('Kami sedang mengerjakan perbaikan.', 'We are working on a ___. (perbaikan)', 'fix', 'fix.'),
+ ('Terima kasih atas masukan Anda.', 'Thank you for your ___. (masukan)', 'feedback', 'feedback.')]), quiz=mkf([('Saya ingin memesan kamar hotel.', "I'd like to ___ a hotel room. (memesan)", 'book/reserve', 'book.'),
+ ('Tenggat waktunya hari Jumat.', 'The ___ is Friday. (tenggat)', 'deadline', 'deadline.'),
+ ('Mohon tinjau dokumen ini.', 'Please ___ this document. (tinjau)', 'review', 'review.'),
+ ('Siapa yang mencatat notulen?', 'Who is taking the ___? (notulen)', 'minutes', 'minutes.'),
+ ('Saya menantikan balasan Anda.', 'I look forward to ___ from you. (mendengar)', 'hearing', 'hearing.')]))

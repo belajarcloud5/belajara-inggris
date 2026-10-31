@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Kebakaran terjadi di pasar tadi malam.', 'A fire ___ place at the market last night. (terjadi)', 'took', 'took place.'),
+ ('Dua orang terluka dalam kecelakaan itu.', 'Two people were ___ in the accident. (terluka)', 'injured', 'injured.'),
+ ('Polisi menyelidiki kasus itu.', 'The police are ___ the case. (menyelidiki)', 'investigating', 'investigate.'),
+ ('Korban dibawa ke rumah sakit.', 'The victims were ___ to the hospital. (dibawa)', 'taken', 'take → taken.'),
+ ('Menurut saksi, mobil itu melaju kencang.', '___ to witnesses, the car was speeding. (menurut)', 'According', 'According to.'),
+ ('Banjir melanda kota itu.', 'Floods ___ the city. (melanda)', 'hit', 'hit.'),
+ ('Presiden mengunjungi daerah bencana.', 'The president ___ the disaster area. (mengunjungi)', 'visited', 'visited.'),
+ ('Juru bicara mengatakan semuanya aman.', 'A ___ said everything was safe. (juru bicara)', 'spokesperson/spokesman', 'spokesperson.'),
+ ('Judul berita disebut headline.', 'The title of a news item is the ___.', 'headline', 'headline.'),
+ ('Peristiwa itu terjadi kemarin.', 'The event ___ yesterday. (terjadi)', 'happened/occurred', 'happened.')]), quiz=mkf([('Rumah-rumah rusak parah.', 'Many houses were badly ___. (rusak)', 'damaged', 'damaged.'),
+ ('Para pemadam kebakaran tiba dengan cepat.', 'The firefighters ___ quickly. (tiba)', 'arrived', 'arrived.'),
+ ('Penyebabnya belum diketahui.', 'The cause is not ___ yet. (diketahui)', 'known', 'known.'),
+ ('Dua mobil bertabrakan.', 'Two cars ___. (bertabrakan)', 'collided/crashed', 'collided.'),
+ ('Warga diminta tetap tenang.', 'Residents were asked to stay ___. (tenang)', 'calm', 'calm.')]))

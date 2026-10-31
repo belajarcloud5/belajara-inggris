@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Selamat pagi semuanya, terima kasih sudah hadir.', 'Good morning ___, thank you for coming. (semuanya)', 'everyone', 'everyone.'),
+ ('Hari ini saya akan membahas strategi baru.', "Today I'll ___ our new strategy. (membahas)", 'discuss/cover/present', 'discuss.'),
+ ('Mari kita lanjut ke slide berikutnya.', "Let's move to the ___ slide. (berikutnya)", 'next', 'next.'),
+ ('Seperti terlihat di grafik ini.', 'As you can ___ on this chart. (lihat)', 'see', 'as you can see.'),
+ ('Poin utamanya adalah biaya.', 'The main ___ is cost. (poin)', 'point', 'point.'),
+ ('Singkatnya, kita perlu bertindak.', 'To ___ up, we need to act. (ringkas)', 'sum', 'To sum up.'),
+ ('Silakan bertanya.', 'Feel free to ___ questions. (bertanya/mengajukan)', 'ask', 'ask questions.'),
+ ('Terima kasih atas perhatian Anda.', 'Thank you for your ___. (perhatian)', 'attention', 'attention.'),
+ ('Pertanyaan yang bagus.', "That's a great ___. (pertanyaan)", 'question', 'question.'),
+ ('Saya akan membagikan lembar ringkasan.', "I'll hand out a ___. (selebaran)", 'handout', 'handout.')]), quiz=mkf([('Saya akan membahas tiga hal.', "I'll ___ three things. (mencakup)", 'cover', 'cover.'),
+ ('Slide ini menjelaskan hasilnya.', 'This slide ___ the results. (menjelaskan)', 'explains/shows', 'explains.'),
+ ('Izinkan saya memulai dengan angka.', 'Let me ___ with the numbers. (mulai)', 'start/begin', 'start.'),
+ ('Mari kita lihat contoh.', "Let's look ___ an example.", 'at', 'look at.'),
+ ('Kita sampai di akhir presentasi.', "We've come to the ___ of the presentation. (akhir)", 'end', 'end.')]))

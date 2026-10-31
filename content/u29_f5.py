@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Minggu lalu kami pergi ke Yogyakarta.', 'Last week we ___ to Yogyakarta. (pergi)', 'went', 'go → went.'),
+ ('Kami berangkat pagi-pagi.', 'We ___ early in the morning. (berangkat)', 'left/departed', 'leave → left.'),
+ ('Pertama, kami mengunjungi candi.', '___, we visited a temple. (pertama)', 'First', 'First = pertama.'),
+ ('Setelah itu, kami makan siang.', 'After ___, we had lunch.', 'that', 'After that.'),
+ ('Kemudian kami berbelanja.', '___ we went shopping. (kemudian)', 'Then', 'Then = kemudian.'),
+ ('Akhirnya, kami pulang.', '___, we went home. (akhirnya)', 'Finally', 'Finally = akhirnya.'),
+ ('Perjalanan itu menyenangkan.', 'The trip ___ fun.', 'was', 'trip satu → was.'),
+ ('Aku membeli oleh-oleh untuk Ibu.', 'I ___ a souvenir for Mom. (membeli)', 'bought', 'buy → bought.'),
+ ('Kami bertemu teman lama.', 'We ___ an old friend. (bertemu)', 'met', 'meet → met.'),
+ ('Aku merasa sangat lelah.', 'I ___ very tired. (merasa)', 'felt', 'feel → felt.')]), quiz=mkf([('Cuaca hari itu cerah.', 'The weather ___ sunny that day.', 'was', 'was.'),
+ ('Recount menceritakan peristiwa di masa lalu.', 'A recount text tells ___ events. (masa lalu)', 'past', 'past = lampau.'),
+ ('Pada hari Minggu, kami berenang.', '___ Sunday, we swam.', 'On', 'On + hari.'),
+ ('Kami tidak membawa payung.', 'We ___ bring an umbrella.', "didn't/did not", "didn't + V1."),
+ ('Hari itu tak terlupakan.', 'It was an ___ day. (tak terlupakan)', 'unforgettable', 'unforgettable.')]))

@@ -1,0 +1,18 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Kamu harus mengerjakan PR.', 'You ___ do your homework. (harus)', 'must', 'must = harus.'),
+ ('Kamu tidak boleh berisik di perpustakaan.', 'You ___ make noise here. (tidak boleh)', "mustn't/must not", "mustn't = dilarang."),
+ ('Kamu sebaiknya istirahat.', 'You ___ rest. (sebaiknya)', 'should', 'should = sebaiknya.'),
+ ('Kamu sebaiknya tidak makan terlalu banyak permen.',
+  'You ___ eat too much candy.',
+  "shouldn't/should not",
+  "shouldn't = sebaiknya tidak."),
+ ('Bolehkah saya masuk?', '___ I come in? (boleh)', 'May', 'May I ...? = bolehkah saya.'),
+ ('Aku harus pergi sekarang.', 'I ___ to go now. (harus)', 'have', 'have to = harus (karena keadaan).'),
+ ('Dia harus bangun pagi.', 'She ___ to get up early.', 'has', 'She → has to.'),
+ ('Kami tidak harus datang hari Minggu.', 'We ___ have to come on Sunday.', "don't/do not", "don't have to = tidak harus."),
+ ('Dilarang merokok.', 'You ___ smoke here. (dilarang)', "mustn't/must not", "mustn't = dilarang."),
+ ('Kamu sebaiknya minum air putih.', 'You ___ drink water. (sebaiknya)', 'should', 'should + V1.')]), quiz=mkf([('Pakai helm saat naik motor.', '___ a helmet when you ride a motorbike. (pakai)', 'Wear', 'Perintah: Wear.'),
+ ('Jangan buang sampah sembarangan.', '___ throw litter here.', "Don't", "Don't + V1."),
+ ('Aturan sekolah: datang tepat waktu.', "It's a school ___: come on time. (aturan)", 'rule', 'rule = aturan.'),
+ ('Sebaiknya kamu belajar lebih giat.', 'You ___ study harder. (sebaiknya)', 'should', 'should + V1.'),
+ ('Boleh aku pinjam penamu?', '___ I borrow your pen?', 'May/Can', 'May/Can I ...? untuk izin.')]))

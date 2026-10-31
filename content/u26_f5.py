@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Dia pergi ke sekolah setiap hari.', 'She ___ to school every day. (pergi)', 'goes', 'Present simple, she → goes.'),
+ ('Mereka sedang bermain bola sekarang.', 'They are ___ football now. (bermain)', 'playing', 'are + V-ing.'),
+ ('Kemarin kami mengunjungi museum.', 'Yesterday we ___ a museum. (mengunjungi)', 'visited', 'Lampau: visited.'),
+ ('Aku sudah makan.', 'I have already ___. (makan)', 'eaten', 'have + V3.'),
+ ('Nasi dimasak oleh Ibu.', 'Rice is ___ by Mom. (dimasak)', 'cooked', 'is + V3.'),
+ ('Jika hujan, aku akan membawa payung.', 'If it rains, I ___ take an umbrella.', 'will', 'will + V1.'),
+ ('Besok aku akan pergi ke dokter.', 'Tomorrow I am going ___ see a doctor.', 'to', 'going to + V1.'),
+ ('Dia lebih tinggi daripada aku.', 'She is ___ than me. (tinggi)', 'taller', 'tall → taller.'),
+ ('Dia tidak pernah terlambat.', 'He is ___ late. (tidak pernah)', 'never', 'never = tidak pernah.'),
+ ('Aku sedang tidur ketika kamu menelepon.', 'I ___ sleeping when you called.', 'was', 'was + V-ing.')]), quiz=mkf([('Kamu sebaiknya istirahat.', 'You ___ rest. (sebaiknya)', 'should', 'should + V1.'),
+ ('Menurutku, itu benar.', 'In my ___, that is right. (pendapat)', 'opinion', 'in my opinion.'),
+ ('Gunung itu tinggi sekali.', 'That is the ___ mountain in Java. (tertinggi)', 'highest', 'the highest.'),
+ ('Dia berasal dari Medan.', 'She ___ from Medan.', 'is', 'She + is.'),
+ ('Buku itu ditulis oleh dia.', 'The book ___ written by him.', 'was', 'was + V3.')]))

@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Selamat pagi, Bu!', "Good ___, Ma'am! (pagi hari)", 'morning', 'Good morning dipakai sampai sekitar pukul 12.'),
+ ('Selamat malam (sebelum tidur).', 'Good ___, Mom. See you tomorrow.', 'night', 'Good night dipakai saat berpamitan tidur.'),
+ ('Namaku Rani.', 'My ___ is Rani.', 'name', 'My name is ... = namaku ...'),
+ ('Senang bertemu denganmu.', 'Nice to ___ you.', 'meet', 'Nice to meet you.'),
+ ('Saya berumur dua belas tahun.', 'I ___ twelve years old.', 'am', 'I + am.'),
+ ('Dia berasal dari Bandung.', 'She ___ from Bandung.', 'is', 'She + is.'),
+ ('Apa kabar?', 'How ___ you?', 'are', 'How are you?'),
+ ('Saya baik-baik saja, terima kasih.', "I'm ___, thank you.", 'fine/good/well', "I'm fine, thank you."),
+ ('Sampai jumpa!', 'See you ___! (nanti)', 'later', 'See you later!'),
+ ('Terima kasih banyak.', 'Thank you very ___.', 'much', 'Thank you very much.')]), quiz=mkf([('Sama-sama.', "You're ___.", 'welcome', "Thank you → You're welcome."),
+ ('Maaf, saya terlambat.', "___, I'm late.", 'sorry', 'Sorry = maaf.'),
+ ('Kamu berasal dari mana?', 'Where are you ___?', 'from', 'Where are you from?'),
+ ('Bagaimana mengeja namamu?', 'How do you ___ your name?', 'spell', 'spell = mengeja.'),
+ ('Selamat tinggal.', '___ ! (perpisahan)', 'goodbye/bye', 'Goodbye atau bye untuk berpamitan.')]))

@@ -1,0 +1,18 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Ide pokok ada di kalimat pertama.', 'The main ___ is in the first sentence. (ide)', 'idea', 'main idea.'),
+ ('Apa tujuan penulis?', "What is the writer's ___? (tujuan)", 'purpose', 'purpose.'),
+ ('Cari informasi rinci dalam teks.', 'Look for ___ information in the text. (rinci)', 'detailed/specific', 'detailed.'),
+ ('Kata "it" merujuk pada buku.', 'The word "it" ___ to the book. (merujuk)', 'refers', 'refer to.'),
+ ('Artinya hampir sama dengan "big".', 'It is a ___ of "big". (sinonim)', 'synonym', 'synonym.'),
+ ('Artinya berlawanan dengan "big".', 'It is an ___ of "big". (antonim)', 'antonym', 'antonym.'),
+ ('Baca teks dengan cepat untuk mendapat gambaran umum.',
+  '___ means reading quickly for the general idea. (membaca sekilas)',
+  'Skimming',
+  'skimming.'),
+ ('Cari kata tertentu dengan cepat.', '___ means looking for specific information. (mencari informasi tertentu)', 'Scanning', 'scanning.'),
+ ('Tebak arti kata dari konteks.', 'Guess the meaning from the ___. (konteks)', 'context', 'context.'),
+ ('Paragraf ini membahas penyebab banjir.', 'This paragraph ___ the causes of floods. (membahas)', 'discusses', 'discuss.')]), quiz=mkf([('Judul teks memberi petunjuk isi.', 'The title gives a ___ about the content. (petunjuk)', 'clue/hint', 'clue.'),
+ ('Penulis menyimpulkan bahwa kita harus hemat air.', 'The writer ___ that we must save water. (menyimpulkan)', 'concludes', 'conclude.'),
+ ('Pernyataan itu benar menurut teks.', 'The statement is ___ according to the text. (benar)', 'true', 'true.'),
+ ('Pernyataan itu salah.', 'The statement is ___. (salah, kebalikan dari true)', 'false', 'false.'),
+ ('Paragraf terakhir berisi kesimpulan.', 'The last paragraph is the ___. (kesimpulan)', 'conclusion', 'conclusion.')]))

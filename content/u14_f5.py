@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Pertama, cuci tanganmu.', '___, wash your hands. (pertama)', 'First', 'First = pertama.'),
+ ('Lalu, tuangkan air panas.', '___, pour the hot water. (lalu)', 'Then', 'Then = lalu.'),
+ ('Setelah itu, aduk gulanya.', 'After ___, stir the sugar.', 'that', 'After that = setelah itu.'),
+ ('Terakhir, sajikan tehnya.', '___, serve the tea. (terakhir)', 'Finally', 'Finally = akhirnya/terakhir.'),
+ ('Tuangkan air ke dalam gelas.', 'Pour the water ___ the glass. (ke dalam)', 'into', 'into = ke dalam.'),
+ ('Campurkan tepung dan telur.', '___ the flour and eggs. (campurkan)', 'Mix', 'mix = mencampur.'),
+ ('Potong bawang menjadi kecil-kecil.', '___ the onion into small pieces. (potong)', 'Cut', 'cut = memotong.'),
+ ('Panaskan minyak di wajan.', '___ the oil in the pan. (panaskan)', 'Heat', 'heat = memanaskan.'),
+ ('Tambahkan sedikit garam.', '___ a little salt. (tambahkan)', 'Add', 'add = menambah.'),
+ ('Jangan lupa mematikan kompor.', '___ forget to turn off the stove.', "Don't", "Perintah negatif: Don't.")]), quiz=mkf([('Kamu membutuhkan dua butir telur.', 'You ___ two eggs. (membutuhkan)', 'need', 'need = membutuhkan.'),
+ ('Bahan-bahannya apa?', 'What are the ___? (bahan-bahan)', 'ingredients', 'ingredients = bahan.'),
+ ('Rebus air selama lima menit.', '___ the water for five minutes. (rebus)', 'Boil', 'boil = merebus.'),
+ ('Tunggu sampai dingin.', 'Wait ___ it is cool. (sampai)', 'until', 'until = sampai.'),
+ ('Alat yang dipakai untuk mengaduk.', 'You use a ___ to stir. (sendok)', 'spoon', 'spoon = sendok.')]))

@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Aku sedang membaca buku.', 'I am ___ a book. (membaca)', 'reading', 'am + V-ing.'),
+ ('Dia sedang memasak.', 'She is ___. (memasak)', 'cooking', 'is + V-ing.'),
+ ('Mereka sedang bermain di taman.', 'They are ___ in the park. (bermain)', 'playing', 'are + V-ing.'),
+ ('Kami sedang menonton TV.', 'We are ___ TV. (menonton)', 'watching', 'watch → watching.'),
+ ('Dia sedang berlari.', 'He is ___. (berlari)', 'running', 'run → running.'),
+ ('Aku sedang menulis.', 'I am ___. (menulis)', 'writing', 'write → writing (hilangkan e).'),
+ ('Mereka sedang berenang.', 'They are ___. (berenang)', 'swimming', 'swim → swimming.'),
+ ('Dia tidak sedang tidur.', 'He ___ sleeping.', "isn't/is not", 'is not + V-ing.'),
+ ('Kami tidak sedang belajar.', 'We ___ studying.', "aren't/are not", 'are not + V-ing.'),
+ ('Apakah kamu sedang makan?', '___ you eating?', 'Are', 'Are you + V-ing?')]), quiz=mkf([('Apakah dia sedang bekerja?', '___ she working?', 'Is', 'Is she + V-ing?'),
+ ('Sekarang sedang hujan.', 'It ___ raining now.', 'is', 'It is raining.'),
+ ('Aku sedang duduk.', 'I am ___. (duduk)', 'sitting', 'sit → sitting.'),
+ ('Mereka sedang berbicara sekarang.', 'They are ___ now. (berbicara)', 'talking', 'talk → talking.'),
+ ('Apa yang sedang kamu lakukan?', 'What are you ___? (melakukan)', 'doing', 'What are you doing?')]))

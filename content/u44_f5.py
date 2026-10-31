@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Ceritakan tentang diri Anda.', 'Tell me ___ yourself.', 'about', 'Tell me about yourself.'),
+ ('Apa kelebihan Anda?', 'What are your ___? (kelebihan)', 'strengths', 'strengths.'),
+ ('Apa kekurangan Anda?', 'What are your ___? (kelemahan)', 'weaknesses', 'weaknesses.'),
+ ('Mengapa Anda ingin bekerja di sini?', 'Why do you want to ___ here? (bekerja)', 'work', 'work here.'),
+ ('Saya belajar dengan cepat.', 'I learn ___. (dengan cepat)', 'quickly', 'quickly.'),
+ ('Saya bisa bekerja dengan baik dalam tim.', 'I can work ___ in a team. (dengan baik)', 'well', 'well.'),
+ ('Saya bertanggung jawab.', 'I am ___. (bertanggung jawab)', 'responsible', 'responsible.'),
+ ('Saya punya pengalaman dua tahun.', 'I have two years of ___. (pengalaman)', 'experience', 'experience.'),
+ ('Di mana Anda melihat diri Anda lima tahun lagi?', 'Where do you see yourself in five ___? (tahun)', 'years', 'in five years.'),
+ ('Kapan Anda bisa mulai bekerja?', 'When can you ___ work? (mulai)', 'start/begin', 'start work.')]), quiz=mkf([('Saya tertarik pada tantangan baru.', 'I am interested ___ new challenges.', 'in', 'interested in.'),
+ ('Berapa gaji yang Anda harapkan?', 'What salary do you ___? (harapkan)', 'expect', 'expect.'),
+ ('Terima kasih atas waktu Anda.', 'Thank you for your ___. (waktu)', 'time', 'time.'),
+ ('Saya sudah bekerja selama tiga tahun.', 'I have worked ___ three years.', 'for', 'for + durasi.'),
+ ('Saya lulus pada tahun 2022.', 'I ___ in 2022. (lulus)', 'graduated', 'graduated.')]))

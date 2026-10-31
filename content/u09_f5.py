@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Rumah sakit ada di Jalan Merdeka.', 'The hospital is ___ Merdeka Street.', 'on', 'on + nama jalan.'),
+ ('Belok kiri.', 'Turn ___.', 'left', 'left = kiri.'),
+ ('Belok kanan.', 'Turn ___.', 'right', 'right = kanan.'),
+ ('Jalan lurus.', 'Go ___. (lurus)', 'straight', 'Go straight.'),
+ ('Berhenti di sini.', '___ here. (berhenti)', 'Stop', 'Stop = berhenti.'),
+ ('Bank ada di seberang toko.', 'The bank is ___ the shop. (di seberang)', 'opposite/across from', 'opposite = di seberang.'),
+ ('Sekolah ada di dekat taman.', 'The school is ___ the park. (dekat)', 'near', 'near = dekat.'),
+ ('Kantor pos ada di sebelah apotek.', 'The post office is ___ the pharmacy. (di sebelah)', 'next to', 'next to = di sebelah.'),
+ ('Di mana pasar?', '___ is the market?', 'Where', 'Where = di mana.'),
+ ('Berapa jauh ke stasiun?', 'How ___ is it to the station?', 'far', 'How far = seberapa jauh.')]), quiz=mkf([('Ambil belokan pertama.', 'Take the ___ turning. (pertama)', 'first', 'first = pertama.'),
+ ('Sebuah tempat untuk meminjam buku.', 'You borrow books in a ___. (perpustakaan)', 'library', 'library = perpustakaan.'),
+ ('Tempat untuk membeli obat.', 'You buy medicine at a ___. (apotek)', 'pharmacy', 'pharmacy = apotek.'),
+ ('Tempat orang beribadah.', 'People pray in a ___. (masjid)', 'mosque', 'mosque = masjid.'),
+ ('Permisi, di mana stasiunnya?', 'Excuse me, ___ is the station?', 'where', 'Excuse me, where is ...?')]))

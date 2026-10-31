@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Mohon maaf atas ketidaknyamanan ini.', "I'm sorry for the ___. (ketidaknyamanan)", 'inconvenience', 'inconvenience.'),
+ ('Saya mengerti kekhawatiran Anda.', 'I ___ your concern. (mengerti)', 'understand', 'understand.'),
+ ('Kami akan segera menyelidiki masalahnya.', 'We will ___ the issue right away. (menyelidiki)', 'investigate/look into', 'investigate.'),
+ ('Kami akan mengirim penggantinya.', "We'll send a ___. (pengganti)", 'replacement', 'replacement.'),
+ ('Uang Anda akan dikembalikan.', 'You will get a ___. (pengembalian dana)', 'refund', 'refund.'),
+ ('Barangnya rusak.', 'The item is ___. (rusak)', 'damaged/broken', 'damaged.'),
+ ('Bisakah saya meminta nomor pesanan Anda?', 'May I have your order ___? (nomor)', 'number', 'order number.'),
+ ('Pelanggan tidak puas.', 'The customer is not ___. (puas)', 'satisfied/happy', 'satisfied.'),
+ ('Terima kasih telah menghubungi kami.', 'Thank you for ___ us. (menghubungi)', 'contacting/calling', 'contacting.'),
+ ('Pengirimannya terlambat.', 'The ___ was late. (pengiriman)', 'delivery', 'delivery.')]), quiz=mkf([('Kami akan memperbaiki masalah ini.', 'We will ___ this problem. (memperbaiki)', 'fix/solve/resolve', 'fix/solve = memperbaiki.'),
+ ('Saya akan menyampaikan keluhan ini ke atasan.', "I'll pass this complaint ___ to my manager. (naik)", 'on/up', 'pass on.'),
+ ('Apakah ada hal lain yang bisa saya bantu?', 'Is there anything ___ I can help you with? (lain)', 'else', 'anything else.'),
+ ('Mohon bersabar.', 'Thank you for your ___. (kesabaran)', 'patience', 'patience.'),
+ ('Kami menghargai masukan Anda.', 'We ___ your feedback. (menghargai)', 'appreciate/value', 'appreciate.')]))

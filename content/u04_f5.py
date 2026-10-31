@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Aku bangun pukul lima.', 'I ___ up at five. (bangun)', 'get', 'get up = bangun.'),
+ ('Dia mandi setiap pagi.', 'She ___ a shower every morning.', 'takes', 'take a shower; She → takes.'),
+ ('Kami sarapan pukul tujuh.', 'We ___ breakfast at seven.', 'have', 'have breakfast.'),
+ ('Ayah pergi ke kantor dengan bus.', 'My father ___ to the office by bus. (pergi)', 'goes', 'He → goes.'),
+ ('Dia tidak makan daging.', 'She ___ eat meat.', "doesn't/does not", "She → doesn't."),
+ ('Aku tidak suka kopi.', 'I ___ like coffee.', "don't/do not", "I → don't."),
+ ('Apakah kamu belajar setiap malam?', '___ you study every night?', 'Do', 'Pertanyaan dengan you → Do.'),
+ ('Apakah dia bermain bola?', '___ he play football?', 'Does', 'He → Does.'),
+ ('Aku selalu cuci tangan sebelum makan.', 'I ___ wash my hands before eating. (selalu)', 'always', 'always = selalu.'),
+ ('Dia tidak pernah terlambat.', 'He ___ comes late. (tidak pernah)', 'never', 'never = tidak pernah.')]), quiz=mkf([('Kami kadang-kadang berenang.', 'We ___ swim on Sundays. (kadang-kadang)', 'sometimes', 'sometimes = kadang-kadang.'),
+ ('Adikku belajar di kamar.', 'My brother ___ in his room. (belajar)', 'studies', 'study → studies (konsonan + y).'),
+ ('Ibu memasak makan malam.', 'Mother ___ dinner. (memasak)', 'cooks', 'She → cooks.'),
+ ('Mereka tidur pukul sepuluh.', 'They ___ at ten. (tidur)', 'sleep', 'They → sleep.'),
+ ('Dia mencuci piring setiap hari.', 'She ___ the dishes every day. (mencuci)', 'washes', 'wash → washes.')]))

@@ -1,0 +1,18 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Paus adalah mamalia.', 'A whale is a ___. (mamalia)', 'mammal', 'mammal = mamalia.'),
+ ('Kucing termasuk hewan berkaki empat.', 'Cats have four ___. (kaki)', 'legs', 'legs = kaki.'),
+ ('Ikan bernapas dengan insang.', 'Fish breathe with ___. (insang)', 'gills', 'gills = insang.'),
+ ('Burung bertelur.', 'Birds lay ___. (telur)', 'eggs', 'eggs = telur.'),
+ ('Singa adalah karnivora.', 'Lions are ___. (pemakan daging)', 'carnivores', 'carnivore = pemakan daging.'),
+ ('Sapi adalah herbivora.', 'Cows are ___. (pemakan tumbuhan)', 'herbivores', 'herbivore = pemakan tumbuhan.'),
+ ('Manusia adalah omnivora.', 'Humans are ___. (pemakan segala)', 'omnivores', 'omnivore = pemakan segala.'),
+ ('Matahari terbit di timur.', 'The sun ___ in the east. (terbit)', 'rises', 'Fakta umum → present simple.'),
+ ('Air mendidih pada seratus derajat.', 'Water ___ at 100 degrees. (mendidih)', 'boils', 'Fakta umum: boils.'),
+ ('Harimau Sumatra hidup di hutan.', 'The Sumatran tiger ___ in forests. (hidup)', 'lives', 'Fakta tunggal → lives.')]), quiz=mkf([('Gajah adalah hewan yang sangat besar.', 'Elephants ___ very big animals.', 'are', 'jamak → are.'),
+ ('Teks laporan menjelaskan fakta umum.', 'A report text describes ___ facts. (umum)', 'general', 'general = umum.'),
+ ('Paragraf pertama berisi klasifikasi.',
+  'The first paragraph gives a ___. (klasifikasi)',
+  'classification',
+  'classification = klasifikasi.'),
+ ('Kelelawar bisa terbang.', 'Bats ___ fly.', 'can', 'can = bisa.'),
+ ('Harimau adalah hewan yang dilindungi.', 'Tigers are ___ animals. (dilindungi)', 'protected', 'protected = dilindungi.')]))

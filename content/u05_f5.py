@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Ini adalah bukuku.', '___ is my book. (dekat, satu)', 'This', 'This = ini (satu, dekat).'),
+ ('Itu adalah meja guru.', "___ is the teacher's desk. (jauh, satu)", 'That', 'That = itu.'),
+ ('Ini penggaris-penggarisku.', '___ are my rulers. (dekat, banyak)', 'These', 'These = ini (banyak).'),
+ ('Itu adalah pohon-pohon.', '___ are trees. (jauh, banyak)', 'Those', 'Those = itu (banyak).'),
+ ('Ada sebuah perpustakaan di sekolah kami.', 'There ___ a library at our school.', 'is', 'Satu benda → is.'),
+ ('Ada tiga kelas di lantai dua.', 'There ___ three classes on the second floor.', 'are', 'Banyak → are.'),
+ ('Tidak ada kantin di sini.', 'There ___ a canteen here.', "isn't/is not", "Satu benda, negatif → isn't."),
+ ('Apakah ada komputer di laboratorium?', '___ there any computers in the lab?', 'Are', 'computers jamak → Are.'),
+ ('Tasku ada di bawah meja.', 'My bag is ___ the desk. (di bawah)', 'under', 'under = di bawah.'),
+ ('Papan tulis ada di depan kelas.', 'The board is ___ the class. (di depan)', 'in front of', 'in front of = di depan.')]), quiz=mkf([('Penghapus ada di dalam kotak pensil.', 'The eraser is ___ the pencil case.', 'in', 'in = di dalam.'),
+ ('Buku ada di atas meja.', 'The book is ___ the table.', 'on', 'on = di atas (menempel).'),
+ ('Kantin ada di sebelah perpustakaan.', 'The canteen is ___ to the library. (di sebelah)', 'next', 'next to = di sebelah.'),
+ ('Kursi ada di belakang meja.', 'The chair is ___ the desk. (di belakang)', 'behind', 'behind = di belakang.'),
+ ('Aku duduk di antara Dina dan Rani.', 'I sit ___ Dina and Rani. (di antara)', 'between', 'between A and B.')]))

@@ -1,0 +1,18 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Perkenalkan, saya Rani dari divisi keuangan.',
+  "Let me ___ myself. I'm Rani from Finance. (memperkenalkan)",
+  'introduce',
+  'introduce myself.'),
+ ('Saya bekerja sebagai analis data.', 'I work ___ a data analyst.', 'as', 'work as = bekerja sebagai.'),
+ ('Saya bertanggung jawab atas pelatihan.', "I'm responsible ___ training.", 'for', 'responsible for.'),
+ ('Senang bertemu dengan Anda.', "It's a ___ to meet you. (kesenangan)", 'pleasure', "It's a pleasure to meet you."),
+ ('Apa kabar akhir pekan Anda?', 'How was your ___? (akhir pekan)', 'weekend', 'weekend.'),
+ ('Selamat datang di kantor kami.', '___ to our office. (selamat datang)', 'Welcome', 'Welcome to.'),
+ ('Silakan duduk.', 'Please have a ___. (duduk)', 'seat', 'have a seat.'),
+ ('Sudah berapa lama Anda bekerja di sini?', 'How ___ have you worked here? (berapa lama)', 'long', 'How long.'),
+ ('Saya sudah bekerja di sini selama dua tahun.', 'I have worked here ___ two years.', 'for', 'for + durasi.'),
+ ('Bolehkah saya memperkenalkan rekan saya?', 'May I ___ my colleague? (memperkenalkan)', 'introduce', 'introduce.')]), quiz=mkf([('Ini rekan satu tim saya.', 'This is my ___. (rekan satu tim)', 'teammate/colleague', 'teammate.'),
+ ('Kita bertemu lagi.', 'Nice to see you ___. (lagi)', 'again', 'again.'),
+ ('Bagaimana perjalanan Anda ke kantor?', 'How was your ___ to the office? (perjalanan)', 'commute/trip/journey', 'commute.'),
+ ('Cuacanya bagus hari ini, ya?', "Lovely ___ today, isn't it? (cuaca)", 'weather', 'weather.'),
+ ('Apa yang Anda lakukan? (pekerjaan)', 'What do you ___?', 'do', 'What do you do?')]))

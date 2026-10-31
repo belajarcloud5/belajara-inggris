@@ -1,0 +1,15 @@
+from qk import mkf
+F5 = dict(practice=mkf([('Bisakah kita membuat janji?', 'Can we make an ___? (janji temu)', 'appointment', 'appointment.'),
+ ('Bagaimana kalau Selasa pukul sepuluh?', 'How ___ Tuesday at ten? (bagaimana kalau)', 'about', 'How about.'),
+ ('Saya ingin menjadwal ulang.', "I'd like to ___ the meeting. (jadwal ulang)", 'reschedule', 'reschedule.'),
+ ('Saya harus membatalkan janji kita.', 'I need to ___ our appointment. (membatalkan)', 'cancel', 'cancel.'),
+ ('Apakah Anda punya waktu luang besok?', 'Are you ___ tomorrow? (luang)', 'free/available', 'free.'),
+ ('Tenggat waktunya hari Jumat.', 'The ___ is Friday. (tenggat)', 'deadline', 'deadline.'),
+ ('Rapat diundur ke minggu depan.', 'The meeting was ___ to next week. (diundur)', 'postponed/moved/pushed', 'postponed.'),
+ ('Jadwal bentrok.', 'There is a ___ in the schedule. (bentrok)', 'clash/conflict', 'clash.'),
+ ('Saya tersedia setelah makan siang.', 'I am free ___ lunch. (setelah)', 'after', 'after.'),
+ ('Mohon konfirmasi jadwal.', 'Please ___ the schedule. (konfirmasi)', 'confirm', 'confirm.')]), quiz=mkf([('Waktu yang lebih cocok bagi Anda?', 'What time ___ you best? (cocok)', 'suits', 'suits.'),
+ ('Janji temu pukul dua.', "The appointment is ___ two o'clock.", 'at', 'at + jam.'),
+ ('Kita bertemu hari Rabu depan.', "Let's meet next ___. (Rabu)", 'Wednesday', 'Wednesday.'),
+ ('Saya akan mengirim undangan kalender.', "I'll send a calendar ___. (undangan)", 'invitation/invite', 'invitation.'),
+ ('Tolong beri tahu saya sebelum Kamis.', 'Please let me know ___ Thursday. (sebelum)', 'before/by', 'before.')]))
