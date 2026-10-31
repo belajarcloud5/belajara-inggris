@@ -1,0 +1,51 @@
+READ3 = [{'focus': 'Pertanyaan present simple dan present continuous, kata kerja statis',
+  'id': 'Maya dan Kevin saling mewawancarai untuk proyek kelas. "Kamu tinggal di mana?" "Aku tinggal di Makassar. Keluargamu berasal dari mana?" '
+        '"Keluargaku berasal dari Medan, tetapi sekarang kami tinggal di Jakarta." "Mengapa belakangan ini kamu belajar bahasa Inggris dengan '
+        'giat?"\n'
+        '"Aku ingin kuliah di luar negeri, dan aku sedang mempersiapkan ujian. Kamu sedang apa saat ini?" "Aku sedang menulis jawabanmu di buku '
+        'catatan. Aku mengerti rencanamu, dan kurasa itu bagus. Apakah kamu tahu buku bahasa Inggris yang bagus?" "Ya. Aku sedang membaca satu '
+        'sekarang."',
+  'qs': [{'answer': 0,
+          'exp': 'Teks: "I want to study abroad".',
+          'options': ['He wants to study abroad.',
+                      'He has a test tomorrow and needs a high score.',
+                      'He likes his teacher and wants to impress her.',
+                      'He is bored and has nothing else to do.'],
+          'q': 'Why is Kevin studying English hard?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'understand adalah kata kerja statis, tidak dipakai dalam -ing.',
+          'options': ['I am understanding your plan.', 'I understand your plan.', 'Where does your family come from?', "I'm writing your answers."],
+          'q': 'Which sentence has a mistake?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'at the moment → present continuous.',
+          'options': ['What are you doing at the moment?', 'Where do you live?', 'Do you know any books?', 'Why do you want that?'],
+          'q': 'Which question asks about an action happening now?',
+          'type': 'mcq'},
+         {'exp': 'Kata tanya.',
+          'pairs': [['where', 'di mana'], ['when', 'kapan'], ['why', 'mengapa'], ['how', 'bagaimana']],
+          'q': 'Pasangkan kata tanya dengan artinya:',
+          'type': 'match'},
+         {'answers': ['does'],
+          'exp': 'your family (tunggal) → does.',
+          'hint': 'd _ _ _',
+          'id': 'Lengkapi dengan present simple:',
+          'q': 'Where ___ your family come from?',
+          'type': 'fill'},
+         {'answers': ['am writing'],
+          'exp': 'at the moment → am + V-ing.',
+          'hint': 'a _ / w _ _ _ _ _ _',
+          'id': 'Lengkapi dengan present continuous:',
+          'q': 'At the moment, I ___ (write) your answers.',
+          'type': 'fill'},
+         {'answer': 'I want to study abroad.',
+          'exp': 'want + to + kata kerja dasar.',
+          'extra': ['studying'],
+          'q': 'Susun kalimat dari cerita: "Aku ingin kuliah di luar negeri."',
+          'type': 'order'}],
+  'text': 'Maya and Kevin are interviewing each other for a class project. "Where do you live?" "I live in Makassar. Where does your family come '
+          'from?" "My family comes from Medan, but we live in Jakarta now." "Why are you studying English so hard these days?"\n'
+          '"I want to study abroad, and I\'m preparing for a test. What are you doing at the moment?" "I\'m writing your answers in my notebook. I '
+          'understand your plan, and I think it\'s great. Do you know any good English books?" "Yes, I do. I\'m reading one now."',
+  'title': 'Get to Know Me'}]

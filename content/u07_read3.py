@@ -1,0 +1,47 @@
+READ3 = [{'focus': 'can untuk kemampuan dan like + V-ing',
+  'id': 'Hari ini hari klub di sekolah. Rani bertanya pada Tom, "Kamu bisa apa?" Tom berkata, "Aku bisa bermain gitar, tetapi tidak bisa menyanyi. '
+        'Aku suka bermain musik bersama teman." Rani berkata, "Aku tidak bisa memainkan alat musik apa pun, tetapi aku bisa menari. Aku suka '
+        'menari."\n'
+        'Pak Adi, sang guru, bertanya, "Bisakah kalian bergabung dengan klub musik bersama?" Tom menjawab, "Ya, bisa. Rani bisa menari sementara aku '
+        'bermain gitar." Pak Adi tersenyum. "Ide bagus! Bisakah kalian tampil Jumat depan?" "Ya, bisa!"',
+  'qs': [{'answer': 0,
+          'exp': 'Teks: "I can play the guitar, but I can\'t sing."',
+          'options': ['Sing', 'Play the guitar', 'Play music', 'Dance'],
+          'q': "What can't Tom do?",
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'can tidak berubah, tanpa -s.',
+          'options': ['Rani cans dance.', 'Rani can dance.', "Tom can't sing.", 'Can you perform next Friday?'],
+          'q': 'Which sentence has a mistake?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'like + V-ing.',
+          'options': ['playing', 'play', 'to played', 'plays'],
+          'q': 'Choose the correct form: "I like ___ music with friends."',
+          'type': 'mcq'},
+         {'exp': 'Kosakata dari cerita.',
+          'pairs': [['dance', 'menari'], ['sing', 'menyanyi'], ['perform', 'tampil'], ['join', 'bergabung']],
+          'q': 'Pasangkan kegiatan dengan artinya:',
+          'type': 'match'},
+         {'answers': ["can't"],
+          'exp': "Tidak bisa → can't.",
+          'hint': 'c _ _ _ _',
+          'id': "Lengkapi dengan can atau can't:",
+          'q': 'I ___ play any instrument, but I can dance.',
+          'type': 'fill'},
+         {'answers': ['dancing'],
+          'exp': 'love + V-ing.',
+          'hint': 'd _ _ _ _ _ _',
+          'id': 'Lengkapi dengan bentuk yang benar:',
+          'q': 'Rani loves ___ (dance).',
+          'type': 'fill'},
+         {'answer': 'Can you perform next Friday?',
+          'exp': 'Can + you + kata kerja dasar.',
+          'extra': ['Do'],
+          'q': 'Susun kalimat dari cerita: "Bisakah kalian tampil Jumat depan?"',
+          'type': 'order'}],
+  'text': 'Today is the school club day. Rani asks Tom, "What can you do?" Tom says, "I can play the guitar, but I can\'t sing. I like playing music '
+          'with friends." Rani says, "I can\'t play any instrument, but I can dance. I love dancing."\n'
+          'Mr. Adi, the teacher, asks them, "Can you join the music club together?" Tom answers, "Yes, we can. Rani can dance while I play the '
+          'guitar." Mr. Adi smiles. "Great idea! Can you perform next Friday?" "Yes, we can!"',
+  'title': 'What Can You Do?'}]

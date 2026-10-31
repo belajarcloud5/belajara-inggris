@@ -1,0 +1,55 @@
+READ3 = [{'focus': 'Present perfect continuous, past simple, dan future',
+  'id': 'Hana baru saja menyelesaikan wawancaranya di sebuah perusahaan perjalanan. Dia sudah menunggu kesempatan ini selama berbulan-bulan, dan dia '
+        'berlatih menjawab setiap malam. Pewawancara bertanya tentang pengalamannya, dan dia menjelaskan bahwa dia pernah bekerja sebagai pemandu '
+        'wisata selama tiga tahun.\n'
+        'Hana awalnya gugup, tetapi dia menjadi percaya diri ketika membicarakan perjalanan favoritnya. "Kami akan menghubungi Anda paling lambat '
+        'Jumat," kata pewawancara. Sekarang Hana memeriksa ponselnya setiap beberapa menit. Jika dia mendapat pekerjaan itu, dia akan mulai bulan '
+        'depan.',
+  'qs': [{'answer': 0,
+          'exp': 'Teks: "she had worked as a tour guide for three years".',
+          'options': ['She worked as a tour guide for three years.',
+                      'She studied abroad for three years.',
+                      'She was a teacher at a language school.',
+                      'She sold tickets at a train station.'],
+          'q': 'What did Hana do before?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Present perfect continuous: has been + V-ing.',
+          'options': ['She has been practice her answers every evening.',
+                      'She has been practicing her answers every evening.',
+                      'She has just finished her interview.',
+                      'The interviewer asked about her experience.'],
+          'q': 'Which sentence has a mistake?',
+          'type': 'mcq'},
+         {'answer': 0,
+          'exp': 'Teks: "We will contact you by Friday".',
+          'options': ['By Friday', 'Next month', 'Tomorrow morning', 'In a year'],
+          'q': 'When will the company contact Hana?',
+          'type': 'mcq'},
+         {'exp': 'Kosakata wawancara.',
+          'pairs': [['tell me about yourself', 'meminta perkenalan'], ['strength', 'kelebihan'], ['weakness', 'kelemahan'], ['salary', 'gaji']],
+          'q': 'Pasangkan ungkapan wawancara dengan fungsinya:',
+          'type': 'match'},
+         {'answers': ['has been waiting'],
+          'exp': 'for months → has been + V-ing.',
+          'hint': 'h _ _ / b _ _ _ / w _ _ _ _ _ _',
+          'id': 'Lengkapi dengan present perfect continuous:',
+          'q': 'Hana ___ (wait) for this chance for months.',
+          'type': 'fill'},
+         {'answers': ['will start'],
+          'exp': 'If + present, will + V1.',
+          'hint': 'w _ _ _ / s _ _ _ _',
+          'id': 'Lengkapi dengan conditional 1:',
+          'q': 'If she gets the job, she ___ (start) next month.',
+          'type': 'fill'},
+         {'answer': 'Hana has just finished her interview.',
+          'exp': 'has just + V3.',
+          'extra': ['had'],
+          'q': 'Susun kalimat dari cerita: "Hana baru saja menyelesaikan wawancaranya."',
+          'type': 'order'}],
+  'text': 'Hana has just finished her interview at a travel company. She has been waiting for this chance for months, and she has been practicing '
+          'her answers every evening. The interviewer asked her about her experience, and she explained that she had worked as a tour guide for '
+          'three years.\n'
+          'Hana felt nervous at first, but she became confident when she talked about her favorite trips. "We will contact you by Friday," the '
+          'interviewer said. Now Hana is checking her phone every few minutes. If she gets the job, she will start next month.',
+  'title': 'After the Interview'}]
