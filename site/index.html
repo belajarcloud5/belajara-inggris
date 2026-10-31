@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem('english7.theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 <title>Let's Learn English!</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%9A%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
@@ -10,7 +12,7 @@
 <body>
 <header class="top">
   <a class="brand" href="#/"><span class="logo">📚</span><span>Let's Learn English!<small>Bahasa Inggris dari SMP sampai Kerja</small></span></a>
-  <div class="hright"><a class="btn ghost small" href="#/kamus">📖 Kamus</a><button class="btn ghost small" id="vbtn" aria-label="Pengaturan suara" title="Pengaturan suara">🔊 Suara</button><div class="total" id="total" title="Total bintang"></div></div>
+  <div class="hright"><a class="btn ghost small" href="#/kamus">📖 Kamus</a><button class="btn ghost small" id="tbtn" type="button" aria-label="Ganti tema terang atau gelap" title="Ganti tema terang atau gelap">🌙 Gelap</button><button class="btn ghost small" id="vbtn" aria-label="Pengaturan suara" title="Pengaturan suara">🔊 Suara</button><div class="total" id="total" title="Total bintang"></div></div>
 </header>
 <section class="card vpanel" id="vpanel" hidden></section>
 <main id="app" aria-live="polite"><p class="loading">Memuat…</p></main>

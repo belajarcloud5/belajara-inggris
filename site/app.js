@@ -152,6 +152,29 @@ document.addEventListener('keydown', e => {
 
 initVoicePanel();
 
+// ---------- tema terang / gelap ----------
+// Awalnya mengikuti pengaturan perangkat; setelah tombol ditekan, pilihan disimpan di browser.
+(function initTheme() {
+  const btn = $('#tbtn'); if (!btn) return;
+  const root = document.documentElement, TKEY = 'english7.theme';
+  const mq = window.matchMedia ? matchMedia('(prefers-color-scheme: dark)') : null;
+  const isDark = () => root.getAttribute('data-theme') === 'dark' || (!root.getAttribute('data-theme') && !!(mq && mq.matches));
+  const paint = () => {
+    const d = isDark();
+    btn.textContent = d ? '☀️ Terang' : '🌙 Gelap';
+    btn.setAttribute('aria-pressed', d ? 'true' : 'false');
+    btn.title = d ? 'Sekarang mode gelap. Klik untuk mode terang.' : 'Sekarang mode terang. Klik untuk mode gelap.';
+  };
+  btn.addEventListener('click', () => {
+    const next = isDark() ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem(TKEY, next); } catch (e) { /* diabaikan */ }
+    paint();
+  });
+  if (mq && mq.addEventListener) mq.addEventListener('change', paint);   // pengaturan perangkat berubah dan belum ada pilihan sendiri
+  paint();
+})();
+
 // ---------- kemajuan (tersimpan di browser) ----------
 const KEY = 'english7.v1';
 function loadProg() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }

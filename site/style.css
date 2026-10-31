@@ -3,9 +3,10 @@
   --brand:#4f6df5; --brand-ink:#ffffff; --brand-soft:#e8edff;
   --ok:#1f9d63; --ok-soft:#dff5ea; --bad:#d6455d; --bad-soft:#fde5e9;
   --warn:#c77a00; --warn-soft:#fff2d6; --tip:#2f7fd1; --tip-soft:#e1f0ff;
-  --star:#f5b301; --shadow:0 2px 0 rgba(31,37,68,.08), 0 8px 24px rgba(31,37,68,.08);
+  --hero-1:var(--brand); --hero-2:#8a5cf6; --star:#f5b301; --shadow:0 2px 0 rgba(31,37,68,.08), 0 8px 24px rgba(31,37,68,.08);
 }
 :root[data-theme=dark]{
+  --hero-1:#4358d6; --hero-2:#6a42d4;
   --bg:#12152b; --card:#1b1f3b; --ink:#eef0ff; --muted:#a9b0d9; --line:#2d3366;
   --brand:#7b92ff; --brand-ink:#0f1330; --brand-soft:#262c59;
   --ok:#4cd694; --ok-soft:#173a2c; --bad:#ff7a90; --bad-soft:#44202b;
@@ -17,6 +18,7 @@
     --brand:#7b92ff; --brand-ink:#0f1330; --brand-soft:#262c59;
     --ok:#4cd694; --ok-soft:#173a2c; --bad:#ff7a90; --bad-soft:#44202b;
     --warn:#ffbf52; --warn-soft:#42341a; --tip:#6db5ff; --tip-soft:#19304a;
+    --hero-1:#4358d6; --hero-2:#6a42d4;
   }
 }
 *{box-sizing:border-box}
@@ -36,7 +38,7 @@ h2{font-size:1.35rem;margin:1.4em 0 .5em}
 h3{font-size:1.1rem;margin:1em 0 .4em}
 p{margin:.5em 0}
 .lead{color:var(--muted);font-size:1.05rem}
-.hero{background:linear-gradient(135deg,var(--brand),#8a5cf6);color:#fff;border-radius:24px;padding:22px 22px 20px;box-shadow:var(--shadow);margin-bottom:22px}
+.hero{background:linear-gradient(135deg,var(--hero-1),var(--hero-2));color:#fff;border-radius:24px;padding:22px 22px 20px;box-shadow:var(--shadow);margin-bottom:22px}
 .hero h1{margin:0 0 6px}.hero p{margin:0;opacity:.95}
 .hero .bar{height:12px;background:rgba(255,255,255,.3);border-radius:999px;margin-top:14px;overflow:hidden}
 .hero .bar i{display:block;height:100%;background:#ffd84d;border-radius:999px}
@@ -183,3 +185,6 @@ input.blank.bad{border-color:var(--bad);background:var(--bad-soft)}
 .passage .tr-box{margin-top:10px;padding:10px 14px;border-radius:14px;background:var(--brand-soft);color:var(--ink)}
 .passage .tr-box p{font-size:.95rem}
 .dialog-q{margin:6px 0 10px}.dialog-q .msg{cursor:pointer}
+
+.hright{flex-wrap:wrap;justify-content:flex-end}
+#tbtn{white-space:nowrap}
