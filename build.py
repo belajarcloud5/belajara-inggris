@@ -24,6 +24,8 @@ def qkey(q):
         return ("order", q["answer"].lower())
     if t == "match":
         return ("match", tuple(sorted(p[0] for p in q["pairs"])))
+    if t == "dictate":
+        return ("dictate", q["answer"].lower())
     return (t, q["q"], tuple(sorted(q["options"])))
 
 
@@ -35,6 +37,8 @@ def qid(q):
         raw = ["fill", q["id"], q["q"], sorted(q["answers"])]
     elif t == "order":
         raw = ["order", q["q"], q["answer"]]
+    elif t == "dictate":
+        raw = ["dictate", q["say"], q["answer"]]
     elif t == "match":
         raw = ["match", q["q"], sorted(map(list, q["pairs"]))]
     else:
@@ -152,7 +156,7 @@ def to_fill(q):
 def check_q(uid, kind, i, q):
     where = f"{uid}.{kind}[{i}]"
     t = q.get("type")
-    assert t in ("mcq", "listen", "fill", "order", "match"), f"{where}: tipe tidak dikenal {t}"
+    assert t in ("mcq", "listen", "fill", "order", "match", "dictate"), f"{where}: tipe tidak dikenal {t}"
     assert q.get("exp"), f"{where}: penjelasan (exp) kosong"
     if t in ("mcq", "listen"):
         assert len(q["options"]) >= 3 and 0 <= q["answer"] < len(q["options"]), f"{where}: opsi/answer salah"
@@ -163,6 +167,9 @@ def check_q(uid, kind, i, q):
         assert "___" in q["q"] and q["answers"], f"{where}: fill butuh ___ dan answers"
     elif t == "order":
         assert len(q["answer"].split()) >= 3, f"{where}: kalimat terlalu pendek"
+    elif t == "dictate":
+        assert q.get("say") and len(q["answer"].split()) >= 3, f"{where}: dikte butuh 'say' dan kalimat min. 3 kata"
+        assert not any(ch.isdigit() for ch in q["answer"]), f"{where}: dikte tanpa angka (tulis dengan huruf)"
     elif t == "match":
         assert len(q["pairs"]) >= 3, f"{where}: pasangan kurang dari 3"
         assert len({a for a, _ in q["pairs"]}) == len(q["pairs"]) == len({b for _, b in q["pairs"]}), f"{where}: pasangan duplikat"
@@ -180,7 +187,7 @@ def main():
         if entry["ready"]:
             d = load(p).UNIT
             assert d["id"] == u["id"], f"{p}: id tidak cocok"
-            for suffix, var in (("extra", "EXTRA"), ("more", "MORE"), ("plus", "PLUS"), ("ext", "EXT"), ("quiz", "QUIZ"), ("bank", "BANK"), ("q2", "Q2"), ("p2", "P2"), ("r3", "R3"), ("r4", "R4"), ("f5", "F5")):  # bank soal tambahan
+            for suffix, var in (("extra", "EXTRA"), ("more", "MORE"), ("plus", "PLUS"), ("ext", "EXT"), ("quiz", "QUIZ"), ("bank", "BANK"), ("q2", "Q2"), ("p2", "P2"), ("r3", "R3"), ("r4", "R4"), ("f5", "F5"), ("dict", "D")):  # bank soal tambahan
                 xp = os.path.join(ROOT, "content", f"{u['id']}_{suffix}.py")
                 if os.path.isfile(xp):
                     x = getattr(load(xp), var)

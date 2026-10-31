@@ -55,3 +55,6 @@ Soal dasar ada di `content/uNN.py` dan soal tambahan di `content/uNN_extra.py`. 
 
 ## Bacaan
 Tiap unit punya tab 📚 Bacaan: 2 teks pendek (cerita, dialog, pengumuman, email, atau teks informasi sesuai topik unit), masing-masing 4 pertanyaan, dengan tombol dengarkan dan terjemahan. Total 122 bacaan dan 488 pertanyaan. Sumbernya `content/uNN_read.py` (daftar `READ`); skor terbaik tiap bacaan disimpan di browser dan tidak dihitung ke bintang.
+
+## Dikte
+Setiap unit punya 12 soal dikte (8 di latihan, 4 di kuis) di `content/uNN_dict.py`: pemain mendengar satu kalimat (tombol 🔊 dan 🐢 pelan), lalu mengetiknya. Huruf besar dan tanda baca tidak dinilai, bentuk singkat dan lengkap dianggap sama (I'm = I am), dan tanda hubung sama dengan spasi. Kalimat tidak memuat angka (ditulis dengan huruf). Bila browser tidak mendukung suara, kalimat ditampilkan untuk disalin. Total bank: 15280 soal, termasuk 732 dikte.

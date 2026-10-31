@@ -13,6 +13,8 @@ const fmt = s => esc(s)
   .replace(/\[\[(.+?)\]\]/g, (m, a) => `<span class="en" role="button" tabindex="0" data-say="${a}">${a}</span>`);
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const norm = s => String(s).toLowerCase().replace(/[’‘`]/g, "'").replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ').trim();
+// dikte: bentuk singkat dan lengkap dianggap sama (I'm = I am, don't = do not)
+const expand = s => norm(s).replace(/\bcan't\b/g, 'cannot').replace(/\bwon't\b/g, 'will not').replace(/n't\b/g, ' not').replace(/'m\b/g, ' am').replace(/'re\b/g, ' are').replace(/'ll\b/g, ' will').replace(/'ve\b/g, ' have').replace(/\bcan not\b/g, 'cannot').replace(/-/g, ' ').replace(/\s+/g, ' ').trim();
 const stripTags = s => String(s).replace(/\[\[|\]\]|\*\*/g, '');
 
 // ---------- suara (bawaan browser; bisa dipilih, disimpan) ----------
@@ -45,6 +47,7 @@ function maleVoice() {
   const vs = enVoices().filter(v => MALE.test(v.name) && !FEMALE.test(v.name));
   return vs.sort((a, b) => scoreVoice(a) - scoreVoice(b) || (/^en[-_]US/i.test(b.lang) - /^en[-_]US/i.test(a.lang)))[0] || null;
 }
+function speakSlow(text) { const r = vset.rate; vset.rate = Math.max(0.5, r * 0.6); speak(text); vset.rate = r; }
 function speak(text, gender) {
   if (!hasTTS) return;
   speechSynthesis.cancel();
@@ -418,6 +421,7 @@ function correctText(q) {
     case 'mcq': case 'listen': return q.options[q.answer];
     case 'fill': return q.answers[0];
     case 'order': return q.answer;
+    case 'dictate': return q.answer;
     case 'match': return q.pairs.map(([a, b]) => `${a} = ${b}`).join(' · ');
   }
   return '';
@@ -429,6 +433,7 @@ function renderQ(q, box, done) {
   if (q.type === 'fill') return qFill(q, box, finish);
   if (q.type === 'order') return qOrder(q, box, finish);
   if (q.type === 'match') return qMatch(q, box, finish);
+  if (q.type === 'dictate') return qDictate(q, box, finish);
 }
 
 function qMcq(q, box, finish) {
@@ -453,6 +458,27 @@ function qFill(q, box, finish) {
   const check = () => {
     const v = inp.value; if (!norm(v)) { inp.focus(); return; }
     const ok = q.answers.some(a => norm(a) === norm(v));
+    inp.disabled = true; btn.disabled = true; inp.classList.add(ok ? 'ok' : 'bad');
+    finish(ok, v);
+  };
+  btn.addEventListener('click', check);
+  inp.addEventListener('keydown', e => { if (e.key === 'Enter') check(); });
+}
+
+function qDictate(q, box, finish) {
+  const nW = q.answer.split(/\s+/).length;
+  box.innerHTML = `<div class="qtext">${esc(q.q)}</div>
+    ${hasTTS ? `<div class="row"><button class="btn play" data-say="${esc(q.say)}" id="dplay">🔊 Dengarkan</button><button class="btn ghost" id="dslow">🐢 Pelan</button></div>`
+      : `<div class="hint">Browser ini tidak mendukung suara, jadi kalimatnya ditampilkan untuk disalin: <b>${esc(q.say)}</b></div>`}
+    <div class="row"><input class="blank dict" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Kalimat yang kamu dengar" placeholder="Ketik kalimatnya…"><button class="btn" id="chk">Cek</button></div>
+    <div class="hint">💡 Jumlah kata: ${nW}. Tanda baca dan huruf besar tidak dinilai.</div>`;
+  const inp = $('input', box), btn = $('#chk', box);
+  $('#dslow', box) && $('#dslow', box).addEventListener('click', () => speakSlow(q.say));
+  if (hasTTS) setTimeout(() => speak(q.say), 250);
+  inp.focus();
+  const check = () => {
+    const v = inp.value; if (!norm(v)) { inp.focus(); return; }
+    const ok = expand(v) === expand(q.answer);
     inp.disabled = true; btn.disabled = true; inp.classList.add(ok ? 'ok' : 'bad');
     finish(ok, v);
   };

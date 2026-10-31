@@ -15,3 +15,8 @@ def mkf(rows):
         hint = " / ".join(w[0] + (" " + " ".join("_" * (len(w) - 1)) if len(w) > 1 else "") for w in answers[0].split())
         out.append(fill(idt, q, answers, hint, exp))
     return out
+
+
+def mkd(rows):
+    """Soal dikte. rows: (kalimat, terjemahan). Pemain mendengar kalimat lalu mengetiknya."""
+    return [dict(type="dictate", q="Dengarkan, lalu ketik kalimat yang kamu dengar.", say=en, answer=en, exp=f"Kalimatnya: {en} Artinya: {idn}") for en, idn in rows]
