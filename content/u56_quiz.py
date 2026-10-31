@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("\"Audience\" =","hadirin","pembicara","pemilik","tamu rumah","audience."),
+ ("\"Slide\" =","slide","lantai","pintu","kursi","slide."),
+ ("\"Overview\" =","gambaran umum","detail","akhir","kritik","overview."),
+ ("\"Outline\" =","garis besar","ringkasan akhir","kritik","hadiah","outline."),
+ ("\"Highlight\" =","menyoroti","menghapus","menutup","menunda","highlight."),
+ ("\"Clarify\" =","memperjelas","menyembunyikan","menghapus","menunda","clarify."),
+ ("\"Emphasize\" =","menekankan","mengabaikan","menghapus","menunda","emphasize."),
+ ("\"Handout\" =","lembar bagi","hadiah","tiket","kartu","handout."),
+ ("\"Q&A session\" =","sesi tanya jawab","sesi makan","sesi tidur","sesi musik","Q&A."),
+ ("\"Let me begin by ...\" =","Izinkan saya memulai dengan ...","Izinkan saya pergi","Saya selesai","Saya lupa","begin."),
+ ("\"Turning to ...\" =","Beralih ke ...","Berputar","Berhenti","Mundur","turning."),
+ ("\"To sum up\" =","singkatnya","pertama","namun","misalnya","sum up."),
+ ("\"As you can see\" =","seperti yang Anda lihat","seperti yang Anda dengar","jika Anda mau","setelah Anda","as you can see."),
+ ("\"Thank you for your attention.\" =","Terima kasih atas perhatian Anda.","Terima kasih kembali.","Selamat pagi.","Maaf.","attention."),
+ ("\"Next slide, please.\" =","Slide berikutnya, tolong.","Slide terakhir.","Hapus slide.","Slide kecil.","next."),
+ ("\"Rehearse\" =","berlatih","menolak","mencatat","mencetak","rehearse."),
+ ("\"Eye contact\" =","kontak mata","kacamata","tatapan marah","tutup mata","eye contact."),
+ ("\"Body language\" =","bahasa tubuh","bahasa daerah","bahasa asing","bahasa kode","body."),
+ ("\"Pace\" =","kecepatan bicara","tempat","nada","suara keras","pace."),
+ ("\"Visual aid\" =","alat bantu visual","kacamata","mobil","speaker","visual."),
+]))

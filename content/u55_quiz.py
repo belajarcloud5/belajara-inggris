@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("\"Increase\" =","naik","turun","stabil","berhenti","increase."),
+ ("\"Decrease\" =","turun","naik","stabil","tumbuh","decrease."),
+ ("\"Remain stable\" =","tetap stabil","naik tajam","turun","hilang","stable."),
+ ("\"Fluctuate\" =","berfluktuasi","stabil","naik terus","hilang","fluctuate."),
+ ("\"Peak\" =","puncak","dasar","tengah","akhir","peak."),
+ ("\"Revenue\" =","pendapatan","biaya","pajak","gaji","revenue."),
+ ("\"Profit\" =","laba","rugi","pajak","gaji","profit."),
+ ("\"Expenses\" =","pengeluaran","pendapatan","laba","bonus","expenses."),
+ ("\"Quarter\" =","kuartal","bulan","minggu","tahun","quarter."),
+ ("\"Percentage\" =","persentase","jumlah","rata-rata","target","percentage."),
+ ("\"Average\" =","rata-rata","total","maksimum","target","average."),
+ ("\"Total\" =","total","rata-rata","selisih","sebagian","total."),
+ ("\"Target\" =","target","hasil","biaya","laba","target."),
+ ("\"Compared with\" =","dibandingkan dengan","sejak","sebelum","walaupun","compared."),
+ ("\"Chart\" =","bagan","tabel angka saja","surat","pesan","chart."),
+ ("\"Bar chart\" =","diagram batang","diagram lingkaran","peta","foto","bar."),
+ ("\"Pie chart\" =","diagram lingkaran","diagram batang","tabel","grafik garis","pie."),
+ ("\"Line graph\" =","grafik garis","diagram batang","tabel","foto","line."),
+ ("\"Sales dropped sharply.\" =","Penjualan turun tajam.","Penjualan naik tajam.","Penjualan stabil.","Penjualan berhenti.","dropped."),
+ ("\"Approximately 50\" =","sekitar 50","tepat 50","lebih dari 50","kurang dari 50","approx."),
+]))

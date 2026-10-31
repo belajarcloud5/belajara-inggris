@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("Teks untuk membujuk bertindak:","hortatory exposition","news item","recount","procedure","Hortatory."),
+ ("Teks yang menjelaskan proses:","explanation","narrative","invitation","recount","Explanation."),
+ ("Teks untuk melamar kerja:","application letter","explanation","news","descriptive","Application."),
+ ("\"If it rains, I ___ stay home.\"","will","would","did","am","Type 1."),
+ ("\"The window ___ by Ali yesterday.\" (break)","was broken","is broken","broke","breaks","Passive."),
+ ("\"He ___ here since 2020.\"","has lived","lived","lives","is living","since."),
+ ("\"Thesis\" ada pada teks...","analytical exposition","procedure","narrative","invitation","thesis."),
+ ("\"Resolution\" ada pada teks...","narrative","news","procedure","explanation","resolution."),
+ ("\"Headline\" ada pada teks...","news item","narrative","procedure","hortatory","headline."),
+ ("\"Moreover\" =","selain itu","tetapi","jadi","pertama","moreover."),
+ ("\"Therefore\" =","oleh karena itu","namun","misalnya","pertama","therefore."),
+ ("\"Nevertheless\" =","meskipun begitu","akibatnya","contohnya","sebelumnya","nevertheless."),
+ ("Sinonim \"big\":","large","tiny","thin","weak","synonym."),
+ ("Antonim \"expensive\":","cheap","costly","pricey","valuable","antonym."),
+ ("\"Provide\" artinya...","menyediakan","menolak","menjual","membuang","provide."),
+ ("\"Achieve\" artinya...","mencapai","kehilangan","menunda","menolak","achieve."),
+ ("\"Increase\" artinya...","meningkat","menurun","berhenti","hilang","increase."),
+ ("\"Prevent\" artinya...","mencegah","membuat","menjual","menunda","prevent."),
+ ("\"Cause\" artinya...","penyebab","akibat","contoh","tujuan","cause."),
+ ("\"Environment\" artinya...","lingkungan","pemerintah","kota","kantor","environment."),
+]))

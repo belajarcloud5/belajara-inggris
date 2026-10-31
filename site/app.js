@@ -315,7 +315,7 @@ function runner(pane, d, mode) {
   const isQuiz = mode === 'quiz';
   const src = isQuiz ? d.quiz : d.practice;
   const retry = d.id === 'ulang';
-  const N = retry ? 10 : isQuiz ? 10 : 50;                       // jumlah soal tiap sesi, diambil acak dari bank soal
+  const N = retry ? 10 : isQuiz ? 20 : 50;                       // jumlah soal tiap sesi, diambil acak dari bank soal
   const pick = () => shuffle(src).slice(0, Math.min(N, src.length));
   let qs = pick();
   let i = 0, score = 0, wrong = [];

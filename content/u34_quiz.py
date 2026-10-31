@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("Teks cara membuat teh adalah...","procedure","recount","narrative","descriptive","Procedure."),
+ ("Teks tentang liburan kemarin adalah...","recount","procedure","descriptive","invitation","Recount."),
+ ("Teks Cinderella adalah...","narrative","procedure","recount","notice","Narrative."),
+ ("Teks tentang ciri-ciri harimau adalah...","descriptive","procedure","recount","invitation","Descriptive."),
+ ("\"He ___ to school by bus every day.\"","goes","go","went","going","every day."),
+ ("\"We ___ to Bali last year.\"","went","go","goes","going","last year."),
+ ("\"She is ___ a letter now.\"","writing","write","wrote","writes","now."),
+ ("\"Please ___ the door.\"","close","closes","closed","closing","Please + V1."),
+ ("\"There ___ two cats in the garden.\"","are","is","was a","be","plural."),
+ ("\"This book is ___ than that one.\" (good)","better","gooder","best","more good","comparative."),
+ ("\"She is the ___ girl in class.\" (tall)","tallest","taller","most tall","tall","superlative."),
+ ("\"I ___ my homework yet.\"","haven't finished","didn't finished","don't finish","not finished","yet."),
+ ("\"Which\" untuk...","memilih","menanyakan waktu","menanyakan harga","menanyakan alasan","Which."),
+ ("\"Whose bag is this?\" menanyakan...","pemilik","tempat","waktu","cara","Whose."),
+ ("\"How often\" menanyakan...","frekuensi","harga","jarak","umur","How often."),
+ ("\"How far\" menanyakan...","jarak","harga","umur","waktu","How far."),
+ ("\"Weekend\" artinya...","akhir pekan","hari kerja","bulan","tahun","weekend."),
+ ("\"Neighbor\" artinya...","tetangga","teman sekelas","guru","saudara","neighbor."),
+ ("\"Library\" artinya...","perpustakaan","kantin","toko","bank","library."),
+ ("\"Dangerous\" artinya...","berbahaya","aman","indah","mahal","dangerous."),
+]))

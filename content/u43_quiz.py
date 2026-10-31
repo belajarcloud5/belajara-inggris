@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("Rumus pasif simple present:","is/am/are + V3","was + V3","will + V3","have + V3","Passive."),
+ ("Rumus pasif simple past:","was/were + V3","is + V3","will be V3","has been V3","Passive."),
+ ("Rumus pasif future:","will be + V3","will + V3","is going V3","be + V1","Passive."),
+ ("\"The room is cleaned every day.\" adalah...","pasif","aktif","pertanyaan","perintah","passive."),
+ ("\"Rice is ___ in Indonesia.\" (grow)","grown","grew","grows","growing","V3."),
+ ("\"The book ___ by Rina.\" (write, lampau)","was written","wrote","is write","written","was written."),
+ ("\"These cakes ___ by my mother.\" (make)","are made","is made","make","maked","plural."),
+ ("\"The letter has been ___.\" (send)","sent","sended","send","sending","V3."),
+ ("Reported speech: \"I am sad,\" she said.","She said that she was sad.","She said that she is sad.","She said I was sad.","She say she sad.","back-shift."),
+ ("Reported: \"I work here,\" he said.","He said that he worked there.","He said that he works here.","He said I worked here.","He says he worked.","here → there."),
+ ("\"Now\" → dalam reported speech lampau:","then","now","today","tonight","now → then."),
+ ("\"Today\" → dalam reported speech lampau:","that day","today","this day","tomorrow","today → that day."),
+ ("\"Yesterday\" → dalam reported speech:","the day before","yesterday","tomorrow","last day","yesterday."),
+ ("\"Can\" → dalam reported speech:","could","can","would","may","can → could."),
+ ("\"Must\" → dalam reported speech:","had to","must","can","will","must → had to."),
+ ("\"Said\" artinya...","berkata","bertanya","menjawab","menyuruh","said."),
+ ("\"Asked\" artinya...","bertanya","berkata","menjawab","berteriak","asked."),
+ ("\"Told\" + orang:","She told me to wait.","She told to me wait.","She told me waiting.","She tell me wait.","told."),
+ ("Pasif dari \"We love him\":","He is loved by us.","He loves us.","He is love by us.","He loved us.","passive."),
+ ("Pasif dari \"Someone stole my bag\":","My bag was stolen.","My bag stole.","My bag is steal.","My bag was stole.","stolen."),
+]))

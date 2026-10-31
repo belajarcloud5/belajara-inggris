@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("Tujuan undangan:","mengajak hadir","menjual","melaporkan","menghibur","Invitation."),
+ ("\"Invite\" artinya...","mengundang","menolak","membatalkan","menunda","invite."),
+ ("\"Announcement\" artinya...","pengumuman","undangan","iklan","surat","announcement."),
+ ("\"Cancel\" artinya...","membatalkan","memulai","menunda","menghadiri","cancel."),
+ ("\"Postpone\" artinya...","menunda","membatalkan","memulai","menyelesaikan","postpone."),
+ ("\"Venue\" artinya...","tempat acara","waktu acara","tamu","hadiah","venue."),
+ ("\"Attend\" artinya...","menghadiri","menolak","membawa","membuat","attend."),
+ ("\"On time\" artinya...","tepat waktu","terlambat","cepat sekali","lama","on time."),
+ ("\"Dress code\" artinya...","aturan berpakaian","kode rahasia","harga pakaian","toko baju","dress code."),
+ ("\"Please come on Friday at 8.\" artinya...","Mohon datang Jumat pukul 8","Jangan datang","Datang Senin","Pergi pukul 8","come."),
+ ("\"RSVP\" meminta...","balasan","hadiah","uang","makanan","RSVP."),
+ ("\"The party will be held ___ Saturday.\"","on","in","at","by","on + hari."),
+ ("\"The meeting starts ___ 9 a.m.\"","at","on","in","for","at + jam."),
+ ("\"Notice\" artinya...","pemberitahuan","hadiah","lagu","masakan","notice."),
+ ("\"Free admission\" artinya...","masuk gratis","tiket mahal","dilarang masuk","penuh","admission."),
+ ("\"Welcome party\" artinya...","pesta penyambutan","pesta perpisahan","rapat","ujian","welcome."),
+ ("\"Farewell party\" artinya...","pesta perpisahan","pesta penyambutan","pesta ulang tahun","pesta pernikahan","farewell."),
+ ("\"Everyone is welcome.\" artinya...","Semua orang diterima.","Tidak boleh masuk.","Hanya guru.","Hanya siswa.","welcome."),
+ ("\"Bring your own lunch.\" artinya...","Bawa makan siang sendiri.","Beli makan siang.","Jangan makan.","Kami sediakan.","own."),
+ ("\"Contact\" artinya...","menghubungi","menghindari","menolak","menjual","contact."),
+]))

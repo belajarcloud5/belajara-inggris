@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("\"Complaint\" =","keluhan","pujian","pesanan","diskon","complaint."),
+ ("\"Refund\" =","pengembalian dana","diskon","pajak","bonus","refund."),
+ ("\"Replacement\" =","penggantian","perbaikan","pengiriman","pembayaran","replacement."),
+ ("\"Warranty\" =","garansi","pajak","diskon","faktur","warranty."),
+ ("\"Receipt\" =","struk","kontrak","kartu nama","paket","receipt."),
+ ("\"Invoice\" =","faktur","struk","brosur","kupon","invoice."),
+ ("\"Exchange\" =","menukar","menjual","membuang","membuka","exchange."),
+ ("\"Damaged\" =","rusak","baru","bersih","lengkap","damaged."),
+ ("\"Defective\" =","cacat","bagus","murah","cepat","defective."),
+ ("\"Delay\" =","keterlambatan","kecepatan","kiriman","hadiah","delay."),
+ ("\"Apologize\" =","meminta maaf","berterima kasih","mengeluh","menjual","apologize."),
+ ("\"Inconvenience\" =","ketidaknyamanan","kenyamanan","hadiah","bonus","inconvenience."),
+ ("\"I understand your concern.\" =","Saya mengerti kekhawatiran Anda.","Saya tidak peduli.","Saya setuju.","Saya lupa.","concern."),
+ ("\"Escalate\" =","meneruskan ke atasan","menghapus","menutup","menunda","escalate."),
+ ("\"Satisfied\" =","puas","kecewa","marah","bosan","satisfied."),
+ ("\"Disappointed\" =","kecewa","puas","senang","lapar","disappointed."),
+ ("\"Compensation\" =","kompensasi","komplain","kontrak","kartu","compensation."),
+ ("\"Let me look into it.\" =","Biar saya selidiki.","Biar saya lupa.","Biar saya tutup.","Biar saya makan.","look into."),
+ ("\"Is there anything else?\" =","Ada yang lain?","Apa ini?","Siapa itu?","Kapan?","anything else."),
+ ("\"Customer\" =","pelanggan","karyawan","pemasok","pemilik","customer."),
+]))

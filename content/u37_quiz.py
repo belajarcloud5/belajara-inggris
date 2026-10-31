@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("Hortatory exposition bertujuan...","membujuk bertindak","menceritakan","menggambarkan","melaporkan","Purpose."),
+ ("Bagian akhir hortatory:","recommendation","orientation","goal","setting","Recommendation."),
+ ("\"We should ...\" menyatakan...","saran","fakta","masa lalu","larangan keras","should."),
+ ("\"We must ...\" menyatakan...","keharusan","kemungkinan kecil","masa lalu","pilihan","must."),
+ ("\"We ought to ...\" artinya...","kita sebaiknya","kita tidak","kita sudah","kita bisa saja","ought."),
+ ("\"It is important to ...\" artinya...","penting untuk ...","tidak perlu ...","mustahil ...","lucu ...","important."),
+ ("\"Protect\" artinya...","melindungi","merusak","menjual","membuang","protect."),
+ ("\"Environment\" artinya...","lingkungan","pemerintah","sekolah","pasar","environment."),
+ ("\"Government\" artinya...","pemerintah","masyarakat","perusahaan","keluarga","government."),
+ ("\"Society\" artinya...","masyarakat","pemerintah","pasar","kelas","society."),
+ ("\"Waste\" artinya...","sampah/limbah","makanan","energi","air","waste."),
+ ("\"Recycle\" artinya...","mendaur ulang","membakar","membeli","menyimpan","recycle."),
+ ("\"Save energy\" artinya...","hemat energi","boros energi","jual energi","buat energi","save."),
+ ("\"Plant trees\" artinya...","menanam pohon","menebang pohon","menjual pohon","mengecat pohon","plant."),
+ ("\"Littering\" artinya...","membuang sampah sembarangan","menanam","membersihkan","menyapu","littering."),
+ ("\"Let's ...\" digunakan untuk...","mengajak","melarang","bertanya","menolak","Let's."),
+ ("\"Otherwise\" artinya...","jika tidak","oleh karena itu","misalnya","pertama","otherwise."),
+ ("\"Immediately\" artinya...","segera","perlahan","kadang","nanti","immediately."),
+ ("\"Raise awareness\" artinya...","meningkatkan kesadaran","menurunkan harga","menaikkan bendera","menambah kelas","awareness."),
+ ("Kalimat benar:","We must act now.","We must to act now.","We must acting now.","We musts act now.","must + V1."),
+]))

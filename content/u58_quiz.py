@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("\"Issue\" =","masalah","hadiah","laba","jawaban","issue."),
+ ("\"Solution\" =","solusi","masalah","penyebab","akibat","solution."),
+ ("\"Root cause\" =","akar penyebab","akar pohon","hasil","target","root cause."),
+ ("\"Fix\" =","memperbaiki","merusak","menjual","membeli","fix."),
+ ("\"Resolve\" =","menyelesaikan masalah","menciptakan masalah","menunda","menghapus","resolve."),
+ ("\"Progress\" =","kemajuan","kegagalan","biaya","laba","progress."),
+ ("\"On track\" =","sesuai rencana","terlambat","gagal","baru","on track."),
+ ("\"Behind schedule\" =","terlambat dari jadwal","lebih cepat","tepat","batal","behind."),
+ ("\"Ahead of schedule\" =","lebih cepat dari jadwal","terlambat","batal","tepat","ahead."),
+ ("\"Blocker\" =","penghambat","pendukung","pemimpin","pelanggan","blocker."),
+ ("\"Pending\" =","menunggu","selesai","dibatalkan","dimulai","pending."),
+ ("\"In progress\" =","sedang dikerjakan","selesai","belum mulai","batal","in progress."),
+ ("\"Completed\" =","selesai","menunggu","batal","mulai","completed."),
+ ("\"Update\" =","pembaruan","penghapusan","pembatalan","pembelian","update."),
+ ("\"ETA\" =","perkiraan waktu","email tambahan","hari libur","biaya","ETA."),
+ ("\"Urgent\" =","mendesak","santai","lama","murah","urgent."),
+ ("\"Priority\" =","prioritas","pribadi","produk","proyek","priority."),
+ ("\"Workaround\" =","solusi sementara","kerja ulang","kerja lembur","alat","workaround."),
+ ("\"Escalate\" =","eskalasi ke atasan","menghapus","membeli","menunda","escalate."),
+ ("\"We are working on it.\" =","Kami sedang menanganinya.","Kami libur.","Kami selesai.","Kami pulang.","working."),
+]))

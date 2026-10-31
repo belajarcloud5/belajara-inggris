@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("\"In my opinion\" artinya...","menurut saya","di rumah saya","sebelum saya","tanpa saya","opinion."),
+ ("\"I agree with you.\" artinya...","Saya setuju denganmu.","Saya menolakmu.","Saya mengenalmu.","Saya melihatmu.","agree."),
+ ("\"I disagree\" artinya...","saya tidak setuju","saya setuju","saya lupa","saya tahu","disagree."),
+ ("\"Argue\" artinya...","berargumen","bernyanyi","berlari","bermain","argue."),
+ ("\"Fact\" artinya...","fakta","opini","dugaan","harapan","fact."),
+ ("\"Opinion\" artinya...","pendapat","fakta","bukti","data","opinion."),
+ ("\"Because\" memberi...","alasan","contoh","kesimpulan","kontras","because."),
+ ("\"However\" memberi...","pertentangan","tambahan","contoh","urutan","however."),
+ ("\"Moreover\" memberi...","tambahan","pertentangan","akibat","waktu","moreover."),
+ ("\"For example\" memberi...","contoh","kesimpulan","pertentangan","alasan","example."),
+ ("\"In conclusion\" memberi...","kesimpulan","contoh","pembuka","pertentangan","conclusion."),
+ ("\"I strongly believe\" artinya...","saya sangat yakin","saya tidak tahu","saya lupa","saya ragu","believe."),
+ ("\"Debate\" artinya...","debat","lagu","rapat","ujian","debate."),
+ ("\"Support\" artinya...","mendukung","menolak","menunda","membeli","support."),
+ ("\"Oppose\" artinya...","menentang","mendukung","menunda","membeli","oppose."),
+ ("\"Convince\" artinya...","meyakinkan","menakuti","menunda","menolak","convince."),
+ ("\"Agree\" kata benda: \"We reached an ___.\"","agreement","agree","agreed","agreeing","agreement."),
+ ("\"Although it is expensive, I like it.\" artinya...","Meskipun mahal, saya suka.","Karena mahal, saya suka.","Jika mahal, saya beli.","Saya tidak suka.","although."),
+ ("\"Both sides\" artinya...","kedua belah pihak","satu pihak","tiga pihak","tanpa pihak","both."),
+ ("\"Point of view\" artinya...","sudut pandang","titik hitam","pemandangan","jarak","POV."),
+]))

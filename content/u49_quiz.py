@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("\"Receptionist\" =","resepsionis","akuntan","satpam","sopir","receptionist."),
+ ("\"Accountant\" =","akuntan","manajer","pelayan","dokter","accountant."),
+ ("\"Secretary\" =","sekretaris","direktur","teknisi","penjual","secretary."),
+ ("\"Technician\" =","teknisi","guru","pelukis","pemain","technician."),
+ ("\"Director\" =","direktur","magang","pelanggan","tamu","director."),
+ ("\"Staff\" =","staf","bos","tamu","tetangga","staff."),
+ ("\"Supervisor\" =","penyelia","pelanggan","pemasok","pembeli","supervisor."),
+ ("\"Shift\" =","giliran kerja","gaji","cuti","bonus","shift."),
+ ("\"Night shift\" =","giliran malam","giliran pagi","libur","cuti","night."),
+ ("\"Day off\" =","hari libur","hari kerja","hari rapat","hari gaji","day off."),
+ ("\"Sick leave\" =","cuti sakit","cuti tahunan","cuti hamil","lembur","sick leave."),
+ ("\"Annual leave\" =","cuti tahunan","cuti sakit","lembur","gaji","annual."),
+ ("\"Salary\" =","gaji","pajak","bonus","cuti","salary."),
+ ("\"Bonus\" =","bonus","denda","pajak","cuti","bonus."),
+ ("\"Contract\" =","kontrak","kartu","jadwal","tiket","contract."),
+ ("\"Responsible for\" =","bertanggung jawab atas","takut pada","suka pada","jauh dari","responsible."),
+ ("\"Photocopier\" =","mesin fotokopi","mesin cuci","mesin kopi","mesin jahit","photocopier."),
+ ("\"Cubicle\" =","bilik kerja","lift","gudang","dapur","cubicle."),
+ ("\"Pantry\" =","dapur kantor","ruang rapat","toilet","lobi","pantry."),
+ ("\"Floor\" kantor: \"on the third floor\" =","di lantai tiga","di lantai tiga puluh","di tangga","di atap","floor."),
+]))

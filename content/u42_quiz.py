@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("Type 1: If + present, ...","will + V1","would + V1","would have V3","V2","Type 1."),
+ ("Type 2: If + past, ...","would + V1","will + V1","would have V3","V3","Type 2."),
+ ("Type 3: If + had V3, ...","would have V3","would V1","will V1","V1","Type 3."),
+ ("\"If I ___ a bird, I would fly.\"","were","am","will be","have been","were."),
+ ("\"If she ___ hard, she will pass.\"","studies","studied","had studied","would study","Type 1."),
+ ("\"If I had known, I ___ come.\"","would have","will","would","had","Type 3."),
+ ("\"If you heat ice, it ___.\"","melts","would melt","melted","will have melted","Type 0."),
+ ("\"Unless\" =","if not","if","because","when","unless."),
+ ("\"Unless you hurry, you will be late.\" =","If you don't hurry, you will be late.","If you hurry, you will be late.","Because you hurry, you are late.","You hurry late.","unless."),
+ ("Type 2 menyatakan...","situasi tidak nyata sekarang","fakta","masa lalu tak nyata","perintah","Type 2."),
+ ("\"I wish I ___ rich.\"","were","am","will be","have been","wish."),
+ ("\"If it ___ tomorrow, we will cancel.\"","rains","will rain","rained","would rain","Type 1."),
+ ("\"If I ___ you, I would study.\"","were","am","was being","be","were."),
+ ("\"Had I known\" =","If I had known","If I know","If I knew","When I knew","inversion."),
+ ("\"Provided that\" =","asalkan","kecuali","karena","walaupun","provided."),
+ ("\"As long as\" =","selama/asalkan","kecuali","walaupun","setelah","as long as."),
+ ("\"In case\" =","kalau-kalau","tentu saja","asalkan","kecuali","in case."),
+ ("Kalimat benar:","If I were you, I would apologize.","If I would be you, I apologize.","If I am you, I would apologize.","If I was you, I apologize.","were."),
+ ("Kalimat benar:","If they had left early, they would have caught the train.","If they left early, they would have caught.","If they had left early, they will catch.","If they leave early, they would caught.","Type 3."),
+ ("Koma dipakai bila if-clause di...","awal","akhir","tengah","tidak pernah","comma."),
+]))

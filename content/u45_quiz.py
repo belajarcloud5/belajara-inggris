@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("\"Main idea\" =","gagasan utama","kalimat terakhir","judul","penulis","main idea."),
+ ("\"Topic sentence\" =","kalimat utama","kalimat tanya","kalimat seru","kalimat penutup","topic."),
+ ("\"Conclusion\" =","kesimpulan","pembuka","contoh","judul","conclusion."),
+ ("\"Infer\" =","menyimpulkan","menyalin","menolak","menghapus","infer."),
+ ("\"Tone\" =","nada/sikap","tahun","tempat","tokoh","tone."),
+ ("\"Author\" =","penulis","pembaca","guru","editor","author."),
+ ("\"Audience\" =","pembaca/hadirin","penulis","tokoh","hakim","audience."),
+ ("\"Summary\" =","ringkasan","judul","kritik","contoh","summary."),
+ ("\"Fact\" =","fakta","pendapat","harapan","dugaan","fact."),
+ ("\"Detail\" =","rincian","judul","tema","penulis","detail."),
+ ("\"Refers to\" =","merujuk pada","dilarang","bertentangan","setelah","refers."),
+ ("\"Closest in meaning\" =","paling mirip artinya","paling jauh","paling besar","paling baru","closest."),
+ ("\"True\" lawannya:","false","real","right","correct","true."),
+ ("\"Except\" =","kecuali","termasuk","semua","setiap","except."),
+ ("\"Mainly\" =","terutama","jarang","sedikit","tidak","mainly."),
+ ("\"Suggest\" =","menyarankan","melarang","menolak","menutup","suggest."),
+ ("\"Implies\" =","menyiratkan","menyatakan jelas","menghapus","melarang","implies."),
+ ("\"Although\" =","meskipun","karena","sehingga","kemudian","although."),
+ ("\"Whereas\" =","sedangkan","karena","jika","setelah","whereas."),
+ ("\"Such as\" =","seperti/misalnya","kecuali","walaupun","sebelum","such as."),
+]))

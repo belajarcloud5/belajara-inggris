@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("Permintaan sopan:","Could you help me, please?","Help me.","You help now.","Help!","Could."),
+ ("Tawaran sopan:","Would you like some coffee?","You want coffee.","Coffee now.","Take coffee.","Would you like."),
+ ("\"Would you mind closing the window?\" dijawab setuju:","Not at all.","Yes, I mind.","I do.","Close it!","mind."),
+ ("\"May I come in?\" =","Bolehkah saya masuk?","Saya akan masuk.","Saya sudah masuk.","Jangan masuk.","May."),
+ ("\"Certainly\" =","tentu saja","mungkin","tidak","jarang","certainly."),
+ ("\"With pleasure\" =","dengan senang hati","dengan marah","tanpa uang","tanpa izin","pleasure."),
+ ("\"I'm afraid I can't.\" =","Maaf, saya tidak bisa.","Saya takut.","Saya bisa.","Saya mau.","afraid."),
+ ("\"Shall I open the door?\" menawarkan...","membuka pintu","menutup pintu","mengunci","menjual","Shall."),
+ ("\"Let me help you.\" =","Biar saya bantu.","Jangan bantu.","Bantu aku.","Aku pergi.","Let me."),
+ ("\"Could I borrow your pen?\" =","Bolehkah saya pinjam pulpen Anda?","Pulpen ini milik saya.","Saya beli pulpen.","Saya patahkan pulpen.","borrow."),
+ ("\"Kindly\" =","mohon","segera","marah","sangat","kindly."),
+ ("\"I'd appreciate it if you could...\" =","Saya akan menghargai jika Anda dapat...","Saya benci...","Saya lupa...","Saya jual...","appreciate."),
+ ("\"Go ahead.\" =","Silakan.","Jangan.","Tunggu.","Pergilah dari sini.","go ahead."),
+ ("\"Sorry to bother you\" =","Maaf mengganggu","Terima kasih banyak","Selamat pagi","Sampai jumpa","bother."),
+ ("\"Excuse me\" dipakai untuk...","menarik perhatian dengan sopan","marah","berpamitan","menolak keras","excuse."),
+ ("\"Pardon?\" =","Maaf, bisa diulang?","Terima kasih","Selamat","Tunggu","pardon."),
+ ("\"Would you like me to ...?\" =","Maukah Anda saya ...?","Anda harus ...","Aku tidak mau ...","Apakah ia ...?","would you like me to."),
+ ("\"Could you possibly ...?\" tingkat kesopanan:","sangat sopan","kasar","netral","tidak sopan","possibly."),
+ ("\"Thank you in advance.\" =","Terima kasih sebelumnya.","Terima kasih kembali.","Sampai jumpa.","Selamat datang.","in advance."),
+ ("Kalimat benar:","Could you send me the file?","Could you sends me the file?","Could you sending file?","Could you to send file?","Could + V1."),
+]))

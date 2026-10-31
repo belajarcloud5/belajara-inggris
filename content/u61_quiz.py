@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("Permintaan sopan:","Would you mind sending the file?","Send file.","File now.","You send.","polite."),
+ ("Penutup email formal:","Best regards,","See ya,","Laterz,","Bye bye,","closing."),
+ ("Menyapa telepon kantor:","Good morning, how may I help you?","Who is this?","What?","Yes?","phone."),
+ ("\"Reschedule\" =","menjadwal ulang","menolak","menutup","membeli","reschedule."),
+ ("\"Minutes\" (rapat) =","notulen","menit","jam","hari","minutes."),
+ ("\"Revenue\" =","pendapatan","biaya","pajak","gaji","revenue."),
+ ("\"Audience\" =","hadirin","pembicara","pemilik","tamu rumah","audience."),
+ ("\"Refund\" =","pengembalian dana","diskon","pajak","bonus","refund."),
+ ("\"Deadline\" =","batas waktu","waktu mulai","libur","gaji","deadline."),
+ ("\"Feedback\" =","masukan","makanan","perintah","jadwal","feedback."),
+ ("\"Itinerary\" =","rencana perjalanan","tiket","bagasi","visa","itinerary."),
+ ("\"Colleague\" =","rekan kerja","pelanggan","tamu","pemilik","colleague."),
+ ("\"Attachment\" =","lampiran","judul","isi","alamat","attachment."),
+ ("\"Appointment\" =","janji temu","pesta","ujian","hadiah","appointment."),
+ ("\"Hold the line\" =","tunggu di telepon","tutup telepon","bicara keras","pergi","hold."),
+ ("\"Status update\" =","laporan perkembangan","daftar belanja","gaji","cuti","status."),
+ ("\"Apologize for the inconvenience\" =","minta maaf atas ketidaknyamanan","terima kasih atas bantuan","selamat datang","sampai jumpa","apologize."),
+ ("\"Sales increased\" =","penjualan naik","penjualan turun","penjualan berhenti","penjualan batal","increased."),
+ ("\"Performance review\" =","evaluasi kinerja","pertunjukan","rapat makan","cuaca","review."),
+ ("\"Business trip\" =","perjalanan dinas","liburan","pesta","studi tur","business trip."),
+]))

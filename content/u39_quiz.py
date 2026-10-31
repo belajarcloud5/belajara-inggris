@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("News item melaporkan...","peristiwa aktual","cerita dongeng","resep","opini pribadi","News."),
+ ("\"Headline\" artinya...","judul berita","isi berita","penulis","foto","headline."),
+ ("\"Reporter\" artinya...","wartawan","polisi","saksi","korban","reporter."),
+ ("\"Witness\" artinya...","saksi","korban","pelaku","hakim","witness."),
+ ("\"Victim\" artinya...","korban","saksi","polisi","pelaku","victim."),
+ ("\"Accident\" artinya...","kecelakaan","pesta","rapat","liburan","accident."),
+ ("\"Injured\" artinya...","terluka","sehat","senang","lapar","injured."),
+ ("\"Rescue\" artinya...","menyelamatkan","menghancurkan","menjual","membeli","rescue."),
+ ("\"Fire\" artinya...","api/kebakaran","air","angin","tanah","fire."),
+ ("\"Flood\" artinya...","banjir","kekeringan","badai","salju","flood."),
+ ("\"Police\" artinya...","polisi","tentara","guru","dokter","police."),
+ ("\"Arrest\" artinya...","menangkap","melepas","menolong","menjual","arrest."),
+ ("\"Thief\" artinya...","pencuri","polisi","korban","saksi","thief."),
+ ("\"Robbery\" artinya...","perampokan","pesta","lomba","ujian","robbery."),
+ ("\"Announce\" artinya...","mengumumkan","menyembunyikan","menghapus","menolak","announce."),
+ ("\"According to the police\" artinya...","menurut polisi","tanpa polisi","untuk polisi","dari rumah polisi","according."),
+ ("\"Last night\" artinya...","semalam","besok malam","tadi pagi","minggu lalu","last night."),
+ ("\"The thief was caught.\" artinya...","Pencuri itu tertangkap.","Pencuri itu lari.","Pencuri itu menang.","Pencuri itu pulang.","caught."),
+ ("\"Damage\" artinya...","kerusakan","perbaikan","keuntungan","hadiah","damage."),
+ ("Tense berita:","simple past","simple present","future","imperative","Past."),
+]))

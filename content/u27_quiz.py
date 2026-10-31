@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("\"I ___ a student.\"","am","is","are","be","I → am."),
+ ("\"She ___ English every day.\"","studies","study","studying","is study","she → studies."),
+ ("\"They ___ football now.\"","are playing","play","plays","is playing","now → are playing."),
+ ("Untuk menanyakan nama, kita bilang...","What is your name?","How old are you?","Where are you?","Who is she?","Nama."),
+ ("\"Where ___ you live?\"","do","does","are","is","you → do."),
+ ("\"My brother ___ not like fish.\"","does","do","is","are","brother (he) → does."),
+ ("Jawaban untuk \"Nice to meet you.\"","Nice to meet you too.","Goodbye.","I'm ten.","Yes, I do.","too."),
+ ("\"Hobby\" artinya...","hobi","sekolah","alamat","pekerjaan","hobby."),
+ ("\"Occupation\" artinya...","pekerjaan","hobi","alamat","umur","occupation."),
+ ("Kalimat yang benar:","He lives in Medan.","He live in Medan.","He living in Medan.","He lives at Medan city.","lives."),
+ ("\"I come from Bali\" artinya...","Saya berasal dari Bali","Saya ke Bali","Saya suka Bali","Saya di Bali","come from."),
+ ("\"Look! The baby ___.\"","is sleeping","sleeps","sleep","sleeping","Look! → continuous."),
+ ("Kata ganti untuk \"Rani\" (perempuan):","she","he","it","they","she."),
+ ("\"Introduce\" artinya...","memperkenalkan","menjual","menutup","membaca","introduce."),
+ ("\"We ___ from Indonesia.\"","are","is","am","be","we → are."),
+ ("Pertanyaan: \"What does he do?\" menanyakan...","pekerjaannya","umurnya","alamatnya","hobinya","job."),
+ ("\"Usually\" dipakai dengan...","simple present","simple past","future","past continuous","usually."),
+ ("\"Is she your sister?\" jawaban singkat benar:","Yes, she is.","Yes, she does.","Yes, she am.","Yes, is she.","is."),
+ ("\"Friendly\" artinya...","ramah","pemalu","malas","pintar","friendly."),
+ ("\"Address\" artinya...","alamat","nama","umur","kota","address."),
+]))

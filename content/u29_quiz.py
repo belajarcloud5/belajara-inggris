@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("Recount text menceritakan...","pengalaman lampau","cara membuat","ciri benda","ajakan","Recount."),
+ ("Bentuk lampau \"go\":","went","goed","gone","goes","went."),
+ ("Bentuk lampau \"see\":","saw","seed","seen","sees","saw."),
+ ("Bentuk lampau \"eat\":","ate","eated","eaten","eats","ate."),
+ ("Bentuk lampau \"buy\":","bought","buyed","buys","buying","bought."),
+ ("Bentuk lampau \"take\":","took","taked","taken","takes","took."),
+ ("\"Yesterday I ___ TV.\"","watched","watch","watches","am watching","yesterday."),
+ ("\"She ___ not go to school last Monday.\"","did","do","does","was","did not."),
+ ("\"___ you visit Bali last year?\"","Did","Do","Does","Are","Did."),
+ ("Penanda waktu lampau:","last week","tomorrow","now","every day","last."),
+ ("Kata urutan: setelah itu","then","because","but","or","then."),
+ ("\"Finally\" artinya...","akhirnya","pertama","kadang","selalu","finally."),
+ ("\"Trip\" artinya...","perjalanan","pesta","tugas","ujian","trip."),
+ ("\"Holiday\" artinya...","liburan","sekolah","pekerjaan","rumah","holiday."),
+ ("Orientation menjawab...","who, when, where","bagaimana caranya","apa kesimpulannya","apa harganya","Orientation."),
+ ("\"We were very happy.\" artinya...","Kami sangat bahagia.","Kami akan bahagia.","Kami sedih.","Kami lapar.","were."),
+ ("\"Beach\" artinya...","pantai","gunung","hutan","sungai","beach."),
+ ("\"It was exciting\" artinya...","Itu menyenangkan","Itu membosankan","Itu mahal","Itu jauh","exciting."),
+ ("\"Arrive\" lampaunya:","arrived","arrove","arriven","arrives","arrived."),
+ ("\"Afterwards\" artinya...","setelahnya","sebelumnya","selalu","kadang","afterwards."),
+]))

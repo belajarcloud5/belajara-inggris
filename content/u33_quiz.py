@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("\"Main idea\" artinya...","gagasan utama","detail kecil","judul","penulis","main idea."),
+ ("\"Topic\" artinya...","topik","tahun","harga","nomor","topic."),
+ ("\"Passage\" artinya...","bacaan","kalimat","kata","huruf","passage."),
+ ("\"Paragraph\" artinya...","paragraf","kata","judul","tanda baca","paragraph."),
+ ("\"Reference\" kata ganti:","they merujuk pada orang","they merujuk waktu","they adalah tempat","they adalah kata kerja","reference."),
+ ("\"Synonym\" artinya...","persamaan kata","lawan kata","judul","kalimat","synonym."),
+ ("\"Antonym\" artinya...","lawan kata","persamaan kata","paragraf","ejaan","antonym."),
+ ("\"Detail\" artinya...","rincian","kesimpulan","judul","tema","detail."),
+ ("\"Purpose\" artinya...","tujuan","tahun","masalah","harga","purpose."),
+ ("Pesan \"Wet floor\" artinya...","Lantai basah","Lantai kering","Pintu","Tangga","wet."),
+ ("Tanda \"No smoking\" artinya...","Dilarang merokok","Boleh merokok","Area makan","Parkir","smoking."),
+ ("Tanda \"Push\" pada pintu artinya...","Dorong","Tarik","Ketuk","Kunci","push."),
+ ("Tanda \"Pull\" artinya...","Tarik","Dorong","Buka","Tutup","pull."),
+ ("Tanda \"Danger\" artinya...","Bahaya","Aman","Gratis","Toilet","danger."),
+ ("Iklan \"Sale 50%\" artinya...","Diskon 50%","Harga naik 50%","Tutup 50%","Baru","sale."),
+ ("\"For rent\" artinya...","Disewakan","Dijual","Dilarang","Kosong","rent."),
+ ("\"For sale\" artinya...","Dijual","Disewakan","Dilarang","Gratis","sale."),
+ ("Skimming adalah...","membaca cepat gambaran umum","mencari satu angka","menghafal","menulis ulang","skimming."),
+ ("Scanning adalah...","mencari informasi spesifik","membaca puisi","menyalin","menerjemah semua","scanning."),
+ ("\"Because\" menunjukkan...","sebab","akibat","kontras","urutan","because."),
+]))

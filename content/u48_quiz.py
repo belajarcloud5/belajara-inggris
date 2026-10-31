@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("Menyapa rekan baru:","Welcome to the team!","Who are you?","Go away.","You again?","Welcome."),
+ ("\"Colleague\" =","rekan kerja","atasan","tamu","pelanggan","colleague."),
+ ("\"Small talk\" =","obrolan ringan","rapat besar","pidato","laporan","small talk."),
+ ("\"How was your weekend?\" menanyakan...","akhir pekan","gaji","jadwal","pekerjaan","weekend."),
+ ("\"Let me introduce my colleague.\" =","Perkenalkan rekan saya.","Saya pergi.","Saya makan.","Saya tidur.","introduce."),
+ ("\"I work in marketing.\" =","Saya bekerja di bidang pemasaran.","Saya belanja.","Saya pelanggan.","Saya pensiun.","marketing."),
+ ("\"Department\" =","bagian/departemen","lantai","mesin","kursi","department."),
+ ("\"Manager\" =","manajer","satpam","tamu","magang","manager."),
+ ("\"Intern\" =","peserta magang","manajer","direktur","pelanggan","intern."),
+ ("\"Nice to meet you\" dipakai saat...","pertama bertemu","berpisah","marah","minta maaf","meet."),
+ ("\"Pleased to meet you\" =","senang bertemu Anda","selamat tinggal","terima kasih","maaf","pleased."),
+ ("\"How long have you worked here?\" tense:","present perfect","simple past","future","present","have worked."),
+ ("\"Which company do you work for?\" =","Anda bekerja untuk perusahaan mana?","Siapa nama Anda?","Di mana rumah Anda?","Apa hobi Anda?","company."),
+ ("\"I'm new here.\" =","Saya baru di sini.","Saya lama di sini.","Saya tamu.","Saya pergi.","new."),
+ ("\"Feel free to ask me.\" =","Silakan bertanya kepada saya.","Jangan tanya.","Saya pergi.","Saya sibuk.","feel free."),
+ ("\"See you around.\" =","Sampai jumpa.","Selamat datang.","Terima kasih.","Maaf.","see you."),
+ ("\"Business card\" =","kartu nama","kartu kredit","kartu pos","kartu ujian","card."),
+ ("\"Head office\" =","kantor pusat","kantor cabang","rumah","toko","head office."),
+ ("\"Branch\" =","cabang","pusat","lantai","ruang","branch."),
+ ("Obrolan ringan yang aman:","cuaca atau akhir pekan","gaji rekan","agama sensitif","masalah rumah tangga","safe."),
+]))

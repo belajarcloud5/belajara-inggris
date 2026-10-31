@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("Analytical exposition bertujuan...","meyakinkan bahwa sesuatu benar","menceritakan","menjelaskan cara","menghibur","Purpose."),
+ ("Struktur pertama:","thesis","arguments","reiteration","recommendation","Thesis."),
+ ("\"Thesis\" artinya...","pernyataan posisi","kesimpulan","lelucon","judul","thesis."),
+ ("\"Reiteration\" artinya...","penegasan ulang","pembukaan","contoh","bantahan","reiteration."),
+ ("\"Firstly\" artinya...","pertama","terakhir","namun","misalnya","firstly."),
+ ("\"Secondly\" artinya...","kedua","pertama","akhirnya","jadi","secondly."),
+ ("\"Thus\" artinya...","jadi/dengan demikian","tetapi","kemudian","misalnya","thus."),
+ ("\"Evidence\" artinya...","bukti","dugaan","iklan","gosip","evidence."),
+ ("\"Statistics\" artinya...","statistik","kisah","peta","puisi","statistics."),
+ ("\"Research\" artinya...","penelitian","hiburan","hadiah","iklan","research."),
+ ("\"Benefit\" artinya...","manfaat","kerugian","biaya","akhir","benefit."),
+ ("\"Harmful\" artinya...","merugikan","bermanfaat","gratis","kuat","harmful."),
+ ("\"Healthy\" artinya...","sehat","sakit","lemah","mahal","healthy."),
+ ("\"Education\" artinya...","pendidikan","hiburan","olahraga","kesehatan","education."),
+ ("\"Improve\" artinya...","meningkatkan","menurunkan","menghapus","menunda","improve."),
+ ("\"Reduce\" artinya...","mengurangi","menambah","membeli","membuka","reduce."),
+ ("\"Cause\" artinya...","menyebabkan","menjawab","menutup","membeli","cause."),
+ ("\"Effect\" artinya...","dampak","penyebab","alasan","contoh","effect."),
+ ("\"Many\" dipakai dengan...","kata benda jamak","kata benda tak terhitung","kata kerja","kata sifat","many."),
+ ("\"Much\" dipakai dengan...","kata benda tak terhitung","kata benda jamak","kata kerja","angka","much."),
+]))

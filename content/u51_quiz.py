@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("\"Subject\" email =","perihal","penerima","lampiran","tanda tangan","subject."),
+ ("\"Recipient\" =","penerima","pengirim","penulis","pembaca","recipient."),
+ ("\"Sender\" =","pengirim","penerima","penulis","editor","sender."),
+ ("\"Attachment\" =","lampiran","judul","isi","alamat","attachment."),
+ ("\"CC\" =","tembusan","hapus","balas","simpan","CC."),
+ ("\"BCC\" =","tembusan tersembunyi","lampiran","spam","kotak masuk","BCC."),
+ ("\"Reply\" =","membalas","meneruskan","menghapus","mencetak","reply."),
+ ("\"Forward\" =","meneruskan","membalas","menghapus","menyimpan","forward."),
+ ("\"Draft\" =","konsep","terkirim","spam","sampah","draft."),
+ ("\"Inbox\" =","kotak masuk","kotak keluar","sampah","konsep","inbox."),
+ ("\"Regards\" =","salam","terima kasih","maaf","tolong","regards."),
+ ("\"Dear Mr. Adi,\" adalah...","salam pembuka","penutup","perihal","lampiran","dear."),
+ ("\"Best regards\" adalah...","penutup","pembuka","isi","judul","closing."),
+ ("\"I am writing to inform you ...\" =","Saya menulis untuk memberi tahu Anda ...","Saya menulis puisi ...","Saya lupa ...","Saya menolak ...","inform."),
+ ("\"Please find attached\" =","Mohon lihat lampiran","Mohon hapus","Mohon bayar","Mohon datang","attached."),
+ ("\"Sorry for the late reply\" =","Maaf atas balasan yang terlambat","Terima kasih atas balasan cepat","Selamat pagi","Sampai jumpa","late."),
+ ("\"Out of office\" =","sedang tidak di kantor","kantor baru","kantor penuh","kantor tutup selamanya","OOO."),
+ ("\"Urgent\" =","mendesak","santai","lama","murah","urgent."),
+ ("\"Confirm\" =","mengonfirmasi","membatalkan","menunda","menolak","confirm."),
+ ("Nada email formal:","sopan dan jelas","bercanda berlebihan","semua huruf besar","penuh singkatan gaul","tone."),
+]))

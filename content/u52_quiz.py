@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("Mengangkat telepon kantor:","Good morning, how may I help you?","Who?","What?","Yes?","Answer."),
+ ("\"Hold on, please.\" =","Mohon tunggu.","Mohon pergi.","Mohon bicara.","Mohon tutup.","hold on."),
+ ("\"Hang up\" =","menutup telepon","mengangkat","menelepon","membeli","hang up."),
+ ("\"Call back\" =","menelepon balik","menutup","mengangkat","membeli","call back."),
+ ("\"Put through\" =","menyambungkan","memutus","membeli","menutup","put through."),
+ ("\"Leave a message\" =","meninggalkan pesan","menghapus pesan","membaca pesan","menulis surat","leave."),
+ ("\"Voicemail\" =","pesan suara","nomor palsu","dering","bel","voicemail."),
+ ("\"Wrong number\" =","salah sambung","nomor baru","nomor darurat","nomor sibuk","wrong."),
+ ("\"Speaking.\" saat ditanya nama:","Ini saya sendiri.","Dia tidak ada.","Salah nomor.","Tunggu.","speaking."),
+ ("\"Extension\" =","nomor sambungan","kabel","tambahan gaji","lantai","extension."),
+ ("\"Could you spell that?\" =","Bisakah Anda mengejanya?","Bisakah Anda menulis?","Bisakah Anda pergi?","Bisakah Anda menelepon?","spell."),
+ ("\"The line is bad.\" =","Sambungannya buruk.","Teleponnya baru.","Telepon dimatikan.","Teleponnya mahal.","bad."),
+ ("\"I'll get back to you.\" =","Saya akan menghubungi Anda kembali.","Saya akan pergi.","Saya lupa.","Saya menolak.","get back."),
+ ("\"Mr. Dani is out.\" =","Pak Dani sedang keluar.","Pak Dani datang.","Pak Dani sakit.","Pak Dani menelepon.","out."),
+ ("\"In a meeting\" =","sedang rapat","sedang makan","sedang tidur","sedang pulang","meeting."),
+ ("\"Thank you for calling.\" =","Terima kasih telah menelepon.","Terima kasih telah datang.","Selamat tinggal.","Maaf.","calling."),
+ ("\"Speak up, please.\" =","Mohon bicara lebih keras.","Mohon diam.","Mohon pergi.","Mohon tulis.","speak up."),
+ ("\"Slow down, please.\" =","Mohon lebih pelan.","Mohon lebih cepat.","Mohon berhenti.","Mohon ulangi semua.","slow."),
+ ("\"Dial\" =","memutar nomor","menutup","menjawab","membayar","dial."),
+ ("\"Missed call\" =","panggilan tak terjawab","panggilan baru","panggilan keluar","panggilan salah","missed."),
+]))

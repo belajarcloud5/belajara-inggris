@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("\"Agenda\" =","acara rapat","daftar hadir","menu","tiket","agenda."),
+ ("\"Minutes\" =","notulen","menit","jam","hari","minutes."),
+ ("\"Chairperson\" =","pimpinan rapat","notulis","tamu","peserta pasif","chair."),
+ ("\"Attendee\" =","peserta","pemimpin","tuan rumah","pelayan","attendee."),
+ ("\"Propose\" =","mengusulkan","menolak","menunda","menghapus","propose."),
+ ("\"Approve\" =","menyetujui","menolak","menunda","menghapus","approve."),
+ ("\"Reject\" =","menolak","menyetujui","menunda","memilih","reject."),
+ ("\"Vote\" =","memberi suara","bernyanyi","menunda","menghapus","vote."),
+ ("\"Budget\" =","anggaran","gaji","utang","pajak","budget."),
+ ("\"Issue\" =","masalah","hadiah","tugas","jawaban","issue."),
+ ("\"Action item\" =","tugas tindak lanjut","film aksi","barang","jadwal","action."),
+ ("\"Follow up\" =","menindaklanjuti","melupakan","mengikuti orang","menghapus","follow up."),
+ ("\"Brainstorm\" =","urun gagasan","bertengkar","tidur","menghitung","brainstorm."),
+ ("\"Wrap up\" =","mengakhiri","memulai","menunda","membuka","wrap up."),
+ ("\"Move on\" =","lanjut","mundur","berhenti","pulang","move on."),
+ ("\"Sorry to interrupt\" =","maaf menyela","maaf terlambat","maaf bodoh","terima kasih","interrupt."),
+ ("\"I agree\" tanda...","setuju","tolak","ragu","marah","agree."),
+ ("\"I see your point, but ...\" =","Saya mengerti maksud Anda, tetapi ...","Saya melihat titik","Saya tidak mengerti","Saya setuju sekali","point."),
+ ("\"Any other business\" =","hal-hal lain","bisnis baru","tutup bisnis","agenda satu","AOB."),
+ ("\"Quorum\" =","jumlah minimal peserta sah","kursi","menu","tempat parkir","quorum."),
+]))

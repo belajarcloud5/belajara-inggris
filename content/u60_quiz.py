@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("\"Business trip\" =","perjalanan dinas","liburan","pesta","studi","business trip."),
+ ("\"Flight\" =","penerbangan","kereta","kapal","bus","flight."),
+ ("\"Boarding pass\" =","kartu naik pesawat","paspor","visa","kartu kredit","boarding."),
+ ("\"Passport\" =","paspor","visa","tiket","koper","passport."),
+ ("\"Visa\" =","izin masuk","paspor","tiket","bagasi","visa."),
+ ("\"Luggage\" =","bagasi","tiket","paspor","kursi","luggage."),
+ ("\"Carry-on\" =","bagasi kabin","bagasi besar","tiket","paspor","carry-on."),
+ ("\"Departure\" =","keberangkatan","kedatangan","transit","batal","departure."),
+ ("\"Arrival\" =","kedatangan","keberangkatan","transit","batal","arrival."),
+ ("\"Delayed\" =","tertunda","tepat waktu","dibatalkan","penuh","delayed."),
+ ("\"Layover\" =","transit","tiba","berangkat","batal","layover."),
+ ("\"Reservation\" =","reservasi","pembatalan","pembayaran","pengiriman","reservation."),
+ ("\"Check in\" =","lapor masuk","lapor keluar","batal","bayar","check in."),
+ ("\"Check out\" =","lapor keluar","lapor masuk","pesan","bayar","check out."),
+ ("\"Single room\" =","kamar untuk satu orang","kamar dua orang","kamar besar","kamar kosong","single."),
+ ("\"Double room\" =","kamar untuk dua orang","kamar satu orang","kamar kecil","kamar rapat","double."),
+ ("\"Itinerary\" =","rencana perjalanan","tiket","visa","bagasi","itinerary."),
+ ("\"Expense report\" =","laporan pengeluaran","laporan cuaca","jadwal","tiket","expense."),
+ ("\"Reimburse\" =","mengganti biaya","menagih","menyita","menunda","reimburse."),
+ ("\"Customs\" =","bea cukai","kasir","pilot","pramugari","customs."),
+]))

@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("\"I have lived here ___ 2019.\"","since","for","ago","during","since."),
+ ("\"I have lived here ___ five years.\"","for","since","ago","from","for."),
+ ("\"She is ___ than her brother.\" (tall)","taller","tallest","more tall","tall","comparative."),
+ ("\"He is the ___ student.\" (smart)","smartest","smarter","most smarter","smart","superlative."),
+ ("\"The test was ___ difficult.\"","very","much","many","a lot","very."),
+ ("\"I enjoy ___ music.\"","listening to","listen to","to listen","listened","gerund."),
+ ("\"She wants ___ a doctor.\"","to be","being","be","been","to V1."),
+ ("\"He asked me ___ the door.\"","to open","opening","open","opened","ask + to."),
+ ("\"The man ___ is standing there is my uncle.\"","who","which","whose","whom","who."),
+ ("\"The book ___ I read was good.\"","that","who","whom","where","that."),
+ ("\"Neither Ali nor Budi ___ here.\"","is","are","were","be","neither nor."),
+ ("\"Either you ___ I must go.\"","or","and","nor","but","either or."),
+ ("\"Not only ... ___ also ...\"","but","and","or","so","not only but also."),
+ ("\"She is good ___ English.\"","at","in","on","for","good at."),
+ ("\"He is afraid ___ dogs.\"","of","at","in","to","afraid of."),
+ ("\"I am looking ___ my keys.\"","for","at","to","on","look for."),
+ ("\"Hurry up, ___ you will be late.\"","or","and","but","so","or."),
+ ("\"The news ___ good.\"","is","are","were","be","news."),
+ ("\"Each student ___ a book.\"","has","have","are","were","each."),
+ ("\"I'd rather ___ at home.\"","stay","to stay","staying","stayed","would rather."),
+]))

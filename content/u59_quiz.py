@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("\"Feedback\" =","masukan","makanan","perintah","jadwal","feedback."),
+ ("\"Constructive\" =","membangun","merusak","lucu","mahal","constructive."),
+ ("\"Criticism\" =","kritik","pujian","hadiah","jadwal","criticism."),
+ ("\"Praise\" =","pujian","kritik","hukuman","denda","praise."),
+ ("\"Improve\" =","meningkatkan","menurunkan","menunda","menolak","improve."),
+ ("\"Strength\" =","kekuatan","kelemahan","tujuan","pajak","strength."),
+ ("\"Weakness\" =","kelemahan","kekuatan","tujuan","hadiah","weakness."),
+ ("\"Goal\" =","tujuan","masalah","hasil","gaji","goal."),
+ ("\"Promotion\" =","kenaikan jabatan","pemecatan","cuti","magang","promotion."),
+ ("\"Raise\" (gaji) =","kenaikan gaji","pemotongan gaji","cuti","bonus tahunan","raise."),
+ ("\"Mentor\" =","pembimbing","pesaing","tamu","bos besar","mentor."),
+ ("\"Performance review\" =","evaluasi kinerja","pertunjukan","laporan cuaca","rapat makan","review."),
+ ("\"Training\" =","pelatihan","hiburan","libur","gaji","training."),
+ ("\"Develop skills\" =","mengembangkan keterampilan","menjual keterampilan","melupakan","menghapus","develop."),
+ ("\"Career path\" =","jalur karier","jalan raya","jam kerja","gaji","career."),
+ ("\"Take initiative\" =","berinisiatif","menunggu perintah","mengeluh","menolak","initiative."),
+ ("\"Well done!\" =","Bagus sekali!","Selamat tinggal!","Tolong!","Maaf!","well done."),
+ ("\"Keep it up!\" =","Pertahankan!","Hentikan!","Mulai!","Pulang!","keep up."),
+ ("\"Room for improvement\" =","masih bisa ditingkatkan","ruang kosong","ruang rapat","ruang kerja baru","room."),
+ ("\"I'll work on that.\" =","Saya akan memperbaikinya.","Saya akan pergi.","Saya tidak peduli.","Saya menolak.","work on."),
+]))

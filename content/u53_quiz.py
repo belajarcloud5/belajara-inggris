@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("\"Appointment\" =","janji temu","pertemuan keluarga","pesta","ujian","appointment."),
+ ("\"Schedule\" =","jadwal","harga","alamat","gaji","schedule."),
+ ("\"Reschedule\" =","menjadwal ulang","membatalkan","menolak","menyelesaikan","reschedule."),
+ ("\"Cancel\" =","membatalkan","menunda","memulai","menghadiri","cancel."),
+ ("\"Postpone\" =","menunda","membatalkan","memajukan","menolak","postpone."),
+ ("\"Bring forward\" =","memajukan jadwal","menunda","membatalkan","mengakhiri","forward."),
+ ("\"Available\" =","tersedia","sibuk","jauh","rusak","available."),
+ ("\"Busy\" =","sibuk","senggang","kosong","tersedia","busy."),
+ ("\"Clash\" =","bentrok","cocok","selesai","mulai","clash."),
+ ("\"Does Monday work for you?\" =","Apakah Senin cocok bagi Anda?","Apakah Anda bekerja Senin?","Apakah Senin libur?","Apakah ini Senin?","work."),
+ ("\"How about 3 p.m.?\" =","Bagaimana kalau pukul 3 sore?","Pukul 3 pagi?","Kapan pukul 3?","Saya sibuk pukul 3","how about."),
+ ("\"Fully booked\" =","sudah penuh","kosong","baru","dibatalkan","booked."),
+ ("\"Tentatively\" =","sementara","pasti","tidak","selalu","tentatively."),
+ ("\"Confirm\" =","mengonfirmasi","menolak","menunda","mengubah","confirm."),
+ ("\"Time slot\" =","slot waktu","tempat parkir","alat","jam dinding","slot."),
+ ("\"Deadline\" =","batas waktu","waktu mulai","istirahat","libur","deadline."),
+ ("\"Next Tuesday\" =","Selasa depan","Selasa lalu","Selasa ini","Setiap Selasa","next."),
+ ("\"The day after tomorrow\" =","lusa","kemarin","besok","kemarin lusa","day after."),
+ ("\"Fortnight\" =","dua minggu","dua hari","dua bulan","dua tahun","fortnight."),
+ ("\"At noon\" =","tengah hari","tengah malam","pagi","sore","noon."),
+]))

@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("\"Tell me about yourself\" meminta...","perkenalan singkat","uang","izin","alamat saja","tell."),
+ ("\"Strength\" artinya...","kelebihan","kelemahan","gaji","tugas","strength."),
+ ("\"Weakness\" artinya...","kelemahan","kelebihan","hadiah","jabatan","weakness."),
+ ("\"Experience\" artinya...","pengalaman","pendidikan","gaji","umur","experience."),
+ ("\"Hire\" artinya...","mempekerjakan","memecat","menolak","menunda","hire."),
+ ("\"Fire\" (pekerjaan) artinya...","memecat","mempekerjakan","menolong","membayar","fire."),
+ ("\"Resign\" artinya...","mengundurkan diri","dipromosikan","dipecat","magang","resign."),
+ ("\"Interviewer\" artinya...","pewawancara","pelamar","tamu","penulis","interviewer."),
+ ("\"Interviewee\" artinya...","yang diwawancarai","pewawancara","atasan","satpam","interviewee."),
+ ("\"Why do you want this job?\" menanyakan...","motivasi","umur","alamat","hobi","motivation."),
+ ("\"I am a quick learner.\" artinya...","Saya cepat belajar.","Saya guru.","Saya pelari.","Saya lambat.","quick."),
+ ("\"Salary expectation\" =","harapan gaji","pajak","libur","bonus","salary."),
+ ("\"Full-time\" =","penuh waktu","paruh waktu","lembur","magang","full-time."),
+ ("\"Part-time\" =","paruh waktu","penuh waktu","tetap","lembur","part-time."),
+ ("\"Probation\" =","masa percobaan","masa liburan","masa pensiun","masa sekolah","probation."),
+ ("\"Reference\" =","pemberi rekomendasi","tempat tinggal","gaji","jadwal","reference."),
+ ("Jawaban sopan setelah wawancara:","Thank you for the opportunity.","Whatever.","Bye.","Hire me.","thanks."),
+ ("\"I have worked as a waiter for two years.\" tense:","present perfect","simple past","future","simple present","have worked."),
+ ("\"Could you tell me more about the role?\" artinya...","Bisakah Anda ceritakan lebih lanjut tentang peran ini?","Bisakah Anda pergi?","Bisakah Anda menggaji saya?","Bisakah Anda diam?","role."),
+ ("Pakaian wawancara:","rapi/formal","piyama","kaos olahraga","sandal jepit","dress."),
+]))

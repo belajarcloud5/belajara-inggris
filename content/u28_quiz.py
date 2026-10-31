@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("Descriptive text bertujuan...","menggambarkan sesuatu","menceritakan kejadian","memberi instruksi","membujuk","Descriptive."),
+ ("Tense umum descriptive text:","simple present","simple past","future","present perfect","Present."),
+ ("Bagian pertama descriptive text:","identification","reorientation","thesis","goal","Identification."),
+ ("\"She ___ long black hair.\"","has","have","is","are","she → has."),
+ ("\"Handsome\" dipakai untuk...","pria tampan","kota","makanan","cuaca","handsome."),
+ ("\"Delicious\" artinya...","lezat","pedas","dingin","mahal","delicious."),
+ ("Lawan kata \"ugly\":","beautiful","tall","old","heavy","ugly >< beautiful."),
+ ("\"The room is ___ and tidy.\" (bersih)","clean","dirty","noisy","empty","clean."),
+ ("\"Curly hair\" artinya...","rambut keriting","rambut lurus","rambut pendek","botak","curly."),
+ ("\"Straight\" artinya...","lurus","bengkok","kecil","lebar","straight."),
+ ("\"Tall\" artinya...","tinggi","pendek","gemuk","kurus","tall."),
+ ("\"Slim\" artinya...","langsing","gemuk","pendek","tua","slim."),
+ ("\"The mountain is very high.\" 'high' artinya...","tinggi","rendah","luas","dingin","high."),
+ ("Kalimat yang mendeskripsikan sifat:","He is honest.","He has a bag.","He lives here.","He went home.","honest."),
+ ("\"Beautiful scenery\" artinya...","pemandangan indah","bangunan tua","jalan rusak","pasar ramai","scenery."),
+ ("\"It has four legs.\" mendeskripsikan...","bagian tubuh/benda","waktu","lokasi","aktivitas","has."),
+ ("\"Colorful\" artinya...","berwarna-warni","hitam putih","gelap","kosong","colorful."),
+ ("\"Wide\" artinya...","lebar","sempit","tipis","pendek","wide."),
+ ("Urutan benar:","a big old house","an old big house","a house big old","big a old house","size-age."),
+ ("\"Cozy\" artinya...","nyaman","sempit","bising","gelap","cozy."),
+]))

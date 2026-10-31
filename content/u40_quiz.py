@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("\"Application letter\" artinya...","surat lamaran","surat undangan","surat pribadi","surat kabar","application."),
+ ("\"Vacancy\" artinya...","lowongan","hadiah","gaji","libur","vacancy."),
+ ("\"Position\" artinya...","jabatan/posisi","tempat tinggal","gaji","jam","position."),
+ ("\"Apply for\" artinya...","melamar","menolak","membeli","menjual","apply."),
+ ("\"Experience\" artinya...","pengalaman","pendidikan","umur","alamat","experience."),
+ ("\"Skill\" artinya...","keterampilan","kelemahan","hobi","tugas","skill."),
+ ("\"Qualification\" artinya...","kualifikasi","kuantitas","kualitas","kuota","qualification."),
+ ("\"Resume/CV\" berisi...","riwayat hidup","cerita fiksi","resep","lagu","CV."),
+ ("\"Enclosed\" artinya...","terlampir","tertutup rapat","dihapus","dicetak","enclosed."),
+ ("\"Sincerely\" berada di...","penutup surat","judul","isi","alamat","sincerely."),
+ ("\"Dear Sir or Madam\" artinya...","Yth. Bapak/Ibu","Sayangku","Hai kawan","Kepada kucing","dear."),
+ ("\"Reliable\" artinya...","dapat diandalkan","malas","lambat","kasar","reliable."),
+ ("\"Hard-working\" artinya...","rajin","malas","lambat","pemalu","hard-working."),
+ ("\"Team player\" artinya...","bisa bekerja sama","pemain bola","pemimpin tunggal","penyendiri","team player."),
+ ("\"Fluent\" artinya...","lancar/fasih","terbata-bata","kasar","pelan","fluent."),
+ ("\"Graduate\" artinya...","lulus","gagal","masuk","pindah","graduate."),
+ ("\"Interview\" artinya...","wawancara","ujian","kuis","rapat","interview."),
+ ("\"I am interested in the job.\" artinya...","Saya tertarik pada pekerjaan itu.","Saya benci pekerjaan itu.","Saya sudah bekerja.","Saya pensiun.","interested."),
+ ("\"Salary\" artinya...","gaji","pajak","libur","tiket","salary."),
+ ("\"Available\" artinya...","tersedia/siap","sibuk","rusak","jauh","available."),
+]))

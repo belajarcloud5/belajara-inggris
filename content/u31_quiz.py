@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("Narrative text bertujuan...","menghibur","memberi instruksi","melaporkan berita","membujuk","Narrative."),
+ ("Tahap masalah muncul:","complication","orientation","resolution","reorientation","Complication."),
+ ("\"Once upon a time\" artinya...","Pada suatu hari dahulu kala","Besok pagi","Setiap hari","Kemarin sore","Opening."),
+ ("\"Prince\" artinya...","pangeran","raja","putri","penyihir","prince."),
+ ("\"Princess\" artinya...","putri raja","ratu","nenek","pelayan","princess."),
+ ("\"Giant\" artinya...","raksasa","kurcaci","penyihir","hantu","giant."),
+ ("\"Magic\" artinya...","sihir","senjata","hadiah","makanan","magic."),
+ ("\"Lazy\" artinya...","malas","rajin","kuat","cerdas","lazy."),
+ ("\"Clever\" artinya...","cerdik","bodoh","jahat","miskin","clever."),
+ ("\"The wolf ___ the pig.\" (chase)","chased","chase","chases","chasing","past."),
+ ("\"He ___ sleeping when the phone rang.\"","was","is","were","be","was."),
+ ("\"They ___ playing when it rained.\"","were","was","are","is","were."),
+ ("\"Suddenly\" artinya...","tiba-tiba","perlahan","selalu","jarang","suddenly."),
+ ("\"Cave\" artinya...","gua","sungai","rumah","pasar","cave."),
+ ("\"Disappear\" artinya...","menghilang","muncul","tumbuh","berlari","disappear."),
+ ("Pesan moral \"Honesty is the best policy\" artinya...","Kejujuran adalah yang terbaik","Kerja keras","Jangan serakah","Hormati orang tua","Moral."),
+ ("\"Happily ever after\" artinya...","bahagia selamanya","sedih selamanya","pergi jauh","kembali lagi","ending."),
+ ("\"Defeat\" artinya...","mengalahkan","menolong","memberi","mengikuti","defeat."),
+ ("\"Villager\" artinya...","penduduk desa","raja","pencuri","guru","villager."),
+ ("Kata kerja lampau \"find\":","found","finded","finds","founded","found."),
+]))

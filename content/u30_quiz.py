@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("Kalimat perintah dimulai dengan...","kata kerja dasar","subjek I","to be","kata sifat","Imperative."),
+ ("Procedure text menjelaskan...","cara melakukan sesuatu","masa lalu","tokoh","opini","Procedure."),
+ ("\"Boil\" artinya...","merebus","menggoreng","memotong","mencuci","boil."),
+ ("\"Fry\" artinya...","menggoreng","merebus","mengupas","mengiris","fry."),
+ ("\"Peel\" artinya...","mengupas","mengiris","mengaduk","menuang","peel."),
+ ("\"Add\" artinya...","menambahkan","mengurangi","membuang","menutup","add."),
+ ("\"Ingredients\" artinya...","bahan","alat","hasil","tempat","ingredients."),
+ ("\"Tools\" artinya...","alat","bahan","rasa","waktu","tools."),
+ ("Kata urutan pertama:","First","Finally","Lastly","After that","First."),
+ ("Kata urutan terakhir:","Finally","First","Next","Then","Finally."),
+ ("\"Do not\" digunakan untuk...","larangan","pertanyaan","masa lalu","masa depan","Larangan."),
+ ("\"Turn on the light\" artinya...","Nyalakan lampu","Matikan lampu","Beli lampu","Pecahkan lampu","turn on."),
+ ("\"Turn off\" artinya...","mematikan","menyalakan","membuka","mengisi","turn off."),
+ ("\"Plug in\" artinya...","menancapkan colokan","mencabut","membersihkan","menyimpan","plug in."),
+ ("\"Gently\" artinya...","dengan lembut","dengan keras","cepat","lama","gently."),
+ ("\"___ the eggs into a bowl.\"","Crack","Cracks","Cracking","Cracked","Imperative."),
+ ("\"Mix well\" artinya...","aduk rata","buang","bakar","potong","mix well."),
+ ("\"Serve\" artinya...","menyajikan","menyimpan","membeli","membuang","serve."),
+ ("\"Wait for 5 minutes.\" artinya...","Tunggu 5 menit.","Lari 5 menit.","Tidur 5 jam.","Pergi 5 hari.","wait."),
+ ("\"Press\" artinya...","menekan","menarik","memutar","melempar","press."),
+]))

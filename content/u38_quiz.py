@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("Explanation text menjelaskan...","proses atau sebab-akibat","ajakan","cerita","iklan","Purpose."),
+ ("Bagian pertama explanation:","general statement","explanation sequence","resolution","goal","General statement."),
+ ("\"Evaporate\" artinya...","menguap","mengembun","membeku","mencair","evaporate."),
+ ("\"Condense\" artinya...","mengembun","menguap","membakar","menyala","condense."),
+ ("\"Melt\" artinya...","mencair","membeku","menguap","menyala","melt."),
+ ("\"Freeze\" artinya...","membeku","mencair","menguap","jatuh","freeze."),
+ ("\"Cloud\" artinya...","awan","hujan","angin","petir","cloud."),
+ ("\"Lightning\" artinya...","petir","guntur","badai","kabut","lightning."),
+ ("\"Thunder\" artinya...","guntur","petir","angin","hujan","thunder."),
+ ("\"Earthquake\" artinya...","gempa bumi","banjir","longsor","badai","earthquake."),
+ ("\"Landslide\" artinya...","tanah longsor","banjir","gempa","kebakaran","landslide."),
+ ("\"Volcano\" artinya...","gunung berapi","pantai","hutan","danau","volcano."),
+ ("\"Erupt\" artinya...","meletus","jatuh","hilang","tumbuh","erupt."),
+ ("\"Because of\" + ...","kata benda","klausa","kata kerja dasar","kata seru","because of."),
+ ("\"As a result\" artinya...","akibatnya","sebelumnya","misalnya","tetapi","result."),
+ ("\"Process\" artinya...","proses","hasil","bahan","alat","process."),
+ ("\"Photosynthesis\" terjadi pada...","tumbuhan","batu","air","logam","photosynthesis."),
+ ("\"Sunlight\" artinya...","sinar matahari","sinar bulan","lampu","api","sunlight."),
+ ("\"Temperature\" artinya...","suhu","tekanan","jarak","waktu","temperature."),
+ ("Kalimat benar:","Water boils at 100°C.","Water boil at 100°C.","Water boiling at 100°C.","Water is boil at 100°C.","boils."),
+]))

@@ -1,0 +1,23 @@
+from qk import mk
+QUIZ = dict(practice=[], quiz=mk([
+ ("Teks yang memberi petunjuk langkah:","procedure","narrative","news","descriptive","Procedure."),
+ ("Teks dongeng:","narrative","recount","explanation","hortatory","Narrative."),
+ ("Teks pengalaman pribadi lampau:","recount","procedure","news","explanation","Recount."),
+ ("\"If I were rich, I ___ travel.\"","would","will","did","am","Type 2."),
+ ("\"This house ___ in 1990.\" (build)","was built","built","is build","has built","passive."),
+ ("\"She said she ___ tired.\"","was","is","be","been","reported."),
+ ("\"Synonym\" =","persamaan kata","lawan kata","judul","paragraf","synonym."),
+ ("\"Antonym\" =","lawan kata","persamaan kata","judul","kalimat","antonym."),
+ ("\"Main idea\" =","gagasan utama","rincian","judul","akhir","main idea."),
+ ("\"Compare\" =","membandingkan","menghitung","menjual","menulis","compare."),
+ ("\"Summarize\" =","meringkas","memperpanjang","mengulang","menghapus","summarize."),
+ ("\"Conclude\" =","menyimpulkan","membuka","memulai","menunda","conclude."),
+ ("\"Mention\" =","menyebutkan","melupakan","menghapus","menyembunyikan","mention."),
+ ("\"Author's purpose\" =","tujuan penulis","umur penulis","alamat penulis","judul","purpose."),
+ ("Strategi ujian: mulai dari soal...","yang paling mudah","terakhir","acak","tidak ada","strategy."),
+ ("\"Elimination\" =","menyingkirkan pilihan salah","memilih semua","menghapus soal","menyalin","elimination."),
+ ("\"Accurate\" =","akurat","salah","lambat","mahal","accurate."),
+ ("\"Appropriate\" =","sesuai","salah","mahal","lama","appropriate."),
+ ("\"Review\" =","mengulang/meninjau","menghapus","melupakan","membuang","review."),
+ ("\"Time management\" =","manajemen waktu","manajemen uang","manajemen tim","manajemen toko","time."),
+]))
