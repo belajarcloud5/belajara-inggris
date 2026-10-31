@@ -82,3 +82,7 @@ Tombol 🔊 pada bacaan berdialog membacakan tiap pembicara dengan suara sesuai 
 - **Soal latihan**: `content/uNN_art.py` (`ART`, suffix `art`) di unit yang sama, 87 soal (pilihan ganda, isian, susun kalimat).
 
 Cerita bacaan **berfokus articles** (`content/uNN_read6.py`, `READ6`, bacaan ke-7 per unit) ada di semua 61 unit: percakapan dengan a/an dari bunyi, the untuk yang sudah disebut, superlatif, dan benda unik, serta tanpa article (olahraga, waktu makan, bahasa, kegiatan seperti at school). Total bacaan 427 dengan 2.623 pertanyaan.
+
+## Preposisi gerak (to, into, through)
+- **Materi** lewat `content/uNN_lessonx.py`: unit 9 (to, into, out of, from, towards, onto; tanpa to pada go home, enter, reach; arrive at vs in; lalu through, across, along, past, over, under, around), unit 30 (into, to, through, over dalam instruksi: pour into, add to, cut into), unit 31 (preposisi gerak dalam cerita), dan unit 46 (jebakan ujian: go home, enter, arrive at/in, get on/off vs get in/out of).
+- **Soal latihan**: `content/uNN_mov.py` (`MOV`, suffix `mov`) di unit 9, 14, 30, 31, dan 46, 63 soal.

@@ -8,4 +8,17 @@ LESSONX = [
          ["nama orang atau tempat", "**tanpa article**", "[[Arya lived in Java.]]"]],
   examples=[dict(en="[[A boy found a cave. He crept into the cave.]]", id="Seorang anak menemukan gua. Dia merangkak masuk ke gua itu."),
             dict(en="[[A mouse ran past a lion. The lion woke up.]]", id="Seekor tikus berlari melewati singa. Singa itu terbangun.")]),
+
+ dict(t="grammar", title="7. Preposisi gerak dalam cerita",
+  text="Narrative text memakai preposisi gerak agar pembaca bisa membayangkan perjalanan tokoh:",
+  table=[["Preposisi", "Artinya", "Contoh"],
+         ["**through**", "menembus", "[[He walked through the dark forest.]]"],
+         ["**across**", "menyeberangi", "[[She swam across the river.]]"],
+         ["**along**", "menyusuri", "[[They walked along a narrow path.]]"],
+         ["**over**", "melintasi di atas", "[[The boy climbed over the wall.]]"],
+         ["**into / out of**", "masuk / keluar", "[[He crept into the cave and came out of it at dawn.]]"],
+         ["**past**", "melewati", "[[She ran past the old house.]]"],
+         ["**up / down**", "naik / turun", "[[They climbed up the hill and ran down the other side.]]"]],
+  examples=[dict(en="[[The girl walked along the river, crossed a bridge, and went into the forest.]]", id="Gadis itu berjalan menyusuri sungai, menyeberangi jembatan, dan masuk ke hutan."),
+            dict(en="[[A fox jumped over the fence and ran through the garden.]]", id="Seekor rubah melompati pagar dan berlari melewati kebun.")]),
 ]
