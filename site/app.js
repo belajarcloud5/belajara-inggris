@@ -41,25 +41,69 @@ function currentVoice() {
   return vs.slice().sort((a, b) => scoreVoice(b) - scoreVoice(a))[0];   // utamakan suara perempuan bila ada
 }
 // jenis kelamin pembicara dialog -> suara perempuan / laki-laki
-const GENDER = { dina: 'f', rani: 'f', mother: 'f', budi: 'm', tom: 'm', 'mr. adi': 'm', 'ms. sari': 'f', ani: 'f', siti: 'f', maya: 'f', rina: 'f', lisa: 'f', anna: 'f', sarah: 'f', dewi: 'f', tika: 'f', salma: 'f', laura: 'f', 'mrs. hartono': 'f', 'ms. lestari': 'f', arif: 'm', kevin: 'm', rizal: 'm', anton: 'm', andi: 'm', doni: 'm', dika: 'm', ryan: 'm', ben: 'm', sam: 'm', father: 'm', 'mr. hadi': 'm', 'dr. wijaya': 'm' };
+const GENDER = { dina: 'f', rani: 'f', mother: 'f', budi: 'm', tom: 'm', 'mr. adi': 'm', 'ms. sari': 'f', ani: 'f', siti: 'f', maya: 'f', rina: 'f', lisa: 'f', anna: 'f', sarah: 'f', dewi: 'f', tika: 'f', salma: 'f', laura: 'f', 'mrs. hartono': 'f', 'ms. lestari': 'f', arif: 'm', kevin: 'm', rizal: 'm', anton: 'm', andi: 'm', doni: 'm', dika: 'm', ryan: 'm', ben: 'm', sam: 'm', father: 'm', 'mr. hadi': 'm', 'dr. wijaya': 'm', ali: 'm', anita: 'f', ana: 'f', wulan: 'f', sinta: 'f', daniel: 'm', grandpa: 'm', grandfather: 'm', dad: 'm', mom: 'f', grandma: 'f', grandmother: 'f' };
 const genderOf = name => GENDER[String(name).toLowerCase()] || '';
 function maleVoice() {
   const vs = enVoices().filter(v => MALE.test(v.name) && !FEMALE.test(v.name));
   return vs.sort((a, b) => scoreVoice(a) - scoreVoice(b) || (/^en[-_]US/i.test(b.lang) - /^en[-_]US/i.test(a.lang)))[0] || null;
 }
+function femaleVoice() {
+  const vs = enVoices().filter(v => FEMALE.test(v.name) && !MALE.test(v.name));
+  return vs.sort((a, b) => scoreVoice(b) - scoreVoice(a))[0] || null;
+}
 function speakSlow(text) { const r = vset.rate; vset.rate = Math.max(0.5, r * 0.6); speak(text); vset.rate = r; }
-function speak(text, gender) {
-  if (!hasTTS) return;
-  speechSynthesis.cancel();
+// membuat ucapan dengan suara sesuai jenis kelamin: 'f' perempuan, 'm' laki-laki, '' suara bawaan (diutamakan perempuan)
+function makeUtter(text, gender) {
   const u = new SpeechSynthesisUtterance(text);
   u.lang = 'en-US'; u.rate = vset.rate; u.pitch = vset.pitch;
   let v = currentVoice();
   if (gender === 'm') {
     const m = maleVoice();
     if (m) { v = m; u.pitch = 1; } else u.pitch = 0.7;          // tidak ada suara laki-laki: turunkan nada
-  } else if (gender === 'f' && v && MALE.test(v.name) && !FEMALE.test(v.name)) u.pitch = Math.max(vset.pitch, 1.5);
+  } else if (gender === 'f' && !(v && FEMALE.test(v.name) && !MALE.test(v.name))) {   // suara pilihan sudah perempuan: biarkan
+    const f = femaleVoice();
+    if (f) { v = f; u.pitch = vset.pitch; }
+    else if (v && MALE.test(v.name) && !FEMALE.test(v.name)) u.pitch = Math.max(vset.pitch, 1.5);   // hanya ada suara laki-laki: naikkan nada
+  }
   if (v) { u.voice = v; u.lang = v.lang; }
-  speechSynthesis.speak(u);
+  return u;
+}
+function speak(text, gender) {
+  if (!hasTTS) return;
+  speechSynthesis.cancel();
+  speechSynthesis.speak(makeUtter(text, gender));
+}
+// bacaan berdialog: tiap pembicara ("Dina: ...", "Tom: ...") dibacakan dengan suara sesuai namanya
+const ROLES = new Set(['agent', 'audience', 'caller', 'chair', 'colleague', 'customer', 'doctor', 'guest', 'hr', 'interviewer', 'manager', 'officer', 'receptionist', 'reporter', 'seller', 'staff', 'student', 'teacher', 'tourist', 'waiter', 'visitor', 'witness']);
+function parseSpeakers(text) {
+  const re = /(^|[\s"])((?:Mr|Ms|Mrs|Dr)\.\s[A-Z][a-z]+|[A-Z][A-Za-z]+): /g, marks = [];
+  let m;
+  while ((m = re.exec(text))) {
+    const name = m[2], key = name.toLowerCase();
+    if (GENDER[key] || ROLES.has(key)) marks.push({ name, at: m.index + m[1].length, from: m.index + m[0].length });
+  }
+  const segs = [];
+  if (!marks.length) {   // narasi orang pertama: "My name is Arif" -> suara laki-laki
+    let g = '';
+    for (const me of text.matchAll(/\b(?:my name is|i am|i'm|this is)\s+([a-z]+)/gi)) { g = genderOf(me[1]); if (g) break; }
+    return [{ who: '', g, text }];
+  }
+  if (marks[0].at > 0 && text.slice(0, marks[0].at).trim()) segs.push({ who: '', g: '', text: text.slice(0, marks[0].at).trim() });
+  marks.forEach((k, i) => segs.push({ who: k.name, g: genderOf(k.name), text: text.slice(k.from, i + 1 < marks.length ? marks[i + 1].at : undefined).trim() }));
+  // peran tanpa jenis kelamin (Tourist, Customer, ...) diberi suara berlawanan dengan lawan bicara yang jenis kelaminnya diketahui
+  const known = segs.find(x => x.g);
+  const given = {};
+  segs.forEach(x => {
+    if (x.g || !x.who) return;
+    if (!(x.who in given)) given[x.who] = known ? (known.g === 'f' ? 'm' : 'f') : (Object.keys(given).length % 2 ? 'm' : 'f');
+    x.g = given[x.who];
+  });
+  return segs.filter(x => x.text);
+}
+function speakSeq(segs) {
+  if (!hasTTS) return;
+  speechSynthesis.cancel();
+  segs.forEach(x => speechSynthesis.speak(makeUtter(x.text, x.g)));
 }
 function initVoicePanel() {
   const btn = $('#vbtn'), panel = $('#vpanel');
@@ -386,7 +430,7 @@ function renderRead(pane, d, idx) {
   const ps = d.read[n];
   const qs = shuffle(ps.qs);
   let i = 0, score = 0, wrong = [];
-  const textHtml = `<div class="card passage"><div class="dhead"><div><h3 style="margin:0">${esc(ps.title)}</h3>${ps.focus ? `<small class="hint">🕐 Fokus tenses: ${esc(ps.focus)}</small>` : ''}</div><span><button class="btn ghost small" data-say="${esc(ps.text.replace(/\n+/g, ' '))}">🔊 Dengarkan</button> <button class="btn ghost small" id="trtog">Tampilkan terjemahan</button></span></div>
+  const textHtml = `<div class="card passage"><div class="dhead"><div><h3 style="margin:0">${esc(ps.title)}</h3>${ps.focus ? `<small class="hint">🕐 Fokus tenses: ${esc(ps.focus)}</small>` : ''}</div><span><button class="btn ghost small" id="ttsp">🔊 Dengarkan</button> <button class="btn ghost small" id="trtog">Tampilkan terjemahan</button></span></div>
     ${ps.text.split('\n').map(x => `<p>${esc(x)}</p>`).join('')}<div class="tr-box" id="trbox" hidden>${ps.id.split('\n').map(x => `<p>${esc(x)}</p>`).join('')}</div></div>`;
   function show() {
     if (i >= qs.length) return finish();
@@ -394,6 +438,7 @@ function renderRead(pane, d, idx) {
     pane.innerHTML = `<a class="crumb" href="#/unit/${d.id}/read">← Semua bacaan</a>${textHtml}
       <div class="qhead"><span class="qno">📚 Pertanyaan ${i + 1}/${qs.length}</span><div class="pbar"><i style="width:${Math.round(100 * i / qs.length)}%"></i></div></div>
       <div class="card"><div id="qbox"></div><div id="fb"></div></div>`;
+    $('#ttsp').addEventListener('click', () => speakSeq(parseSpeakers(ps.text.replace(/\n+/g, ' '))));
     $('#trtog').addEventListener('click', e => { const b = $('#trbox'); b.hidden = !b.hidden; e.target.textContent = b.hidden ? 'Tampilkan terjemahan' : 'Sembunyikan terjemahan'; });
     renderQ(q, $('#qbox'), ok => {
       if (ok) score++; else wrong.push(q);

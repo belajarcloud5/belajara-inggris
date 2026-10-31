@@ -212,6 +212,9 @@ def main():
             rp3 = os.path.join(ROOT, "content", f"{u['id']}_read3.py")
             if os.path.isfile(rp3):  # cerita fokus tenses ke-2
                 d["read"] = d["read"] + load(rp3).READ3
+            rp4 = os.path.join(ROOT, "content", f"{u['id']}_read4.py")
+            if os.path.isfile(rp4):  # cerita fokus tenses ke-3 (percakapan antar tokoh)
+                d["read"] = d["read"] + load(rp4).READ4
             for pi, ps in enumerate(d["read"]):
                 assert ps.get("title") and ps.get("text") and ps.get("id"), f"{u['id']}.read[{pi}]: judul/teks/terjemahan kosong"
                 assert 3 <= len(ps["qs"]) <= 8, f"{u['id']}.read[{pi}]: butuh 3 sampai 8 pertanyaan"
