@@ -1,0 +1,28 @@
+from qk import mk
+R3 = dict(practice=mk([
+ ("Terjemahan \"Sekarang pukul tujuh\":","It is seven o'clock.","It seven clock.","It are seven.","Now seven is.","tr."),
+ ("Terjemahan \"Ulang tahunku tanggal 5 Mei\":","My birthday is on May 5th.","My birthday is in 5 May.","My birthday are May five.","Birthday my 5 May.","tr."),
+ ("Terjemahan \"Hari ini Rabu\":","Today is Wednesday.","Today are Wednesday.","Today Wednesday is on.","Today at Wednesday.","tr."),
+ ("Terjemahan \"Sekolah dimulai pukul tujuh\":","School starts at seven.","School starts on seven.","School start in seven.","School is start seven.","tr."),
+ ("Terjemahan \"Ada dua belas bulan dalam setahun\":","There are twelve months in a year.","There is twelve month in year.","Twelve months are in a year there.","There twelve months year.","tr."),
+ ("Terjemahan \"Lima ditambah tiga sama dengan delapan\":","Five plus three equals eight.","Five and three is eight.","Five add three eight.","Five three equal eight.","tr."),
+ ("Perbaiki: \"It is half past seven o'clock.\"","It is half past seven.","It is half seven o'clock past.","It half past is seven.","It are half past seven.","fix."),
+ ("Perbaiki: \"My birthday is in Monday.\"","My birthday is on Monday.","My birthday is at Monday.","My birthday is to Monday.","My birthday are Monday.","fix."),
+ ("Perbaiki: \"I get up in six.\"","I get up at six.","I get up on six.","I get up to six.","I get up of six.","fix."),
+ ("Perbaiki: \"There is twelve months.\"","There are twelve months.","There be twelve months.","There am twelve months.","There do twelve months.","fix."),
+ ("Dialog: \"What time is it?\" – \"___\"","It's ten o'clock.","It's Monday.","It's May.","It's fine.","dialog."),
+ ("Dialog: \"What day is it?\" – \"___\"","It's Friday.","It's six.","It's June.","It's blue.","dialog."),
+ ("Dialog: \"When is your birthday?\" – \"___\"","It's on July 3rd.","It's at three.","It's Tuesday.","It's fine.","dialog."),
+ ("Dialog: \"How many days are there in a week?\" – \"___\"","Seven.","Twelve.","Thirty.","Five hundred.","dialog."),
+]), quiz=mk([
+ ("\"Selasa\":","Tuesday","Thursday","Saturday","Sunday","word."),
+ ("\"Jumat\":","Friday","Monday","Sunday","Wednesday","word."),
+ ("\"Minggu\" (hari):","Sunday","Saturday","Monday","Friday","word."),
+ ("\"Februari\":","February","January","March","April","word."),
+ ("\"Oktober\":","October","November","September","December","word."),
+ ("\"Desember\":","December","November","October","September","word."),
+ ("\"Minggu\" (7 hari):","week","month","year","day","word."),
+ ("\"Tahun\":","year","month","week","day","word."),
+ ("\"Dua puluh\":","twenty","twelve","two","two hundred","word."),
+ ("\"Seratus\":","one hundred","one thousand","ten","one million","word."),
+]))

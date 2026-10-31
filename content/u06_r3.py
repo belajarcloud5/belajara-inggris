@@ -1,0 +1,28 @@
+from qk import mk
+R3 = dict(practice=mk([
+ ("Terjemahan \"Dia tinggi dan kurus\":","He is tall and thin.","He tall and thin is.","He are tall thin.","He is tall but thinly.","tr."),
+ ("Terjemahan \"Rambutnya hitam dan lurus\":","Her hair is black and straight.","Her hair are black straight.","She hair black.","Hair her is blacking.","tr."),
+ ("Terjemahan \"Tasku besar dan berat\":","My bag is big and heavy.","My bag big heavy are.","Bag my is bigger heavy.","My bag are big.","tr."),
+ ("Terjemahan \"Adikku memakai kacamata\":","My brother wears glasses.","My brother wear glasses.","My brother is glasses.","Brother my glass wears.","tr."),
+ ("Terjemahan \"Kucing itu kecil dan lucu\":","The cat is small and cute.","The cat small and cute is.","The cat are small cute.","Cat the is smallest.","tr."),
+ ("Terjemahan \"Dia punya mata cokelat\":","She has brown eyes.","She have eyes brown.","She is brown eyes.","She has eyes of brown.","tr."),
+ ("Perbaiki: \"He have a long hair.\"","He has long hair.","He have long hairs.","He has a long hairs.","He is long hair.","fix."),
+ ("Perbaiki: \"She is a tall girls.\"","She is a tall girl.","She are a tall girl.","She is tall girls.","She a tall girl.","fix."),
+ ("Perbaiki: \"My eyes is brown.\"","My eyes are brown.","My eyes be brown.","My eyes am brown.","My eye are brown.","fix."),
+ ("Perbaiki: \"The box is more big.\"","The box is bigger.","The box is bigger more.","The box is more bigger.","The box big.","fix."),
+ ("Dialog: \"What does she look like?\" – \"___\"","She is tall and slim.","She likes tall.","She is a doctor.","She is fine.","dialog."),
+ ("Dialog: \"What color is your bag?\" – \"___\"","It's green.","It's heavy.","It's mine.","It's Monday.","dialog."),
+ ("Dialog: \"Is it big?\" – \"___\"","No, it isn't. It's small.","No, it don't.","No, I isn't.","No, small.","dialog."),
+ ("Dialog: \"Is he tall?\" – \"___\"","Yes, he is.","Yes, he does.","Yes, he has.","Yes, he tall.","dialog."),
+]), quiz=mk([
+ ("\"Gemuk\":","fat","thin","tall","short","word."),
+ ("\"Kurus\":","thin","fat","strong","tall","word."),
+ ("\"Cantik\":","beautiful","ugly","tall","short","word."),
+ ("\"Lucu\" (imut):","cute","scary","tall","heavy","word."),
+ ("\"Kuat\":","strong","weak","thin","short","word."),
+ ("\"Lemah\":","weak","strong","tall","big","word."),
+ ("\"Keriting\":","curly","straight","long","short","word."),
+ ("\"Botak\":","bald","curly","long","straight","word."),
+ ("\"Kacamata\":","glasses","hat","shoes","bag","word."),
+ ("\"Muda\":","young","old","tall","big","word."),
+]))

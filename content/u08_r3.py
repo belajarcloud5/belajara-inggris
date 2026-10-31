@@ -1,0 +1,28 @@
+from qk import mk
+R3 = dict(practice=mk([
+ ("Terjemahan \"Saya mau nasi goreng\":","I'd like fried rice.","I want fried rice please to.","I am fried rice.","I like to fried rice.","tr."),
+ ("Terjemahan \"Berapa harga ini?\":","How much is this?","How many is this?","What much this?","How is price this?","tr."),
+ ("Terjemahan \"Saya tidak suka pedas\":","I don't like spicy food.","I not like spicy.","I doesn't like spicy.","I no like spicy food.","tr."),
+ ("Terjemahan \"Maukah kamu segelas jus?\":","Would you like a glass of juice?","You want glass of juice?","Do you would juice?","Would you like glass juice a?","tr."),
+ ("Terjemahan \"Ada sedikit gula di meja\":","There is a little sugar on the table.","There are little sugar table.","There is few sugar.","There a little sugar are.","tr."),
+ ("Terjemahan \"Sup ini sangat enak\":","This soup is very delicious.","This soup are very delicious.","This soup very is delicious.","Soup this deliciously.","tr."),
+ ("Perbaiki: \"I want some egg.\"","I want an egg.","I want eggs a.","I want a eggs.","I wants an egg.","fix."),
+ ("Perbaiki: \"She don't eat meat.\"","She doesn't eat meat.","She not eat meat.","She don't eats meat.","She doesn't eats meat.","fix."),
+ ("Perbaiki: \"How many water do you drink?\"","How much water do you drink?","How many waters do you drink?","How much waters you drink?","How many water you drink?","fix."),
+ ("Perbaiki: \"There are a rice on the plate.\"","There is some rice on the plate.","There are some rice on plate.","There is a rices.","There be a rice.","fix."),
+ ("Dialog: \"What would you like to drink?\" – \"___\"","Tea, please.","I am tea.","Tea is my.","I tea drink.","dialog."),
+ ("Dialog: \"Are you hungry?\" – \"___\"","Yes, I am.","Yes, I do.","Yes, I have.","Yes, hungry.","dialog."),
+ ("Dialog: \"Do you like fish?\" – \"___\"","No, I don't.","No, I'm not.","No, I don't am.","No, fish.","dialog."),
+ ("Dialog: \"Is it sweet?\" – \"___\"","Yes, it is.","Yes, it does.","Yes, it has.","Yes, sweet.","dialog."),
+]), quiz=mk([
+ ("\"Roti\":","bread","rice","noodles","cake","word."),
+ ("\"Susu\":","milk","tea","coffee","juice","word."),
+ ("\"Gula\":","sugar","salt","pepper","flour","word."),
+ ("\"Garam\":","salt","sugar","pepper","oil","word."),
+ ("\"Minyak\":","oil","salt","water","milk","word."),
+ ("\"Daging\":","meat","fish","egg","bread","word."),
+ ("\"Ikan\":","fish","meat","egg","chicken","word."),
+ ("\"Apel\":","apple","mango","banana","orange","word."),
+ ("\"Pisang\":","banana","apple","mango","grape","word."),
+ ("\"Jeruk\":","orange","apple","banana","grape","word."),
+]))

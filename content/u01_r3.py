@@ -1,0 +1,28 @@
+from qk import mk
+R3 = dict(practice=mk([
+ ("Terjemahan \"Nama saya Ani\":","My name is Ani.","I name Ani.","Name my is Ani.","Me is Ani.","tr."),
+ ("Terjemahan \"Saya berumur sepuluh tahun\":","I am ten years old.","I have ten year.","I am ten year.","I ten years.","tr."),
+ ("Terjemahan \"Dia seorang guru\":","She is a teacher.","She teacher.","She are a teacher.","She is teacher a.","tr."),
+ ("Terjemahan \"Kami adalah teman\":","We are friends.","We is friends.","We friends are.","We am friends.","tr."),
+ ("Terjemahan \"Selamat siang\":","Good afternoon.","Good morning.","Good night.","Good evening.","tr."),
+ ("Terjemahan \"Sampai jumpa besok\":","See you tomorrow.","See you yesterday.","Meet you today.","Look you later.","tr."),
+ ("Perbaiki: \"I am fine, thanks you.\"","I am fine, thank you.","I fine, thank you.","I is fine, thank you.","I am fine, thanks to.","fix."),
+ ("Perbaiki: \"She are my sister.\"","She is my sister.","She am my sister.","She be my sister.","She my sister is.","fix."),
+ ("Perbaiki: \"He name is Tom.\"","His name is Tom.","Him name is Tom.","He's name is Tom.","He name are Tom.","fix."),
+ ("Perbaiki: \"I from Bali.\"","I am from Bali.","I is from Bali.","I are from Bali.","I from at Bali.","fix."),
+ ("Dialog: \"How are you?\" – \"___\"","I'm fine, thank you.","I'm fifteen.","I'm Dina.","I'm a student.","dialog."),
+ ("Dialog: \"What's your name?\" – \"___\"","I'm Ali.","I'm fine.","I'm from Solo.","I'm ten.","dialog."),
+ ("Dialog: \"Where are you from?\" – \"___\"","I'm from Medan.","I'm Ali.","I'm fine.","I'm ten.","dialog."),
+ ("Dialog: \"Thank you.\" – \"___\"","You're welcome.","Good night.","I'm sorry.","Nice to meet you.","dialog."),
+]), quiz=mk([
+ ("\"Sekolah\" dalam bahasa Inggris:","school","teacher","student","class","word."),
+ ("\"Teman\" dalam bahasa Inggris:","friend","family","brother","uncle","word."),
+ ("\"Terima kasih\":","thank you","sorry","please","hello","word."),
+ ("\"Maaf\":","sorry","please","welcome","goodbye","word."),
+ ("\"Tolong\":","please","sorry","thanks","hello","word."),
+ ("\"Selamat malam\" (sebelum tidur):","good night","good morning","good day","good noon","word."),
+ ("\"Siswa\":","student","teacher","doctor","farmer","word."),
+ ("\"Kelas\":","class","school","room","desk","word."),
+ ("\"Nama\":","name","number","age","address","word."),
+ ("\"Umur\":","age","name","address","number","word."),
+]))

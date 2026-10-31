@@ -1,0 +1,25 @@
+from qk import mk
+R3 = dict(practice=mk([
+ ("Terjemahan \"Mohon konfirmasi kehadiran Anda sebelum hari Jumat\":","Please confirm your attendance before Friday.","Please confirming your attend before Friday.","Please confirm attendance in before Friday.","Please to confirm your attended.","tr."),
+ ("Terjemahan \"Saya menulis untuk menanyakan status pengiriman\":","I am writing to ask about the delivery status.","I write for ask delivery status.","I am write to asking the status delivery.","I writing ask about status of delivery.","tr."),
+ ("Terjemahan \"Rapat dipindahkan ke hari Kamis\":","The meeting has been moved to Thursday.","The meeting moved to Thursday has.","The meeting have been move Thursday.","Meeting has moving to Thursday.","tr."),
+ ("Terjemahan \"Penjualan naik sepuluh persen dibanding tahun lalu\":","Sales rose by ten percent compared with last year.","Sales raised ten percent compare last year.","Sales rise by ten percents than last year.","Sales is rose ten percent last year.","tr."),
+ ("Terjemahan \"Mohon maaf atas ketidaknyamanan ini\":","We apologize for the inconvenience.","We apology for inconvenient this.","We are apologize about inconvenience.","We apologizing the inconvenience this.","tr."),
+ ("Terjemahan \"Saya akan mengirimkan laporan sebelum pukul lima\":","I will send the report before five o'clock.","I send will the report before five.","I will sending report before five.","I will send report at before five.","tr."),
+ ("Perbaiki: \"I look forward to meet you.\"","I look forward to meeting you.","I look forward to meet you.","I looking forward meet you.","I look forward meeting to you.","fix."),
+ ("Perbaiki: \"He explained me the process.\"","He explained the process to me.","He explained me the process.","He explain to me process.","He explained for me the process.","fix."),
+ ("Perbaiki: \"The informations are attached.\"","The information is attached.","The informations is attached.","The information are attach.","The informations attached.","fix."),
+ ("Perbaiki: \"We are discussing about the budget.\"","We are discussing the budget.","We are discussing about budget.","We discuss about the budget now.","We are discuss the budget.","fix."),
+ ("Dialog: \"Could you call me back later?\" – \"___\"","Certainly. I'll call you at three.","Certainly. I call you back at three will.","Sure. I'll calling you three.","Certainly. I'll called you.","dialog."),
+ ("Dialog: \"Is the project on schedule?\" – \"___\"","Yes, we're on track.","Yes, we on track are.","Yes, we are track on.","Yes, our project on tracks.","dialog."),
+ ("Dialog: \"May I speak to the manager?\" – \"___\"","One moment, please.","One moment, I am please.","One moments, please.","Moment one please.","dialog."),
+]), quiz=mk([
+ ("\"Anggaran\":","budget","bucket","button","border","word."),
+ ("\"Laporan keuangan\":","financial report","annual leave","sales target","job offer","word."),
+ ("\"Klien\":","client","clinic","climb","clip","word."),
+ ("\"Kontrak\":","contract","contact","content","contest","word."),
+ ("\"Faktur\":","invoice","involve","invite","inspect","word."),
+ ("\"Presentasi\":","presentation","pretension","prevention","preparation","word."),
+ ("\"Tenggat\":","deadline","deadlock","deadweight","dead-end","word."),
+ ("\"Evaluasi\":","evaluation","evolution","evidence","exhibition","word."),
+]))

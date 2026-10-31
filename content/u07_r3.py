@@ -1,0 +1,28 @@
+from qk import mk
+R3 = dict(practice=mk([
+ ("Terjemahan \"Saya bisa berenang\":","I can swim.","I can to swim.","I can swimming.","I cans swim.","tr."),
+ ("Terjemahan \"Dia tidak bisa menari\":","She can't dance.","She don't can dance.","She not can dance.","She can't to dance.","tr."),
+ ("Terjemahan \"Hobiku adalah membaca\":","My hobby is reading.","My hobby are read.","Hobby my reading is.","I hobby reading.","tr."),
+ ("Terjemahan \"Apakah kamu bisa bermain gitar?\":","Can you play the guitar?","You can play guitar?","Do you can play guitar?","Are you can guitar?","tr."),
+ ("Terjemahan \"Mereka suka bermain sepak bola\":","They like playing football.","They likes play football.","They like to playing football.","They are like football.","tr."),
+ ("Terjemahan \"Dia pandai menggambar\":","She is good at drawing.","She good in drawing.","She is good on draw.","She good draw.","tr."),
+ ("Perbaiki: \"He can swims.\"","He can swim.","He cans swim.","He can swimming.","He can to swim.","fix."),
+ ("Perbaiki: \"She likes sing.\"","She likes singing.","She like singing.","She likes to sings.","She is like sing.","fix."),
+ ("Perbaiki: \"I am good in math.\"","I am good at math.","I am good on math.","I am good to math.","I am good of math.","fix."),
+ ("Perbaiki: \"Can she plays piano?\"","Can she play the piano?","Does she can play piano?","Can she playing piano?","She can plays piano?","fix."),
+ ("Dialog: \"Can you ride a bike?\" – \"___\"","Yes, I can.","Yes, I do.","Yes, I am.","Yes, I ride.","dialog."),
+ ("Dialog: \"What's your hobby?\" – \"___\"","I like fishing.","I am fishing hobby.","I fishing like.","Fishing I am.","dialog."),
+ ("Dialog: \"Do you like swimming?\" – \"___\"","Yes, I do.","Yes, I can.","Yes, I am.","Yes, I swim.","dialog."),
+ ("Dialog: \"Can he sing?\" – \"___\"","No, he can't.","No, he doesn't.","No, he isn't.","No, he not.","dialog."),
+]), quiz=mk([
+ ("\"Menyanyi\":","sing","dance","draw","cook","word."),
+ ("\"Menggambar\":","draw","sing","swim","run","word."),
+ ("\"Berenang\":","swim","fly","run","jump","word."),
+ ("\"Melompat\":","jump","run","fly","swim","word."),
+ ("\"Berlari\":","run","walk","jump","crawl","word."),
+ ("\"Menulis\":","write","read","draw","sing","word."),
+ ("\"Membaca\":","read","write","draw","sing","word."),
+ ("\"Sepak bola\":","football","badminton","chess","tennis","word."),
+ ("\"Bulu tangkis\":","badminton","football","volleyball","basketball","word."),
+ ("\"Bersepeda\":","cycling","swimming","jogging","hiking","word."),
+]))

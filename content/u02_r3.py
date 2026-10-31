@@ -1,0 +1,28 @@
+from qk import mk
+R3 = dict(practice=mk([
+ ("Terjemahan \"Ini ayah saya\":","This is my father.","This my father is.","This are my father.","Here father me.","tr."),
+ ("Terjemahan \"Dia punya dua kakak\":","She has two older siblings.","She have two brother old.","She is two siblings.","She two have siblings.","tr."),
+ ("Terjemahan \"Mereka adalah orang tua saya\":","They are my parents.","They is my parents.","They my parents are.","They am my parents.","tr."),
+ ("Terjemahan \"Nenekku berumur 70 tahun\":","My grandmother is 70 years old.","My grandmother has 70 years.","My grandmother 70 years.","My grandmother are 70.","tr."),
+ ("Terjemahan \"Saya anak tunggal\":","I am an only child.","I only child am.","I am one child only of.","I have only child.","tr."),
+ ("Terjemahan \"Pamanku seorang dokter\":","My uncle is a doctor.","My uncle doctor.","My uncle are a doctor.","My uncle a doctor is.","tr."),
+ ("Perbaiki: \"My father have a car.\"","My father has a car.","My father haves a car.","My father is a car.","My father having a car.","fix."),
+ ("Perbaiki: \"She have two brothers.\"","She has two brothers.","She haves two brothers.","She are two brothers.","She having two brothers.","fix."),
+ ("Perbaiki: \"They is my friends.\"","They are my friends.","They am my friends.","They be my friends.","They was my friends.","fix."),
+ ("Perbaiki: \"This are my sister.\"","This is my sister.","This am my sister.","This be my sister.","These is my sister.","fix."),
+ ("Dialog: \"Do you have a brother?\" – \"___\"","Yes, I do.","Yes, I am.","Yes, I have.","Yes, I does.","dialog."),
+ ("Dialog: \"Who is she?\" – \"___\"","She is my aunt.","She is Tuesday.","She is fine.","She is five.","dialog."),
+ ("Dialog: \"How many sisters do you have?\" – \"___\"","I have two sisters.","I am two sisters.","Two I have.","I has two.","dialog."),
+ ("Dialog: \"Is he your cousin?\" – \"___\"","Yes, he is.","Yes, he does.","Yes, he has.","Yes, he am.","dialog."),
+]), quiz=mk([
+ ("\"Kakek\":","grandfather","grandmother","uncle","father","word."),
+ ("\"Bibi\":","aunt","uncle","cousin","sister","word."),
+ ("\"Sepupu\":","cousin","brother","friend","uncle","word."),
+ ("\"Orang tua\":","parents","children","relatives","neighbors","word."),
+ ("\"Anak\" (child):","child","parent","uncle","aunt","word."),
+ ("\"Saudara kandung\":","sibling","cousin","friend","neighbor","word."),
+ ("\"Kembar\":","twin","cousin","friend","sibling-in-law","word."),
+ ("\"Bayi\":","baby","child","adult","parent","word."),
+ ("\"Suami\":","husband","wife","son","uncle","word."),
+ ("\"Istri\":","wife","husband","daughter","aunt","word."),
+]))

@@ -1,0 +1,28 @@
+from qk import mk
+R3 = dict(practice=mk([
+ ("Terjemahan \"Belok kiri di perempatan\":","Turn left at the crossroads.","Turn at left crossroads the.","Turning left on crossroads.","Left turn in crossroads.","tr."),
+ ("Terjemahan \"Bank ada di seberang taman\":","The bank is opposite the park.","The bank opposite is the park.","Bank is in front of at park.","The bank are opposite park.","tr."),
+ ("Terjemahan \"Rumah sakit itu jauh dari sini\":","The hospital is far from here.","The hospital far is from here.","Hospital are far here.","The hospital is farly.","tr."),
+ ("Terjemahan \"Maaf, di mana kantor pos?\":","Excuse me, where is the post office?","Sorry, where post office is?","Excuse me, where are post office?","Pardon, what post office?","tr."),
+ ("Terjemahan \"Jalan lurus sampai lampu merah\":","Go straight until the traffic light.","Go straight on traffic light until.","Going straight to red light.","Straight go till traffic.","tr."),
+ ("Terjemahan \"Pasar itu dekat sekolah\":","The market is near the school.","The market near is school.","Market near the school are.","The market nearly school.","tr."),
+ ("Perbaiki: \"Turn to the left in the corner.\"","Turn left at the corner.","Turn at left in corner.","Turn lefting at corner.","Turned left on corner.","fix."),
+ ("Perbaiki: \"The school is in front the bank.\"","The school is in front of the bank.","The school is front of bank.","The school in front at bank.","The school are in front bank.","fix."),
+ ("Perbaiki: \"It is next the park.\"","It is next to the park.","It is next at the park.","It next of park.","It is nexts park.","fix."),
+ ("Perbaiki: \"How I can go to the station?\"","How can I get to the station?","How I get to station?","How do I can go station?","How can I going station?","fix."),
+ ("Dialog: \"Where is the mosque?\" – \"___\"","It's behind the school.","It's on Tuesday.","It's blue.","It's six.","dialog."),
+ ("Dialog: \"Is the bank far?\" – \"___\"","No, it's near.","No, it don't.","No, I'm near.","No, bank.","dialog."),
+ ("Dialog: \"How can I get to the zoo?\" – \"___\"","Take bus number 5.","Taking bus is 5.","Bus five take I.","I take five.","dialog."),
+ ("Dialog: \"Thanks for your help.\" – \"___\"","You're welcome.","You're fine.","I'm welcome.","Please.","dialog."),
+]), quiz=mk([
+ ("\"Persimpangan\":","crossroads","bridge","corner","street","word."),
+ ("\"Lampu merah\":","red light","green light","traffic jam","zebra crossing","word."),
+ ("\"Zebra cross\":","zebra crossing","bridge","tunnel","highway","word."),
+ ("\"Jalan raya\":","highway","alley","lane","path","word."),
+ ("\"Gang\":","alley","highway","street","bridge","word."),
+ ("\"Terminal bus\":","bus terminal","station","airport","harbor","word."),
+ ("\"Kantor polisi\":","police station","post office","bank","hospital","word."),
+ ("\"Masjid\":","mosque","church","temple","school","word."),
+ ("\"Toko\":","shop","bank","hotel","school","word."),
+ ("\"Hotel\":","hotel","hospital","market","station","word."),
+]))

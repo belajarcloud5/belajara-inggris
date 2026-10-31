@@ -1,0 +1,28 @@
+from qk import mk
+R3 = dict(practice=mk([
+ ("Terjemahan \"Ada sebuah buku di atas meja\":","There is a book on the table.","There are a book on table.","Is a book on the table there.","A book there on is table.","tr."),
+ ("Terjemahan \"Pensilku ada di dalam tas\":","My pencil is in the bag.","My pencil in bag is on.","My pencil are in bag.","Pencil my at the bag.","tr."),
+ ("Terjemahan \"Itu adalah papan tulis\":","That is a whiteboard.","That are a whiteboard.","This is whiteboard that.","That whiteboard is a.","tr."),
+ ("Terjemahan \"Ada tiga puluh siswa di kelas kami\":","There are thirty students in our class.","There is thirty student in class.","Thirty students there is.","There thirty student are.","tr."),
+ ("Terjemahan \"Di mana penghapusku?\":","Where is my eraser?","Where are my eraser?","Where my eraser is?","What is my eraser?","tr."),
+ ("Terjemahan \"Kantin ada di sebelah perpustakaan\":","The canteen is next to the library.","The canteen next library is.","The canteen are beside library.","Canteen is next of library.","tr."),
+ ("Perbaiki: \"There is two books.\"","There are two books.","There be two books.","There am two books.","There do two books.","fix."),
+ ("Perbaiki: \"This are my pens.\"","These are my pens.","This is my pens.","These is my pens.","This be my pens.","fix."),
+ ("Perbaiki: \"It is a umbrella.\"","It is an umbrella.","It is a umbrellas.","It are an umbrella.","It an umbrella is.","fix."),
+ ("Perbaiki: \"Those is my bags.\"","Those are my bags.","That are my bags.","Those am my bags.","Those be my bag.","fix."),
+ ("Dialog: \"What's this?\" – \"___\"","It's a ruler.","It's Monday.","It's fine.","It's six.","dialog."),
+ ("Dialog: \"Is this your pen?\" – \"___\"","Yes, it is.","Yes, it does.","Yes, this are.","Yes, I does.","dialog."),
+ ("Dialog: \"Where is the teacher?\" – \"___\"","He is in the office.","He is a red.","He is nine.","He is fine.","dialog."),
+ ("Dialog: \"How many desks are there?\" – \"___\"","There are twenty.","There is twenty.","Twenty there is.","There twenty.","dialog."),
+]), quiz=mk([
+ ("\"Meja\":","desk","chair","door","window","word."),
+ ("\"Kursi\":","chair","desk","board","book","word."),
+ ("\"Jendela\":","window","door","wall","floor","word."),
+ ("\"Pintu\":","door","window","wall","ceiling","word."),
+ ("\"Lantai\":","floor","wall","ceiling","door","word."),
+ ("\"Dinding\":","wall","floor","roof","window","word."),
+ ("\"Jam dinding\":","clock","watch","bell","lamp","word."),
+ ("\"Lapangan\":","field","room","hall","yard","word."),
+ ("\"Kepala sekolah\":","principal","student","teacher","guard","word."),
+ ("\"Ruang guru\":","teachers' room","classroom","canteen","library","word."),
+]))

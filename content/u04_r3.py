@@ -1,0 +1,28 @@
+from qk import mk
+R3 = dict(practice=mk([
+ ("Terjemahan \"Saya bangun pukul lima\":","I get up at five.","I wake at five up.","I getting up five.","I am get up in five.","tr."),
+ ("Terjemahan \"Dia berangkat ke sekolah naik sepeda\":","He goes to school by bicycle.","He go school with bicycle.","He going to school bicycle.","He is go school by.","tr."),
+ ("Terjemahan \"Kami makan malam pukul tujuh\":","We have dinner at seven.","We eat dinner in seven.","We has dinner at seven.","We having dinner seven.","tr."),
+ ("Terjemahan \"Ibu memasak setiap pagi\":","Mother cooks every morning.","Mother cook every morning.","Mother cooking every morning.","Mother is cook morning.","tr."),
+ ("Terjemahan \"Saya tidak menonton TV pada hari Senin\":","I don't watch TV on Mondays.","I not watch TV Monday.","I doesn't watch TV Monday.","I don't watches TV.","tr."),
+ ("Terjemahan \"Dia jarang terlambat\":","He is seldom late.","He seldom is lates.","He late seldom is.","He seldom are late.","tr."),
+ ("Perbaiki: \"She go to school at seven.\"","She goes to school at seven.","She going to school at seven.","She gos to school at seven.","She is go school at seven.","fix."),
+ ("Perbaiki: \"I doesn't like milk.\"","I don't like milk.","I not like milk.","I doesn't likes milk.","I don't likes milk.","fix."),
+ ("Perbaiki: \"He have breakfast at six.\"","He has breakfast at six.","He haves breakfast at six.","He having breakfast at six.","He is have breakfast.","fix."),
+ ("Perbaiki: \"Do she study?\"","Does she study?","Do she studies?","Does she studies?","Is she study?","fix."),
+ ("Dialog: \"What time do you get up?\" – \"___\"","I get up at five.","I get up on five.","I getting up.","I got up five.","dialog."),
+ ("Dialog: \"Do you walk to school?\" – \"___\"","Yes, I do.","Yes, I am.","Yes, I walk do.","Yes, I does.","dialog."),
+ ("Dialog: \"What do you do after school?\" – \"___\"","I do my homework.","I did homework.","I doing homework.","I homework do.","dialog."),
+ ("Dialog: \"Does he play football?\" – \"___\"","No, he doesn't.","No, he isn't.","No, he don't.","No, he not.","dialog."),
+]), quiz=mk([
+ ("\"Sarapan\":","breakfast","lunch","dinner","snack","word."),
+ ("\"Makan siang\":","lunch","breakfast","dinner","snack","word."),
+ ("\"Mandi\":","take a bath","wake up","go to bed","have lunch","word."),
+ ("\"Menyapu\":","sweep","wash","cook","iron","word."),
+ ("\"Menyetrika\":","iron","sweep","cook","wash","word."),
+ ("\"Berangkat\":","leave","arrive","sleep","wake","word."),
+ ("\"Pulang\":","go home","go out","come in","sit down","word."),
+ ("\"Setiap hari\":","every day","every night","last day","next day","word."),
+ ("\"Kadang-kadang\":","sometimes","always","never","often","word."),
+ ("\"Biasanya\":","usually","never","seldom","rarely","word."),
+]))
