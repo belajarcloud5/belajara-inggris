@@ -2287,7 +2287,10 @@
   "title": "At Work",
   "emoji": "💼",
   "ringkas": "Rapat singkat, meminta bantuan, dan melapor",
-  "ready": false
+  "ready": true,
+  "practice_n": 20,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u179",
@@ -2297,7 +2300,10 @@
   "title": "Services and Public Places",
   "emoji": "🏦",
   "ringkas": "Bank, kantor pos, klinik, dan layanan pelanggan",
-  "ready": false
+  "ready": true,
+  "practice_n": 20,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u180",
@@ -2307,7 +2313,10 @@
   "title": "Opinions and Agreeing",
   "emoji": "🗣️",
   "ringkas": "Menyatakan pendapat, setuju, menolak, dan bernegosiasi",
-  "ready": false
+  "ready": true,
+  "practice_n": 20,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u181",
