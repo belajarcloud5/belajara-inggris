@@ -22,3 +22,14 @@ LESSONX += [
          ["be proud of + V-ing", "[[I am proud of working with you.]]"]],
   examples=[dict(en="[[Keep improving your reports, and try to finish them on time.]]", id="Terus tingkatkan laporanmu, dan berusahalah menyelesaikannya tepat waktu.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="9. Saran dengan conditional: If I were you, If you had...",
+  text="Conditional membuat saran terdengar halus dan tidak menggurui:",
+  table=[["Pola", "Contoh"],
+         ["If I were you, I would + V1", "[[If I were you, I would ask for feedback.]]"],
+         ["If you + present, you will + V1", "[[If you meet the deadline, you will get a bonus.]]"],
+         ["If you had + V3, you would + V1", "[[If you had asked earlier, you would be finished now.]]"],
+         ["I wish you would + V1", "[[I wish you would ask for help sooner.]]"]],
+  examples=[dict(en="[[If you improve your time management, you will finish faster, and if you had started earlier, you would be done now.]]", id="Kalau kamu memperbaiki manajemen waktu, kamu akan selesai lebih cepat, dan seandainya kamu mulai lebih awal, kamu sekarang sudah selesai.")]),
+]

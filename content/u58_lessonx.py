@@ -55,3 +55,14 @@ LESSONX += [
          ["not as ... as", "[[Option A is not as reliable as option B.]]"]],
   examples=[dict(en="[[The new server is much faster than the old one, but it is not as cheap as the cloud option.]]", id="Server baru jauh lebih cepat daripada yang lama, tetapi tidak semurah opsi cloud.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="11. Menganalisis penyebab dengan conditional",
+  text="Setelah masalah terjadi, conditional membantu menganalisis apa yang bisa dilakukan berbeda:",
+  table=[["Situasi", "Contoh"],
+         ["penyebab di masa lalu, akibat di masa lalu", "[[If we had tested the system, we would have found the bug.]]"],
+         ["penyebab di masa lalu, akibat sekarang", "[[If we had ordered the part earlier, the project would be on time now.]]"],
+         ["tindakan ke depan", "[[If we add more servers, the system will run faster.]]"],
+         ["pengandaian sekarang", "[[If we had more staff, we could finish sooner.]]"]],
+  examples=[dict(en="[[If the team had reported the issue earlier, we would not be facing this delay now.]]", id="Seandainya tim melaporkan masalah itu lebih awal, kita sekarang tidak akan menghadapi keterlambatan ini.")]),
+]

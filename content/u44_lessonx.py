@@ -21,3 +21,16 @@ LESSONX += [
          ["be good at + V-ing", "[[I am good at solving problems.]]"]],
   examples=[dict(en="[[I am confident enough to speak in public, and I am not too shy to ask questions.]]", id="Saya cukup percaya diri untuk berbicara di depan umum, dan saya tidak terlalu pemalu untuk bertanya.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="8. Pertanyaan hipotetis dalam wawancara",
+  text="Pewawancara sering mengajukan situasi pengandaian untuk menguji cara berpikir:",
+  table=[["Pertanyaan", "Cara menjawab"],
+         ["[[What would you do if you made a mistake?]]", "[[If I made a mistake, I would tell my manager at once.]]"],
+         ["[[How would you handle a difficult customer?]]", "[[I would listen carefully, and I would stay calm.]]"],
+         ["[[Where do you see yourself in five years?]]", "[[I hope I would be leading a team.]]"],
+         ["[[If we hired you, what would you change?]]", "[[If you hired me, I would improve the reports.]]"]],
+  examples=[dict(en="[[If I had not studied accounting, I would not be applying for this job now.]]", id="Seandainya saya tidak belajar akuntansi, saya sekarang tidak akan melamar pekerjaan ini.")]),
+ dict(t="tip", title="Jawab dengan type 2 untuk pengandaian",
+  text="Gunakan [[If I were ..., I would ...]] atau [[If I made ..., I would ...]] agar jawaban terdengar tenang dan terencana."),
+]

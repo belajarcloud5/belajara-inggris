@@ -23,3 +23,15 @@ LESSONX += [
          ["berencana", "plan + to V1", "[[We plan to finish by Friday.]]"]],
   examples=[dict(en="[[Anna suggested reducing costs, and the team agreed to review the budget.]]", id="Anna mengusulkan mengurangi biaya, dan tim setuju meninjau anggaran.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="9. Syarat dalam rapat: provided that, as long as, unless",
+  text="Kata penghubung syarat membuat usulan lebih tegas:",
+  table=[["Kata", "Makna", "Contoh"],
+         ["**provided that / providing**", "asalkan", "[[We will proceed, provided that the budget is approved.]]"],
+         ["**as long as**", "selama", "[[We can start as long as everyone agrees.]]"],
+         ["**unless**", "kecuali", "[[We will cancel unless the client replies.]]"],
+         ["**in case**", "jaga-jaga", "[[Bring a copy in case the file is lost.]]"],
+         ["**if not**", "kalau tidak", "[[Please confirm today; if not, we will cancel.]]"]],
+  examples=[dict(en="[[If the budget were bigger, we would hire more staff, but we will manage as long as costs stay low.]]", id="Seandainya anggarannya lebih besar, kami akan mempekerjakan lebih banyak staf, tetapi kami akan bertahan asalkan biaya tetap rendah.")]),
+]

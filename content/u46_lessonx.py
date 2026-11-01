@@ -144,3 +144,17 @@ LESSONX += [
          ["look forward to", "+ V-ing", "[[look forward to seeing you]]"]],
   examples=[dict(en="[[I decided to stop eating sweets because I am worried about gaining weight.]]", id="Aku memutuskan berhenti makan permen karena khawatir berat badanku naik.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="17. Conditional: jebakan ujian",
+  text="Hal yang sering diuji pada kalimat bersyarat:",
+  table=[["Tipe", "Rumus", "Contoh"],
+         ["zero", "if + present, present", "[[If you heat ice, it melts.]]"],
+         ["type 1", "if + present, will + V1", "[[If it rains, I will stay.]]"],
+         ["type 2", "if + past, would + V1", "[[If I were rich, I would travel.]]"],
+         ["type 3", "if + past perfect, would have + V3", "[[If I had known, I would have come.]]"],
+         ["campuran", "if + past perfect, would + V1", "[[If I had studied, I would be a doctor now.]]"],
+         ["unless", "= if ... not; tanpa not lagi", "[[Unless you hurry, you will be late.]]"],
+         ["jangan will di if", "if + present, bukan will", "[[If it rains, ...]] bukan ~~If it will rain~~"]],
+  examples=[dict(en="[[If I had saved more money, I would be on holiday now, but I wish I had been more careful.]]", id="Seandainya aku menabung lebih banyak, sekarang aku sedang berlibur, tetapi andai aku lebih berhati-hati.")]),
+]

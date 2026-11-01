@@ -21,3 +21,16 @@ LESSONX += [
  dict(t="tip", title="Mengungkapkan opini yang meyakinkan",
   text="Pola ini cocok untuk kalimat opini: [[The more homework we get, the less time we have to rest.]]"),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="7. Mengungkapkan harapan dan saran: I wish, If I were you",
+  text="Untuk menyatakan keinginan yang tidak sesuai kenyataan atau memberi saran halus, pakai bentuk lampau.",
+  table=[["Pola", "Contoh"],
+         ["I wish + past simple (sekarang)", "[[I wish I had more time.]]"],
+         ["I wish + were", "[[I wish I were taller.]]"],
+         ["I wish + past perfect (menyesal)", "[[I wish I had studied harder.]]"],
+         ["If I were you, I would + V1", "[[If I were you, I would apologize.]]"]],
+  examples=[dict(en="[[If I were you, I would talk to her. I wish I had done that earlier.]]", id="Kalau aku jadi kamu, aku akan berbicara dengannya. Andai aku melakukannya lebih awal.")]),
+ dict(t="warn", title="Pakai were untuk semua subjek setelah I wish",
+  text="Katakan [[I wish I were rich.]] dan [[I wish she were here.]] Bentuk was juga terdengar dalam percakapan, tetapi were lebih baku."),
+]
