@@ -1,0 +1,26 @@
+from ub import *
+from ielts_h import rstory
+UNIT = vocab_unit("u148",
+ ["membaca **artikel informasi pendek** (150 kata)",
+  "menemukan **gagasan utama** setiap paragraf",
+  "memahami **angka, fakta, dan sebab-akibat**",
+  "memakai popup kata untuk **kosakata baru**"],
+ "Tahap 7: artikel informasi tentang kesehatan, teknologi, dan lingkungan. Cari gagasan utama di kalimat pertama dan perhatikan angka serta contoh.",
+ [("Kata-kata cerita tahap 7", [
+   ("benefit", "manfaat", "Exercise has many benefits."), ("increase", "meningkat", "Prices increase every year."), ("reduce", "mengurangi", "Walking can reduce stress."),
+   ("recent", "baru-baru ini", "A recent study shows this."), ("research", "penelitian", "Research suggests sleep is important."), ("average", "rata-rata", "The average age is thirty."),
+   ("habit", "kebiasaan", "Reading is a good habit."), ("environment", "lingkungan", "We must protect the environment."), ("energy", "energi", "Solar panels produce clean energy."),
+   ("technology", "teknologi", "Technology changes our lives."), ("affect", "memengaruhi", "Noise can affect your sleep."), ("percent", "persen", "About forty percent of people agree.")])],
+ "Dialog: Membahas artikel",
+ [("Mr. Adi", "What is the main idea of the article?", "Apa gagasan utama artikel itu?"), ("Dina", "That walking every day has many benefits.", "Bahwa berjalan setiap hari memiliki banyak manfaat."), ("Mr. Adi", "What example does it give?", "Contoh apa yang diberikan?"), ("Dina", "People who walk thirty minutes a day sleep better.", "Orang yang berjalan tiga puluh menit sehari tidur lebih nyenyak.")],
+ "Tulis satu kalimat gagasan utama untuk setiap paragraf, lalu bandingkan dengan kalimat pertama paragraf.", seed=148)
+READ = [
+ rstory("Why Walking Is Good for You", "Tahap 7", "Walking is one of the simplest ways to stay healthy. Recent research shows that people who walk for thirty minutes a day have a lower risk of heart disease. Walking also reduces stress and improves sleep. For example, in one study, volunteers who walked every evening fell asleep faster than those who stayed at home. Doctors say that the habit is easy to start, because it needs no equipment and costs nothing. Start with ten minutes and increase the time slowly.",
+  "Berjalan kaki adalah salah satu cara paling sederhana untuk tetap sehat. Penelitian terbaru menunjukkan bahwa orang yang berjalan tiga puluh menit sehari memiliki risiko penyakit jantung lebih rendah. Berjalan juga mengurangi stres dan memperbaiki tidur. Misalnya, dalam satu studi, relawan yang berjalan setiap malam tertidur lebih cepat daripada yang tinggal di rumah. Dokter mengatakan kebiasaan ini mudah dimulai, karena tidak butuh peralatan dan tidak berbiaya. Mulailah dengan sepuluh menit dan tambah waktunya perlahan.",
+  [("What is the main idea?", "Walking is a simple way to stay healthy", "Heart disease is common", "Doctors prefer running", "Sleeping is difficult", "Berjalan itu sederhana dan sehat."), ("How long should people walk each day?", "About thirty minutes", "About three hours", "About ten seconds", "About one minute", "30 menit."), ("What example shows better sleep?", "Volunteers who walked fell asleep faster", "Doctors slept more", "People bought new beds", "Students studied longer", "Relawan tertidur lebih cepat.")], [],
+  [("Berjalan mengurangi stres.", "Walking ___ stress.", "reduces", "Reduces stress."), ("Penelitian terbaru menunjukkan ...", "___ research shows this.", "Recent", "Recent research.")]),
+ rstory("Solar Power", "Tahap 7", "Solar panels turn sunlight into electricity. In many countries, the number of homes with solar panels has increased quickly in the last ten years, mainly because the price of panels has fallen by more than sixty percent. Using solar energy reduces pollution, since it does not burn coal or oil. However, solar power also has limits. Panels produce no electricity at night, so many homes need batteries. Experts believe that technology will solve this problem in the future.",
+  "Panel surya mengubah sinar matahari menjadi listrik. Di banyak negara, jumlah rumah dengan panel surya meningkat pesat dalam sepuluh tahun terakhir, terutama karena harga panel turun lebih dari enam puluh persen. Menggunakan energi surya mengurangi polusi, karena tidak membakar batu bara atau minyak. Namun, tenaga surya juga punya keterbatasan. Panel tidak menghasilkan listrik pada malam hari, jadi banyak rumah memerlukan baterai. Para ahli percaya bahwa teknologi akan mengatasi masalah ini di masa depan.",
+  [("Why has the number of solar homes increased?", "Panels have become much cheaper", "Electricity is free", "Coal is banned", "Panels are bigger", "Harga turun."), ("What is a limit of solar power?", "No electricity at night", "It causes pollution", "It uses oil", "It is very noisy", "Tidak ada listrik malam."), ("What do experts believe?", "Technology will solve the problem", "Solar power will stop", "Batteries will be banned", "Prices will rise", "Teknologi akan menyelesaikan.")], [],
+  [("Harga panel turun.", "The price of panels has ___.", "fallen", "Fallen."), ("Solar mengurangi polusi.", "Solar energy ___ pollution.", "reduces", "Reduces pollution.")]),
+]

@@ -1918,7 +1918,10 @@
   "title": "Stage 1: Tiny Stories",
   "emoji": "🐣",
   "ringkas": "Cerita 4 sampai 6 kalimat dengan kata dasar",
-  "ready": false
+  "ready": true,
+  "practice_n": 52,
+  "quiz_n": 12,
+  "read_n": 0
  },
  {
   "id": "u143",
@@ -1928,7 +1931,10 @@
   "title": "Stage 2: Daily Life Stories",
   "emoji": "🌱",
   "ringkas": "Cerita pendek tentang keluarga, sekolah, dan teman",
-  "ready": false
+  "ready": true,
+  "practice_n": 54,
+  "quiz_n": 12,
+  "read_n": 0
  },
  {
   "id": "u144",
@@ -1938,7 +1944,10 @@
   "title": "Stage 3: Little Adventures",
   "emoji": "🌳",
   "ringkas": "Cerita dengan masa lampau dan percakapan",
-  "ready": false
+  "ready": true,
+  "practice_n": 51,
+  "quiz_n": 12,
+  "read_n": 0
  },
  {
   "id": "u145",
@@ -1948,7 +1957,10 @@
   "title": "Stage 4: Places and People",
   "emoji": "🗺️",
   "ringkas": "Cerita tentang tempat, kota, dan orang",
-  "ready": false
+  "ready": true,
+  "practice_n": 54,
+  "quiz_n": 12,
+  "read_n": 0
  },
  {
   "id": "u146",
@@ -1958,7 +1970,10 @@
   "title": "Stage 5: Mystery and Surprise",
   "emoji": "🔭",
   "ringkas": "Cerita dengan alur dan akhir yang mengejutkan",
-  "ready": false
+  "ready": true,
+  "practice_n": 53,
+  "quiz_n": 12,
+  "read_n": 0
  },
  {
   "id": "u147",
@@ -1968,7 +1983,10 @@
   "title": "Stage 6: Choices and Feelings",
   "emoji": "🎭",
   "ringkas": "Cerita tentang keputusan dan perasaan tokoh",
-  "ready": false
+  "ready": true,
+  "practice_n": 51,
+  "quiz_n": 12,
+  "read_n": 0
  },
  {
   "id": "u148",
@@ -1978,7 +1996,10 @@
   "title": "Stage 7: Short Articles",
   "emoji": "📚",
   "ringkas": "Teks informasi dengan kosakata lebih luas",
-  "ready": false
+  "ready": true,
+  "practice_n": 53,
+  "quiz_n": 12,
+  "read_n": 0
  },
  {
   "id": "u149",
@@ -1988,7 +2009,10 @@
   "title": "Stage 8: Longer Stories",
   "emoji": "🏆",
   "ringkas": "Cerita lebih panjang dengan kalimat kompleks",
-  "ready": false
+  "ready": true,
+  "practice_n": 50,
+  "quiz_n": 12,
+  "read_n": 0
  },
  {
   "id": "u156",
