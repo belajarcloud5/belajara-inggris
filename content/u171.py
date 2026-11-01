@@ -30,15 +30,15 @@ essays = [
 ]
 P = [seq(s, e, q="Susun kalimat-kalimat berikut menjadi esai opini pendek yang runtut.") for s, e in essays]
 P += mk([
- ('Pilih thesis yang paling jelas:', 'I believe schools should start later in the morning.', 'This essay is about school time.', 'School starts early.', 'Is school time good?', 'Thesis menyatakan posisi.'),
- ('Pilih thesis yang paling jelas:', 'In my opinion, cities need more bicycle lanes.', 'There are many cities in the world.', 'Bicycles have two wheels.', 'I will write about bicycles.', 'Posisi jelas.'),
+ ('Pilih thesis yang paling jelas:', 'I believe schools should start later in the morning.', 'This essay is about the time when schools start in the morning.', 'School starts early in many countries, and students wake up early.', 'Is it good for students to start school at an early time?', 'Thesis menyatakan posisi.'),
+ ('Pilih thesis yang paling jelas:', 'In my opinion, cities need more bicycle lanes.', 'There are many cities in the world, and each one is different.', 'Bicycles have two wheels, and people ride them on the road.', 'I will write about bicycles and how people use them in cities.', 'Posisi jelas.'),
  ('Pilih ungkapan untuk memberi contoh:', 'For example,', 'In conclusion,', 'However,', 'Firstly,', 'Contoh.'),
  ('Pilih ungkapan untuk menyimpulkan:', 'In conclusion,', 'For instance,', 'Secondly,', 'Although,', 'Kesimpulan.'),
- ('Pilih ungkapan untuk mengakui pandangan lain:', 'Some people argue that ... However, ...', 'Everyone knows that ...', 'I do not care about ...', 'Nobody thinks that ...', 'Mengakui lalu membantah.'),
+ ('Pilih ungkapan untuk mengakui pandangan lain:', 'Some people argue that ... However, ...', 'Everyone knows that ... so nobody can disagree at all.', 'I do not care about ... and I will not discuss it here.', 'Nobody thinks that ... so there is nothing else to say.', 'Mengakui lalu membantah.'),
  ('Berapa alasan sebaiknya ada dalam satu paragraf isi?', 'satu alasan dengan contoh', 'lima alasan', 'tidak ada', 'semua alasan sekaligus', 'Fokus.'),
  ('Di mana thesis biasanya ditulis?', 'di pengantar', 'di kesimpulan saja', 'di tengah paragraf isi', 'di judul saja', 'Pengantar.'),
- ('Pilih kalimat kesimpulan yang baik:', 'To sum up, schools should set clear rules about phones.', 'And that is all.', 'Phones are phones.', 'The end of the essay.', 'Menegaskan thesis.'),
- ('Pilih kalimat pendukung yang paling kuat:', 'For example, one bus can carry sixty people, while a car carries four.', 'Buses are nice.', 'I like buses.', 'Buses exist.', 'Contoh konkret.'),
+ ('Pilih kalimat kesimpulan yang baik:', 'To sum up, schools should set clear rules about phones.', 'And that is all I wanted to say about phones and schools today.', 'Phones are phones, and schools are schools, in every country.', 'The end of the essay is here, so please stop reading now.', 'Menegaskan thesis.'),
+ ('Pilih kalimat pendukung yang paling kuat:', 'For example, one bus can carry sixty people, while a car carries four.', 'Buses are nice and I like them because they are very big.', 'I like buses very much, and I ride them every day to school.', 'Buses exist in many cities, and they have many seats inside.', 'Contoh konkret.'),
  ('Pilih kalimat yang SALAH sebagai thesis:', 'This essay will discuss homework.', 'I believe homework should be limited.', 'In my opinion, homework helps students.', 'I strongly think homework is necessary.', 'Bukan posisi.'),
 ])
 P += [spot(["Many people think the internet is dangerous.", "I believe it is useful when used carefully.", "Firstly, it gives us fast access to information.", "Secondly, it also helps us talks with friends.", "In conclusion, the internet is a good tool."], 3, "helps us talk."),

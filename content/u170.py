@@ -35,14 +35,14 @@ stories = [
 ]
 P = [seq(s, e, q="Susun kalimat-kalimat berikut menjadi cerita yang runtut.") for s, e in stories]
 P += mk([
- ('Pilih pembuka cerita yang paling menarik:', 'Suddenly, the door opened by itself.', 'This is a story about a door.', 'I will tell you something now.', 'There is a door in my house.', 'Pembuka dengan kejadian.'),
- ('Pilih kalimat penyelesaian yang baik:', 'In the end, they found the way home.', 'The end is here now.', 'They are lost.', 'It was a day.', 'Menyelesaikan masalah.'),
+ ('Pilih pembuka cerita yang paling menarik:', 'Suddenly, the door opened by itself.', 'This is a story about a door that I saw in my house once.', 'I will tell you something about a door that I know about.', 'There is a door in my house, and it is a wooden door.', 'Pembuka dengan kejadian.'),
+ ('Pilih kalimat penyelesaian yang baik:', 'In the end, they found the way home.', 'The end is here now, and the story is finished for you.', 'They are lost in the forest, and it is getting dark now.', 'It was a day in the forest, and many birds were singing.', 'Menyelesaikan masalah.'),
  ('Pilih tense yang tepat: "While I ___ home, it began to rain."', 'was walking', 'walk', 'will walk', 'have walked', 'Past continuous.'),
  ('Pilih tense yang tepat: "Suddenly, the lights ___ out."', 'went', 'go', 'are going', 'gone', 'Past simple.'),
  ('Pilih kalimat dialog yang benar:', '"I\'m hungry," said Tom.', '"I\'m hungry" Tom said.', 'I\'m hungry, said Tom.', '"I\'m hungry, said Tom.', 'Tanda kutip dan koma.'),
  ('Pilih penanda waktu yang tepat untuk peristiwa tiba-tiba:', 'Suddenly', 'Finally', 'Usually', 'Always', 'Suddenly.'),
  ('Pilih penanda waktu yang tepat untuk akhir cerita:', 'In the end', 'At first', 'Suddenly', 'Once', 'In the end.'),
- ('Bagian "complication" berisi...', 'masalah atau peristiwa yang mengganggu', 'perkenalan tokoh', 'pelajaran', 'judul', 'Masalah.'),
+ ('Bagian "complication" berisi...', 'masalah atau peristiwa yang mengganggu', 'perkenalan tokoh, tempat, dan waktu cerita', 'pelajaran yang dapat diambil dari cerita', 'judul dan nama penulis di bagian atas', 'Masalah.'),
  ('Bagian "orientation" berisi...', 'tokoh, tempat, dan waktu', 'masalah', 'penyelesaian', 'dialog', 'Orientasi.'),
  ('Pilih kalimat yang SALAH:', 'Yesterday I go to the market.', 'Yesterday I went to the market.', 'Last week she visited her aunt.', 'They were happy.', 'Yesterday → went.'),
 ])
