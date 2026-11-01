@@ -11,3 +11,15 @@ LESSONX = [
  dict(t="warn", title="Konsisten dalam kala notulen",
   text="Notulen ditulis dengan kala lampau, dan ucapan yang dilaporkan bergeser satu langkah ke belakang: [[The team said it was ready.]]"),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="8. Mengusulkan dan memutuskan: suggest + V-ing, agree/decide + to V1",
+  text="Dalam rapat, pola ini sering muncul:",
+  table=[["Fungsi", "Pola", "Contoh"],
+         ["usul", "suggest / recommend / consider + V-ing", "[[I suggest moving the deadline.]]"],
+         ["setuju", "agree + to V1", "[[We agreed to start in June.]]"],
+         ["keputusan", "decide + to V1", "[[The team decided to hire two people.]]"],
+         ["menghindari", "avoid / postpone + V-ing", "[[We should avoid spending too much.]]"],
+         ["berencana", "plan + to V1", "[[We plan to finish by Friday.]]"]],
+  examples=[dict(en="[[Anna suggested reducing costs, and the team agreed to review the budget.]]", id="Anna mengusulkan mengurangi biaya, dan tim setuju meninjau anggaran.")]),
+]

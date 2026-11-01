@@ -10,3 +10,15 @@ LESSONX = [
  dict(t="tip", title="Kritik tanpa menyinggung",
   text="Mulai dengan hal baik, lalu gunakan modal lembut: [[Your report is clear. You might want to add a summary.]]"),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="8. Memberi umpan balik dengan gerund dan infinitive",
+  text="Umpan balik sering memakai pola berikut:",
+  table=[["Pola", "Contoh"],
+         ["keep + V-ing (terus)", "[[Keep sharing your ideas.]]"],
+         ["avoid + V-ing", "[[Try to avoid interrupting others.]]"],
+         ["need to + V1", "[[You need to meet deadlines.]]"],
+         ["try to + V1 (berusaha)", "[[Try to ask for help earlier.]]"],
+         ["be proud of + V-ing", "[[I am proud of working with you.]]"]],
+  examples=[dict(en="[[Keep improving your reports, and try to finish them on time.]]", id="Terus tingkatkan laporanmu, dan berusahalah menyelesaikannya tepat waktu.")]),
+]

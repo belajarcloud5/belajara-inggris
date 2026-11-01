@@ -10,3 +10,17 @@ LESSONX = [
  dict(t="warn", title="Had better tanpa to dan tanpa -ing",
   text="Katakan [[You had better go.]], bukan ~~You had better to go~~. Bentuk negatifnya: [[You had better not be late.]] Dan setelah ought, tetap pakai to: [[You ought to study.]]"),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="7. let, make, allow: memberi izin dan memaksa",
+  text="Kata kerja ini punya pola khusus saat menyatakan izin atau paksaan:",
+  table=[["Pola", "Contoh"],
+         ["**let** + objek + V1", "[[The teacher lets us use dictionaries.]]"],
+         ["**make** + objek + V1", "[[The rule makes us wear uniforms.]]"],
+         ["**allow** + objek + **to V1**", "[[The school allows students to bring phones.]]"],
+         ["**be allowed to** + V1", "[[We are allowed to eat here.]]"],
+         ["**be made to** + V1", "[[We were made to clean the room.]]"]],
+  examples=[dict(en="[[Our teacher lets us ask questions, but she makes us finish the work first.]]", id="Guru kami membolehkan kami bertanya, tetapi mewajibkan kami menyelesaikan tugas dulu.")]),
+ dict(t="warn", title="let dan make tanpa to",
+  text="Katakan [[She lets me go.]], bukan ~~She lets me to go~~. Tetapi dengan allow tetap pakai to: [[She allows me to go.]]"),
+]

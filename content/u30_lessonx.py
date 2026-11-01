@@ -24,3 +24,16 @@ LESSONX += [
          ["[[Keep it cold.]]", "[[It should be kept cold.]]"]],
   examples=[dict(en="[[First, the tire is removed. Next, the new one is fitted.]]", id="Pertama, ban dilepas. Berikutnya, ban baru dipasang.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="9. Menyatakan tujuan: to V1, in order to, so as to",
+  text="Untuk menjelaskan tujuan sebuah langkah, pakai **to + V1**.",
+  table=[["Pola", "Contoh"],
+         ["to + V1", "[[Use a knife to cut the bread.]]"],
+         ["in order to + V1", "[[Boil the water in order to kill the germs.]]"],
+         ["so as to + V1", "[[Stir slowly so as to avoid spilling.]]"],
+         ["for + V-ing (fungsi benda)", "[[A kettle is used for boiling water.]]"]],
+  examples=[dict(en="[[Press the button to turn on the machine, and wait for a minute to let it warm up.]]", id="Tekan tombol untuk menyalakan mesin, dan tunggu semenit agar mesin menghangat.")]),
+ dict(t="warn", title="Tujuan: to V1, fungsi benda: for V-ing",
+  text="Katakan [[I use a spoon to stir.]] atau [[A spoon is used for stirring.]] Jangan campur: ~~I use a spoon for to stir~~."),
+]

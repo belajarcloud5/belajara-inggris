@@ -130,3 +130,17 @@ LESSONX += [
          ["the + comp, the + comp", "pola semakin ... semakin ...", "[[The more, the better.]]"]],
   examples=[dict(en="[[This is the most comfortable chair I have ever sat on, and it is much cheaper than that one.]]", id="Ini kursi ternyaman yang pernah kududuki, dan jauh lebih murah daripada yang itu.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="16. Gerund dan infinitive: jebakan ujian",
+  text="Hal yang sering diuji:",
+  table=[["Jebakan", "Aturan", "Contoh"],
+         ["enjoy, finish, avoid, mind, suggest", "+ V-ing", "[[She enjoys reading.]]"],
+         ["want, hope, decide, plan, promise", "+ to V1", "[[He wants to leave.]]"],
+         ["preposition", "+ V-ing", "[[good at swimming]] / [[before leaving]]"],
+         ["let, make", "+ objek + V1 (tanpa to)", "[[She lets me go.]]"],
+         ["stop / remember / try", "makna berubah", "[[stop to rest]] / [[stop resting]]"],
+         ["too ... to / enough to", "+ V1", "[[too tired to walk]]"],
+         ["look forward to", "+ V-ing", "[[look forward to seeing you]]"]],
+  examples=[dict(en="[[I decided to stop eating sweets because I am worried about gaining weight.]]", id="Aku memutuskan berhenti makan permen karena khawatir berat badanku naik.")]),
+]
