@@ -26,4 +26,17 @@ LESSONX += [
             dict(en="[[We have too many boxes, but not enough space.]]", id="Kami punya terlalu banyak kotak, tetapi ruangnya tidak cukup.")]),
  dict(t="warn", title="Jangan tertukar: many/much, fewer/less",
   text="Katakan [[too many people]] (people bisa dihitung) dan [[too much traffic]] (traffic tak terhitung). Katakan [[fewer students]] dan [[less homework]]. Dalam percakapan, less kadang dipakai untuk countable, tetapi dalam ujian pilih fewer untuk benda jamak."),
+
+ dict(t="grammar", title="8. Too dan enough dengan kata sifat",
+  text="**too + kata sifat** = terlalu (hasilnya buruk). **kata sifat + enough** = cukup. Perhatikan letak **enough**: ia berada **setelah** kata sifat.",
+  table=[["Pola", "Contoh"],
+         ["**too** + adjective", "[[This box is too heavy.]]"],
+         ["adjective + **enough**", "[[This box is light enough.]]"],
+         ["**not** + adjective + **enough**", "[[This room is not big enough.]]"],
+         ["too + adjective + **to** + V1", "[[He is too tired to study.]]"],
+         ["adjective + enough + **to** + V1", "[[She is old enough to drive.]]"]],
+  examples=[dict(en="[[The tea is too hot to drink.]]", id="Tehnya terlalu panas untuk diminum."),
+            dict(en="[[The bag is big enough for my books.]]", id="Tasnya cukup besar untuk buku-bukuku.")]),
+ dict(t="warn", title="Enough di depan benda, setelah kata sifat",
+  text="Benar: [[enough chairs]] (di depan benda) dan [[tall enough]] (setelah kata sifat). Salah: *enough tall*. Jangan memakai *very* untuk makna terlalu: [[too expensive]] (bukan *very expensive to buy*)."),
 ]

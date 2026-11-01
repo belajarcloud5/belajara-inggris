@@ -14,4 +14,15 @@ LESSONX = [
             dict(en="[[Why did they cancel the trip?]]", id="Mengapa mereka membatalkan perjalanan?")]),
  dict(t="warn", title="Did + kata kerja dasar",
   text="Salah: *Where did you went?* Benar: [[Where did you go?]]. Salah: *When you arrived?* Benar: [[When did you arrive?]]. Bila **Who** menjadi pelaku, tanpa did: [[Who broke the window?]]"),
+
+ dict(t="grammar", title="Used to: kebiasaan di masa lalu",
+  text="**used to + kata kerja dasar** dipakai untuk kebiasaan atau keadaan di masa lalu yang **sekarang sudah tidak lagi**.",
+  table=[["Bentuk", "Pola", "Contoh"],
+         ["Positif", "subjek + **used to** + V1", "[[I used to play football every day.]]"],
+         ["Negatif", "subjek + **did not (didn't) use to** + V1", "[[She didn't use to like fish.]]"],
+         ["Tanya", "**Did** + subjek + **use to** + V1?", "[[Did you use to live here?]]"]],
+  examples=[dict(en="[[We used to live in Medan, but now we live in Bandung.]]", id="Dulu kami tinggal di Medan, tetapi sekarang kami tinggal di Bandung."),
+            dict(en="[[He used to be shy, but now he is confident.]]", id="Dulu dia pemalu, tetapi sekarang dia percaya diri.")]),
+ dict(t="warn", title="Setelah did, used berubah menjadi use",
+  text="Positif: [[I used to swim.]] Negatif dan tanya: [[I didn't use to swim.]] / [[Did you use to swim?]] (bukan *didn't used to*). Jangan tertukar dengan **be used to + V-ing** = terbiasa: [[I am used to getting up early.]]"),
 ]

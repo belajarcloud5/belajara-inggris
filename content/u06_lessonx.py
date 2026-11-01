@@ -23,4 +23,18 @@ LESSONX += [
   examples=[dict(en="[[My brother is different from me. He is taller, but his eyes are the same as mine.]]", id="Kakakku berbeda dariku. Dia lebih tinggi, tetapi matanya sama seperti mataku.")]),
  dict(t="warn", title="different from, bukan different than",
   text="Dalam bahasa Inggris baku, katakan [[different from]] (di Inggris juga [[different to]]). Dan pakai [[the same as]], bukan ~~the same like~~."),
+
+ dict(t="grammar", title="Milik siapa? Whose dan kata ganti milik",
+  text="**Whose** menanyakan pemilik. Jawabannya bisa memakai **'s** (nama), atau kata ganti milik yang **berdiri sendiri** tanpa kata benda.",
+  table=[["Kata sifat milik (+ benda)", "Kata ganti milik (berdiri sendiri)", "Contoh"],
+         ["my", "**mine**", "[[This bag is mine.]]"],
+         ["your", "**yours**", "[[Is this pen yours?]]"],
+         ["his", "**his**", "[[The red book is his.]]"],
+         ["her", "**hers**", "[[That scarf is hers.]]"],
+         ["our", "**ours**", "[[The blue house is ours.]]"],
+         ["their", "**theirs**", "[[Those shoes are theirs.]]"]],
+  examples=[dict(en="[[Whose bag is this? It is Rani's.]]", id="Tas siapa ini? Itu milik Rani."),
+            dict(en="[[Whose are these books? They are mine.]]", id="Buku-buku ini milik siapa? Itu milikku.")]),
+ dict(t="warn", title="Jangan tambahkan benda setelah mine, yours, hers",
+  text="Benar: [[This is my book.]] atau [[This book is mine.]] Salah: *This is mine book.* Dan tidak ada apostrof: [[yours]], [[hers]], [[ours]], [[theirs]] (bukan *your's*, *her's*)."),
 ]
