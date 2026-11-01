@@ -1490,8 +1490,8 @@
   "emoji": "🖼️",
   "ringkas": "Foto dan tanya jawab: kata tanya, jawaban tidak langsung, dan jebakan bunyi",
   "ready": true,
-  "practice_n": 32,
-  "quiz_n": 8,
+  "practice_n": 50,
+  "quiz_n": 16,
   "read_n": 0
  },
  {
@@ -1516,8 +1516,8 @@
   "emoji": "🧮",
   "ringkas": "Bentuk kata, tense, preposisi, kata ganti, dan kata penghubung",
   "ready": true,
-  "practice_n": 42,
-  "quiz_n": 13,
+  "practice_n": 64,
+  "quiz_n": 19,
   "read_n": 0
  },
  {
@@ -1529,8 +1529,8 @@
   "emoji": "🔤",
   "ringkas": "Memilih kata yang tepat, kolokasi bisnis, dan kata mirip",
   "ready": true,
-  "practice_n": 35,
-  "quiz_n": 9,
+  "practice_n": 55,
+  "quiz_n": 15,
   "read_n": 0
  },
  {
@@ -1542,8 +1542,8 @@
   "emoji": "🧩",
   "ringkas": "Kalimat yang hilang, kata penghubung, dan konteks paragraf",
   "ready": true,
-  "practice_n": 20,
-  "quiz_n": 8,
+  "practice_n": 28,
+  "quiz_n": 12,
   "read_n": 0
  },
  {
@@ -1555,8 +1555,8 @@
   "emoji": "📄",
   "ringkas": "Email, pengumuman, iklan, jadwal, dan soal sinonim serta tujuan",
   "ready": true,
-  "practice_n": 23,
-  "quiz_n": 8,
+  "practice_n": 31,
+  "quiz_n": 10,
   "read_n": 3
  },
  {
