@@ -1,0 +1,19 @@
+from qk import mk
+I4 = dict(practice=mk([
+ ('Mana empat kriteria penilaian Writing?', 'Task Response, Coherence, Vocabulary, Grammar', 'Spelling, Speed, Handwriting, Length only', 'Fluency, Pronunciation, Listening, Reading dalam ujian', 'Accent, Volume, Grammar, Reading speed di ruang ujian', 'Task, Cohesion, Lexical Resource, Grammar.'),
+ ('Mana empat kriteria penilaian Speaking?', 'Fluency, Vocabulary, Grammar, Pronunciation', 'Handwriting, Speed, Spelling, Grammar', 'Task Response, Cohesion, Length, Layout di ruang ujian', 'Listening, Reading, Writing, Accent dalam ujian', 'Empat kriteria Speaking.'),
+ ('Apa arti "band score 6" secara umum?', 'pengguna bahasa yang kompeten dengan beberapa kesalahan', 'pengguna ahli yang hampir tanpa kesalahan pada hari tes', 'pemula yang hanya tahu kata dasar saja di ruang ujian', 'penutur asli yang sempurna sekali', 'Band 6 = competent user.'),
+ ('Mana urutan tes yang umum pada hari yang sama?', 'Listening, Reading, Writing', 'Writing, Speaking, Reading', 'Speaking, Listening, Writing', 'Reading, Speaking, Listening', 'Tiga tes tertulis berurutan.'),
+ ('Mengapa penting membaca petunjuk jumlah kata?', 'jawaban yang melebihi batas dianggap salah', 'agar tulisan kamu terlihat lebih panjang pada hari tes', 'agar waktu ujian habis lebih cepat di ruang ujian', 'karena penguji menghitung jumlah huruf', 'NO MORE THAN TWO WORDS dipatuhi.'),
+ ('Apa yang sebaiknya dilakukan pada soal yang tidak bisa dijawab?', 'menandai, lanjut, lalu kembali bila ada waktu', 'diam saja sampai ketemu jawabannya di ruang ujian', 'mengosongkan seluruh bagian soal itu', 'menghabiskan sepuluh menit di satu soal dalam ujian', 'Atur waktu dengan bijak.'),
+ ('Mana yang BUKAN cara belajar yang baik untuk IELTS?', 'menghafal satu esai untuk semua topik', 'berlatih dengan soal-soal tes asli', 'membaca artikel berbahasa Inggris tiap hari', 'merekam diri sendiri saat berbicara', 'Esai hafalan tidak menjawab soal.'),
+ ('Berapa kali sebaiknya kamu menulis latihan Writing per minggu?', 'beberapa kali, lalu dikoreksi', 'hanya sekali saja sebelum tes di ruang ujian', 'tidak perlu sama sekali dalam ujian', 'hanya ketika sedang bosan', 'Latihan rutin dengan umpan balik.'),
+ ('Apa fungsi mengikuti tes percobaan (mock test)?', 'melatih waktu dan melihat kelemahan', 'menggantikan tes yang asli nanti pada hari tes', 'membuat nilai kamu otomatis naik pada hari tes', 'menghafal jawaban soal yang sama', 'Mock untuk simulasi.'),
+ ('Mana yang benar tentang ejaan di Writing?', 'ejaan yang salah dapat menurunkan nilai kosakata', 'ejaan tidak pernah ikut dinilai', 'hanya huruf besar yang dinilai penguji di ruang ujian', 'ejaan Amerika dilarang di Writing dalam ujian', 'Ejaan konsisten dan benar.'),
+]), quiz=mk([
+ ('Mana yang diuji di Listening?', 'memahami rekaman dan menulis jawaban', 'menulis esai panjang dalam waktu singkat', 'berbicara langsung dengan penguji', 'membaca tiga teks panjang berturut-turut', 'Listening = mendengarkan.'),
+ ('Mana yang diuji di Reading?', 'membaca teks dan menjawab soal', 'mendengar rekaman dan mencatat angka', 'berbicara selama satu menit penuh', 'menulis surat kepada seorang teman', 'Reading = membaca.'),
+ ('Apa yang perlu dibawa saat tes?', 'dokumen identitas yang sama dengan pendaftaran', 'kamus tebal untuk membuka kata dalam ujian', 'ponsel untuk melihat catatan di ruang ujian', 'buku latihan milik sendiri', 'Identitas wajib sesuai.'),
+ ('Kapan sebaiknya mulai belajar kosakata akademik?', 'jauh sebelum tes, sedikit demi sedikit', 'sehari sebelum tes dimulai pada hari tes', 'saat tes sedang berlangsung', 'tidak perlu belajar sama sekali di ruang ujian', 'Konsisten lebih baik.'),
+ ('Mana tujuan paling bijak saat menentukan target band?', 'sesuai syarat kampus atau lembaga tujuan', 'angka acak yang kamu suka di ruang ujian', 'angka yang sama dengan teman', 'angka tertinggi tanpa melihat syarat pada hari tes', 'Syarat berbeda-beda.'),
+]))

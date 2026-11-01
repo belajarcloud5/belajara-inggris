@@ -801,8 +801,8 @@
   "emoji": "🧭",
   "ringkas": "Format ujian, skor band, waktu, dan cara belajar yang efisien",
   "ready": true,
-  "practice_n": 45,
-  "quiz_n": 18,
+  "practice_n": 55,
+  "quiz_n": 23,
   "read_n": 0
  },
  {
@@ -814,9 +814,9 @@
   "emoji": "🔎",
   "ringkas": "Skimming, scanning, kata kunci, dan mengatur waktu 60 menit",
   "ready": true,
-  "practice_n": 39,
-  "quiz_n": 16,
-  "read_n": 4
+  "practice_n": 47,
+  "quiz_n": 20,
+  "read_n": 5
  },
  {
   "id": "u78",
@@ -827,9 +827,9 @@
   "emoji": "✅",
   "ringkas": "Membedakan tiga jawaban yang paling sering menjebak",
   "ready": true,
-  "practice_n": 49,
-  "quiz_n": 18,
-  "read_n": 4
+  "practice_n": 61,
+  "quiz_n": 24,
+  "read_n": 5
  },
  {
   "id": "u79",
@@ -840,9 +840,9 @@
   "emoji": "🧩",
   "ringkas": "Matching headings, sentence completion, dan batas jumlah kata",
   "ready": true,
-  "practice_n": 39,
-  "quiz_n": 14,
-  "read_n": 4
+  "practice_n": 47,
+  "quiz_n": 18,
+  "read_n": 5
  },
  {
   "id": "u80",
@@ -894,7 +894,7 @@
   "ready": true,
   "practice_n": 52,
   "quiz_n": 20,
-  "read_n": 1
+  "read_n": 2
  },
  {
   "id": "u84",
@@ -996,9 +996,9 @@
   "emoji": "🏁",
   "ringkas": "Latihan campuran dari semua bagian dengan petunjuk perbaikan",
   "ready": true,
-  "practice_n": 49,
-  "quiz_n": 23,
-  "read_n": 3
+  "practice_n": 58,
+  "quiz_n": 28,
+  "read_n": 4
  },
  {
   "id": "u48",
