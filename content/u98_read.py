@@ -1,0 +1,4 @@
+from ielts_h import rstory
+READ = [rstory('Do You Want Some Tea?', 'Intonasi', 'Dina: Do you want some tea? Rani: Yes, please. Dina: Would you like sugar? Rani: No, thank you. Dina: Did you eat lunch? Rani: Not yet. I am very hungry. Dina: Let me make you a sandwich.',
+ 'Dina: Apakah kamu mau teh? Rani: Ya, tolong. Dina: Apakah kamu mau gula? Rani: Tidak, terima kasih. Dina: Apakah kamu sudah makan siang? Rani: Belum. Aku sangat lapar. Dina: Biar kubuatkan roti lapis.',
+ [('What does Rani want to drink?', 'Tea', 'Coffee', 'Juice', 'Water', 'Teh.'), ('Does Rani want sugar?', 'No', 'Yes', 'Only a little', 'She does not say', 'Tidak.'), ('What does Dina offer to make?', 'A sandwich', 'A cake', 'Noodles', 'Soup', 'Roti lapis.')], [], [('Maukah kamu teh?', 'Do you ___ some tea?', 'want', 'Yes/no question.'), ('Rani sangat lapar.', 'Rani is very ___.', 'hungry', 'Hungry.')])]
