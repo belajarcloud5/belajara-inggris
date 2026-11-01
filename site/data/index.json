@@ -1424,7 +1424,10 @@
   "title": "Capital Letters and Punctuation",
   "emoji": "✏️",
   "ringkas": "Huruf kapital, titik, koma, apostrof, tanda tanya, dan tanda kutip",
-  "ready": false
+  "ready": true,
+  "practice_n": 29,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u111",
@@ -1434,7 +1437,10 @@
   "title": "Writing a Paragraph",
   "emoji": "📝",
   "ringkas": "Kalimat topik, kalimat pendukung, kata penghubung, dan penutup",
-  "ready": false
+  "ready": true,
+  "practice_n": 31,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u112",
@@ -1444,7 +1450,10 @@
   "title": "Writing Emails and Letters",
   "emoji": "💌",
   "ringkas": "Salam, isi, penutup, serta surat santai dan resmi",
-  "ready": false
+  "ready": true,
+  "practice_n": 35,
+  "quiz_n": 10,
+  "read_n": 0
  },
  {
   "id": "u113",
@@ -1454,7 +1463,10 @@
   "title": "Vocabulary and Writing Review",
   "emoji": "🎓",
   "ringkas": "Latihan campuran semua materi kosakata dan menulis",
-  "ready": false
+  "ready": true,
+  "practice_n": 83,
+  "quiz_n": 15,
+  "read_n": 0
  },
  {
   "id": "u114",
