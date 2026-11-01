@@ -218,7 +218,7 @@ def main():
             if os.path.isfile(lxp):  # blok materi tambahan, disisipkan setelah blok grammar terakhir
                 gi = max(i for i, b in enumerate(d["lesson"]) if b.get("t") == "grammar")
                 d["lesson"][gi + 1:gi + 1] = load(lxp).LESSONX
-            for suffix, var in (("extra", "EXTRA"), ("more", "MORE"), ("plus", "PLUS"), ("ext", "EXT"), ("quiz", "QUIZ"), ("bank", "BANK"), ("q2", "Q2"), ("p2", "P2"), ("r3", "R3"), ("r4", "R4"), ("f5", "F5"), ("dict", "D"), ("ord", "ORD"), ("rep", "REP"), ("art", "ART"), ("mov", "MOV"), ("qty", "QTY"), ("conj", "CONJ"), ("modal", "MODAL"), ("rel", "REL"), ("pass", "PASS"), ("rsp", "RSP"), ("cmp", "CMP"), ("ger", "GER"), ("mix", "MIX"), ("phv", "PHV"), ("i2", "I2"), ("wh", "WH"), ("phb", "PHB"), ("idm", "IDM"), ("bas", "BAS"), ("i3", "I3"), ("i4", "I4")):  # bank soal tambahan
+            for suffix, var in (("extra", "EXTRA"), ("more", "MORE"), ("plus", "PLUS"), ("ext", "EXT"), ("quiz", "QUIZ"), ("bank", "BANK"), ("q2", "Q2"), ("p2", "P2"), ("r3", "R3"), ("r4", "R4"), ("f5", "F5"), ("dict", "D"), ("ord", "ORD"), ("rep", "REP"), ("art", "ART"), ("mov", "MOV"), ("qty", "QTY"), ("conj", "CONJ"), ("modal", "MODAL"), ("rel", "REL"), ("pass", "PASS"), ("rsp", "RSP"), ("cmp", "CMP"), ("ger", "GER"), ("mix", "MIX"), ("phv", "PHV"), ("i2", "I2"), ("wh", "WH"), ("phb", "PHB"), ("idm", "IDM"), ("bas", "BAS"), ("i3", "I3"), ("i4", "I4"), ("x2", "X2")):  # bank soal tambahan
                 xp = os.path.join(ROOT, "content", f"{u['id']}_{suffix}.py")
                 if os.path.isfile(xp):
                     x = getattr(load(xp), var)

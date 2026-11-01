@@ -1,6 +1,6 @@
 # Let's Learn English!
 
-Web belajar bahasa Inggris interaktif dari SMP sampai dunia kerja. Ada **121 unit** yang dibagi menjadi dua belas level: Kelas 7, 8, 9, 10, 11, 12, **Modul Tenses** (14 unit, untuk semua level), **Modul Pelafalan** (8 unit), **Kosakata dan Menulis** (14 unit), **Persiapan IELTS** (16 unit), **Persiapan TOEIC** (8 unit), dan **Pekerja / Formal**. Beranda berupa kartu level; klik satu kartu untuk melihat unit-unitnya. Setiap unit berisi **Belajar**, **Latihan** (50 soal acak), dan **Kuis** (50 soal acak, bintang 1-3). Suara dan tema terang/gelap ada di menu ⚙️ pojok kanan atas.
+Web belajar bahasa Inggris interaktif dari SMP sampai dunia kerja. Ada **133 unit** yang dibagi menjadi tiga belas level: Kelas 7, 8, 9, 10, 11, 12, **Modul Tenses** (14 unit, untuk semua level), **Modul Pelafalan** (8 unit), **Kosakata dan Menulis** (16 unit), **Inggris untuk Bepergian** (8 unit), **Persiapan IELTS** (16 unit), **Persiapan TOEIC** (8 unit), dan **Pekerja / Formal** (16 unit). Beranda berupa kartu level; klik satu kartu untuk melihat unit-unitnya. Setiap unit berisi **Belajar**, **Latihan** (50 soal acak), dan **Kuis** (50 soal acak, bintang 1-3). Suara dan tema terang/gelap ada di menu ⚙️ pojok kanan atas.
 
 Situs: https://belajarcloud5.github.io/belajara-inggris/
 
@@ -49,8 +49,11 @@ Menambah level baru: tambahkan unit dengan `kelas="nama-level"` di `content/unit
 **Modul Pelafalan (8 unit)**
 92 Bunyi Vokal · 93 Konsonan yang Sulit · 94 Akhiran -s, -es, -ed · 95 Tekanan Kata · 96 Ejaan yang Menipu · 97 Tekanan Kalimat dan Bunyi Lemah · 98 Intonasi dan Sambungan Kata · 99 Rangkuman Pelafalan
 
-**Kosakata dan Menulis (14 unit)**
-100-101 Kata yang Sering Tertukar · 102 Awalan · 103 Akhiran · 104 Rumah · 105 Tubuh dan Kesehatan · 106 Pakaian dan Belanja · 107 Transportasi dan Kota · 108 Pekerjaan · 109 Hobi dan Hiburan · 110 Huruf Besar dan Tanda Baca · 111 Menulis Paragraf · 112 Email dan Surat · 113 Rangkuman
+**Kosakata dan Menulis (16 unit)**
+100-101 Kata yang Sering Tertukar · 102 Awalan · 103 Akhiran · 104 Rumah · 105 Tubuh dan Kesehatan · 106 Pakaian dan Belanja · 107 Transportasi dan Kota · 108 Pekerjaan · 109 Hobi dan Hiburan · 110 Huruf Besar dan Tanda Baca · 111 Menulis Paragraf · 112 Email dan Surat · 113 Rangkuman · 130 Kesalahan Umum · 131 False Friends
+
+**Inggris untuk Bepergian (8 unit)**
+122 Bandara dan Imigrasi · 123 Hotel · 124 Restoran · 125 Bepergian di Kota · 126 Belanja dan Uang · 127 Darurat dan Kesehatan · 128 Bertemu Orang dan Obrolan Ringan · 129 Rangkuman
 
 **Persiapan TOEIC (8 unit)**
 114 Mengenal TOEIC · 115 Listening Part 1-2 · 116 Listening Part 3-4 · 117 Reading Part 5 Tata Bahasa · 118 Reading Part 5 Kosakata · 119 Reading Part 6 · 120 Reading Part 7 · 121 Kosakata Bisnis dan Tes Mini
@@ -103,3 +106,7 @@ Cerita bacaan **berfokus articles** (`content/uNN_read6.py`, `READ6`, bacaan ke-
 - **Soal latihan**: `content/uNN_mov.py` (`MOV`, suffix `mov`) di unit 9, 14, 30, 31, dan 46, 63 soal.
 
 Cerita bacaan **preposisi gerak** (`content/uNN_read7.py`, `READ7`, bacaan ke-8 per unit) ada di semua 61 unit: percakapan dengan to, from, into, out of, through, across, along, past, over, under, around, up, down, towards, serta pola tanpa to (go home) dan get on/off. Total bacaan 488 dengan 3.050 pertanyaan. Catatan: audit bias panjang opsi dan pengecekan jawaban ganda untuk cerita ini belum dijalankan.
+
+**Fitur belajar**
+- 🧠 **Kartu hafalan** (pengulangan berjarak dari Kamus Kecil), 🎯 **Tes penempatan** (24 soal), 🎤 **Latihan berbicara** (pengenalan suara, hanya di Chrome), dan **target harian** dengan rangkaian hari belajar di beranda.
+- 📴 **Offline**: situs bisa dipasang di layar HP dan semua data disimpan lewat tombol "Simpan untuk offline" (service worker `site/sw.js`).

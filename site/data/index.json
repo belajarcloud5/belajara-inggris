@@ -1295,8 +1295,8 @@
   "emoji": "🔀",
   "ringkas": "its dan it's, their dan there, your dan you're, to dan too, who's dan whose",
   "ready": true,
-  "practice_n": 38,
-  "quiz_n": 8,
+  "practice_n": 64,
+  "quiz_n": 12,
   "read_n": 0
  },
  {
@@ -1308,8 +1308,8 @@
   "emoji": "🔁",
   "ringkas": "make dan do, say dan tell, bring dan take, borrow dan lend, affect dan effect",
   "ready": true,
-  "practice_n": 37,
-  "quiz_n": 8,
+  "practice_n": 60,
+  "quiz_n": 12,
   "read_n": 0
  },
  {
@@ -1349,7 +1349,7 @@
   "ready": true,
   "practice_n": 92,
   "quiz_n": 14,
-  "read_n": 0
+  "read_n": 1
  },
  {
   "id": "u105",
@@ -1362,7 +1362,7 @@
   "ready": true,
   "practice_n": 92,
   "quiz_n": 14,
-  "read_n": 0
+  "read_n": 1
  },
  {
   "id": "u106",
@@ -1375,7 +1375,7 @@
   "ready": true,
   "practice_n": 92,
   "quiz_n": 14,
-  "read_n": 0
+  "read_n": 1
  },
  {
   "id": "u107",
@@ -1388,7 +1388,7 @@
   "ready": true,
   "practice_n": 92,
   "quiz_n": 14,
-  "read_n": 0
+  "read_n": 1
  },
  {
   "id": "u108",
@@ -1401,7 +1401,7 @@
   "ready": true,
   "practice_n": 88,
   "quiz_n": 14,
-  "read_n": 0
+  "read_n": 1
  },
  {
   "id": "u109",
@@ -1414,7 +1414,7 @@
   "ready": true,
   "practice_n": 91,
   "quiz_n": 14,
-  "read_n": 0
+  "read_n": 1
  },
  {
   "id": "u110",
@@ -1425,8 +1425,8 @@
   "emoji": "✏️",
   "ringkas": "Huruf kapital, titik, koma, apostrof, tanda tanya, dan tanda kutip",
   "ready": true,
-  "practice_n": 29,
-  "quiz_n": 8,
+  "practice_n": 47,
+  "quiz_n": 12,
   "read_n": 0
  },
  {
@@ -1438,8 +1438,8 @@
   "emoji": "📝",
   "ringkas": "Kalimat topik, kalimat pendukung, kata penghubung, dan penutup",
   "ready": true,
-  "practice_n": 31,
-  "quiz_n": 8,
+  "practice_n": 47,
+  "quiz_n": 11,
   "read_n": 0
  },
  {
@@ -1451,8 +1451,8 @@
   "emoji": "💌",
   "ringkas": "Salam, isi, penutup, serta surat santai dan resmi",
   "ready": true,
-  "practice_n": 35,
-  "quiz_n": 10,
+  "practice_n": 53,
+  "quiz_n": 15,
   "read_n": 0
  },
  {

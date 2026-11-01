@@ -1,0 +1,32 @@
+from qk import mk, mkf
+X2 = dict(practice=mk([
+ ('Pilih yang benar: "Could you ___ me a favour?"', 'do', 'make', 'take', 'give up', 'Do a favour.'),
+ ('Pilih yang benar: "They ___ a lot of money last year."', 'made', 'did', 'maked', 'done', 'Make money.'),
+ ('Pilih yang benar: "I have to ___ the laundry this evening."', 'do', 'make', 'give', 'bring', 'Do the laundry.'),
+ ('Pilih yang benar: "Please ___ your best."', 'do', 'make', 'take', 'say', 'Do your best.'),
+ ('Pilih yang benar: "He ___ goodbye and left."', 'said', 'told', 'spoke', 'talked', 'Say goodbye.'),
+ ('Pilih yang benar: "Can you ___ me the way to the station?"', 'tell', 'say', 'speak', 'talk', 'Tell me the way.'),
+ ('Pilih yang benar: "She can ___ three languages."', 'speak', 'say', 'tell', 'talk to', 'Speak a language.'),
+ ('Pilih yang benar: "Let\'s ___ about our holiday plans."', 'talk', 'say', 'tell', 'speak out', 'Talk about.'),
+ ('Pilih yang benar: "Please ___ me a glass of water. I am in the kitchen." (ke arah pembicara)', 'bring', 'take', 'borrow', 'lend', 'Ke arah pembicara.'),
+ ('Pilih yang benar: "Don\'t forget to ___ your umbrella when you leave." (menjauh)', 'take', 'bring', 'borrow', 'lend', 'Menjauh.'),
+ ('Pilih yang benar: "Could you ___ me your dictionary for a day?"', 'lend', 'borrow', 'bring', 'take', 'Meminjamkan.'),
+ ('Pilih yang benar: "May I ___ your dictionary for a day?"', 'borrow', 'lend', 'bring', 'make', 'Meminjam.'),
+ ('Pilih yang benar: "I always ___ my keys when I am in a hurry."', 'lose', 'loose', 'lost', 'losing', 'Kehilangan.'),
+ ('Pilih yang benar: "Your tie is too ___."', 'loose', 'lose', 'lost', 'losing', 'Longgar.'),
+ ('Pilih yang benar: "The doctor gave me good ___."', 'advice', 'advise', 'advised', 'advices', 'Kata benda.'),
+ ('Pilih yang benar: "The doctor ___ me to rest."', 'advised', 'advice', 'advices', 'adviced', 'Kata kerja.'),
+ ('Pilih yang benar: "The new rule will ___ all students."', 'affect', 'effect', 'effects', 'affection', 'Kata kerja.'),
+ ('Pilih yang benar: "The ___ of the rule was clear."', 'effect', 'affect', 'affected', 'affects', 'Kata benda.'),
+ ('Pilih yang benar: "Everyone ___ Tom agreed."', 'except', 'accept', 'expect', 'excerpt', 'Kecuali.'),
+ ('Pilih yang benar: "Please ___ my apology."', 'accept', 'except', 'expect', 'excerpt', 'Menerima.'),
+ ('Pilih kalimat yang SALAH:', 'He said me the news.', 'He told me the news.', 'He said hello.', 'He spoke softly.', 'Tell + orang.'),
+ ('Pilih kalimat yang SALAH:', 'Can I lend your pen?', 'Can I borrow your pen?', 'Can you lend me your pen?', 'May I borrow it?', 'Lend = meminjamkan.'),
+ ('Pilih kalimat yang SALAH:', 'I did a decision yesterday.', 'I made a decision yesterday.', 'I did my homework.', 'I made a mistake.', 'Decision → make.'),
+]))
+X2["quiz"] = mk([
+ ('Pilih yang benar: "She ___ me a secret."', 'told', 'said', 'spoke', 'talked', 'Tell someone.'),
+ ('Pilih yang benar: "I ___ the dishes after dinner."', 'do', 'make', 'bring', 'tell', 'Do the dishes.'),
+ ('Pilih yang benar: "Could you ___ this to the office?" (menjauh)', 'take', 'bring', 'borrow', 'lend', 'Menjauh.'),
+ ('Pilih yang benar: "I need some ___ about my career."', 'advice', 'advise', 'advised', 'advices', 'Kata benda.'),
+])
