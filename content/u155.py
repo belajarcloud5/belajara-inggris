@@ -1,0 +1,46 @@
+from ub import *
+UNIT = mkunit("u155",
+ ["mendengarkan kalimat dan **mengisi kata yang hilang**",
+  "melatih **telinga** untuk kata fungsi dan akhiran (-s, -ed)",
+  "memakai **konteks** untuk menebak kata yang terdengar",
+  "meningkatkan **ketepatan ejaan** saat mendengar"],
+ [intro("Pada latihan **dengar dan isi**, teks diputar dan beberapa kata dihilangkan. Kamu mengetik kata yang hilang. Latihan ini melatih telinga untuk kata-kata kecil (a, the, to, of), akhiran -s dan -ed, serta ejaan. Gunakan 🔊 dan 🐢 sebanyak yang kamu perlukan."),
+  gram("1. Strategi dengar dan isi",
+   table=[["Langkah", "Isi"],
+          ["1", "Dengarkan sekali sampai selesai untuk memahami topik"],
+          ["2", "Dengarkan lagi sambil memperhatikan bagian kosong"],
+          ["3", "Gunakan tata bahasa: apakah kata yang hilang kata kerja, benda, atau kata sambung?"],
+          ["4", "Periksa ejaan dan akhiran -s/-ed"]]),
+  tip("Perhatikan kata-kata kecil", text="Kata seperti *a*, *the*, *to*, dan *of* sering dilemahkan. Cari ritme kalimat dan gunakan tata bahasa untuk menebak apa yang hilang."),
+  summary(["Dengar utuh dulu, lalu fokus pada kosong.", "Gunakan tata bahasa dan konteks.", "Periksa -s, -ed, dan ejaan."])],
+ [], [])
+C = [
+ "My {brother} {plays} football every {Sunday}.",
+ "She {goes} to school {by} bus.",
+ "We {had} a big {lunch} at noon.",
+ "The {children} are playing in the {garden}.",
+ "I would like a cup {of} tea, {please}.",
+ "He {wants} {to} learn English.",
+ "There {are} three {books} on the table.",
+ "Yesterday we {visited} our {grandmother}.",
+ "She is {taller} {than} her sister.",
+ "The train {leaves} at {nine} o'clock.",
+ "Please {open} the {window}; it is hot.",
+ "They {went} to the {market} in the morning.",
+ "My mother {cooks} {dinner} every evening.",
+ "Can you {help} me {with} this exercise?",
+ "It was {raining}, so we stayed {at} home.",
+ "He has {lived} here {for} ten years.",
+ "I {don't|do not} {like} spicy food.",
+ "The {teacher} gave us {homework} yesterday.",
+ "We are {going} to {visit} Bali next month.",
+ "She {put} her {keys} in her bag.",
+ "If it {rains} tomorrow, we will {stay} at home.",
+ "The shop {opens} at {eight} and closes at five.",
+ "He {asked} me {where} the station was.",
+ "My friends and {I} {enjoy} playing badminton.",
+]
+exps = ["Perhatikan -s pada plays dan nama hari.", "Goes (he/she) dan by bus.", "Had (lampau) dan lunch.", "Children (jamak) dan garden.", "A cup of tea; please.", "Wants (he) dan to + kata kerja.", "There are + jamak.", "Visited (lampau) dan grandmother.", "Taller than (perbandingan).", "Leaves (jadwal) dan nine.", "Open the window.", "Went (lampau) dan market.", "Cooks (she) dan dinner.", "Help me with.", "Raining dan at home.", "Has lived for ten years.", "Don't like.", "Teacher dan homework.", "Going to visit.", "Put (lampau) dan keys.", "If + present: rains; will stay.", "Opens (jadwal) dan eight.", "Asked dan where (kalimat tidak langsung).", "My friends and I; enjoy."]
+P = [cloze(c, e) for c, e in zip(C, exps)]
+UNIT["practice"] = P
+UNIT["quiz"] = P[-8:]

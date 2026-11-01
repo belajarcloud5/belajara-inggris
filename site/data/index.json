@@ -1727,5 +1727,323 @@
   "practice_n": 26,
   "quiz_n": 8,
   "read_n": 0
+ },
+ {
+  "id": "u150",
+  "kelas": "skill",
+  "no": 1,
+  "judul": "Urutkan Kalimat Menjadi Paragraf",
+  "title": "Put the Sentences in Order",
+  "emoji": "📑",
+  "ringkas": "Menyusun paragraf yang runtut dengan kata penghubung dan alur waktu",
+  "ready": true,
+  "practice_n": 32,
+  "quiz_n": 8,
+  "read_n": 0
+ },
+ {
+  "id": "u151",
+  "kelas": "skill",
+  "no": 2,
+  "judul": "Urutkan Dialog",
+  "title": "Put the Dialogue in Order",
+  "emoji": "💬",
+  "ringkas": "Menyusun percakapan dari sapaan sampai penutup",
+  "ready": true,
+  "practice_n": 16,
+  "quiz_n": 8,
+  "read_n": 0
+ },
+ {
+  "id": "u152",
+  "kelas": "skill",
+  "no": 3,
+  "judul": "Temukan Kesalahan (1)",
+  "title": "Find the Mistake I",
+  "emoji": "🔍",
+  "ringkas": "Kesalahan tata bahasa dasar: to be, tense, artikel, jamak",
+  "ready": true,
+  "practice_n": 20,
+  "quiz_n": 8,
+  "read_n": 0
+ },
+ {
+  "id": "u153",
+  "kelas": "skill",
+  "no": 4,
+  "judul": "Temukan Kesalahan (2)",
+  "title": "Find the Mistake II",
+  "emoji": "🔎",
+  "ringkas": "Preposisi, kata hubung, kata ganti, dan tanda baca",
+  "ready": true,
+  "practice_n": 20,
+  "quiz_n": 8,
+  "read_n": 0
+ },
+ {
+  "id": "u154",
+  "kelas": "skill",
+  "no": 5,
+  "judul": "Kata dan Definisi Bahasa Inggris",
+  "title": "Words and Definitions",
+  "emoji": "📖",
+  "ringkas": "Memahami kata lewat definisi sederhana dalam bahasa Inggris",
+  "ready": true,
+  "practice_n": 56,
+  "quiz_n": 12,
+  "read_n": 0
+ },
+ {
+  "id": "u155",
+  "kelas": "skill",
+  "no": 6,
+  "judul": "Dengar dan Isi Kata yang Hilang",
+  "title": "Listen and Fill In",
+  "emoji": "🎧",
+  "ringkas": "Mendengarkan kalimat dan mengisi kata yang hilang",
+  "ready": true,
+  "practice_n": 24,
+  "quiz_n": 8,
+  "read_n": 0
+ },
+ {
+  "id": "u134",
+  "kelas": "listen",
+  "no": 1,
+  "judul": "Tahap 1: Sapaan, Angka, dan Waktu",
+  "title": "Step 1: Greetings and Numbers",
+  "emoji": "🎧",
+  "ringkas": "Dialog sangat pendek dengan kosakata dasar",
+  "ready": false
+ },
+ {
+  "id": "u135",
+  "kelas": "listen",
+  "no": 2,
+  "judul": "Tahap 2: Keluarga dan Rumah",
+  "title": "Step 2: Family and Home",
+  "emoji": "🏠",
+  "ringkas": "Dialog pendek tentang keluarga, rumah, dan kegiatan harian",
+  "ready": false
+ },
+ {
+  "id": "u136",
+  "kelas": "listen",
+  "no": 3,
+  "judul": "Tahap 3: Kehidupan Sekolah",
+  "title": "Step 3: School Life",
+  "emoji": "🏫",
+  "ringkas": "Percakapan teman, guru, jadwal, dan pengumuman sekolah",
+  "ready": false
+ },
+ {
+  "id": "u137",
+  "kelas": "listen",
+  "no": 4,
+  "judul": "Tahap 4: Belanja dan Makanan",
+  "title": "Step 4: Shopping and Food",
+  "emoji": "🛒",
+  "ringkas": "Harga, pesanan, dan percakapan di toko serta kantin",
+  "ready": false
+ },
+ {
+  "id": "u138",
+  "kelas": "listen",
+  "no": 5,
+  "judul": "Tahap 5: Perjalanan dan Arah",
+  "title": "Step 5: Travel and Directions",
+  "emoji": "🚌",
+  "ringkas": "Pengumuman, petunjuk arah, dan rencana perjalanan",
+  "ready": false
+ },
+ {
+  "id": "u139",
+  "kelas": "listen",
+  "no": 6,
+  "judul": "Tahap 6: Telepon dan Pesan",
+  "title": "Step 6: Phone Calls and Messages",
+  "emoji": "📞",
+  "ringkas": "Pesan suara, janji temu, dan percakapan telepon",
+  "ready": false
+ },
+ {
+  "id": "u140",
+  "kelas": "listen",
+  "no": 7,
+  "judul": "Tahap 7: Berita dan Pembicaraan Singkat",
+  "title": "Step 7: News and Short Talks",
+  "emoji": "📰",
+  "ringkas": "Berita pendek, pengumuman, dan pidato singkat",
+  "ready": false
+ },
+ {
+  "id": "u141",
+  "kelas": "listen",
+  "no": 8,
+  "judul": "Tahap 8: Kuliah dan Diskusi",
+  "title": "Step 8: Lectures and Discussions",
+  "emoji": "🎓",
+  "ringkas": "Penjelasan akademik, diskusi, dan menyimpulkan",
+  "ready": false
+ },
+ {
+  "id": "u142",
+  "kelas": "reader",
+  "no": 1,
+  "judul": "Tahap 1: Cerita Sangat Pendek",
+  "title": "Stage 1: Tiny Stories",
+  "emoji": "🐣",
+  "ringkas": "Cerita 4 sampai 6 kalimat dengan kata dasar",
+  "ready": false
+ },
+ {
+  "id": "u143",
+  "kelas": "reader",
+  "no": 2,
+  "judul": "Tahap 2: Cerita Sehari-hari",
+  "title": "Stage 2: Daily Life Stories",
+  "emoji": "🌱",
+  "ringkas": "Cerita pendek tentang keluarga, sekolah, dan teman",
+  "ready": false
+ },
+ {
+  "id": "u144",
+  "kelas": "reader",
+  "no": 3,
+  "judul": "Tahap 3: Petualangan Kecil",
+  "title": "Stage 3: Little Adventures",
+  "emoji": "🌳",
+  "ringkas": "Cerita dengan masa lampau dan percakapan",
+  "ready": false
+ },
+ {
+  "id": "u145",
+  "kelas": "reader",
+  "no": 4,
+  "judul": "Tahap 4: Tempat dan Tokoh",
+  "title": "Stage 4: Places and People",
+  "emoji": "🗺️",
+  "ringkas": "Cerita tentang tempat, kota, dan orang",
+  "ready": false
+ },
+ {
+  "id": "u146",
+  "kelas": "reader",
+  "no": 5,
+  "judul": "Tahap 5: Misteri dan Kejutan",
+  "title": "Stage 5: Mystery and Surprise",
+  "emoji": "🔭",
+  "ringkas": "Cerita dengan alur dan akhir yang mengejutkan",
+  "ready": false
+ },
+ {
+  "id": "u147",
+  "kelas": "reader",
+  "no": 6,
+  "judul": "Tahap 6: Pilihan dan Perasaan",
+  "title": "Stage 6: Choices and Feelings",
+  "emoji": "🎭",
+  "ringkas": "Cerita tentang keputusan dan perasaan tokoh",
+  "ready": false
+ },
+ {
+  "id": "u148",
+  "kelas": "reader",
+  "no": 7,
+  "judul": "Tahap 7: Artikel Pendek",
+  "title": "Stage 7: Short Articles",
+  "emoji": "📚",
+  "ringkas": "Teks informasi dengan kosakata lebih luas",
+  "ready": false
+ },
+ {
+  "id": "u149",
+  "kelas": "reader",
+  "no": 8,
+  "judul": "Tahap 8: Cerita Lebih Panjang",
+  "title": "Stage 8: Longer Stories",
+  "emoji": "🏆",
+  "ringkas": "Cerita lebih panjang dengan kalimat kompleks",
+  "ready": false
+ },
+ {
+  "id": "u156",
+  "kelas": "toefl",
+  "no": 1,
+  "judul": "Mengenal TOEFL ITP",
+  "title": "TOEFL ITP Overview",
+  "emoji": "🧭",
+  "ringkas": "Format tiga bagian, skor 310 sampai 677, dan strategi umum",
+  "ready": false
+ },
+ {
+  "id": "u157",
+  "kelas": "toefl",
+  "no": 2,
+  "judul": "Listening: Percakapan dan Ceramah",
+  "title": "TOEFL Listening",
+  "emoji": "🎧",
+  "ringkas": "Percakapan pendek, percakapan panjang, dan ceramah",
+  "ready": false
+ },
+ {
+  "id": "u158",
+  "kelas": "toefl",
+  "no": 3,
+  "judul": "Structure: Melengkapi Kalimat",
+  "title": "Structure: Sentence Completion",
+  "emoji": "🧱",
+  "ringkas": "Subjek, kata kerja, klausa, dan pola kalimat",
+  "ready": false
+ },
+ {
+  "id": "u159",
+  "kelas": "toefl",
+  "no": 4,
+  "judul": "Written Expression: Mencari Kesalahan",
+  "title": "Written Expression: Error Identification",
+  "emoji": "🔧",
+  "ringkas": "Kesalahan paralel, kata sifat/keterangan, jamak, dan tense",
+  "ready": false
+ },
+ {
+  "id": "u160",
+  "kelas": "toefl",
+  "no": 5,
+  "judul": "Reading: Strategi dan Soal",
+  "title": "TOEFL Reading Strategies",
+  "emoji": "📄",
+  "ringkas": "Gagasan utama, detail, inferensi, dan kosakata dalam konteks",
+  "ready": false
+ },
+ {
+  "id": "u161",
+  "kelas": "toefl",
+  "no": 6,
+  "judul": "Kosakata Akademik TOEFL",
+  "title": "TOEFL Academic Vocabulary",
+  "emoji": "📘",
+  "ringkas": "Kosakata penting untuk teks akademik",
+  "ready": false
+ },
+ {
+  "id": "u162",
+  "kelas": "toefl",
+  "no": 7,
+  "judul": "Tes Mini: Structure dan Reading",
+  "title": "TOEFL Mini Test: Structure and Reading",
+  "emoji": "🧪",
+  "ringkas": "Latihan campuran bergaya tes",
+  "ready": false
+ },
+ {
+  "id": "u163",
+  "kelas": "toefl",
+  "no": 8,
+  "judul": "Rangkuman TOEFL ITP",
+  "title": "TOEFL Review",
+  "emoji": "🏁",
+  "ringkas": "Ulasan strategi dan kesalahan umum",
+  "ready": false
  }
 ]

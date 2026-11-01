@@ -28,6 +28,10 @@ def qkey(q):
         return ("dictate", q["answer"].lower())
     if t == "reply":
         return ("reply", q["turns"][-1][1].lower(), q["id"].lower())
+    if t in ("seq", "spot"):
+        return (t, tuple(q["items"]))
+    if t == "cloze":
+        return ("cloze", q["text"])
     return (t, q["q"], q.get("say", ""), tuple(sorted(q["options"])))
 
 
@@ -45,6 +49,10 @@ def qid(q):
         raw = ["reply", q["turns"], q["id"], sorted(q["answers"])]
     elif t == "match":
         raw = ["match", q["q"], sorted(map(list, q["pairs"]))]
+    elif t in ("seq", "spot"):
+        raw = [t, q["items"]]
+    elif t == "cloze":
+        raw = ["cloze", q["text"]]
     else:
         raw = [t, q["q"], q.get("say", ""), sorted(q["options"]), q["options"][q["answer"]]]
     return hashlib.md5(json.dumps(raw, ensure_ascii=False, sort_keys=True).encode()).hexdigest()[:8]
@@ -160,7 +168,7 @@ def to_fill(q):
 def check_q(uid, kind, i, q):
     where = f"{uid}.{kind}[{i}]"
     t = q.get("type")
-    assert t in ("mcq", "listen", "fill", "order", "match", "dictate", "reply"), f"{where}: tipe tidak dikenal {t}"
+    assert t in ("mcq", "listen", "fill", "order", "match", "dictate", "reply", "seq", "spot", "cloze"), f"{where}: tipe tidak dikenal {t}"
     assert q.get("exp"), f"{where}: penjelasan (exp) kosong"
     if t in ("mcq", "listen"):
         assert len(q["options"]) >= 3 and 0 <= q["answer"] < len(q["options"]), f"{where}: opsi/answer salah"
@@ -178,6 +186,12 @@ def check_q(uid, kind, i, q):
     elif t == "dictate":
         assert q.get("say") and len(q["answer"].split()) >= 3, f"{where}: dikte butuh 'say' dan kalimat min. 3 kata"
         assert not any(ch.isdigit() for ch in q["answer"]), f"{where}: dikte tanpa angka (tulis dengan huruf)"
+    elif t == "seq":
+        assert 3 <= len(q["items"]) <= 7 and len(set(q["items"])) == len(q["items"]), f"{where}: seq butuh 3-7 kalimat berbeda"
+    elif t == "spot":
+        assert 3 <= len(q["items"]) <= 7 and 0 <= q["answer"] < len(q["items"]), f"{where}: spot butuh 3-7 kalimat dan answer valid"
+    elif t == "cloze":
+        assert q.get("say") and q["text"].count("___") == len(q["answers"]) >= 1 and all(a for a in q["answers"]), f"{where}: cloze butuh say, ___ sebanyak answers"
     elif t == "match":
         assert len(q["pairs"]) >= 3, f"{where}: pasangan kurang dari 3"
         assert len({a for a, _ in q["pairs"]}) == len(q["pairs"]) == len({b for _, b in q["pairs"]}), f"{where}: pasangan duplikat"

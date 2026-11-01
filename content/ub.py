@@ -77,3 +77,17 @@ def vocab_unit(id, goals, intro_text, groups, dlg_title, dlg_lines, tip_text, se
         else:
             Q.append(listen("Dengarkan. Apa artinya?", en, [ar] + other(i, 1), 0, f"{en} = {ar}."))
     return mkunit(id, goals, lesson, P, Q)
+
+
+def seq(items, exp, q="Susun kalimat-kalimat berikut menjadi paragraf yang runtut."):
+    return dict(type="seq", q=q, items=items, exp=exp)
+
+def spot(items, idx, exp, q="Ketuk kalimat yang mengandung kesalahan."):
+    return dict(type="spot", q=q, items=items, answer=idx, exp=exp)
+
+def cloze(marked, exp, q="Dengarkan, lalu isi kata yang hilang."):
+    """marked: kalimat dengan kata hilang ditulis {kata} atau {kata|alternatif}."""
+    answers = [m.split("|") for m in _re.findall(r"\{([^}]*)\}", marked)]
+    text = _re.sub(r"\{[^}]*\}", "___", marked)
+    say = _re.sub(r"\{([^|}]*)(?:\|[^}]*)?\}", r"\1", marked)
+    return dict(type="cloze", q=q, say=say, text=text, answers=answers, exp=exp)

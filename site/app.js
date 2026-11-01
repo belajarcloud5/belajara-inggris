@@ -223,7 +223,7 @@ async function route() {
   }
 }
 
-const kelasName = k => k === 'kerja' ? 'Level Pekerja' : k === 'tenses' ? 'Modul Tenses' : k === 'ielts' ? 'Persiapan IELTS' : k === 'pron' ? 'Modul Pelafalan' : k === 'kosa' ? 'Kosakata dan Menulis' : k === 'toeic' ? 'Persiapan TOEIC' : k === 'travel' ? 'Inggris untuk Bepergian' : `Kelas ${k}`;
+const kelasName = k => k === 'kerja' ? 'Level Pekerja' : k === 'tenses' ? 'Modul Tenses' : k === 'ielts' ? 'Persiapan IELTS' : k === 'pron' ? 'Modul Pelafalan' : k === 'kosa' ? 'Kosakata dan Menulis' : k === 'toeic' ? 'Persiapan TOEIC' : k === 'travel' ? 'Inggris untuk Bepergian' : k === 'skill' ? 'Latihan Keterampilan' : k === 'listen' ? 'Listening Bertahap' : k === 'reader' ? 'Cerita Bertingkat' : k === 'toefl' ? 'Persiapan TOEFL ITP' : `Kelas ${k}`;
 
 // ---------- beranda ----------
 function unitCard(u) {
@@ -241,7 +241,11 @@ const LEVELS = [
   { key: 'pron', title: 'Modul Pelafalan', emoji: '🔊', sub: 'SEMUA LEVEL', desc: 'Bunyi vokal dan konsonan, tekanan kata dan kalimat, intonasi, dan ejaan yang menipu' },
   { key: 'kosa', title: 'Kosakata dan Menulis', emoji: '📚', sub: 'SEMUA LEVEL', desc: 'Kata yang sering tertukar, pembentukan kata, kosakata per tema, dan menulis terpandu' },
   { key: 'travel', title: 'Inggris untuk Bepergian', emoji: '✈️', sub: 'SEMUA LEVEL', desc: 'Bandara, hotel, restoran, transportasi, belanja, darurat, dan obrolan ringan' },
+  { key: 'skill', title: 'Latihan Keterampilan', emoji: '🧩', sub: 'SEMUA LEVEL', desc: 'Urutkan paragraf dan dialog, temukan kesalahan, definisi kata, dan dengar lalu isi' },
+  { key: 'listen', title: 'Listening Bertahap', emoji: '🎧', sub: 'SEMUA LEVEL', desc: 'Delapan tahap mendengarkan, dari sapaan sampai kuliah dan diskusi' },
+  { key: 'reader', title: 'Cerita Bertingkat', emoji: '📚', sub: 'SEMUA LEVEL', desc: 'Delapan tahap cerita dan artikel pendek, makin lama makin panjang' },
   { key: 'ielts', title: 'Persiapan IELTS', emoji: '🌍', sub: 'UJIAN', desc: 'Strategi, reading, listening, kosakata akademik, writing, dan speaking' },
+  { key: 'toefl', title: 'Persiapan TOEFL ITP', emoji: '🎓', sub: 'UJIAN KAMPUS', desc: 'Listening, Structure, Written Expression, dan Reading ala TOEFL ITP' },
   { key: 'toeic', title: 'Persiapan TOEIC', emoji: '🏢', sub: 'UJIAN KERJA', desc: 'Format TOEIC, listening, tata bahasa, kosakata bisnis, dan membaca teks kantor' },
   { key: 'kerja', title: 'Pekerja / Formal', emoji: '💼', sub: 'DEWASA', desc: 'Bahasa Inggris untuk kantor, email, rapat, dan wawancara' },
 ];
@@ -650,6 +654,9 @@ function correctText(q) {
     case 'dictate': return q.answer;
     case 'reply': return q.answers.slice(0, 3).join('  /  ');
     case 'match': return q.pairs.map(([a, b]) => `${a} = ${b}`).join(' · ');
+    case 'seq': return q.items.join(' ');
+    case 'spot': return q.items[q.answer];
+    case 'cloze': return q.answers.map(a => a[0]).join(', ');
   }
   return '';
 }
@@ -662,6 +669,9 @@ function renderQ(q, box, done) {
   if (q.type === 'match') return qMatch(q, box, finish);
   if (q.type === 'dictate') return qDictate(q, box, finish);
   if (q.type === 'reply') return qReply(q, box, finish);
+  if (q.type === 'seq') return qSeq(q, box, finish);
+  if (q.type === 'spot') return qSpot(q, box, finish);
+  if (q.type === 'cloze') return qCloze(q, box, finish);
 }
 
 function qMcq(q, box, finish) {
@@ -778,6 +788,68 @@ function qOrder(q, box, finish) {
     aEl.style.borderColor = ok ? 'var(--ok)' : 'var(--bad)'; draw(); clr.disabled = true; finish(ok, text);
   });
   draw();
+}
+
+// urutkan kalimat menjadi paragraf atau dialog yang runtut
+function qSeq(q, box, finish) {
+  let order = q.items.map((t, i) => ({ t, i }));
+  let bank = shuffle(order);
+  for (let n = 0; n < 8 && bank.length > 1 && bank.every((x, k) => x.i === k); n++) bank = shuffle(order);
+  bank = bank.map(x => ({ ...x, used: false }));
+  let ans = [], locked = false;
+  box.innerHTML = `<div class="qtext">${fmt(q.q)}</div><ol class="seqans" id="sans" aria-label="Urutanmu"></ol><div class="seqbank" id="sbank"></div>
+    <div class="row"><button class="btn" id="chk" disabled>Cek urutan</button><button class="btn ghost" id="clr">Hapus semua</button></div>`;
+  const aEl = $('#sans', box), bEl = $('#sbank', box), chk = $('#chk', box), clr = $('#clr', box);
+  function draw() {
+    aEl.innerHTML = ans.map(x => `<li><button class="sq" data-i="${x.i}">${esc(x.t)}</button></li>`).join('');
+    bEl.innerHTML = bank.map(x => `<button class="sq" data-i="${x.i}" ${x.used ? 'disabled' : ''}>${esc(x.t)}</button>`).join('');
+    chk.disabled = locked || ans.length !== bank.length;
+    aEl.querySelectorAll('.sq').forEach(c => c.addEventListener('click', () => {
+      if (locked) return; const k = ans.findIndex(x => x.i === +c.dataset.i); const [x] = ans.splice(k, 1); bank.find(b => b.i === x.i).used = false; draw();
+    }));
+    bEl.querySelectorAll('.sq').forEach(c => c.addEventListener('click', () => {
+      if (locked) return; const x = bank.find(b => b.i === +c.dataset.i); if (x.used) return; x.used = true; ans.push(x); draw();
+    }));
+  }
+  clr.addEventListener('click', () => { if (locked) return; ans = []; bank.forEach(b => b.used = false); draw(); });
+  chk.addEventListener('click', () => {
+    locked = true; const ok = ans.every((x, k) => x.i === k);
+    aEl.classList.add(ok ? 'okbox' : 'badbox'); draw(); clr.disabled = true; finish(ok, ans.map(x => x.t).join(' '));
+  });
+  draw();
+}
+
+// temukan kalimat yang salah
+function qSpot(q, box, finish) {
+  box.innerHTML = `<div class="qtext">${fmt(q.q)}</div><div class="spot">${q.items.map((t, i) => `<button class="sp" data-i="${i}">${esc(t)}</button>`).join('')}</div>`;
+  box.querySelectorAll('.sp').forEach(b => b.addEventListener('click', () => {
+    const idx = +b.dataset.i, ok = idx === q.answer;
+    box.querySelectorAll('.sp').forEach(x => { x.disabled = true; if (+x.dataset.i === q.answer) x.classList.add('ok'); });
+    if (!ok) b.classList.add('bad');
+    finish(ok, q.items[idx]);
+  }));
+}
+
+// dengarkan lalu isi kata yang hilang
+function qCloze(q, box, finish) {
+  const parts = q.text.split('___');
+  const inputs = parts.slice(0, -1).map((p, i) => `${esc(p)}<input class="blank cz" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Kata ke-${i + 1}" size="${Math.max(4, Math.max(...q.answers[i].map(a => a.length)) + 1)}">`).join('') + esc(parts[parts.length - 1]);
+  box.innerHTML = `<div class="qtext">${fmt(q.q)}</div>
+    ${hasTTS ? `<div class="row"><button class="btn play" id="cplay" type="button">🔊 Dengarkan</button><button class="btn ghost" id="cslow" type="button">🐢 Pelan</button></div>` : `<div class="hint">Browser ini tidak mendukung suara, jadi teksnya ditampilkan: <b>${esc(q.say)}</b></div>`}
+    <div class="cloze">${inputs}</div><div class="row"><button class="btn" id="chk" type="button">Cek</button></div>`;
+  const ins = [...box.querySelectorAll('input.cz')], btn = $('#chk', box);
+  const pl = $('#cplay', box); if (pl) pl.addEventListener('click', () => speak(q.say));
+  const sl = $('#cslow', box); if (sl) sl.addEventListener('click', () => speakSlow(q.say));
+  if (hasTTS) setTimeout(() => speak(q.say), 250);
+  if (ins[0]) ins[0].focus();
+  const check = () => {
+    if (ins.every(i => !norm(i.value))) { ins[0].focus(); return; }
+    let all = true;
+    ins.forEach((inp, k) => { const ok = q.answers[k].some(a => expand(inp.value) === expand(a)); if (!ok) all = false; inp.classList.add(ok ? 'ok' : 'bad'); inp.disabled = true; });
+    btn.disabled = true; finish(all, ins.map(i => i.value).join(', '));
+  };
+  btn.addEventListener('click', check);
+  ins.forEach(i => i.addEventListener('keydown', e => { if (e.key === 'Enter') check(); }));
 }
 
 function qMatch(q, box, finish) {
