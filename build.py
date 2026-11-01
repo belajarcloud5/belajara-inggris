@@ -243,6 +243,9 @@ def main():
             rp12 = os.path.join(ROOT, "content", f"{u['id']}_read12.py")
             if os.path.isfile(rp12):  # cerita ke-11: fokus passive voice
                 d["read"] = d["read"] + load(rp12).READ12
+            rp13 = os.path.join(ROOT, "content", f"{u['id']}_read13.py")
+            if os.path.isfile(rp13):  # cerita ke-12: fokus reported speech
+                d["read"] = d["read"] + load(rp13).READ13
             for pi, ps in enumerate(d["read"]):
                 assert ps.get("title") and ps.get("text") and ps.get("id"), f"{u['id']}.read[{pi}]: judul/teks/terjemahan kosong"
                 assert 3 <= len(ps["qs"]) <= 8, f"{u['id']}.read[{pi}]: butuh 3 sampai 8 pertanyaan"
