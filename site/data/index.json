@@ -1294,7 +1294,10 @@
   "title": "Easily Confused Words 1",
   "emoji": "🔀",
   "ringkas": "its dan it's, their dan there, your dan you're, to dan too, who's dan whose",
-  "ready": false
+  "ready": true,
+  "practice_n": 38,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u101",
@@ -1304,7 +1307,10 @@
   "title": "Easily Confused Words 2",
   "emoji": "🔁",
   "ringkas": "make dan do, say dan tell, bring dan take, borrow dan lend, affect dan effect",
-  "ready": false
+  "ready": true,
+  "practice_n": 37,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u102",
@@ -1314,7 +1320,10 @@
   "title": "Word Building: Prefixes",
   "emoji": "🧩",
   "ringkas": "un-, re-, dis-, in- dan im-, pre-, mis-, over-",
-  "ready": false
+  "ready": true,
+  "practice_n": 50,
+  "quiz_n": 10,
+  "read_n": 0
  },
  {
   "id": "u103",
@@ -1324,7 +1333,10 @@
   "title": "Word Building: Suffixes",
   "emoji": "🧱",
   "ringkas": "-er dan -or, -tion, -ment, -ful dan -less, -able, -ly, -ness",
-  "ready": false
+  "ready": true,
+  "practice_n": 47,
+  "quiz_n": 10,
+  "read_n": 0
  },
  {
   "id": "u104",
@@ -1334,7 +1346,10 @@
   "title": "Home and Furniture",
   "emoji": "🛋️",
   "ringkas": "Ruangan, perabot, peralatan rumah, dan menjelaskan letak",
-  "ready": false
+  "ready": true,
+  "practice_n": 92,
+  "quiz_n": 14,
+  "read_n": 0
  },
  {
   "id": "u105",
@@ -1344,7 +1359,10 @@
   "title": "The Body and Health",
   "emoji": "🩺",
   "ringkas": "Anggota tubuh, keluhan sakit, dan di dokter",
-  "ready": false
+  "ready": true,
+  "practice_n": 92,
+  "quiz_n": 14,
+  "read_n": 0
  },
  {
   "id": "u106",
@@ -1354,7 +1372,10 @@
   "title": "Clothes and Shopping",
   "emoji": "👕",
   "ringkas": "Pakaian, ukuran, warna, harga, dan tawar-menawar",
-  "ready": false
+  "ready": true,
+  "practice_n": 92,
+  "quiz_n": 14,
+  "read_n": 0
  },
  {
   "id": "u107",
@@ -1364,7 +1385,10 @@
   "title": "Transport and the City",
   "emoji": "🚌",
   "ringkas": "Kendaraan, tempat di kota, dan bepergian",
-  "ready": false
+  "ready": true,
+  "practice_n": 92,
+  "quiz_n": 14,
+  "read_n": 0
  },
  {
   "id": "u108",
@@ -1374,7 +1398,10 @@
   "title": "Jobs and Workplaces",
   "emoji": "🧑‍🔧",
   "ringkas": "Nama pekerjaan, tugas, dan tempat kerja",
-  "ready": false
+  "ready": true,
+  "practice_n": 88,
+  "quiz_n": 14,
+  "read_n": 0
  },
  {
   "id": "u109",
@@ -1384,7 +1411,10 @@
   "title": "Hobbies and Entertainment",
   "emoji": "🎬",
   "ringkas": "Olahraga, musik, film, permainan, dan kegiatan waktu luang",
-  "ready": false
+  "ready": true,
+  "practice_n": 91,
+  "quiz_n": 14,
+  "read_n": 0
  },
  {
   "id": "u110",
