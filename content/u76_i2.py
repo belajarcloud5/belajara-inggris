@@ -1,0 +1,28 @@
+from qk import mk
+I2 = dict(practice=mk([
+ ('Berapa jumlah bagian (section) dalam tes Listening?', '4', '2', '3', '6', 'Listening punya 4 bagian.'),
+ ('Berapa jumlah soal Listening?', '40', '30', '50', '20', '40 soal.'),
+ ('Berapa jumlah teks (passage) di Reading?', '3', '2', '4', '5', 'Tiga teks, 40 soal.'),
+ ('Berapa lama waktu Reading?', '60 menit', '30 menit', '90 menit', '45 menit', 'Reading 60 menit.'),
+ ('Berapa lama waktu Writing?', '60 menit', '30 menit', '90 menit', '120 menit', 'Writing 60 menit untuk dua tugas.'),
+ ('Berapa kata minimal Writing Task 1?', '150', '250', '100', '200', 'Task 1 minimal 150 kata.'),
+ ('Berapa kata minimal Writing Task 2?', '250', '150', '350', '500', 'Task 2 minimal 250 kata.'),
+ ('Berapa lama Speaking?', 'sekitar 11–14 menit', 'sekitar 30 menit', 'sekitar 5 menit', 'sekitar 60 menit', 'Speaking 11–14 menit.'),
+ ('Berapa bagian dalam Speaking?', '3', '2', '4', '5', 'Part 1, 2, dan 3.'),
+ ('Skala nilai IELTS adalah...', '0 sampai 9', '0 sampai 100', '1 sampai 5', '0 sampai 10', 'Band 0–9.'),
+ ('Keterampilan mana yang sama di Academic dan General Training?', 'Listening dan Speaking', 'Reading dan Writing', 'Hanya Reading', 'Tidak ada', 'Reading dan Writing yang berbeda.'),
+ ('Keterampilan mana yang berbeda di Academic dan General Training?', 'Reading dan Writing', 'Listening dan Speaking', 'Hanya Listening', 'Hanya Speaking', 'Reading dan Writing yang berbeda.'),
+ ('Berapa kali rekaman Listening diputar?', 'sekali', 'dua kali', 'tiga kali', 'bebas', 'Hanya sekali.'),
+ ('Mana yang BUKAN keterampilan yang diuji IELTS?', 'Translation', 'Listening', 'Reading', 'Speaking', 'Translation tidak diuji.'),
+ ('Apa yang paling bijak sebelum mendaftar?', 'memeriksa syarat nilai di kampus atau lembaga tujuan', 'menghafal semua kosakata', 'memilih tanggal acak', 'melewati latihan', 'Syarat nilai berbeda-beda.'),
+ ('Bagian IELTS mana yang dinilai penguji lewat percakapan langsung?', 'Speaking', 'Reading', 'Listening', 'Writing', 'Speaking = percakapan.'),
+ ('Bagaimana cara terbaik memakai waktu di Reading?', 'tidak terlalu lama pada satu soal sulit', 'membaca semua kata dua kali', 'menerjemahkan semua teks', 'melewati seluruh teks ketiga', 'Atur waktu 20 menit per teks.'),
+ ('Sekitar berapa menit per teks Reading?', '20 menit', '5 menit', '40 menit', '60 menit', '60 menit / 3 teks.'),
+]), quiz=mk([
+ ('Pada Task 1 Academic, kamu biasanya menjelaskan...', 'grafik, tabel, peta, atau proses', 'surat kepada teman', 'opini panjang', 'cerita liburan', 'Task 1 Academic = data visual.'),
+ ('Pada Task 2, kamu menulis...', 'esai', 'tabel', 'email pendek', 'puisi', 'Task 2 = esai.'),
+ ('Berapa lama sebaiknya Task 2?', 'sekitar 40 menit', 'sekitar 10 menit', 'sekitar 60 menit', 'sekitar 5 menit', 'Task 2 lebih berat nilainya.'),
+ ('Bagian mana yang nilainya paling berpengaruh pada Writing?', 'Task 2', 'Task 1', 'sama persis', 'tidak ada', 'Task 2 bernilai lebih banyak.'),
+ ('Berapa nilai maksimal band?', '9', '10', '7', '8', 'Band 9 tertinggi.'),
+ ('Mana yang benar tentang Listening?', 'dengarkan, tulis jawaban, lalu pindahkan ke lembar jawaban', 'rekaman bisa diulang bebas', 'tidak ada soal angka', 'hanya satu pembicara', 'Pada tes kertas ada waktu transfer.'),
+]))
