@@ -800,34 +800,6 @@ function qMatch(q, box, finish) {
     }
   }));
 }
-})();
-
-// ---------- tombol kembali ke atas ----------
-(() => {
-  const b = document.getElementById('totop');
-  if (!b) return;
-  let anim = 0;
-  const upd = () => b.classList.toggle('show', window.scrollY > 400);
-  window.addEventListener('scroll', upd, { passive: true });
-  const stop = () => { cancelAnimationFrame(anim); anim = 0; b.classList.remove('going'); };
-  ['wheel', 'touchstart', 'keydown'].forEach(ev => window.addEventListener(ev, () => anim && stop(), { passive: true }));
-  b.addEventListener('click', () => {
-    stop();
-    const from = window.scrollY;
-    if (from <= 0) return;
-    const dur = Math.min(900, 350 + from / 6);               // makin jauh makin lama, maksimal 0,9 detik
-    const t0 = performance.now();
-    const ease = t => 1 - Math.pow(1 - t, 3);                // melambat di akhir
-    b.classList.add('going');
-    const step = now => {
-      const t = Math.min(1, (now - t0) / dur);
-      window.scrollTo(0, from * (1 - ease(t)));
-      if (t < 1) anim = requestAnimationFrame(step); else stop();
-    };
-    anim = requestAnimationFrame(step);
-  });
-  upd();
-})();
 
 // ---------- target harian dan rangkaian hari ----------
 const dayStr = d => d.toLocaleDateString('sv-SE');
@@ -976,9 +948,8 @@ const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
 async function renderBicara() {
   const all = await getJSON('data/bicara.json');
   app.innerHTML = `<a class="crumb" href="#/">← Beranda</a><h1>🎤 Latihan berbicara</h1>
-    <p class="lead">Dengarkan kalimat, lalu ucapkan. Aplikasi mencocokkan kata-kata yang terdengar. Butuh Chrome (HP atau laptop), izin mikrofon, dan internet.</p><div id="bpane"></div>`;
+    <p class="lead">Dengarkan kalimat, lalu ucapkan. Aplikasi mencocokkan kata-kata yang terdengar. Butuh Chrome (HP atau laptop), izin mikrofon, dan internet.</p>${SR ? '' : '<div class="card"><b>Browser ini belum mendukung pengenalan suara.</b> Coba buka di Chrome. Sementara itu kamu tetap bisa mendengar contoh kalimat di bawah.</div>'}<div id="bpane"></div>`;
   const pane = $('#bpane');
-  if (!SR) { pane.innerHTML = `<div class="card"><b>Browser ini belum mendukung pengenalan suara.</b><p>Coba buka di Chrome. Sementara itu kamu tetap bisa mendengar contoh kalimat di bawah.</p></div>`; }
   const qs = shuffle(all).slice(0, 10);
   let i = 0, okN = 0;
   const words = t => norm(t).split(' ').filter(Boolean);
@@ -1024,3 +995,33 @@ async function renderBicara() {
   }
   show();
 }
+
+})();
+
+// ---------- tombol kembali ke atas ----------
+(() => {
+  const b = document.getElementById('totop');
+  if (!b) return;
+  let anim = 0;
+  const upd = () => b.classList.toggle('show', window.scrollY > 400);
+  window.addEventListener('scroll', upd, { passive: true });
+  const stop = () => { cancelAnimationFrame(anim); anim = 0; b.classList.remove('going'); };
+  ['wheel', 'touchstart', 'keydown'].forEach(ev => window.addEventListener(ev, () => anim && stop(), { passive: true }));
+  b.addEventListener('click', () => {
+    stop();
+    const from = window.scrollY;
+    if (from <= 0) return;
+    const dur = Math.min(900, 350 + from / 6);               // makin jauh makin lama, maksimal 0,9 detik
+    const t0 = performance.now();
+    const ease = t => 1 - Math.pow(1 - t, 3);                // melambat di akhir
+    b.classList.add('going');
+    const step = now => {
+      const t = Math.min(1, (now - t0) / dur);
+      window.scrollTo(0, from * (1 - ease(t)));
+      if (t < 1) anim = requestAnimationFrame(step); else stop();
+    };
+    anim = requestAnimationFrame(step);
+  });
+  upd();
+})();
+
