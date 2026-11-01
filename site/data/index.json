@@ -852,7 +852,10 @@
   "title": "Academic Vocabulary I",
   "emoji": "🏫",
   "ringkas": "Kata akademik yang sering muncul dan cara memakainya",
-  "ready": false
+  "ready": true,
+  "practice_n": 124,
+  "quiz_n": 26,
+  "read_n": 0
  },
  {
   "id": "u81",
@@ -862,7 +865,10 @@
   "title": "Academic Vocabulary II",
   "emoji": "🌍",
   "ringkas": "Kosakata untuk topik lingkungan, kota, dan masyarakat",
-  "ready": false
+  "ready": true,
+  "practice_n": 120,
+  "quiz_n": 26,
+  "read_n": 0
  },
  {
   "id": "u82",
@@ -872,7 +878,10 @@
   "title": "Academic Vocabulary III",
   "emoji": "💼",
   "ringkas": "Kosakata untuk topik kesehatan, pekerjaan, dan ekonomi",
-  "ready": false
+  "ready": true,
+  "practice_n": 120,
+  "quiz_n": 26,
+  "read_n": 0
  },
  {
   "id": "u83",
@@ -882,7 +891,10 @@
   "title": "Linking Words and Cohesion",
   "emoji": "🔗",
   "ringkas": "However, therefore, moreover, dan cara menyusun paragraf yang runtut",
-  "ready": false
+  "ready": true,
+  "practice_n": 27,
+  "quiz_n": 12,
+  "read_n": 0
  },
  {
   "id": "u84",
@@ -892,7 +904,10 @@
   "title": "Listening: Numbers, Spelling, Dates",
   "emoji": "🎧",
   "ringkas": "Mendengar angka, nama yang dieja, nomor telepon, tanggal, dan harga",
-  "ready": false
+  "ready": true,
+  "practice_n": 51,
+  "quiz_n": 10,
+  "read_n": 0
  },
  {
   "id": "u85",

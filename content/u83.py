@@ -1,0 +1,91 @@
+from qk import mk, mkf, mko
+
+UNIT = dict(
+ id="u83",
+ goals=[
+  "memilih **kata penghubung** yang tepat untuk menambah, melawankan, menyebabkan, dan memberi contoh",
+  "memakai **tanda baca** yang benar dengan kata penghubung",
+  "menghindari **pemakaian berlebihan** satu kata penghubung",
+  "menyusun paragraf yang **runtut** (Coherence and Cohesion)",
+ ],
+ lesson=[
+  dict(t="intro", text="Salah satu kriteria Writing dan Speaking adalah **Coherence and Cohesion**: gagasan harus mengalir dan terhubung. Kata penghubung (linking words) adalah alatnya. Namun, **tepat lebih penting daripada banyak**."),
+
+  dict(t="grammar", title="1. Kata penghubung menurut fungsi",
+   table=[["Fungsi", "Contoh"],
+          ["**Menambah**", "[[moreover, furthermore, in addition, besides]]"],
+          ["**Berlawanan**", "[[however, nevertheless, on the other hand, in contrast]]"],
+          ["**Sebab / akibat**", "[[because of, due to, therefore, as a result, consequently]]"],
+          ["**Contoh**", "[[for example, for instance, such as]]"],
+          ["**Urutan**", "[[firstly, secondly, finally, afterwards]]"],
+          ["**Kesimpulan**", "[[in conclusion, to sum up, overall]]"]]),
+
+  dict(t="grammar", title="2. Tanda baca",
+   table=[["Pola", "Contoh"],
+          ["Awal kalimat + koma", "[[However, many people disagree.]]"],
+          ["Titik koma + kata + koma", "[[Many people agree; however, some disagree.]]"],
+          ["although / whereas + klausa", "[[Although it is expensive, many people buy it.]]"],
+          ["because of / due to + kata benda", "[[Due to heavy rain, the match was cancelled.]]"],
+          ["because + klausa", "[[The match was cancelled because it rained.]]"]]),
+
+  dict(t="grammar", title="3. Pasangan yang sering tertukar",
+   table=[["Salah", "Benar"],
+          ["~~However, although he was tired.~~", "[[Although he was tired, he kept working.]]"],
+          ["~~Because of it rained.~~", "[[Because of the rain / Because it rained.]]"],
+          ["~~Despite he was ill.~~", "[[Despite being ill / Although he was ill.]]"],
+          ["~~Moreover, but also...~~", "[[Moreover, ... / not only ... but also ...]]"]]),
+
+  dict(t="tip", title="Variasi, bukan hafalan",
+   text="Pakai kata penghubung yang berbeda dan ketika memang ada hubungan makna. Menumpuk *Moreover* dan *Furthermore* di setiap kalimat membuat tulisan terkesan mekanis."),
+  dict(t="warn", title="However bukan penghubung klausa",
+   text="Jangan menyambung dua klausa dengan *however* dan koma saja. Salah: ~~It is cheap, however it is poor.~~ Benar: [[It is cheap; however, it is poor.]] atau [[It is cheap, but it is poor.]]"),
+ ],
+
+ practice=mk([
+  ('Pilih kata penghubung yang menambah informasi: "Cars cause pollution. ___, they are expensive to maintain."', "Moreover", "However", "Therefore", "Although", "Menambah → Moreover."),
+  ('Pilih kata penghubung yang berlawanan: "Online learning is flexible. ___, it can feel lonely."', "However", "Moreover", "Therefore", "For example", "Berlawanan → However."),
+  ('Pilih kata penghubung akibat: "The roads were flooded. ___, many schools closed."', "As a result", "Although", "However", "For instance", "Akibat → As a result."),
+  ('Pilih kata penghubung contoh: "Some countries have strict laws. ___, Singapore bans chewing gum."', "For example", "However", "Moreover", "Therefore", "Contoh → For example."),
+  ('Pilih kata penghubung kesimpulan: "___, governments should invest in public transport."', "In conclusion", "However", "For instance", "Moreover", "Kesimpulan → In conclusion."),
+  ('Pilih kata yang tepat: "___ the heavy rain, the match continued."', "Despite", "Although", "Because", "However", "Despite + kata benda."),
+  ('Pilih kata yang tepat: "___ it was raining, the match continued."', "Although", "Despite", "Because of", "Moreover", "Although + klausa."),
+  ('Pilih kata yang tepat: "The match was cancelled ___ the heavy rain."', "because of", "because", "although", "however", "because of + kata benda."),
+  ('Pilih kata yang tepat: "The match was cancelled ___ it rained."', "because", "because of", "despite", "moreover", "because + klausa."),
+  ('Pilih kata yang tepat: "Some people prefer cities, ___ others prefer villages."', "whereas", "therefore", "moreover", "for example", "whereas = sedangkan."),
+  ('Pilih kata yang tepat: "___, the project was a success." (secara keseluruhan)', "Overall", "However", "Because", "For example", "Overall = secara keseluruhan."),
+  ('Pilih kata yang tepat: "First, ... ___, ... Finally, ..."', "Secondly", "However", "Although", "Despite", "Urutan."),
+  ('Pilih kalimat dengan tanda baca yang benar:', "It is cheap; however, it is poor.", "It is cheap, however it is poor.", "It is cheap however, it is poor.", "It is cheap. however it is poor.", "Titik koma sebelum however."),
+  ('Pilih kalimat yang benar:', "Although he was tired, he kept working.", "Although he was tired, but he kept working.", "However he was tired, he kept working.", "Despite he was tired, he kept working.", "Although tidak dipakai bersama but."),
+  ('Pilih kalimat yang SALAH:', "Despite he was ill, he went to work.", "Despite being ill, he went to work.", "Although he was ill, he went to work.", "In spite of his illness, he went to work.", "Despite tidak diikuti klausa langsung."),
+  ('Pilih kalimat yang SALAH:', "Because of it rained, the match stopped.", "Because of the rain, the match stopped.", "Because it rained, the match stopped.", "Due to the rain, the match stopped.", "because of + kata benda."),
+  ('Pilih kata penghubung tambahan yang tepat: "Exercise improves health. ___, it reduces stress."', "In addition", "In contrast", "As a result of", "On the contrary", "Menambah."),
+  ('Pilih kata penghubung kontras: "Cities offer jobs. ___, villages offer peace."', "In contrast", "Moreover", "For instance", "Therefore", "Kontras."),
+  ('Mana yang paling tepat untuk paragraf penutup?', "To sum up", "For instance", "Besides", "On the other hand", "Penutup → To sum up."),
+  ('Memakai Moreover dan Furthermore di setiap kalimat sebaiknya...', "dihindari", "diperbanyak", "wajib", "diganti titik", "Variasikan dan pakai bila perlu."),
+ ]) + mkf([
+  ("Penghubung berlawanan: ___ , some people disagree.", "___, some people disagree.", "However", "However = namun."),
+  ("Penghubung akibat: The rain was heavy. ___ , the match stopped.", "The rain was heavy. ___, the match stopped.", "Therefore/As a result/Consequently", "Akibat."),
+  ("___ the rain (bentuk kata benda), the match continued.", "___ the rain, the match continued.", "Despite/In spite of", "Despite + kata benda."),
+  ("The match stopped ___ the rain. (karena)", "The match stopped ___ the rain.", "because of/due to", "because of + kata benda."),
+ ]) + mko([
+  ("Namun, banyak orang tidak setuju.", "However, many people disagree.", "Moreover Although", ""),
+  ("Walaupun mahal, banyak orang membelinya.", "Although it is expensive, many people buy it.", "Despite However", ""),
+  ("Karena hujan, pertandingan dibatalkan.", "Because of the rain, the match was cancelled.", "Because Despite", ""),
+ ]),
+
+ quiz=mk([
+  ('Penghubung untuk menambah informasi:', "Moreover", "However", "Therefore", "Although", "Menambah."),
+  ('Penghubung untuk kontras:', "However", "Moreover", "Therefore", "For example", "Kontras."),
+  ('Penghubung untuk akibat:', "As a result", "Although", "However", "For example", "Akibat."),
+  ('"Despite" diikuti...', "kata benda atau V-ing", "klausa lengkap", "kata kerja bentuk dasar", "kata sambung", "Despite + noun/V-ing."),
+  ('"Although" diikuti...', "klausa lengkap", "kata benda saja", "angka", "kata depan saja", "Although + klausa."),
+  ('Kalimat yang benar:', "It is cheap; however, it is poor.", "It is cheap, however it is poor.", "It is cheap however it is poor.", "It is cheap. however, it is poor.", "Titik koma."),
+  ('Untuk menutup esai pakai...', "In conclusion", "For instance", "Moreover", "Whereas", "Kesimpulan."),
+  ('Untuk memberi contoh pakai...', "For instance", "Therefore", "In conclusion", "Whereas", "Contoh."),
+  ('"Whereas" berarti...', "sedangkan", "karena", "akibatnya", "contohnya", "Whereas = sedangkan."),
+  ('Pilih kalimat yang SALAH:', "Because of it was late, we left.", "Because of the delay, we left.", "Because it was late, we left.", "Due to the delay, we left.", "because of + noun."),
+ ]) + mkf([
+  ("Kesimpulan: In ___ , schools should teach cooking.", "In ___, schools should teach cooking.", "conclusion", "In conclusion."),
+  ("Contoh: ___ example, Japan has fast trains.", "___ example, Japan has fast trains.", "For", "For example."),
+ ]),
+)
