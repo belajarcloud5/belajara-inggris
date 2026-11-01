@@ -11,3 +11,15 @@ LESSONX = [
  dict(t="warn", title="Jangan campur tunggal dan jamak",
   text="Salah: ~~A lions eat meat.~~ dan ~~Lion eats meat.~~. Pilih salah satu pola di atas: [[A lion eats meat.]] atau [[Lions eat meat.]]"),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="6. Definisi dengan relative clause",
+  text="Report text sering diawali definisi: **kata benda + is a + golongan + that/which/who + ciri**.",
+  table=[["Pola", "Contoh"],
+         ["A + benda + is + a + golongan + **that / which** + ciri", "[[A tiger is a big cat that lives in Asia.]]"],
+         ["A + profesi + is + a person + **who** + tugas", "[[A farmer is a person who grows crops.]]"],
+         ["benda + **which** + kegunaan", "[[A whale is an animal which breathes air.]]"]],
+  examples=[dict(en="[[A volcano is a mountain which erupts.]]", id="Gunung berapi adalah gunung yang meletus.")]),
+ dict(t="tip", title="Pakai who untuk orang, which untuk hewan",
+  text="Pakai [[who]] untuk orang ([[a doctor who treats patients]]) dan [[which]] atau [[that]] untuk hewan dan benda ([[a bird that can swim]])."),
+]

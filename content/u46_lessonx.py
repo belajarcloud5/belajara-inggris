@@ -76,3 +76,16 @@ LESSONX += [
          ["permintaan", "Could / Would lebih sopan dari Can / Will", "[[Could you help me?]]"]],
   examples=[dict(en="[[You don't have to come, but you mustn't be late if you do.]]", id="Kamu tidak harus datang, tetapi jangan terlambat kalau datang.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="12. Relative clause: jebakan ujian",
+  text="Soal ujian sering menguji pilihan kata penghubung relatif:",
+  table=[["Jebakan", "Aturan", "Contoh"],
+         ["orang atau benda?", "who = orang; which = benda/hewan; that = keduanya", "[[the girl who sings]] / [[the song which she sings]]"],
+         ["kepemilikan", "whose + kata benda", "[[the boy whose bag is lost]]"],
+         ["tempat", "where (tanpa kata depan)", "[[the town where I live]]"],
+         ["dengan koma", "tidak boleh that", "[[My bag, which is blue, is new.]]"],
+         ["subjek ganda", "jangan ulang kata gantinya", "[[The girl who lives here is kind.]]"],
+         ["objek", "boleh dihilangkan", "[[The book I read was good.]]"]],
+  examples=[dict(en="[[The teacher whose class I joined, who is very kind, lives near the school where I study.]]", id="Guru yang kelasnya kuikuti, yang sangat baik, tinggal dekat sekolah tempat aku belajar.")]),
+]

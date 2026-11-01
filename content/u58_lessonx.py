@@ -11,3 +11,14 @@ LESSONX = [
  dict(t="warn", title="due to dan because of diikuti kata benda",
   text="Katakan [[due to the delay]] atau [[because of the delay]], bukan ~~due to it was late~~. Jika ingin memakai klausa, pakai **because** atau **since**: [[because the delivery was late]]."),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="7. Relative clause saat melaporkan masalah",
+  text="Dalam laporan masalah, relative clause menjelaskan penyebab dan pihak terkait:",
+  table=[["Fungsi", "Contoh"],
+         ["menjelaskan masalah", "[[The problem that caused the delay was a broken part.]]"],
+         ["menjelaskan orang", "[[The engineer who fixed it is on site.]]"],
+         ["menjelaskan tempat", "[[The warehouse where the parts are stored is closed.]]"],
+         ["menjelaskan sistem", "[[The server, which is old, needs replacing.]]"]],
+  examples=[dict(en="[[The team who solved the issue sent a report which explains the cause.]]", id="Tim yang menyelesaikan masalah itu mengirim laporan yang menjelaskan penyebabnya.")]),
+]
