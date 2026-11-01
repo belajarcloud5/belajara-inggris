@@ -1,0 +1,98 @@
+from qk import mk, mkf, mko
+from helpers import mcq, listen
+
+UNIT = dict(
+ id="u91",
+ goals=[
+  "mengerjakan **latihan campuran** dari semua bagian IELTS",
+  "mengulang **strategi** Reading, Listening, Writing, dan Speaking",
+  "mengetahui **bagian mana** yang masih lemah",
+  "menyusun **rencana belajar lanjutan** sebelum ujian",
+ ],
+ lesson=[
+  dict(t="intro", text="Ini **tes simulasi mini**: latihan campuran dari seluruh modul. Skor di Kuis hanya perkiraan kemampuan untuk bagian yang bisa dinilai di sini (Reading, Listening, kosakata, tata bahasa). **Writing dan Speaking tetap membutuhkan umpan balik dari orang lain**, jadi gunakan daftar periksa di unit 86 sampai 90."),
+
+  dict(t="grammar", title="1. Ringkasan strategi",
+   table=[["Bagian", "Strategi utama"],
+          ["**Listening**", "baca soal dulu; waspada koreksi (actually, sorry I mean); cek ejaan"],
+          ["**Reading**", "skim lalu scan; True/False/Not Given hanya berdasar teks; patuhi batas kata"],
+          ["**Writing**", "Task 1: overview wajib; Task 2: jawab soal, thesis jelas, PEEL; cek tata bahasa"],
+          ["**Speaking**", "jawab + alasan + contoh; jangan hafalan; ungkapan pengisi natural"]]),
+
+  dict(t="grammar", title="2. Di mana kamu lemah?",
+   table=[["Jika salah di...", "Ulangi unit"],
+          ["format ujian dan skor", "unit 76"],
+          ["membaca cepat dan T/F/NG", "unit 77, 78, 79"],
+          ["kosakata akademik dan penghubung", "unit 80 sampai 83"],
+          ["angka, ejaan, dan koreksi saat mendengar", "unit 84, 85"],
+          ["Writing Task 1 dan Task 2", "unit 86, 87, 88"],
+          ["Speaking", "unit 89, 90"]]),
+
+  dict(t="tip", title="Lanjutan yang disarankan",
+   text="Setelah modul ini, kerjakan tes IELTS penuh dengan waktu nyata, lalu minta guru memeriksa Writing dan menilai Speaking-mu. Rekam dirimu menjawab pertanyaan Part 1 sampai 3 dan dengarkan kembali."),
+  dict(t="warn", title="Skor di sini bukan skor band resmi",
+   text="Kuis ini membantu latihan, tetapi tidak sama dengan ujian resmi. Gunakan sebagai petunjuk, bukan prediksi."),
+ ],
+
+ practice=mk([
+  ('Berapa bagian dalam IELTS?', "4", "2", "3", "5", "Empat bagian."),
+  ('Rekaman Listening diputar...', "sekali", "dua kali", "tiga kali", "bebas", "Sekali."),
+  ('Teknik mencari informasi spesifik:', "scanning", "skimming", "translating", "memorizing", "Scanning."),
+  ('Teks: "Some students study at night." Pernyataan: "All students study at night." Jawabannya...', "False", "True", "Not Given", "tidak bisa dijawab", "some ≠ all."),
+  ('Teks tidak menyebut sebuah hal. Jawaban T/F/NG-nya...', "Not Given", "True", "False", "kosong", "Tidak ada informasi."),
+  ('"NO MORE THAN TWO WORDS": jawaban yang diterima...', "high prices", "very high prices", "the very high prices", "prices are high", "Dua kata."),
+  ('Kata penghubung kontras:', "However", "Moreover", "Therefore", "For example", "Kontras."),
+  ('Kata penghubung akibat:', "As a result", "Although", "However", "For instance", "Akibat."),
+  ('"Despite" diikuti...', "kata benda atau V-ing", "klausa lengkap", "kata kerja dasar", "kata sambung", "Despite + noun/V-ing."),
+  ('Berapa kata minimal Task 1?', "150", "250", "100", "400", "150."),
+  ('Berapa kata minimal Task 2?', "250", "150", "100", "400", "250."),
+  ('Overview wajib ada pada...', "Task 1", "Task 2", "Speaking Part 1", "Listening", "Task 1."),
+  ('PEEL: P singkatan dari...', "Point", "Plan", "Paragraph", "Pause", "Point."),
+  ('Kalimat mana yang formal?', "Children need support.", "Kids need loads of support.", "Kids really need heaps of help.", "Kids gotta get help.", "Formal."),
+  ('Kalimat mana yang benar?', "There is much information here.", "There are many informations here.", "There is many information here.", "There are much information here.", "information tak terhitung."),
+  ('"Rose" dan "climbed" bermakna...', "naik", "turun", "stabil", "berhenti", "naik."),
+  ('"Thirteen" dan "thirty" dibedakan oleh...', "tekanan suku kata", "huruf pertama", "jumlah huruf", "tidak ada beda", "thirTEEN vs THIRty."),
+  ('"Double L" dalam ejaan berarti...', "huruf L dua kali", "huruf D lalu L", "dua kata L", "huruf kecil L", "double = kembar."),
+  ('Jawaban Part 1 yang baik:', "jawaban + alasan + contoh", "satu kata", "hafalan", "pertanyaan balik", "Lengkap."),
+  ('Waktu persiapan Part 2:', "1 menit", "5 menit", "10 detik", "tidak ada", "1 menit."),
+  ('Part 3 membahas...', "topik abstrak", "alamat", "angka", "data pribadi", "Abstrak."),
+  ('Mana yang BUKAN kriteria Speaking?', "Task Achievement", "Fluency and Coherence", "Pronunciation", "Lexical Resource", "Itu kriteria Writing."),
+  ('Skor keseluruhan IELTS adalah...', "rata-rata empat bagian", "jumlah", "nilai tertinggi", "nilai Writing", "Rata-rata."),
+  ('Arti "sustainable"...', "berkelanjutan", "berbahaya", "terlambat", "mahal", "sustainable."),
+  ('Arti "curriculum"...', "kurikulum", "pajak", "kota", "gaji", "curriculum."),
+  ('Arti "inflation"...', "inflasi", "pengangguran", "pajak", "ekspor", "inflation."),
+ ]) + [
+  listen("Dengarkan. Berapa harga tiketnya?", "The ticket costs fifteen dollars.", ["15", "50", "14", "40"], 0, "fifteen = 15."),
+  listen("Dengarkan. Hari apa pertemuan diadakan?", "The meeting is on Monday. Actually, it has been moved to Tuesday.", ["Tuesday", "Monday", "Wednesday", "Friday"], 0, "Koreksi: Tuesday."),
+  listen("Dengarkan. Nama yang dieja?", "My surname is K, E, A, R, N, E, Y.", ["Kearney", "Kerney", "Carney", "Kearny"], 0, "KEARNEY."),
+ ] + mkf([
+  ("Pilih kata penghubung kontras: ___ , many people disagree.", "___, many people disagree.", "However", "However."),
+  ("Teknik mencari info spesifik: ___ .", "The technique for finding specific information is ___.", "scanning", "Scanning."),
+  ("Writing Task 2 minimal ___ kata.", "Task 2 needs at least two hundred and ___ words.", "fifty", "250."),
+  ("Mulai Part 2: I'd ___ to talk about a place.", "I'd ___ to talk about a place.", "like", "I'd like to."),
+ ]),
+
+ quiz=mk([
+  ('Berapa bagian dalam IELTS?', "4", "2", "3", "5", "4."),
+  ('Skimming adalah...', "membaca untuk gambaran umum", "mencari angka", "menghafal", "menerjemahkan", "Gambaran umum."),
+  ('Scanning adalah...', "mencari informasi spesifik", "membaca untuk gambaran umum", "menulis", "mendengar", "Info spesifik."),
+  ('Teks diam tentang sebuah hal. Jawabannya...', "Not Given", "True", "False", "kosong", "Not Given."),
+  ('Kata penghubung kontras:', "However", "Moreover", "Therefore", "For example", "However."),
+  ('Kata penghubung akibat:', "As a result", "Although", "However", "For instance", "Akibat."),
+  ('Rekaman Listening diputar...', "sekali", "dua kali", "tiga kali", "bebas", "Sekali."),
+  ('"Actually, ..." pada rekaman biasanya menandakan...', "koreksi", "penutup", "pertanyaan", "salam", "Koreksi."),
+  ('Task 2 minimal...', "250 kata", "150 kata", "100 kata", "50 kata", "250."),
+  ('Overview wajib di...', "Task 1", "Task 2", "Part 1", "Listening", "Task 1."),
+  ('Jawaban Part 1 yang baik:', "jawaban + alasan + contoh", "satu kata", "hafalan", "diam", "Lengkap."),
+  ('Arti "sustainable"...', "berkelanjutan", "berbahaya", "terlambat", "mahal", "sustainable."),
+  ('Arti "tuition"...', "uang kuliah", "pajak", "kota", "tugas", "tuition."),
+  ('Arti "unemployment"...', "pengangguran", "gaji", "karier", "pensiun", "unemployment."),
+  ('Pilih kalimat yang benar:', "Students who study abroad often become independent.", "Students who studies abroad often become independent.", "Students who study abroad often becomes independent.", "Students study who abroad often become.", "who study ... become."),
+ ]) + [
+  listen("Dengarkan. Berapa totalnya?", "The total is twelve pounds fifty.", ["£12.50", "£12.15", "£15.50", "£20.50"], 0, "twelve fifty."),
+  listen("Dengarkan. Jam berapa bus berangkat?", "The bus leaves at a quarter to eight.", ["7.45", "8.15", "8.45", "7.15"], 0, "quarter to eight = 7.45."),
+ ] + mkf([
+  ("Rata-rata empat bagian adalah skor ___ .", "The overall score is the ___ of four parts.", "average", "Rata-rata."),
+  ("Kata untuk perubahan besar dan cepat: ___ .", "Sales fell ___.", "sharply/dramatically/rapidly", "Besar dan cepat."),
+ ]),
+)

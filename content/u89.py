@@ -1,0 +1,98 @@
+from qk import mk, mkf, mko
+
+UNIT = dict(
+ id="u89",
+ goals=[
+  "menjawab **Part 1** dengan jawaban 2 sampai 3 kalimat yang alami",
+  "memakai **kartu topik Part 2** dengan struktur yang jelas",
+  "menambah **alasan, contoh, dan detail** agar jawaban tidak terlalu pendek",
+  "menghindari **jawaban hafalan** dan kebiasaan yang merugikan",
+ ],
+ lesson=[
+  dict(t="intro", text="Speaking IELTS adalah wawancara sekitar 11 sampai 14 menit dengan penguji. **Part 1**: pertanyaan tentang dirimu (4 sampai 5 menit). **Part 2**: kartu topik, 1 menit persiapan, lalu bicara 1 sampai 2 menit. **Part 3**: diskusi lebih abstrak (unit berikutnya). **Catatan:** situs ini tidak menilai suaramu. Kamu mendapat pola jawaban, contoh, dan latihan menulis balasan; untuk pelafalan, rekam dirimu atau minta guru mendengarkan."),
+
+  dict(t="grammar", title="1. Rumus jawaban Part 1",
+   table=[["Langkah", "Contoh"],
+          ["Jawab langsung", "[[Yes, I do. I love reading.]]"],
+          ["Beri alasan", "[[It helps me relax after school.]]"],
+          ["Tambah contoh/detail", "[[For example, I read a novel every weekend.]]"]],
+   examples=[dict(en="[[Q: Do you like cooking? A: Yes, I do. It's relaxing, and I enjoy trying new recipes. Last week I made a spicy chicken soup.]]", id="Q: Apakah kamu suka memasak? A: Ya. Itu menenangkan, dan aku suka mencoba resep baru. Minggu lalu aku membuat sup ayam pedas.")]),
+
+  dict(t="grammar", title="2. Topik Part 1 yang sering muncul",
+   table=[["Topik", "Contoh pertanyaan"],
+          ["rumah dan tempat tinggal", "[[Do you live in a house or an apartment?]]"],
+          ["pekerjaan dan studi", "[[What do you do?]] / [[Why did you choose your major?]]"],
+          ["hobi", "[[What do you do in your free time?]]"],
+          ["makanan", "[[What kind of food do you enjoy?]]"],
+          ["transportasi", "[[How do you usually travel to work or school?]]"],
+          ["teknologi", "[[How often do you use your phone?]]"]]),
+
+  dict(t="grammar", title="3. Part 2: kartu topik",
+   text="Kamu mendapat kartu, misalnya: *Describe a place you enjoyed visiting.* Dengan poin: where it is, when you went, what you did, why you liked it.",
+   table=[["Waktu", "Yang dilakukan"],
+          ["1 menit persiapan", "tulis kata kunci untuk tiap poin (bukan kalimat)"],
+          ["menit pertama", "perkenalan + 'where' dan 'when'"],
+          ["menit kedua", "'what you did' dengan detail"],
+          ["akhir", "'why you liked it' dan penutup singkat"]],
+   examples=[dict(en="[[I'd like to talk about the beach in Bali that I visited last year.]]", id="Aku ingin bercerita tentang pantai di Bali yang kukunjungi tahun lalu.")]),
+
+  dict(t="grammar", title="4. Ungkapan yang berguna",
+   table=[["Fungsi", "Ungkapan"],
+          ["memulai", "[[I'd like to talk about ...]]"],
+          ["memberi waktu berpikir", "[[Let me think... / That's an interesting question.]]"],
+          ["menambah", "[[What's more, ... / Another thing is ...]]"],
+          ["alasan", "[[The main reason is that ...]]"],
+          ["menutup", "[[All in all, it was a memorable experience.]]"]]),
+
+  dict(t="tip", title="Bicara natural, bukan hafalan",
+   text="Penguji dilatih untuk mengenali jawaban hafalan dan bisa menurunkan nilai. Siapkan kosakata dan pola, bukan skrip. Jawab pertanyaan yang diajukan, bukan topik yang kamu hafal."),
+  dict(t="warn", title="Jangan jawab dengan satu kata",
+   text="Jawaban satu kata ('Yes.' atau 'No.') tidak memberi kesempatan menunjukkan kemampuan. Tambahkan minimal satu alasan atau contoh."),
+ ],
+
+ practice=mk([
+  ('Berapa lama sekitar total Speaking?', "11 sampai 14 menit", "30 menit", "5 menit", "60 menit", "Sekitar 11-14 menit."),
+  ('Pada Part 2, waktu persiapan adalah...', "1 menit", "5 menit", "10 detik", "tidak ada", "1 menit."),
+  ('Pada Part 2, kamu berbicara sekitar...', "1 sampai 2 menit", "30 detik", "5 menit", "10 menit", "1-2 menit."),
+  ('Jawaban Part 1 yang baik berisi...', "jawaban, alasan, dan contoh", "satu kata", "skrip hafalan", "pertanyaan balik", "Jawab + alasan + contoh."),
+  ('Pada waktu persiapan Part 2, kamu sebaiknya menulis...', "kata kunci", "kalimat lengkap", "esai", "tidak menulis", "Kata kunci."),
+  ('Mana jawaban Part 1 yang lebih baik untuk "Do you like cooking?"', "Yes, I do. It\'s relaxing, and I enjoy trying new recipes.", "Yes.", "No.", "I don\'t know.", "Beri alasan."),
+  ('Mana yang paling tepat untuk memulai Part 2?', "I\'d like to talk about a place I enjoyed visiting.", "I don\'t know what to say.", "Next question, please.", "The weather is nice.", "Perkenalkan topik."),
+  ('"Let me think..." berguna untuk...', "memberi waktu berpikir", "mengakhiri tes", "meminta bantuan", "menolak soal", "Pengisi waktu."),
+  ('"What\'s more, ..." berguna untuk...', "menambah informasi", "membantah", "menutup", "meminta maaf", "Menambah."),
+  ('"The main reason is that ..." berguna untuk...', "memberi alasan", "menambah contoh", "meminta pengulangan", "menutup percakapan", "Alasan."),
+  ('Apa risiko jawaban hafalan?', "nilai bisa turun", "nilai naik", "tidak ada", "penguji senang", "Hafalan mudah dikenali."),
+  ('Jika tidak mengerti pertanyaan, sebaiknya...', "meminta pengulangan dengan sopan", "diam saja", "menjawab asal", "mengakhiri tes", "Pardon? / Could you repeat that?"),
+  ('Ungkapan sopan meminta pengulangan:', "Sorry, could you repeat the question?", "What?", "Again!", "Say it.", "Sopan."),
+  ('Mana yang BUKAN poin pada kartu topik tipikal?', "your grade point average", "where it is", "when you went", "why you liked it", "Bukan poin lazim."),
+  ('Mana yang termasuk penutup Part 2 yang baik?', "All in all, it was a memorable experience.", "That\'s all I know, bye.", "I forgot the rest.", "The end.", "Penutup natural."),
+  ('Pilih kalimat yang paling alami:', "I usually travel by bus because it\'s cheap.", "I travel bus because cheap.", "Bus is me travel.", "I am bus.", "Natural."),
+  ('Pilih kalimat yang SALAH:', "I am agree with you.", "I agree with you.", "I really agree.", "I couldn\'t agree more.", "agree tanpa am."),
+  ('Pilih kalimat yang SALAH:', "I am live in Jakarta.", "I live in Jakarta.", "I\'ve lived here for years.", "I am living in Jakarta now.", "live, bukan am live."),
+  ('Part 3 membahas...', "topik abstrak yang berkaitan dengan Part 2", "tanda tangan", "alamat rumah", "keluarga saja", "Diskusi abstrak."),
+  ('Kebiasaan berikut yang membantu kelancaran adalah...', "berlatih bicara setiap hari", "diam sepanjang hari", "menghafal skrip", "membaca saja", "Latihan bicara."),
+ ]) + mkf([
+  ("Part 2 diawali waktu persiapan 1 ___ .", "In Part 2 you get one minute to ___.", "prepare", "Persiapan."),
+  ("Jawaban yang baik memberi alasan: because ___ .", "I like it ___ it is relaxing.", "because", "Alasan."),
+  ("Perkenalan Part 2: I'd ___ to talk about a place.", "I'd ___ to talk about a place.", "like", "I'd like to talk about."),
+  ("Meminta pengulangan: Could you ___ the question?", "Could you ___ the question?", "repeat", "repeat."),
+ ]) + mko([
+  ("Aku ingin bercerita tentang pantai di Bali.", "I'd like to talk about the beach in Bali.", "talks talking", ""),
+  ("Alasan utamanya adalah suasananya tenang.", "The main reason is that it is peaceful.", "reasons is", ""),
+  ("Singkatnya, itu pengalaman yang berkesan.", "All in all, it was a memorable experience.", "Overall are", ""),
+ ]),
+
+ quiz=mk([
+  ('Part 2: waktu persiapan:', "1 menit", "5 menit", "10 detik", "tidak ada", "1 menit."),
+  ('Part 2: waktu bicara:', "1 sampai 2 menit", "30 detik", "5 menit", "10 menit", "1-2 menit."),
+  ('Jawaban Part 1 yang baik:', "jawaban + alasan + contoh", "satu kata", "hafalan", "pertanyaan balik", "Lengkap."),
+  ('"Sorry, could you repeat the question?" digunakan saat...', "tidak mengerti pertanyaan", "ingin selesai", "ingin mengganti topik", "ingin bertanya harga", "Sopan."),
+  ('Pilih kalimat yang benar:', "I agree with you.", "I am agree with you.", "I agree to you.", "I agrees you.", "agree with."),
+  ('Pilih kalimat yang SALAH:', "I am live in Bandung.", "I live in Bandung.", "I\'ve lived here for years.", "I am living here now.", "live."),
+  ('Penutup alami:', "All in all, it was memorable.", "That\'s all I know.", "Bye.", "Next.", "Penutup."),
+  ('Waktu persiapan Part 2 dipakai untuk menulis...', "kata kunci", "esai", "kalimat penuh", "tidak ada", "Kata kunci."),
+ ]) + mkf([
+  ("Part 1 berlangsung sekitar ___ menit. (angka dalam huruf)", "Part 1 lasts about four or ___ minutes.", "five", "Empat sampai lima menit."),
+  ("Kata yang memberi alasan: ___ it is relaxing.", "I like it ___ it is relaxing.", "because", "because."),
+ ]),
+)

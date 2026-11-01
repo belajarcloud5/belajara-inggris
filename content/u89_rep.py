@@ -1,0 +1,46 @@
+from qk import mkr
+REP = dict(practice=mkr([('Part 1: hobi.',
+  'Examiner: What do you like to do in your free time?',
+  'menjawab dengan alasan',
+  'I like reading novels because it helps me relax. // I enjoy playing football because it keeps me fit. // I like cooking because it is '
+  'relaxing.',
+  'because,so,since'),
+ ('Part 1: makanan.',
+  'Examiner: What kind of food do you enjoy?',
+  'menjawab dengan contoh',
+  'I enjoy spicy food because it is tasty. For example, I love fried rice. // I like noodles because they are quick to cook. // I enjoy '
+  'seafood because it is fresh.',
+  'because,for example,like,enjoy,love'),
+ ('Part 1: transportasi.',
+  'Examiner: How do you usually travel to school or work?',
+  'menjawab',
+  'I usually go by bus because it is cheap. // I travel by motorbike because it is fast. // I usually walk because it is close.',
+  'usually,by,walk,travel,go'),
+ ('Part 1: tempat tinggal.',
+  'Examiner: Do you live in a house or an apartment?',
+  'menjawab dengan detail',
+  'I live in a house with my family. It has a small garden. // I live in an apartment near my university. // I live in a house in a quiet '
+  'area.',
+  'live,house,apartment'),
+ ('Part 1: teknologi.',
+  'Examiner: How often do you use your phone?',
+  'menjawab',
+  'I use my phone every day, mostly for messages and studying. // I use it quite often because I study online. // I use it for about three '
+  'hours a day.',
+  'use,often,every,day,hours'),
+ ('Part 1: belajar.',
+  'Examiner: Why did you choose your major?',
+  'menjawab dengan alasan',
+  'I chose it because I am interested in technology. // I chose it because it has good job opportunities. // I chose it because I enjoy '
+  'helping people.',
+  'because,chose,interested,enjoy')]), quiz=mkr([('Part 2: memulai.',
+  'Examiner: Please start your talk about a place you enjoyed visiting.',
+  'memulai dengan perkenalan',
+  "I'd like to talk about the beach in Bali that I visited last year. // I'd like to talk about a lake near my hometown. // I'd like to "
+  'describe a temple I visited with my family.',
+  'like,talk,describe'),
+ ('Part 2: menutup.',
+  'Examiner: Is there anything else you would like to add?',
+  'menutup dengan baik',
+  'All in all, it was a memorable experience. // Overall, I really enjoyed the trip. // That is about it. It was a wonderful place.',
+  'all in all,overall,memorable,enjoyed,wonderful')]))

@@ -1,0 +1,102 @@
+from qk import mk, mkf, mko
+
+UNIT = dict(
+ id="u86",
+ goals=[
+  "menyusun jawaban **Task 1** dalam empat paragraf yang jelas",
+  "memakai **bahasa tren**: naik, turun, stabil, puncak",
+  "membuat **perbandingan** dan memilih **fitur utama** dari grafik",
+  "menghindari **opini** dan **angka yang salah** dalam deskripsi",
+ ],
+ lesson=[
+  dict(t="intro", text="Pada **Writing Task 1 (Academic)** kamu menjelaskan sebuah grafik, tabel, diagram, atau peta dalam minimal 150 kata dalam sekitar 20 menit. Kamu **tidak** memberi pendapat; kamu melaporkan data dengan jelas. **Catatan:** situs ini tidak menilai tulisanmu. Gunakan pola dan contoh di bawah, lalu minta guru atau teman yang mahir untuk memeriksanya."),
+
+  dict(t="grammar", title="1. Struktur empat paragraf",
+   table=[["Paragraf", "Isi"],
+          ["1. Pengantar", "Parafrase soal: apa yang ditunjukkan, kapan, di mana"],
+          ["2. Gambaran umum (overview)", "2 sampai 3 fitur utama tanpa angka rinci"],
+          ["3. Detail 1", "Data pendukung untuk fitur utama pertama"],
+          ["4. Detail 2", "Data pendukung untuk fitur utama kedua"]],
+   examples=[dict(en="[[The line graph shows how many tourists visited Bali between 2010 and 2020.]]", id="Grafik garis ini menunjukkan berapa wisatawan yang mengunjungi Bali antara 2010 dan 2020.")]),
+
+  dict(t="grammar", title="2. Bahasa tren",
+   table=[["Makna", "Kata kerja", "Kata benda"],
+          ["naik", "rose, increased, grew, climbed", "a rise, an increase, growth"],
+          ["turun", "fell, decreased, declined, dropped", "a fall, a decrease, a decline"],
+          ["stabil", "remained stable, stayed constant, levelled off", "a plateau"],
+          ["puncak", "peaked at ...", "a peak"],
+          ["terendah", "reached a low of ...", "the lowest point"]],
+   examples=[dict(en="[[The number of tourists rose sharply from 2010 to 2015, then fell slightly.]]", id="Jumlah wisatawan naik tajam dari 2010 sampai 2015, lalu turun sedikit.")]),
+
+  dict(t="grammar", title="3. Kata keterangan untuk besar perubahan",
+   table=[["Perubahan besar / cepat", "Perubahan kecil / lambat"],
+          ["sharply, dramatically, rapidly, significantly", "slightly, gradually, steadily, marginally"]],
+   examples=[dict(en="[[Sales increased gradually.]] / [[Sales fell dramatically.]]", id="Penjualan naik perlahan. / Penjualan jatuh drastis.")]),
+
+  dict(t="grammar", title="4. Perbandingan dan angka",
+   table=[["Pola", "Contoh"],
+          ["X was higher than Y", "[[Rice was higher than wheat.]]"],
+          ["X was twice as high as Y", "[[Exports were twice as high as imports.]]"],
+          ["accounted for / made up", "[[Tourism accounted for 40 percent of income.]]"],
+          ["from ... to ...", "[[from 20 to 50 percent]]"],
+          ["by ... (selisih)", "[[rose by 15 percent]]"]]),
+
+  dict(t="grammar", title="5. Contoh jawaban singkat",
+   text="Soal: grafik garis jumlah pengunjung perpustakaan (ribu) dari 2015 sampai 2020. Contoh bagian pengantar dan gambaran umum:",
+   table=[["Bagian", "Contoh"],
+          ["Pengantar", "[[The line graph illustrates the number of library visitors, in thousands, between 2015 and 2020.]]"],
+          ["Overview", "[[Overall, visitor numbers rose steadily until 2019 before falling sharply in 2020.]]"],
+          ["Detail", "[[In 2015, about 40 thousand people visited the library. This figure climbed to a peak of 70 thousand in 2019 but dropped to 30 thousand in 2020.]]"]]),
+
+  dict(t="tip", title="Overview wajib",
+   text="Tanpa overview, nilai Task Achievement turun. Overview menyebut tren umum atau perbandingan terbesar, tanpa angka rinci."),
+  dict(t="warn", title="Tenses sesuai tahun",
+   text="Data masa lalu memakai past simple (*rose, fell*). Data masa depan memakai *is expected to* atau *will*. Jangan menambahkan penyebab atau opini yang tidak ada di data."),
+ ],
+
+ practice=mk([
+  ('Berapa jumlah kata minimum Writing Task 1?', "150", "250", "100", "300", "Minimal 150 kata."),
+  ('Paragraf yang menyebut tren umum tanpa angka rinci disebut...', "overview", "conclusion", "introduction", "example", "Overview."),
+  ('Mana yang BUKAN bagian Task 1?', "pendapat pribadi", "pengantar", "overview", "detail data", "Task 1 tidak meminta opini."),
+  ('"Rose" dan "climbed" bermakna...', "naik", "turun", "stabil", "berhenti", "Rose/climbed = naik."),
+  ('"Fell" dan "dropped" bermakna...', "turun", "naik", "stabil", "puncak", "Fell/dropped = turun."),
+  ('"Remained stable" bermakna...', "tetap stabil", "naik tajam", "turun", "mencapai puncak", "Stabil."),
+  ('"Peaked at 70 thousand" bermakna...', "mencapai puncak 70 ribu", "turun ke 70 ribu", "stabil di 70 ribu", "mulai dari 70 ribu", "Peak = puncak."),
+  ('Pilih kata keterangan untuk perubahan kecil dan lambat:', "gradually", "sharply", "dramatically", "rapidly", "Gradually = perlahan."),
+  ('Pilih kata keterangan untuk perubahan besar dan cepat:', "sharply", "slightly", "gradually", "steadily", "Sharply = tajam."),
+  ('Pilih kalimat tren yang benar (data masa lalu):', "The number rose sharply in 2015.", "The number rises sharply in 2015.", "The number will rise sharply in 2015.", "The number is rising sharply in 2015.", "Data masa lalu → past simple."),
+  ('Pilih kalimat perbandingan yang benar:', "Rice was higher than wheat.", "Rice was higher then wheat.", "Rice is more high wheat.", "Rice higher wheat.", "higher than."),
+  ('Pilih kalimat yang SALAH:', "The figure raised from 20 to 50 percent.", "The figure rose from 20 to 50 percent.", "The figure increased from 20 to 50 percent.", "The figure grew from 20 to 50 percent.", "rise tidak butuh objek (rose, bukan raised)."),
+  ('Pilih kalimat yang SALAH:', "I think the government should build more roads.", "Overall, exports exceeded imports.", "The graph shows spending in 2019.", "Sales fell slightly.", "Task 1 tidak berisi opini."),
+  ('Mana kalimat pengantar yang paling tepat?', "The line graph shows how many people visited the library from 2015 to 2020.", "I will describe the graph now.", "Libraries are important places.", "Visitors are happy.", "Parafrase soal."),
+  ('Mana overview yang baik?', "Overall, visitor numbers rose until 2019 before falling in 2020.", "In 2015 there were 40 thousand visitors.", "I like this graph.", "The graph is colourful.", "Tren umum tanpa angka rinci."),
+  ('Berapa menit sebaiknya dipakai untuk Task 1?', "Sekitar 20 menit", "Sekitar 40 menit", "Sekitar 5 menit", "Sekitar 60 menit", "Task 1 sekitar 20 menit."),
+  ('"Accounted for 40 percent" bermakna...', "menyumbang 40 persen", "turun 40 persen", "naik 40 persen", "dimulai dari 40", "account for = menyumbang."),
+  ('"Twice as high as" bermakna...', "dua kali lebih tinggi dari", "setengah dari", "sama dengan", "lebih rendah dari", "Dua kali lipat."),
+  ('Untuk data tahun 2030 yang diperkirakan, pakai...', "is expected to rise", "rose", "has risen", "was rising", "Prediksi."),
+  ('Jika grafik tidak menunjukkan alasan, kamu...', "tidak menambahkan alasan", "membuat alasan", "menulis opini", "mengabaikan data", "Jangan menambah info yang tidak ada."),
+ ]) + mkf([
+  ("Jumlah itu ___ tajam dari 2010 sampai 2015. (naik)", "The number ___ sharply from 2010 to 2015.", "rose/increased/grew", "Past simple: rose."),
+  ("Penjualan ___ perlahan. (turun, past)", "Sales ___ gradually.", "fell/decreased/declined/dropped", "Past simple: fell."),
+  ("Jumlah itu mencapai puncak: it ___ at 70 thousand.", "It ___ at 70 thousand.", "peaked", "peak → peaked."),
+  ("Overall, the number ___ steadily. (naik, past)", "Overall, the number ___ steadily.", "rose/increased/grew", "Past simple."),
+ ]) + mko([
+  ("Grafik itu menunjukkan jumlah wisatawan.", "The graph shows the number of tourists.", "show shown", ""),
+  ("Jumlah itu naik tajam pada tahun dua ribu lima belas.", "The number rose sharply in two thousand and fifteen.", "raise rises", ""),
+  ("Ekspor dua kali lebih tinggi daripada impor.", "Exports were twice as high as imports.", "was higher", ""),
+ ]),
+
+ quiz=mk([
+  ('Task 1 meminta...', "mendeskripsikan data", "memberi opini", "menceritakan pengalaman", "menulis cerita", "Deskripsi data."),
+  ('Paragraf tren umum tanpa angka rinci:', "overview", "introduction", "conclusion", "example", "Overview."),
+  ('"Declined" bermakna...', "menurun", "naik", "stabil", "puncak", "Menurun."),
+  ('Kata keterangan perubahan kecil:', "slightly", "sharply", "dramatically", "rapidly", "Kecil."),
+  ('Kalimat benar (masa lalu):', "Sales fell in 2018.", "Sales falls in 2018.", "Sales will fall in 2018.", "Sales falling in 2018.", "Past simple."),
+  ('Mana yang BUKAN bagian Task 1?', "opini pribadi", "pengantar", "overview", "detail data", "Tidak ada opini."),
+  ('"Peaked at" bermakna...', "mencapai puncak di", "mulai dari", "turun ke", "stabil di", "Puncak."),
+  ('Pilih kalimat yang SALAH:', "Prices raised in 2019.", "Prices rose in 2019.", "Prices increased in 2019.", "Prices grew in 2019.", "rose, bukan raised."),
+ ]) + mkf([
+  ("Jumlah itu ___ sedikit. (turun, past)", "The number ___ slightly.", "fell/decreased/dropped/declined", "fell."),
+  ("Task 1 minimal ___ kata.", "Task 1 needs at least one hundred and ___ words.", "fifty", "Seratus lima puluh."),
+ ]),
+)

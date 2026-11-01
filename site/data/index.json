@@ -917,7 +917,10 @@
   "title": "Listening: Notes and Distractors",
   "emoji": "📝",
   "ringkas": "Mengikuti perubahan jawaban, kata kunci, dan jebakan koreksi",
-  "ready": false
+  "ready": true,
+  "practice_n": 25,
+  "quiz_n": 11,
+  "read_n": 0
  },
  {
   "id": "u86",
@@ -927,7 +930,10 @@
   "title": "Writing Task 1: Describing Graphs",
   "emoji": "📊",
   "ringkas": "Bahasa tren, perbandingan, struktur 4 paragraf, dan contoh jawaban",
-  "ready": false
+  "ready": true,
+  "practice_n": 27,
+  "quiz_n": 10,
+  "read_n": 0
  },
  {
   "id": "u87",
@@ -937,7 +943,10 @@
   "title": "Writing Task 2: Essay Structure",
   "emoji": "✍️",
   "ringkas": "Jenis esai, thesis, paragraf isi, kesimpulan, dan contoh jawaban",
-  "ready": false
+  "ready": true,
+  "practice_n": 27,
+  "quiz_n": 10,
+  "read_n": 0
  },
  {
   "id": "u88",
@@ -947,7 +956,10 @@
   "title": "Writing: Grammar and Common Errors",
   "emoji": "🔧",
   "ringkas": "Kalimat kompleks, kesalahan umum, dan daftar periksa sebelum mengumpulkan",
-  "ready": false
+  "ready": true,
+  "practice_n": 27,
+  "quiz_n": 10,
+  "read_n": 0
  },
  {
   "id": "u89",
@@ -957,7 +969,10 @@
   "title": "Speaking Part 1 and 2",
   "emoji": "🗣️",
   "ringkas": "Menjawab pertanyaan pribadi dan berbicara 2 menit dengan kartu topik",
-  "ready": false
+  "ready": true,
+  "practice_n": 33,
+  "quiz_n": 12,
+  "read_n": 0
  },
  {
   "id": "u90",
@@ -967,7 +982,10 @@
   "title": "Speaking Part 3 and Fluency",
   "emoji": "💬",
   "ringkas": "Diskusi abstrak, memperpanjang jawaban, dan ungkapan pengisi waktu",
-  "ready": false
+  "ready": true,
+  "practice_n": 33,
+  "quiz_n": 12,
+  "read_n": 0
  },
  {
   "id": "u91",
@@ -977,7 +995,10 @@
   "title": "IELTS Mini Mock Test",
   "emoji": "🏁",
   "ringkas": "Latihan campuran dari semua bagian dengan petunjuk perbaikan",
-  "ready": false
+  "ready": true,
+  "practice_n": 33,
+  "quiz_n": 19,
+  "read_n": 1
  },
  {
   "id": "u48",

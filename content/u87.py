@@ -1,0 +1,100 @@
+from qk import mk, mkf, mko
+
+UNIT = dict(
+ id="u87",
+ goals=[
+  "mengenali **lima jenis esai** Task 2 dan apa yang diminta masing-masing",
+  "menulis **pengantar** dengan parafrase dan **thesis statement**",
+  "menyusun **paragraf isi**: kalimat topik, penjelasan, contoh",
+  "menulis **kesimpulan** yang singkat dan konsisten",
+ ],
+ lesson=[
+  dict(t="intro", text="**Writing Task 2** adalah esai minimal 250 kata dalam sekitar 40 menit. Nilainya lebih besar daripada Task 1, jadi kerjakan Task 2 dengan serius. **Catatan:** situs ini tidak menilai esaimu. Pakai struktur dan contoh di sini, lalu minta guru atau teman mahir memeriksa."),
+
+  dict(t="grammar", title="1. Lima jenis esai",
+   table=[["Jenis", "Contoh perintah", "Yang harus kamu lakukan"],
+          ["**Opinion** (agree / disagree)", "[[To what extent do you agree or disagree?]]", "nyatakan posisi dan pertahankan"],
+          ["**Discussion**", "[[Discuss both views and give your opinion.]]", "bahas dua sisi lalu beri pendapat"],
+          ["**Problem / Solution**", "[[What problems does this cause? What can be done?]]", "jelaskan masalah dan solusinya"],
+          ["**Advantages / Disadvantages**", "[[Do the advantages outweigh the disadvantages?]]", "bandingkan, lalu putuskan"],
+          ["**Two-part question**", "[[Why is this happening? Is it positive or negative?]]", "jawab kedua pertanyaan"]]),
+
+  dict(t="grammar", title="2. Struktur empat paragraf",
+   table=[["Paragraf", "Isi", "Kalimat"],
+          ["1. Pengantar", "parafrase soal + thesis", "2 sampai 3"],
+          ["2. Isi 1", "gagasan utama pertama", "4 sampai 5"],
+          ["3. Isi 2", "gagasan utama kedua", "4 sampai 5"],
+          ["4. Kesimpulan", "ulang posisi dengan kata lain", "2 sampai 3"]]),
+
+  dict(t="grammar", title="3. Pengantar dan thesis",
+   table=[["Bagian", "Contoh"],
+          ["Soal", "[[Some people think children should learn a second language at primary school.]]"],
+          ["Parafrase", "[[It is argued by some that young pupils should study a foreign language.]]"],
+          ["Thesis (opini)", "[[I strongly agree because it improves their future opportunities and develops their memory.]]"],
+          ["Thesis (discussion)", "[[This essay will discuss both views before giving my own opinion.]]"]]),
+
+  dict(t="grammar", title="4. Paragraf isi (PEEL)",
+   table=[["Huruf", "Fungsi", "Contoh"],
+          ["**P**oint", "kalimat topik", "[[Firstly, learning a language early improves memory.]]"],
+          ["**E**xplanation", "penjelasan", "[[Young brains are flexible, so they absorb new sounds easily.]]"],
+          ["**E**xample", "contoh", "[[For instance, children in bilingual families often speak two languages fluently.]]"],
+          ["**L**ink", "kaitan ke soal", "[[Therefore, early language lessons benefit pupils.]]"]]),
+
+  dict(t="grammar", title="5. Kesimpulan",
+   table=[["Bagian", "Contoh"],
+          ["Pembuka", "[[In conclusion, ...]] / [[To sum up, ...]]"],
+          ["Ulang posisi", "[[I firmly believe that children should start learning languages early.]]"],
+          ["Rekomendasi (opsional)", "[[Schools should therefore make it part of the curriculum.]]"]]),
+
+  dict(t="tip", title="Rencanakan 5 menit",
+   text="Sebelum menulis, habiskan 5 menit: tentukan posisi, dua gagasan utama, dan satu contoh untuk tiap gagasan. Esai yang terencana lebih runtut dan lebih mudah selesai tepat waktu."),
+  dict(t="warn", title="Jawab soalnya",
+   text="Esai yang bagus tetapi tidak menjawab pertanyaan akan kehilangan nilai Task Response. Baca perintah, lalu pastikan setiap paragraf kembali ke soal."),
+ ],
+
+ practice=mk([
+  ('Berapa kata minimal Task 2?', "250", "150", "100", "400", "250 kata."),
+  ('Sekitar berapa menit untuk Task 2?', "40", "20", "10", "60", "Sekitar 40 menit."),
+  ('Perintah "To what extent do you agree or disagree?" adalah esai...', "opinion", "discussion", "problem / solution", "two-part question", "Opinion."),
+  ('Perintah "Discuss both views and give your opinion" adalah esai...', "discussion", "opinion", "problem / solution", "advantages / disadvantages", "Discussion."),
+  ('Perintah "What problems does this cause? What can be done?" adalah esai...', "problem / solution", "opinion", "discussion", "two-part question", "Problem / solution."),
+  ('Perintah "Do the advantages outweigh the disadvantages?" adalah esai...', "advantages / disadvantages", "opinion", "problem / solution", "discussion", "Advantages / disadvantages."),
+  ('Pengantar yang baik berisi...', "parafrase soal dan thesis", "contoh saja", "kesimpulan", "opini tanpa alasan", "Parafrase + thesis."),
+  ('Thesis statement berfungsi untuk...', "menyatakan posisi atau arah esai", "memberi contoh", "menutup esai", "menyalin soal", "Thesis = arah esai."),
+  ('Kalimat topik (point) paragraf isi biasanya berada di...', "awal paragraf", "akhir paragraf", "tengah paragraf", "kesimpulan", "Topic sentence di awal."),
+  ('PEEL adalah singkatan dari...', "Point, Explanation, Example, Link", "Plan, Edit, End, Learn", "Paragraph, Evidence, End, Link", "Point, Edit, Example, Link", "PEEL."),
+  ('Kalimat mana yang termasuk kesimpulan?', "In conclusion, I firmly believe that early language learning is beneficial.", "Firstly, young brains are flexible.", "For instance, bilingual children speak fluently.", "Some people think children should learn languages.", "In conclusion."),
+  ('Kalimat mana yang termasuk contoh?', "For instance, children in bilingual families speak two languages.", "In conclusion, I agree.", "Firstly, memory improves.", "This essay will discuss both views.", "For instance."),
+  ('Kalimat mana yang termasuk thesis opinion?', "I strongly agree because it improves their future opportunities.", "Some people think so.", "Many schools teach languages.", "Languages are interesting.", "Posisi + alasan."),
+  ('Kalimat thesis untuk esai discussion:', "This essay will discuss both views before giving my own opinion.", "I strongly disagree.", "There are many languages.", "In conclusion, languages are important.", "Discussion thesis."),
+  ('Apa yang terjadi jika esai tidak menjawab pertanyaan?', "nilai Task Response turun", "nilai naik", "tidak ada pengaruh", "esai dibatalkan", "Task Response."),
+  ('Berapa menit untuk perencanaan sebelum menulis?', "Sekitar 5 menit", "Sekitar 30 menit", "Tidak perlu", "Sekitar 1 menit", "Perencanaan singkat."),
+  ('Mana yang BUKAN fungsi kesimpulan?', "memperkenalkan gagasan baru yang besar", "mengulang posisi", "merangkum", "memberi rekomendasi singkat", "Jangan menambah gagasan baru."),
+  ('Mana yang paling baik untuk memulai paragraf isi pertama?', "Firstly, ...", "In conclusion, ...", "I don\'t know, ...", "By the way, ...", "Firstly."),
+  ('Mana yang paling baik untuk kata penghubung kontras?', "However", "Moreover", "For instance", "Therefore", "Kontras."),
+  ('Kalimat mana yang terlalu informal untuk esai?', "Kids these days are crazy about phones.", "Many young people spend long hours on phones.", "Mobile phones are widely used by teenagers.", "Phone use among teenagers is increasing.", "Hindari bahasa informal."),
+ ]) + mkf([
+  ("Esai terdiri dari pengantar, dua paragraf ___ , dan kesimpulan.", "An essay has an introduction, two body paragraphs, and a ___.", "conclusion", "Kesimpulan."),
+  ("Kalimat awal paragraf disebut ___ sentence.", "The first sentence of a paragraph is the topic ___.", "sentence", "Topic sentence."),
+  ("Untuk memberi contoh, tulis For ___ .", "For ___, bilingual children often speak two languages.", "instance/example", "For instance / For example."),
+  ("Kesimpulan diawali dengan In ___ .", "In ___, I strongly agree with this idea.", "conclusion", "In conclusion."),
+ ]) + mko([
+  ("Menurut saya, anak sebaiknya belajar bahasa sejak dini.", "I believe children should learn languages early.", "believes learned", ""),
+  ("Pertama, otak anak sangat fleksibel.", "Firstly, children's brains are very flexible.", "firstly's flexibly", ""),
+  ("Kesimpulannya, saya sangat setuju.", "In conclusion, I strongly agree.", "Moreover agrees", ""),
+ ]),
+
+ quiz=mk([
+  ('Berapa kata minimal Task 2?', "250", "150", "100", "400", "250."),
+  ('Esai "Discuss both views" adalah esai...', "discussion", "opinion", "problem / solution", "two-part question", "Discussion."),
+  ('Pengantar yang baik berisi...', "parafrase soal dan thesis", "contoh saja", "kesimpulan", "daftar pustaka", "Parafrase + thesis."),
+  ('Kalimat topik biasanya di...', "awal paragraf", "akhir esai", "tengah paragraf", "judul", "Awal paragraf."),
+  ('PEEL: huruf pertama P adalah...', "Point", "Plan", "Paragraph", "Pause", "Point."),
+  ('Kesimpulan sebaiknya...', "mengulang posisi dengan kata lain", "menambah gagasan baru", "menyalin pengantar", "berisi contoh panjang", "Ulang posisi."),
+  ('Kata penghubung untuk kesimpulan:', "In conclusion", "Firstly", "For instance", "However", "Kesimpulan."),
+  ('Kalimat informal yang sebaiknya dihindari:', "Kids are crazy about phones.", "Many teenagers use phones.", "Phone use is widespread.", "Teenagers rely on phones.", "Informal."),
+ ]) + mkf([
+  ("Kesimpulan diawali dengan In ___ .", "In ___, I agree with this view.", "conclusion", "In conclusion."),
+  ("Esai opinion meminta kamu menyatakan ___ .", "An opinion essay asks you to state your ___.", "opinion/position/view", "Opini atau posisi."),
+ ]),
+)

@@ -1,6 +1,6 @@
 # Let's Learn English!
 
-Web belajar bahasa Inggris interaktif dari SMP sampai dunia kerja. Ada **75 unit** yang dibagi menjadi delapan level: Kelas 7, 8, 9, 10, 11, 12, **Modul Tenses** (14 unit, untuk semua level), dan **Pekerja / Formal**. Beranda berupa kartu level; klik satu kartu untuk melihat unit-unitnya. Setiap unit berisi **Belajar**, **Latihan** (50 soal acak), dan **Kuis** (50 soal acak, bintang 1-3).
+Web belajar bahasa Inggris interaktif dari SMP sampai dunia kerja. Ada **91 unit** yang dibagi menjadi sembilan level: Kelas 7, 8, 9, 10, 11, 12, **Modul Tenses** (14 unit, untuk semua level), **Persiapan IELTS** (16 unit), dan **Pekerja / Formal**. Beranda berupa kartu level; klik satu kartu untuk melihat unit-unitnya. Setiap unit berisi **Belajar**, **Latihan** (50 soal acak), dan **Kuis** (50 soal acak, bintang 1-3).
 
 Situs: https://belajarcloud5.github.io/belajara-inggris/
 
@@ -45,6 +45,9 @@ Menambah level baru: tambahkan unit dengan `kelas="nama-level"` di `content/unit
 
 **Modul Tenses (14 unit, semua level)**
 1 Peta 12 Tenses · 2 Present Simple vs Continuous · 3 Past Simple vs Continuous · 4 Present Perfect · 5 Present Perfect vs Past Simple · 6 Present Perfect Continuous · 7 Past Perfect · 8 Masa Depan (will, be going to) · 9 Future Continuous dan Future Perfect · 10 Klausa Waktu · 11 Pilih Tense I (Present) · 12 Pilih Tense II (Past) · 13 Tense dalam Cerita dan Laporan · 14 Tes Akhir Tenses
+
+**Persiapan IELTS (16 unit)**
+1 Overview dan strategi · 2 Reading: skimming dan scanning · 3 Reading: True/False/Not Given · 4 Reading: judul paragraf dan melengkapi · 5-7 Kosakata akademik I-III · 8 Kata penghubung · 9 Listening: angka, ejaan, tanggal · 10 Listening: catatan dan pengecoh · 11 Writing Task 1 · 12 Writing Task 2 · 13 Writing: tata bahasa dan kesalahan umum · 14 Speaking Part 1 dan 2 · 15 Speaking Part 3 dan kelancaran · 16 Tes simulasi mini. Writing dan Speaking tidak dinilai otomatis; unit-unitnya memberi pola, contoh, dan daftar periksa.
 
 **Pekerja / Formal (14 unit)**
 1 Workplace Introductions and Small Talk · 2 Office Life and Job Roles · 3 Polite Requests and Offers · 4 Professional Emails · 5 Phone Calls and Voicemail · 6 Scheduling and Appointments · 7 Meetings · 8 Reports and Data · 9 Presentations · 10 Customer Service and Complaints · 11 Problem Solving and Status Updates · 12 Feedback and Career Growth · 13 Business Travel · 14 Review Level Pekerja

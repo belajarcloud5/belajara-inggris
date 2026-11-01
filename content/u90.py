@@ -1,0 +1,103 @@
+from qk import mk, mkf, mko
+
+UNIT = dict(
+ id="u90",
+ goals=[
+  "menjawab pertanyaan **Part 3** yang abstrak dengan opini, alasan, dan contoh",
+  "memakai **pola perbandingan, sebab-akibat, dan prediksi**",
+  "berbicara **lancar** dengan ungkapan pengisi yang natural",
+  "memperbaiki **kesalahan pelafalan dan tata bahasa** yang umum",
+ ],
+ lesson=[
+  dict(t="intro", text="**Part 3** adalah diskusi lebih mendalam dengan penguji, biasanya tentang masyarakat atau gagasan umum yang berkaitan dengan topik Part 2. Penguji menilai kemampuanmu **berpendapat, membandingkan, dan memprediksi**. Jawaban 3 sampai 5 kalimat biasanya cukup."),
+
+  dict(t="grammar", title="1. Rumus jawaban Part 3",
+   table=[["Langkah", "Contoh"],
+          ["Pendapat", "[[I think it depends on the person.]]"],
+          ["Alasan", "[[Because some people need more time to adapt.]]"],
+          ["Contoh", "[[For instance, older people often find technology harder.]]"],
+          ["Kesimpulan singkat", "[[So I'd say education plays a key role.]]"]]),
+
+  dict(t="grammar", title="2. Jenis pertanyaan Part 3",
+   table=[["Jenis", "Contoh", "Pola jawaban"],
+          ["opini", "[[Do you think people read less today?]]", "[[I think ... because ...]]"],
+          ["perbandingan", "[[How is it different from the past?]]", "[[In the past ..., whereas nowadays ...]]"],
+          ["sebab", "[[Why do people prefer cities?]]", "[[One reason is that ...]]"],
+          ["prediksi", "[[Will it change in the future?]]", "[[I believe it will ... as ...]]"],
+          ["solusi", "[[What can governments do?]]", "[[They could ... in order to ...]]"]]),
+
+  dict(t="grammar", title="3. Ungkapan untuk berpendapat",
+   table=[["Fungsi", "Ungkapan"],
+          ["menyatakan", "[[In my view, ...]] / [[From my perspective, ...]]"],
+          ["setuju sebagian", "[[That's partly true, but ...]]"],
+          ["tidak yakin", "[[It's hard to say, but I'd guess ...]]"],
+          ["menggeneralisasi", "[[Generally speaking, ...]] / [[In many cases, ...]]"],
+          ["membandingkan", "[[Compared to the past, ...]]"]]),
+
+  dict(t="grammar", title="4. Kelancaran (Fluency)",
+   table=[["Lakukan", "Hindari"],
+          ["berhenti sebentar untuk berpikir", "mengulang kata berkali-kali"],
+          ["memakai 'well', 'actually', 'I mean'", "'eee...' yang panjang"],
+          ["memperbaiki diri dengan 'I mean ...'", "diam lebih dari beberapa detik"],
+          ["menyambung gagasan dengan 'and', 'but', 'because'", "kalimat terpotong-potong"]]),
+
+  dict(t="grammar", title="5. Pelafalan yang perlu diperhatikan",
+   table=[["Kata", "Catatan"],
+          ["th (think, three)", "lidah di antara gigi, bukan t"],
+          ["v / w (very, west)", "v: gigi atas pada bibir bawah; w: bibir membulat"],
+          ["akhiran -ed", "bunyi /t/, /d/, atau /ɪd/ (worked, played, wanted)"],
+          ["tekanan kata", "imPORtant, deVELop, ecoNOmy"],
+          ["intonasi", "turun pada akhir pernyataan; naik pada pertanyaan ya/tidak"]]),
+
+  dict(t="tip", title="Memperpanjang jawaban",
+   text="Gunakan tiga pertanyaan internal: *Why? For example? What about the future?* Menjawabnya akan menghasilkan jawaban yang lengkap tanpa harus menghafal."),
+  dict(t="warn", title="Jangan mengulang pertanyaan persis",
+   text="Mengulang pertanyaan berkali-kali terkesan membuang waktu. Cukup parafrase singkat atau langsung jawab."),
+ ],
+
+ practice=mk([
+  ('Part 3 membahas...', "topik abstrak dan opini", "data pribadi", "alamat", "angka", "Diskusi abstrak."),
+  ('Berapa kalimat biasanya cukup untuk jawaban Part 3?', "3 sampai 5", "1", "10", "tidak perlu", "3-5 kalimat."),
+  ('Rumus jawaban Part 3 yang baik:', "pendapat + alasan + contoh", "satu kata", "hafalan", "pertanyaan balik terus", "Opini + alasan + contoh."),
+  ('Untuk membandingkan masa lalu dan sekarang, pakai...', "In the past ..., whereas nowadays ...", "I am happy", "Next question", "By the way", "Perbandingan."),
+  ('Untuk menyatakan pendapat, pakai...', "In my view, ...", "I forgot", "Thank you", "Excuse me", "Opini."),
+  ('Untuk setuju sebagian, pakai...', "That\'s partly true, but ...", "No!", "Yes!", "I don\'t know", "Setuju sebagian."),
+  ('Untuk menjawab pertanyaan prediksi, pakai...', "I believe it will ... as ...", "I went there yesterday", "I like pizza", "I have a dog", "Prediksi."),
+  ('Untuk menjawab "Why do people prefer cities?" mulai dengan...', "One reason is that ...", "I am a student", "Yes, I do", "No, I don\'t", "Sebab."),
+  ('Untuk solusi, pakai...', "They could ... in order to ...", "I like it", "I don\'t know", "Because yes", "Solusi."),
+  ('Ungkapan pengisi yang natural:', "Well, let me think...", "Eeeeeee...", "(diam lama)", "I no know", "Natural."),
+  ('Jika salah bicara, kamu sebaiknya...', "memperbaiki dengan I mean ...", "berhenti bicara", "mengulang kesalahan", "mengakhiri tes", "Memperbaiki diri."),
+  ('Bunyi "th" pada "think" dihasilkan dengan...', "lidah di antara gigi", "bibir tertutup", "tenggorokan", "gigi menggigit bibir", "th."),
+  ('Bunyi "v" pada "very" dihasilkan dengan...', "gigi atas pada bibir bawah", "bibir membulat", "lidah di atas", "mulut tertutup", "v."),
+  ('Akhiran -ed pada "worked" dibaca...', "/t/", "/ɪd/", "/d/", "dibaca penuh", "worked = /t/."),
+  ('Akhiran -ed pada "wanted" dibaca...', "/ɪd/", "/t/", "/d/", "tidak dibaca", "wanted = /ɪd/."),
+  ('Tekanan kata yang benar untuk "important":', "imPORtant", "IMportant", "importANT", "tidak ada tekanan", "imPORtant."),
+  ('Tekanan kata yang benar untuk "economy":', "eCOnomy", "ECOnomy", "econoMY", "tidak ada", "eCOnomy."),
+  ('Intonasi pertanyaan ya/tidak biasanya...', "naik di akhir", "turun di akhir", "datar", "tidak ada", "Naik."),
+  ('Pilih kalimat yang SALAH:', "I am agree with this idea.", "I agree with this idea.", "I partly agree with this idea.", "I couldn\'t agree more.", "agree tanpa am."),
+  ('Pilih kalimat yang benar:', "Generally speaking, people live longer than before.", "Generally speaking, people lives longer than before.", "Generally speaking, people living longer than before.", "Generally speaking, people is live longer.", "Subjek jamak."),
+ ]) + mkf([
+  ("Pendapat: In my ___ , education is the key.", "In my ___, education is the key.", "view/opinion", "In my view / opinion."),
+  ("Sebab: One ___ is that cities offer jobs.", "One ___ is that cities offer jobs.", "reason", "One reason is that."),
+  ("Perbandingan: In the past..., ___ nowadays...", "In the past, people wrote letters, ___ nowadays they send emails.", "whereas/while", "Kontras."),
+  ("Prediksi: I ___ it will change.", "I ___ it will change.", "believe/think/expect", "Prediksi."),
+ ]) + mko([
+  ("Menurut saya, pendidikan sangat penting.", "In my view, education is very important.", "views are", ""),
+  ("Salah satu alasannya adalah kota menawarkan pekerjaan.", "One reason is that cities offer jobs.", "offers reasons", ""),
+  ("Pemerintah dapat membangun lebih banyak taman.", "Governments could build more parks.", "can builds", ""),
+ ]),
+
+ quiz=mk([
+  ('Part 3 membahas...', "topik abstrak", "alamat", "data pribadi", "angka", "Abstrak."),
+  ('Jumlah kalimat jawaban Part 3:', "3 sampai 5", "1", "10", "tidak ada", "3-5."),
+  ('Ungkapan opini:', "In my view, ...", "I forgot", "See you", "Excuse me", "Opini."),
+  ('Ungkapan sebab:', "One reason is that ...", "Good morning", "Next", "Okay", "Sebab."),
+  ('Ungkapan perbandingan:', "In the past ..., whereas nowadays ...", "Thank you", "By the way", "Hello", "Perbandingan."),
+  ('Akhiran -ed pada "worked":', "/t/", "/ɪd/", "/d/", "dibaca penuh", "/t/."),
+  ('Pilih kalimat yang SALAH:', "I am agree with you.", "I agree with you.", "I partly agree.", "I couldn\'t agree more.", "agree."),
+  ('Memperbaiki kesalahan saat bicara:', "I mean ...", "Stop.", "Bye.", "Next.", "I mean."),
+ ]) + mkf([
+  ("In my ___ , it is important.", "In my ___, it is important.", "view/opinion", "In my view."),
+  ("Prediksi: I ___ it will improve.", "I ___ it will improve.", "believe/think", "Prediksi."),
+ ]),
+)
