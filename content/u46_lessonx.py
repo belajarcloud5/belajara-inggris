@@ -48,3 +48,17 @@ LESSONX += [
   examples=[dict(en="[[There aren't many seats, and there isn't much time.]]", id="Tidak banyak kursi, dan waktunya tidak banyak."),
             dict(en="[[Few people came, so we had a lot of food left.]]", id="Hanya sedikit orang yang datang, jadi banyak makanan tersisa.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="10. Kata hubung: jebakan ujian",
+  text="Soal ujian sering menguji pilihan kata hubung yang tepat:",
+  table=[["Jebakan", "Aturan", "Contoh"],
+         ["because / because of", "because + klausa; because of + kata benda", "[[because it rained]] / [[because of the rain]]"],
+         ["although / despite", "although + klausa; despite + kata benda atau V-ing", "[[Although he was tired]] / [[Despite being tired]]"],
+         ["although + but", "pakai salah satu, bukan keduanya", "[[Although it is cheap, I won't buy it.]]"],
+         ["so / because", "so = akibat; because = alasan", "[[I was ill, so I stayed home.]] / [[I stayed home because I was ill.]]"],
+         ["both ... and", "dua hal sekaligus", "[[She is both smart and kind.]]"],
+         ["either ... or / neither ... nor", "salah satu / tidak keduanya", "[[Either you go or I go.]] / [[Neither he nor I know.]]"],
+         ["unless", "= if ... not; jangan tambah not", "[[Unless you hurry, you will be late.]]"]],
+  examples=[dict(en="[[Neither Anna nor Budi was late, although both of them woke up early.]]", id="Baik Anna maupun Budi tidak terlambat, meskipun keduanya bangun pagi.")]),
+]

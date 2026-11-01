@@ -1,0 +1,13 @@
+LESSONX = [
+ dict(t="grammar", title="6. Menjelaskan sebab dan akibat saat menyelesaikan masalah",
+  text="Saat melaporkan masalah dan solusi, kata hubung menjelaskan hubungan sebab dan akibat:",
+  table=[["Fungsi", "Kata", "Contoh"],
+         ["sebab", "**because, since, due to + noun**", "[[The server is slow because there are many users.]]"],
+         ["akibat", "**so, as a result, therefore**", "[[Many users logged in, so the server slowed down.]]"],
+         ["syarat", "**if, unless, otherwise**", "[[Restart the server. Otherwise, the problem will continue.]]"],
+         ["tujuan", "**in order to, so that**", "[[We added memory so that the system runs faster.]]"],
+         ["pertentangan", "**but, however, although**", "[[We fixed the bug, but another problem appeared.]]"]],
+  examples=[dict(en="[[The system crashed because of a power cut. As a result, we lost some data.]]", id="Sistem mogok karena listrik padam. Akibatnya, kami kehilangan sebagian data.")]),
+ dict(t="warn", title="due to dan because of diikuti kata benda",
+  text="Katakan [[due to the delay]] atau [[because of the delay]], bukan ~~due to it was late~~. Jika ingin memakai klausa, pakai **because** atau **since**: [[because the delivery was late]]."),
+]

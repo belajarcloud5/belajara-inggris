@@ -14,3 +14,18 @@ LESSONX = [
  dict(t="warn", title="Salah yang sering terjadi",
   text="Katakan **at night**, bukan ~~in the night~~. Katakan **in the morning**, bukan ~~at the morning~~. Setelah **every, next, last, this, tomorrow, yesterday** jangan tambah on/in/at: **next Monday**, bukan ~~on next Monday~~."),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="8. Kata hubung dasar: and, but, or, so, because",
+  text="**Kata hubung (conjunction)** menyambung dua kata atau dua kalimat. Lima kata hubung paling dasar:",
+  table=[["Kata", "Fungsi", "Contoh"],
+         ["**and**", "menambah (dan)", "[[I wake up and take a bath.]]"],
+         ["**but**", "berlawanan (tetapi)", "[[I like tea, but my sister likes coffee.]]"],
+         ["**or**", "pilihan (atau)", "[[Do you walk or take a bus?]]"],
+         ["**so**", "akibat (jadi)", "[[I am tired, so I go to bed early.]]"],
+         ["**because**", "alasan (karena)", "[[I go to bed early because I am tired.]]"]],
+  examples=[dict(en="[[I get up at five, and I help my mother.]]", id="Aku bangun pukul lima, dan aku membantu ibuku."),
+            dict(en="[[I am hungry, so I eat breakfast.]]", id="Aku lapar, jadi aku sarapan.")]),
+ dict(t="warn", title="Jangan memakai because dan so dalam satu kalimat",
+  text="Dalam bahasa Indonesia kita bisa berkata *karena ... maka ...*. Dalam bahasa Inggris pilih satu: [[I am tired, so I sleep.]] atau [[I sleep because I am tired.]] Jangan katakan ~~Because I am tired, so I sleep.~~ Gunakan koma sebelum **and, but, so** saat menyambung dua kalimat lengkap."),
+]
