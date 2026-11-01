@@ -1,0 +1,15 @@
+LESSONX = [
+ dict(t="grammar", title="6. Perubahan waktu dan tempat dalam ujaran tidak langsung",
+  text="Saat menceritakan ucapan di waktu yang berbeda, kata keterangan waktu dan tempat ikut berubah:",
+  table=[["Ucapan langsung", "Ucapan tidak langsung"],
+         ["today", "that day"],
+         ["tomorrow", "the next day / the following day"],
+         ["yesterday", "the day before / the previous day"],
+         ["now", "then"],
+         ["here", "there"],
+         ["this / these", "that / those"],
+         ["last week", "the week before"]],
+  examples=[dict(en="[[\"I will come here tomorrow,\" he said. → He said he would go there the next day.]]", id="\"Aku akan datang ke sini besok,\" katanya. → Dia bilang dia akan pergi ke sana keesokan harinya.")]),
+ dict(t="tip", title="Boleh tidak berubah jika masih relevan",
+  text="Jika ucapan itu baru saja diucapkan dan situasinya sama, waktu dan tempat boleh dipertahankan: [[He said he is coming tomorrow.]]"),
+]

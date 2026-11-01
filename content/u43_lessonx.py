@@ -23,3 +23,18 @@ LESSONX += [
  dict(t="warn", title="Pasif tidak dipakai dengan kata kerja tanpa objek",
   text="Kata kerja tanpa objek (arrive, happen, die, sleep) tidak bisa dipasifkan: katakan [[The accident happened.]], bukan ~~The accident was happened~~."),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="8. Modal dan kata kerja pelapor: suggest, promise, advise, warn",
+  text="Modal bergeser (will → would, can → could, may → might). Dan beberapa kata kerja pelapor punya pola khusus:",
+  table=[["Pola", "Contoh"],
+         ["will → would", "[[\"I will help.\" → She said she would help.]]"],
+         ["can → could", "[[\"I can swim.\" → He said he could swim.]]"],
+         ["must → had to", "[[\"You must go.\" → She said I had to go.]]"],
+         ["suggest + V-ing / that", "[[He suggested going home.]] / [[He suggested that we go home.]]"],
+         ["promise + to V1", "[[She promised to call me.]]"],
+         ["advise / warn + objek + to V1", "[[He advised me to rest.]] / [[She warned us not to be late.]]"]],
+  examples=[dict(en="[[The doctor advised me to drink more water and promised to call me tomorrow.]]", id="Dokter menyarankan aku minum lebih banyak air dan berjanji menelepon besok.")]),
+ dict(t="warn", title="suggest tidak diikuti to",
+  text="Katakan [[He suggested going.]] atau [[He suggested that we go.]], bukan ~~He suggested us to go~~."),
+]

@@ -33,3 +33,14 @@ LESSONX += [
          ["belum", "[[The issue hasn't been resolved yet.]]"]],
   examples=[dict(en="[[The part has been ordered, and it will be delivered on Monday.]]", id="Suku cadangnya sudah dipesan, dan akan dikirim hari Senin.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="9. Melaporkan informasi dari orang lain",
+  text="Saat memberi update, kita sering meneruskan informasi dari pihak lain:",
+  table=[["Informasi asli", "Dilaporkan"],
+         ["\"The part will arrive on Monday.\"", "[[The supplier said the part would arrive on Monday.]]"],
+         ["\"We have fixed the bug.\"", "[[The engineer told me they had fixed the bug.]]"],
+         ["\"Can you test it today?\"", "[[The client asked if we could test it that day.]]"],
+         ["\"Don't change the settings.\"", "[[The manager told us not to change the settings.]]"]],
+  examples=[dict(en="[[The client said that the system was too slow and asked us to fix it.]]", id="Klien mengatakan bahwa sistem terlalu lambat dan meminta kami memperbaikinya.")]),
+]

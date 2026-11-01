@@ -102,3 +102,17 @@ LESSONX += [
          ["to be dan jumlah", "sesuaikan dengan subjek", "[[The books are sold.]] / [[The book is sold.]]"]],
   examples=[dict(en="[[The report must be finished by Friday, and it will be checked by the manager.]]", id="Laporan harus diselesaikan sebelum Jumat, dan akan diperiksa oleh manajer.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="14. Reported speech: jebakan ujian",
+  text="Hal yang sering diuji pada ujaran tidak langsung:",
+  table=[["Jebakan", "Aturan", "Contoh"],
+         ["geser kala", "present → past; past → past perfect", "[[\"I am ill.\" → He said he was ill.]]"],
+         ["modal", "will → would; can → could; must → had to", "[[She said she would come.]]"],
+         ["waktu dan tempat", "today → that day; here → there", "[[He said he would come the next day.]]"],
+         ["pertanyaan", "urutan kalimat berita, tanpa do/does/did", "[[She asked where I lived.]]"],
+         ["ya/tidak", "if atau whether", "[[He asked if I was ready.]]"],
+         ["perintah", "tell/ask + objek + to V1", "[[He told me to sit down.]]"],
+         ["say atau tell", "tell + objek; say tanpa objek", "[[She told me.]] / [[She said that ...]]"]],
+  examples=[dict(en="[[He asked me whether I had finished and told me not to be late.]]", id="Dia bertanya apakah aku sudah selesai dan menyuruhku agar tidak terlambat.")]),
+]
