@@ -32,9 +32,9 @@ UNIT = mkunit("u111",
  [], [])
 P1 = "My mother is a busy woman. She wakes up at five every morning. She cooks breakfast for the family. Then she goes to the market. In the afternoon, she cleans the house. That is why she is always tired in the evening."
 P = mk([
- ('Mana kalimat topik terbaik untuk paragraf tentang hobi membaca?', 'Reading is my favourite hobby.', 'I have a book.', 'Books are on the shelf.', 'Yesterday I went to school.', 'Kalimat topik menyatakan gagasan utama.'),
- ('Mana kalimat topik terbaik untuk paragraf tentang sekolahku?', 'My school is a friendly place.', 'It has desks.', 'The bell rings.', 'I walk to school.', 'Kalimat topik menyatakan gagasan utama.'),
- ('Mana kalimat topik terbaik untuk paragraf tentang liburan ke pantai?', 'Our holiday at the beach was wonderful.', 'There was sand.', 'We took a bus.', 'I like the sea.', 'Kalimat topik merangkum gagasan.'),
+ ('Mana kalimat topik terbaik untuk paragraf tentang hobi membaca?', 'Reading is my favourite hobby.', 'I have a book at the moment.', 'Books are on the shelf this week.', 'Yesterday I went to school.', 'Kalimat topik menyatakan gagasan utama.'),
+ ('Mana kalimat topik terbaik untuk paragraf tentang sekolahku?', 'My school is a friendly place.', 'It has desks these days.', 'The bell rings.', 'I walk to school as usual.', 'Kalimat topik menyatakan gagasan utama.'),
+ ('Mana kalimat topik terbaik untuk paragraf tentang liburan ke pantai?', 'Our holiday at the beach was wonderful.', 'There was sand at the moment.', 'We took a bus.', 'I like the sea at the moment.', 'Kalimat topik merangkum gagasan.'),
  ('Mana kalimat yang tidak sesuai dalam paragraf tentang rutinitas pagi? "I wake up at six. I take a shower. My cat is white. I eat breakfast."', 'My cat is white.', 'I wake up at six.', 'I take a shower.', 'I eat breakfast.', 'Kalimat kucing tidak berhubungan dengan rutinitas pagi.'),
  ('Mana kalimat yang tidak sesuai? "Fruit is healthy. Apples have vitamins. I like blue shirts. Oranges help our bodies."', 'I like blue shirts.', 'Fruit is healthy.', 'Apples have vitamins.', 'Oranges help our bodies.', 'Tidak berhubungan dengan buah.'),
  ('Pilih kata penghubung yang tepat: "___, I wake up. Then I take a shower."', 'First', 'Because', 'However', 'Such as', 'Memulai urutan.'),
@@ -43,15 +43,15 @@ P = mk([
  ('Pilih kata penghubung yang tepat: "I like tea, ___ I do not like coffee."', 'but', 'because', 'first', 'for example', 'Lawan.'),
  ('Pilih kata penghubung yang tepat: "___, she goes to bed at ten." (terakhir)', 'Finally', 'First', 'Because', 'However', 'Menutup urutan.'),
  ('Pilih kata penghubung yang tepat: "It was raining. ___, we stayed at home."', 'So', 'But', 'For example', 'First', 'Akibat.'),
- ('Mana kalimat penutup yang baik untuk paragraf tentang hobi membaca?', 'That is why reading is my favourite hobby.', 'I have a shelf.', 'Then I go to school.', 'Books are heavy.', 'Penutup menegaskan gagasan utama.'),
+ ('Mana kalimat penutup yang baik untuk paragraf tentang hobi membaca?', 'That is why reading is my favourite hobby.', 'I have a shelf.', 'Then I go to school at the moment.', 'Books are heavy in general.', 'Penutup menegaskan gagasan utama.'),
  ('Mana urutan yang benar untuk menjelaskan cara membuat teh? ', 'First boil water, then add tea, finally add sugar.', 'Finally add sugar, first boil water, then add tea.', 'Then add tea, finally boil water, first add sugar.', 'Add sugar, finally add tea, first boil water.', 'Urutan waktu logis.'),
  ('Berapa gagasan utama dalam satu paragraf yang baik?', 'satu', 'dua atau tiga', 'lima', 'tidak ada batas', 'Satu paragraf = satu gagasan.'),
  ('Apa fungsi "for example"?', 'memberi contoh', 'menutup paragraf', 'menyatakan alasan', 'menyatakan perlawanan', 'Contoh.'),
  ('Apa fungsi "that is why"?', 'menyatakan akibat dan menegaskan penutup', 'memberi contoh', 'memulai urutan', 'menyatakan perlawanan', 'Penutup.'),
  ('Kalimat pendukung yang baik memuat...', 'alasan, detail, atau contoh', 'topik yang berbeda', 'pertanyaan kepada pembaca', 'daftar kata acak', 'Mendukung gagasan utama.'),
- ('Kalimat mana yang paling spesifik sebagai kalimat pendukung?', 'I read for an hour every night before sleeping.', 'I read.', 'Reading is something.', 'Books exist.', 'Spesifik lebih kuat.'),
+ ('Kalimat mana yang paling spesifik sebagai kalimat pendukung?', 'I read for an hour every night before sleeping.', 'I read at the moment.', 'Reading is something as usual.', 'Books exist.', 'Spesifik lebih kuat.'),
  ('Paragraf berikut gagasan utamanya apa? "' + P1 + '"', 'ibuku sangat sibuk', 'ibuku suka memasak saja', 'pasar ramai', 'rumah kotor', 'Kalimat topik: My mother is a busy woman.'),
- ('Pada paragraf di atas ("My mother is a busy woman..."), kalimat penutupnya adalah...', 'That is why she is always tired in the evening.', 'She wakes up at five every morning.', 'In the afternoon, she cleans the house.', 'Then she goes to the market.', 'Kalimat terakhir.'),
+ ('Pada paragraf di atas ("My mother is a busy woman..."), kalimat penutupnya adalah...', 'That is why she is always tired in the evening.', 'She wakes up at five every morning as usual.', 'In the afternoon, she cleans the house.', 'Then she goes to the market at the moment.', 'Kalimat terakhir.'),
  ('Pada paragraf yang sama, kata "Then" berfungsi untuk...', 'menunjukkan urutan', 'memberi contoh', 'menyatakan lawan', 'menyatakan alasan', 'Then = lalu.'),
  ('Mana yang BUKAN bagian paragraf yang baik?', 'banyak gagasan tanpa kaitan', 'kalimat topik', 'kalimat pendukung', 'kalimat penutup', 'Paragraf harus bersatu.'),
 ])
@@ -66,7 +66,7 @@ P += mko([
 P += dictate([("First, I wake up. Then I take a shower.", "Pertama, aku bangun. Lalu aku mandi."), ("I stay home because it is raining.", "Aku di rumah karena hujan."),
               ("That is why I love reading.", "Itulah sebabnya aku suka membaca.")])
 Q = mk([
- ('Mana kalimat topik terbaik untuk paragraf tentang kucingku?', 'My cat is a clever animal.', 'It is white.', 'I feed it.', 'Cats sleep.', 'Gagasan utama.'),
+ ('Mana kalimat topik terbaik untuk paragraf tentang kucingku?', 'My cat is a clever animal.', 'It is white.', 'I feed it in general.', 'Cats sleep at the moment.', 'Gagasan utama.'),
  ('Mana kalimat yang tidak sesuai? "I love my school. The teachers are kind. I ate rice yesterday. My friends are fun."', 'I ate rice yesterday.', 'I love my school.', 'The teachers are kind.', 'My friends are fun.', 'Tidak berhubungan.'),
  ('Pilih kata penghubung: "___, I take a shower. Then I eat breakfast."', 'First', 'However', 'Because', 'For example', 'Awal urutan.'),
  ('Pilih kata penghubung: "I have a fever, ___ I stay in bed."', 'so', 'but', 'first', 'such as', 'Akibat.'),

@@ -1476,7 +1476,10 @@
   "title": "TOEIC Overview",
   "emoji": "🧭",
   "ringkas": "Format, bagian tes, skor 10 sampai 990, dan strategi umum",
-  "ready": false
+  "ready": true,
+  "practice_n": 30,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u115",
@@ -1486,7 +1489,10 @@
   "title": "Listening Parts 1 and 2",
   "emoji": "🖼️",
   "ringkas": "Foto dan tanya jawab: kata tanya, jawaban tidak langsung, dan jebakan bunyi",
-  "ready": false
+  "ready": true,
+  "practice_n": 32,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u116",
@@ -1496,7 +1502,10 @@
   "title": "Listening Parts 3 and 4",
   "emoji": "🎧",
   "ringkas": "Percakapan dan pengumuman: membaca soal lebih dulu, tujuan, masalah, dan langkah berikutnya",
-  "ready": false
+  "ready": true,
+  "practice_n": 38,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u117",
@@ -1506,7 +1515,10 @@
   "title": "Reading Part 5: Grammar",
   "emoji": "🧮",
   "ringkas": "Bentuk kata, tense, preposisi, kata ganti, dan kata penghubung",
-  "ready": false
+  "ready": true,
+  "practice_n": 42,
+  "quiz_n": 13,
+  "read_n": 0
  },
  {
   "id": "u118",
@@ -1516,7 +1528,10 @@
   "title": "Reading Part 5: Vocabulary",
   "emoji": "🔤",
   "ringkas": "Memilih kata yang tepat, kolokasi bisnis, dan kata mirip",
-  "ready": false
+  "ready": true,
+  "practice_n": 35,
+  "quiz_n": 9,
+  "read_n": 0
  },
  {
   "id": "u119",
@@ -1526,7 +1541,10 @@
   "title": "Reading Part 6",
   "emoji": "🧩",
   "ringkas": "Kalimat yang hilang, kata penghubung, dan konteks paragraf",
-  "ready": false
+  "ready": true,
+  "practice_n": 20,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u120",
@@ -1536,7 +1554,10 @@
   "title": "Reading Part 7",
   "emoji": "📄",
   "ringkas": "Email, pengumuman, iklan, jadwal, dan soal sinonim serta tujuan",
-  "ready": false
+  "ready": true,
+  "practice_n": 23,
+  "quiz_n": 8,
+  "read_n": 3
  },
  {
   "id": "u121",
@@ -1546,6 +1567,9 @@
   "title": "TOEIC Business Vocabulary and Mini Test",
   "emoji": "🏆",
   "ringkas": "Kosakata kantor, keuangan, perjalanan, dan tes mini campuran",
-  "ready": false
+  "ready": true,
+  "practice_n": 128,
+  "quiz_n": 18,
+  "read_n": 0
  }
 ]
