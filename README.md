@@ -1,6 +1,6 @@
 # Let's Learn English!
 
-Web belajar bahasa Inggris interaktif dari SMP sampai dunia kerja. Ada **91 unit** yang dibagi menjadi sembilan level: Kelas 7, 8, 9, 10, 11, 12, **Modul Tenses** (14 unit, untuk semua level), **Persiapan IELTS** (16 unit), dan **Pekerja / Formal**. Beranda berupa kartu level; klik satu kartu untuk melihat unit-unitnya. Setiap unit berisi **Belajar**, **Latihan** (50 soal acak), dan **Kuis** (50 soal acak, bintang 1-3). Suara dan tema terang/gelap ada di menu ⚙️ pojok kanan atas.
+Web belajar bahasa Inggris interaktif dari SMP sampai dunia kerja. Ada **121 unit** yang dibagi menjadi dua belas level: Kelas 7, 8, 9, 10, 11, 12, **Modul Tenses** (14 unit, untuk semua level), **Modul Pelafalan** (8 unit), **Kosakata dan Menulis** (14 unit), **Persiapan IELTS** (16 unit), **Persiapan TOEIC** (8 unit), dan **Pekerja / Formal**. Beranda berupa kartu level; klik satu kartu untuk melihat unit-unitnya. Setiap unit berisi **Belajar**, **Latihan** (50 soal acak), dan **Kuis** (50 soal acak, bintang 1-3). Suara dan tema terang/gelap ada di menu ⚙️ pojok kanan atas.
 
 Situs: https://belajarcloud5.github.io/belajara-inggris/
 
@@ -45,6 +45,15 @@ Menambah level baru: tambahkan unit dengan `kelas="nama-level"` di `content/unit
 
 **Modul Tenses (14 unit, semua level)**
 1 Peta 12 Tenses · 2 Present Simple vs Continuous · 3 Past Simple vs Continuous · 4 Present Perfect · 5 Present Perfect vs Past Simple · 6 Present Perfect Continuous · 7 Past Perfect · 8 Masa Depan (will, be going to) · 9 Future Continuous dan Future Perfect · 10 Klausa Waktu · 11 Pilih Tense I (Present) · 12 Pilih Tense II (Past) · 13 Tense dalam Cerita dan Laporan · 14 Tes Akhir Tenses
+
+**Modul Pelafalan (8 unit)**
+92 Bunyi Vokal · 93 Konsonan yang Sulit · 94 Akhiran -s, -es, -ed · 95 Tekanan Kata · 96 Ejaan yang Menipu · 97 Tekanan Kalimat dan Bunyi Lemah · 98 Intonasi dan Sambungan Kata · 99 Rangkuman Pelafalan
+
+**Kosakata dan Menulis (14 unit)**
+100-101 Kata yang Sering Tertukar · 102 Awalan · 103 Akhiran · 104 Rumah · 105 Tubuh dan Kesehatan · 106 Pakaian dan Belanja · 107 Transportasi dan Kota · 108 Pekerjaan · 109 Hobi dan Hiburan · 110 Huruf Besar dan Tanda Baca · 111 Menulis Paragraf · 112 Email dan Surat · 113 Rangkuman
+
+**Persiapan TOEIC (8 unit)**
+114 Mengenal TOEIC · 115 Listening Part 1-2 · 116 Listening Part 3-4 · 117 Reading Part 5 Tata Bahasa · 118 Reading Part 5 Kosakata · 119 Reading Part 6 · 120 Reading Part 7 · 121 Kosakata Bisnis dan Tes Mini
 
 **Persiapan IELTS (16 unit)**
 1 Overview dan strategi · 2 Reading: skimming dan scanning · 3 Reading: True/False/Not Given · 4 Reading: judul paragraf dan melengkapi · 5-7 Kosakata akademik I-III · 8 Kata penghubung · 9 Listening: angka, ejaan, tanggal · 10 Listening: catatan dan pengecoh · 11 Writing Task 1 · 12 Writing Task 2 · 13 Writing: tata bahasa dan kesalahan umum · 14 Speaking Part 1 dan 2 · 15 Speaking Part 3 dan kelancaran · 16 Tes simulasi mini. Writing dan Speaking tidak dinilai otomatis; unit-unitnya memberi pola, contoh, dan daftar periksa.
