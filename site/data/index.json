@@ -2022,7 +2022,10 @@
   "title": "TOEFL ITP Overview",
   "emoji": "🧭",
   "ringkas": "Format tiga bagian, skor 310 sampai 677, dan strategi umum",
-  "ready": false
+  "ready": true,
+  "practice_n": 20,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u157",
@@ -2032,7 +2035,10 @@
   "title": "TOEFL Listening",
   "emoji": "🎧",
   "ringkas": "Percakapan pendek, percakapan panjang, dan ceramah",
-  "ready": false
+  "ready": true,
+  "practice_n": 19,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u158",
@@ -2042,7 +2048,10 @@
   "title": "Structure: Sentence Completion",
   "emoji": "🧱",
   "ringkas": "Subjek, kata kerja, klausa, dan pola kalimat",
-  "ready": false
+  "ready": true,
+  "practice_n": 22,
+  "quiz_n": 9,
+  "read_n": 0
  },
  {
   "id": "u159",
@@ -2052,7 +2061,10 @@
   "title": "Written Expression: Error Identification",
   "emoji": "🔧",
   "ringkas": "Kesalahan paralel, kata sifat/keterangan, jamak, dan tense",
-  "ready": false
+  "ready": true,
+  "practice_n": 16,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u160",
@@ -2062,7 +2074,10 @@
   "title": "TOEFL Reading Strategies",
   "emoji": "📄",
   "ringkas": "Gagasan utama, detail, inferensi, dan kosakata dalam konteks",
-  "ready": false
+  "ready": true,
+  "practice_n": 11,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u161",
@@ -2072,7 +2087,10 @@
   "title": "TOEFL Academic Vocabulary",
   "emoji": "📘",
   "ringkas": "Kosakata penting untuk teks akademik",
-  "ready": false
+  "ready": true,
+  "practice_n": 86,
+  "quiz_n": 14,
+  "read_n": 0
  },
  {
   "id": "u162",
@@ -2082,7 +2100,10 @@
   "title": "TOEFL Mini Test: Structure and Reading",
   "emoji": "🧪",
   "ringkas": "Latihan campuran bergaya tes",
-  "ready": false
+  "ready": true,
+  "practice_n": 32,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u163",
@@ -2092,6 +2113,9 @@
   "title": "TOEFL Review",
   "emoji": "🏁",
   "ringkas": "Ulasan strategi dan kesalahan umum",
-  "ready": false
+  "ready": true,
+  "practice_n": 12,
+  "quiz_n": 8,
+  "read_n": 0
  }
 ]

@@ -1,6 +1,6 @@
 # Let's Learn English!
 
-Web belajar bahasa Inggris interaktif dari SMP sampai dunia kerja. Ada **133 unit** yang dibagi menjadi tiga belas level: Kelas 7, 8, 9, 10, 11, 12, **Modul Tenses** (14 unit, untuk semua level), **Modul Pelafalan** (8 unit), **Kosakata dan Menulis** (16 unit), **Inggris untuk Bepergian** (8 unit), **Persiapan IELTS** (16 unit), **Persiapan TOEIC** (8 unit), dan **Pekerja / Formal** (16 unit). Beranda berupa kartu level; klik satu kartu untuk melihat unit-unitnya. Setiap unit berisi **Belajar**, **Latihan** (50 soal acak), dan **Kuis** (50 soal acak, bintang 1-3). Suara dan tema terang/gelap ada di menu ⚙️ pojok kanan atas.
+Web belajar bahasa Inggris interaktif dari SMP sampai dunia kerja. Ada **163 unit** yang dibagi menjadi tujuh belas level: Kelas 7, 8, 9, 10, 11, 12, **Modul Tenses** (14 unit, untuk semua level), **Modul Pelafalan** (8 unit), **Kosakata dan Menulis** (16 unit), **Inggris untuk Bepergian** (8 unit), **Latihan Keterampilan** (6 unit), **Listening Bertahap** (8 unit), **Cerita Bertingkat** (8 unit), **Persiapan IELTS** (16 unit), **Persiapan TOEIC** (8 unit), **Persiapan TOEFL ITP** (8 unit), dan **Pekerja / Formal** (16 unit). Beranda berupa kartu level; klik satu kartu untuk melihat unit-unitnya. Setiap unit berisi **Belajar**, **Latihan** (50 soal acak), dan **Kuis** (50 soal acak, bintang 1-3). Suara dan tema terang/gelap ada di menu ⚙️ pojok kanan atas.
 
 Situs: https://belajarcloud5.github.io/belajara-inggris/
 
@@ -54,6 +54,18 @@ Menambah level baru: tambahkan unit dengan `kelas="nama-level"` di `content/unit
 
 **Inggris untuk Bepergian (8 unit)**
 122 Bandara dan Imigrasi · 123 Hotel · 124 Restoran · 125 Bepergian di Kota · 126 Belanja dan Uang · 127 Darurat dan Kesehatan · 128 Bertemu Orang dan Obrolan Ringan · 129 Rangkuman
+
+**Latihan Keterampilan (6 unit)**
+150 Urutkan Paragraf · 151 Urutkan Dialog · 152 dan 153 Temukan Kesalahan · 154 Kata dan Definisi · 155 Dengar dan Isi
+
+**Listening Bertahap (8 tahap)**
+134 Sapaan dan Angka · 135 Keluarga dan Rumah · 136 Sekolah · 137 Belanja dan Makanan · 138 Perjalanan dan Arah · 139 Telepon dan Pesan · 140 Berita dan Pembicaraan · 141 Kuliah dan Diskusi
+
+**Cerita Bertingkat (8 tahap)**
+142 sampai 149: dari cerita 4 kalimat sampai cerita sekitar 200 kata
+
+**Persiapan TOEFL ITP (8 unit)**
+156 Mengenal TOEFL ITP · 157 Listening · 158 Structure · 159 Written Expression · 160 Reading · 161 Kosakata Akademik · 162 Tes Mini · 163 Rangkuman
 
 **Persiapan TOEIC (8 unit)**
 114 Mengenal TOEIC · 115 Listening Part 1-2 · 116 Listening Part 3-4 · 117 Reading Part 5 Tata Bahasa · 118 Reading Part 5 Kosakata · 119 Reading Part 6 · 120 Reading Part 7 · 121 Kosakata Bisnis dan Tes Mini
@@ -110,3 +122,5 @@ Cerita bacaan **preposisi gerak** (`content/uNN_read7.py`, `READ7`, bacaan ke-8 
 **Fitur belajar**
 - 🧠 **Kartu hafalan** (pengulangan berjarak dari Kamus Kecil), 🎯 **Tes penempatan** (24 soal), 🎤 **Latihan berbicara** (pengenalan suara, hanya di Chrome), dan **target harian** dengan rangkaian hari belajar di beranda.
 - 📴 **Offline**: situs bisa dipasang di layar HP dan semua data disimpan lewat tombol "Simpan untuk offline" (service worker `site/sw.js`).
+- 📊 **Statistik** (14 hari terakhir, kemajuan per level, soal yang sering salah), **cadangan dan pemulihan kemajuan** (berkas JSON), dan 📝 **Mode ujian** (soal acak dengan batas waktu) di halaman tiap level.
+- Tipe soal baru: **urutkan kalimat** (paragraf atau dialog), **temukan kalimat yang salah**, dan **dengar lalu isi kata yang hilang**.
