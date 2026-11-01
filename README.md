@@ -1,6 +1,6 @@
 # Let's Learn English!
 
-Web belajar bahasa Inggris interaktif dari SMP sampai dunia kerja. Ada **91 unit** yang dibagi menjadi sembilan level: Kelas 7, 8, 9, 10, 11, 12, **Modul Tenses** (14 unit, untuk semua level), **Persiapan IELTS** (16 unit), dan **Pekerja / Formal**. Beranda berupa kartu level; klik satu kartu untuk melihat unit-unitnya. Setiap unit berisi **Belajar**, **Latihan** (50 soal acak), dan **Kuis** (50 soal acak, bintang 1-3).
+Web belajar bahasa Inggris interaktif. Beranda menampilkan dua level: **Modul Tenses** (14 unit, untuk semua level) dan **Persiapan IELTS** (16 unit). Materi Kelas 7–12 dan Pekerja masih ada di folder `content` tetapi disembunyikan dari situs. Setiap unit berisi **Belajar**, **Latihan** (50 soal acak), dan **Kuis** (50 soal acak, bintang 1-3). Suara dan tema terang/gelap ada di menu ⚙️ pojok kanan atas.
 
 Situs: https://belajarcloud5.github.io/belajara-inggris/
 

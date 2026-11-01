@@ -106,11 +106,11 @@ function speakSeq(segs) {
   segs.forEach(x => speechSynthesis.speak(makeUtter(x.text, x.g)));
 }
 function initVoicePanel() {
-  const btn = $('#vbtn'), panel = $('#vpanel');
-  if (!btn || !panel) return;
+  const btn = $('#vbtn'), wrap = $('#vpanel'), panel = $('#vbody');
+  if (!btn || !wrap || !panel) return;
   function render() {
     if (!hasTTS) {
-      panel.innerHTML = `<h3>🔊 Pengaturan suara</h3><p><b>Browser ini tidak mendukung suara bawaan.</b> Tombol 🔊 tidak akan berbunyi di sini.</p>
+      panel.innerHTML = `<h4>🔊 Suara</h4><p><b>Browser ini tidak mendukung suara bawaan.</b> Tombol 🔊 tidak akan berbunyi di sini.</p>
         <p class="hint">Coba buka situs ini di browser lain di perangkat ini (Chrome, Puffin TV Browser, atau Microsoft Edge). Atau pakai HP/laptop untuk bagian yang butuh suara.</p>`;
       return;
     }
@@ -118,7 +118,7 @@ function initVoicePanel() {
     const sel = vs.length
       ? `<label>Pilih suara<select id="vsel">${vs.map(v => `<option value="${esc(v.name)}" ${cur && cur.name === v.name ? 'selected' : ''}>${esc(v.name)} (${esc(v.lang)})</option>`).join('')}</select></label>`
       : '<p class="hint">Belum ada suara bahasa Inggris di perangkat ini. Pasang suara bahasa Inggris di pengaturan sistem, atau coba browser lain (misalnya Microsoft Edge).</p>';
-    panel.innerHTML = `<h3>🔊 Pengaturan suara</h3><p class="hint" id="vstat">Suara bahasa Inggris terdeteksi: <b>${vs.length}</b></p>${sel}
+    panel.innerHTML = `<h4>🔊 Suara</h4><p class="hint" id="vstat">Suara bahasa Inggris terdeteksi: <b>${vs.length}</b></p>${sel}
       <label>Kecepatan: <b id="vrv">${vset.rate}</b><input id="vrate" type="range" min="0.5" max="1.2" step="0.05" value="${vset.rate}"></label>
       <label>Nada: <b id="vpv">${vset.pitch}</b><input id="vpitch" type="range" min="0.8" max="1.8" step="0.05" value="${vset.pitch}"></label>
       <div class="row"><button class="btn small" id="vtest">🔊 Tes suara</button><button class="btn ghost small" id="vreset">Atur ulang</button></div>
@@ -139,8 +139,8 @@ function initVoicePanel() {
     });
     $('#vreset', panel).addEventListener('click', () => { vset.name = ''; vset.rate = 0.85; vset.pitch = 1; saveVoice(); render(); });
   }
-  btn.addEventListener('click', () => { panel.hidden = !panel.hidden; if (!panel.hidden) render(); });
-  if (hasTTS) speechSynthesis.onvoiceschanged = () => { if (!panel.hidden) render(); };
+  btn.addEventListener('click', () => { wrap.hidden = !wrap.hidden; if (!wrap.hidden) render(); });
+  if (hasTTS) speechSynthesis.onvoiceschanged = () => { if (!wrap.hidden) render(); };
 }
 document.addEventListener('click', e => {
   const el = e.target.closest('[data-say]');
@@ -205,7 +205,7 @@ async function route() {
   const [, page, id, tab, idx] = location.hash.slice(1).split('/');
   window.scrollTo(0, 0);
   try {
-    const index = await getJSON('data/index.json');
+    const index = (await getJSON('data/index.json')).filter(u => SHOWN.includes(String(u.kelas)));
     $('#total').textContent = `⭐ ${totalStars()} / ${index.filter(u => u.ready).length * 3}`;
     if (page === 'kelas') return renderKelas(index, id);
     if (page === 'kamus') return renderKamus(await getJSON('data/kamus.json'));
@@ -233,11 +233,10 @@ function unitCard(u) {
 // Level di dashboard. Kelas 7-12 diambil dari index.json; level 'kerja' aktif otomatis
 // begitu ada unit dengan kelas: "kerja" di index.json.
 const LEVELS = [
-  ...[7, 8, 9, 10, 11, 12].map(k => ({ key: String(k), title: `Kelas ${k}`, emoji: ['🎒', '📘', '🧭', '🚀', '🎯', '🎓'][k - 7], sub: k <= 9 ? 'SMP' : 'SMA', desc: ['Sapaan, keluarga, angka dan jam, hobi, makanan, dan arah', 'Lampau, sedang terjadi, perbandingan, rencana, dan surat', 'Narrative, report, passive, conditional, dan persiapan ujian', 'Perkenalan, teks deskriptif, recount, prosedur, dan narasi', 'Eksposisi, berita, surat lamaran, dan CV', 'Pengandaian, pasif, wawancara kerja, dan persiapan ujian'][k - 7] })),
   { key: 'tenses', title: 'Modul Tenses', emoji: '⏱️', sub: 'SEMUA LEVEL', desc: 'Paham 12 tense dari nol: rumus, garis waktu, kontras, dan tes akhir' },
   { key: 'ielts', title: 'Persiapan IELTS', emoji: '🌍', sub: 'UJIAN', desc: 'Strategi, reading, listening, kosakata akademik, writing, dan speaking' },
-  { key: 'kerja', title: 'Pekerja / Formal', emoji: '💼', sub: 'DEWASA', desc: 'Bahasa Inggris untuk kantor, email, rapat, dan wawancara' },
 ];
+const SHOWN = LEVELS.map(l => l.key);
 
 function levelStat(index, key) {
   const us = index.filter(u => String(u.kelas) === key), r = us.filter(u => u.ready);
@@ -439,7 +438,7 @@ function runner(pane, d, mode) {
         <a class="btn ghost" href="#/">🏠 Beranda</a></div></div>${review ? `<div class="card review">${review}</div>` : ''}`;
     $('#again').addEventListener('click', () => { if (retry) return renderRetry(); qs = pick(); i = 0; score = 0; wrong = []; show(); });
     // perbarui lencana total
-    getJSON('data/index.json').then(ix => { $('#total').textContent = `⭐ ${totalStars()} / ${ix.filter(u => u.ready).length * 3}`; });
+    getJSON('data/index.json').then(ix0 => { const ix = ix0.filter(u => SHOWN.includes(String(u.kelas))); $('#total').textContent = `⭐ ${totalStars()} / ${ix.filter(u => u.ready).length * 3}`; });
   }
   show();
 }
