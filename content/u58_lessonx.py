@@ -44,3 +44,14 @@ LESSONX += [
          ["\"Don't change the settings.\"", "[[The manager told us not to change the settings.]]"]],
   examples=[dict(en="[[The client said that the system was too slow and asked us to fix it.]]", id="Klien mengatakan bahwa sistem terlalu lambat dan meminta kami memperbaikinya.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="10. Membandingkan opsi solusi",
+  text="Saat memilih solusi, bandingkan opsi dengan comparative dan superlatif:",
+  table=[["Pola", "Contoh"],
+         ["more efficient / less costly", "[[Option B is more efficient and less costly.]]"],
+         ["the best / the least risky", "[[Option C is the least risky.]]"],
+         ["as ... as", "[[Option A is as fast as option B.]]"],
+         ["not as ... as", "[[Option A is not as reliable as option B.]]"]],
+  examples=[dict(en="[[The new server is much faster than the old one, but it is not as cheap as the cloud option.]]", id="Server baru jauh lebih cepat daripada yang lama, tetapi tidak semurah opsi cloud.")]),
+]

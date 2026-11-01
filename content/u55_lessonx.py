@@ -20,3 +20,15 @@ LESSONX += [
          ["[[We will review the figures.]]", "[[The figures will be reviewed.]]"]],
   examples=[dict(en="[[The results were analyzed, and the report was submitted on Friday.]]", id="Hasilnya dianalisis, dan laporan diserahkan pada hari Jumat.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="9. Membandingkan data dengan angka",
+  text="Laporan memakai perbandingan dengan angka dan persentase:",
+  table=[["Pola", "Contoh"],
+         ["X is N% higher/lower than Y", "[[Sales in June were 20% higher than in May.]]"],
+         ["X is twice/three times as ... as Y", "[[Java is twice as large as Bali.]]"],
+         ["the highest / the lowest", "[[The highest sales were recorded in December.]]"],
+         ["slightly / significantly + comparative", "[[Costs were significantly lower.]]"],
+         ["the second largest", "[[Surabaya is the second largest city.]]"]],
+  examples=[dict(en="[[Profit was slightly higher than last year, but costs were the highest ever.]]", id="Laba sedikit lebih tinggi daripada tahun lalu, tetapi biaya adalah yang tertinggi sepanjang masa.")]),
+]

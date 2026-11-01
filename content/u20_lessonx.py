@@ -34,3 +34,14 @@ LESSONX += [
          ["is/are known as", "[[The elephant is known as the largest land animal.]]"]],
   examples=[dict(en="[[Komodo dragons are found only in Indonesia, and they are protected by law.]]", id="Komodo hanya ditemukan di Indonesia, dan dilindungi oleh hukum.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="8. Pembanding dalam report text",
+  text="Report text sering memakai superlatif dan pembanding untuk menjelaskan ciri khas:",
+  table=[["Fungsi", "Contoh"],
+         ["terbesar / terkecil", "[[The blue whale is the largest animal on Earth.]]"],
+         ["lebih ... daripada", "[[A cheetah is faster than a lion.]]"],
+         ["sama ... dengan", "[[Dolphins are as intelligent as monkeys.]]"],
+         ["salah satu yang ...", "[[The eagle is one of the strongest birds.]]"]],
+  examples=[dict(en="[[Elephants are larger than horses, but cheetahs are the fastest land animals.]]", id="Gajah lebih besar daripada kuda, tetapi cheetah adalah hewan darat tercepat.")]),
+]

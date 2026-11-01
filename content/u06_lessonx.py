@@ -10,3 +10,17 @@ LESSONX = [
  dict(t="warn", title="Jangan mengulang kata gantinya",
   text="Katakan [[The girl who is tall is my sister.]], bukan ~~The girl who she is tall~~. Kata **who** sudah menggantikan she. Dan pakai **who** untuk orang, **which** untuk benda: bukan ~~the book who~~."),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="9. the same as, different from, similar to, dan like",
+  text="Selain -er dan more, ada ungkapan lain untuk membandingkan dua orang atau benda:",
+  table=[["Ungkapan", "Makna", "Contoh"],
+         ["**the same as**", "sama dengan", "[[My bag is the same as yours.]]"],
+         ["**different from**", "berbeda dari", "[[Dina is different from her sister.]]"],
+         ["**similar to**", "mirip dengan", "[[Her hair is similar to mine.]]"],
+         ["**like**", "seperti", "[[She looks like her mother.]]"],
+         ["**as ... as**", "sama ... dengan", "[[Rani is as tall as Dina.]]"]],
+  examples=[dict(en="[[My brother is different from me. He is taller, but his eyes are the same as mine.]]", id="Kakakku berbeda dariku. Dia lebih tinggi, tetapi matanya sama seperti mataku.")]),
+ dict(t="warn", title="different from, bukan different than",
+  text="Dalam bahasa Inggris baku, katakan [[different from]] (di Inggris juga [[different to]]). Dan pakai [[the same as]], bukan ~~the same like~~."),
+]

@@ -116,3 +116,17 @@ LESSONX += [
          ["say atau tell", "tell + objek; say tanpa objek", "[[She told me.]] / [[She said that ...]]"]],
   examples=[dict(en="[[He asked me whether I had finished and told me not to be late.]]", id="Dia bertanya apakah aku sudah selesai dan menyuruhku agar tidak terlambat.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="15. Comparative dan superlatif: jebakan ujian",
+  text="Hal yang sering diuji pada perbandingan:",
+  table=[["Jebakan", "Aturan", "Contoh"],
+         ["jangan dobel", "-er atau more, bukan keduanya", "[[taller]], bukan ~~more taller~~"],
+         ["than atau then", "than untuk membandingkan", "[[taller than me]]"],
+         ["the sebelum superlatif", "the + superlatif", "[[the tallest]]"],
+         ["tidak beraturan", "good-better-best; bad-worse-worst; far-farther-farthest", "[[better than]]"],
+         ["kata penguat", "much/far/a lot + comparative; bukan very", "[[much faster]]"],
+         ["as ... as", "pakai adjektiva bentuk dasar", "[[as tall as]], bukan ~~as taller as~~"],
+         ["the + comp, the + comp", "pola semakin ... semakin ...", "[[The more, the better.]]"]],
+  examples=[dict(en="[[This is the most comfortable chair I have ever sat on, and it is much cheaper than that one.]]", id="Ini kursi ternyaman yang pernah kududuki, dan jauh lebih murah daripada yang itu.")]),
+]
