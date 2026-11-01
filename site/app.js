@@ -225,7 +225,7 @@ async function route() {
   }
 }
 
-const kelasName = k => k === 'kerja' ? 'Level Pekerja' : k === 'tenses' ? 'Modul Tenses' : k === 'ielts' ? 'Persiapan IELTS' : k === 'pron' ? 'Modul Pelafalan' : k === 'kosa' ? 'Kosakata dan Menulis' : k === 'toeic' ? 'Persiapan TOEIC' : k === 'travel' ? 'Inggris untuk Bepergian' : k === 'skill' ? 'Latihan Keterampilan' : k === 'listen' ? 'Listening Bertahap' : k === 'reader' ? 'Cerita Bertingkat' : k === 'toefl' ? 'Persiapan TOEFL ITP' : `Kelas ${k}`;
+const kelasName = k => k === 'kerja' ? 'Level Pekerja' : k === 'tenses' ? 'Modul Tenses' : k === 'ielts' ? 'Persiapan IELTS' : k === 'pron' ? 'Modul Pelafalan' : k === 'kosa' ? 'Kosakata dan Menulis' : k === 'toeic' ? 'Persiapan TOEIC' : k === 'travel' ? 'Inggris untuk Bepergian' : k === 'skill' ? 'Latihan Keterampilan' : k === 'listen' ? 'Listening Bertahap' : k === 'reader' ? 'Cerita Bertingkat' : k === 'toefl' ? 'Persiapan TOEFL ITP' : k === 'write' ? 'Menulis Lanjutan' : k === 'talk' ? 'Percakapan Interaktif' : k === 'theme' ? 'Tema Mingguan' : `Kelas ${k}`;
 
 // ---------- beranda ----------
 function unitCard(u) {
@@ -246,6 +246,9 @@ const LEVELS = [
   { key: 'skill', title: 'Latihan Keterampilan', emoji: '🧩', sub: 'SEMUA LEVEL', desc: 'Urutkan paragraf dan dialog, temukan kesalahan, definisi kata, dan dengar lalu isi' },
   { key: 'listen', title: 'Listening Bertahap', emoji: '🎧', sub: 'SEMUA LEVEL', desc: 'Delapan tahap mendengarkan, dari sapaan sampai kuliah dan diskusi' },
   { key: 'reader', title: 'Cerita Bertingkat', emoji: '📚', sub: 'SEMUA LEVEL', desc: 'Delapan tahap cerita dan artikel pendek, makin lama makin panjang' },
+  { key: 'write', title: 'Menulis Lanjutan', emoji: '✍️', sub: 'SEMUA LEVEL', desc: 'Gabungkan kalimat, deskripsi, cerita, esai opini, ringkasan, dan pesan singkat' },
+  { key: 'talk', title: 'Percakapan Interaktif', emoji: '🗨️', sub: 'SEMUA LEVEL', desc: 'Balas percakapan dalam bahasa Inggris: kenalan, rumah, sekolah, kerja, dan layanan' },
+  { key: 'theme', title: 'Tema Mingguan', emoji: '📅', sub: 'SEMUA LEVEL', desc: 'Satu tema tiap minggu: kosakata, bacaan, dan latihan terpadu' },
   { key: 'ielts', title: 'Persiapan IELTS', emoji: '🌍', sub: 'UJIAN', desc: 'Strategi, reading, listening, kosakata akademik, writing, dan speaking' },
   { key: 'toefl', title: 'Persiapan TOEFL ITP', emoji: '🎓', sub: 'UJIAN KAMPUS', desc: 'Listening, Structure, Written Expression, dan Reading ala TOEFL ITP' },
   { key: 'toeic', title: 'Persiapan TOEIC', emoji: '🏢', sub: 'UJIAN KERJA', desc: 'Format TOEIC, listening, tata bahasa, kosakata bisnis, dan membaca teks kantor' },

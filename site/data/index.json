@@ -2117,5 +2117,267 @@
   "practice_n": 12,
   "quiz_n": 8,
   "read_n": 0
+ },
+ {
+  "id": "u164",
+  "kelas": "kosa",
+  "no": 17,
+  "judul": "Phrasal Verb Menengah 1: Kerja dan Belajar",
+  "title": "Phrasal Verbs: Work and Study",
+  "emoji": "🧷",
+  "ringkas": "look up, find out, carry out, set up, catch up, hand in",
+  "ready": true,
+  "practice_n": 91,
+  "quiz_n": 14,
+  "read_n": 0
+ },
+ {
+  "id": "u165",
+  "kelas": "kosa",
+  "no": 18,
+  "judul": "Phrasal Verb Menengah 2: Kehidupan Sehari-hari",
+  "title": "Phrasal Verbs: Daily Life",
+  "emoji": "🪢",
+  "ringkas": "get along, run out of, show up, call off, calm down, grow up",
+  "ready": true,
+  "practice_n": 84,
+  "quiz_n": 14,
+  "read_n": 0
+ },
+ {
+  "id": "u166",
+  "kelas": "kosa",
+  "no": 19,
+  "judul": "Idiom Menengah 1: Percakapan Sehari-hari",
+  "title": "Idioms: Everyday Talk",
+  "emoji": "💬",
+  "ringkas": "break the ice, on the same page, in a nutshell, hit the road",
+  "ready": true,
+  "practice_n": 93,
+  "quiz_n": 14,
+  "read_n": 0
+ },
+ {
+  "id": "u167",
+  "kelas": "kosa",
+  "no": 20,
+  "judul": "Idiom Menengah 2: Perasaan dan Situasi",
+  "title": "Idioms: Feelings and Situations",
+  "emoji": "🎭",
+  "ringkas": "a blessing in disguise, the last straw, back to square one, out of the blue",
+  "ready": true,
+  "practice_n": 89,
+  "quiz_n": 14,
+  "read_n": 0
+ },
+ {
+  "id": "u168",
+  "kelas": "write",
+  "no": 1,
+  "judul": "Menggabungkan Kalimat",
+  "title": "Combining Sentences",
+  "emoji": "🔗",
+  "ringkas": "Kalimat majemuk, klausa, dan variasi kalimat",
+  "ready": false
+ },
+ {
+  "id": "u169",
+  "kelas": "write",
+  "no": 2,
+  "judul": "Menulis Deskripsi",
+  "title": "Writing Descriptions",
+  "emoji": "🖼️",
+  "ringkas": "Orang, tempat, dan benda dengan detail yang hidup",
+  "ready": false
+ },
+ {
+  "id": "u170",
+  "kelas": "write",
+  "no": 3,
+  "judul": "Menulis Cerita",
+  "title": "Writing a Story",
+  "emoji": "📖",
+  "ringkas": "Alur, tokoh, latar, dan kata penghubung waktu",
+  "ready": false
+ },
+ {
+  "id": "u171",
+  "kelas": "write",
+  "no": 4,
+  "judul": "Esai Opini",
+  "title": "Opinion Essays",
+  "emoji": "🗳️",
+  "ringkas": "Thesis, alasan, contoh, dan kesimpulan",
+  "ready": false
+ },
+ {
+  "id": "u172",
+  "kelas": "write",
+  "no": 5,
+  "judul": "Meringkas dan Memparafrase",
+  "title": "Summarising and Paraphrasing",
+  "emoji": "✂️",
+  "ringkas": "Menulis ulang dengan kata sendiri tanpa mengubah makna",
+  "ready": false
+ },
+ {
+  "id": "u173",
+  "kelas": "write",
+  "no": 6,
+  "judul": "Catatan, Pengumuman, dan Pesan",
+  "title": "Notes, Notices, and Messages",
+  "emoji": "📝",
+  "ringkas": "Menulis pesan singkat yang jelas dan sopan",
+  "ready": false
+ },
+ {
+  "id": "u174",
+  "kelas": "write",
+  "no": 7,
+  "judul": "Rangkuman Menulis",
+  "title": "Writing Review",
+  "emoji": "🎓",
+  "ringkas": "Latihan campuran semua unit menulis",
+  "ready": false
+ },
+ {
+  "id": "u175",
+  "kelas": "talk",
+  "no": 1,
+  "judul": "Berkenalan dan Menyapa",
+  "title": "Meeting and Greeting",
+  "emoji": "🙋",
+  "ringkas": "Memperkenalkan diri, bertanya kabar, dan menanggapi",
+  "ready": false
+ },
+ {
+  "id": "u176",
+  "kelas": "talk",
+  "no": 2,
+  "judul": "Di Rumah dan Bersama Keluarga",
+  "title": "At Home and with Family",
+  "emoji": "🏡",
+  "ringkas": "Meminta tolong, berbagi tugas, dan merencanakan akhir pekan",
+  "ready": false
+ },
+ {
+  "id": "u177",
+  "kelas": "talk",
+  "no": 3,
+  "judul": "Di Sekolah dan Kampus",
+  "title": "At School and University",
+  "emoji": "🏫",
+  "ringkas": "Bertanya kepada guru, kerja kelompok, dan jadwal",
+  "ready": false
+ },
+ {
+  "id": "u178",
+  "kelas": "talk",
+  "no": 4,
+  "judul": "Di Tempat Kerja",
+  "title": "At Work",
+  "emoji": "💼",
+  "ringkas": "Rapat singkat, meminta bantuan, dan melapor",
+  "ready": false
+ },
+ {
+  "id": "u179",
+  "kelas": "talk",
+  "no": 5,
+  "judul": "Layanan dan Tempat Umum",
+  "title": "Services and Public Places",
+  "emoji": "🏦",
+  "ringkas": "Bank, kantor pos, klinik, dan layanan pelanggan",
+  "ready": false
+ },
+ {
+  "id": "u180",
+  "kelas": "talk",
+  "no": 6,
+  "judul": "Berpendapat, Setuju, dan Tidak Setuju",
+  "title": "Opinions and Agreeing",
+  "emoji": "🗣️",
+  "ringkas": "Menyatakan pendapat, setuju, menolak, dan bernegosiasi",
+  "ready": false
+ },
+ {
+  "id": "u181",
+  "kelas": "theme",
+  "no": 1,
+  "judul": "Minggu 1: Olahraga",
+  "title": "Week 1: Sports",
+  "emoji": "⚽",
+  "ringkas": "Kosakata, bacaan, dan latihan tentang olahraga",
+  "ready": false
+ },
+ {
+  "id": "u182",
+  "kelas": "theme",
+  "no": 2,
+  "judul": "Minggu 2: Kesehatan dan Gaya Hidup",
+  "title": "Week 2: Health and Lifestyle",
+  "emoji": "🩺",
+  "ringkas": "Tidur, makan, olahraga, dan kebiasaan sehat",
+  "ready": false
+ },
+ {
+  "id": "u183",
+  "kelas": "theme",
+  "no": 3,
+  "judul": "Minggu 3: Lingkungan",
+  "title": "Week 3: The Environment",
+  "emoji": "🌿",
+  "ringkas": "Sampah, energi, cuaca, dan menjaga bumi",
+  "ready": false
+ },
+ {
+  "id": "u184",
+  "kelas": "theme",
+  "no": 4,
+  "judul": "Minggu 4: Teknologi",
+  "title": "Week 4: Technology",
+  "emoji": "📱",
+  "ringkas": "Ponsel, internet, aplikasi, dan keamanan",
+  "ready": false
+ },
+ {
+  "id": "u185",
+  "kelas": "theme",
+  "no": 5,
+  "judul": "Minggu 5: Makanan dan Memasak",
+  "title": "Week 5: Food and Cooking",
+  "emoji": "🍳",
+  "ringkas": "Resep, bahan, rasa, dan budaya makan",
+  "ready": false
+ },
+ {
+  "id": "u186",
+  "kelas": "theme",
+  "no": 6,
+  "judul": "Minggu 6: Musik dan Film",
+  "title": "Week 6: Music and Films",
+  "emoji": "🎬",
+  "ringkas": "Genre, ulasan, dan hiburan",
+  "ready": false
+ },
+ {
+  "id": "u187",
+  "kelas": "theme",
+  "no": 7,
+  "judul": "Minggu 7: Belajar dan Karier",
+  "title": "Week 7: Study and Career",
+  "emoji": "🎯",
+  "ringkas": "Cita-cita, keterampilan, dan rencana",
+  "ready": false
+ },
+ {
+  "id": "u188",
+  "kelas": "theme",
+  "no": 8,
+  "judul": "Minggu 8: Uang dan Belanja Bijak",
+  "title": "Week 8: Money and Smart Shopping",
+  "emoji": "💰",
+  "ringkas": "Menabung, anggaran, harga, dan keputusan",
+  "ready": false
  }
 ]
