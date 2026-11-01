@@ -158,3 +158,16 @@ LESSONX += [
          ["jangan will di if", "if + present, bukan will", "[[If it rains, ...]] bukan ~~If it will rain~~"]],
   examples=[dict(en="[[If I had saved more money, I would be on holiday now, but I wish I had been more careful.]]", id="Seandainya aku menabung lebih banyak, sekarang aku sedang berlibur, tetapi andai aku lebih berhati-hati.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="18. Phrasal verbs: jebakan ujian",
+  text="Hal yang sering diuji pada phrasal verb:",
+  table=[["Jebakan", "Aturan", "Contoh"],
+         ["bisa dipisah (separable)", "kata ganti harus di tengah", "[[Turn it off.]], bukan ~~Turn off it~~"],
+         ["tidak bisa dipisah", "look after, look for, get on", "[[Look after the baby.]], bukan ~~Look the baby after~~"],
+         ["arti berbeda", "give up = menyerah; give away = membagikan", "[[Never give up.]]"],
+         ["preposition setelahnya", "get on with, look forward to", "[[I get on with my sister.]]"],
+         ["tense", "bentuk kata kerja berubah, particle tetap", "[[She picked up the phone.]]"],
+         ["pilih particle", "off ≠ out ≠ on", "[[take off the shoes]] / [[take out the trash]]"]],
+  examples=[dict(en="[[I picked the phone up, turned it on, and looked for your number.]]", id="Aku mengambil ponselnya, menyalakannya, dan mencari nomormu.")]),
+]

@@ -66,3 +66,16 @@ LESSONX += [
          ["pengandaian sekarang", "[[If we had more staff, we could finish sooner.]]"]],
   examples=[dict(en="[[If the team had reported the issue earlier, we would not be facing this delay now.]]", id="Seandainya tim melaporkan masalah itu lebih awal, kita sekarang tidak akan menghadapi keterlambatan ini.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="12. Phrasal verbs untuk masalah teknis",
+  text="Dalam laporan masalah dan status:",
+  table=[["Phrasal verb", "Artinya", "Contoh"],
+         ["**break down**", "mogok, rusak", "[[The server broke down last night.]]"],
+         ["**run out of**", "kehabisan", "[[We ran out of memory.]]"],
+         ["**figure out**", "memahami, menemukan solusi", "[[We figured out the cause.]]"],
+         ["**carry on**", "melanjutkan", "[[Let's carry on testing.]]"],
+         ["**back up**", "mencadangkan", "[[Please back up your files.]]"],
+         ["**sort out**", "menyelesaikan", "[[We'll sort out the problem today.]]"]],
+  examples=[dict(en="[[The system broke down because we ran out of space, but we sorted it out and backed up the data.]]", id="Sistem mogok karena kehabisan ruang, tetapi kami menyelesaikannya dan mencadangkan datanya.")]),
+]

@@ -55,3 +55,16 @@ LESSONX = [
  dict(t="tip", title="through atau across?",
   text="**through** = menembus bagian dalam sesuatu yang punya sisi (hutan, terowongan, pintu). **across** = menyeberangi permukaan yang datar (jalan, sungai, lapangan). Bayangkan: kamu berjalan **through** hutan, tetapi **across** lapangan."),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="10. Phrasal verbs perjalanan",
+  text="Saat berpergian dan menanyakan jalan, phrasal verb sering muncul:",
+  table=[["Phrasal verb", "Artinya", "Contoh"],
+         ["**get on / get off**", "naik / turun (bus, kereta)", "[[Get on the bus.]] / [[Get off at the station.]]"],
+         ["**set off**", "berangkat", "[[We set off at six.]]"],
+         ["**turn back**", "kembali", "[[It's too late. Let's turn back.]]"],
+         ["**go on / go straight on**", "terus (jalan)", "[[Go straight on for two blocks.]]"],
+         ["**pick up**", "menjemput", "[[I'll pick you up at the station.]]"],
+         ["**drop off**", "menurunkan", "[[Please drop me off here.]]"]],
+  examples=[dict(en="[[We set off early, got on the train, and got off in Bandung.]]", id="Kami berangkat pagi-pagi, naik kereta, dan turun di Bandung.")]),
+]

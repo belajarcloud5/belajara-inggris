@@ -29,3 +29,18 @@ LESSONX += [
  dict(t="warn", title="Jangan memakai because dan so dalam satu kalimat",
   text="Dalam bahasa Indonesia kita bisa berkata *karena ... maka ...*. Dalam bahasa Inggris pilih satu: [[I am tired, so I sleep.]] atau [[I sleep because I am tired.]] Jangan katakan ~~Because I am tired, so I sleep.~~ Gunakan koma sebelum **and, but, so** saat menyambung dua kalimat lengkap."),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="9. Phrasal verbs sehari-hari",
+  text="**Phrasal verb** adalah kata kerja + kata kecil (particle) yang artinya sering berbeda dari kata kerja aslinya.",
+  table=[["Phrasal verb", "Artinya", "Contoh"],
+         ["**wake up**", "terbangun", "[[I wake up at five.]]"],
+         ["**get up**", "bangun dari tempat tidur", "[[I get up at five fifteen.]]"],
+         ["**turn on / turn off**", "menyalakan / mematikan", "[[Turn on the light.]] / [[Turn it off.]]"],
+         ["**put on / take off**", "memakai / melepas", "[[Put on your shoes.]] / [[Take off your jacket.]]"],
+         ["**clean up**", "membereskan", "[[I clean up my room.]]"],
+         ["**go out**", "keluar rumah", "[[We go out on Sunday.]]"]],
+  examples=[dict(en="[[I wake up, get up, and put on my uniform.]]", id="Aku terbangun, bangun dari tempat tidur, dan memakai seragam.")]),
+ dict(t="tip", title="Pronomina di tengah",
+  text="Pada phrasal verb yang bisa dipisah, kata ganti ditaruh **di tengah**: [[Turn it off.]], bukan ~~Turn off it~~. Benda boleh di tengah atau di belakang: [[Turn off the light.]] atau [[Turn the light off.]]"),
+]

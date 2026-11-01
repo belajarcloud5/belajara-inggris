@@ -35,3 +35,16 @@ LESSONX += [
          ["**if not**", "kalau tidak", "[[Please confirm today; if not, we will cancel.]]"]],
   examples=[dict(en="[[If the budget were bigger, we would hire more staff, but we will manage as long as costs stay low.]]", id="Seandainya anggarannya lebih besar, kami akan mempekerjakan lebih banyak staf, tetapi kami akan bertahan asalkan biaya tetap rendah.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="10. Phrasal verbs rapat",
+  text="Rapat memakai phrasal verb khas:",
+  table=[["Phrasal verb", "Artinya", "Contoh"],
+         ["**bring up**", "mengemukakan", "[[Sam brought up the budget.]]"],
+         ["**go over**", "meninjau", "[[Let's go over the agenda.]]"],
+         ["**wrap up**", "menutup, menyimpulkan", "[[Let's wrap up the meeting.]]"],
+         ["**follow up**", "menindaklanjuti", "[[We'll follow up next week.]]"],
+         ["**set up**", "menyiapkan, mengatur", "[[Anna set up the meeting.]]"],
+         ["**put off**", "menunda", "[[We put off the decision.]]"]],
+  examples=[dict(en="[[Let's go over the notes, bring up any questions, and wrap up by noon.]]", id="Mari kita tinjau catatan, kemukakan pertanyaan, dan tutup sebelum tengah hari.")]),
+]

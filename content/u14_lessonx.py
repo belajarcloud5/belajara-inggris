@@ -9,3 +9,16 @@ LESSONX = [
  dict(t="tip", title="Perintah atau pasif?",
   text="Resep bisa memakai perintah ([[Wash the vegetables.]]) atau pasif ([[The vegetables are washed.]]). Maknanya sama; pasif terdengar lebih formal."),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="7. Phrasal verbs memasak",
+  text="Resep sering memakai phrasal verb:",
+  table=[["Phrasal verb", "Artinya", "Contoh"],
+         ["**cut up**", "memotong-motong", "[[Cut up the onions.]]"],
+         ["**mix in**", "mencampurkan", "[[Mix in the sugar.]]"],
+         ["**pour out**", "menuang keluar", "[[Pour out the water.]]"],
+         ["**put in**", "memasukkan", "[[Put in two eggs.]]"],
+         ["**take out**", "mengeluarkan", "[[Take out the cake.]]"],
+         ["**turn over**", "membalik", "[[Turn the pancake over.]]"]],
+  examples=[dict(en="[[Cut up the vegetables, put them in the pan, and turn them over after two minutes.]]", id="Potong-potong sayurannya, masukkan ke wajan, dan balik setelah dua menit.")]),
+]
