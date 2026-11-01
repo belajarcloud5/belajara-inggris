@@ -268,6 +268,11 @@ def main():
             seen.add(key); out.append(it)
     out.sort(key=lambda x: x["en"].lower())
     json.dump(out, open(os.path.join(OUT, "kamus.json"), "w"), ensure_ascii=False, separators=(",", ":"))
+    pron = json.load(open(os.path.join(ROOT, "content", "pron.json"), encoding="utf-8"))  # lafal dari CMU Pronouncing Dictionary
+    gloss = load(os.path.join(ROOT, "content", "glossary.py")).GLOSS
+    kata = {w: [*pron.get(w, ["", ""]), gloss.get(w, "")] for w in sorted(set(pron) | set(gloss))}
+    json.dump(kata, open(os.path.join(OUT, "kata.json"), "w"), ensure_ascii=False, separators=(",", ":"))
+    print(f"kata (popup bacaan): {len(kata)}, berarti: {sum(1 for v in kata.values() if v[2])}")
     print(f"kamus: {len(out)} kata; soal isian hasil konversi: {n_conv}")
     print(f"{sum(e['ready'] for e in index)}/{len(index)} unit siap")
 

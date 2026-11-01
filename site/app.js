@@ -395,6 +395,7 @@ function runner(pane, d, mode) {
   let i = 0, score = 0, wrong = [];
 
   function show() {
+    closeWordPop();
     if (i >= qs.length) return finish();
     const q = qs[i];
     pane.innerHTML = `
@@ -442,6 +443,151 @@ function runner(pane, d, mode) {
 }
 
 // ---------- bacaan: teks pendek + beberapa pertanyaan ----------
+// ---------- popup kata di bacaan ----------
+// Klik atau blok kata/frasa di teks bacaan: muncul kartu berisi cara baca (IPA + ejaan Indonesia), suara, arti, dan definisi Inggris.
+const WORD_SPLIT = /([A-Za-z]+(?:'[A-Za-z]+)*)/;
+const wrapWords = line => line.split(WORD_SPLIT).map((t, i) => i % 2 ? `<span class="w" data-w="${esc(t)}">${esc(t)}</span>` : esc(t)).join('');
+const WORDS_KEY = 'english7.words';
+let wordsOnline = {};
+try { wordsOnline = JSON.parse(localStorage.getItem(WORDS_KEY) || '{}'); } catch (e) { wordsOnline = {}; }
+function saveWordsOnline() { try { localStorage.setItem(WORDS_KEY, JSON.stringify(wordsOnline)); } catch (e) { /* penyimpanan penuh: abaikan */ } }
+function lemmaCandidates(w) {
+  const c = [], add = x => { if (x.length > 1 && !c.includes(x)) c.push(x); };
+  add(w);
+  if (w.endsWith("'s")) add(w.slice(0, -2));
+  if (w.endsWith('ies')) add(w.slice(0, -3) + 'y');
+  if (w.endsWith('es')) add(w.slice(0, -2));
+  if (w.endsWith('s')) add(w.slice(0, -1));
+  if (w.endsWith('ed')) { add(w.slice(0, -2)); add(w.slice(0, -1)); if (/(.)\1ed$/.test(w)) add(w.slice(0, -3)); if (w.endsWith('ied')) add(w.slice(0, -3) + 'y'); }
+  if (w.endsWith('ing')) { add(w.slice(0, -3)); add(w.slice(0, -3) + 'e'); if (/(.)\1ing$/.test(w)) add(w.slice(0, -4)); }
+  if (w.endsWith('ly')) add(w.slice(0, -2));
+  return c;
+}
+let kamusMap = null;
+async function localWord(raw) {
+  const w = raw.toLowerCase();
+  let kata = {}, kam = [];
+  try { kata = await getJSON('data/kata.json'); } catch (e) { /* tanpa data lokal */ }
+  if (!kamusMap) {
+    try { kam = await getJSON('data/kamus.json'); } catch (e) { /* tanpa kamus */ }
+    kamusMap = {};
+    kam.forEach(k => { const key = k.en.toLowerCase().replace(/^(a|an|the|to)\s+/, ''); if (!(key in kamusMap)) kamusMap[key] = k.id; });
+  }
+  const own = kata[w] || ['', '', ''];
+  const info = { ipa: own[0], say: own[1], mean: own[2], from: '' };
+  if (!info.mean && kamusMap[w]) info.mean = kamusMap[w];
+  if (!info.mean) {
+    for (const l of lemmaCandidates(w).slice(1)) {
+      const m = (kata[l] && kata[l][2]) || kamusMap[l];
+      if (m) { info.mean = m; info.from = l; break; }
+    }
+  }
+  if (!info.ipa) for (const l of lemmaCandidates(w).slice(1)) if (kata[l] && kata[l][0]) { info.ipa = kata[l][0]; info.say = kata[l][1]; break; }
+  return info;
+}
+async function onlineWord(raw, needMean) {
+  const key = raw.toLowerCase();
+  const hit = wordsOnline[key] || {};
+  const out = { mean: hit.mean || '', pos: hit.pos || '', def: hit.def || '', ipa: hit.ipa || '' };
+  const ft = (url) => Promise.race([fetch(url).then(r => r.ok ? r.json() : null), new Promise(res => setTimeout(() => res(null), 6000))]).catch(() => null);
+  const jobs = [];
+  if (!hit.done && !/\s/.test(key)) {
+    jobs.push((async () => {
+      for (const l of lemmaCandidates(key).slice(0, 3)) {
+        const d = await ft('https://api.dictionaryapi.dev/api/v2/entries/en/' + encodeURIComponent(l));
+        if (Array.isArray(d) && d.length) {
+          const e = d[0], m = (e.meanings || [])[0];
+          out.ipa = out.ipa || e.phonetic || ((e.phonetics || []).find(p => p.text) || {}).text || '';
+          if (m && m.definitions && m.definitions[0]) { out.pos = m.partOfSpeech || ''; out.def = m.definitions[0].definition || ''; }
+          break;
+        }
+      }
+    })());
+  }
+  if (needMean && !out.mean) {
+    jobs.push((async () => {
+      const d = await ft('https://api.mymemory.translated.net/get?langpair=en|id&q=' + encodeURIComponent(raw));
+      const t = d && d.responseData && d.responseData.translatedText;
+      if (t && t.toLowerCase() !== key && !/MYMEMORY|INVALID/i.test(t)) out.mean = t;
+    })());
+  }
+  await Promise.all(jobs);
+  if (out.mean || out.def) { wordsOnline[key] = { ...out, done: true }; saveWordsOnline(); }
+  return out;
+}
+let wpopEl = null, wpopToken = 0, wpopMark = null;
+function closeWordPop() {
+  wpopToken++;
+  if (wpopEl) { wpopEl.remove(); wpopEl = null; }
+  if (wpopMark) { wpopMark.classList.remove('on'); wpopMark = null; }
+}
+async function showWordPop(text, rect, mark) {
+  closeWordPop();
+  const token = wpopToken;
+  const phrase = /\s/.test(text);
+  if (mark) { mark.classList.add('on'); wpopMark = mark; }
+  const el = wpopEl = document.createElement('div');
+  el.className = 'wpop'; el.setAttribute('role', 'dialog');
+  document.body.appendChild(el);
+  const local = phrase ? { ipa: '', say: '', mean: '', from: '' } : await localWord(text);
+  if (token !== wpopToken) return;
+  const draw = (on) => {
+    if (token !== wpopToken) return;
+    const mean = local.mean || (on && on.mean) || '';
+    const ipa = local.ipa || (on && on.ipa) || '';
+    el.innerHTML = `<div class="wp-head"><b class="wp-word">${esc(text)}</b><button class="wp-x" aria-label="Tutup">×</button></div>
+      ${ipa || local.say ? `<div class="wp-ipa">${ipa ? `<span>${esc(ipa)}</span>` : ''}${local.say ? `<span class="wp-say" title="Huruf besar = bagian yang ditekan. Ini hanya perkiraan; dengarkan suaranya.">dibaca: <b>${esc(local.say)}</b></span>` : ''}</div>` : ''}
+      ${hasTTS ? `<div class="wp-btns"><button class="btn small" data-a="s">🔊 Dengarkan</button> <button class="btn ghost small" data-a="sl">🐢 Pelan</button></div>` : '<div class="hint">Suara tidak tersedia di perangkat ini.</div>'}
+      <div class="wp-mean">${mean ? `<b>Arti:</b> ${esc(mean)}${local.from ? ` <small class="hint">(bentuk dari ${esc(local.from)})</small>` : ''}` : (on ? '<small class="hint">Arti belum ditemukan. Coba blok seluruh frasanya, atau periksa sambungan internet.</small>' : '<small class="hint">Mencari arti…</small>')}</div>
+      ${on && on.def ? `<div class="wp-def"><small>${esc(on.pos)}${on.pos ? ' · ' : ''}${esc(on.def)}</small></div>` : ''}`;
+    $('.wp-x', el).addEventListener('click', closeWordPop);
+    const b1 = $('[data-a=s]', el), b2 = $('[data-a=sl]', el);
+    if (b1) b1.addEventListener('click', () => speak(text));
+    if (b2) b2.addEventListener('click', () => speakSlow(text));
+    place(el, rect);
+  };
+  draw(null);
+  if (hasTTS) speak(text);
+  const on = await onlineWord(text, !local.mean);
+  draw(on);
+}
+function place(el, rect) {
+  const pad = 8, w = el.offsetWidth, h = el.offsetHeight;
+  let left = Math.min(Math.max(pad, rect.left + rect.width / 2 - w / 2), window.innerWidth - w - pad);
+  let top = rect.bottom + pad;
+  if (top + h > window.innerHeight - pad) top = Math.max(pad, rect.top - h - pad);
+  el.style.left = left + 'px'; el.style.top = top + 'px';
+}
+let wordPopUnbind = null;
+function bindWordPop(box) {
+  if (wordPopUnbind) wordPopUnbind();
+  let selTimer = 0;
+  const inBox = n => n && box.contains(n.nodeType === 3 ? n.parentNode : n);
+  box.addEventListener('click', e => {
+    const sel = String(window.getSelection()).trim();
+    if (sel) return;                                   // ada blok teks: ditangani selectionchange
+    const w = e.target.closest && e.target.closest('.w');
+    if (w) { e.stopPropagation(); showWordPop(w.dataset.w, w.getBoundingClientRect(), w); }
+  });
+  const onSel = () => {
+    clearTimeout(selTimer);
+    selTimer = setTimeout(() => {
+      const s = window.getSelection();
+      const t = String(s).replace(/\s+/g, ' ').trim();
+      if (!t || !s.rangeCount || !inBox(s.anchorNode) || !inBox(s.focusNode)) return;
+      if (!/[A-Za-z]/.test(t) || t.split(' ').length > 6 || t.length > 60) return;
+      showWordPop(t.replace(/^[^A-Za-z]+|[^A-Za-z.!?']+$/g, ''), s.getRangeAt(0).getBoundingClientRect(), null);
+    }, 450);
+  };
+  document.addEventListener('selectionchange', onSel);
+  wordPopUnbind = () => { clearTimeout(selTimer); document.removeEventListener('selectionchange', onSel); wordPopUnbind = null; };
+}
+document.addEventListener('click', e => { if (wpopEl && !wpopEl.contains(e.target) && !(e.target.closest && e.target.closest('.w'))) closeWordPop(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeWordPop(); });
+window.addEventListener('scroll', () => closeWordPop(), true);
+window.addEventListener('resize', closeWordPop);
+window.addEventListener('hashchange', closeWordPop);
+
 function renderRead(pane, d, idx) {
   const rs = (U(d.id).reads = U(d.id).reads || {});
   const n = +idx;
@@ -454,7 +600,7 @@ function renderRead(pane, d, idx) {
   const qs = shuffle(ps.qs);
   let i = 0, score = 0, wrong = [];
   const textHtml = `<div class="card passage"><div class="dhead"><div><h3 style="margin:0">${esc(ps.title)}</h3>${ps.focus ? `<small class="hint">🕐 Fokus tenses: ${esc(ps.focus)}</small>` : ''}</div><span><button class="btn ghost small" id="ttsp">🔊 Dengarkan</button> <button class="btn ghost small" id="trtog">Tampilkan terjemahan</button></span></div>
-    ${ps.text.split('\n').map(x => `<p>${esc(x)}</p>`).join('')}<div class="tr-box" id="trbox" hidden>${ps.id.split('\n').map(x => `<p>${esc(x)}</p>`).join('')}</div></div>`;
+    <small class="hint">💡 Klik atau blok kata yang belum kamu mengerti untuk melihat arti, cara baca, dan suaranya.</small><div class="ptext">${ps.text.split('\n').map(x => `<p>${wrapWords(x)}</p>`).join('')}</div><div class="tr-box" id="trbox" hidden>${ps.id.split('\n').map(x => `<p>${esc(x)}</p>`).join('')}</div></div>`;
   function show() {
     if (i >= qs.length) return finish();
     const q = qs[i];
@@ -462,6 +608,7 @@ function renderRead(pane, d, idx) {
       <div class="qhead"><span class="qno">📚 Pertanyaan ${i + 1}/${qs.length}</span><div class="pbar"><i style="width:${Math.round(100 * i / qs.length)}%"></i></div></div>
       <div class="card"><div id="qbox"></div><div id="fb"></div></div>`;
     $('#ttsp').addEventListener('click', () => speakSeq(parseSpeakers(ps.text.replace(/\n+/g, ' '))));
+    bindWordPop($('.ptext', pane));
     $('#trtog').addEventListener('click', e => { const b = $('#trbox'); b.hidden = !b.hidden; e.target.textContent = b.hidden ? 'Tampilkan terjemahan' : 'Sembunyikan terjemahan'; });
     renderQ(q, $('#qbox'), ok => {
       if (ok) score++; else wrong.push(q);

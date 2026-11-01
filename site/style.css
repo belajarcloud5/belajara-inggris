@@ -188,3 +188,15 @@ input.blank.bad{border-color:var(--bad);background:var(--bad-soft)}
 
 .hright{flex-wrap:wrap;justify-content:flex-end}
 #tbtn{white-space:nowrap}
+
+/* popup kata di bacaan */
+.ptext .w{cursor:pointer;border-radius:4px;transition:background .15s}
+.ptext .w:hover,.ptext .w.on{background:var(--brand-soft);box-shadow:0 0 0 2px var(--brand-soft)}
+.wpop{position:fixed;z-index:50;width:min(300px,calc(100vw - 16px));padding:12px 14px;border-radius:16px;background:var(--card,#fff);color:var(--ink);border:1px solid var(--line,#ddd);box-shadow:0 8px 28px rgba(0,0,0,.22);left:8px;top:8px}
+.wp-head{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.wp-word{font-size:1.25rem}
+.wp-x{border:0;background:transparent;color:inherit;font-size:1.4rem;line-height:1;cursor:pointer;padding:0 4px}
+.wp-ipa{display:flex;flex-wrap:wrap;gap:4px 12px;margin:4px 0 8px;color:var(--muted,#667)}
+.wp-btns{display:flex;gap:6px;margin-bottom:8px}
+.wp-mean{font-size:1rem}
+.wp-def{margin-top:6px;color:var(--muted,#667)}
