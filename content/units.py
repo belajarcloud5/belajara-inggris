@@ -263,4 +263,34 @@ UNITS = [
       ringkas="Email, pengumuman, iklan, jadwal, dan soal sinonim serta tujuan"),
  dict(kelas="toeic", id="u121", no=8, emoji="🏆", title="TOEIC Business Vocabulary and Mini Test", judul="Kosakata Bisnis dan Tes Mini",
       ringkas="Kosakata kantor, keuangan, perjalanan, dan tes mini campuran"),
+
+ # ---------------- Inggris untuk Bepergian ----------------
+ dict(kelas="travel", id="u122", no=1, emoji="🛂", title="At the Airport and Immigration", judul="Di Bandara dan Imigrasi",
+      ringkas="Check-in, boarding pass, paspor, bea cukai, dan menjawab petugas"),
+ dict(kelas="travel", id="u123", no=2, emoji="🏨", title="At the Hotel", judul="Di Hotel",
+      ringkas="Reservasi, check-in dan check-out, permintaan, dan keluhan"),
+ dict(kelas="travel", id="u124", no=3, emoji="🍽️", title="Restaurants and Ordering", judul="Di Restoran dan Memesan",
+      ringkas="Menu, memesan, alergi, tagihan, dan tip"),
+ dict(kelas="travel", id="u125", no=4, emoji="🚇", title="Getting Around", judul="Bepergian di Kota",
+      ringkas="Taksi, bus, kereta, tiket, dan bertanya arah"),
+ dict(kelas="travel", id="u126", no=5, emoji="🛍️", title="Shopping and Money", judul="Belanja dan Uang",
+      ringkas="Harga, menawar, menukar uang, kartu, dan pengembalian"),
+ dict(kelas="travel", id="u127", no=6, emoji="🚑", title="Emergencies and Health Abroad", judul="Darurat dan Kesehatan di Luar Negeri",
+      ringkas="Meminta tolong, polisi, apotek, dokter, dan kehilangan barang"),
+ dict(kelas="travel", id="u128", no=7, emoji="🤝", title="Meeting People and Small Talk", judul="Bertemu Orang dan Obrolan Ringan",
+      ringkas="Berkenalan, asal, pekerjaan, undangan, dan menolak sopan"),
+ dict(kelas="travel", id="u129", no=8, emoji="🎓", title="Travel English Review", judul="Rangkuman Inggris untuk Bepergian",
+      ringkas="Latihan campuran semua unit bepergian"),
+
+ # ---------------- tambahan Kosakata dan Menulis ----------------
+ dict(kelas="kosa", id="u130", no=15, emoji="🚫", title="Common Mistakes", judul="Kesalahan Umum Penutur Indonesia",
+      ringkas="I am agree, informations, discuss about, dan kesalahan lain yang sering terjadi"),
+ dict(kelas="kosa", id="u131", no=16, emoji="🪞", title="False Friends", judul="Kata yang Mirip tetapi Beda Arti",
+      ringkas="actually, eventually, sensible, sympathetic, dan kata yang menjebak"),
+
+ # ---------------- tambahan Pekerja ----------------
+ dict(kelas="kerja", id="u132", no=15, emoji="🧑‍💼", title="Job Interview in English", judul="Wawancara Kerja dalam Bahasa Inggris",
+      ringkas="Pertanyaan umum, memperkenalkan diri, kelebihan dan kekurangan, serta alasan melamar"),
+ dict(kelas="kerja", id="u133", no=16, emoji="⭐", title="Interview Answers: STAR and Salary", judul="Menjawab Wawancara: Metode STAR dan Gaji",
+      ringkas="Menceritakan pengalaman, menjawab pertanyaan sulit, gaji, dan menutup wawancara"),
 ]

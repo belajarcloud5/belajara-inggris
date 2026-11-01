@@ -1,7 +1,7 @@
 """Pembangun unit baru (modul pelafalan, kosakata, TOEIC)."""
 import random
 from helpers import mcq, fill, order, match, listen
-from qk import mk, mkf, mko, mkd
+from qk import mk, mkf, mko, mkd, mkr
 
 def mkunit(id, goals, lesson, practice, quiz):
     return dict(id=id, goals=goals, lesson=lesson, practice=practice, quiz=quiz)

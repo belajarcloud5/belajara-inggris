@@ -223,7 +223,7 @@ async function route() {
   }
 }
 
-const kelasName = k => k === 'kerja' ? 'Level Pekerja' : k === 'tenses' ? 'Modul Tenses' : k === 'ielts' ? 'Persiapan IELTS' : k === 'pron' ? 'Modul Pelafalan' : k === 'kosa' ? 'Kosakata dan Menulis' : k === 'toeic' ? 'Persiapan TOEIC' : `Kelas ${k}`;
+const kelasName = k => k === 'kerja' ? 'Level Pekerja' : k === 'tenses' ? 'Modul Tenses' : k === 'ielts' ? 'Persiapan IELTS' : k === 'pron' ? 'Modul Pelafalan' : k === 'kosa' ? 'Kosakata dan Menulis' : k === 'toeic' ? 'Persiapan TOEIC' : k === 'travel' ? 'Inggris untuk Bepergian' : `Kelas ${k}`;
 
 // ---------- beranda ----------
 function unitCard(u) {
@@ -240,6 +240,7 @@ const LEVELS = [
   { key: 'tenses', title: 'Modul Tenses', emoji: '⏱️', sub: 'SEMUA LEVEL', desc: 'Paham 12 tense dari nol: rumus, garis waktu, kontras, dan tes akhir' },
   { key: 'pron', title: 'Modul Pelafalan', emoji: '🔊', sub: 'SEMUA LEVEL', desc: 'Bunyi vokal dan konsonan, tekanan kata dan kalimat, intonasi, dan ejaan yang menipu' },
   { key: 'kosa', title: 'Kosakata dan Menulis', emoji: '📚', sub: 'SEMUA LEVEL', desc: 'Kata yang sering tertukar, pembentukan kata, kosakata per tema, dan menulis terpandu' },
+  { key: 'travel', title: 'Inggris untuk Bepergian', emoji: '✈️', sub: 'SEMUA LEVEL', desc: 'Bandara, hotel, restoran, transportasi, belanja, darurat, dan obrolan ringan' },
   { key: 'ielts', title: 'Persiapan IELTS', emoji: '🌍', sub: 'UJIAN', desc: 'Strategi, reading, listening, kosakata akademik, writing, dan speaking' },
   { key: 'toeic', title: 'Persiapan TOEIC', emoji: '🏢', sub: 'UJIAN KERJA', desc: 'Format TOEIC, listening, tata bahasa, kosakata bisnis, dan membaca teks kantor' },
   { key: 'kerja', title: 'Pekerja / Formal', emoji: '💼', sub: 'DEWASA', desc: 'Bahasa Inggris untuk kantor, email, rapat, dan wawancara' },
