@@ -274,7 +274,7 @@ def main():
             rp16 = os.path.join(ROOT, "content", f"{u['id']}_read16.py")
             if os.path.isfile(rp16):  # cerita ke-15: fokus conditional (termasuk campuran)
                 d["read"] = d["read"] + load(rp16).READ16
-            for rn, rcomment in ((17, "fokus phrasal verbs"), (18, "fokus idiom")):
+            for rn, rcomment in ((17, "fokus phrasal verbs"), (18, "fokus idiom"), (19, "fokus topik dasar")):
                 rpx = os.path.join(ROOT, "content", f"{u['id']}_read{rn}.py")
                 if os.path.isfile(rpx):
                     d["read"] = d["read"] + getattr(load(rpx), f"READ{rn}")
