@@ -1,0 +1,26 @@
+READ = [
+ {'title': 'A New Curriculum',
+  'focus': 'kosakata pendidikan dan teknologi',
+  'text': 'A. Last year the ministry introduced a new curriculum that places more emphasis on digital skills. Pupils now learn to use software for writing and calculation, and many schools have upgraded their computer networks.\nB. Not everyone welcomes the change. Some teachers say that students still need basic literacy before they work with devices, and they worry about privacy when children use online platforms.\nC. Supporters argue that innovation is essential. They point out that old methods are becoming obsolete, and that interactive lessons encourage curiosity and keep pupils interested.\nD. A recent survey found that 70 percent of parents support the curriculum, although many want better access to training for teachers.',
+  'id': 'A. Tahun lalu kementerian memperkenalkan kurikulum baru yang lebih menekankan keterampilan digital. Murid kini belajar memakai perangkat lunak untuk menulis dan berhitung, dan banyak sekolah telah memperbarui jaringan komputernya.\nB. Tidak semua orang menyambut perubahan ini. Beberapa guru mengatakan murid masih perlu kemampuan baca tulis dasar sebelum bekerja dengan perangkat, dan mereka khawatir tentang privasi saat anak memakai platform daring.\nC. Para pendukung berpendapat inovasi itu penting. Mereka menunjukkan bahwa metode lama menjadi usang, dan pelajaran interaktif mendorong rasa ingin tahu dan menjaga minat murid.\nD. Survei terbaru menemukan 70 persen orang tua mendukung kurikulum itu, meskipun banyak yang menginginkan akses lebih baik ke pelatihan untuk guru.',
+  'qs': [
+   {'type':'mcq','q':'What does "obsolete" mean in paragraph C?','options':['no longer useful','very expensive','newly invented','difficult to find'],'answer':0,'exp':'obsolete = usang.'},
+   {'type':'mcq','q':'The new curriculum puts more emphasis on digital skills.','options':['True','False','Not Given'],'answer':0,'exp':'Teks A.'},
+   {'type':'mcq','q':'All teachers support the curriculum.','options':['False','True','Not Given'],'answer':0,'exp':'Teks B: tidak semua.'},
+   {'type':'mcq','q':'The curriculum has been introduced in every country.','options':['Not Given','True','False'],'answer':0,'exp':'Hanya satu kementerian disebut.'},
+   {'type':'fill','q':'Seventy ___ of parents support the curriculum. (one word)','answers':['percent'],'hint':'p _ _ _ _ _ _','id':'Melengkapi kalimat.','exp':'Teks D.'},
+   {'type':'mcq','q':'Which word means "the ability to read and write"?','options':['literacy','privacy','network','device'],'answer':0,'exp':'literacy.'},
+  ]},
+ {'title': 'Learning Online',
+  'focus': 'kosakata pendidikan dan teknologi',
+  'text': 'A. Distance learning has grown quickly. Students can now enrol in a degree programme without ever attending a lecture on campus. They watch recorded lessons, complete assignments, and take virtual tests.\nB. The main advantage is access. People in rural areas, or those with jobs, can study at a time that suits them. Tuition is often lower than at traditional institutions, and some universities offer a scholarship for online students.\nC. However, research shows that many learners find it hard to stay motivated. Without a fixed timetable, assignments are sometimes completed late, and fewer students graduate than in classroom courses.\nD. Educators therefore recommend setting a regular schedule and joining online study groups, which help students assess their own progress.',
+  'id': 'A. Pembelajaran jarak jauh tumbuh cepat. Mahasiswa kini dapat mendaftar program sarjana tanpa pernah menghadiri kuliah di kampus. Mereka menonton pelajaran rekaman, menyelesaikan tugas, dan mengikuti ujian virtual.\nB. Keuntungan utamanya adalah akses. Orang di pedesaan, atau yang bekerja, dapat belajar di waktu yang cocok. Biaya kuliah sering lebih rendah daripada lembaga tradisional, dan beberapa universitas menawarkan beasiswa untuk mahasiswa daring.\nC. Namun, penelitian menunjukkan banyak pelajar sulit tetap termotivasi. Tanpa jadwal tetap, tugas kadang diselesaikan terlambat, dan lebih sedikit mahasiswa yang lulus dibanding kelas tatap muka.\nD. Para pendidik karena itu menyarankan menetapkan jadwal rutin dan bergabung dengan kelompok belajar daring, yang membantu mahasiswa menilai kemajuan mereka sendiri.',
+  'qs': [
+   {'type':'mcq','q':'Online students must attend lectures on campus.','options':['False','True','Not Given'],'answer':0,'exp':'Teks A: tanpa menghadiri kuliah di kampus.'},
+   {'type':'mcq','q':'Tuition for online courses is often lower.','options':['True','False','Not Given'],'answer':0,'exp':'Teks B.'},
+   {'type':'mcq','q':'Online degrees are more respected than classroom degrees.','options':['Not Given','True','False'],'answer':0,'exp':'Tidak disebut.'},
+   {'type':'fill','q':'Many learners find it hard to stay ___ . (one word)','answers':['motivated'],'hint':'m _ _ _ _ _ _ _ _','id':'Melengkapi kalimat.','exp':'Teks C.'},
+   {'type':'mcq','q':'What does "graduate" mean in paragraph C?','options':['finish a degree','start a degree','change a course','take a test'],'answer':0,'exp':'graduate = lulus.'},
+   {'type':'mcq','q':'Which word means "to sign up for a course"?','options':['enrol','assess','encourage','memorise'],'answer':0,'exp':'enrol = mendaftar.'},
+  ]},
+]

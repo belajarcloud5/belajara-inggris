@@ -1,0 +1,26 @@
+READ = [
+ {'title': 'Work, Stress, and Health',
+  'focus': 'kosakata kesehatan, kerja, dan ekonomi',
+  'text': 'A. Many employees report high levels of stress, especially when overtime is common. Long hours can damage mental health, and chronic stress is linked to sleep problems and heart disease.\nB. Employers are starting to respond. Some offer flexible hours, allowing staff to start earlier or finish later. Others provide exercise classes and advice on nutrition to improve wellbeing.\nC. Research suggests that these measures pay off. A company that reduced overtime found that its workforce took fewer sick days, and profit rose by eight percent the following year.\nD. Experts add that prevention is better than treatment. Regular breaks, a balanced diet, and support from managers help employees recover from pressure before it becomes serious.',
+  'id': 'A. Banyak karyawan melaporkan tingkat stres tinggi, terutama bila lembur umum. Jam kerja panjang dapat merusak kesehatan mental, dan stres kronis dikaitkan dengan masalah tidur dan penyakit jantung.\nB. Pemberi kerja mulai menanggapi. Sebagian menawarkan jam fleksibel, yang memungkinkan staf mulai lebih awal atau selesai lebih akhir. Yang lain menyediakan kelas olahraga dan saran tentang gizi untuk meningkatkan kesejahteraan.\nC. Penelitian menunjukkan langkah ini membuahkan hasil. Sebuah perusahaan yang mengurangi lembur menemukan tenaga kerjanya lebih sedikit mengambil cuti sakit, dan keuntungan naik delapan persen tahun berikutnya.\nD. Para ahli menambahkan bahwa pencegahan lebih baik daripada pengobatan. Istirahat rutin, pola makan seimbang, dan dukungan atasan membantu karyawan pulih dari tekanan sebelum menjadi serius.',
+  'qs': [
+   {'type':'mcq','q':'Chronic stress is linked to heart disease.','options':['True','False','Not Given'],'answer':0,'exp':'Teks A.'},
+   {'type':'mcq','q':'Flexible hours force employees to work longer.','options':['False','True','Not Given'],'answer':0,'exp':'Teks B: flexible = bisa mulai lebih awal atau selesai lebih akhir.'},
+   {'type':'mcq','q':'Employees in all countries report the same stress levels.','options':['Not Given','True','False'],'answer':0,'exp':'Tidak disebut.'},
+   {'type':'fill','q':'After overtime was reduced, profit rose by ___ percent. (number or word)','answers':['eight','8'],'hint':'e _ _ _ _','id':'Melengkapi kalimat.','exp':'Teks C.'},
+   {'type':'mcq','q':'What does "workforce" mean?','options':['all the people who work for a company','a type of exercise','a machine','a work contract'],'answer':0,'exp':'workforce = tenaga kerja.'},
+   {'type':'mcq','q':'Which word means "to get better after being ill or tired"?','options':['recover','retire','invest','afford'],'answer':0,'exp':'recover = pulih.'},
+  ]},
+ {'title': 'The Economics of Coffee Shops',
+  'focus': 'kosakata kesehatan, kerja, dan ekonomi',
+  'text': 'A. The number of coffee shops has doubled in the past ten years. Rising demand from consumers, especially young professionals, has encouraged many entrepreneurs to invest in new cafés.\nB. Running a café is not easy. The biggest expense is rent, followed by salary costs, and tax can reduce profit further. Small owners often work long hours to keep their budget under control.\nC. Prices also depend on supply. When bad weather damages coffee crops, importers pay more, and inflation can make a cup of coffee more expensive for customers.\nD. Some countries export coffee as a major part of their economy. For farmers, a stable income depends on fair prices, which is why many consumers now prefer fair-trade products.',
+  'id': 'A. Jumlah kedai kopi telah berlipat dalam sepuluh tahun terakhir. Permintaan yang naik dari konsumen, terutama profesional muda, mendorong banyak pengusaha berinvestasi di kafe baru.\nB. Menjalankan kafe tidak mudah. Pengeluaran terbesar adalah sewa, diikuti biaya gaji, dan pajak dapat mengurangi keuntungan lebih jauh. Pemilik kecil sering bekerja lama untuk menjaga anggaran tetap terkendali.\nC. Harga juga bergantung pada pasokan. Ketika cuaca buruk merusak panen kopi, pengimpor membayar lebih, dan inflasi dapat membuat secangkir kopi lebih mahal bagi pelanggan.\nD. Beberapa negara mengekspor kopi sebagai bagian besar ekonominya. Bagi petani, pendapatan stabil bergantung pada harga yang adil, itulah sebabnya banyak konsumen kini memilih produk perdagangan adil.',
+  'qs': [
+   {'type':'mcq','q':'The number of coffee shops has doubled in ten years.','options':['True','False','Not Given'],'answer':0,'exp':'Teks A.'},
+   {'type':'mcq','q':'Rent is the smallest expense for café owners.','options':['False','True','Not Given'],'answer':0,'exp':'Teks B: rent adalah pengeluaran terbesar.'},
+   {'type':'mcq','q':'Most café owners are under thirty.','options':['Not Given','True','False'],'answer':0,'exp':'Tidak disebut.'},
+   {'type':'fill','q':'When crops are damaged, importers pay ___ . (one word)','answers':['more'],'hint':'m _ _ _','id':'Melengkapi kalimat.','exp':'Teks C.'},
+   {'type':'mcq','q':'What does "invest" mean?','options':['put money into something to make a profit','spend money on food','save time','sell goods abroad'],'answer':0,'exp':'invest = berinvestasi.'},
+   {'type':'mcq','q':'Which word means "money paid to the government"?','options':['tax','budget','salary','income'],'answer':0,'exp':'tax = pajak.'},
+  ]},
+]

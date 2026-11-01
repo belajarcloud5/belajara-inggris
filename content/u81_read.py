@@ -1,0 +1,26 @@
+READ = [
+ {'title': 'Cities Under Pressure',
+  'focus': 'kosakata lingkungan dan masyarakat',
+  'text': 'A. The population of many cities is rising rapidly as people move from rural areas in search of jobs. This migration puts pressure on housing and infrastructure, and traffic congestion has become a daily problem for commuters.\nB. Pollution is another concern. Vehicle emissions harm air quality, and waste from factories can damage rivers. In some neighbourhoods, children suffer from breathing problems.\nC. Governments are responding with several policies. They are building public transport, introducing regulations to limit emissions, and offering a subsidy to families who install solar panels.\nD. Community campaigns also help. Volunteers plant trees and raise awareness about recycling, showing that change can begin at a local level.',
+  'id': 'A. Jumlah penduduk banyak kota naik cepat karena orang pindah dari pedesaan untuk mencari pekerjaan. Perpindahan ini menekan perumahan dan infrastruktur, dan kemacetan lalu lintas menjadi masalah harian bagi para pekerja.\nB. Polusi adalah kekhawatiran lain. Emisi kendaraan merusak kualitas udara, dan limbah pabrik dapat merusak sungai. Di beberapa lingkungan, anak-anak mengalami gangguan pernapasan.\nC. Pemerintah menanggapi dengan beberapa kebijakan. Mereka membangun transportasi umum, memperkenalkan peraturan untuk membatasi emisi, dan memberi subsidi kepada keluarga yang memasang panel surya.\nD. Kampanye komunitas juga membantu. Relawan menanam pohon dan meningkatkan kesadaran tentang daur ulang, menunjukkan bahwa perubahan dapat dimulai di tingkat lokal.',
+  'qs': [
+   {'type':'mcq','q':'People move to cities mainly in search of jobs.','options':['True','False','Not Given'],'answer':0,'exp':'Teks A.'},
+   {'type':'mcq','q':'Vehicle emissions have no effect on air quality.','options':['False','True','Not Given'],'answer':0,'exp':'Teks B: emisi merusak kualitas udara.'},
+   {'type':'mcq','q':'Solar panels are cheaper than other energy sources.','options':['Not Given','True','False'],'answer':0,'exp':'Hanya subsidi yang disebut.'},
+   {'type':'fill','q':'Volunteers plant trees and raise ___ about recycling. (one word)','answers':['awareness'],'hint':'a _ _ _ _ _ _ _ _','id':'Melengkapi kalimat.','exp':'Teks D.'},
+   {'type':'mcq','q':'What does "congestion" mean?','options':['too much traffic','lack of water','very hot weather','an old building'],'answer':0,'exp':'congestion = kemacetan.'},
+   {'type':'mcq','q':'Which word means "money from the government to help pay for something"?','options':['subsidy','regulation','campaign','tradition'],'answer':0,'exp':'subsidy.'},
+  ]},
+ {'title': 'Protecting Coral Reefs',
+  'focus': 'kosakata lingkungan dan masyarakat',
+  'text': 'A. Coral reefs are among the richest ecosystems on Earth. Although they cover less than one percent of the ocean floor, they provide a habitat for about a quarter of all marine species.\nB. Reefs are now threatened by rising sea temperatures, which cause corals to lose their colour and die. Pollution and unsustainable fishing add to the damage.\nC. Scientists are testing ways to conserve reefs. Some plant young corals on damaged areas, while others study which species can survive warmer water.\nD. Tourism can help or harm. Visitors who respect rules support local communities, but careless divers can break fragile corals. Many reef towns therefore teach tourists how to behave responsibly.',
+  'id': 'A. Terumbu karang adalah salah satu ekosistem terkaya di Bumi. Meskipun menutupi kurang dari satu persen dasar laut, terumbu menyediakan habitat bagi sekitar seperempat dari semua spesies laut.\nB. Terumbu kini terancam oleh suhu laut yang naik, yang membuat karang kehilangan warna dan mati. Polusi dan penangkapan ikan yang tidak berkelanjutan menambah kerusakan.\nC. Ilmuwan menguji cara melestarikan terumbu. Sebagian menanam karang muda di area rusak, sementara yang lain meneliti spesies mana yang bertahan di air lebih hangat.\nD. Pariwisata dapat membantu atau merusak. Pengunjung yang menghormati aturan mendukung komunitas lokal, tetapi penyelam ceroboh dapat mematahkan karang yang rapuh. Banyak kota terumbu karena itu mengajarkan wisatawan berperilaku bertanggung jawab.',
+  'qs': [
+   {'type':'mcq','q':'Coral reefs cover less than one percent of the ocean floor.','options':['True','False','Not Given'],'answer':0,'exp':'Teks A.'},
+   {'type':'mcq','q':'Rising sea temperatures help corals grow.','options':['False','True','Not Given'],'answer':0,'exp':'Teks B: karang kehilangan warna dan mati.'},
+   {'type':'mcq','q':'All reef towns have banned diving.','options':['Not Given','True','False'],'answer':0,'exp':'Hanya disebut mengajarkan perilaku bertanggung jawab.'},
+   {'type':'fill','q':'Reefs provide a ___ for about a quarter of all marine species. (one word)','answers':['habitat'],'hint':'h _ _ _ _ _ _','id':'Melengkapi kalimat.','exp':'Teks A.'},
+   {'type':'mcq','q':'What does "conserve" mean?','options':['protect and save','destroy','sell','move'],'answer':0,'exp':'conserve = melestarikan.'},
+   {'type':'mcq','q':'Which word describes something that can continue without harming the environment?','options':['sustainable','endangered','urban','obsolete'],'answer':0,'exp':'sustainable.'},
+  ]},
+]

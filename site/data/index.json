@@ -816,7 +816,7 @@
   "ready": true,
   "practice_n": 23,
   "quiz_n": 10,
-  "read_n": 2
+  "read_n": 4
  },
  {
   "id": "u78",
@@ -829,7 +829,7 @@
   "ready": true,
   "practice_n": 28,
   "quiz_n": 12,
-  "read_n": 2
+  "read_n": 4
  },
  {
   "id": "u79",
@@ -842,7 +842,7 @@
   "ready": true,
   "practice_n": 23,
   "quiz_n": 10,
-  "read_n": 2
+  "read_n": 4
  },
  {
   "id": "u80",
@@ -855,7 +855,7 @@
   "ready": true,
   "practice_n": 124,
   "quiz_n": 26,
-  "read_n": 0
+  "read_n": 2
  },
  {
   "id": "u81",
@@ -868,7 +868,7 @@
   "ready": true,
   "practice_n": 120,
   "quiz_n": 26,
-  "read_n": 0
+  "read_n": 2
  },
  {
   "id": "u82",
@@ -881,7 +881,7 @@
   "ready": true,
   "practice_n": 120,
   "quiz_n": 26,
-  "read_n": 0
+  "read_n": 2
  },
  {
   "id": "u83",
@@ -894,7 +894,7 @@
   "ready": true,
   "practice_n": 27,
   "quiz_n": 12,
-  "read_n": 0
+  "read_n": 1
  },
  {
   "id": "u84",
@@ -998,7 +998,7 @@
   "ready": true,
   "practice_n": 33,
   "quiz_n": 19,
-  "read_n": 1
+  "read_n": 3
  },
  {
   "id": "u48",
