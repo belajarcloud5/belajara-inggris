@@ -33,3 +33,18 @@ LESSONX = [
  dict(t="warn", title="Salah yang sering terjadi",
   text="Salah: ~~go to home~~, ~~enter into the room~~, ~~reach to the station~~, ~~get on the taxi~~, ~~arrive to Jakarta~~. Benar: [[go home]], [[enter the room]], [[reach the station]], [[get in the taxi]], [[arrive in Jakarta]]."),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="9. Quantifier: jebakan ujian",
+  text="Soal ujian sering menguji pilihan antara some, any, much, many, few, little, dan a lot of. Pegangan cepat:",
+  table=[["Jebakan", "Aturan", "Contoh"],
+         ["countable atau uncountable?", "many / few / fewer + jamak; much / little / less + tak terhitung", "[[many students]] / [[much homework]]"],
+         ["kalimat negatif atau tanya", "pakai **any**", "[[We don't have any milk.]] / [[Do you have any pens?]]"],
+         ["tawaran dan permintaan", "pakai **some**", "[[Would you like some coffee?]]"],
+         ["much di kalimat positif", "ganti dengan **a lot of**", "[[She has a lot of work.]]"],
+         ["a few / a little", "ada, walau sedikit", "[[I have a little time.]]"],
+         ["few / little", "hampir tidak ada", "[[There is little time left.]]"],
+         ["every + tunggal", "kata kerja tunggal", "[[Every student has a book.]]"]],
+  examples=[dict(en="[[There aren't many seats, and there isn't much time.]]", id="Tidak banyak kursi, dan waktunya tidak banyak."),
+            dict(en="[[Few people came, so we had a lot of food left.]]", id="Hanya sedikit orang yang datang, jadi banyak makanan tersisa.")]),
+]

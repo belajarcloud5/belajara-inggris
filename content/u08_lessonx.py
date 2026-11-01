@@ -12,3 +12,22 @@ LESSONX = [
  dict(t="warn", title="Jangan tambah a atau the pada waktu makan",
   text="Katakan [[have breakfast]], bukan ~~have a breakfast~~. Tetapi jika ada kata sifat, boleh memakai a: [[We had a big breakfast.]]"),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="9. some, any, much, many, a lot of",
+  text="Kata jumlah (quantifier) harus cocok dengan jenis bendanya: **countable** (bisa dihitung, jamak: apples) atau **uncountable** (tak terhitung: milk, rice, water).",
+  table=[["Kata", "Countable jamak", "Uncountable", "Kalimat"],
+         ["**some**", "ya", "ya", "positif dan tawaran: [[I have some eggs.]] / [[I have some rice.]]"],
+         ["**any**", "ya", "ya", "negatif dan tanya: [[I don't have any eggs.]] / [[Is there any rice?]]"],
+         ["**many**", "ya", "tidak", "[[We don't have many eggs.]] / [[How many eggs?]]"],
+         ["**much**", "tidak", "ya", "[[We don't have much rice.]] / [[How much rice?]]"],
+         ["**a lot of**", "ya", "ya", "semua kalimat: [[I eat a lot of fruit.]] / [[She drinks a lot of water.]]"],
+         ["**a few**", "ya", "tidak", "beberapa: [[I have a few friends.]]"],
+         ["**a little**", "tidak", "ya", "sedikit: [[I need a little sugar.]]"]],
+  examples=[dict(en="[[There aren't any apples, but there is some orange juice.]]", id="Tidak ada apel, tetapi ada sedikit jus jeruk."),
+            dict(en="[[How many eggs do you need? And how much milk?]]", id="Berapa butir telur yang kamu perlukan? Dan berapa banyak susu?")]),
+ dict(t="warn", title="much dan many jarang dipakai di kalimat positif",
+  text="Dalam kalimat positif, orang biasanya memakai **a lot of**: katakan [[We have a lot of rice.]] daripada ~~We have much rice.~~ Pakai **much** dan **many** terutama di kalimat negatif dan pertanyaan: [[We don't have much rice.]] / [[Do you have many friends?]]. Setelah **too** dan **so**, much/many boleh dipakai: [[too much sugar]], [[so many people]]."),
+ dict(t="tip", title="a few atau few? a little atau little?",
+  text="**a few / a little** artinya ada, walau sedikit: [[I have a few friends.]] **few / little** (tanpa a) terdengar negatif, artinya hampir tidak ada: [[I have few friends.]] Di percakapan sehari-hari, lebih aman memakai a few dan a little."),
+]
