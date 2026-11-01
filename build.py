@@ -183,6 +183,25 @@ def check_q(uid, kind, i, q):
         assert len({a for a, _ in q["pairs"]}) == len(q["pairs"]) == len({b for _, b in q["pairs"]}), f"{where}: pasangan duplikat"
 
 
+_LABEL = re.compile(r"(^|(?<=[.!?\"”)] ))((?:Mr\.|Ms\.|Mrs\.|Dr\.) ?[A-Z][A-Za-z']+|[A-Z][A-Za-z']*(?: [A-Za-z']+){0,2}): ")
+_NOT_SPEAKER = {"Notice", "Remember", "Note", "Tip", "Example", "First", "Second", "Third", "Finally", "Please", "Warning",
+                "Attention", "Important", "Reminder", "Hint", "Rule", "Step", "Dear", "Option", "Question", "Answer"}
+
+
+def split_dialog(text):
+    """Percakapan 'Nama: ... Nama2: ...' dipecah jadi satu baris per giliran bicara. Teks non-dialog dibiarkan."""
+    out = []
+    for para in text.split("\n"):
+        hits = [m for m in _LABEL.finditer(para) if m.group(2) not in _NOT_SPEAKER]
+        if len(hits) >= 2 and hits[0].start(2) == 0:
+            starts = [m.start(2) for m in hits] + [len(para)]
+            out.extend(para[starts[i]:starts[i + 1]].strip() for i in range(len(hits)))
+        else:
+            out.append(para)
+    return "\n".join(out)
+
+
+
 def main():
     units = load(os.path.join(ROOT, "content", "units.py")).UNITS
     index = []
@@ -255,6 +274,9 @@ def main():
             rp16 = os.path.join(ROOT, "content", f"{u['id']}_read16.py")
             if os.path.isfile(rp16):  # cerita ke-15: fokus conditional (termasuk campuran)
                 d["read"] = d["read"] + load(rp16).READ16
+            for ps in d["read"]:  # percakapan: satu giliran bicara per baris
+                ps["text"] = split_dialog(ps["text"])
+                ps["id"] = split_dialog(ps["id"])
             for pi, ps in enumerate(d["read"]):
                 assert ps.get("title") and ps.get("text") and ps.get("id"), f"{u['id']}.read[{pi}]: judul/teks/terjemahan kosong"
                 assert 3 <= len(ps["qs"]) <= 8, f"{u['id']}.read[{pi}]: butuh 3 sampai 8 pertanyaan"

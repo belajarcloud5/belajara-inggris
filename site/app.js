@@ -601,7 +601,7 @@ function renderRead(pane, d, idx) {
   const qs = shuffle(ps.qs);
   let i = 0, score = 0, wrong = [];
   const textHtml = `<div class="card passage"><div class="dhead"><div><h3 style="margin:0">${esc(ps.title)}</h3>${ps.focus ? `<small class="hint">🕐 Fokus tenses: ${esc(ps.focus)}</small>` : ''}</div><span><button class="btn ghost small" id="ttsp">🔊 Dengarkan</button> <button class="btn ghost small" id="trtog">Tampilkan terjemahan</button></span></div>
-    <small class="hint">💡 Klik atau blok kata yang belum kamu mengerti untuk melihat arti, cara baca, dan suaranya.</small><div class="ptext">${ps.text.split('\n').map(x => `<p>${wrapWords(x)}</p>`).join('')}</div><div class="tr-box" id="trbox" hidden>${ps.id.split('\n').map(x => `<p>${esc(x)}</p>`).join('')}</div></div>`;
+    <small class="hint">💡 Klik atau blok kata yang belum kamu mengerti untuk melihat arti, cara baca, dan suaranya.</small><div class="ptext">${ps.text.split('\n').map(x => { const m = x.match(/^([A-Z][A-Za-z.' ]{0,24}:) (.*)$/); return m ? `<p><b class="spk">${esc(m[1])}</b> ${wrapWords(m[2])}</p>` : `<p>${wrapWords(x)}</p>`; }).join('')}</div><div class="tr-box" id="trbox" hidden>${ps.id.split('\n').map(x => { const m = x.match(/^([A-Z][A-Za-z.' ]{0,24}:) (.*)$/); return m ? `<p><b class="spk">${esc(m[1])}</b> ${esc(m[2])}</p>` : `<p>${esc(x)}</p>`; }).join('')}</div></div>`;
   function show() {
     if (i >= qs.length) return finish();
     const q = qs[i];
