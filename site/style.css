@@ -237,3 +237,18 @@ input.blank.bad{border-color:var(--bad);background:var(--bad-soft)}
 .cloze{line-height:2.4;margin:10px 0}
 .cloze input.cz{display:inline-block;width:auto;margin:0 4px;text-align:center}
 .cloze input.cz.ok{border-color:var(--ok);background:var(--ok-soft)}.cloze input.cz.bad{border-color:var(--bad);background:var(--bad-soft)}
+
+/* ---- statistik dan mode ujian ---- */
+.stats{grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}
+.sbox{text-align:center;margin:0}.sbox b{display:block;font-size:1.8rem;color:var(--brand)}.sbox span{color:var(--muted);font-size:.85rem}
+.chart{display:flex;align-items:flex-end;gap:4px;height:120px}
+.chart .cb{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+.chart .cb i{display:block;width:100%;background:var(--brand);border-radius:4px 4px 0 0;min-height:2px}
+.chart .cb small{font-size:.65rem;color:var(--muted)}
+.lrow{display:grid;grid-template-columns:minmax(120px,1.2fr) 2fr auto;gap:10px;align-items:center;margin:6px 0}
+.lrow .bar{height:8px;background:var(--brand-soft);border-radius:999px;overflow:hidden}.lrow .bar i{display:block;height:100%;background:var(--ok)}
+.slist{margin:6px 0;padding-left:1.2em}
+.etime{font-weight:800;color:var(--warn);margin-left:auto;padding-left:10px}
+.exam .opt.ok,.exam .opt.bad,.exam .sp.ok,.exam .sp.bad{background:var(--brand-soft);border-color:var(--brand)}
+.exam .blank.ok,.exam .blank.bad,.exam input.cz.ok,.exam input.cz.bad{border-color:var(--brand);background:var(--brand-soft)}
+.exam .seqans.okbox,.exam .seqans.badbox{border-color:var(--brand)}

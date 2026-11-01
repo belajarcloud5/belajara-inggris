@@ -213,6 +213,8 @@ async function route() {
     if (page === 'kartu') return renderKartu();
     if (page === 'tes') return renderTes(index);
     if (page === 'bicara') return renderBicara();
+    if (page === 'statistik') return renderStat(index);
+    if (page === 'ujian') return renderUjian(index, id);
     if (page === 'unit' && id) {
       const meta = index.find(u => u.id === id && u.ready);
       if (meta) return renderUnit(await getJSON(`data/${id}.json`), tab || 'learn', index, idx);
@@ -293,6 +295,7 @@ function renderKelas(index, key) {
     <a class="crumb" href="#/">← Semua level</a>
     <h1>${lv.emoji} ${esc(lv.title)}</h1>
     <p class="lead">${lv.sub} · ${st.done}/${st.ready} unit selesai · ⭐ ${st.stars}/${st.max}</p>
+    <div class="row"><a class="btn ghost small" href="#/ujian/${key}">📝 Mode ujian${(prog.exam || {})[key] ? ` (terbaik ${prog.exam[key].best}%)` : ''}</a></div>
     <section class="kelas"><div class="grid">${st.us.map(unitCard).join('')}</div></section>
     <div class="row lnav">${nb(LEVELS[i - 1], '← ' + (LEVELS[i - 1] || {}).title)}${nb(LEVELS[i + 1], (LEVELS[i + 1] || {}).title + ' →')}</div>`;
 }
@@ -885,6 +888,10 @@ function bumpDaily() {
   const t = todayStr();
   if (!prog.daily || prog.daily.date !== t) prog.daily = { date: t, count: 0 };
   prog.daily.count++;
+  const hist = prog.hist = prog.hist || {};
+  hist[t] = (hist[t] || 0) + 1;
+  const keys = Object.keys(hist).sort();
+  while (keys.length > 120) delete hist[keys.shift()];
   const st = prog.streak = prog.streak || { last: '', n: 0 };
   if (st.last !== t) { st.n = st.last === yesterdayStr() ? st.n + 1 : 1; st.last = t; }
   saveProg();
@@ -905,6 +912,7 @@ function toolsRow() {
     <a class="btn ghost" href="#/kartu">🧠 Kartu hafalan${due ? ` <span class="pill">${due}</span>` : ''}</a>
     <a class="btn ghost" href="#/tes">🎯 Tes penempatan</a>
     <a class="btn ghost" href="#/bicara">🎤 Latihan berbicara</a>
+    <a class="btn ghost" href="#/statistik">📊 Statistik dan cadangan</a>
     <button class="btn ghost" id="offbtn" type="button">📴 Simpan untuk offline</button></div><div id="offmsg" class="hint"></div>`;
 }
 function bindHome(index) {
@@ -1065,6 +1073,145 @@ async function renderBicara() {
     rec.onerror = ev => { res.innerHTML = `<p class="hint">${ev.error === 'not-allowed' ? 'Izin mikrofon ditolak. Aktifkan izin mikrofon di browser.' : ev.error === 'no-speech' ? 'Suaramu tidak terdengar. Coba lagi lebih dekat ke mikrofon.' : ev.error === 'network' ? 'Pengenalan suara butuh internet.' : 'Gagal mendengarkan. Coba lagi.'}</p>`; mic.disabled = false; };
     rec.onend = () => { mic.disabled = false; };
     try { rec.start(); } catch (e) { mic.disabled = false; }
+  }
+  show();
+}
+
+
+// ---------- statistik, cadangan, dan mode ujian ----------
+function exportProg() {
+  const blob = new Blob([JSON.stringify({ app: 'belajar-inggris', v: 1, at: new Date().toISOString(), prog })], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = 'kemajuan-belajar-inggris.json';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+}
+function mergeProg(inc) {
+  let n = 0;
+  for (const [id, u] of Object.entries(inc.units || {})) {
+    const m = U(id);
+    for (const k of ['practice', 'quiz', 'stars']) if ((u[k] || 0) > (m[k] || 0)) { m[k] = u[k]; n++; }
+    if (u.learned && !m.learned) { m.learned = true; n++; }
+    if (u.reads) m.reads = { ...u.reads, ...(m.reads || {}) };
+  }
+  for (const [k, v] of Object.entries(inc.wrong || {})) if (!(k in prog.wrong)) prog.wrong[k] = v;
+  prog.srs = prog.srs || {};
+  for (const [en, c] of Object.entries(inc.srs || {})) if (!prog.srs[en] || (c.box || 0) > (prog.srs[en].box || 0)) { prog.srs[en] = c; n++; }
+  prog.hist = prog.hist || {};
+  for (const [d, c] of Object.entries(inc.hist || {})) prog.hist[d] = Math.max(prog.hist[d] || 0, c);
+  prog.exam = prog.exam || {};
+  for (const [k, e] of Object.entries(inc.exam || {})) if (!prog.exam[k] || e.best > prog.exam[k].best) prog.exam[k] = e;
+  if (inc.streak && (!prog.streak || String(inc.streak.last) > String(prog.streak.last))) prog.streak = inc.streak;
+  saveProg();
+  return n;
+}
+function renderStat(index) {
+  const hist = prog.hist || {};
+  const days = [];
+  for (let i = 13; i >= 0; i--) { const d = new Date(); d.setDate(d.getDate() - i); const k = dayStr(d); days.push([k, hist[k] || 0]); }
+  const max = Math.max(10, ...days.map(x => x[1]));
+  const total = Object.values(hist).reduce((a, v) => a + v, 0);
+  const lv = LEVELS.map(l => ({ l, st: levelStat(index, l.key) })).filter(x => x.st.ready);
+  const wr = {};
+  for (const id of Object.values(prog.wrong)) if (id !== 'ulang') wr[id] = (wr[id] || 0) + 1;
+  const byId = Object.fromEntries(index.map(u => [u.id, u]));
+  const wrongTop = Object.entries(wr).sort((a, b) => b[1] - a[1]).slice(0, 5).filter(([id]) => byId[id]);
+  const weak = Object.entries(prog.units).filter(([id, u]) => byId[id] && u.quiz > 0 && u.quiz < 70).sort((a, b) => a[1].quiz - b[1].quiz).slice(0, 5);
+  const srs = Object.values(prog.srs || {}), now = Date.now();
+  const exams = Object.entries(prog.exam || {});
+  app.innerHTML = `<a class="crumb" href="#/">← Beranda</a><h1>📊 Statistik</h1>
+    <div class="grid stats"><div class="card sbox"><b>${total}</b><span>soal dijawab</span></div><div class="card sbox"><b>${Object.keys(hist).length}</b><span>hari belajar</span></div>
+      <div class="card sbox"><b>${streakN()}</b><span>hari berturut-turut</span></div><div class="card sbox"><b>${totalStars()}</b><span>bintang</span></div></div>
+    <h2 class="sec">14 hari terakhir</h2>
+    <div class="card"><div class="chart" role="img" aria-label="Jumlah soal per hari selama 14 hari">${days.map(([k, c]) => `<div class="cb" title="${k}: ${c} soal"><i style="height:${Math.round(100 * c / max)}%"></i><small>${k.slice(8)}</small></div>`).join('')}</div></div>
+    <h2 class="sec">Kemajuan per level</h2>
+    <div class="card">${lv.map(({ l, st }) => `<div class="lrow"><a href="#/kelas/${l.key}">${l.emoji} ${esc(l.title)}</a><div class="bar"><i style="width:${Math.round(100 * st.stars / st.max)}%"></i></div><small>${st.done}/${st.ready} unit</small></div>`).join('')}</div>
+    <h2 class="sec">Perlu diulang</h2>
+    <div class="card">${wrongTop.length ? `<p class="hint">Unit dengan soal salah terbanyak:</p><ul class="slist">${wrongTop.map(([id, n]) => `<li><a href="#/unit/${id}/practice">Unit ${byId[id].no} ${esc(byId[id].title)}</a> <small>(${n} soal)</small></li>`).join('')}</ul>` : '<p class="hint">Belum ada soal yang salah. Bagus!</p>'}
+      ${weak.length ? `<p class="hint">Kuis dengan nilai rendah:</p><ul class="slist">${weak.map(([id, u]) => `<li><a href="#/unit/${id}/learn">Unit ${byId[id].no} ${esc(byId[id].title)}</a> <small>(${u.quiz}%)</small></li>`).join('')}</ul>` : ''}</div>
+    <h2 class="sec">Kartu hafalan</h2>
+    <div class="card"><p>${srs.length} kartu dipelajari · ${srs.filter(c => c.due <= now).length} siap diulang · ${srs.filter(c => (c.box || 0) >= 3).length} sudah kuat.</p><a class="btn ghost small" href="#/kartu">🧠 Buka kartu hafalan</a></div>
+    ${exams.length ? `<h2 class="sec">Hasil mode ujian</h2><div class="card"><ul class="slist">${exams.map(([k, e]) => `<li>${esc(kelasName(isNaN(+k) ? k : +k))}: terbaik <b>${e.best}%</b> · terakhir ${e.last}%</li>`).join('')}</ul></div>` : ''}
+    <h2 class="sec">Cadangkan atau pindahkan kemajuan</h2>
+    <div class="card"><p class="hint">Kemajuan hanya tersimpan di browser ini. Unduh cadangan untuk dipindahkan ke HP atau laptop lain, lalu pulihkan di sana. Memulihkan akan <b>menggabungkan</b> (nilai tertinggi dipertahankan), tidak menghapus apa pun.</p>
+      <div class="row"><button class="btn" id="exp" type="button">⬇️ Unduh cadangan</button><label class="btn ghost" for="imp">⬆️ Pulihkan dari berkas</label><input id="imp" type="file" accept="application/json,.json" hidden></div><div id="impmsg" class="hint"></div></div>`;
+  $('#exp').addEventListener('click', exportProg);
+  $('#imp').addEventListener('change', ev => {
+    const f = ev.target.files && ev.target.files[0]; if (!f) return;
+    const r = new FileReader();
+    r.onload = () => {
+      try {
+        const d = JSON.parse(r.result);
+        if (!d || d.app !== 'belajar-inggris' || !d.prog || typeof d.prog.units !== 'object') throw new Error('format');
+        const n = mergeProg(d.prog);
+        $('#impmsg').textContent = `Berhasil digabungkan (${n} perubahan).`;
+        setTimeout(() => renderStat(index), 900);
+      } catch (e) { $('#impmsg').textContent = 'Berkas tidak dikenali. Pakai berkas cadangan dari aplikasi ini.'; }
+    };
+    r.readAsText(f);
+  });
+}
+
+async function renderUjian(index, key) {
+  const lv = LEVELS.find(l => l.key === key);
+  const units = index.filter(u => String(u.kelas) === key && u.ready);
+  if (!lv || !units.length) return renderHome(index);
+  const N = ['ielts', 'toeic', 'toefl'].includes(key) ? 40 : 30, MIN = N;
+  app.innerHTML = `<a class="crumb" href="#/kelas/${key}">← ${esc(lv.title)}</a><h1>📝 Mode ujian: ${esc(lv.title)}</h1>
+    <div class="card"><p>${N} soal acak dari seluruh unit level ini, waktu <b>${MIN} menit</b>. Tidak ada penjelasan sampai ujian selesai, dan setiap soal dijawab satu kali.</p>
+      <ul class="slist"><li>Soal dengar hanya diputar bila perangkatmu mendukung suara.</li><li>Soal yang salah masuk ke daftar <b>Ulangi yang salah</b>.</li>${(prog.exam || {})[key] ? `<li>Nilai terbaikmu: <b>${prog.exam[key].best}%</b></li>` : ''}</ul>
+      <div class="row"><button class="btn" id="go" type="button">▶️ Mulai ujian</button></div></div><div id="epane"></div>`;
+  $('#go').addEventListener('click', async () => {
+    const pane = $('#epane'); $('#go').disabled = true;
+    pane.innerHTML = '<p class="loading">Menyiapkan soal…</p>';
+    const data = await Promise.all(units.map(u => getJSON(`data/${u.id}.json`)));
+    const okType = q => !['dictate', 'reply'].includes(q.type) && (hasTTS || !['listen', 'cloze'].includes(q.type));
+    let pool = [];
+    data.forEach(d => { const seen = new Set(); shuffle(d.practice.concat(d.quiz).filter(okType)).forEach(q => { if (q.k && seen.has(q.k)) return; if (q.k) seen.add(q.k); pool.push({ ...q, unit: d.id }); }); });
+    const per = Math.max(2, Math.ceil(N / units.length) + 1), cnt = {};
+    const qs = shuffle(pool).filter(q => (cnt[q.unit] = (cnt[q.unit] || 0) + 1) <= per).slice(0, N);
+    if (qs.length < 5) { pane.innerHTML = '<p class="hint">Soal belum cukup.</p>'; return; }
+    runExam(pane, key, lv, qs, MIN, index);
+  });
+}
+
+function runExam(pane, key, lv, qs, minutes, index) {
+  let i = 0, score = 0, left = minutes * 60, over = false;
+  const res = [], t0 = Date.now();
+  const mmss = s => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+  const timer = setInterval(() => {
+    if (!document.body.contains(pane) || location.hash.indexOf('#/ujian/') !== 0) { clearInterval(timer); return; }
+    left--; const el = $('#etime'); if (el) el.textContent = mmss(Math.max(0, left));
+    if (left <= 0) { clearInterval(timer); over = true; finish(); }
+  }, 1000);
+  function show() {
+    if (over) return;
+    if (i >= qs.length) { clearInterval(timer); return finish(); }
+    closeWordPop();
+    const q = qs[i];
+    pane.innerHTML = `<div class="qhead"><span class="qno">📝 ${i + 1}/${qs.length}</span><div class="pbar"><i style="width:${Math.round(100 * i / qs.length)}%"></i></div><span class="etime" id="etime" aria-label="Sisa waktu">${mmss(left)}</span></div>
+      <div class="card exam"><div id="qbox"></div></div>`;
+    renderQ(q, $('#qbox'), (ok, shown) => {
+      if (over) return;
+      res.push({ q, ok, shown }); if (ok) score++; bumpDaily();
+      if (q.k) { if (ok) delete prog.wrong[q.k]; else prog.wrong[q.k] = q.unit; saveProg(); }
+      setTimeout(() => { i++; show(); }, 450);
+    });
+  }
+  function finish() {
+    over = true;
+    const total = qs.length, pct = Math.round(100 * score / total);
+    const used = Math.min(minutes * 60, Math.round((Date.now() - t0) / 1000));
+    const ex = prog.exam = prog.exam || {}; const prev = ex[key] ? ex[key].best : 0;
+    ex[key] = { best: Math.max(prev, pct), last: pct, date: todayStr() }; saveProg();
+    const byU = {}; res.forEach(r => { const b = byU[r.q.unit] = byU[r.q.unit] || [0, 0]; b[1]++; if (r.ok) b[0]++; });
+    const ids = Object.fromEntries(index.map(u => [u.id, u]));
+    const unanswered = total - res.length;
+    pane.innerHTML = `<div class="card result"><div class="big">${pct >= 70 ? '🎉' : '💪'}</div><h2>${score} dari ${total} benar (${pct}%)</h2>
+      <p>Waktu: ${mmss(used)} dari ${mmss(minutes * 60)}${unanswered ? ` · ${unanswered} soal belum sempat dijawab` : ''}${pct > prev ? ' · nilai terbaik baru! ⭐' : ''}</p>
+      <div class="row" style="justify-content:center"><a class="btn" href="#/ujian/${key}">🔁 Ujian lagi</a><a class="btn ghost" href="#/kelas/${key}">← ${esc(lv.title)}</a></div></div>
+      <div class="card"><h3>Hasil per unit</h3><ul class="slist">${Object.entries(byU).map(([id, [a, b]]) => `<li><a href="#/unit/${id}/learn">Unit ${ids[id] ? ids[id].no : ''} ${ids[id] ? esc(ids[id].title) : id}</a> <small>${a}/${b}</small></li>`).join('')}</ul></div>
+      ${res.some(r => !r.ok) ? `<div class="card review"><h3>Pembahasan soal yang salah:</h3><ol class="review">${res.filter(r => !r.ok).map(r => `<li>${fmt(r.q.q || r.q.say || '')}<br>Jawaban benar: <b>${esc(correctText(r.q))}</b><br><small>${fmt(r.q.exp)}</small></li>`).join('')}</ol></div>` : ''}`;
   }
   show();
 }
