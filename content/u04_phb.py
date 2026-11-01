@@ -1,0 +1,55 @@
+from qk import mk, mkf, mko
+PHB = dict(practice=mk([
+ ('Apa arti "wake up"?', 'terbangun', 'bangun dari tempat tidur', 'tidur lagi', 'memakai baju', 'Wake up = terbangun (mata terbuka).'),
+ ('Apa arti "get up"?', 'bangun dari tempat tidur', 'terbangun', 'duduk', 'berangkat tidur', 'Get up = bangun dari tempat tidur.'),
+ ('Apa arti "turn on"?', 'menyalakan', 'mematikan', 'membalik', 'melepas', 'Turn on = menyalakan.'),
+ ('Apa arti "turn off"?', 'mematikan', 'menyalakan', 'memakai', 'kembali', 'Turn off = mematikan.'),
+ ('Apa arti "put on" (pakaian)?', 'memakai', 'melepas', 'mencuci', 'membeli', 'Put on = memakai.'),
+ ('Apa arti "take off" (pakaian)?', 'melepas', 'memakai', 'membawa', 'membeli', 'Take off = melepas.'),
+ ('Apa arti "sit down"?', 'duduk', 'berdiri', 'masuk', 'pergi', 'Sit down = duduk.'),
+ ('Apa arti "stand up"?', 'berdiri', 'duduk', 'berbaring', 'berlari', 'Stand up = berdiri.'),
+ ('Pilih yang tepat: "It is dark. ___ the light, please."', 'Turn on', 'Turn off', 'Take off', 'Put on', 'Gelap → nyalakan lampu.'),
+ ('Pilih yang tepat: "I am going to sleep. ___ the TV, please."', 'Turn off', 'Turn on', 'Put on', 'Take off', 'Mau tidur → matikan TV.'),
+ ('Pilih yang tepat: "It is cold. ___ your jacket."', 'Put on', 'Take off', 'Turn off', 'Get up', 'Dingin → pakai jaket.'),
+ ('Pilih yang tepat: "It is hot. ___ your jacket."', 'Take off', 'Put on', 'Turn on', 'Sit down', 'Panas → lepas jaket.'),
+ ('Pilih yang tepat: "The alarm rings at five, and I ___ at five."', 'wake up', 'sit down', 'put on', 'turn off', 'Alarm berbunyi → terbangun.'),
+ ('Pilih yang tepat: "Please ___. The class starts now."', 'sit down', 'take off', 'turn on', 'wake up', 'Kelas mulai → duduk.'),
+ ('Pilih yang tepat: "Good morning, class! ___, please."', 'Stand up', 'Turn off', 'Put on', 'Take off', 'Memberi salam → berdiri.'),
+ ('Pilih yang tepat: "I ___ at six, then I take a shower."', 'get up', 'sit down', 'turn on', 'put on', 'Bangun lalu mandi.'),
+ ('Pilih kalimat yang benar:', 'Turn it off.', 'Turn off it.', 'Turn off to it.', 'Turn it of.', 'Kata ganti di tengah.'),
+ ('Pilih kalimat yang benar:', 'Put them on.', 'Put on them.', 'Put them in on.', 'Put on to them.', 'Kata ganti di tengah.'),
+ ('Pilih kalimat yang SALAH:', 'Take off it.', 'Take it off.', 'Take off your shoes.', 'Take your shoes off.', 'Kata ganti harus di tengah.'),
+ ('Pilih kalimat yang SALAH:', 'Turn on it.', 'Turn it on.', 'Turn on the fan.', 'Turn the fan on.', 'Kata ganti harus di tengah.'),
+ ('Mana urutan yang benar di pagi hari?', 'wake up, get up, take a shower', 'get up, wake up, take a shower', 'take a shower, wake up, get up', 'sit down, wake up, get up', 'Terbangun dulu, baru bangun dari tempat tidur.'),
+ ('Pilih pasangan yang sama artinya: "Turn off the light" =', 'Turn the light off.', 'Turn off it light.', 'Off the turn light.', 'Turn light the off.', 'Kata benda boleh di tengah atau di belakang.'),
+]), quiz=mk([
+ ('Pilih yang tepat: "Please ___. Don\'t stand."', 'sit down', 'wake up', 'turn on', 'put on', 'Jangan berdiri → duduk.'),
+ ('Pilih yang tepat: "Wow, I am tired. I ___ at four today."', 'woke up', 'sat down', 'put on', 'turned off', 'Lampau dari wake up = woke up.'),
+ ('Pilih yang tepat: "___ your coat. It is raining."', 'Put on', 'Take off', 'Turn off', 'Sit down', 'Hujan → pakai mantel.'),
+ ('Pilih kalimat yang benar:', 'Please turn the TV off.', 'Please turn off the it TV.', 'Please off turn the TV.', 'Please turn the off TV.', 'Dua posisi yang benar untuk kata benda.'),
+ ('Apa arti "come back"?', 'kembali', 'pergi', 'masuk', 'duduk', 'Come back = kembali.'),
+ ('Apa arti "go out"?', 'keluar rumah', 'masuk rumah', 'tidur', 'bangun', 'Go out = pergi keluar.'),
+ ('Mana yang BUKAN phrasal verb?', 'eat', 'wake up', 'turn off', 'put on', 'Eat satu kata saja.'),
+ ('Pilih kalimat yang benar:', 'I wake up at six.', 'I wake at up six.', 'I up wake at six.', 'I wake six up.', 'Wake up dipakai bersama.'),
+]))
+PHB["practice"] += mkf([
+ ('Matikan lampu.', 'Turn ___ the light.', 'off', 'Turn off = mematikan.'),
+ ('Nyalakan TV.', 'Turn ___ the TV.', 'on', 'Turn on = menyalakan.'),
+ ('Pakai sepatumu.', 'Put ___ your shoes.', 'on', 'Put on = memakai.'),
+ ('Lepas jaketmu.', 'Take ___ your jacket.', 'off', 'Take off = melepas.'),
+ ('Aku terbangun pukul lima.', 'I wake ___ at five.', 'up', 'Wake up = terbangun.'),
+ ('Silakan duduk.', 'Please sit ___.', 'down', 'Sit down = duduk.'),
+ ('Silakan berdiri.', 'Please stand ___.', 'up', 'Stand up = berdiri.'),
+ ('Matikan itu.', 'Turn it ___.', 'off', 'Kata ganti di tengah.'),
+])
+PHB["practice"] += mko([
+ ('Matikan lampunya.', 'Turn off the light.', 'on up', 'Turn the light off.'),
+ ('Pakai sepatumu.', 'Put on your shoes.', 'off down', 'Put your shoes on.'),
+ ('Aku bangun pukul enam.', 'I get up at six.', 'sit wake', ''),
+ ('Duduk dan buka bukumu.', 'Sit down and open your book.', 'up stand', ''),
+ ('Nyalakan itu.', 'Turn it on.', 'off up', ''),
+])
+PHB["quiz"] += mkf([
+ ('Lepas sepatumu.', 'Take ___ your shoes.', 'off', 'Take off = melepas.'),
+ ('Aku bangun pukul enam.', 'I get ___ at six.', 'up', 'Get up = bangun.'),
+])
