@@ -1,0 +1,95 @@
+from qk import mk, mkf, mko
+
+UNIT = dict(
+ id="u63",
+ goals=[
+  "memakai **present simple** untuk kebiasaan, fakta, dan jadwal tetap",
+  "memakai **present continuous** untuk yang sedang terjadi dan rencana dekat",
+  "membedakan keduanya lewat **kata petunjuk waktu**",
+  "mengenali **kata kerja keadaan** (stative verbs) yang tidak dipakai dalam continuous",
+ ],
+ lesson=[
+  dict(t="intro", text="Dua tense yang paling sering dipakai adalah **present simple** dan **present continuous**. Murid sering tertukar karena bahasa Indonesia memakai kata yang sama untuk keduanya. Kuncinya: **kebiasaan atau fakta** memakai simple, **sedang terjadi saat ini** memakai continuous."),
+
+  dict(t="grammar", title="1. Present simple: kebiasaan, fakta, dan jadwal",
+   table=[["Pola", "Rumus", "Contoh"],
+          ["Positif", "I/you/we/they + V1; he/she/it + V1-s", "[[I walk to school.]] / [[She walks to school.]]"],
+          ["Negatif", "do not / does not + V1", "[[I don't walk.]] / [[She doesn't walk.]]"],
+          ["Tanya", "Do/Does + subjek + V1?", "[[Do you walk?]] / [[Does she walk?]]"]],
+   examples=[dict(en="[[Water boils at 100 degrees.]]", id="Air mendidih pada 100 derajat. (fakta)"),
+             dict(en="[[The train leaves at six.]]", id="Kereta berangkat pukul enam. (jadwal tetap)")]),
+
+  dict(t="grammar", title="2. Present continuous: sedang terjadi",
+   table=[["Pola", "Rumus", "Contoh"],
+          ["Positif", "am/is/are + V-ing", "[[I am eating.]] / [[They are eating.]]"],
+          ["Negatif", "am/is/are + not + V-ing", "[[She isn't eating.]]"],
+          ["Tanya", "Am/Is/Are + subjek + V-ing?", "[[Are you eating?]]"]],
+   examples=[dict(en="[[Look! It is raining.]]", id="Lihat! Sedang hujan."),
+             dict(en="[[I am meeting Rani tomorrow.]]", id="Aku akan bertemu Rani besok. (rencana yang sudah diatur)")]),
+
+  dict(t="grammar", title="3. Kata petunjuk",
+   table=[["Present simple", "Present continuous"],
+          ["always, usually, often, sometimes, never", "now, right now, at the moment, today"],
+          ["every day / week / year", "this week, these days, currently"],
+          ["on Mondays, in the morning", "Look!, Listen!"]]),
+
+  dict(t="grammar", title="4. Kata kerja keadaan (stative verbs)",
+   text="Beberapa kata kerja menyatakan **keadaan**, bukan tindakan. Biasanya tidak dipakai dalam bentuk continuous.",
+   table=[["Kelompok", "Contoh"],
+          ["perasaan", "like, love, hate, want, need, prefer"],
+          ["pikiran", "know, understand, believe, remember, think (= berpendapat)"],
+          ["kepemilikan", "have (= punya), own, belong"],
+          ["panca indra", "see, hear, smell, taste, seem"]],
+   examples=[dict(en="[[I know the answer.]]", id="Aku tahu jawabannya. (bukan ~~I am knowing~~)"),
+             dict(en="[[I have a bike.]] / [[I am having lunch.]]", id="Have (punya) = keadaan; have (makan) = tindakan, boleh continuous.")]),
+
+  dict(t="warn", title="Jebakan umum",
+   text="Katakan [[I like music.]], bukan ~~I am liking music~~. Katakan [[He plays football every Sunday.]], bukan ~~He is playing football every Sunday~~. Dan jangan lupa -s: [[She works]], bukan ~~She work~~."),
+ ],
+
+ practice=mk([
+  ('Pilih bentuk yang benar: "She ___ to school every day."', "walks", "walk", "is walking", "walking", "Kebiasaan + she → V1-s."),
+  ('Pilih bentuk yang benar: "Look! The baby ___."', "is sleeping", "sleeps", "sleep", "sleeping", "Look! → sedang terjadi."),
+  ('Pilih bentuk yang benar: "Water ___ at 100 degrees."', "boils", "is boiling", "boil", "boiled", "Fakta ilmiah."),
+  ('Pilih bentuk yang benar: "I ___ my homework right now."', "am doing", "do", "does", "doing", "right now → continuous."),
+  ('Pilih bentuk yang benar: "He usually ___ coffee in the morning."', "drinks", "is drinking", "drink", "drinking", "usually → simple."),
+  ('Pilih bentuk yang benar: "They ___ football at the moment."', "are playing", "play", "plays", "playing", "at the moment → continuous."),
+  ('Pilih bentuk yang benar: "My father ___ in a bank."', "works", "is working", "work", "working", "Pekerjaan tetap → simple."),
+  ('Pilih bentuk yang benar: "The train ___ at six every morning."', "leaves", "is leaving", "leave", "leaving", "Jadwal tetap → simple."),
+  ('Pilih bentuk yang benar: "I ___ the answer."', "know", "am knowing", "knows", "knowing", "know = stative."),
+  ('Pilih bentuk yang benar: "She ___ English."', "likes", "is liking", "like", "liking", "like = stative."),
+  ('Pilih bentuk yang benar: "Where ___ you going?"', "are", "do", "is", "does", "Where are you going? (continuous)."),
+  ('Pilih bentuk yang benar: "___ she live in Jakarta?"', "Does", "Do", "Is", "Are", "Tanya simple dengan she → Does."),
+  ('Pilih kalimat yang benar:', "She doesn't like tea.", "She don't like tea.", "She isn't like tea.", "She not likes tea.", "doesn't + V1."),
+  ('Pilih kalimat yang SALAH:', "I am wanting a new phone.", "I want a new phone.", "I am buying a phone now.", "I need a phone.", "want = stative."),
+  ('Pilih kalimat yang SALAH:', "He is playing football every Sunday.", "He plays football every Sunday.", "He is playing football now.", "He doesn't play football.", "every Sunday → simple."),
+  ('Pilih kalimat yang SALAH:', "She work in a hospital.", "She works in a hospital.", "She is working today.", "She doesn't work here.", "she → works."),
+  ('Pilih kalimat yang benar untuk rencana besok yang sudah diatur:', "I am meeting Rani tomorrow.", "I meet Rani tomorrow now.", "I meeting Rani tomorrow.", "I am meet Rani tomorrow.", "Present continuous untuk rencana."),
+ ]) + mkf([
+  ("Dia berjalan ke sekolah setiap hari.", "She ___ to school every day. (walk)", "walks", "she → V1-s."),
+  ("Lihat! Hujan sedang turun.", "Look! It ___ raining. (be)", "is", "is + V-ing."),
+  ("Aku tidak suka kopi.", "I ___ like coffee.", "don't/do not", "do not + V1."),
+  ("Apakah dia tinggal di Bandung?", "___ she live in Bandung?", "Does", "Does + subjek + V1."),
+  ("Mereka sedang makan sekarang.", "They ___ eating now. (be)", "are", "are + V-ing."),
+  ("Aku tahu jawabannya.", "I ___ the answer. (know)", "know", "know = stative."),
+ ]) + mko([
+  ("Dia bekerja di rumah sakit.", "She works in a hospital.", "work working", ""),
+  ("Kami sedang menonton film sekarang.", "We are watching a movie now.", "watch watches", ""),
+  ("Dia tidak merokok.", "He doesn't smoke.", "isn't don't", ""),
+ ]),
+
+ quiz=mk([
+  ('Pilih bentuk yang benar: "Birds ___ in the sky."', "fly", "flies", "is flying", "flying", "Fakta umum, jamak → V1."),
+  ('Pilih bentuk yang benar: "Listen! Someone ___ at the door."', "is knocking", "knocks", "knock", "knocking", "Listen! → sedang terjadi."),
+  ('Pilih bentuk yang benar: "He ___ to music every evening."', "listens", "is listening", "listen", "listening", "every evening → simple."),
+  ('Pilih bentuk yang benar: "I ___ my keys. Can you help?" (tidak menemukan)', "can't find", "don't finding", "doesn't find", "am not found", "Sekarang, can't find."),
+  ('Pilih bentuk yang benar: "Why ___ you laughing?"', "are", "do", "does", "is", "are + V-ing."),
+  ('Pilih kalimat yang SALAH:', "I am loving this song.", "I love this song.", "I am listening to it now.", "I like it.", "love = stative."),
+  ('Pilih kalimat yang SALAH:', "She go to school by bus.", "She goes to school by bus.", "She is going now.", "She doesn't go by car.", "she → goes."),
+  ('Pilih kalimat yang benar:', "The sun rises in the east.", "The sun is rising in the east.", "The sun rise in the east.", "The sun rising in the east.", "Fakta → simple."),
+ ]) + mkf([
+  ("Dia sedang mengerjakan PR.", "She ___ doing her homework. (be)", "is", "is + V-ing."),
+  ("Dia memahami pelajaran itu.", "He ___ the lesson. (understand)", "understands", "stative, he → -s."),
+  ("Kami main sepak bola setiap Minggu.", "We ___ football every Sunday. (play)", "play", "every → simple."),
+ ]),
+)
