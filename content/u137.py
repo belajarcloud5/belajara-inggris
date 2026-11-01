@@ -1,0 +1,18 @@
+from ub import *
+UNIT = listening_unit("u137",
+ ["memahami **percakapan di toko dan restoran**",
+  "menangkap **harga, jumlah, dan pesanan**",
+  "mengenali **pilihan dan perubahan pesanan**",
+  "memahami penawaran dan diskon"],
+ "Tahap 4 berisi percakapan belanja dan makan: harga, ukuran, pesanan, dan diskon. Angka dan perubahan pikiran sering menjadi bagian soal.",
+ ["Tentukan tempat: toko, pasar, atau restoran", "Catat harga, jumlah, dan ukuran", "Waspadai perubahan pesanan (Actually, I'll have ...)", "Perhatikan kata diskon dan total"],
+ "Contoh: Memesan makanan",
+ [("Waiter", "Are you ready to order?", "Sudah siap memesan?"), ("Dina", "Yes. Fried rice and an orange juice, please.", "Ya. Nasi goreng dan jus jeruk."), ("Waiter", "Anything else?", "Ada lagi?"), ("Dina", "No, that's all. Thank you.", "Tidak, itu saja. Terima kasih.")],
+ [("I would like two cups of tea and one piece of chocolate cake, please. How much is that? That is nine dollars.", [("Dengarkan. Apa yang dipesan?", "Two teas and a cake", "Two cakes and a tea", "Coffee and a cake", "Two juices", "Dua teh dan satu kue."), ("Dengarkan. Berapa totalnya?", "Nine dollars", "Five dollars", "Nineteen dollars", "Ninety dollars", "9 dolar.")]),
+  ("Can I try this shirt on? Of course. The fitting room is over there. It is too small. Do you have a larger size?", [("Dengarkan. Apa masalahnya?", "The shirt is too small", "The shirt is too big", "The shirt is too expensive", "The shirt is dirty", "Terlalu kecil."), ("Dengarkan. Apa yang ia minta?", "A larger size", "A discount", "A refund", "A different colour", "Ukuran lebih besar.")]),
+  ("This bag is fifty dollars, but today there is a twenty percent discount. So you pay forty dollars.", [("Dengarkan. Berapa diskonnya?", "Twenty percent", "Ten percent", "Fifty percent", "Forty percent", "20%."), ("Dengarkan. Berapa yang dibayar?", "Forty dollars", "Fifty dollars", "Thirty dollars", "Twenty dollars", "40 dolar.")]),
+  ("I will have the chicken soup. Actually, I will have the fish soup instead. And a glass of water, please.", [("Dengarkan. Sup apa yang akhirnya dipesan?", "Fish soup", "Chicken soup", "Vegetable soup", "No soup", "Dikoreksi: sup ikan."), ("Dengarkan. Minuman apa?", "A glass of water", "Orange juice", "Tea", "Coffee", "Segelas air.")]),
+  ("Two kilos of rice, one kilo of sugar, and a bottle of cooking oil. That is fifteen dollars and fifty cents.", [("Dengarkan. Berapa kilo beras?", "Two kilos", "One kilo", "Five kilos", "Ten kilos", "2 kg."), ("Dengarkan. Berapa totalnya?", "$15.50", "$15.15", "$50.15", "$5.50", "15,50.")]),
+  ("Excuse me, is this seat free? Yes, please sit down. Would you like the menu? No, thank you. I already know what I want.", [("Dengarkan. Apa yang ditanyakan pertama?", "If the seat is free", "If food is ready", "The price", "The time", "Kursi kosong?"), ("Dengarkan. Apakah ia butuh menu?", "No", "Yes", "Maybe", "He asks for two", "Tidak.")])],
+ ["I would {like} two cups of {tea}.", "This shirt is too {small}; do you have a {larger} size?", "There is a twenty {percent} {discount} today.", "I will have the fish {soup} {instead}.", "Two {kilos} of rice, please.", "Is this {seat} {free}?", "Are you ready to {order}?", "That is nine {dollars}."],
+ "Saat mendengar harga, tulis angkanya segera. Jika ada perubahan, jawaban akhir ada pada kalimat sesudah koreksi.", seed=137)

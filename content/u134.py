@@ -1,0 +1,18 @@
+from ub import *
+UNIT = listening_unit("u134",
+ ["memahami **sapaan, nama, angka, dan waktu** dalam percakapan sangat pendek",
+  "menangkap **kata kunci** (angka, nama, hari) saat mendengar",
+  "menjawab pertanyaan sederhana tentang **apa, siapa, kapan, berapa**",
+  "mengisi kata yang hilang pada kalimat pendek"],
+ "Tahap 1 melatih telingamu dengan rekaman sangat pendek dan kosakata dasar. Dengarkan sambil mencari satu hal: nama, angka, atau waktu. Rekaman bisa diputar berulang kali, dan kamu bisa memakai 🐢 untuk versi pelan pada soal isian.",
+ ["Dengarkan sekali sampai selesai", "Tangkap kata kunci: nama, angka, hari, jam", "Dengarkan lagi untuk memeriksa jawaban", "Jangan panik bila ada kata yang tidak dikenal; cari kata yang kamu tahu"],
+ "Contoh: Perkenalan",
+ [("Rani", "Hello! My name is Rani.", "Halo! Namaku Rani."), ("Tom", "Hi, Rani. I am Tom. I am twelve years old.", "Hai, Rani. Aku Tom. Aku berumur dua belas tahun."), ("Rani", "Nice to meet you, Tom!", "Senang bertemu denganmu, Tom!")],
+ [("Hello. My name is Dina. I am thirteen years old. I live in Bandung.", [("Dengarkan. Siapa nama pembicara?", "Dina", "Rani", "Tina", "Dini", "Dina."), ("Dengarkan. Di mana pembicara tinggal?", "Bandung", "Bali", "Medan", "Solo", "Bandung."), ("Dengarkan. Berapa umur Dina?", "Thirteen", "Thirty", "Fourteen", "Twelve", "Thirteen = 13.")]),
+  ("Good morning, class. Today is Monday. Our English lesson starts at eight o'clock.", [("Dengarkan. Hari apa sekarang?", "Monday", "Sunday", "Tuesday", "Friday", "Monday."), ("Dengarkan. Pelajaran dimulai pukul berapa?", "Eight", "Seven", "Nine", "Eleven", "Eight o'clock.")]),
+  ("This is my friend Budi. He is from Medan. His birthday is on the tenth of May.", [("Dengarkan. Budi berasal dari mana?", "Medan", "Bali", "Solo", "Jakarta", "Medan."), ("Dengarkan. Kapan ulang tahun Budi?", "The tenth of May", "The first of May", "The twentieth of May", "The tenth of June", "Tenth of May.")]),
+  ("How much is this pen? It is five thousand rupiah. And the notebook? It is twelve thousand rupiah.", [("Dengarkan. Berapa harga pulpen?", "Five thousand", "Fifteen thousand", "Fifty thousand", "Twelve thousand", "Five thousand."), ("Dengarkan. Berapa harga buku catatan?", "Twelve thousand", "Two thousand", "Twenty thousand", "Five thousand", "Twelve thousand.")]),
+  ("Excuse me, what time is it? It is half past three. Thank you very much.", [("Dengarkan. Pukul berapa sekarang?", "Half past three", "Quarter past three", "Half past two", "Three o'clock", "Half past three = 3.30."), ("Dengarkan. Apa yang diucapkan di akhir?", "Thank you very much", "Good night", "I'm sorry", "See you", "Thank you very much.")]),
+  ("We have three cats and two dogs. The cats are white. The dogs are black.", [("Dengarkan. Berapa kucing yang mereka punya?", "Three", "Two", "Four", "Five", "Three cats."), ("Dengarkan. Warna anjingnya apa?", "Black", "White", "Brown", "Grey", "Black.")])],
+ ["My name {is} Dina and I {am} thirteen.", "Today is {Monday} and the lesson starts at {eight}.", "This {pen} is five {thousand} rupiah.", "It is half {past} {three}.", "We have {three} cats and {two} dogs.", "She is from {Bandung}.", "Nice to {meet} you.", "His birthday is in {May}."],
+ "Dengarkan setiap rekaman dua kali: pertama untuk gambaran, kedua untuk detail. Catat angka sebagai angka (bukan kata).", seed=134)

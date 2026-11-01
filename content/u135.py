@@ -1,0 +1,18 @@
+from ub import *
+UNIT = listening_unit("u135",
+ ["memahami **percakapan pendek tentang keluarga dan rumah**",
+  "menangkap **kegiatan harian** dan urutannya",
+  "membedakan **tempat dan benda** di rumah",
+  "mengisi kata yang hilang pada kalimat harian"],
+ "Tahap 2 memakai percakapan pendek tentang keluarga, rumah, dan kegiatan harian. Fokuslah pada siapa melakukan apa dan di mana.",
+ ["Tentukan siapa yang berbicara dan topiknya", "Catat kata kerja (apa yang dilakukan) dan tempat", "Perhatikan kata penunjuk waktu (every day, at six)", "Periksa jawaban pada putaran kedua"],
+ "Contoh: Pagi di rumah",
+ [("Mother", "Dina, wake up! It is six o'clock.", "Dina, bangun! Sudah pukul enam."), ("Dina", "I am awake, Mom. I get up now.", "Aku sudah bangun, Bu. Aku bangun sekarang."), ("Mother", "Breakfast is in the kitchen.", "Sarapan ada di dapur.")],
+ [("My father works in a bank. My mother is a teacher. I have one brother, and he goes to university.", [("Dengarkan. Apa pekerjaan ayahnya?", "He works in a bank", "He is a teacher", "He is a doctor", "He is a driver", "Ayah di bank."), ("Dengarkan. Berapa saudara laki-lakinya?", "One", "Two", "Three", "None", "One brother.")]),
+  ("My room is on the second floor. There is a bed, a desk, and a small wardrobe. The window is next to the desk.", [("Dengarkan. Di lantai berapa kamarnya?", "The second floor", "The first floor", "The third floor", "The ground floor", "Second floor."), ("Dengarkan. Jendela ada di dekat apa?", "The desk", "The bed", "The door", "The wardrobe", "Next to the desk.")]),
+  ("Every morning I get up at five thirty. I take a shower, eat breakfast, and walk to school with my sister.", [("Dengarkan. Pukul berapa dia bangun?", "Five thirty", "Six thirty", "Five fifteen", "Four thirty", "5.30."), ("Dengarkan. Dengan siapa dia ke sekolah?", "His/her sister", "A friend", "His/her mother", "Alone", "Dengan saudara perempuan.")]),
+  ("On Sundays, we visit my grandmother. She lives in a small house near the river. She cooks fish soup for us.", [("Dengarkan. Kapan mereka mengunjungi nenek?", "On Sundays", "On Saturdays", "Every day", "On Fridays", "Sundays."), ("Dengarkan. Apa yang nenek masak?", "Fish soup", "Chicken curry", "Fried rice", "Noodles", "Fish soup.")]),
+  ("Where is my bag? It is under the table. And my shoes? They are next to the door.", [("Dengarkan. Di mana tas?", "Under the table", "On the table", "Next to the door", "In the kitchen", "Under the table."), ("Dengarkan. Di mana sepatu?", "Next to the door", "Under the bed", "On the shelf", "In the garden", "Next to the door.")]),
+  ("My brother is tall and thin. He likes football. He plays in the park every afternoon with his friends.", [("Dengarkan. Apa yang disukai kakaknya?", "Football", "Chess", "Swimming", "Reading", "Football."), ("Dengarkan. Kapan dia bermain?", "Every afternoon", "Every morning", "Every night", "Every weekend", "Every afternoon.")])],
+ ["My father {works} in a {bank}.", "I get up at five {thirty} every {morning}.", "The bag is {under} the {table}.", "My {room} is on the {second} floor.", "We {visit} my {grandmother} on Sundays.", "She {cooks} fish {soup}.", "My brother {plays} football in the {park}.", "There is a {desk} next to the {window}."],
+ "Biasakan mendengar kata kerja kegiatan harian (wake up, get up, eat, go) dan tempat. Ulangi rekaman sambil membuat catatan satu kata.", seed=135)

@@ -91,3 +91,28 @@ def cloze(marked, exp, q="Dengarkan, lalu isi kata yang hilang."):
     text = _re.sub(r"\{[^}]*\}", "___", marked)
     say = _re.sub(r"\{([^|}]*)(?:\|[^}]*)?\}", r"\1", marked)
     return dict(type="cloze", q=q, say=say, text=text, answers=answers, exp=exp)
+
+
+def listening_unit(id, goals, intro_text, strategy, model_title, model_lines, clips, clozes, tip_text, seed=1):
+    """Unit listening bertahap. clips = [(naskah, [(pertanyaan, benar, s1, s2, s3, exp)])]; clozes = kalimat bertanda {kata}."""
+    rng = random.Random(seed)
+    lesson = [intro(intro_text),
+              gram("Strategi mendengarkan", table=[["Langkah", "Isi"]] + [[str(k), x] for k, x in enumerate(strategy, 1)]),
+              dialog(model_title, model_lines), tip("Cara berlatih", tip_text),
+              summary([s for s in strategy])]
+    P, Q = [], []
+    for k, (say, qs) in enumerate(clips):
+        for j, (q, r, a, b, c, e) in enumerate(qs):
+            item = listen(q, say, [r, a, b, c], 0, e)
+            (Q if (k + j) % 5 == 4 else P).append(item)
+    cl = [cloze(c, "Kalimat lengkapnya: " + _re.sub(r"\{([^|}]*)(?:\|[^}]*)?\}", r"\1", c)) for c in clozes]
+    P += cl[:-3]; Q += cl[-3:]
+    firsts = []
+    for say, _ in clips[:4]:
+        s1 = _re.split(r"(?<=[.?!]) ", say)[0]
+        if 3 <= len(s1.split()) <= 10 and not any(ch.isdigit() for ch in s1):
+            firsts.append((s1, "kalimat pertama dari rekaman"))
+    P += dictate(firsts)
+    while len(Q) < 8:
+        Q.append(rng.choice(P))
+    return mkunit(id, goals, lesson, P, Q)

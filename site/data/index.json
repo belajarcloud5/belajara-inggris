@@ -1814,7 +1814,10 @@
   "title": "Step 1: Greetings and Numbers",
   "emoji": "🎧",
   "ringkas": "Dialog sangat pendek dengan kosakata dasar",
-  "ready": false
+  "ready": true,
+  "practice_n": 19,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u135",
@@ -1824,7 +1827,10 @@
   "title": "Step 2: Family and Home",
   "emoji": "🏠",
   "ringkas": "Dialog pendek tentang keluarga, rumah, dan kegiatan harian",
-  "ready": false
+  "ready": true,
+  "practice_n": 19,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u136",
@@ -1834,7 +1840,10 @@
   "title": "Step 3: School Life",
   "emoji": "🏫",
   "ringkas": "Percakapan teman, guru, jadwal, dan pengumuman sekolah",
-  "ready": false
+  "ready": true,
+  "practice_n": 17,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u137",
@@ -1844,7 +1853,10 @@
   "title": "Step 4: Shopping and Food",
   "emoji": "🛒",
   "ringkas": "Harga, pesanan, dan percakapan di toko serta kantin",
-  "ready": false
+  "ready": true,
+  "practice_n": 17,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u138",
@@ -1854,7 +1866,10 @@
   "title": "Step 5: Travel and Directions",
   "emoji": "🚌",
   "ringkas": "Pengumuman, petunjuk arah, dan rencana perjalanan",
-  "ready": false
+  "ready": true,
+  "practice_n": 18,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u139",
@@ -1864,7 +1879,10 @@
   "title": "Step 6: Phone Calls and Messages",
   "emoji": "📞",
   "ringkas": "Pesan suara, janji temu, dan percakapan telepon",
-  "ready": false
+  "ready": true,
+  "practice_n": 17,
+  "quiz_n": 7,
+  "read_n": 0
  },
  {
   "id": "u140",
@@ -1874,7 +1892,10 @@
   "title": "Step 7: News and Short Talks",
   "emoji": "📰",
   "ringkas": "Berita pendek, pengumuman, dan pidato singkat",
-  "ready": false
+  "ready": true,
+  "practice_n": 19,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u141",
@@ -1884,7 +1905,10 @@
   "title": "Step 8: Lectures and Discussions",
   "emoji": "🎓",
   "ringkas": "Penjelasan akademik, diskusi, dan menyimpulkan",
-  "ready": false
+  "ready": true,
+  "practice_n": 18,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u142",

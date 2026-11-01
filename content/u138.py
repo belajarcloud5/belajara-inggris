@@ -1,0 +1,18 @@
+from ub import *
+UNIT = listening_unit("u138",
+ ["memahami **petunjuk arah** dan **pengumuman transportasi**",
+  "menangkap **tempat, jam, dan peron**",
+  "mengikuti **rute** dengan belok kiri/kanan",
+  "memahami rencana perjalanan"],
+ "Tahap 5 melatih telinga untuk petunjuk arah dan pengumuman perjalanan. Dengarkan urutan langkah: go straight, turn left, turn right.",
+ ["Gambarkan rute dalam kepala (lurus, kiri, kanan)", "Catat nama tempat penanda", "Catat jam dan nomor peron/gerbang", "Perhatikan perubahan jadwal"],
+ "Contoh: Menunjukkan jalan",
+ [("Tom", "Excuse me, where is the post office?", "Permisi, di mana kantor pos?"), ("Ms. Sari", "Go straight and turn left at the bank.", "Lurus lalu belok kiri di bank."), ("Tom", "Is it far?", "Apakah jauh?"), ("Ms. Sari", "No, it is two minutes on foot.", "Tidak, dua menit berjalan kaki.")],
+ [("Go straight for two blocks. Turn right at the traffic light. The museum is on your left, next to the bank.", [("Dengarkan. Berapa blok lurus?", "Two blocks", "One block", "Three blocks", "Five blocks", "Dua blok."), ("Dengarkan. Museum ada di sebelah apa?", "The bank", "The school", "The market", "The station", "Di sebelah bank.")]),
+  ("The train to Bandung leaves from platform three at nine fifteen. It is delayed by ten minutes.", [("Dengarkan. Dari peron mana kereta berangkat?", "Platform three", "Platform one", "Platform five", "Platform nine", "Peron tiga."), ("Dengarkan. Berapa menit tertunda?", "Ten minutes", "Fifteen minutes", "Five minutes", "Thirty minutes", "Sepuluh menit.")]),
+  ("Attention, passengers on flight two one four. The gate has changed from gate five to gate twelve.", [("Dengarkan. Gerbang baru adalah...", "Gate twelve", "Gate five", "Gate two", "Gate fourteen", "Gerbang 12."), ("Dengarkan. Apa yang berubah?", "The gate", "The time", "The destination", "The airline", "Gerbang.")]),
+  ("You can take bus number twenty to the airport. It leaves every fifteen minutes from the bus stop opposite the hotel.", [("Dengarkan. Bus nomor berapa?", "Number twenty", "Number twelve", "Number fifteen", "Number two", "Nomor 20."), ("Dengarkan. Seberapa sering bus berangkat?", "Every fifteen minutes", "Every five minutes", "Every hour", "Every thirty minutes", "Setiap 15 menit.")]),
+  ("We arrive in Singapore at ten thirty in the morning. Then we take a taxi to the hotel. It takes about thirty minutes.", [("Dengarkan. Pukul berapa tiba di Singapura?", "Ten thirty", "Ten fifteen", "Eleven thirty", "Nine thirty", "10.30."), ("Dengarkan. Bagaimana mereka ke hotel?", "By taxi", "By train", "By bus", "On foot", "Naik taksi.")]),
+  ("Sorry, the road is closed. Go back to the corner, turn left, and then take the second street on the right.", [("Dengarkan. Mengapa mereka harus memutar?", "The road is closed", "The bridge is old", "There is a festival", "It is too far", "Jalan ditutup."), ("Dengarkan. Setelah belok kiri, jalan ke mana?", "The second street on the right", "The first street on the left", "Straight ahead", "The third street on the left", "Jalan kedua di kanan.")])],
+ ["Go {straight} and turn {left} at the bank.", "The train leaves from platform {three} at nine {fifteen}.", "The gate has {changed} to gate {twelve}.", "Take bus number {twenty} to the {airport}.", "We {arrive} in Singapore at ten {thirty}.", "The road is {closed}.", "The museum is on your {left}.", "It takes about thirty {minutes}."],
+ "Saat mendengar arah, tangkap kata kunci (straight, left, right, opposite, next to) dan gambar petanya di kertas.", seed=138)
