@@ -274,6 +274,10 @@ def main():
             rp16 = os.path.join(ROOT, "content", f"{u['id']}_read16.py")
             if os.path.isfile(rp16):  # cerita ke-15: fokus conditional (termasuk campuran)
                 d["read"] = d["read"] + load(rp16).READ16
+            for rn, rcomment in ((17, "fokus phrasal verbs"), (18, "fokus idiom")):
+                rpx = os.path.join(ROOT, "content", f"{u['id']}_read{rn}.py")
+                if os.path.isfile(rpx):
+                    d["read"] = d["read"] + getattr(load(rpx), f"READ{rn}")
             for ps in d["read"]:  # percakapan: satu giliran bicara per baris
                 ps["text"] = split_dialog(ps["text"])
                 ps["id"] = split_dialog(ps["id"])
