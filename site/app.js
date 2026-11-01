@@ -210,6 +210,9 @@ async function route() {
     if (page === 'kelas') return renderKelas(index, id);
     if (page === 'kamus') return renderKamus(await getJSON('data/kamus.json'));
     if (page === 'ulang') return renderRetry(index);
+    if (page === 'kartu') return renderKartu();
+    if (page === 'tes') return renderTes(index);
+    if (page === 'bicara') return renderBicara();
     if (page === 'unit' && id) {
       const meta = index.find(u => u.id === id && u.ready);
       if (meta) return renderUnit(await getJSON(`data/${id}.json`), tab || 'learn', index, idx);
@@ -268,9 +271,10 @@ function renderHome(index) {
       <h1>Hi! Ayo belajar bahasa Inggris 🎉</h1>
       <p>Pilih levelmu, lalu pilih unit. Setiap unit punya <b>Belajar</b>, <b>Latihan</b>, dan <b>Kuis</b>. Kumpulkan bintang ⭐ sebanyak mungkin!</p>
       <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${max}" aria-valuenow="${got}"><i style="width:${Math.round(100 * got / max)}%"></i></div>
-    </section>${wrongCount() ? `<div class="card retry"><b>🔁 ${wrongCount()} soal perlu diulang</b> <a class="btn small" href="#/ulang">Ulangi yang salah</a></div>` : ''}
+    </section>${dailyCard()}${toolsRow()}${wrongCount() ? `<div class="card retry"><b>🔁 ${wrongCount()} soal perlu diulang</b> <a class="btn small" href="#/ulang">Ulangi yang salah</a></div>` : ''}
     <h2 class="sec">Pilih level</h2>
     <div class="grid lgrid">${LEVELS.map(lv => levelCard(index, lv)).join('')}</div>`;
+  bindHome(index);
 }
 
 function renderKelas(index, key) {
@@ -408,6 +412,7 @@ function runner(pane, d, mode) {
       <div class="card"><div id="qbox"></div><div id="fb"></div></div>`;
     renderQ(q, $('#qbox'), (ok, shown) => {
       if (ok) score++; else wrong.push({ q, shown });
+      bumpDaily();
       if (q.k) { if (ok) delete prog.wrong[q.k]; else prog.wrong[q.k] = q.unit || d.id; saveProg(); }
       const last = i === qs.length - 1;
       $('#fb').innerHTML = `<div class="fb ${ok ? 'ok' : 'bad'}"><b class="h">${ok ? '✅ Benar! Hebat!' : '❌ Belum tepat'}</b>${ok ? '' : `<div>Jawaban yang benar: <b>${esc(correctText(q))}</b></div>`}<div>${fmt(q.exp)}</div></div>
@@ -823,3 +828,199 @@ function qMatch(q, box, finish) {
   });
   upd();
 })();
+
+// ---------- target harian dan rangkaian hari ----------
+const dayStr = d => d.toLocaleDateString('sv-SE');
+const todayStr = () => dayStr(new Date());
+const yesterdayStr = () => { const d = new Date(); d.setDate(d.getDate() - 1); return dayStr(d); };
+const goalN = () => [10, 20, 30, 50].includes(prog.goal) ? prog.goal : 10;
+function dailyCount() { return prog.daily && prog.daily.date === todayStr() ? prog.daily.count : 0; }
+function streakN() { const st = prog.streak; return st && (st.last === todayStr() || st.last === yesterdayStr()) ? st.n : 0; }
+function bumpDaily() {
+  const t = todayStr();
+  if (!prog.daily || prog.daily.date !== t) prog.daily = { date: t, count: 0 };
+  prog.daily.count++;
+  const st = prog.streak = prog.streak || { last: '', n: 0 };
+  if (st.last !== t) { st.n = st.last === yesterdayStr() ? st.n + 1 : 1; st.last = t; }
+  saveProg();
+}
+function dailyCard() {
+  const c = dailyCount(), g = goalN(), pct = Math.min(100, Math.round(100 * c / g)), n = streakN();
+  return `<div class="card daily"><div class="dtop"><b>🎯 Target hari ini: ${c}/${g} soal</b><span class="streak" title="Hari belajar berturut-turut">🔥 ${n} hari</span></div>
+    <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${g}" aria-valuenow="${Math.min(c, g)}"><i style="width:${pct}%"></i></div>
+    <div class="dbot"><small class="hint">${c >= g ? 'Target tercapai, hebat! 🎉' : 'Jawab soal di mana saja untuk menambah.'}</small>
+    <label class="gl">Target <select id="goalsel" aria-label="Target soal per hari">${[10, 20, 30, 50].map(v => `<option value="${v}"${v === g ? ' selected' : ''}>${v}</option>`).join('')}</select></label></div></div>`;
+}
+
+// ---------- alat belajar di beranda ----------
+function srsDueCount() { const now = Date.now(); return Object.values(prog.srs || {}).filter(c => c.due <= now).length; }
+function toolsRow() {
+  const due = srsDueCount();
+  return `<div class="tools">
+    <a class="btn ghost" href="#/kartu">🧠 Kartu hafalan${due ? ` <span class="pill">${due}</span>` : ''}</a>
+    <a class="btn ghost" href="#/tes">🎯 Tes penempatan</a>
+    <a class="btn ghost" href="#/bicara">🎤 Latihan berbicara</a>
+    <button class="btn ghost" id="offbtn" type="button">📴 Simpan untuk offline</button></div><div id="offmsg" class="hint"></div>`;
+}
+function bindHome(index) {
+  const gs = $('#goalsel');
+  if (gs) gs.addEventListener('change', () => { prog.goal = +gs.value; saveProg(); renderHome(index); });
+  const ob = $('#offbtn');
+  if (ob) ob.addEventListener('click', () => saveOffline(index, ob));
+}
+async function saveOffline(index, btn) {
+  const msg = $('#offmsg');
+  if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
+    msg.textContent = 'Fitur ini aktif setelah halaman dimuat ulang sekali (dan harus lewat https). Muat ulang, lalu coba lagi.';
+    return;
+  }
+  btn.disabled = true;
+  const files = ['data/index.json', 'data/kamus.json', 'data/kata.json', 'data/bicara.json', 'data/placement.json', ...index.filter(u => u.ready).map(u => `data/${u.id}.json`)];
+  let n = 0, fail = 0;
+  for (let i = 0; i < files.length; i += 6) {
+    await Promise.all(files.slice(i, i + 6).map(f => fetch(f).then(r => { if (!r.ok) throw 0; return r.blob(); }).then(() => n++).catch(() => fail++)));
+    msg.textContent = `Menyimpan… ${n}/${files.length}`;
+  }
+  msg.textContent = fail ? `Tersimpan ${n} dari ${files.length} berkas. Coba lagi bila internet stabil.` : `Selesai! ${n} berkas tersimpan. Aplikasi bisa dibuka tanpa internet.`;
+  btn.disabled = false;
+}
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) navigator.serviceWorker.register('sw.js').catch(() => { /* diabaikan */ });
+
+// ---------- kartu hafalan (pengulangan berjarak) ----------
+const SRS_DAYS = [0, 1, 3, 7, 16, 35, 90];
+async function renderKartu() {
+  const words = await getJSON('data/kamus.json');
+  prog.srs = prog.srs || {};
+  const now = Date.now(), day = 86400000;
+  const known = new Set(Object.entries(prog.units).filter(([, u]) => u.learned || u.practice || u.quiz).map(([id]) => id));
+  const pool = words.filter(w => known.size ? known.has(w.u) : w.kelas === 7 || w.kelas === '7');
+  const byKey = new Map(words.map(w => [w.en, w]));
+  const dueW = Object.entries(prog.srs).filter(([en, c]) => c.due <= now && byKey.has(en)).sort((a, b) => a[1].due - b[1].due).slice(0, 25).map(([en]) => byKey.get(en));
+  const fresh = pool.filter(w => !prog.srs[w.en]).slice(0, 8);
+  const queue = [...dueW, ...fresh];
+  app.innerHTML = `<a class="crumb" href="#/">← Beranda</a><h1>🧠 Kartu hafalan</h1>
+    <p class="lead">Kata yang kamu lupakan muncul lebih sering; kata yang kamu ingat muncul makin jarang. Kata baru diambil dari unit yang sudah kamu buka.</p><div id="kpane"></div>`;
+  const pane = $('#kpane');
+  if (!queue.length) {
+    pane.innerHTML = `<div class="card result"><div class="big">🌟</div><h2>Tidak ada kartu untuk hari ini</h2><p>${Object.keys(prog.srs).length ? 'Semua kartu sudah diulang. Kembali lagi besok!' : 'Buka dan pelajari satu unit dulu, lalu kembali ke sini.'}</p><a class="btn" href="#/">🏠 Beranda</a></div>`;
+    return;
+  }
+  let i = 0, done = 0; const total = queue.length; const redo = new Map();
+  function card() {
+    if (i >= queue.length) return fin();
+    const w = queue[i];
+    pane.innerHTML = `<div class="qhead"><span class="qno">Kartu ${Math.min(done + 1, total)}/${total}</span><div class="pbar"><i style="width:${Math.round(100 * done / total)}%"></i></div></div>
+      <div class="card flash"><div class="fen">${esc(w.en)}</div><button class="btn ghost small" id="fsay" type="button">🔊 Dengar</button>
+      <div id="fback" hidden><div class="fid">${esc(w.id)}</div>${w.ex ? `<div class="fex">${esc(w.ex)}</div>` : ''}</div>
+      <div class="nextrow"><button class="btn" id="fshow" type="button">Lihat arti</button></div>
+      <div class="rate" id="frate" hidden><button class="btn bad" data-r="0" type="button">😵 Lupa</button><button class="btn ghost" data-r="1" type="button">🤔 Sulit</button><button class="btn" data-r="2" type="button">😄 Ingat</button></div></div>`;
+    speak(w.en);
+    $('#fsay').addEventListener('click', () => speak(w.en));
+    $('#fshow').addEventListener('click', () => { $('#fback').hidden = false; $('#frate').hidden = false; $('#fshow').parentNode.hidden = true; });
+    pane.querySelectorAll('[data-r]').forEach(b => b.addEventListener('click', () => rate(w, +b.dataset.r)));
+  }
+  function rate(w, r) {
+    const c = prog.srs[w.en] || { box: 0, due: 0 };
+    if (r === 0) { c.box = 0; c.due = Date.now() + 10 * 60000; const t = (redo.get(w.en) || 0) + 1; redo.set(w.en, t); if (t <= 2) queue.push(w); else done++; }
+    else if (r === 1) { c.box = Math.max(1, c.box); c.due = Date.now() + day; done++; }
+    else { c.box = Math.min(c.box + 1, SRS_DAYS.length - 1); c.due = Date.now() + Math.max(1, SRS_DAYS[c.box]) * day; done++; }
+    prog.srs[w.en] = c;
+    bumpDaily(); i++; card();
+  }
+  function fin() {
+    pane.innerHTML = `<div class="card result"><div class="big">🎉</div><h2>Sesi selesai!</h2><p>${total} kartu sudah diulang. Kata yang sulit akan muncul lagi lebih cepat.</p>
+      <div class="row" style="justify-content:center"><a class="btn" href="#/kartu">➕ Sesi lagi</a><a class="btn ghost" href="#/">🏠 Beranda</a></div></div>`;
+  }
+  card();
+}
+
+// ---------- tes penempatan ----------
+const BAND_INFO = [
+  ['', ''],
+  ['Kelas 7', 'kelas/7'], ['Kelas 8', 'kelas/8'], ['Kelas 9', 'kelas/9'], ['Kelas 10', 'kelas/10'], ['Kelas 11', 'kelas/11'], ['Kelas 12', 'kelas/12'],
+];
+async function renderTes() {
+  const qs = await getJSON('data/placement.json');
+  app.innerHTML = `<a class="crumb" href="#/">← Beranda</a><h1>🎯 Tes penempatan</h1>
+    <p class="lead">24 soal pilihan ganda dari mudah ke sulit. Tidak memengaruhi bintang. Hasilnya menyarankan level untuk mulai belajar.</p><div id="tpane"></div>`;
+  const pane = $('#tpane');
+  let i = 0; const got = {};
+  function show() {
+    if (i >= qs.length) return result();
+    const q = qs[i];
+    pane.innerHTML = `<div class="qhead"><span class="qno">Soal ${i + 1}/${qs.length}</span><div class="pbar"><i style="width:${Math.round(100 * i / qs.length)}%"></i></div></div><div class="card"><div id="qbox"></div><div id="fb"></div></div>`;
+    qMcq({ ...q, type: 'mcq' }, $('#qbox'), ok => {
+      got[q.band] = (got[q.band] || 0) + (ok ? 1 : 0);
+      bumpDaily();
+      $('#fb').innerHTML = `<div class="fb ${ok ? 'ok' : 'bad'}"><b class="h">${ok ? '✅ Benar' : '❌ Belum tepat'}</b>${ok ? '' : `<div>Jawaban benar: <b>${esc(q.options[0])}</b></div>`}<div>${fmt(q.exp)}</div></div>
+        <div class="nextrow"><button class="btn" id="next">${i === qs.length - 1 ? 'Lihat hasil' : 'Lanjut →'}</button></div>`;
+      const nb = $('#next'); nb.focus(); nb.addEventListener('click', () => { i++; show(); });
+    });
+  }
+  function result() {
+    let level = 7;
+    for (let b = 1; b <= 6; b++) { if ((got[b] || 0) >= 3) level = b + 1; else break; }
+    const total = Object.values(got).reduce((a, v) => a + v, 0);
+    const adv = level >= 7;
+    const rec = adv ? `Kamu sudah kuat! Coba <a href="#/kelas/ielts">Persiapan IELTS</a>, <a href="#/kelas/toeic">Persiapan TOEIC</a>, atau level <a href="#/kelas/kerja">Pekerja</a>.`
+      : `Mulai dari <a href="#/${BAND_INFO[level][1]}"><b>${BAND_INFO[level][0]}</b></a>. ${level > 1 ? `Tingkat sebelumnya sudah kamu kuasai.` : 'Mulai dari dasar supaya fondasinya kuat.'}`;
+    pane.innerHTML = `<div class="card result"><div class="big">🎯</div><h2>Skor ${total} dari ${qs.length}</h2><p>${rec}</p>
+      <p class="hint">Jika banyak salah di tenses, buka <a href="#/kelas/tenses">Modul Tenses</a>. Jika sulit memahami ucapan, coba <a href="#/kelas/pron">Modul Pelafalan</a>.</p>
+      <div class="row" style="justify-content:center"><a class="btn" href="#/tes">🔁 Ulangi tes</a><a class="btn ghost" href="#/">🏠 Beranda</a></div></div>`;
+  }
+  show();
+}
+
+// ---------- latihan berbicara (pengenalan suara) ----------
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+async function renderBicara() {
+  const all = await getJSON('data/bicara.json');
+  app.innerHTML = `<a class="crumb" href="#/">← Beranda</a><h1>🎤 Latihan berbicara</h1>
+    <p class="lead">Dengarkan kalimat, lalu ucapkan. Aplikasi mencocokkan kata-kata yang terdengar. Butuh Chrome (HP atau laptop), izin mikrofon, dan internet.</p><div id="bpane"></div>`;
+  const pane = $('#bpane');
+  if (!SR) { pane.innerHTML = `<div class="card"><b>Browser ini belum mendukung pengenalan suara.</b><p>Coba buka di Chrome. Sementara itu kamu tetap bisa mendengar contoh kalimat di bawah.</p></div>`; }
+  const qs = shuffle(all).slice(0, 10);
+  let i = 0, okN = 0;
+  const words = t => norm(t).split(' ').filter(Boolean);
+  function grade(target, heard) {
+    const tw = words(expand(target)), hw = words(expand(heard)), pool = hw.slice();
+    const hit = tw.map(w => { const k = pool.indexOf(w); if (k >= 0) { pool.splice(k, 1); return true; } return false; });
+    return { hit, tw, pct: Math.round(100 * hit.filter(Boolean).length / tw.length) };
+  }
+  function show() {
+    if (i >= qs.length) {
+      pane.innerHTML = `<div class="card result"><div class="big">🎤</div><h2>${okN} dari ${qs.length} kalimat tepat</h2><div class="row" style="justify-content:center"><a class="btn" href="#/bicara">🔁 Sesi baru</a><a class="btn ghost" href="#/">🏠 Beranda</a></div></div>`;
+      return;
+    }
+    const q = qs[i];
+    pane.innerHTML = `<div class="qhead"><span class="qno">Kalimat ${i + 1}/${qs.length}</span><div class="pbar"><i style="width:${Math.round(100 * i / qs.length)}%"></i></div></div>
+      <div class="card"><div class="qtext">${esc(q.s)}</div><div class="hint">${esc(q.id)}</div>
+      <div class="row"><button class="btn ghost" id="bsay" type="button">🔊 Dengar</button><button class="btn ghost small" id="bslow" type="button">🐢 Pelan</button>${SR ? '<button class="btn" id="bmic" type="button">🎤 Ucapkan</button>' : ''}</div>
+      <div id="bres"></div><div class="nextrow"><button class="btn ghost" id="bnext" type="button">${i === qs.length - 1 ? 'Selesai' : 'Lewati / Lanjut →'}</button></div></div>`;
+    $('#bsay').addEventListener('click', () => speak(q.s));
+    $('#bslow').addEventListener('click', () => speakSlow(q.s));
+    $('#bnext').addEventListener('click', () => { i++; show(); });
+    speak(q.s);
+    const mic = $('#bmic');
+    if (mic) mic.addEventListener('click', () => listen(q, mic));
+  }
+  function listen(q, mic) {
+    const rec = new SR(); rec.lang = 'en-US'; rec.interimResults = false; rec.maxAlternatives = 3;
+    const res = $('#bres'); mic.disabled = true; res.innerHTML = '<p class="hint">🎙️ Mendengarkan… ucapkan kalimatnya.</p>';
+    rec.onresult = ev => {
+      const alts = [...ev.results[0]].map(a => a.transcript);
+      const best = alts.map(a => ({ a, g: grade(q.s, a) })).sort((x, y) => y.g.pct - x.g.pct)[0];
+      const ok = best.g.pct >= 80;
+      if (ok) okN++;
+      bumpDaily();
+      res.innerHTML = `<div class="fb ${ok ? 'ok' : 'bad'}"><b class="h">${ok ? '✅ Bagus!' : '🔁 Coba lagi'} ${best.g.pct}%</b>
+        <div>Terdengar: <i>${esc(best.a)}</i></div>
+        <div>Kalimat: ${best.g.tw.map((w, k) => `<span class="${best.g.hit[k] ? 'hit' : 'miss'}">${esc(w)}</span>`).join(' ')}</div></div>`;
+      mic.disabled = false;
+    };
+    rec.onerror = ev => { res.innerHTML = `<p class="hint">${ev.error === 'not-allowed' ? 'Izin mikrofon ditolak. Aktifkan izin mikrofon di browser.' : ev.error === 'no-speech' ? 'Suaramu tidak terdengar. Coba lagi lebih dekat ke mikrofon.' : ev.error === 'network' ? 'Pengenalan suara butuh internet.' : 'Gagal mendengarkan. Coba lagi.'}</p>`; mic.disabled = false; };
+    rec.onend = () => { mic.disabled = false; };
+    try { rec.start(); } catch (e) { mic.disabled = false; }
+  }
+  show();
+}

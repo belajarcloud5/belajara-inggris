@@ -322,6 +322,26 @@ def main():
     gloss = load(os.path.join(ROOT, "content", "glossary.py")).GLOSS
     kata = {w: [*pron.get(w, ["", ""]), gloss.get(w, "")] for w in sorted(set(pron) | set(gloss))}
     json.dump(kata, open(os.path.join(OUT, "kata.json"), "w"), ensure_ascii=False, separators=(",", ":"))
+    # tes penempatan
+    pl = load(os.path.join(ROOT, "content", "placement.py")).PLACEMENT
+    json.dump([dict(band=b_, q=q_, options=[r_, w1, w2, w3], answer=0, exp=e_) for b_, q_, r_, w1, w2, w3, e_ in pl],
+              open(os.path.join(OUT, "placement.json"), "w"), ensure_ascii=False, separators=(",", ":"))
+    # latihan berbicara: kalimat pendek dari soal dikte semua unit
+    speak, seen_s = [], set()
+    for e in index:
+        if not e.get("ready"):
+            continue
+        dd = json.load(open(os.path.join(OUT, f"{e['id']}.json"), encoding="utf-8"))
+        for q_ in dd["practice"] + dd["quiz"]:
+            if q_["type"] != "dictate":
+                continue
+            sent = q_["answer"].strip()
+            w_ = sent.split()
+            if 3 <= len(w_) <= 9 and sent.lower() not in seen_s and "Artinya:" in q_["exp"]:
+                seen_s.add(sent.lower())
+                speak.append(dict(s=sent, id=q_["exp"].split("Artinya:", 1)[1].strip(), u=e["id"], k=str(e["kelas"])))
+    json.dump(speak, open(os.path.join(OUT, "bicara.json"), "w"), ensure_ascii=False, separators=(",", ":"))
+    print(f"tes penempatan: {len(pl)} soal; latihan berbicara: {len(speak)} kalimat")
     print(f"kata (popup bacaan): {len(kata)}, berarti: {sum(1 for v in kata.values() if v[2])}")
     print(f"kamus: {len(out)} kata; soal isian hasil konversi: {n_conv}")
     print(f"{sum(e['ready'] for e in index)}/{len(index)} unit siap")

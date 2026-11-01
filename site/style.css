@@ -202,3 +202,24 @@ input.blank.bad{border-color:var(--bad);background:var(--bad-soft)}
 .wp-def{margin-top:6px;color:var(--muted,#667)}
 
 .passage .spk{color:var(--brand,#4b5bdc);font-weight:700}
+
+/* ---- target harian, alat belajar, kartu hafalan, berbicara ---- */
+.daily{margin:12px 0}
+.daily .dtop{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.daily .streak{font-weight:800;color:var(--warn)}
+.daily .bar{height:10px;background:var(--brand-soft);border-radius:999px;margin:10px 0 6px;overflow:hidden}
+.daily .bar i{display:block;height:100%;background:var(--ok);border-radius:999px}
+.daily .dbot{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.daily .gl{font-size:.9rem;color:var(--muted)}
+.daily select{font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:10px;padding:2px 6px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
+.tools .btn{flex:1 1 150px}
+.pill{display:inline-block;min-width:1.5em;padding:0 .45em;border-radius:999px;background:var(--bad);color:#fff;font-size:.8rem;margin-left:4px}
+.flash{text-align:center}
+.flash .fen{font-size:2rem;font-weight:800;margin:6px 0 4px}
+.flash .fid{font-size:1.4rem;font-weight:700;margin-top:12px;color:var(--brand)}
+.flash .fex{color:var(--muted);margin-top:6px}
+.rate{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+.rate .btn.bad{background:var(--bad);color:#fff}
+.hit{color:var(--ok);font-weight:700}
+.miss{color:var(--bad);font-weight:700;text-decoration:underline}
