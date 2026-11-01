@@ -28,7 +28,7 @@ def qkey(q):
         return ("dictate", q["answer"].lower())
     if t == "reply":
         return ("reply", q["turns"][-1][1].lower(), q["id"].lower())
-    return (t, q["q"], tuple(sorted(q["options"])))
+    return (t, q["q"], q.get("say", ""), tuple(sorted(q["options"])))
 
 
 def qid(q):

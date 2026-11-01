@@ -47,7 +47,7 @@
   "emoji": "🌅",
   "ringkas": "Simple present tense dan kata keterangan frekuensi",
   "ready": true,
-  "practice_n": 259,
+  "practice_n": 260,
   "quiz_n": 138,
   "read_n": 18
  },
@@ -320,7 +320,7 @@
   "emoji": "🎤",
   "ringkas": "Menyusun dan menyampaikan presentasi singkat",
   "ready": true,
-  "practice_n": 176,
+  "practice_n": 177,
   "quiz_n": 105,
   "read_n": 17
  },
@@ -333,7 +333,7 @@
   "emoji": "🎓",
   "ringkas": "Rangkuman dan latihan campuran",
   "ready": true,
-  "practice_n": 173,
+  "practice_n": 174,
   "quiz_n": 106,
   "read_n": 17
  },
@@ -372,7 +372,7 @@
   "emoji": "📔",
   "ringkas": "Menceritakan pengalaman dengan past tense",
   "ready": true,
-  "practice_n": 177,
+  "practice_n": 178,
   "quiz_n": 106,
   "read_n": 17
  },
@@ -905,7 +905,7 @@
   "emoji": "🎧",
   "ringkas": "Mendengar angka, nama yang dieja, nomor telepon, tanggal, dan harga",
   "ready": true,
-  "practice_n": 97,
+  "practice_n": 102,
   "quiz_n": 22,
   "read_n": 0
  },
@@ -919,7 +919,7 @@
   "ringkas": "Mengikuti perubahan jawaban, kata kunci, dan jebakan koreksi",
   "ready": true,
   "practice_n": 56,
-  "quiz_n": 20,
+  "quiz_n": 21,
   "read_n": 0
  },
  {
@@ -1181,5 +1181,329 @@
   "practice_n": 181,
   "quiz_n": 98,
   "read_n": 17
+ },
+ {
+  "id": "u92",
+  "kelas": "pron",
+  "no": 1,
+  "judul": "Bunyi Vokal: Pendek dan Panjang",
+  "title": "English Vowel Sounds",
+  "emoji": "🔊",
+  "ringkas": "ship vs sheep, bad vs bed, dan bunyi yang tidak ada di bahasa Indonesia",
+  "ready": true,
+  "practice_n": 52,
+  "quiz_n": 14,
+  "read_n": 0
+ },
+ {
+  "id": "u93",
+  "kelas": "pron",
+  "no": 2,
+  "judul": "Konsonan yang Sulit",
+  "title": "Tricky Consonants",
+  "emoji": "👅",
+  "ringkas": "th, v dan f, r dan l, sh dan ch, serta bunyi akhir kata",
+  "ready": true,
+  "practice_n": 51,
+  "quiz_n": 14,
+  "read_n": 0
+ },
+ {
+  "id": "u94",
+  "kelas": "pron",
+  "no": 3,
+  "judul": "Bunyi Akhiran -s, -es, dan -ed",
+  "title": "Endings: -s, -es, and -ed",
+  "emoji": "🔚",
+  "ringkas": "Tiga cara membaca akhiran: /s/ /z/ /ɪz/ dan /t/ /d/ /ɪd/",
+  "ready": true,
+  "practice_n": 40,
+  "quiz_n": 12,
+  "read_n": 0
+ },
+ {
+  "id": "u95",
+  "kelas": "pron",
+  "no": 4,
+  "judul": "Tekanan Kata",
+  "title": "Word Stress",
+  "emoji": "🥁",
+  "ringkas": "Suku kata yang ditekan, noun vs verb, dan akhiran penentu tekanan",
+  "ready": true,
+  "practice_n": 43,
+  "quiz_n": 10,
+  "read_n": 0
+ },
+ {
+  "id": "u96",
+  "kelas": "pron",
+  "no": 5,
+  "judul": "Ejaan yang Menipu",
+  "title": "Spelling Surprises",
+  "emoji": "🔇",
+  "ringkas": "Huruf diam, gh, ough, c dan g lunak, serta kata yang dibaca tak sesuai tulisan",
+  "ready": true,
+  "practice_n": 37,
+  "quiz_n": 10,
+  "read_n": 0
+ },
+ {
+  "id": "u97",
+  "kelas": "pron",
+  "no": 6,
+  "judul": "Tekanan Kalimat dan Bunyi Lemah",
+  "title": "Sentence Stress and Weak Sounds",
+  "emoji": "🎶",
+  "ringkas": "Kata isi vs kata fungsi, schwa, dan bentuk lemah can, to, of",
+  "ready": true,
+  "practice_n": 24,
+  "quiz_n": 8,
+  "read_n": 0
+ },
+ {
+  "id": "u98",
+  "kelas": "pron",
+  "no": 7,
+  "judul": "Intonasi dan Sambungan Kata",
+  "title": "Intonation and Linking",
+  "emoji": "📈",
+  "ringkas": "Nada naik dan turun, serta menyambung bunyi antar kata",
+  "ready": true,
+  "practice_n": 27,
+  "quiz_n": 8,
+  "read_n": 0
+ },
+ {
+  "id": "u99",
+  "kelas": "pron",
+  "no": 8,
+  "judul": "Rangkuman Pelafalan",
+  "title": "Pronunciation Review",
+  "emoji": "🎓",
+  "ringkas": "Latihan campuran semua materi pelafalan",
+  "ready": true,
+  "practice_n": 48,
+  "quiz_n": 14,
+  "read_n": 0
+ },
+ {
+  "id": "u100",
+  "kelas": "kosa",
+  "no": 1,
+  "judul": "Kata yang Sering Tertukar (1)",
+  "title": "Easily Confused Words 1",
+  "emoji": "🔀",
+  "ringkas": "its dan it's, their dan there, your dan you're, to dan too, who's dan whose",
+  "ready": false
+ },
+ {
+  "id": "u101",
+  "kelas": "kosa",
+  "no": 2,
+  "judul": "Kata yang Sering Tertukar (2)",
+  "title": "Easily Confused Words 2",
+  "emoji": "🔁",
+  "ringkas": "make dan do, say dan tell, bring dan take, borrow dan lend, affect dan effect",
+  "ready": false
+ },
+ {
+  "id": "u102",
+  "kelas": "kosa",
+  "no": 3,
+  "judul": "Pembentukan Kata: Awalan",
+  "title": "Word Building: Prefixes",
+  "emoji": "🧩",
+  "ringkas": "un-, re-, dis-, in- dan im-, pre-, mis-, over-",
+  "ready": false
+ },
+ {
+  "id": "u103",
+  "kelas": "kosa",
+  "no": 4,
+  "judul": "Pembentukan Kata: Akhiran",
+  "title": "Word Building: Suffixes",
+  "emoji": "🧱",
+  "ringkas": "-er dan -or, -tion, -ment, -ful dan -less, -able, -ly, -ness",
+  "ready": false
+ },
+ {
+  "id": "u104",
+  "kelas": "kosa",
+  "no": 5,
+  "judul": "Rumah dan Perabot",
+  "title": "Home and Furniture",
+  "emoji": "🛋️",
+  "ringkas": "Ruangan, perabot, peralatan rumah, dan menjelaskan letak",
+  "ready": false
+ },
+ {
+  "id": "u105",
+  "kelas": "kosa",
+  "no": 6,
+  "judul": "Tubuh dan Kesehatan",
+  "title": "The Body and Health",
+  "emoji": "🩺",
+  "ringkas": "Anggota tubuh, keluhan sakit, dan di dokter",
+  "ready": false
+ },
+ {
+  "id": "u106",
+  "kelas": "kosa",
+  "no": 7,
+  "judul": "Pakaian dan Belanja",
+  "title": "Clothes and Shopping",
+  "emoji": "👕",
+  "ringkas": "Pakaian, ukuran, warna, harga, dan tawar-menawar",
+  "ready": false
+ },
+ {
+  "id": "u107",
+  "kelas": "kosa",
+  "no": 8,
+  "judul": "Transportasi dan Kota",
+  "title": "Transport and the City",
+  "emoji": "🚌",
+  "ringkas": "Kendaraan, tempat di kota, dan bepergian",
+  "ready": false
+ },
+ {
+  "id": "u108",
+  "kelas": "kosa",
+  "no": 9,
+  "judul": "Pekerjaan dan Tempat Kerja",
+  "title": "Jobs and Workplaces",
+  "emoji": "🧑‍🔧",
+  "ringkas": "Nama pekerjaan, tugas, dan tempat kerja",
+  "ready": false
+ },
+ {
+  "id": "u109",
+  "kelas": "kosa",
+  "no": 10,
+  "judul": "Hobi dan Hiburan",
+  "title": "Hobbies and Entertainment",
+  "emoji": "🎬",
+  "ringkas": "Olahraga, musik, film, permainan, dan kegiatan waktu luang",
+  "ready": false
+ },
+ {
+  "id": "u110",
+  "kelas": "kosa",
+  "no": 11,
+  "judul": "Huruf Besar dan Tanda Baca",
+  "title": "Capital Letters and Punctuation",
+  "emoji": "✏️",
+  "ringkas": "Huruf kapital, titik, koma, apostrof, tanda tanya, dan tanda kutip",
+  "ready": false
+ },
+ {
+  "id": "u111",
+  "kelas": "kosa",
+  "no": 12,
+  "judul": "Menulis Paragraf",
+  "title": "Writing a Paragraph",
+  "emoji": "📝",
+  "ringkas": "Kalimat topik, kalimat pendukung, kata penghubung, dan penutup",
+  "ready": false
+ },
+ {
+  "id": "u112",
+  "kelas": "kosa",
+  "no": 13,
+  "judul": "Menulis Email dan Surat",
+  "title": "Writing Emails and Letters",
+  "emoji": "💌",
+  "ringkas": "Salam, isi, penutup, serta surat santai dan resmi",
+  "ready": false
+ },
+ {
+  "id": "u113",
+  "kelas": "kosa",
+  "no": 14,
+  "judul": "Rangkuman Kosakata dan Menulis",
+  "title": "Vocabulary and Writing Review",
+  "emoji": "🎓",
+  "ringkas": "Latihan campuran semua materi kosakata dan menulis",
+  "ready": false
+ },
+ {
+  "id": "u114",
+  "kelas": "toeic",
+  "no": 1,
+  "judul": "Mengenal Tes TOEIC",
+  "title": "TOEIC Overview",
+  "emoji": "🧭",
+  "ringkas": "Format, bagian tes, skor 10 sampai 990, dan strategi umum",
+  "ready": false
+ },
+ {
+  "id": "u115",
+  "kelas": "toeic",
+  "no": 2,
+  "judul": "Listening Part 1 dan 2",
+  "title": "Listening Parts 1 and 2",
+  "emoji": "🖼️",
+  "ringkas": "Foto dan tanya jawab: kata tanya, jawaban tidak langsung, dan jebakan bunyi",
+  "ready": false
+ },
+ {
+  "id": "u116",
+  "kelas": "toeic",
+  "no": 3,
+  "judul": "Listening Part 3 dan 4",
+  "title": "Listening Parts 3 and 4",
+  "emoji": "🎧",
+  "ringkas": "Percakapan dan pengumuman: membaca soal lebih dulu, tujuan, masalah, dan langkah berikutnya",
+  "ready": false
+ },
+ {
+  "id": "u117",
+  "kelas": "toeic",
+  "no": 4,
+  "judul": "Reading Part 5: Tata Bahasa",
+  "title": "Reading Part 5: Grammar",
+  "emoji": "🧮",
+  "ringkas": "Bentuk kata, tense, preposisi, kata ganti, dan kata penghubung",
+  "ready": false
+ },
+ {
+  "id": "u118",
+  "kelas": "toeic",
+  "no": 5,
+  "judul": "Reading Part 5: Kosakata",
+  "title": "Reading Part 5: Vocabulary",
+  "emoji": "🔤",
+  "ringkas": "Memilih kata yang tepat, kolokasi bisnis, dan kata mirip",
+  "ready": false
+ },
+ {
+  "id": "u119",
+  "kelas": "toeic",
+  "no": 6,
+  "judul": "Reading Part 6: Melengkapi Teks",
+  "title": "Reading Part 6",
+  "emoji": "🧩",
+  "ringkas": "Kalimat yang hilang, kata penghubung, dan konteks paragraf",
+  "ready": false
+ },
+ {
+  "id": "u120",
+  "kelas": "toeic",
+  "no": 7,
+  "judul": "Reading Part 7: Memahami Bacaan",
+  "title": "Reading Part 7",
+  "emoji": "📄",
+  "ringkas": "Email, pengumuman, iklan, jadwal, dan soal sinonim serta tujuan",
+  "ready": false
+ },
+ {
+  "id": "u121",
+  "kelas": "toeic",
+  "no": 8,
+  "judul": "Kosakata Bisnis dan Tes Mini",
+  "title": "TOEIC Business Vocabulary and Mini Test",
+  "emoji": "🏆",
+  "ringkas": "Kosakata kantor, keuangan, perjalanan, dan tes mini campuran",
+  "ready": false
  }
 ]
