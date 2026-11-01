@@ -22,3 +22,14 @@ LESSONX += [
          ["menjelaskan sistem", "[[The server, which is old, needs replacing.]]"]],
   examples=[dict(en="[[The team who solved the issue sent a report which explains the cause.]]", id="Tim yang menyelesaikan masalah itu mengirim laporan yang menjelaskan penyebabnya.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="8. Pasif dalam status update",
+  text="Update status memakai pasif untuk melaporkan progres tanpa menyalahkan orang:",
+  table=[["Status", "Contoh"],
+         ["selesai", "[[The bug has been fixed.]]"],
+         ["sedang berjalan", "[[The server is being replaced.]]"],
+         ["akan dikerjakan", "[[The report will be sent tomorrow.]]"],
+         ["belum", "[[The issue hasn't been resolved yet.]]"]],
+  examples=[dict(en="[[The part has been ordered, and it will be delivered on Monday.]]", id="Suku cadangnya sudah dipesan, dan akan dikirim hari Senin.")]),
+]

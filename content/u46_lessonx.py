@@ -89,3 +89,16 @@ LESSONX += [
          ["objek", "boleh dihilangkan", "[[The book I read was good.]]"]],
   examples=[dict(en="[[The teacher whose class I joined, who is very kind, lives near the school where I study.]]", id="Guru yang kelasnya kuikuti, yang sangat baik, tinggal dekat sekolah tempat aku belajar.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="13. Passive voice: jebakan ujian",
+  text="Hal yang sering diuji pada kalimat pasif:",
+  table=[["Jebakan", "Aturan", "Contoh"],
+         ["rumus", "be + V3 (sesuaikan tense)", "[[is made]] / [[was made]] / [[has been made]] / [[will be made]]"],
+         ["V3", "pakai bentuk ketiga, bukan V2 atau V1", "[[was written]], bukan ~~was wrote~~"],
+         ["kata kerja tanpa objek", "tidak bisa dipasifkan", "[[It happened.]] bukan ~~It was happened~~"],
+         ["by atau with", "by + pelaku; with + alat", "[[written by Rina]] / [[cut with a knife]]"],
+         ["modal", "modal + be + V3", "[[must be finished]]"],
+         ["to be dan jumlah", "sesuaikan dengan subjek", "[[The books are sold.]] / [[The book is sold.]]"]],
+  examples=[dict(en="[[The report must be finished by Friday, and it will be checked by the manager.]]", id="Laporan harus diselesaikan sebelum Jumat, dan akan diperiksa oleh manajer.")]),
+]

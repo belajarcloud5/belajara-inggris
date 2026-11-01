@@ -23,3 +23,14 @@ LESSONX += [
  dict(t="tip", title="Pakai who untuk orang, which untuk hewan",
   text="Pakai [[who]] untuk orang ([[a doctor who treats patients]]) dan [[which]] atau [[that]] untuk hewan dan benda ([[a bird that can swim]])."),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="7. Pasif dalam report text",
+  text="Report text sering memakai pasif untuk menjelaskan nama, tempat, dan kegunaan:",
+  table=[["Pola", "Contoh"],
+         ["is/are called", "[[This animal is called a koala.]]"],
+         ["is/are found", "[[Tigers are found in Asia.]]"],
+         ["is/are used", "[[Bamboo is used to build houses.]]"],
+         ["is/are known as", "[[The elephant is known as the largest land animal.]]"]],
+  examples=[dict(en="[[Komodo dragons are found only in Indonesia, and they are protected by law.]]", id="Komodo hanya ditemukan di Indonesia, dan dilindungi oleh hukum.")]),
+]

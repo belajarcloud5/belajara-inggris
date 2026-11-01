@@ -11,3 +11,14 @@ LESSONX = [
  dict(t="warn", title="Kata hubung formal diikuti koma",
   text="Awali kalimat dengan **However, Therefore, In addition**, lalu beri koma: [[However, we cannot confirm the date.]] Dan jangan menaruh **however** di tengah dua klausa dengan koma saja: gunakan titik atau titik koma sebelumnya."),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="7. Pasif untuk bahasa formal dalam email",
+  text="Pasif membuat email terdengar profesional karena fokus pada hasil, bukan orang:",
+  table=[["Santai (aktif)", "Formal (pasif)"],
+         ["[[We sent your order.]]", "[[Your order has been sent.]]"],
+         ["[[We will confirm the date.]]", "[[The date will be confirmed.]]"],
+         ["[[You must send the form.]]", "[[The form must be submitted.]]"],
+         ["[[We received your payment.]]", "[[Your payment has been received.]]"]],
+  examples=[dict(en="[[Your request has been received and will be processed within two days.]]", id="Permintaan Anda sudah diterima dan akan diproses dalam dua hari.")]),
+]

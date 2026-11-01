@@ -13,3 +13,14 @@ LESSONX = [
  dict(t="warn", title="Jangan tertukar: into dan to",
   text="Katakan [[Add sugar to the tea.]], bukan ~~add sugar into the tea~~, dan [[Pour water into the glass.]], bukan ~~pour water to the glass~~."),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="8. Pasif dalam procedure text",
+  text="Selain perintah, procedure text memakai pasif untuk menjelaskan urutan langkah:",
+  table=[["Perintah", "Pasif"],
+         ["[[Boil the water.]]", "[[The water is boiled.]]"],
+         ["[[Add the sugar.]]", "[[The sugar is added.]]"],
+         ["[[Don't touch the wire.]]", "[[The wire must not be touched.]]"],
+         ["[[Keep it cold.]]", "[[It should be kept cold.]]"]],
+  examples=[dict(en="[[First, the tire is removed. Next, the new one is fitted.]]", id="Pertama, ban dilepas. Berikutnya, ban baru dipasang.")]),
+]

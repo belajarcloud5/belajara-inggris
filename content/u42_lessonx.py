@@ -12,3 +12,13 @@ LESSONX = [
  dict(t="warn", title="Jangan lupa V3 setelah have",
   text="Katakan [[should have gone]], bukan ~~should have went~~, dan bukan ~~should of gone~~."),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="8. Conditional dalam bentuk pasif",
+  text="If-clause dan klausa utama dapat berbentuk pasif:",
+  table=[["Tipe", "Contoh"],
+         ["tipe 1", "[[If the road is repaired, traffic will be reduced.]]"],
+         ["tipe 2", "[[If the rubbish were collected daily, the street would be cleaner.]]"],
+         ["tipe 3", "[[If the bridge had been built earlier, many lives would have been saved.]]"]],
+  examples=[dict(en="[[If the problem had been reported earlier, it would have been solved.]]", id="Seandainya masalahnya dilaporkan lebih awal, masalahnya akan terselesaikan.")]),
+]

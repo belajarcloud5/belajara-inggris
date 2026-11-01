@@ -10,3 +10,13 @@ LESSONX = [
  dict(t="warn", title="the number of dan a number of",
   text="**The number of** + jamak memakai kata kerja tunggal: [[The number of users is rising.]] **A number of** artinya beberapa dan memakai kata kerja jamak: [[A number of users are complaining.]]"),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="8. Pasif dalam laporan data",
+  text="Laporan memakai pasif untuk menyajikan data secara netral:",
+  table=[["Aktif", "Pasif"],
+         ["[[We collected the data in May.]]", "[[The data was collected in May.]]"],
+         ["[[Staff completed the survey.]]", "[[The survey was completed by staff.]]"],
+         ["[[We will review the figures.]]", "[[The figures will be reviewed.]]"]],
+  examples=[dict(en="[[The results were analyzed, and the report was submitted on Friday.]]", id="Hasilnya dianalisis, dan laporan diserahkan pada hari Jumat.")]),
+]
