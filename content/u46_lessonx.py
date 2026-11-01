@@ -62,3 +62,17 @@ LESSONX += [
          ["unless", "= if ... not; jangan tambah not", "[[Unless you hurry, you will be late.]]"]],
   examples=[dict(en="[[Neither Anna nor Budi was late, although both of them woke up early.]]", id="Baik Anna maupun Budi tidak terlambat, meskipun keduanya bangun pagi.")]),
 ]
+
+LESSONX += [
+ dict(t="grammar", title="11. Modal verb: jebakan ujian",
+  text="Hal yang sering diuji pada modal verb:",
+  table=[["Jebakan", "Aturan", "Contoh"],
+         ["modal + V1", "tanpa to, tanpa -s", "[[She can swim.]] bukan ~~She can swims~~"],
+         ["must / have to", "must = kewajiban dari pembicara; have to = aturan luar", "[[I must go.]] / [[I have to wear a uniform.]]"],
+         ["mustn't / don't have to", "mustn't = dilarang; don't have to = tidak perlu", "[[You mustn't smoke.]] / [[You don't have to come.]]"],
+         ["could / was able to", "lampau umum / satu kejadian", "[[I could swim at six.]] / [[I was able to win.]]"],
+         ["must be / can't be", "kesimpulan pasti benar / pasti salah", "[[He must be home.]] / [[He can't be home.]]"],
+         ["modal + have + V3", "masa lampau", "[[should have studied]]"],
+         ["permintaan", "Could / Would lebih sopan dari Can / Will", "[[Could you help me?]]"]],
+  examples=[dict(en="[[You don't have to come, but you mustn't be late if you do.]]", id="Kamu tidak harus datang, tetapi jangan terlambat kalau datang.")]),
+]
