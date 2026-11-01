@@ -2326,7 +2326,10 @@
   "title": "Week 1: Sports",
   "emoji": "⚽",
   "ringkas": "Kosakata, bacaan, dan latihan tentang olahraga",
-  "ready": false
+  "ready": true,
+  "practice_n": 82,
+  "quiz_n": 14,
+  "read_n": 0
  },
  {
   "id": "u182",
@@ -2336,7 +2339,10 @@
   "title": "Week 2: Health and Lifestyle",
   "emoji": "🩺",
   "ringkas": "Tidur, makan, olahraga, dan kebiasaan sehat",
-  "ready": false
+  "ready": true,
+  "practice_n": 83,
+  "quiz_n": 14,
+  "read_n": 0
  },
  {
   "id": "u183",
@@ -2346,7 +2352,10 @@
   "title": "Week 3: The Environment",
   "emoji": "🌿",
   "ringkas": "Sampah, energi, cuaca, dan menjaga bumi",
-  "ready": false
+  "ready": true,
+  "practice_n": 82,
+  "quiz_n": 14,
+  "read_n": 0
  },
  {
   "id": "u184",
@@ -2356,7 +2365,10 @@
   "title": "Week 4: Technology",
   "emoji": "📱",
   "ringkas": "Ponsel, internet, aplikasi, dan keamanan",
-  "ready": false
+  "ready": true,
+  "practice_n": 83,
+  "quiz_n": 14,
+  "read_n": 0
  },
  {
   "id": "u185",
@@ -2366,7 +2378,10 @@
   "title": "Week 5: Food and Cooking",
   "emoji": "🍳",
   "ringkas": "Resep, bahan, rasa, dan budaya makan",
-  "ready": false
+  "ready": true,
+  "practice_n": 83,
+  "quiz_n": 14,
+  "read_n": 0
  },
  {
   "id": "u186",
@@ -2376,7 +2391,10 @@
   "title": "Week 6: Music and Films",
   "emoji": "🎬",
   "ringkas": "Genre, ulasan, dan hiburan",
-  "ready": false
+  "ready": true,
+  "practice_n": 83,
+  "quiz_n": 14,
+  "read_n": 0
  },
  {
   "id": "u187",
@@ -2386,7 +2404,10 @@
   "title": "Week 7: Study and Career",
   "emoji": "🎯",
   "ringkas": "Cita-cita, keterampilan, dan rencana",
-  "ready": false
+  "ready": true,
+  "practice_n": 83,
+  "quiz_n": 14,
+  "read_n": 0
  },
  {
   "id": "u188",
@@ -2396,6 +2417,9 @@
   "title": "Week 8: Money and Smart Shopping",
   "emoji": "💰",
   "ringkas": "Menabung, anggaran, harga, dan keputusan",
-  "ready": false
+  "ready": true,
+  "practice_n": 83,
+  "quiz_n": 14,
+  "read_n": 0
  }
 ]
