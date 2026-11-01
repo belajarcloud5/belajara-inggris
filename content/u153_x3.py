@@ -6,7 +6,7 @@ sets = [
  (["I have lived in Jakarta since 2018.", "I have worked here for three years.", "I have went to Bali twice.", "I love travelling."], 2, "have been/gone."),
  (["If I will have time, I will visit you.", "I miss you a lot.", "We can have dinner together.", "Please call me."], 0, "If I have time."),
  (["The students has finished the test.", "The teacher collected the papers.", "She marked them in the evening.", "The results are on the board."], 0, "have finished."),
- (["This is the girl who won the prize.", "This is the house which I bought.", "That is the man whose car was stolen.", "There is the dog who barks at night."], 3, "the dog that barks."),
+ (["This is the girl who won the prize.", "This is the house which I bought.", "That is the man whose car was stolen.", "There is the book who is on the table."], 3, "the book that is on the table."),
  (["He asked me what was my name.", "I told him my name.", "He wrote it down.", "We shook hands."], 0, "what my name was."),
 ]
 X3 = dict(practice=[spot(i, a, e) for i, a, e in sets], quiz=[spot(i, a, e) for i, a, e in sets[:3]])
