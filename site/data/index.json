@@ -2248,7 +2248,10 @@
   "title": "Meeting and Greeting",
   "emoji": "🙋",
   "ringkas": "Memperkenalkan diri, bertanya kabar, dan menanggapi",
-  "ready": false
+  "ready": true,
+  "practice_n": 20,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u176",
@@ -2258,7 +2261,10 @@
   "title": "At Home and with Family",
   "emoji": "🏡",
   "ringkas": "Meminta tolong, berbagi tugas, dan merencanakan akhir pekan",
-  "ready": false
+  "ready": true,
+  "practice_n": 20,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u177",
@@ -2268,7 +2274,10 @@
   "title": "At School and University",
   "emoji": "🏫",
   "ringkas": "Bertanya kepada guru, kerja kelompok, dan jadwal",
-  "ready": false
+  "ready": true,
+  "practice_n": 20,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u178",

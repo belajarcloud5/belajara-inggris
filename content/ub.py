@@ -116,3 +116,14 @@ def listening_unit(id, goals, intro_text, strategy, model_title, model_lines, cl
     while len(Q) < 8:
         Q.append(rng.choice(P))
     return mkunit(id, goals, lesson, P, Q)
+
+
+def talk_unit(id, goals, intro_text, phrases, model_title, model_lines, replies, mcqs, tip_text):
+    """Unit percakapan interaktif. phrases = [(tujuan, ungkapan)]; replies = baris untuk mkr; mcqs = baris untuk mk."""
+    lesson = [intro(intro_text),
+              gram("Ungkapan berguna", table=[["Tujuan", "Ungkapan"]] + [[a, f"[[{b}]]"] for a, b in phrases]),
+              dialog(model_title, model_lines), tip("Cara berlatih", tip_text),
+              summary([f"{a}: [[{b}]]" for a, b in phrases[:5]])]
+    P = mkr(replies) + mk(mcqs)
+    Q = mkr(replies[-3:]) + mk(mcqs[-5:])
+    return mkunit(id, goals, lesson, P, Q)
