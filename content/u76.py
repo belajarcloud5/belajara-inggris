@@ -1,0 +1,102 @@
+from qk import mk, mkf, mko
+
+UNIT = dict(
+ id="u76",
+ goals=[
+  "mengenal **empat bagian** IELTS dan alokasi waktunya",
+  "memahami **skor band** 0 sampai 9 dan cara menghitung skor keseluruhan",
+  "mengetahui perbedaan **Academic** dan **General Training**",
+  "menyusun **rencana belajar** yang realistis dan strategi umum menjawab",
+ ],
+ lesson=[
+  dict(t="intro", text="**IELTS** (International English Language Testing System) adalah tes kemampuan bahasa Inggris yang banyak diminta untuk kuliah dan bekerja di luar negeri. Modul ini membantu kamu bersiap dengan bahasa Indonesia sebagai penuntun. **Catatan jujur:** Reading, Listening, kosakata, dan tata bahasa bisa dilatih mandiri di sini. Writing dan Speaking butuh umpan balik dari guru atau penilai, jadi di sini kamu mendapat pola, contoh jawaban, dan daftar periksa. Detail resmi bisa berubah, jadi cek situs resmi IELTS sebelum mendaftar."),
+
+  dict(t="grammar", title="1. Empat bagian ujian",
+   table=[["Bagian", "Waktu", "Isi"],
+          ["**Listening**", "sekitar 30 menit (+10 menit memindahkan jawaban pada tes kertas)", "40 soal, 4 rekaman, diputar sekali"],
+          ["**Reading**", "60 menit", "40 soal, 3 teks (Academic) atau lebih banyak teks pendek (General Training)"],
+          ["**Writing**", "60 menit", "Task 1 (min. 150 kata) dan Task 2 (min. 250 kata)"],
+          ["**Speaking**", "sekitar 11 sampai 14 menit", "wawancara tatap muka atau video dengan penguji, 3 bagian"]],
+   examples=[dict(en="[[Listening, Reading, and Writing are usually on the same day.]]", id="Listening, Reading, dan Writing biasanya dalam hari yang sama. Speaking bisa di hari yang sama atau hari lain.")]),
+
+  dict(t="grammar", title="2. Academic atau General Training?",
+   table=[["Jenis", "Untuk", "Perbedaan"],
+          ["**Academic**", "kuliah S1/S2, profesi tertentu", "Reading dan Writing Task 1 bertema akademik (grafik, tabel, proses)"],
+          ["**General Training**", "migrasi, kerja, pelatihan", "Reading dan Writing Task 1 bertema sehari-hari (surat)"]],
+   examples=[dict(en="[[Listening and Speaking are the same for both types.]]", id="Listening dan Speaking sama untuk kedua jenis.")]),
+
+  dict(t="grammar", title="3. Skor band",
+   table=[["Band", "Gambaran"],
+          ["9", "expert user"], ["8", "very good user"], ["7", "good user"], ["6", "competent user"], ["5", "modest user"], ["4", "limited user"]],
+   text="Setiap bagian dinilai band 0 sampai 9 (boleh .5). **Skor keseluruhan** adalah rata-rata empat bagian, dibulatkan ke 0,5 terdekat. Contoh: 6,0 + 6,5 + 7,0 + 6,5 = rata-rata 6,5. Jika rata-ratanya 6,25 dibulatkan ke 6,5; jika 6,75 dibulatkan ke 7,0.",
+   examples=[dict(en="[[Most universities ask for an overall band of six point five or seven.]]", id="Banyak universitas meminta skor keseluruhan 6,5 atau 7.")]),
+
+  dict(t="grammar", title="4. Kriteria penilaian",
+   table=[["Writing", "Speaking"],
+          ["Task Achievement / Response (menjawab soal)", "Fluency and Coherence (kelancaran)"],
+          ["Coherence and Cohesion (keruntutan)", "Lexical Resource (kosakata)"],
+          ["Lexical Resource (kosakata)", "Grammatical Range and Accuracy"],
+          ["Grammatical Range and Accuracy", "Pronunciation (pelafalan)"]]),
+
+  dict(t="grammar", title="5. Strategi umum",
+   table=[["Strategi", "Mengapa"],
+          ["Baca perintah soal dengan teliti (batas jumlah kata)", "Jawaban salah format tidak diberi nilai"],
+          ["Perhatikan ejaan", "Ejaan salah dihitung salah di Listening dan Reading"],
+          ["Jangan biarkan soal kosong", "Tidak ada pengurangan nilai untuk jawaban salah"],
+          ["Atur waktu per bagian", "Reading: sekitar 20 menit per teks"],
+          ["Latihan setiap hari, bukan sekaligus", "Bahasa tumbuh lewat pengulangan"]]),
+
+  dict(t="tip", title="Rencana belajar yang masuk akal",
+   text="Belajar 45 sampai 60 menit per hari lebih baik daripada lima jam di akhir pekan. Satu minggu bisa dibagi: dua hari Reading, dua hari Listening, satu hari Writing, satu hari Speaking, dan satu hari kosakata dan tata bahasa. Setiap beberapa minggu, kerjakan satu tes lengkap dengan waktu."),
+  dict(t="warn", title="Jangan tunda mengecek syarat",
+   text="Setiap kampus atau lembaga punya syarat band minimum yang berbeda, kadang juga syarat minimum per bagian. Cek syaratnya lebih dulu sebelum menentukan target."),
+ ],
+
+ practice=mk([
+  ('Berapa jumlah bagian dalam IELTS?', "Empat", "Dua", "Tiga", "Lima", "Listening, Reading, Writing, Speaking."),
+  ('Bagian mana yang memakai waktu 60 menit?', "Reading dan Writing", "Listening saja", "Speaking saja", "Semua bagian", "Reading dan Writing masing-masing 60 menit."),
+  ('Berapa soal pada Listening?', "40 soal", "20 soal", "60 soal", "10 soal", "40 soal dalam 4 bagian."),
+  ('Berapa jumlah kata minimal pada Writing Task 2?', "250 kata", "150 kata", "100 kata", "500 kata", "Task 2: minimal 250 kata."),
+  ('Berapa jumlah kata minimal pada Writing Task 1?', "150 kata", "250 kata", "50 kata", "300 kata", "Task 1: minimal 150 kata."),
+  ('Rekaman Listening diputar berapa kali?', "Sekali", "Dua kali", "Tiga kali", "Sesuka peserta", "Diputar sekali saja."),
+  ('Bagian mana yang sama untuk Academic dan General Training?', "Listening dan Speaking", "Reading dan Writing", "Writing Task 1 saja", "Tidak ada", "Listening dan Speaking sama."),
+  ('Academic cocok untuk...', "kuliah S1 atau S2", "migrasi saja", "pelatihan kerja saja", "anak sekolah dasar", "Academic untuk kuliah."),
+  ('Skor keseluruhan IELTS dihitung dari...', "rata-rata empat bagian", "nilai Writing saja", "nilai tertinggi", "nilai Reading saja", "Rata-rata empat bagian."),
+  ('Rata-rata 6,25 dibulatkan menjadi...', "6,5", "6,0", "7,0", "6,25 tetap", "Dibulatkan ke 0,5 terdekat."),
+  ('Rata-rata 6,75 dibulatkan menjadi...', "7,0", "6,5", "6,75 tetap", "6,0", "Dibulatkan ke 0,5 terdekat."),
+  ('Band berapa yang disebut "good user"?', "7", "5", "9", "3", "Band 7 = good user."),
+  ('Mana yang BUKAN kriteria penilaian Writing?', "Pronunciation", "Task Achievement", "Coherence and Cohesion", "Lexical Resource", "Pronunciation hanya untuk Speaking."),
+  ('Mana yang BUKAN kriteria penilaian Speaking?', "Task Achievement", "Fluency and Coherence", "Pronunciation", "Lexical Resource", "Task Achievement untuk Writing."),
+  ('Apa yang sebaiknya dilakukan dengan soal yang tidak kamu tahu?', "Tetap mengisi tebakan", "Dibiarkan kosong", "Menulis \"I don\'t know\"", "Berhenti mengerjakan", "Tidak ada pengurangan nilai untuk jawaban salah."),
+  ('Jika perintah soal berbunyi "NO MORE THAN TWO WORDS", jawaban terbaik adalah...', "two words atau kurang", "satu kalimat", "tiga kata", "satu paragraf", "Batas kata harus dipatuhi."),
+  ('Pada Listening dan Reading, ejaan yang salah akan...', "dianggap salah", "diabaikan", "dapat nilai separuh", "dinilai guru", "Ejaan salah = jawaban salah."),
+  ('Berapa lama sebaiknya mengerjakan satu teks Reading?', "Sekitar 20 menit", "Sekitar 5 menit", "Sekitar 40 menit", "Sekitar 1 jam", "60 menit untuk 3 teks."),
+  ('Rencana belajar yang paling efektif adalah...', "sedikit tapi rutin setiap hari", "sekali lima jam seminggu", "hanya menjelang ujian", "hanya mengerjakan soal yang mudah", "Rutin lebih baik."),
+  ('Skor keseluruhan 6,5 berasal dari bagian: 6,0; 6,5; 7,0; 6,5. Benar atau salah?', "Benar", "Salah", "Tidak bisa dihitung", "Tergantung penguji", "Rata-rata = 6,5."),
+ ]) + mkf([
+  ("Ujian IELTS punya ___ bagian. (angka dalam huruf)", "IELTS has four parts: Listening, Reading, Writing, and ___.", "Speaking", "Bagian keempat adalah Speaking."),
+  ("Writing Task 2 minimal ___ kata.", "Task 2 needs at least two hundred and ___ words.", "fifty", "Dua ratus lima puluh."),
+  ("Skor kamu dihitung sebagai ___ dari empat bagian.", "Your overall score is the ___ of four parts.", "average", "Rata-rata."),
+  ("Jangan biarkan soal ___ .", "Do not leave any question ___.", "blank", "Kosong tidak mendapat nilai."),
+ ]) + mko([
+  ("Aku ingin mendapat skor band tujuh.", "I want to get band seven.", "gets got", ""),
+  ("Kamu harus belajar setiap hari.", "You should study every day.", "studies studied", ""),
+  ("Ujian itu berlangsung sekitar tiga jam.", "The test takes about three hours.", "take taking", ""),
+ ]),
+
+ quiz=mk([
+  ('Berapa jumlah bagian dalam IELTS?', "Empat", "Dua", "Tiga", "Lima", "Empat bagian."),
+  ('Rekaman Listening diputar...', "sekali", "dua kali", "tiga kali", "bebas", "Sekali saja."),
+  ('Rata-rata 6,25 dibulatkan menjadi...', "6,5", "6,0", "7,0", "6,25", "Ke 0,5 terdekat."),
+  ('Academic cocok untuk...', "kuliah", "migrasi saja", "anak SD", "hobi", "Kuliah dan profesi."),
+  ('Writing Task 2 minimal berapa kata?', "250", "150", "100", "400", "250 kata."),
+  ('Kriteria yang hanya ada di Speaking adalah...', "Pronunciation", "Task Achievement", "Coherence and Cohesion", "Spelling", "Pronunciation."),
+  ('Soal yang tidak kamu tahu sebaiknya...', "ditebak", "dikosongkan", "dihapus", "ditinggal", "Tidak ada nilai minus."),
+  ('Berapa menit untuk Reading?', "60", "30", "90", "20", "60 menit."),
+  ('Skor keseluruhan = ...', "rata-rata empat bagian", "jumlah empat bagian", "nilai tertinggi", "nilai terendah", "Rata-rata."),
+  ('Jika perintah: "ONE WORD ONLY", jawabanmu...', "hanya satu kata", "dua kata", "satu kalimat", "boleh bebas", "Patuhi batas kata."),
+ ]) + mkf([
+  ("Ada empat ___ dalam IELTS.", "There are four ___ in IELTS: Listening, Reading, Writing, and Speaking.", "parts/sections", "Bagian: parts atau sections."),
+  ("Speaking hanya sama untuk Academic dan ___ .", "Listening and Speaking are the same for Academic and General ___.", "Training", "General Training."),
+ ]),
+)

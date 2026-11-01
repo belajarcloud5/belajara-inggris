@@ -793,6 +793,178 @@
   "read_n": 3
  },
  {
+  "id": "u76",
+  "kelas": "ielts",
+  "no": 1,
+  "judul": "Mengenal IELTS dan Strategi Umum",
+  "title": "IELTS Overview and Strategy",
+  "emoji": "🧭",
+  "ringkas": "Format ujian, skor band, waktu, dan cara belajar yang efisien",
+  "ready": true,
+  "practice_n": 27,
+  "quiz_n": 12,
+  "read_n": 0
+ },
+ {
+  "id": "u77",
+  "kelas": "ielts",
+  "no": 2,
+  "judul": "Reading: Membaca Cepat",
+  "title": "Reading: Skimming and Scanning",
+  "emoji": "🔎",
+  "ringkas": "Skimming, scanning, kata kunci, dan mengatur waktu 60 menit",
+  "ready": true,
+  "practice_n": 23,
+  "quiz_n": 10,
+  "read_n": 2
+ },
+ {
+  "id": "u78",
+  "kelas": "ielts",
+  "no": 3,
+  "judul": "Reading: True, False, Not Given",
+  "title": "Reading: True / False / Not Given",
+  "emoji": "✅",
+  "ringkas": "Membedakan tiga jawaban yang paling sering menjebak",
+  "ready": true,
+  "practice_n": 28,
+  "quiz_n": 12,
+  "read_n": 2
+ },
+ {
+  "id": "u79",
+  "kelas": "ielts",
+  "no": 4,
+  "judul": "Reading: Judul Paragraf dan Melengkapi",
+  "title": "Reading: Headings and Completion",
+  "emoji": "🧩",
+  "ringkas": "Matching headings, sentence completion, dan batas jumlah kata",
+  "ready": true,
+  "practice_n": 23,
+  "quiz_n": 10,
+  "read_n": 2
+ },
+ {
+  "id": "u80",
+  "kelas": "ielts",
+  "no": 5,
+  "judul": "Kosakata Akademik I: Pendidikan dan Teknologi",
+  "title": "Academic Vocabulary I",
+  "emoji": "🏫",
+  "ringkas": "Kata akademik yang sering muncul dan cara memakainya",
+  "ready": false
+ },
+ {
+  "id": "u81",
+  "kelas": "ielts",
+  "no": 6,
+  "judul": "Kosakata Akademik II: Lingkungan dan Masyarakat",
+  "title": "Academic Vocabulary II",
+  "emoji": "🌍",
+  "ringkas": "Kosakata untuk topik lingkungan, kota, dan masyarakat",
+  "ready": false
+ },
+ {
+  "id": "u82",
+  "kelas": "ielts",
+  "no": 7,
+  "judul": "Kosakata Akademik III: Kesehatan, Kerja, dan Ekonomi",
+  "title": "Academic Vocabulary III",
+  "emoji": "💼",
+  "ringkas": "Kosakata untuk topik kesehatan, pekerjaan, dan ekonomi",
+  "ready": false
+ },
+ {
+  "id": "u83",
+  "kelas": "ielts",
+  "no": 8,
+  "judul": "Kata Penghubung dan Keterpaduan",
+  "title": "Linking Words and Cohesion",
+  "emoji": "🔗",
+  "ringkas": "However, therefore, moreover, dan cara menyusun paragraf yang runtut",
+  "ready": false
+ },
+ {
+  "id": "u84",
+  "kelas": "ielts",
+  "no": 9,
+  "judul": "Listening: Angka, Ejaan, dan Tanggal",
+  "title": "Listening: Numbers, Spelling, Dates",
+  "emoji": "🎧",
+  "ringkas": "Mendengar angka, nama yang dieja, nomor telepon, tanggal, dan harga",
+  "ready": false
+ },
+ {
+  "id": "u85",
+  "kelas": "ielts",
+  "no": 10,
+  "judul": "Listening: Melengkapi Catatan dan Pengecoh",
+  "title": "Listening: Notes and Distractors",
+  "emoji": "📝",
+  "ringkas": "Mengikuti perubahan jawaban, kata kunci, dan jebakan koreksi",
+  "ready": false
+ },
+ {
+  "id": "u86",
+  "kelas": "ielts",
+  "no": 11,
+  "judul": "Writing Task 1: Menjelaskan Grafik",
+  "title": "Writing Task 1: Describing Graphs",
+  "emoji": "📊",
+  "ringkas": "Bahasa tren, perbandingan, struktur 4 paragraf, dan contoh jawaban",
+  "ready": false
+ },
+ {
+  "id": "u87",
+  "kelas": "ielts",
+  "no": 12,
+  "judul": "Writing Task 2: Struktur Esai",
+  "title": "Writing Task 2: Essay Structure",
+  "emoji": "✍️",
+  "ringkas": "Jenis esai, thesis, paragraf isi, kesimpulan, dan contoh jawaban",
+  "ready": false
+ },
+ {
+  "id": "u88",
+  "kelas": "ielts",
+  "no": 13,
+  "judul": "Writing: Tata Bahasa dan Kesalahan Umum",
+  "title": "Writing: Grammar and Common Errors",
+  "emoji": "🔧",
+  "ringkas": "Kalimat kompleks, kesalahan umum, dan daftar periksa sebelum mengumpulkan",
+  "ready": false
+ },
+ {
+  "id": "u89",
+  "kelas": "ielts",
+  "no": 14,
+  "judul": "Speaking Part 1 dan 2",
+  "title": "Speaking Part 1 and 2",
+  "emoji": "🗣️",
+  "ringkas": "Menjawab pertanyaan pribadi dan berbicara 2 menit dengan kartu topik",
+  "ready": false
+ },
+ {
+  "id": "u90",
+  "kelas": "ielts",
+  "no": 15,
+  "judul": "Speaking Part 3 dan Kelancaran",
+  "title": "Speaking Part 3 and Fluency",
+  "emoji": "💬",
+  "ringkas": "Diskusi abstrak, memperpanjang jawaban, dan ungkapan pengisi waktu",
+  "ready": false
+ },
+ {
+  "id": "u91",
+  "kelas": "ielts",
+  "no": 16,
+  "judul": "Tes Simulasi Mini IELTS",
+  "title": "IELTS Mini Mock Test",
+  "emoji": "🏁",
+  "ringkas": "Latihan campuran dari semua bagian dengan petunjuk perbaikan",
+  "ready": false
+ },
+ {
   "id": "u48",
   "kelas": "kerja",
   "no": 1,

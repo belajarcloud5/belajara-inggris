@@ -1,0 +1,26 @@
+READ = [
+ {'title': 'Sleep and Memory',
+  'focus': 'True / False / Not Given',
+  'text': 'Many students stay up late before exams, but research suggests this is a mistake. A study of two hundred university students found that those who slept eight hours remembered more words than those who slept only five hours.\nDuring sleep, the brain organises new information and moves it into long-term memory. Researchers believe that this process is strongest during deep sleep, which occurs mainly in the first half of the night.\nSome experts recommend a short nap in the afternoon, but they warn that naps longer than thirty minutes can make people feel tired rather than refreshed.',
+  'id': 'Banyak mahasiswa begadang sebelum ujian, tetapi penelitian menunjukkan ini keliru. Sebuah studi terhadap dua ratus mahasiswa menemukan bahwa mereka yang tidur delapan jam mengingat lebih banyak kata daripada mereka yang tidur hanya lima jam.\nSaat tidur, otak mengatur informasi baru dan memindahkannya ke memori jangka panjang. Peneliti percaya proses ini paling kuat saat tidur nyenyak, yang terjadi terutama di paruh pertama malam.\nBeberapa ahli menyarankan tidur siang singkat, tetapi mereka memperingatkan bahwa tidur siang lebih dari tiga puluh menit dapat membuat orang merasa lelah, bukan segar.',
+  'qs': [
+   {'type':'mcq','q':'Students who slept eight hours remembered more words than those who slept five hours.','options':['True','False','Not Given'],'answer':0,'exp':'Teks menyatakan itu.'},
+   {'type':'mcq','q':'The study included students from several different countries.','options':['Not Given','True','False'],'answer':0,'exp':'Teks hanya menyebut "university students"; negara tidak disebut.'},
+   {'type':'mcq','q':'Deep sleep happens mostly in the second half of the night.','options':['False','True','Not Given'],'answer':0,'exp':'Teks: "mainly in the first half".'},
+   {'type':'mcq','q':'Afternoon naps are always harmful.','options':['False','True','Not Given'],'answer':0,'exp':'Ahli menyarankan tidur siang singkat; hanya yang lebih dari 30 menit berisiko.'},
+   {'type':'mcq','q':'Naps longer than thirty minutes can make people feel tired.','options':['True','False','Not Given'],'answer':0,'exp':'Teks menyatakan itu.'},
+   {'type':'fill','q':'During sleep, new information moves into ___ memory. (two words)','answers':['long-term','long term'],'hint':'l _ _ _ - t _ _ _','id':'Melengkapi kalimat (maks. dua kata).','exp':'Teks: "long-term memory".'},
+  ]},
+ {'title': 'The Growth of Online Shopping',
+  'focus': 'True / False / Not Given',
+  'text': 'Online shopping has grown rapidly over the past decade. In 2015, about 10 percent of retail sales in the country took place online. By 2023, this figure had risen to 26 percent.\nShoppers say convenience is the main reason. They can compare prices at home, and goods are delivered to their door. However, returning products can be difficult, and some customers worry about the security of their payment details.\nLocal shops have responded in different ways. Some have created websites, while others focus on personal service to attract customers who prefer to visit in person.',
+  'id': 'Belanja daring tumbuh pesat dalam satu dekade terakhir. Pada 2015, sekitar 10 persen penjualan ritel di negara itu terjadi daring. Pada 2023, angka itu naik menjadi 26 persen.\nPara pembeli mengatakan kenyamanan adalah alasan utama. Mereka dapat membandingkan harga di rumah, dan barang diantar ke pintu. Namun, mengembalikan produk bisa sulit, dan sebagian pelanggan khawatir tentang keamanan data pembayaran.\nToko lokal menanggapinya dengan berbagai cara. Sebagian membuat situs web, sementara yang lain berfokus pada layanan pribadi untuk menarik pelanggan yang lebih suka datang langsung.',
+  'qs': [
+   {'type':'mcq','q':'Online sales were 26 percent of retail sales in 2023.','options':['True','False','Not Given'],'answer':0,'exp':'Teks: 26 persen pada 2023.'},
+   {'type':'mcq','q':'Most shoppers buy electronic goods online.','options':['Not Given','True','False'],'answer':0,'exp':'Jenis barang tidak disebut.'},
+   {'type':'mcq','q':'Returning products online is always easy.','options':['False','True','Not Given'],'answer':0,'exp':'Teks: returning can be difficult.'},
+   {'type':'mcq','q':'Convenience is the main reason shoppers give for buying online.','options':['True','False','Not Given'],'answer':0,'exp':'Teks: "convenience is the main reason".'},
+   {'type':'mcq','q':'All local shops have closed because of online shopping.','options':['False','True','Not Given'],'answer':0,'exp':'Teks: toko lokal menanggapi dengan berbagai cara.'},
+   {'type':'fill','q':'Some local shops focus on personal ___ . (one word)','answers':['service'],'hint':'s _ _ _ _ _ _','id':'Melengkapi kalimat (satu kata).','exp':'Teks: "personal service".'},
+  ]},
+]

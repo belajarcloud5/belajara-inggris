@@ -220,7 +220,7 @@ async function route() {
   }
 }
 
-const kelasName = k => k === 'kerja' ? 'Level Pekerja' : k === 'tenses' ? 'Modul Tenses' : `Kelas ${k}`;
+const kelasName = k => k === 'kerja' ? 'Level Pekerja' : k === 'tenses' ? 'Modul Tenses' : k === 'ielts' ? 'Persiapan IELTS' : `Kelas ${k}`;
 
 // ---------- beranda ----------
 function unitCard(u) {
@@ -235,6 +235,7 @@ function unitCard(u) {
 const LEVELS = [
   ...[7, 8, 9, 10, 11, 12].map(k => ({ key: String(k), title: `Kelas ${k}`, emoji: ['🎒', '📘', '🧭', '🚀', '🎯', '🎓'][k - 7], sub: k <= 9 ? 'SMP' : 'SMA', desc: ['Sapaan, keluarga, angka dan jam, hobi, makanan, dan arah', 'Lampau, sedang terjadi, perbandingan, rencana, dan surat', 'Narrative, report, passive, conditional, dan persiapan ujian', 'Perkenalan, teks deskriptif, recount, prosedur, dan narasi', 'Eksposisi, berita, surat lamaran, dan CV', 'Pengandaian, pasif, wawancara kerja, dan persiapan ujian'][k - 7] })),
   { key: 'tenses', title: 'Modul Tenses', emoji: '⏱️', sub: 'SEMUA LEVEL', desc: 'Paham 12 tense dari nol: rumus, garis waktu, kontras, dan tes akhir' },
+  { key: 'ielts', title: 'Persiapan IELTS', emoji: '🌍', sub: 'UJIAN', desc: 'Strategi, reading, listening, kosakata akademik, writing, dan speaking' },
   { key: 'kerja', title: 'Pekerja / Formal', emoji: '💼', sub: 'DEWASA', desc: 'Bahasa Inggris untuk kantor, email, rapat, dan wawancara' },
 ];
 
