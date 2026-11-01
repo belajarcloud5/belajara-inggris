@@ -205,7 +205,7 @@ async function route() {
   const [, page, id, tab, idx] = location.hash.slice(1).split('/');
   window.scrollTo(0, 0);
   try {
-    const index = (await getJSON('data/index.json')).filter(u => SHOWN.includes(String(u.kelas)));
+    const index = await getJSON('data/index.json');
     $('#total').textContent = `⭐ ${totalStars()} / ${index.filter(u => u.ready).length * 3}`;
     if (page === 'kelas') return renderKelas(index, id);
     if (page === 'kamus') return renderKamus(await getJSON('data/kamus.json'));
@@ -233,10 +233,11 @@ function unitCard(u) {
 // Level di dashboard. Kelas 7-12 diambil dari index.json; level 'kerja' aktif otomatis
 // begitu ada unit dengan kelas: "kerja" di index.json.
 const LEVELS = [
+  ...[7, 8, 9, 10, 11, 12].map(k => ({ key: String(k), title: `Kelas ${k}`, emoji: ['🎒', '📘', '🧭', '🚀', '🎯', '🎓'][k - 7], sub: k <= 9 ? 'SMP' : 'SMA', desc: ['Sapaan, keluarga, angka dan jam, hobi, makanan, dan arah', 'Lampau, sedang terjadi, perbandingan, rencana, dan surat', 'Narrative, report, passive, conditional, dan persiapan ujian', 'Perkenalan, teks deskriptif, recount, prosedur, dan narasi', 'Eksposisi, berita, surat lamaran, dan CV', 'Pengandaian, pasif, wawancara kerja, dan persiapan ujian'][k - 7] })),
   { key: 'tenses', title: 'Modul Tenses', emoji: '⏱️', sub: 'SEMUA LEVEL', desc: 'Paham 12 tense dari nol: rumus, garis waktu, kontras, dan tes akhir' },
   { key: 'ielts', title: 'Persiapan IELTS', emoji: '🌍', sub: 'UJIAN', desc: 'Strategi, reading, listening, kosakata akademik, writing, dan speaking' },
+  { key: 'kerja', title: 'Pekerja / Formal', emoji: '💼', sub: 'DEWASA', desc: 'Bahasa Inggris untuk kantor, email, rapat, dan wawancara' },
 ];
-const SHOWN = LEVELS.map(l => l.key);
 
 function levelStat(index, key) {
   const us = index.filter(u => String(u.kelas) === key), r = us.filter(u => u.ready);
@@ -438,7 +439,7 @@ function runner(pane, d, mode) {
         <a class="btn ghost" href="#/">🏠 Beranda</a></div></div>${review ? `<div class="card review">${review}</div>` : ''}`;
     $('#again').addEventListener('click', () => { if (retry) return renderRetry(); qs = pick(); i = 0; score = 0; wrong = []; show(); });
     // perbarui lencana total
-    getJSON('data/index.json').then(ix0 => { const ix = ix0.filter(u => SHOWN.includes(String(u.kelas))); $('#total').textContent = `⭐ ${totalStars()} / ${ix.filter(u => u.ready).length * 3}`; });
+    getJSON('data/index.json').then(ix => { $('#total').textContent = `⭐ ${totalStars()} / ${ix.filter(u => u.ready).length * 3}`; });
   }
   show();
 }
