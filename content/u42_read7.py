@@ -5,7 +5,7 @@ READ7 = [{'focus': 'Preposisi gerak dalam kalimat andaian: through, around, alon
         'melewati bukit. Anton: Lain kali, jika aku jadi kamu, aku akan memeriksa peta sebelum kita berkendara masuk ke pegunungan.',
   'qs': [{'answer': 0,
           'exp': 'Anton: "we drove through the forest, and the road was blocked".',
-          'options': ['The road through the forest was blocked.', 'The bridge was broken.', 'The coast road was closed.', 'The map was lost.'],
+          'options': ['The road through the forest was blocked.', 'The bridge over the river was broken.', 'The coast road was closed by rain.', 'The map of the route was lost.'],
           'q': 'Why was the group late?',
           'type': 'mcq'},
          {'answer': 0,

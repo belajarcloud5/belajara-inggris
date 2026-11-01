@@ -34,7 +34,7 @@ READ7 = [{'focus': 'Preposisi gerak dalam evaluasi: into, to, through, up, back 
           'id': 'Lengkapi dengan into atau out of:',
           'q': 'You are moving ___ a new role. (menempati)',
           'type': 'fill'},
-         {'answers': ['through'],
+         {'answers': ['through', 'over'],
           'exp': 'go through = menelaah.',
           'hint': 't _ _ _ _ _ _',
           'id': 'Lengkapi dengan through atau across:',

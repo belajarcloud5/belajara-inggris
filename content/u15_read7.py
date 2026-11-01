@@ -32,7 +32,7 @@ READ7 = [{'focus': 'Preposisi gerak untuk hewan: across, over, through, into, to
           'exp': 'Melalui pepohonan → through.',
           'hint': 't _ _ _ _ _ _',
           'id': 'Lengkapi dengan through atau along:',
-          'q': 'The monkeys swing ___ the trees.',
+          'q': 'The monkeys swing ___ the trees. (melalui)',
           'type': 'fill'},
          {'answers': ['over'],
           'exp': 'Di atas → over.',

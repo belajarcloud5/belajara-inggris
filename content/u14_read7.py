@@ -5,7 +5,7 @@ READ7 = [{'focus': 'Preposisi gerak dalam resep: into, out of, to, through, over
         'krim di atasnya. Dina: Ayo kita bawa ke meja.',
   'qs': [{'answer': 0,
           'exp': 'Rani: "Pour the mixture through a sieve to remove the lumps."',
-          'options': ['To remove the lumps', 'To add the milk', 'To cool the cake', 'To heat the oven'],
+          'options': ['To remove the lumps', 'To add more milk', 'To cool the cake', 'To heat the pan'],
           'q': 'Why do you pour the mixture through a sieve?',
           'type': 'mcq'},
          {'answer': 0,

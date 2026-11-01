@@ -5,7 +5,7 @@ READ7 = [{'focus': 'Preposisi gerak di acara: into, through, to, out of, around'
         'berjalan keluar dari aula dengan pelan. Tom: Ke mana para pemenang pergi? Dina: Mereka berjalan naik ke panggung untuk mengambil hadiah.',
   'qs': [{'answer': 0,
           'exp': 'Dina: "Go to the ticket desk first."',
-          'options': ['To the ticket desk', 'To the stage', 'To the music room', 'To the garden'],
+          'options': ['To the ticket desk', 'To the main stage', 'To the music room', 'To the school yard'],
           'q': 'Where should visitors go first?',
           'type': 'mcq'},
          {'answer': 0,

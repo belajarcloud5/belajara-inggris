@@ -5,7 +5,7 @@ READ7 = [{'focus': 'Preposisi gerak dalam penjadwalan: from ... to, through, arr
         'aku akan memutar melewati pasar lama. Doni: Aku akan memesan mobil untuk mengantarmu dari hotel ke kantor klien.',
   'qs': [{'answer': 0,
           'exp': 'Maya: "I\'ll fly back on Thursday evening."',
-          'options': ['On Thursday evening', 'On Tuesday', 'On Wednesday', 'On Friday morning'],
+          'options': ['On Thursday evening', 'On Tuesday evening', 'On Wednesday evening', 'On Friday morning'],
           'q': 'When will Maya fly back to Jakarta?',
           'type': 'mcq'},
          {'answer': 0,

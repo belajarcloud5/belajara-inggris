@@ -5,7 +5,7 @@ READ7 = [{'focus': 'Preposisi gerak dalam berita: into, off, across, towards, ou
         'dialihkan mengitari area itu melalui jalan samping. Polisi mengatakan sopir telah melampaui batas kecepatan.',
   'qs': [{'answer': 0,
           'exp': 'Teks: "crashed into a fence".',
-          'options': ['It crashed into a fence.', 'It fell into the river.', 'It hit a bridge.', 'It drove into a tunnel.'],
+          'options': ['It crashed into a fence.', 'It fell into the river.', 'It hit a bridge wall.', 'It drove into a tunnel.'],
           'q': 'What happened to the bus?',
           'type': 'mcq'},
          {'answer': 0,

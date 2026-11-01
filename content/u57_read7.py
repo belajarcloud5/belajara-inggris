@@ -5,7 +5,7 @@ READ7 = [{'focus': 'Preposisi gerak dalam keluhan: to, from, back to, through, i
         'pengiriman. Saya akan meminta sopir mengambilnya dan mengantarnya ke rumah Anda hari ini.',
   'qs': [{'answer': 0,
           'exp': 'Customer: "it was delivered to my neighbor\'s house".',
-          'options': ["To the neighbor's house", 'To the warehouse', 'To the delivery center', 'To customs'],
+          'options': ["To the neighbor's house", 'To the old warehouse', 'To the delivery center', 'To the post office'],
           'q': 'Where was the package delivered by mistake?',
           'type': 'mcq'},
          {'answer': 0,

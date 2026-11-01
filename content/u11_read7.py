@@ -32,7 +32,7 @@ READ7 = [{'focus': 'Preposisi gerak saat ini: along, across, into, out of, up, d
           'exp': 'Naik pohon → up.',
           'hint': 'u _',
           'id': 'Lengkapi dengan up atau down:',
-          'q': 'A cat is climbing ___ the tree.',
+          'q': 'A cat is climbing ___ the tree. (naik)',
           'type': 'fill'},
          {'answers': ['out of'],
           'exp': 'Keluar dari → out of.',

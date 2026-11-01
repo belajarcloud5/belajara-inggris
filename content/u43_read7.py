@@ -34,7 +34,7 @@ READ7 = [{'focus': 'Preposisi gerak dalam kalimat pasif: from ... to, across, th
           'id': 'Lengkapi dengan from atau into:',
           'q': 'Goods are transported ___ factories to ports.',
           'type': 'fill'},
-         {'answers': ['across'],
+         {'answers': ['across', 'over'],
           'exp': 'Melintasi laut → across.',
           'hint': 'a _ _ _ _ _',
           'id': 'Lengkapi dengan across atau through:',

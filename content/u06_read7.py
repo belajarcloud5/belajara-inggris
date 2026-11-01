@@ -28,7 +28,7 @@ READ7 = [{'focus': 'Preposisi gerak untuk deskripsi: past, towards, into, out of
                     ['out of the park', 'keluar dari taman']],
           'q': 'Pasangkan frasa dengan artinya:',
           'type': 'match'},
-         {'answers': ['past'],
+         {'answers': ['past', 'by'],
           'exp': 'Melewati → past.',
           'hint': 'p _ _ _',
           'id': 'Lengkapi dengan into atau past:',

@@ -5,7 +5,7 @@ READ7 = [{'focus': 'Preposisi gerak dalam ajakan: to, through, along, around, in
         'sampah. Dika: Jika semua orang berjalan ke sekolah, jalanan akan lebih aman. Ayo keluar dari rumah pukul tujuh besok.',
   'qs': [{'answer': 0,
           'exp': 'Salma: "twenty minutes from my house to school".',
-          'options': ['Twenty minutes', 'Two hours', 'Five minutes', 'One hour'],
+          'options': ['Twenty minutes', 'Two hours', 'Five minutes', 'Forty minutes'],
           'q': "How long does it take to walk from Salma's house to school?",
           'type': 'mcq'},
          {'answer': 0,

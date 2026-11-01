@@ -5,7 +5,7 @@ READ7 = [{'focus': 'Preposisi gerak di bandara: to, through, onto, off, into, ou
         'berjalan dan keluar dari gedung. Taksi membawaku dari bandara ke kota. Daniel: Perjalanan yang lancar!',
   'qs': [{'answer': 0,
           'exp': 'Ana: "go through security and along the corridor to the gate".',
-          'options': ['Along the corridor to the gate', 'To the check-in desk', 'Into the city', 'Out of the building'],
+          'options': ['Along the corridor to the gate', 'To the check-in desk again', 'Into the city center', 'Out of the building'],
           'q': 'Where does Ana go after security?',
           'type': 'mcq'},
          {'answer': 0,
