@@ -1684,7 +1684,10 @@
   "title": "Common Mistakes",
   "emoji": "🚫",
   "ringkas": "I am agree, informations, discuss about, dan kesalahan lain yang sering terjadi",
-  "ready": false
+  "ready": true,
+  "practice_n": 32,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u131",
@@ -1694,7 +1697,10 @@
   "title": "False Friends",
   "emoji": "🪞",
   "ringkas": "actually, eventually, sensible, sympathetic, dan kata yang menjebak",
-  "ready": false
+  "ready": true,
+  "practice_n": 25,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u132",
@@ -1704,7 +1710,10 @@
   "title": "Job Interview in English",
   "emoji": "🧑‍💼",
   "ringkas": "Pertanyaan umum, memperkenalkan diri, kelebihan dan kekurangan, serta alasan melamar",
-  "ready": false
+  "ready": true,
+  "practice_n": 25,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u133",
@@ -1714,6 +1723,9 @@
   "title": "Interview Answers: STAR and Salary",
   "emoji": "⭐",
   "ringkas": "Menceritakan pengalaman, menjawab pertanyaan sulit, gaji, dan menutup wawancara",
-  "ready": false
+  "ready": true,
+  "practice_n": 26,
+  "quiz_n": 8,
+  "read_n": 0
  }
 ]
