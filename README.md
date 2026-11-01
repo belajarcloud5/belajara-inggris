@@ -1,6 +1,6 @@
 # Let's Learn English!
 
-Web belajar bahasa Inggris interaktif dari SMP sampai dunia kerja. Ada **163 unit** yang dibagi menjadi tujuh belas level: Kelas 7, 8, 9, 10, 11, 12, **Modul Tenses** (14 unit, untuk semua level), **Modul Pelafalan** (8 unit), **Kosakata dan Menulis** (16 unit), **Inggris untuk Bepergian** (8 unit), **Latihan Keterampilan** (6 unit), **Listening Bertahap** (8 unit), **Cerita Bertingkat** (8 unit), **Persiapan IELTS** (16 unit), **Persiapan TOEIC** (8 unit), **Persiapan TOEFL ITP** (8 unit), dan **Pekerja / Formal** (16 unit). Beranda berupa kartu level; klik satu kartu untuk melihat unit-unitnya. Setiap unit berisi **Belajar**, **Latihan** (50 soal acak), dan **Kuis** (50 soal acak, bintang 1-3). Suara dan tema terang/gelap ada di menu ⚙️ pojok kanan atas.
+Web belajar bahasa Inggris interaktif dari SMP sampai dunia kerja. Ada **188 unit** yang dibagi menjadi dua puluh level: Kelas 7, 8, 9, 10, 11, 12, **Modul Tenses** (14 unit, untuk semua level), **Modul Pelafalan** (8 unit), **Kosakata dan Menulis** (20 unit), **Inggris untuk Bepergian** (8 unit), **Latihan Keterampilan** (6 unit), **Listening Bertahap** (8 unit), **Cerita Bertingkat** (8 unit), **Menulis Lanjutan** (7 unit), **Percakapan Interaktif** (6 unit), **Tema Mingguan** (8 unit), **Persiapan IELTS** (16 unit), **Persiapan TOEIC** (8 unit), **Persiapan TOEFL ITP** (8 unit), dan **Pekerja / Formal** (16 unit). Beranda berupa kartu level; klik satu kartu untuk melihat unit-unitnya. Setiap unit berisi **Belajar**, **Latihan** (50 soal acak), dan **Kuis** (50 soal acak, bintang 1-3). Suara dan tema terang/gelap ada di menu ⚙️ pojok kanan atas.
 
 Situs: https://belajarcloud5.github.io/belajara-inggris/
 
@@ -50,7 +50,7 @@ Menambah level baru: tambahkan unit dengan `kelas="nama-level"` di `content/unit
 92 Bunyi Vokal · 93 Konsonan yang Sulit · 94 Akhiran -s, -es, -ed · 95 Tekanan Kata · 96 Ejaan yang Menipu · 97 Tekanan Kalimat dan Bunyi Lemah · 98 Intonasi dan Sambungan Kata · 99 Rangkuman Pelafalan
 
 **Kosakata dan Menulis (16 unit)**
-100-101 Kata yang Sering Tertukar · 102 Awalan · 103 Akhiran · 104 Rumah · 105 Tubuh dan Kesehatan · 106 Pakaian dan Belanja · 107 Transportasi dan Kota · 108 Pekerjaan · 109 Hobi dan Hiburan · 110 Huruf Besar dan Tanda Baca · 111 Menulis Paragraf · 112 Email dan Surat · 113 Rangkuman · 130 Kesalahan Umum · 131 False Friends
+100-101 Kata yang Sering Tertukar · 102 Awalan · 103 Akhiran · 104 Rumah · 105 Tubuh dan Kesehatan · 106 Pakaian dan Belanja · 107 Transportasi dan Kota · 108 Pekerjaan · 109 Hobi dan Hiburan · 110 Huruf Besar dan Tanda Baca · 111 Menulis Paragraf · 112 Email dan Surat · 113 Rangkuman · 130 Kesalahan Umum · 131 False Friends · 164 dan 165 Phrasal Verb Menengah · 166 dan 167 Idiom Menengah
 
 **Inggris untuk Bepergian (8 unit)**
 122 Bandara dan Imigrasi · 123 Hotel · 124 Restoran · 125 Bepergian di Kota · 126 Belanja dan Uang · 127 Darurat dan Kesehatan · 128 Bertemu Orang dan Obrolan Ringan · 129 Rangkuman
@@ -63,6 +63,15 @@ Menambah level baru: tambahkan unit dengan `kelas="nama-level"` di `content/unit
 
 **Cerita Bertingkat (8 tahap)**
 142 sampai 149: dari cerita 4 kalimat sampai cerita sekitar 200 kata
+
+**Menulis Lanjutan (7 unit)**
+168 Menggabungkan Kalimat · 169 Deskripsi · 170 Cerita · 171 Esai Opini · 172 Meringkas dan Memparafrase · 173 Catatan dan Pesan · 174 Rangkuman
+
+**Percakapan Interaktif (6 unit)**
+175 Berkenalan · 176 Di Rumah · 177 Di Sekolah dan Kampus · 178 Di Tempat Kerja · 179 Layanan dan Tempat Umum · 180 Berpendapat, Setuju, dan Tidak Setuju
+
+**Tema Mingguan (8 unit)**
+181 Olahraga · 182 Kesehatan · 183 Lingkungan · 184 Teknologi · 185 Makanan · 186 Musik dan Film · 187 Belajar dan Karier · 188 Uang dan Belanja Bijak
 
 **Persiapan TOEFL ITP (8 unit)**
 156 Mengenal TOEFL ITP · 157 Listening · 158 Structure · 159 Written Expression · 160 Reading · 161 Kosakata Akademik · 162 Tes Mini · 163 Rangkuman

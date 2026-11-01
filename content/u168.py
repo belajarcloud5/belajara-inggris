@@ -1,0 +1,68 @@
+from ub import *
+UNIT = mkunit("u168",
+ ["menggabungkan kalimat pendek dengan **and, but, or, so, because**",
+  "memakai **although, when, while, if** untuk kalimat kompleks",
+  "memakai **who, which, that** untuk menambah informasi",
+  "menghindari **kalimat yang bertele-tele atau terlalu pendek berulang**"],
+ [intro("Tulisan yang baik memakai kalimat dengan **panjang yang bervariasi**. Kalimat pendek yang berulang terasa kaku. Dengan kata penghubung, kamu menggabungkan gagasan dan membuat tulisan mengalir."),
+  gram("1. Penghubung dasar",
+   table=[["Penghubung", "Fungsi", "Contoh"],
+          ["**and**", "menambah", "[[I like tea, and my sister likes coffee.]]"],
+          ["**but**", "kontras", "[[I like tea, but I do not like coffee.]]"],
+          ["**or**", "pilihan", "[[Do you want tea or coffee?]]"],
+          ["**so**", "akibat", "[[It was raining, so we stayed home.]]"],
+          ["**because**", "sebab", "[[We stayed home because it was raining.]]"]]),
+  gram("2. Penghubung klausa dan klausa relatif",
+   table=[["Pola", "Contoh"],
+          ["Although + klausa, klausa", "[[Although it was late, we kept working.]]"],
+          ["When / While + klausa", "[[When I arrived, he was sleeping.]]"],
+          ["If + present, will", "[[If it rains, we will stay.]]"],
+          ["who (orang)", "[[The girl who sits next to me is Dina.]]"],
+          ["which / that (benda)", "[[The book that I bought is interesting.]]"]],
+   examples=[("[[Rani is a student. She studies hard. → Rani is a student who studies hard.]]", "Rani seorang siswa. Dia belajar giat. → Rani seorang siswa yang belajar giat.")]),
+  warn("Jangan memakai dua penghubung berlawanan", text="Salah: *Although it was late, but we kept working.* Benar: [[Although it was late, we kept working.]] atau [[It was late, but we kept working.]]"),
+  tip("Variasi", text="Dalam satu paragraf, campurkan kalimat pendek, sedang, dan panjang. Mulai beberapa kalimat dengan penghubung (*Although*, *When*, *Because*)."),
+  summary(["and (tambah), but (kontras), or (pilihan), so (akibat), because (sebab).", "Although/When/If + klausa.", "who, which, that menambah informasi tentang benda atau orang.", "Jangan pakai although dan but bersama."])],
+ [], [])
+P = mk([
+ ('Gabungkan dengan "because": "I was late. The bus broke down."', 'I was late because the bus broke down.', 'I was late because the bus broke down, and.', 'I was late so the bus broke down.', 'Because I was late the bus broke down.', 'Because + sebab.'),
+ ('Gabungkan dengan "so": "It was hot. We went swimming."', 'It was hot, so we went swimming.', 'It was hot because we went swimming.', 'It was hot, but we went swimming.', 'It was hot so that went swimming.', 'So + akibat.'),
+ ('Gabungkan dengan "but": "I like tea. I don\'t like coffee."', "I like tea, but I don't like coffee.", "I like tea, so I don't like coffee.", "I like tea because I don't like coffee.", "I like tea or I don't like coffee.", 'But + kontras.'),
+ ('Gabungkan dengan "although": "It was raining. We played outside."', 'Although it was raining, we played outside.', 'Although it was raining, but we played outside.', 'It was raining although, we played outside.', 'Although we played outside, it was raining, but.', 'Although tanpa but.'),
+ ('Gabungkan dengan "who": "I have a friend. She speaks four languages."', 'I have a friend who speaks four languages.', 'I have a friend which speaks four languages.', 'I have a friend, she speaks four languages who.', 'I have a friend whose speaks four languages.', 'Orang → who.'),
+ ('Gabungkan dengan "that": "I read a book. It was very long."', 'I read a book that was very long.', 'I read a book who was very long.', 'I read a book, it was very long that.', 'I read a book what was very long.', 'Benda → that.'),
+ ('Gabungkan dengan "when": "I got home. It started to rain."', 'When I got home, it started to rain.', 'When I got home it started rain to.', 'I got home when, it started to rain.', 'When it started to rain, I got home it.', 'When + klausa.'),
+ ('Pilih kalimat yang paling baik:', 'Although he was tired, he finished the report.', 'He was tired. He finished the report. He was tired.', 'Although he was tired, but he finished the report.', 'He finished the report tired was he.', 'Variasi dan benar.'),
+ ('Pilih kalimat yang SALAH:', 'Although it was cold, but we went out.', 'Although it was cold, we went out.', 'It was cold, but we went out.', 'We went out although it was cold.', 'Although dan but bersama salah.'),
+ ('Pilih kalimat yang SALAH:', 'The man which lives next door is a doctor.', 'The man who lives next door is a doctor.', 'The book that I bought is good.', 'The girl who sings is my sister.', 'Orang → who.'),
+ ('Penghubung yang menyatakan pilihan adalah...', 'or', 'so', 'but', 'because', 'Or.'),
+ ('Penghubung yang menyatakan akibat adalah...', 'so', 'but', 'or', 'although', 'So.'),
+ ('Penghubung yang menyatakan sebab adalah...', 'because', 'so', 'but', 'or', 'Because.'),
+ ('Penghubung yang menyatakan kontras adalah...', 'but', 'and', 'so', 'because', 'But.'),
+])
+P += mkf([
+ ('Aku lelah, jadi aku tidur.', 'I was tired, ___ I went to bed.', 'so', 'So = akibat.'),
+ ('Aku tinggal di rumah karena hujan.', 'I stayed home ___ it was raining.', 'because', 'Because = sebab.'),
+ ('Walaupun sudah larut, kami terus bekerja.', '___ it was late, we kept working.', 'Although', 'Although + klausa.'),
+ ('Gadis yang duduk di sebelahku adalah Dina.', 'The girl ___ sits next to me is Dina.', 'who', 'Orang → who.'),
+ ('Buku yang aku beli sangat menarik.', 'The book ___ I bought is very interesting.', 'that/which', 'Benda → that/which.'),
+ ('Apakah kamu mau teh atau kopi?', 'Do you want tea ___ coffee?', 'or', 'Or = pilihan.'),
+])
+P += mko([
+ ('Walaupun hujan, kami bermain di luar.', 'Although it was raining, we played outside.', 'but because', ''),
+ ('Aku suka teh, tetapi aku tidak suka kopi.', "I like tea, but I don't like coffee.", 'so and', ''),
+ ('Kami tinggal di rumah karena hujan.', 'We stayed home because it was raining.', 'so but', ''),
+ ('Ketika aku tiba, dia sedang tidur.', 'When I arrived, he was sleeping.', 'because so', ''),
+])
+Q = mk([
+ ('Gabungkan dengan "because": "She was happy. She passed the test."', 'She was happy because she passed the test.', 'She was happy so she passed the test.', 'She was happy but she passed the test.', 'She was happy although she passed the test.', 'Because + sebab.'),
+ ('Gabungkan dengan "so": "I was hungry. I ate a sandwich."', 'I was hungry, so I ate a sandwich.', 'I was hungry because I ate a sandwich.', 'I was hungry, but I ate a sandwich.', 'I was hungry or I ate a sandwich.', 'So.'),
+ ('Pilih kalimat yang benar:', 'Although he was ill, he came to school.', 'Although he was ill, but he came to school.', 'He was ill although, he came to school.', 'Although came to school, he was ill.', 'Although.'),
+ ('Pilih kalimat yang benar:', 'The boy who sits there is my cousin.', 'The boy which sits there is my cousin.', 'The boy sits there who is my cousin.', 'The boy whose sits there is my cousin.', 'Who.'),
+ ('Pilih kalimat yang benar:', "I like tea, but I don't like coffee.", "I like tea, so I don't like coffee.", "I like tea or I don't like coffee.", "I like tea because I don't like coffee.", 'But.'),
+ ('Pilih kalimat yang benar:', 'When it rains, we stay home.', 'When it rains we, stay home.', 'When it rains, stay we home.', 'It rains when, we stay home.', 'When + klausa.'),
+ ('Kata penghubung "although" menunjukkan...', 'kontras', 'sebab', 'akibat', 'tambahan', 'Although = walaupun.'),
+ ('Variasi kalimat dalam paragraf berarti...', 'campuran kalimat pendek dan panjang', 'semua kalimat pendek', 'semua kalimat panjang', 'tanpa penghubung', 'Variasi.'),
+])
+UNIT["practice"] = P
+UNIT["quiz"] = Q

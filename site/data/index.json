@@ -2178,7 +2178,10 @@
   "title": "Combining Sentences",
   "emoji": "🔗",
   "ringkas": "Kalimat majemuk, klausa, dan variasi kalimat",
-  "ready": false
+  "ready": true,
+  "practice_n": 24,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u169",
@@ -2188,7 +2191,10 @@
   "title": "Writing Descriptions",
   "emoji": "🖼️",
   "ringkas": "Orang, tempat, dan benda dengan detail yang hidup",
-  "ready": false
+  "ready": true,
+  "practice_n": 24,
+  "quiz_n": 9,
+  "read_n": 0
  },
  {
   "id": "u170",
@@ -2198,7 +2204,10 @@
   "title": "Writing a Story",
   "emoji": "📖",
   "ringkas": "Alur, tokoh, latar, dan kata penghubung waktu",
-  "ready": false
+  "ready": true,
+  "practice_n": 20,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u171",
@@ -2208,7 +2217,10 @@
   "title": "Opinion Essays",
   "emoji": "🗳️",
   "ringkas": "Thesis, alasan, contoh, dan kesimpulan",
-  "ready": false
+  "ready": true,
+  "practice_n": 16,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u172",
@@ -2218,7 +2230,10 @@
   "title": "Summarising and Paraphrasing",
   "emoji": "✂️",
   "ringkas": "Menulis ulang dengan kata sendiri tanpa mengubah makna",
-  "ready": false
+  "ready": true,
+  "practice_n": 16,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u173",
@@ -2228,7 +2243,10 @@
   "title": "Notes, Notices, and Messages",
   "emoji": "📝",
   "ringkas": "Menulis pesan singkat yang jelas dan sopan",
-  "ready": false
+  "ready": true,
+  "practice_n": 18,
+  "quiz_n": 8,
+  "read_n": 0
  },
  {
   "id": "u174",
@@ -2238,7 +2256,10 @@
   "title": "Writing Review",
   "emoji": "🎓",
   "ringkas": "Latihan campuran semua unit menulis",
-  "ready": false
+  "ready": true,
+  "practice_n": 42,
+  "quiz_n": 12,
+  "read_n": 0
  },
  {
   "id": "u175",
